@@ -9,6 +9,23 @@
    Toggled on/off via the demo switch; it never touches your real data.
    ========================================================================== */
 import { killers, locations, finalGirls, getAchievements } from './games.js';
+import {
+  getItems,
+  getDarkPowers,
+  getMinorDarkPowers,
+  getFinales,
+  getEvents,
+  getSetupCards,
+} from './cardData.js';
+import { deriveSummary } from '../lib/gameSummary.js';
+
+const PHASES = [
+  { id: 'action', name: 'Action' },
+  { id: 'planning', name: 'Planning' },
+  { id: 'killer', name: 'Killer' },
+  { id: 'panic', name: 'Panic' },
+  { id: 'upkeep', name: 'Upkeep' },
+];
 
 // Deterministic pseudo-random so the demo set is stable between loads.
 function mulberry32(seed) {
@@ -41,6 +58,105 @@ const NOTES = [
   '',
   '',
 ];
+
+/* Build a realistic, logically-ordered event stream for one demo game from the
+   REAL card data for that killer/location. Produces the same { id, turn,
+   phaseId, phaseName, type, detail, meta, at } shape the Turn Tracker captures,
+   so the demo exercises the summary + timeline code exactly like real games.
+
+   Logic baked in:
+     - turn 0 "Game start": a setup card + a starting event (if data exists)
+     - per turn: Action-phase item finds, occasional item use (only items
+       already found), occasional extra Event card
+     - Killer phase: victims die (scaling with how the game went), Dark Powers
+       revealed in the back half, Finale revealed on the last turn or two
+     - Action/Upkeep: victims saved
+   Falls back gracefully to free-text-ish names if a combo has no card data. */
+function buildEventStream({ killer, location, outcome, turns, startedAt, rnd }) {
+  const pick = (arr) => (arr.length ? arr[Math.floor(rnd() * arr.length)] : null);
+  const chance = (p) => rnd() < p;
+  const combo = { killerId: killer.id, locationId: location.id };
+
+  const items = getItems(location.id);
+  const darkPowers = getDarkPowers(killer.id);
+  const minorDP = getMinorDarkPowers(killer.id, location.id);
+  const finales = getFinales(killer.id);
+  const events = getEvents(location.id);
+  const setups = getSetupCards(location.id);
+
+  const totalTurns = turns || 7;
+  const base = new Date(startedAt).getTime();
+  let clock = base;
+  const stream = [];
+  let seq = 0;
+  const add = (turn, phase, type, detail, meta = {}) => {
+    clock += 30000 + Math.floor(rnd() * 90000); // 0.5–2 min between events
+    stream.push({
+      id: `demo-e-${seq++}`,
+      turn,
+      phaseId: phase.id,
+      phaseName: phase.name,
+      type,
+      detail: detail || '',
+      meta,
+      at: new Date(clock).toISOString(),
+    });
+  };
+
+  const found = []; // items found so far (so "used" only uses found ones)
+  const setupPhase = { id: 'setup', name: 'Setup' };
+
+  // --- Turn 0: setup + starting event ---
+  const setupCard = pick(setups);
+  if (setupCard) add(0, setupPhase, 'setup', setupCard.name);
+  if (chance(0.8)) {
+    const startEv = pick(events);
+    if (startEv) add(0, setupPhase, 'event-start', startEv.name);
+  }
+
+  const action = PHASES[0];
+  const killerPhase = PHASES[2];
+  const panic = PHASES[3];
+  const upkeep = PHASES[4];
+
+  for (let t = 1; t <= totalTurns; t++) {
+    const lateGame = t >= Math.ceil(totalTurns * 0.6);
+    const lastTurns = t >= totalTurns - 1;
+
+    // Action phase — find items, save victims, occasional event.
+    if (chance(0.7)) {
+      const it = pick(items);
+      if (it) { add(t, action, 'item-found', it.name); found.push(it); }
+    }
+    if (chance(0.3) && found.length) {
+      add(t, action, 'item-used', pick(found).name);
+    }
+    if (outcome !== 'lost' && chance(0.45)) add(t, action, 'victim-saved', '');
+    if (chance(0.22)) {
+      const ev = pick(events);
+      if (ev) add(t, action, 'event', ev.name);
+    }
+
+    // Killer phase — victims die, dark powers reveal late, finale near the end.
+    const deaths = outcome === 'lost' ? (chance(0.7) ? 2 : 1) : chance(0.4) ? 1 : 0;
+    for (let d = 0; d < deaths; d++) add(t, killerPhase, 'victim-died', '');
+    if (deaths > 0 && chance(0.5)) add(t, panic, 'victim-saved', ''); // scramble in Panic
+
+    if (lateGame && chance(0.4)) {
+      const dp = pick([...minorDP, ...darkPowers]);
+      if (dp) add(t, killerPhase, 'dark-power', dp.name, { power: dp.epic ? 'epic' : 'minor' });
+    }
+    if (lastTurns && chance(0.6)) {
+      const fin = pick(finales);
+      if (fin) add(t, killerPhase, 'finale', fin.name, { epic: Boolean(fin.epic) });
+    }
+
+    // Upkeep — the odd late save.
+    if (outcome === 'won' && t === totalTurns && chance(0.5)) add(t, upkeep, 'victim-saved', '');
+  }
+
+  return stream;
+}
 
 /* Build the demo log once. ~38 games across many combos, with wins, losses,
    abandons, varied Final Girls, turns, achievements and the odd mistake. */
@@ -118,6 +234,19 @@ function buildDemoLog() {
       }
     }
 
+    const turns = outcome === 'abandoned' ? null : 5 + Math.floor(rnd() * 9);
+    // A logical, card-accurate chronological event stream for this game
+    // (abandoned games get a short, truncated stream).
+    const events = buildEventStream({
+      killer,
+      location,
+      outcome,
+      turns: turns || 3,
+      startedAt: started.toISOString(),
+      rnd,
+    });
+    const summary = deriveSummary(events);
+
     log.push({
       id: `demo-${i}`,
       isTest: false,
@@ -131,10 +260,12 @@ function buildDemoLog() {
       startedAt: started.toISOString(),
       endedAt: ended.toISOString(),
       outcome,
-      turns: outcome === 'abandoned' ? null : 5 + Math.floor(rnd() * 9),
+      turns,
       notes: pick(NOTES),
       achievements,
       mistakes,
+      events,
+      summary,
     });
   }
 
