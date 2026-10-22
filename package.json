@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "update-backlog": "node scripts/update-backlog.mjs",
+    "prebuild": "node scripts/update-backlog.mjs",
+    "prebuild:web": "node scripts/update-backlog.mjs",
     "build": "vite build",
     "build:web": "cross-env FG_BUILD=web vite build",
     "preview": "vite preview",

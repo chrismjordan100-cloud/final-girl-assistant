@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Sync backlog RAG on save",
+      "trigger": "PostFileSave",
+      "description": "Regenerate BACKLOG.md RAG statuses from the code whenever a source file is saved, so the backlog never drifts from reality.",
+      "matcher": "src[\\\\/].*\\.(js|jsx|json)$",
+      "action": {
+        "type": "command",
+        "command": "node scripts/update-backlog.mjs"
+      }
+    }
+  ]
+}
