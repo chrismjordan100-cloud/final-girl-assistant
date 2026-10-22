@@ -340,3 +340,35 @@
 .gd__outcome.is-active { background: var(--fg-blood); border-color: var(--fg-blood); color: #fff; }
 .gd__editnote { margin: 0 0 0.8rem; font-size: 0.8rem; }
 .gd__actions { display: flex; gap: 0.5rem; }
+
+/* Auto-written game story */
+.gd__story {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-blood);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(177, 18, 26, 0.06);
+}
+.gd__story-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.gd__story-title {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-blood-bright);
+}
+.gd__story-text {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.gd__story-note { margin: 0; font-size: 0.74rem; }

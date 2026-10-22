@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { deriveSummary, groupByTurn } from '../lib/gameSummary.js';
+import { narrateGame } from '../lib/narrateGame.js';
 
 /* Expandable detail + edit for one logged game. Shows the full turn-by-turn
    event timeline, summary tallies, achievements, mistakes and notes; and an
@@ -25,6 +26,10 @@ function fromLines(text) {
 
 export default function GameDetail({ entry, onUpdate }) {
   const [editing, setEditing] = useState(false);
+  // Story: a free, offline template-based recap. The variant reshuffles phrasing.
+  const [storyVariant, setStoryVariant] = useState(0);
+  const hasEvents = (entry.events || []).length > 0;
+  const story = hasEvents ? narrateGame(entry, { variant: storyVariant }) : '';
 
   // Prefer the stored summary; fall back to deriving from events for older
   // entries saved before summaries existed.
@@ -205,6 +210,25 @@ export default function GameDetail({ entry, onUpdate }) {
       <div className="gd__toolbar">
         <button className="fg-btn fg-btn--small" onClick={() => setEditing(true)}>Edit details</button>
       </div>
+
+      {hasEvents && (
+        <div className="gd__story">
+          <div className="gd__story-head">
+            <h4 className="gd__story-title">The Story</h4>
+            <button
+              className="fg-btn fg-btn--small"
+              onClick={() => setStoryVariant((v) => v + 1)}
+              title="Reshuffle the wording"
+            >
+              &#8635; Reshuffle
+            </button>
+          </div>
+          <p className="gd__story-text">{story}</p>
+          <p className="gd__story-note fg-type">
+            Auto-written from this game&rsquo;s events. (A richer AI recap is on the backlog.)
+          </p>
+        </div>
+      )}
 
       {hasSummary ? (
         <dl className="gd__summary">
