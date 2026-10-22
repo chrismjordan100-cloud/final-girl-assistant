@@ -174,6 +174,14 @@
 .ach-badge--auto { color: var(--fg-sick-green); }
 .ach-badge--manual { color: var(--fg-gold); }
 .ach-badge--progress { color: var(--fg-blood-bright); font-weight: 700; }
+.ach-badge--locked { color: var(--fg-gold); }
+
+/* Locked = proven by win history; the toggle is disabled so it can't be
+   accidentally un-earned. Keep it looking earned (gold star), just not
+   clickable. */
+.ach-item.is-locked .ach-item__toggle { cursor: default; }
+.ach-item.is-locked .ach-item__toggle:hover { background: none; }
+.ach-item.is-locked .ach-card__mark { color: var(--fg-gold); }
 
 .ach-item__reset {
   flex: 0 0 auto;

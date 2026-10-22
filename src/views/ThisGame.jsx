@@ -11,7 +11,6 @@ import {
   getOfficialScenario,
   buildScenario,
   isAutoAchievement,
-  autoRules,
   getIcon,
   getRuleIcons,
   getRulesetNote,
@@ -152,53 +151,21 @@ export default function ThisGame() {
     ...(location ? getAchievements(location).map((a) => ({ ...a, owner: location.name })) : []),
   ];
 
-  // Which of this combo's auto achievements a WIN this very game proves on its
-  // own (single-combo rules only — "five different Locations/Killers" needs
-  // history, so those stay as normal questions). These get pre-answered "yes".
-  const autoYesIds = new Set();
-  if (outcome === 'won') {
-    for (const a of comboAchievements) {
-      const rule = autoRules[a.id];
-      if (!rule) continue;
-      if (rule.kind === 'winAtLocation' && location && rule.locationId === location.id) {
-        autoYesIds.add(a.id);
-      } else if (
-        rule.kind === 'winKillerAtLocation' &&
-        killer &&
-        location &&
-        rule.killerId === killer.id &&
-        rule.locationId === location.id
-      ) {
-        autoYesIds.add(a.id);
-      }
-    }
-  }
+  // The end-game form ONLY asks about achievements that can't be worked out
+  // from your history. The auto-detected ones (e.g. "win at 5 different
+  // Locations", "win at home Location") are computed by the MI from your won
+  // games — you never answer them, so there's no way to accidentally mark one
+  // "no" and hide something you've genuinely earned.
+  const manualAchievements = comboAchievements.filter((a) => !isAutoAchievement(a.id));
 
-  // Seed auto-answers whenever the outcome flips to "won". Only fill ones the
-  // player hasn't already answered, so manual changes stick.
-  useEffect(() => {
-    if (autoYesIds.size === 0) return;
-    setAnswers((cur) => {
-      let changed = false;
-      const next = { ...cur };
-      for (const id of autoYesIds) {
-        if (next[id] === undefined) {
-          next[id] = 'yes';
-          changed = true;
-        }
-      }
-      return changed ? next : cur;
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [outcome, killerId, locationId]);
-
-  const answeredCount = comboAchievements.filter((a) => answers[a.id]).length;
-  // For a real, non-abandoned game, every achievement question must be answered
-  // before saving. Test games, abandoned games, and games with no achievements
-  // can always save.
+  const answeredCount = manualAchievements.filter((a) => answers[a.id]).length;
+  // Whether we show the (manual-only) achievement questions at all.
   const achievementsRelevant =
-    active && !active.isTest && outcome !== 'abandoned' && comboAchievements.length > 0;
-  const canSave = !achievementsRelevant || answeredCount === comboAchievements.length;
+    active && !active.isTest && outcome !== 'abandoned' && manualAchievements.length > 0;
+  // You can always save: anything you don't mark "yes" is simply treated as
+  // not earned this game. (Auto-detected achievements aren't asked about and
+  // are never affected by saving — they come straight from your win history.)
+  const canSave = true;
 
   function handleStartGame(isTest) {
     if (narrationSupported) speak(buildScenario({ finalGirl, killer, location }));
@@ -233,11 +200,13 @@ export default function ThisGame() {
 
   function handleEndGame() {
     if (!outcome) return;
-    // Earned = the achievements answered "yes" (test/abandoned record none).
+    // Earned = the MANUAL achievements you answered "yes". Auto-detected ones
+    // are intentionally NOT recorded per-game — the MI derives them from your
+    // win history, so there's no way for a save to hide a genuine earn.
     const earnedIds =
       outcome === 'abandoned'
         ? []
-        : comboAchievements.filter((a) => answers[a.id] === 'yes').map((a) => a.id);
+        : manualAchievements.filter((a) => answers[a.id] === 'yes').map((a) => a.id);
     endGame({
       outcome,
       turns: turns ? Number(turns) : null,
@@ -412,35 +381,29 @@ export default function ThisGame() {
                 </button>
               </div>
 
-              {!active.isTest && outcome !== 'abandoned' && comboAchievements.length > 0 && (
+              {achievementsRelevant && (
                 <div className="tg-achievements">
                   <h3 className="tg-achievements__head">
-                    Achievements — answer each
+                    Achievements — tick any you earned
                     <span className="tg-achievements__count">
-                      {answeredCount}/{comboAchievements.length} answered
-                      {answeredCount < comboAchievements.length ? '' : ' \u2713'}
+                      {answeredCount}/{manualAchievements.length} marked
                     </span>
                   </h3>
                   <p className="tg-achievements__intro fg-type">
-                    Confirm each one for this {killer ? killer.name : ''}{killer && location ? ' / ' : ''}{location ? location.name : ''} game.
-                    {' '}Ones this win proves are ticked for you &mdash; change any you like.
+                    Only achievements that can&rsquo;t be worked out from your
+                    history are shown here. Tick the ones you earned this game;
+                    anything you leave blank counts as not earned. History-based
+                    ones (like &ldquo;win at five Locations&rdquo;) are tracked
+                    automatically in MI &mdash; you don&rsquo;t record those here.
                   </p>
                   <ul className="tg-achievements__qlist">
-                    {comboAchievements.map((a) => {
+                    {manualAchievements.map((a) => {
                       const ans = answers[a.id]; // 'yes' | 'no' | undefined
-                      const autoYes = autoYesIds.has(a.id);
-                      const trackable = isAutoAchievement(a.id);
                       return (
                         <li key={a.id} className={'tg-q' + (ans ? ' is-answered' : '') + (ans === 'yes' ? ' is-yes' : '')}>
                           <span className="tg-q__text">
                             {a.label}
-                            <span className="tg-q__owner">
-                              {a.owner}
-                              {autoYes && <span className="tg-q__auto" title="Auto-ticked because this win proves it">AUTO</span>}
-                              {!autoYes && trackable && outcome !== 'won' && (
-                                <span className="tg-q__trackable" title="Will auto-track once you log a win">tracks on win</span>
-                              )}
-                            </span>
+                            <span className="tg-q__owner">{a.owner}</span>
                           </span>
                           <span className="tg-q__buttons">
                             <button

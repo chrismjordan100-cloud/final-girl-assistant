@@ -6,6 +6,7 @@ import {
   computeEarned,
   isAutoAchievement,
   autoProgress,
+  autoEarnedIds,
 } from '../data/games.js';
 import { useGameLog } from '../hooks/useGameLog.js';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
@@ -13,7 +14,7 @@ import { StatCard, StatCardGrid } from '../components/StatCards.jsx';
 import { getIcon } from '../data/games.js';
 import './Achievements.css';
 
-function EntryAchievements({ item, earned, source, manual, log, onToggle }) {
+function EntryAchievements({ item, earned, source, manual, log, dataProven, onToggle }) {
   const list = getAchievements(item);
   if (list.length === 0) return null;
   const got = list.filter((a) => earned.has(a.id)).length;
@@ -40,6 +41,9 @@ function EntryAchievements({ item, earned, source, manual, log, onToggle }) {
           const src = source.get(a.id);
           const auto = isAutoAchievement(a.id);
           const overridden = manual[a.id] !== undefined;
+          // Locked = your win history proves this one. It can't be manually
+          // un-earned, so you can never accidentally hide a genuine earn.
+          const locked = Boolean(dataProven && dataProven.has(a.id) && on);
           // Progress on count-based auto achievements (e.g. 3/5 Locations).
           // Hidden once earned or when the player has set a manual override.
           const progress = !on && !overridden ? autoProgress(a.id, log) : null;
@@ -49,7 +53,8 @@ function EntryAchievements({ item, earned, source, manual, log, onToggle }) {
               className={
                 'ach-item' +
                 (on ? ' is-on' : ' is-off') +
-                (overridden ? ' is-manual' : '')
+                (overridden ? ' is-manual' : '') +
+                (locked ? ' is-locked' : '')
               }
             >
               <button
@@ -57,10 +62,13 @@ function EntryAchievements({ item, earned, source, manual, log, onToggle }) {
                 className="ach-item__toggle"
                 onClick={() => onToggle(a.id, on)}
                 aria-pressed={on}
+                disabled={locked}
                 title={
-                  on
-                    ? 'Earned' + (src ? ` (${src})` : '') + ' \u2014 click to mark not earned'
-                    : 'Not earned \u2014 click to mark earned'
+                  locked
+                    ? 'Earned from your wins \u2014 locked so it can\u2019t be removed by mistake'
+                    : on
+                      ? 'Earned' + (src ? ` (${src})` : '') + ' \u2014 click to mark not earned'
+                      : 'Not earned \u2014 click to mark earned'
                 }
               >
                 <span className="ach-card__mark" aria-hidden="true">{on ? '\u2605' : '\u2606'}</span>
@@ -71,11 +79,12 @@ function EntryAchievements({ item, earned, source, manual, log, onToggle }) {
                       {progress.current}/{progress.target}
                     </span>
                   )}
-                  {auto && <span className="ach-badge ach-badge--auto" title="Auto-detected from your wins">AUTO</span>}
+                  {locked && <span className="ach-badge ach-badge--locked" title="Proven by your win history \u2014 can\u2019t be un-earned">&#128274; LOCKED</span>}
+                  {auto && !locked && <span className="ach-badge ach-badge--auto" title="Auto-detected from your wins">AUTO</span>}
                   {on && src === 'manual' && <span className="ach-badge ach-badge--manual" title="Set by you">MANUAL</span>}
                 </span>
               </button>
-              {overridden && (
+              {overridden && !locked && (
                 <button
                   type="button"
                   className="ach-item__reset"
@@ -107,10 +116,21 @@ export default function Achievements() {
   // Earned set = games + auto-detection + manual overrides (manual wins).
   const { earned, source } = useMemo(() => computeEarned(log, manual), [log, manual]);
 
+  // Achievements the DATA currently proves (from won games). These are locked
+  // against being manually un-earned — you can't accidentally hide something
+  // your history shows you genuinely achieved.
+  const dataProven = useMemo(() => autoEarnedIds(log), [log]);
+
   // Clicking a tile toggles a manual override. If reset, clear the override.
   function handleToggle(id, currentlyOn, reset = false) {
     if (reset) {
       setAchievementOverride(id, null);
+      return;
+    }
+    // Guard: if the data proves this achievement, refuse to force it OFF.
+    // (Turning a currently-on, data-proven achievement off would be an
+    // accidental loss of a genuine earn.) Marking extra ones ON is still fine.
+    if (currentlyOn && dataProven.has(id)) {
       return;
     }
     // Toggle to the opposite of the current displayed state, as an explicit
@@ -196,9 +216,10 @@ export default function Achievements() {
         <p className="section-eyebrow">The hunt for glory</p>
         <h1>Achievements</h1>
         <p className="lead">
-          Every Killer and Location achievement, and how far you&rsquo;ve got. Some fill
-          in automatically from your wins; the rest come from the end-of-game questions.
-          Click any to set it yourself &mdash; your choice always wins.
+          Every Killer and Location achievement, and how far you&rsquo;ve got. Ones
+          your wins prove fill in automatically and are <strong>locked</strong> so they
+          can&rsquo;t be removed by mistake. The rest you can set yourself &mdash; click
+          to toggle.
         </p>
       </div>
 
@@ -308,6 +329,7 @@ export default function Achievements() {
               source={source}
               manual={manual}
               log={log}
+              dataProven={dataProven}
               onToggle={handleToggle}
             />
           ))}
@@ -324,6 +346,7 @@ export default function Achievements() {
               source={source}
               manual={manual}
               log={log}
+              dataProven={dataProven}
               onToggle={handleToggle}
             />
           ))}
