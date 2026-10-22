@@ -123,3 +123,38 @@
 .gl-entry__combo { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; }
 .gl-entry__icons { display: inline-flex; gap: 0.2rem; flex: none; }
 .gl-entry__icon { width: 1.5rem; height: 1.5rem; object-fit: contain; }
+
+/* Clear-all action row */
+.gl-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.gl-clear-all {
+  background: transparent;
+  border: 1px solid var(--fg-blood);
+  color: var(--fg-blood-bright);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.gl-clear-all:hover {
+  background: var(--fg-blood);
+  color: #fff;
+}
+.gl-clear-all:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.gl-actions__hint {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}

@@ -261,6 +261,17 @@ export function useGameLog() {
     pushState();
   }, []);
 
+  // Wipe the entire game log (and any manual achievement overrides) — a fast
+  // "clean slate" for testing. Syncs to the cloud so other devices clear too.
+  const clearLog = useCallback(() => {
+    if (readDemoMode()) return;
+    writeLog([]);
+    writeManual({});
+    setRealLog([]);
+    setRealManual({});
+    pushState();
+  }, []);
+
   // Set a manual override for an achievement: true (force earned),
   // false (force not earned), or null/undefined to clear it (fall back to
   // games + auto-detection).
@@ -285,6 +296,7 @@ export function useGameLog() {
     endGame,
     discardActive,
     deleteEntry,
+    clearLog,
     setAchievementOverride,
   };
 }

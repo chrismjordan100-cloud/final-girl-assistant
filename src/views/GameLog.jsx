@@ -15,13 +15,32 @@ function formatDate(iso) {
 }
 
 export default function GameLog() {
-  const { log, deleteEntry } = useGameLog();
+  const { log, deleteEntry, clearLog } = useGameLog();
 
   const wins = log.filter((e) => e.outcome === 'won').length;
   const losses = log.filter((e) => e.outcome === 'lost').length;
   const abandoned = log.filter((e) => e.outcome === 'abandoned').length;
 
   const outcomeLabel = { won: 'Survived', lost: 'Died', abandoned: 'Abandoned' };
+
+  function handleDelete(e) {
+    const label =
+      [e.finalGirlName, e.killerName, e.locationName].filter(Boolean).join(' · ') ||
+      'this game';
+    if (window.confirm(`Delete this record?\n\n${label}\n\nThis also updates MI and Achievements, and syncs to your other devices. It can\u2019t be undone.`)) {
+      deleteEntry(e.id);
+    }
+  }
+
+  function handleClearAll() {
+    if (
+      window.confirm(
+        `Delete ALL ${log.length} game${log.length === 1 ? '' : 's'}?\n\nThis wipes your whole Game Log and any manual achievement settings, updates MI and Achievements, and syncs to your other devices. It can\u2019t be undone.`
+      )
+    ) {
+      clearLog();
+    }
+  }
 
   return (
     <div>
@@ -30,7 +49,8 @@ export default function GameLog() {
         <h1>Game Log</h1>
         <p className="lead">
           A record of your past games — who you played, where, and whether you walked
-          away. Saved on this device.
+          away. Synced across your devices. Deleting a game also updates MI and
+          Achievements.
         </p>
       </div>
 
@@ -64,6 +84,15 @@ export default function GameLog() {
                 <span className="gl-tally__label">Abandoned</span>
               </div>
             )}
+          </div>
+
+          <div className="gl-actions">
+            <button className="gl-clear-all" onClick={handleClearAll}>
+              Clear all games
+            </button>
+            <span className="gl-actions__hint fg-type">
+              Handy for resetting after a test run.
+            </span>
           </div>
 
           <CollapsibleSection title="History" count={`${log.length} game${log.length === 1 ? '' : 's'}`}>
@@ -119,7 +148,7 @@ export default function GameLog() {
                 </div>
                 <button
                   className="gl-entry__delete"
-                  onClick={() => deleteEntry(e.id)}
+                  onClick={() => handleDelete(e)}
                   aria-label="Delete this record"
                   title="Delete"
                 >
