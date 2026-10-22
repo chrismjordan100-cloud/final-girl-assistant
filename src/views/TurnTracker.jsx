@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import { phases, horrorRoll } from '../data/rules.js';
 import { getKiller, getLocation, getPhaseExtras } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import './TurnTracker.css';
+
+/* The per-turn event types the quick-capture bar can log. `needsText` means
+   the user types the card name / detail exactly as written. Totals and the
+   future AI summary are both derived from this same event stream. */
+const EVENT_TYPES = [
+  { type: 'victim-died', label: 'Victim died', glyph: '\u2620', tone: 'blood', needsText: false },
+  { type: 'victim-saved', label: 'Victim saved', glyph: '\u2665', tone: 'green', needsText: false },
+  { type: 'item-found', label: 'Found item', glyph: '\uD83C\uDFD5', tone: 'gold', needsText: true, placeholder: 'Item name, as on the card' },
+  { type: 'item-used', label: 'Used item', glyph: '\u2692', tone: 'gold', needsText: true, placeholder: 'Item name, as on the card' },
+  { type: 'dark-power', label: 'Dark Power', glyph: '\uD83D\uDC41', tone: 'blood', needsText: true, placeholder: 'Dark Power name', hasPower: true },
+  { type: 'finale', label: 'Finale', glyph: '\uD83C\uDFAC', tone: 'blood', needsText: true, placeholder: 'Finale card name' },
+  { type: 'terror', label: 'Terror card', glyph: '\uD83C\uDCCF', tone: 'default', needsText: true, placeholder: 'Terror card / effect' },
+  { type: 'weapon', label: 'Weapon', glyph: '\uD83D\uDDE1', tone: 'default', needsText: true, placeholder: 'Weapon name' },
+  { type: 'note', label: 'Note', glyph: '\u270E', tone: 'default', needsText: true, placeholder: 'Anything worth remembering' },
+];
+
+const EVENT_LABELS = Object.fromEntries(EVENT_TYPES.map((e) => [e.type, e.label]));
 
 /* A compact +/- counter for a live game value. */
 function Counter({ label, value, onChange, min = 0, max = 99, tone, hint }) {
@@ -34,8 +52,8 @@ function Counter({ label, value, onChange, min = 0, max = 99, tone, hint }) {
 }
 
 export default function TurnTracker() {
-  const { state, patch, reset } = useTurnState();
-  const { turn, phaseIndex, horror, bloodlust, time, victimsSaved, checked } = state;
+  const { state, patch, reset, addEvent, removeEvent } = useTurnState();
+  const { turn, phaseIndex, horror, bloodlust, time, victimsSaved, checked, events } = state;
 
   const { killerId, locationId } = useGameSelection();
   const killer = getKiller(killerId);
@@ -47,13 +65,53 @@ export default function TurnTracker() {
   const promptsForPhase = phase.prompts || [];
   const dice = Math.max(1, horror); // always roll at least 1 die
 
-  // One-tap quick actions that update the live counters — the common events
-  // you'd otherwise have to remember to apply by hand.
-  function victimKilled() {
-    patch({ bloodlust: Math.min(20, bloodlust + 1) });
+  // --- Per-turn event capture -------------------------------------------
+  // When a type needs text, selecting it opens an inline input; otherwise the
+  // event is logged immediately. Each logged event is stamped with the current
+  // turn + phase by the hook.
+  const [picking, setPicking] = useState(null); // event type awaiting text, or null
+  const [eventText, setEventText] = useState('');
+  const [powerKind, setPowerKind] = useState('minor'); // for dark-power events
+
+  const allEvents = events || [];
+  const thisTurnEvents = allEvents.filter((e) => e.turn === turn);
+
+  // Log a no-text event (and keep the handy live counter in sync).
+  function logQuick(type) {
+    if (type === 'victim-died') patch({ bloodlust: Math.min(20, bloodlust + 1) });
+    if (type === 'victim-saved') patch({ victimsSaved: Math.min(30, victimsSaved + 1) });
+    addEvent({ type, phaseId: phase.id, phaseName: phase.name.replace(' Phase', '') });
   }
-  function victimSaved() {
-    patch({ victimsSaved: Math.min(30, victimsSaved + 1) });
+
+  function pickType(def) {
+    if (!def.needsText) {
+      logQuick(def.type);
+      return;
+    }
+    setPicking(def);
+    setEventText('');
+    setPowerKind('minor');
+  }
+
+  function confirmEvent() {
+    if (!picking) return;
+    const detail = eventText.trim();
+    if (!detail) return; // require text for text events
+    const meta = picking.hasPower ? { power: powerKind } : {};
+    addEvent({
+      type: picking.type,
+      detail,
+      meta,
+      phaseId: phase.id,
+      phaseName: phase.name.replace(' Phase', ''),
+    });
+    setPicking(null);
+    setEventText('');
+  }
+
+  function cancelPick() {
+    setPicking(null);
+    setEventText('');
   }
 
   function toggleItem(key) {
@@ -201,17 +259,93 @@ export default function TurnTracker() {
           </p>
         )}
 
-        {/* Quick actions — one-tap updates for common events this phase. */}
-        <div className="phase-quick">
-          {(phase.id === 'killer' || phase.id === 'panic') && (
-            <button type="button" className="phase-quick__btn phase-quick__btn--blood" onClick={victimKilled}>
-              &#9760; Victim killed <span className="phase-quick__fx">Bloodlust +1</span>
-            </button>
+        {/* Per-turn event capture — log what happened, when. Each event is
+            stamped with this turn + phase and feeds the end-of-game summary. */}
+        <div className="turn-events">
+          <h3 className="turn-events__head">
+            Log an event <span className="turn-events__ctx">Turn {turn} &middot; {phase.name.replace(' Phase', '')}</span>
+          </h3>
+
+          {picking ? (
+            <div className="turn-events__entry">
+              <span className="turn-events__entry-label">
+                {picking.glyph} {picking.label}
+              </span>
+              {picking.hasPower && (
+                <div className="turn-events__power" role="group" aria-label="Dark Power kind">
+                  <button
+                    type="button"
+                    className={'te-power' + (powerKind === 'minor' ? ' is-active' : '')}
+                    onClick={() => setPowerKind('minor')}
+                  >
+                    Minor
+                  </button>
+                  <button
+                    type="button"
+                    className={'te-power' + (powerKind === 'epic' ? ' is-active' : '')}
+                    onClick={() => setPowerKind('epic')}
+                  >
+                    Epic
+                  </button>
+                </div>
+              )}
+              <input
+                className="turn-events__input"
+                type="text"
+                autoFocus
+                value={eventText}
+                placeholder={picking.placeholder}
+                onChange={(e) => setEventText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') confirmEvent();
+                  if (e.key === 'Escape') cancelPick();
+                }}
+              />
+              <button type="button" className="fg-btn fg-btn--primary fg-btn--small" onClick={confirmEvent} disabled={!eventText.trim()}>
+                Log
+              </button>
+              <button type="button" className="fg-btn fg-btn--small" onClick={cancelPick}>
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <div className="turn-events__buttons">
+              {EVENT_TYPES.map((def) => (
+                <button
+                  key={def.type}
+                  type="button"
+                  className={'te-btn te-btn--' + def.tone}
+                  onClick={() => pickType(def)}
+                >
+                  <span className="te-btn__glyph" aria-hidden="true">{def.glyph}</span>
+                  {def.label}
+                </button>
+              ))}
+            </div>
           )}
-          {(phase.id === 'action' || phase.id === 'upkeep') && (
-            <button type="button" className="phase-quick__btn phase-quick__btn--green" onClick={victimSaved}>
-              &#9825; Victim saved <span className="phase-quick__fx">Saved +1</span>
-            </button>
+
+          {thisTurnEvents.length > 0 && (
+            <ul className="turn-events__list">
+              {thisTurnEvents.map((e) => (
+                <li key={e.id} className={'te-item te-item--' + e.type}>
+                  <span className="te-item__phase">{e.phaseName}</span>
+                  <span className="te-item__text">
+                    {EVENT_LABELS[e.type] || e.type}
+                    {e.detail ? `: ${e.detail}` : ''}
+                    {e.meta && e.meta.power ? ` (${e.meta.power})` : ''}
+                  </span>
+                  <button
+                    type="button"
+                    className="te-item__del"
+                    onClick={() => removeEvent(e.id)}
+                    aria-label="Remove this event"
+                    title="Remove"
+                  >
+                    &times;
+                  </button>
+                </li>
+              ))}
+            </ul>
           )}
         </div>
 

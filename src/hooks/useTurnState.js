@@ -22,6 +22,13 @@ const DEFAULT = {
   time: 6,          // Time resets to 6 in Planning (5 in Extreme Horror)
   victimsSaved: 0,
   checked: {},      // keyed "{phaseIndex}:{i}" and "x:{phaseIndex}:{i}"
+  // Chronological event stream for THIS game. Each event is stamped with the
+  // turn + phase it happened in, so the saved game holds the full narrative
+  // sequence (not just totals) — ready for a future AI game summary. Shape:
+  //   { id, turn, phaseId, phaseName, type, detail, meta, at }
+  // Types: victim-died | victim-saved | item-found | item-used | dark-power |
+  //        finale | terror | weapon | note
+  events: [],
 };
 
 function read() {
@@ -64,6 +71,35 @@ export function useTurnState() {
     setState(next);
   }, []);
 
+  // Append an event to the chronological stream, stamped with the current
+  // turn + phase. `phaseName` is stored alongside `phaseId` so later readers
+  // (incl. a future AI summary) don't need the rules file to make sense of it.
+  const addEvent = useCallback(({ type, detail = '', meta = {}, phaseId, phaseName }) => {
+    const cur = read();
+    const event = {
+      id: `e-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+      turn: cur.turn,
+      phaseId: phaseId ?? null,
+      phaseName: phaseName ?? null,
+      type,
+      detail: String(detail || '').trim(),
+      meta: meta || {},
+      at: new Date().toISOString(),
+    };
+    const next = { ...cur, events: [...(cur.events || []), event] };
+    write(next);
+    setState(next);
+    return event;
+  }, []);
+
+  // Remove an event by id (for fixing a mis-entry mid-game).
+  const removeEvent = useCallback((id) => {
+    const cur = read();
+    const next = { ...cur, events: (cur.events || []).filter((e) => e.id !== id) };
+    write(next);
+    setState(next);
+  }, []);
+
   // Reset for a brand-new game (optionally with a starting Horror level).
   const reset = useCallback((startHorror = DEFAULT.horror) => {
     const next = { ...DEFAULT, horror: startHorror };
@@ -71,5 +107,5 @@ export function useTurnState() {
     setState(next);
   }, []);
 
-  return { state, patch, reset };
+  return { state, patch, reset, addEvent, removeEvent };
 }
