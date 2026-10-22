@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { DEMO_LOG, DEMO_OVERRIDES } from '../data/demoData.js';
+import { pullState, pushState, applyStateToLocal } from '../lib/sync.js';
 
 /* ==========================================================================
    Game log — a persisted history of completed games, plus the "in progress"
@@ -159,6 +160,39 @@ export function useGameLog() {
     };
   }, []);
 
+  // Pull the latest cloud state once on load. If it differs from what's on
+  // this device, apply it and refresh so stats recorded on another device
+  // (e.g. your phone) show up here. "Last save wins" across devices.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const result = await pullState();
+      if (cancelled) return;
+
+      // If the cloud has data, apply it over local where it differs.
+      const cloudData = result ? result.data : null;
+      const cloudHasLog =
+        cloudData && typeof cloudData['fg-game-log'] === 'string';
+
+      if (cloudHasLog) {
+        const changed = applyStateToLocal(cloudData);
+        if (changed) {
+          setRealLog(readLog());
+          setActive(readActive());
+          setRealManual(readManual());
+          window.dispatchEvent(new CustomEvent(EVENT));
+        }
+      } else if (readLog().length > 0) {
+        // Cloud is empty (first run) but this device already has history —
+        // seed the cloud from local so it isn't lost and other devices get it.
+        pushState();
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   // What the rest of the app sees: demo data when the switch is on.
   const log = demoMode ? DEMO_LOG : realLog;
   const manual = demoMode ? DEMO_OVERRIDES : realManual;
@@ -177,6 +211,7 @@ export function useGameLog() {
     };
     writeActive(next);
     setActive(next);
+    pushState();
   }, []);
   // (Starting a game still works in demo mode — it uses the real active slot.)
 
@@ -208,11 +243,13 @@ export function useGameLog() {
     writeActive(null);
     setRealLog(nextLog);
     setActive(null);
+    pushState();
   }, []);
 
   const discardActive = useCallback(() => {
     writeActive(null);
     setActive(null);
+    pushState();
   }, []);
 
   const deleteEntry = useCallback((id) => {
@@ -221,6 +258,7 @@ export function useGameLog() {
     const nextLog = readLog().filter((e) => e.id !== id);
     writeLog(nextLog);
     setRealLog(nextLog);
+    pushState();
   }, []);
 
   // Set a manual override for an achievement: true (force earned),
@@ -234,6 +272,7 @@ export function useGameLog() {
     else next[id] = value;
     writeManual(next);
     setRealManual(next);
+    pushState();
   }, []);
 
   return {
