@@ -237,6 +237,15 @@ export function useGameLog() {
       achievements: isTest ? [] : (result.achievements || []),
       // Mistakes made this game, each { type: 'rules' | 'strategy', text }.
       mistakes: result.mistakes || [],
+      // Chronological event stream captured in the Turn Tracker. Each event:
+      // { id, turn, phaseId, phaseName, type, detail, meta, at }. Kept in full
+      // so a future AI summary can follow the game turn-by-turn.
+      events: result.events || [],
+      // Free-form + derived end-of-game summary. Totals are derived from
+      // `events` but stored too so edits/old entries stay self-contained:
+      // { victimsSaved, victimsDied, itemsFound[], itemsUsed[], darkPowers[],
+      //   finale, weapons[], terror[], setup, extra }
+      summary: result.summary || {},
     };
     const nextLog = [entry, ...readLog()];
     writeLog(nextLog);
@@ -249,6 +258,16 @@ export function useGameLog() {
   const discardActive = useCallback(() => {
     writeActive(null);
     setActive(null);
+    pushState();
+  }, []);
+
+  // Edit an existing logged game (fix tracking mistakes after the fact).
+  // `changes` is a shallow patch merged onto the entry. Syncs to other devices.
+  const updateEntry = useCallback((id, changes) => {
+    if (readDemoMode()) return;
+    const nextLog = readLog().map((e) => (e.id === id ? { ...e, ...changes } : e));
+    writeLog(nextLog);
+    setRealLog(nextLog);
     pushState();
   }, []);
 
@@ -311,6 +330,7 @@ export function useGameLog() {
     endGame,
     discardActive,
     deleteEntry,
+    updateEntry,
     clearLog,
     restoreLog,
     setAchievementOverride,

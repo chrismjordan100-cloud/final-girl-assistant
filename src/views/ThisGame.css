@@ -750,3 +750,39 @@
   border: 1px solid var(--border-strong);
   display: block;
 }
+
+/* Captured-events preview on the end-game screen */
+.tg-captured {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(217, 164, 65, 0.06);
+}
+.tg-captured__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+.tg-captured__count {
+  font-family: var(--font-type);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.tg-captured__tallies {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+.tg-captured__tallies strong { color: var(--fg-gold); }
+.tg-captured__hint { margin: 0; font-size: 0.8rem; }

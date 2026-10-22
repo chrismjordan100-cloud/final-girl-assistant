@@ -23,6 +23,7 @@ import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useNarration } from '../hooks/useNarration.js';
 import { useGameLog, aggregateMistakes } from '../hooks/useGameLog.js';
 import { useTurnState } from '../hooks/useTurnState.js';
+import { deriveSummary } from '../lib/gameSummary.js';
 import { useEffect, useState } from 'react';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import './ThisGame.css';
@@ -172,6 +173,11 @@ export default function ThisGame() {
   // "no" and hide something you've genuinely earned.
   const manualAchievements = comboAchievements.filter((a) => !isAutoAchievement(a.id));
 
+  // Live summary of everything captured in the Turn Tracker this game — shown
+  // read-only on the end-game screen so you can see what will be saved.
+  const capturedEvents = (turnState && turnState.events) || [];
+  const liveSummary = deriveSummary(capturedEvents);
+
   const answeredCount = manualAchievements.filter((a) => answers[a.id]).length;
   // Whether we show the (manual-only) achievement questions at all.
   const achievementsRelevant =
@@ -179,7 +185,6 @@ export default function ThisGame() {
   // You can always save: anything you don't mark "yes" is simply treated as
   // not earned this game. (Auto-detected achievements aren't asked about and
   // are never affected by saving — they come straight from your win history.)
-  const canSave = true;
 
   function handleStartGame(isTest) {
     if (narrationSupported) speak(buildScenario({ finalGirl, killer, location }));
@@ -221,12 +226,18 @@ export default function ThisGame() {
       outcome === 'abandoned'
         ? []
         : manualAchievements.filter((a) => answers[a.id] === 'yes').map((a) => a.id);
+    // Carry the captured per-turn event stream into the saved game, plus a
+    // derived summary. Both persist so the record is self-contained and a
+    // future AI summary can follow the game turn-by-turn.
+    const capturedEvents = (turnState && turnState.events) || [];
     endGame({
       outcome,
       turns: turns ? Number(turns) : null,
       notes,
       achievements: earnedIds,
       mistakes,
+      events: capturedEvents,
+      summary: deriveSummary(capturedEvents),
     });
     setOutcome('');
     setTurns('');
@@ -501,6 +512,28 @@ export default function ThisGame() {
                 </div>
               </div>
 
+              {/* What the Turn Tracker captured this game (read-only here —
+                  you can fine-tune it later from the Game Log). */}
+              {capturedEvents.length > 0 && (
+                <div className="tg-captured">
+                  <h3 className="tg-captured__head">
+                    Captured this game
+                    <span className="tg-captured__count">{capturedEvents.length} event{capturedEvents.length === 1 ? '' : 's'}</span>
+                  </h3>
+                  <ul className="tg-captured__tallies">
+                    <li><strong>{liveSummary.victimsSaved}</strong> saved</li>
+                    <li><strong>{liveSummary.victimsDied}</strong> died</li>
+                    <li><strong>{liveSummary.itemsFound.length}</strong> items found</li>
+                    <li><strong>{liveSummary.itemsUsed.length}</strong> items used</li>
+                    <li><strong>{liveSummary.darkPowers.length}</strong> dark powers</li>
+                    {liveSummary.finale && <li>finale: <strong>{liveSummary.finale}</strong></li>}
+                  </ul>
+                  <p className="tg-captured__hint fg-type">
+                    Saved with the game &mdash; you can edit any of it afterwards in the Game Log.
+                  </p>
+                </div>
+              )}
+
               <div className="tg-endgame__fields">
                 <label className="tg-field">
                   <span className="tg-field__label">
@@ -532,12 +565,8 @@ export default function ThisGame() {
                 <button
                   className="fg-btn fg-btn--primary"
                   onClick={handleEndGame}
-                  disabled={!outcome || !canSave}
-                  title={
-                    !outcome
-                      ? 'Choose an outcome first'
-                      : (!canSave ? 'Answer every achievement question first' : '')
-                  }
+                  disabled={!outcome}
+                  title={!outcome ? 'Choose an outcome first' : ''}
                 >
                   Save result
                 </button>
