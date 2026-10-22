@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { useGameLog } from '../hooks/useGameLog.js';
 import { getKiller, getLocation, getIcon } from '../data/games.js';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
@@ -15,7 +16,7 @@ function formatDate(iso) {
 }
 
 export default function GameLog() {
-  const { log, deleteEntry, clearLog } = useGameLog();
+  const { log, manual, deleteEntry, clearLog, restoreLog } = useGameLog();
 
   const wins = log.filter((e) => e.outcome === 'won').length;
   const losses = log.filter((e) => e.outcome === 'lost').length;
@@ -23,27 +24,63 @@ export default function GameLog() {
 
   const outcomeLabel = { won: 'Survived', lost: 'Died', abandoned: 'Abandoned' };
 
+  // Undo toast: holds the snapshot to restore + a message. Auto-dismisses.
+  const [undo, setUndo] = useState(null); // { snapshot, message } | null
+  const undoTimer = useRef(null);
+
+  function showUndo(snapshot, message) {
+    if (undoTimer.current) clearTimeout(undoTimer.current);
+    setUndo({ snapshot, message });
+    // Give a generous window to react before it disappears.
+    undoTimer.current = setTimeout(() => setUndo(null), 10000);
+  }
+
+  // Clean up the timer if the view unmounts.
+  useEffect(() => () => undoTimer.current && clearTimeout(undoTimer.current), []);
+
   function handleDelete(e) {
+    // Snapshot BEFORE deleting so Undo can put it back exactly.
+    const snapshot = { log: [...log], manual: { ...manual } };
     const label =
       [e.finalGirlName, e.killerName, e.locationName].filter(Boolean).join(' · ') ||
-      'this game';
-    if (window.confirm(`Delete this record?\n\n${label}\n\nThis also updates MI and Achievements, and syncs to your other devices. It can\u2019t be undone.`)) {
-      deleteEntry(e.id);
-    }
+      'game';
+    deleteEntry(e.id);
+    showUndo(snapshot, `Deleted "${label}".`);
   }
 
   function handleClearAll() {
-    if (
-      window.confirm(
-        `Delete ALL ${log.length} game${log.length === 1 ? '' : 's'}?\n\nThis wipes your whole Game Log and any manual achievement settings, updates MI and Achievements, and syncs to your other devices. It can\u2019t be undone.`
-      )
-    ) {
-      clearLog();
-    }
+    const snapshot = { log: [...log], manual: { ...manual } };
+    const count = log.length;
+    clearLog();
+    showUndo(snapshot, `Cleared all ${count} game${count === 1 ? '' : 's'}.`);
+  }
+
+  function handleUndo() {
+    if (!undo) return;
+    restoreLog(undo.snapshot);
+    if (undoTimer.current) clearTimeout(undoTimer.current);
+    setUndo(null);
   }
 
   return (
     <div>
+      {undo && (
+        <div className="gl-undo" role="status">
+          <span className="gl-undo__msg">{undo.message}</span>
+          <button className="gl-undo__btn" onClick={handleUndo}>
+            Undo
+          </button>
+          <button
+            className="gl-undo__dismiss"
+            onClick={() => setUndo(null)}
+            aria-label="Dismiss"
+            title="Dismiss"
+          >
+            &times;
+          </button>
+        </div>
+      )}
+
       <div className="view-head">
         <p className="section-eyebrow">The body count</p>
         <h1>Game Log</h1>

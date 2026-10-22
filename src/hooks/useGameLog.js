@@ -272,6 +272,21 @@ export function useGameLog() {
     pushState();
   }, []);
 
+  // Restore a previously-captured snapshot of the log (and manual overrides).
+  // Used by Undo after a delete / clear. Syncs the restore to other devices.
+  const restoreLog = useCallback((snapshot) => {
+    if (readDemoMode()) return;
+    if (!snapshot) return;
+    const logToRestore = Array.isArray(snapshot.log) ? snapshot.log : [];
+    const manualToRestore =
+      snapshot.manual && typeof snapshot.manual === 'object' ? snapshot.manual : {};
+    writeLog(logToRestore);
+    writeManual(manualToRestore);
+    setRealLog(logToRestore);
+    setRealManual(manualToRestore);
+    pushState();
+  }, []);
+
   // Set a manual override for an achievement: true (force earned),
   // false (force not earned), or null/undefined to clear it (fall back to
   // games + auto-detection).
@@ -297,6 +312,7 @@ export function useGameLog() {
     discardActive,
     deleteEntry,
     clearLog,
+    restoreLog,
     setAchievementOverride,
   };
 }

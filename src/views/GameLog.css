@@ -158,3 +158,58 @@
   color: var(--text-dim);
   font-size: 0.82rem;
 }
+
+/* Undo toast — shown after a delete / clear so a mistake is easy to reverse */
+.gl-undo {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  border: 1px solid var(--fg-gold);
+  box-shadow: var(--shadow);
+}
+.gl-undo__msg {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-type);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.gl-undo__btn {
+  flex: 0 0 auto;
+  background: var(--fg-gold);
+  color: #140d0a;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.45em 1.1em;
+  cursor: pointer;
+}
+.gl-undo__btn:hover { background: #e9b857; }
+.gl-undo__btn:focus-visible,
+.gl-undo__dismiss:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.gl-undo__dismiss {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+.gl-undo__dismiss:hover { color: var(--text); }
