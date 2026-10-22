@@ -49,6 +49,11 @@ export default function CardPicker({
           ))}
         </datalist>
       )}
+      {known && !effect && (
+        <span className="card-picker__count">
+          {options.length} known card{options.length === 1 ? '' : 's'} — start typing to pick, or enter your own
+        </span>
+      )}
       {effect && <span className="card-picker__effect">{effect}</span>}
     </span>
   );

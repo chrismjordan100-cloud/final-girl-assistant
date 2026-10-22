@@ -50,8 +50,17 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
         )}
       </h3>
       <p className="setup-capture__hint fg-type">
-        Jot down the setup variant and the Event card revealed during setup as you go &mdash;
-        it&rsquo;s saved with this game and shows at the top of its timeline.
+        Tap <strong>Setup</strong> or <strong>Starting event</strong> below, then pick from the
+        card list (or type your own). It&rsquo;s saved with this game and shows at the top of
+        its timeline.
+        {!(killerId && locationId) && (
+          <>
+            {' '}
+            <span className="setup-capture__warn">
+              Pick your Killer &amp; Location first to get card suggestions.
+            </span>
+          </>
+        )}
       </p>
 
       {picking ? (
@@ -79,7 +88,7 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
           {SETUP_TYPES.map((def) => (
             <button key={def.type} type="button" className="te-btn te-btn--default" onClick={() => pick(def)}>
               <span className="te-btn__glyph" aria-hidden="true">{def.glyph}</span>
-              {def.label}
+              + {def.label}
             </button>
           ))}
         </div>
