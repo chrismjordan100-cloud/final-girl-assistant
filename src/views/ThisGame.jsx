@@ -22,6 +22,7 @@ import {
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useNarration } from '../hooks/useNarration.js';
 import { useGameLog, aggregateMistakes } from '../hooks/useGameLog.js';
+import { useTurnState } from '../hooks/useTurnState.js';
 import { useEffect, useState } from 'react';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import './ThisGame.css';
@@ -77,6 +78,7 @@ export default function ThisGame() {
   const { finalGirlId, killerId, locationId, clear } = useGameSelection();
   const { supported: narrationSupported, speaking, speak, stop } = useNarration();
   const { log, active, startGame, endGame, discardActive } = useGameLog();
+  const { state: turnState } = useTurnState();
 
   const finalGirl = getFinalGirl(finalGirlId);
   const killer = getKiller(killerId);
@@ -144,6 +146,18 @@ export default function ThisGame() {
   const [mistakes, setMistakes] = useState([]);
   const [mistakeType, setMistakeType] = useState('rules');
   const [mistakeText, setMistakeText] = useState('');
+  // Whether the user has hand-edited the turns field, so auto-fill backs off.
+  const [turnsEdited, setTurnsEdited] = useState(false);
+
+  // Auto-fill "Turns taken" from the live Turn Tracker count while a game is
+  // active, unless you've typed your own value. The Turn Tracker counts the
+  // turn you're ON, so when the game ends the completed turns = that number.
+  useEffect(() => {
+    if (!active || turnsEdited) return;
+    const live = turnState && turnState.turn ? String(turnState.turn) : '';
+    if (live && live !== turns) setTurns(live);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active, turnState?.turn, turnsEdited]);
 
   // Achievements available for this combo (killer + location lists).
   const comboAchievements = [
@@ -216,6 +230,7 @@ export default function ThisGame() {
     });
     setOutcome('');
     setTurns('');
+    setTurnsEdited(false);
     setNotes('');
     setAnswers({});
     setMistakes([]);
@@ -488,13 +503,16 @@ export default function ThisGame() {
 
               <div className="tg-endgame__fields">
                 <label className="tg-field">
-                  <span className="tg-field__label">Turns taken (optional)</span>
+                  <span className="tg-field__label">
+                    Turns taken
+                    {!turnsEdited && turns ? ' (from Turn Tracker — edit if needed)' : ' (optional)'}
+                  </span>
                   <input
                     className="tg-field__input"
                     type="number"
                     min="1"
                     value={turns}
-                    onChange={(e) => setTurns(e.target.value)}
+                    onChange={(e) => { setTurns(e.target.value); setTurnsEdited(true); }}
                     placeholder="e.g. 8"
                   />
                 </label>
