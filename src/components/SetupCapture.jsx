@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTurnState } from '../hooks/useTurnState.js';
+import { useGameSelection } from '../hooks/useGameSelection.js';
+import CardPicker from './CardPicker.jsx';
 
 /* Capture the game's Setup and Starting event as you build the game. Stored as
    "turn 0" events on the shared turn state, so they appear as a "Game start"
@@ -16,6 +18,7 @@ const LABELS = Object.fromEntries(SETUP_TYPES.map((d) => [d.type, d.label]));
 
 export default function SetupCapture({ heading = 'Record setup & starting event' }) {
   const { state, addEvent, removeEvent } = useTurnState();
+  const { killerId, locationId } = useGameSelection();
   const setupEvents = (state.events || []).filter((e) => e.turn === 0);
 
   const [picking, setPicking] = useState(null);
@@ -54,13 +57,13 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
       {picking ? (
         <div className="turn-events__entry">
           <span className="turn-events__entry-label">{picking.glyph} {picking.label}</span>
-          <input
-            className="turn-events__input"
-            type="text"
-            autoFocus
+          <CardPicker
+            type={picking.type}
+            combo={{ killerId, locationId }}
             value={text}
+            onChange={setText}
             placeholder={picking.placeholder}
-            onChange={(e) => setText(e.target.value)}
+            autoFocus
             onKeyDown={(e) => {
               if (e.key === 'Enter') confirm();
               if (e.key === 'Escape') cancel();

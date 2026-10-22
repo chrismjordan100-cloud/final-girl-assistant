@@ -4,6 +4,7 @@ import { getKiller, getLocation, getPhaseExtras } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import SetupCapture from '../components/SetupCapture.jsx';
+import CardPicker from '../components/CardPicker.jsx';
 import './TurnTracker.css';
 
 /* The per-turn event types the quick-capture bar can log. `needsText` means
@@ -295,13 +296,13 @@ export default function TurnTracker() {
                   </button>
                 </div>
               )}
-              <input
-                className="turn-events__input"
-                type="text"
-                autoFocus
+              <CardPicker
+                type={picking.type}
+                combo={{ killerId, locationId }}
                 value={eventText}
+                onChange={setEventText}
                 placeholder={picking.placeholder}
-                onChange={(e) => setEventText(e.target.value)}
+                autoFocus
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') confirmEvent();
                   if (e.key === 'Escape') cancelPick();

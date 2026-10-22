@@ -562,3 +562,17 @@
   color: var(--text-dim);
 }
 .setup-capture__hint { margin: 0 0 0.7rem; font-size: 0.82rem; }
+
+/* Card picker (datalist-backed input + effect preview) */
+.card-picker { flex: 1 1 14rem; min-width: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.card-picker .turn-events__input { flex: none; width: 100%; }
+.card-picker__effect {
+  font-family: var(--font-type);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+  padding: 0.3rem 0.5rem;
+  border-left: 2px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.06);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
