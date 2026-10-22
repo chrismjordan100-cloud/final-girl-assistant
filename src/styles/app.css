@@ -157,17 +157,29 @@
     flex: 0 0 auto;        /* sits at the right of the top row */
   }
 
+  /* Demo toggle gets its own full-width row DIRECTLY under the top row, so
+     it's always visible when the menu opens (the nav list below it is the
+     only part that scrolls). */
+  .demo-toggle {
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+
   /* Nav becomes a full-width dropdown panel, collapsed by default. */
   .app-nav {
     display: none;
-    order: 3;              /* force onto its own row, below the top line */
+    order: 4;              /* below the demo toggle */
     width: 100%;
     flex-basis: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0.25rem;
-    max-height: calc(100vh - 7rem);
-    overflow-y: auto;      /* if still tall, the list scrolls on its own */
+    max-height: calc(100vh - 11rem);
+    overflow-y: auto;      /* only the list scrolls; toggle stays put above */
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     border-top: 1px solid var(--border-strong);
@@ -182,14 +194,6 @@
     padding: 0.7em 0.9em;
   }
 
-  /* Demo toggle drops to its own full-width row at the very bottom. */
-  .demo-toggle {
-    order: 4;
-    width: 100%;
-    flex-basis: 100%;
-    margin-left: 0;
-    justify-content: center;
-  }
   /* When the menu is closed, hide both the nav and the demo toggle so the
      header is just one clean row (brand + Menu button). */
   .app-header:not(.nav-open) .demo-toggle { display: none; }
