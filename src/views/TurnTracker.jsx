@@ -3,6 +3,7 @@ import { phases, horrorRoll } from '../data/rules.js';
 import { getKiller, getLocation, getPhaseExtras } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useTurnState } from '../hooks/useTurnState.js';
+import SetupCapture from '../components/SetupCapture.jsx';
 import './TurnTracker.css';
 
 /* The per-turn event types the quick-capture bar can log. `needsText` means
@@ -21,16 +22,7 @@ const EVENT_TYPES = [
   { type: 'note', label: 'Note', glyph: '\u270E', tone: 'default', needsText: true, placeholder: 'Anything worth remembering' },
 ];
 
-// Captured once at the start of the game (stored as turn-0 events so they sit
-// in a "Game start" group ahead of Turn 1 in the timeline).
-const SETUP_TYPES = [
-  { type: 'setup', label: 'Setup', glyph: '\uD83E\uDDE9', tone: 'default', placeholder: 'Setup cards / board configuration' },
-  { type: 'event-start', label: 'Starting event', glyph: '\u2728', tone: 'default', placeholder: 'Event card revealed at setup' },
-];
-
-const EVENT_LABELS = Object.fromEntries(
-  [...EVENT_TYPES, ...SETUP_TYPES].map((e) => [e.type, e.label])
-);
+const EVENT_LABELS = Object.fromEntries(EVENT_TYPES.map((e) => [e.type, e.label]));
 
 /* A compact +/- counter for a live game value. */
 function Counter({ label, value, onChange, min = 0, max = 99, tone, hint }) {
@@ -85,28 +77,6 @@ export default function TurnTracker() {
 
   const allEvents = events || [];
   const thisTurnEvents = allEvents.filter((e) => e.turn === turn);
-  const setupEvents = allEvents.filter((e) => e.turn === 0);
-
-  // --- Game-start capture (Setup + Starting event), recorded once as turn-0 ---
-  const [setupPicking, setSetupPicking] = useState(null);
-  const [setupText, setSetupText] = useState('');
-
-  function pickSetupType(def) {
-    setSetupPicking(def);
-    setSetupText('');
-  }
-  function confirmSetup() {
-    if (!setupPicking) return;
-    const detail = setupText.trim();
-    if (!detail) return;
-    addEvent({ type: setupPicking.type, detail, turn: 0, phaseName: 'Setup' });
-    setSetupPicking(null);
-    setSetupText('');
-  }
-  function cancelSetup() {
-    setSetupPicking(null);
-    setSetupText('');
-  }
 
   // Log a no-text event (and keep the handy live counter in sync).
   function logQuick(type) {
@@ -238,57 +208,9 @@ export default function TurnTracker() {
         <button className="fg-btn tt-newgame" onClick={newGame}>New game</button>
       </div>
 
-      {/* GAME SETUP — recorded once at the start (setup + starting event). */}
-      <details className="tt-setup fg-panel" open={setupEvents.length === 0}>
-        <summary className="tt-setup__summary">
-          Game setup &amp; starting event
-          {setupEvents.length > 0 && <span className="tt-setup__badge">{setupEvents.length} recorded</span>}
-        </summary>
-        <div className="tt-setup__body">
-          {setupPicking ? (
-            <div className="turn-events__entry">
-              <span className="turn-events__entry-label">{setupPicking.glyph} {setupPicking.label}</span>
-              <input
-                className="turn-events__input"
-                type="text"
-                autoFocus
-                value={setupText}
-                placeholder={setupPicking.placeholder}
-                onChange={(e) => setSetupText(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') confirmSetup();
-                  if (e.key === 'Escape') cancelSetup();
-                }}
-              />
-              <button type="button" className="fg-btn fg-btn--primary fg-btn--small" onClick={confirmSetup} disabled={!setupText.trim()}>
-                Log
-              </button>
-              <button type="button" className="fg-btn fg-btn--small" onClick={cancelSetup}>Cancel</button>
-            </div>
-          ) : (
-            <div className="turn-events__buttons">
-              {SETUP_TYPES.map((def) => (
-                <button key={def.type} type="button" className="te-btn te-btn--default" onClick={() => pickSetupType(def)}>
-                  <span className="te-btn__glyph" aria-hidden="true">{def.glyph}</span>
-                  {def.label}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {setupEvents.length > 0 && (
-            <ul className="turn-events__list">
-              {setupEvents.map((e) => (
-                <li key={e.id} className="te-item">
-                  <span className="te-item__phase">Setup</span>
-                  <span className="te-item__text">{EVENT_LABELS[e.type] || e.type}{e.detail ? `: ${e.detail}` : ''}</span>
-                  <button type="button" className="te-item__del" onClick={() => removeEvent(e.id)} aria-label="Remove" title="Remove">&times;</button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </details>
+      {/* GAME SETUP — recorded once at the start (setup + starting event).
+          Shared component, also on the Setup Assist tab; same backing store. */}
+      <SetupCapture heading="Game setup &amp; starting event" />
 
       {(killer || location) ? (
         <p className="turn-combo fg-type">

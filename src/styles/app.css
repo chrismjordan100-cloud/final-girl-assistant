@@ -408,3 +408,157 @@
   cursor: pointer;
 }
 .demo-banner__off:hover { background: #241611; }
+
+/* ==========================================================================
+   Event capture (shared by Turn Tracker + Setup Assist)
+   ========================================================================== */
+.turn-events {
+  margin-bottom: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.25);
+}
+.turn-events__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  margin: 0 0 0.7rem;
+}
+.turn-events__ctx {
+  font-family: var(--font-type);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+.turn-events__buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.te-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.te-btn__glyph { font-size: 1em; }
+.te-btn:hover { background: var(--surface-raised); }
+.te-btn:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.te-btn--blood:hover { border-color: var(--fg-blood); color: var(--fg-blood-bright); }
+.te-btn--green:hover { border-color: var(--fg-sick-green); color: var(--fg-sick-green); }
+.te-btn--gold:hover { border-color: var(--fg-gold); color: var(--fg-gold); }
+
+.turn-events__entry {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.turn-events__entry-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--fg-bone);
+  flex: 0 0 auto;
+}
+.turn-events__power { display: inline-flex; gap: 0.25rem; }
+.te-power {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.68rem;
+  padding: 0.3em 0.7em;
+  cursor: pointer;
+}
+.te-power.is-active { background: var(--fg-blood); border-color: var(--fg-blood); color: #fff; }
+.turn-events__input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.5em 0.7em;
+}
+.turn-events__input:focus { outline: 2px solid var(--accent-bright); outline-offset: 1px; }
+
+.turn-events__list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0.8rem 0 0;
+  border-top: 1px dashed var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.te-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; }
+.te-item__phase {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.15em 0.55em;
+}
+.te-item__text { flex: 1; min-width: 0; }
+.te-item--victim-died .te-item__text { color: var(--fg-blood-bright); }
+.te-item--victim-saved .te-item__text { color: var(--fg-sick-green); }
+.te-item__del {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+.te-item__del:hover { color: var(--fg-blood-bright); }
+
+/* Setup capture block (Setup Assist tab) */
+.setup-capture {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(217, 164, 65, 0.06);
+}
+.setup-capture__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem;
+}
+.setup-capture__badge {
+  font-family: var(--font-type);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+.setup-capture__hint { margin: 0 0 0.7rem; font-size: 0.82rem; }

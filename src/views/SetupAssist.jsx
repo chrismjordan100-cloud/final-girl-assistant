@@ -12,6 +12,7 @@ import {
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import IconSelect from '../components/IconSelect.jsx';
+import SetupCapture from '../components/SetupCapture.jsx';
 import './SetupAssist.css';
 
 const finalGirlGroups = getFinalGirlGroups();
@@ -190,6 +191,9 @@ export default function SetupAssist() {
           </button>
         </div>
       </div>
+
+      {/* Capture the setup variant + starting event as you build the game. */}
+      <SetupCapture heading="Record setup &amp; starting event as you go" />
 
       <div className="stack" style={{ marginTop: '1.5rem' }}>
         {setupGroups.map((group, gi) => {
