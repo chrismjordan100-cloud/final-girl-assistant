@@ -36,7 +36,14 @@ const NAV = [
 
 export default function App() {
   const [view, setView] = useState('home');
+  const [navOpen, setNavOpen] = useState(false);
   const { demoMode, setDemoMode } = useGameLog();
+
+  // Change view and close the mobile menu in one go.
+  const go = (id) => {
+    setView(id);
+    setNavOpen(false);
+  };
 
   return (
     <div className={'app-shell' + (demoMode ? ' is-demo' : '')}>
@@ -50,10 +57,10 @@ export default function App() {
           </button>
         </div>
       )}
-      <header className="app-header">
+      <header className={'app-header' + (navOpen ? ' nav-open' : '')}>
         <button
           className="brand"
-          onClick={() => setView('home')}
+          onClick={() => go('home')}
           aria-label="Final Girl Rules Assistant — go home"
         >
           <span className="brand__kicker">The</span>
@@ -61,12 +68,28 @@ export default function App() {
           <span className="brand__sub">Rules Assistant</span>
         </button>
 
-        <nav className="app-nav" aria-label="Primary">
+        {/* Mobile-only hamburger: hidden on desktop via CSS. */}
+        <button
+          className="nav-toggle"
+          onClick={() => setNavOpen((o) => !o)}
+          aria-expanded={navOpen}
+          aria-controls="primary-nav"
+          aria-label={navOpen ? 'Close menu' : 'Open menu'}
+        >
+          <span aria-hidden="true" className="nav-toggle__bars" />
+          <span className="nav-toggle__label">{navOpen ? 'Close' : 'Menu'}</span>
+        </button>
+
+        <nav
+          id="primary-nav"
+          className={'app-nav' + (navOpen ? ' is-open' : '')}
+          aria-label="Primary"
+        >
           {NAV.map((item) => (
             <button
               key={item.id}
               className={'app-nav__link' + (view === item.id ? ' is-active' : '')}
-              onClick={() => setView(item.id)}
+              onClick={() => go(item.id)}
               aria-current={view === item.id ? 'page' : undefined}
             >
               <span aria-hidden="true" className="app-nav__glyph">{item.glyph}</span>

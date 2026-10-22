@@ -87,9 +87,99 @@
 }
 .app-nav__glyph { font-size: 0.95em; }
 .app-nav__link:focus-visible,
-.brand:focus-visible {
+.brand:focus-visible,
+.nav-toggle:focus-visible {
   outline: 2px solid var(--accent-bright);
   outline-offset: 2px;
+}
+
+/* --- Mobile menu toggle (hamburger) --- */
+/* Hidden on desktop; the media query below reveals it on narrow screens. */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5em;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.55em 0.9em;
+  cursor: pointer;
+}
+.nav-toggle__bars,
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  content: '';
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.nav-toggle__bars::before { position: absolute; top: -6px; left: 0; }
+.nav-toggle__bars::after { position: absolute; top: 6px; left: 0; }
+/* Morph bars into an X when the menu is open. */
+.app-header.nav-open .nav-toggle__bars { background: transparent; }
+.app-header.nav-open .nav-toggle__bars::before { transform: translateY(6px) rotate(45deg); }
+.app-header.nav-open .nav-toggle__bars::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ==========================================================================
+   Phone layout: collapse the long tab list behind the hamburger so the
+   sticky header stays one compact row and the content gets the screen.
+   ========================================================================== */
+@media (max-width: 720px) {
+  .app-header {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .brand__title { font-size: 1.5rem; }
+  .brand__kicker { font-size: 0.5rem; letter-spacing: 0.3em; }
+  .brand__sub { font-size: 0.68rem; }
+
+  .nav-toggle { display: inline-flex; }
+
+  /* Nav becomes a dropdown panel, collapsed by default. */
+  .app-nav {
+    display: none;
+    order: 3;              /* drop below brand + toggle row */
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;      /* if it's still tall, it scrolls on its own */
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-strong);
+  }
+  .app-nav.is-open { display: flex; }
+
+  .app-nav__link {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    padding: 0.7em 0.9em;
+  }
+
+  /* Keep the demo toggle out of the compact top row on phones. */
+  .demo-toggle {
+    order: 4;
+    margin-left: 0;
+    align-self: stretch;
+    justify-content: center;
+  }
+  /* When the menu is closed, hide the demo toggle too so the header is
+     just one clean row; it reappears inside the open menu. */
+  .app-header:not(.nav-open) .demo-toggle { display: none; }
 }
 
 /* --- Main --- */
