@@ -1,0 +1,1541 @@
+feature film rulebook
+S E R I E S 2
+
+-- 1 of 44 --
+
+Components
+United Star Ship Konrad, M-class freight vessel, model 9791-Bison, commissioned
+in 2122 by the Weygar-Yustarry Mining Corporation, built by the Lockheed Martin
+Corporation at a cost of $4.2 billion, with a mass of 63,000 metric tons.
+Current whereabouts: unknown.
+catastrophic	catastrophic
+hull breach	hull breach
+The farthest from you has a hull breach.
+	Place the Skull token there. Anyone (Victims,	
+Enemies, and you) that is in or enters that space
+	is instantly killed. If the Killer dies this way,
+	reveal their Final Health token. If they come
+	back to life, place them at the Junction.
+Self DesTruCt
+Once activated, place the token
+	at the start of the Countdown track.
+	During the Upkeep phase, move the	
+token one space to the right.
+	When reaches , the ship self
+	destructs, killing everything. If you are
+	not at a space, you lose the game.
+Activated at the Bridge
+Terror	Terror
+Maintenance	Maintenance
+8 Terror cards
+3 Maintenance Cards
+Setup	Setup
+junction danger	junction danger
+22 	22
+11
+22 11	11
+11
+11
+	11
+5 Setup cards
+Event	Event
+cramped escape pods	cramped escape pods	
+“No way I’m sharing a pod with Karen!”
+If there is more than 1 Victim in a space,
+	you cannot save Victims in that space.
+10 Event cards
+keycard	keycard	
+“Access granted.”
+Place a on this card when you take
+	it. During the Action phase, you may
+	place a on the Maintenance card
+	(if your current space has a ) or on
+	an adjacent Maintenance Shaft.
+ITEM	ITEM
+20 Item cards
+1 Location board 	11 Various Tokens
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+2
+
+-- 2 of 44 --
+
+Special setup
+* You will start with two 	tokens on the board. Each Setup card will indicate where to place them.
+* Place one Keycard Item card in your inventory and place a 	token on it. Place two Keycard Item
+cards next to your play area, along with the remaining 	tokens. Shuffle the remaining three Keycard
+Item cards with the rest of the Item cards and build the Item decks as normal.
+* Place the Super Loader Item card next to your play area and place the 	token in the Hangar.
+* Place the three Maintenance cards next to your Player board, faceup.
+Special rules
+keycards
+Keycards are useful items that can unlock new pathways or activate important ship functions.
+* If you start or end your movement in a space (not while passing
+through) that has a 	token, you may spend 	to take the
+token. Take one of the Keycard Item cards that were set aside
+during setup and place it in your inventory, placing the 	token
+on it.
+* Whenever you take a Keycard Item card, either through searching or an event,
+always place a 	token on top of it.
+* Whenever you use a Keycard, by placing a 	token on the board or on a
+Maintenance card (explained below), always keep the empty Keycard Item card in your inventory.
+You cannot discard an empty Keycard Item card, and if the game instructs you to discard an Item card
+(either randomly or by choice), ignore them for that purpose.
+* Once placed, either on the board or on a Maintenance card, you cannot retrieve any 	tokens unless
+a game effect instructs you to.
+* It does not cost time to use a Keycard and place a 	token.
+keycard	keycard
+“Access granted.”
+Place a on this card when you take
+	it. During the Action phase, you may
+	place a on the Maintenance card
+	(if your current space has a ) or on
+	an adjacent Maintenance Shaft.
+3
+
+-- 3 of 44 --
+
+MAINTENANCE SHAFTS
+There are four Maintenance Shafts on the board, each with an empty Keycard token connected to it. Neither
+you nor Victims can pass through these shafts as long as they are inactive. If you are adjacent to an inactive
+Maintenance Shaft, you can place an available 	token on it to activate it, which will allow you to freely travel
+through it along with any Victims that are following you.
+IMPORTANT: Enemies can not move through Maintenance Shafts unless a specific card or effect allows them to.
+MAINTENANCE CARDS
+There are four spaces on the ship highlighted in purple and denoted by a 	icon: the Trash Compactor, the
+Furnace, the Hangar, and the Bridge. A special function can be activated in each of these rooms, indicated on the
+three Maintenance cards: the Crusher, the Incinerator, the Airlock, and the Self Destruct respectively.
+* In order to activate a function, you must be in the 	space (you cannot be passing through) that
+corresponds to the function that you want to activate (for example, to activate the Incinerator you would
+need to be at the Furnace). Place enough 	tokens on it to activate it (each function requires a different
+number of Keycards) and then follow the instructions for that function.
+* Both the Airlock and the Self Destruct may allow you to kill yourself along with the Killer. If that happens,
+you lose the game, even if the Killer dies along with you (no victory for self-inflicted destruction).
+* If any game effects instruct you to remove 	tokens from the Maintenance cards AFTER you’ve already
+activated a function, those functions are immediately canceled. Remove any additional tokens associated
+with them.
+Inactive Maintenance
+Shaft without a Keycard
+Active Maintenance
+Shaft with a Keycard
+Self DesTruCt
+Once activated, place the token
+	at the start of the Countdown track.
+	During the Upkeep phase, move the	
+token one space to the right.
+When reaches , the ship self
+	destructs, killing everything. If you are
+	not at a space, you lose the game.
+Activated at the Bridge
+Ellen had four Keycards and was at the Bridge, so she
+placed the 	tokens on the Maintenance card, activating
+the Self Destruct! Following the instructions, she then
+placed the 	token on the card. She now has this turn and
+the next to get to an Escape Pod before the ship explodes!
+4
+
+-- 4 of 44 --
+
+super loader
+Even though the Super Loader starts on the board in the Hangar,
+you can only use it if you find the Super Loader Key Item card. If
+you ever unequip the Super Loader or lose the Key, leave the
+token in your current space and return the Super Loader Item
+card to its starting place beside the board (in other words, you
+can’t put the Super Loader in your Backpack). When you have the Super Loader equipped:
+* Victims will not follow you.
+* Reduce all movement by 1, to minimum of 1.
+* Reduce all damage taken by 1, to minimum of 1.
+* You cannot play Short/Long Rest or Search.
+00
+Super loader	Super loader
+“Let’s dance, bitch!”
+If you are in the same space as the	
+Super Loader, you may take and
+	equip the Super Loader Item card.
+“I’m rated at a Class-3 for this puppy.”
+super loader key	super loader key
+5
+
+-- 5 of 44 --
+
+achievements
+Win a game on the U.S.S. Konrad.
+Win a game using the Self Destruct.
+Activate the Airlock with the Killer in the Hangar.
+Have the Crusher deal the final damage to the Killer.
+Have the Incinerator deal the final damage to the Killer.
+Save the Orphan Girl and Jonas the Cat.
+Win a game with no Victim killed by the Crusher, Incinerator, or Airlock.
+Defeat the Killer with the Super Loader equipped.
+Use the Flamethrower to deliver the killing blow to the Killer, while also dealing damage
+to yourself at the same time.
+Win a game where at least half the Victims were saved.
+6
+
+-- 6 of 44 --
+
+6 Tokens 1 Evolution Marker
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+"it came out of	"it came out of
+the shadows!"	the shadows!"
+If the Evomorph is a Hatchling, discard
+	and draw the next Terror card. Otherwise:
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Action cards
+3 Finale cards
+the perfect organism	the perfect organism
+3 Dark Power cards
+razor claws	razor claws
+Whenever the Evomorph damages
+	you, randomly discard 1 Action card.
+When revealed, place the Evomorph	
+in the closest space to you without
+	a and remove all .
+1 Epic Dark Power card
+razor tail	razor tail
+	epic dark power	epic dark power
+Whenever the Evomorph attacks at least once,
+	attack an additional time in each adjacent space.
+When revealed, place the Evomorph in the
+	space with the most Victims without a and
+	kill every Victim there. Then, remove all .
+2 Final Girl cards
+Ellen	Ellen	44
+22
+Take a
+Search
+Card
+	Move
+1 Space
+22
+jenette	jenette	77
+Take a
+Search
+Card
+Move
+1 Space
+Take any
+top Item
+Card
+Action	Action
+1 Evolution card
+Evolution	Evolution
+Hatchling
+Upon Evolving, .	
+now increases
+	normally.
+Only increase if
+	the Hatchling kills a	
+Victim.
+If would increase
+	otherwise, instead .
+Youngling
+Upon Evolving, max
+	health increases to 10.
+	Then, the Evomorph	
+recovers all .
+	Reveal the Dark
+	Power card and rotate
+	the Ambush deck.	
+Adult
+Evolution	Evolution
+10 Ambush cards
+ambush
+Youngling
+ambush	ambush
+adult
+Youngling
+adult
+If there are no Victims on the board,
+	discard and draw the next Ambush card.
+	Otherwise, place the Evomorph with the Victim
+	farthest from you without a	 in their space
+	and remove all	 .
+1
+You've discovered shed skin!
+	Place a in the closest space to you
+	without a .
+8
+scan	scan
+“I got signals! I got readings, in front and behind!” 1
+Place a in your space
+Place a in your space
+Place the Evomorph in your space.
+	Skip the next Killer phase.
+	Remove this card from the game.
+Can only be resolved when the Evomorph has Vanished.
+“The cargo retrieval from Titan-6 was routine. Ore, mining equipment, medical resupply for the outer
+rim, your basic boring-as-shit manifest. But something was hiding in the cargo, and we brought it on
+board. A thing, an animal, a creature... no, it was a goddamn monster, and I let it loose on my ship!”
+— Captain Arthur Houston of the U.S.S. Konrad
+Components
+7
+
+-- 7 of 44 --
+
+Special setup
+* Place the Evolution card next to the Killer board. Place the Evolution marker next to
+the Hatchling stage on the card. This is the form that the Evomorph begins as.
+* Shuffle the Evomorph’s and the chosen Location’s Terror cards together as
+normal, but only include 8 cards in the Terror deck (rather than 10).
+* Shuffle the Ambush cards and place them facedown next to the Terror deck with the
+Youngling side (light green) readable (the Adult side will be upside down).
+* The Evomorph starts with only 4 health, but this may increase to 10 later.
+Special rules
+evolution
+The Evomorph has three stages. It starts out as a Hatchling but may evolve into a Youngling and then finally
+into an Adult. The keyword EVOLVE is located in the special effects column of the Evomorph’s Bloodlust track.
+When 	increases and you reach an EVOLVE, move the Evolution marker to the next stage on the Evolution
+card and follow any setup or special rules that you find there.
+* Hatchling: As a Hatchling, the Evomoph is very slow but incredibly deadly - attack it at your own peril!
+will ONLY increase if the Hatchling kills a Victim itself. Any other 	increases, either from Terror
+cards, Event cards, or Victims dying in other ways, are ignored. Instead, 	for each 	that occurs.
+* Youngling: When the Hatchling evolves into a Youngling, it immediately Vanishes
+(this is discussed in the next section). Additionally, 	may now increase as normal.
+* Adult: When the Youngling evolves into an Adult, the Evomorph’s maximum health goes from 4 to 10 and
+it immediately recovers all 	. Then, reveal the Evomorph’s Dark Power card and rotate the Ambush
+deck so that the Adult side (dark green) is readable (the Youngling side will now be upside down).
+8
+
+-- 8 of 44 --
+
+VANISHING & AMBUSH CARDS
+Whenever you see this icon 	, the Evomorph immediately disappears into the shadows and
+vanishes, ending the Killer phase. Remove the Killer meeple from the board and place it on top
+of the Terror deck.
+While the Evomorph has vanished you will ignore all steps of the Killer phase (both the Killer Action on the
+Finale card and drawing a Terror card). Instead, you will draw an Ambush card and follow the side of the card
+that corresponds to the Evomorph’s current stage (either light green for Youngling or dark green for Adult). Each
+Ambush card has a red Danger number found in the upper right corner (from 1 - 10). There is a number for the
+Youngling side of the card and a different number for the Adult side. The higher the number, the more dangerous
+the effect is.
+If the Ambush deck ever runs out, shuffle the discard pile and build a new deck.
+SCANNING
+When playing against the Evomorph you will have access to the new Scan Action cards.
+* These cards may ONLY be played while the Evomorph has vanished.
+* When resolving Scan, you may be instructed to place a 	token in your space. This indicates that you have
+scanned the area and you know that the Evomorph isn’t hiding in your space. Certain Ambush cards will
+have the Evomorph appearing out of nowhere, often in your space, and immediately attacking. Scanning is
+a way to protect yourself from being ambushed.
+* A space can only have one 	token in it, but multiple spaces can have 	tokens at the same time. If
+instructed to place a 	token in a space where one is already present, ignore it. In the rare instance where
+you are instructed to place a 	token and there are none remaining, remove the farthest 	token from
+you and use it.
+* Scan cards have an additional success line for when you get 3 or more successes on a Horror roll. This will
+allow you to ambush the Evomorph (instead of the other way around).
+9
+
+-- 9 of 44 --
+
+achievements
+Defeat the Evomorph on the U.S.S. Konrad.
+Defeat the Evomorph at five different Locations.
+Defeat the Evomorph in Extreme Horror Mode.
+Defeat the Evomorph immediately after forcing it to appear due to a successful
+Scan action.
+Defeat the Evomorph before it becomes an Adult.
+Prevent the Evomorph from being placed on your space due to there being a Scan
+token there.
+Witness the Evomorph Vanish at least 5 times.
+Defeat the Evomorph without losing any health.
+Deal damage to the Evomorph before it becomes an Adult, and again after it
+becomes an Adult.
+Remove 2 Scan Action cards from the game.
+10
+
+-- 10 of 44 --
+
+Components
+"Cold doesn't begin to describe it. There ain't really no word for it to put it plainly,
+ma'am. You bundle up and if you go outside at night you never, ever let go of
+the guide line. Other than that we'll mostly be working all the time."
+— Stu Carpenter, Station 2891 Facilities Manager
+"It's not safe	"It's not safe
+in here!"	in here!"
+Each Victim that is adjacent to a
+	hallway moves into the hallway.
+Panic one Victim from each space.
+or
+fly faster!	fly faster!
+"We need an emergency pick up
+	and we need it NOW!" 	1
+Resolve this
+	card again	
+2
+Terror	Terror
+Action	Action
+8 Terror cards
+1 Action card
+Setup	Setup
+good morning	good morning
+ 	11
+11
+	11	11
+11
+11
+22	22
+22
+5 Setup cards
+Event	Event
+“Pair up!”	“Pair up!”	
+“Everyone stay together! No one should be alone.”
+Remove all of the Victims that are alone in a space from the board
+	and place them 2 at a time in the following locations until none are
+	left: Kitchen, Radio Room, Rec Room, Lab	
+If there are an odd number of Victims, add one new Victim before
+	placing the final two.	
+Discard this card.
+10 Event cards
+Skidozer Keys	Skidozer Keys	
+“I always wanted to drive that thing!”
+You may now use the Skidozer. The Skidozer	
+token must remain outdoors. It may be used
+	for either of the following effects: Move to any
+	outdoor space OR when in the outdoor space
+	just outside of the Lab, place the “Hole” token
+	there which makes those two spaces adjacent.
+ITEM	ITEM
+18 Item cards
+1 Location board
+1 Helicopter Card
+15 Various Tokens
+Director (design): A.J. Porfirio 	Director of Photography (art): Roland MacDonald 	Item Art: Tyler Johnson
+11
+
+-- 11 of 44 --
+
+Special setup
+Setup the game as normal with the following differences:
+* Place the Helicopter Card near the board.
+* Place the Helicopter token on the 	space on the board.
+* Place the Skidozer token in any outdoor space that is adjacent to a 	space.
+* Before setting up the Item decks, find a Two-Way Radio and place it in your inventory.
+Special rules
+DEFINITIONS
+* OUTDOOR SPACES: The five spaces that are outside, including the helicopter Exit space. All other spaces are
+considered indoors.
+* MAIN BUILDING: Indoor spaces other than the Commander’s Hut and Tool Shed.
+* HALLWAY SPACES: The long spaces in the Main Building. Use the associated Victim Holding boards from the
+Core Box for these spaces.
+HOW TO save Victims
+The Helicopter will have to travel to the Arctic Airport in order to save Victims.
+* When the Helicopter token is on the 	space, you may freely move it and up to 3 Victims that are with
+it onto the Arctic Station 2891 space of the Helicopter card. Once the Helicopter has Victims on board, it
+cannot return to the Station 2891 until it has first dropped off the Victims at the Arctic Airport.
+* Victims on the Helicopter card cannot be targeted or killed.
+* The 	icon means the Helicopter may move 1 space on the Helicopter card. The new 'Fly Faster'
+Action card is the main way to move the Helicopter, but some Terror cards will allow you to move it as well.
+* To save Victims, the Helicopter must reach the Arctic Airport. If the Helicopter reaches the airport outside
+of the Action phase, apply the effects from saving the Victims at the beginning of your next Action phase.
+After the Victims have been saved you may begin moving the Helicopter back to Arctic Station 2891
+(landing freely).
+FROSTBITE
+The Frostbite icon means you, each Victim, and each Enemy in an outdoor space gain a Frostbite token or lose
+one health if they already have Frostbite. During each Upkeep phase, discard all Frostbite tokens for anyone
+indoors.
+12
+
+-- 12 of 44 --
+
+achievements
+Win a game at Station 2891.
+Save at least 6 Victims.
+Win a game with no Victims dying from Frostbite.
+Win a game without using the Fly Faster! Action card.
+Win a game using only weapons from the Armory.
+Save two or more Special Victims.
+Use the Flamethrower to deal at least 5 damage to an Enemy.
+Use an Alaskan Malamute to deliver the killing blow to the Killer.
+Obtain an Item from the Supply Closet, the Tool Shed, the Commander’s Hut, and the Armory.
+Witness you, an Enemy, and a Victim all take damage from Frostbite on the same turn.
+13
+
+-- 13 of 44 --
+
+"No one knows where... those things... came from. but it started, right after our research team arrived. I
+think one of the dogs was infected, but John, rest his soul, told me he thought the chemist was performing
+strange experiments back home."
+— Arctic Station 2891 radio room communication
+You may discard this card to test one of
+	the Exposed Victims in your space
+	to see if it has been assimilated.
+Test Kit	Test Kit	
+“You say you are you. Prove it.”
+ITEM	ITEM
+safe	safe
+Replace the Exposed Victim	
+with a normal Victim and remove
+	this card from the game.
+test	test
+results	results
+4 Test Kit
+Item cards
+3 Test Results
+cards
+Components
+5 Various Tokens
+2 Killer Meeples
+Director (design): A.J. Porfirio 	Director of Photography (art): Roland MacDonald
+"Who can we	"Who can we
+trust?"	trust?"
+If there is no Mutated Organism in play,
+	panic each of the Exposed Victims and
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Finale cards
+3 Exposed Victim cards
+3 Mutated
+Organism cards
+Regenerative Assimilation	Regenerative Assimilation
+If there is only one Mutated Organism in
+	play, at the beginning of the Killer	
+phase. If the Horror Level is ever above 6, you
+	have been assimilated and lose the game.
+When this card is revealed, any remaining	
+Exposed Victims are immediately assimilated.
+2 Final Girl cards
+uki	uki	66
+Take
+Furious
+Strike
+Move
+1 Space
+22
+kate	kate	44
+Move
+1 Space
+	Take
+Retaliate
+Take
+Guard	
+Take
+Guard
+14
+
+-- 14 of 44 --
+
+Special setup
+Setup the game as normal, with the following changes when playing with The Organism:
+* When placing Victims, randomly place the Red (from the Final Girl Core box), Black, and Grey Killer meeples
+one at a time in place of three of the yellow Victim meeples. These are considered Exposed Victims.
+* Nothing is placed on the 	space during setup as the Killer(s) is/are hidden amongst the Victims.
+Exception! If playing at a location other than the Arctic Station, put the Lab token where the 	space is
+on the Setup card. This is the location of the Lab.
+* Place a Test Kit Item card face-up above each of the Item Decks (most location boards only need 3).
+* Shuffle the 3 Test Results cards and form a facedown Test Results deck.
+* Shuffle and place the Exposed Victim cards facedown in the 3 spaces on the Killer board.
+Special rules
+To win, you must test the Exposed Victims to find out which ones
+have been ASSIMILATED and destroy all Mutated Organisms.
+There will always be at least 1, but there could be as many as 3
+Mutated Organisms.
+exposed victims
+Exposed Victims are considered Victims with the following exceptions:
+* They may NEVER be targeted or killed by a Mutated Organism.
+* They may NOT be saved.
+* They may NOT be replaced with Special Victim meeples (like from an Event).
+* They ALWAYS Panic during the Panic phase (even if no Victims were killed).
+* If "killed" by a game effect (like a location Terror card, Event, or other effect), immediately draw a Test Results
+card and apply the effects (see below).
+15
+
+-- 15 of 44 --
+
+Special rules
+aquiring test kits
+When taking an Item as the result of a Search Action card, you may also take a Test Kit Item if one is available at
+that location.
+Performing a Test on an Exposed Victim
+You can use a Test Kit OR the Lab location to test an Exposed Victim when you are in their space. This is a free
+action and does not cost time. Either discard the Test Kit, or simply bring them to the Lab, and then draw a Test
+Results card. The card will tell you if the Exposed Victim is SAFE or ASSIMILATED.
+* If the Exposed Victim is SAFE, remove the Test Results card from the game. Then, replace the meeple with
+a normal yellow Victim meeple. If this test was initiated due to an Exposed Victim being killed, remove it
+from the board and increase Bloodlust since it was a normal Victim and they are truly dead.
+* If the Victim is ASSIMILATED, reveal the rightmost card on the Killer board and replace it with the matching
+Mutated Organism card. This is now a Mutated Organism! Place the token matching the meeple above
+the card. Setup the health and Final Health token as you normally would. Then, immediately apply ALL of
+the Bloodlust effects on the card from the lowest level of Bloodlust through the current level of Bloodlust.
+IMPORTANT! Shuffle the ASSIMILATED Test Results card back into the Test Results deck. It is possible the
+remaining Exposed Victim(s) have also been ASSIMILATED!
+mutated organisms
+Mutated Organisms are considered Killers (not minions). They take their Killer Action and any Terror Card Killer
+actions as normal. If multiple Mutated Organisms are in play, resolve their actions one at a time, starting with
+the left most Mutated Organism as they appear on the Killer board. If the Finale has been triggered, the Mutated
+Organisms will have additional Killer Action effects as denoted by the 	and will perform them directly after the
+actions. Before the Finale is triggered they only perform the 	action followed by resolving a Terror card
+as usual.
+Mutated Organism Death and Final Health Tokens
+When one of the Mutated Organisms loses its Final Health and there is still at least one other Mutated Organism
+on the board, lay it on its side and finish the current phase before checking the Mutated Organisms' Final Health
+token. If the token is blank or it was a White Final Health token, the Mutated Organism is dead and should be
+removed from the board. If it has health, replenish its health per the normal rules and that Mutated Organism is
+still alive.
+16
+
+-- 16 of 44 --
+
+Special rules
+Although each Mutated Organism has its own Final Health token, you only get the +1 	bonus once regardless
+of how many of the Mutated Organisms are down to their Final Health.
+Example Test - Safe
+Uki acquired a Test Kit earlier in the game, but since she's only one space away from the Lab,
+she decides to play Walk and move to the lab having the Red Exposed Victim she is with follow
+her there.
+Once in the Lab, she decides to test the Exposed Victim. No Action card is required and no time
+is spent. You flip over a Test Results card and the result is SAFE! You replace the Red Exposed
+Victim with a normal yellow Victim meeple. It can now be saved, targeted, etc. as normal.
+Example Test - Assimilated
+Kate goes into the Commander's Hut where the Grey Exposed Victim is hanging out. She
+performs a Search action finding a Flare Gun which also allows her to take the Test Kit at that
+location as well.
+Since she has a Test Kit and feels somewhat prepared, she decides to go ahead and test the Grey
+Exposed Victim. No Action card is required and no time is spent. She flips over a Test Result
+card and the result is ASSIMILATED! Oh no! This is the first Mutated Organism so she reveals
+the rightmost Exposed Victim card on the Killer Board. It is the Tough organism with 7 health.
+She replaces the card with the revealed Mutated Organism card and places the Grey Meeple
+token above it.
+The Bloodlust token is 3 above the starting space, so Kate resolves the revealed effects starting from the bottom.
+The Mutated Organism targets the closest normal Victim and moves 2 spaces. The second Bloodlust effect is also
+to move to the closest Victim, but since it's in the same space as one already, it does not move. Lastly, Kate draws
+an Event card for the current Bloodlust level.
+Finally, she shuffles the ASSIMILATED Test Result card back into the deck with the remaining cards (in this case
+both SAFE cards are still in the deck).
+safe	safe
+Replace the Exposed Victim	
+with a normal Victim and remove
+	this card from the game.
+assimilated	assimilated
+Reveal the Mutated Organism and
+	apply the Bloodlust effects from the
+	bottom to the current Bloodlust level.
+Shuffl e this back into the
+	Test Results deck.
+17
+
+-- 17 of 44 --
+
+achievements
+Defeat the Organism at Station 2891.
+Defeat the Organism at five different locations.
+Defeat the Organism in Extreme Horror Mode.
+Defeat the Organism before the Finale is revealed.
+Defeat the Organism using only the Lab to test Exposed Victims.
+Defeat the Organism when all 3 Minor Dark Powers are given to the same Mutated Organism.
+Defeat the Organism with all 3 Exposed Victims assimilated when the Finale is revealed.
+Defeat the Organism without any Victims being killed by a Mutated Organism.
+Survive attacks from 2 or more Mutated Organisms on the same turn.
+Kill 2 or more Mutated Organisms on the same turn.
+18
+
+-- 18 of 44 --
+
+Components
+Wingard Cottage is a perfect getaway, nestled in the woods on the edge of a pristine lake.
+The cottage has been in the family for generations, and although it has changed over the
+years, it still has the same charming quality as when it was first built. Many special events
+and relaxing getaways have been hosted here. Unfortunately, it has also seen its share of
+tragedies—horrible events that have plagued the family throughout the home’s history. Best
+not to dwell on the past though, for surely your stay will be peaceful and carefree...
+"That wasn't a	"That wasn't a
+random attack"	random attack"
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+Terror	Terror
+8 Terror cards
+Setup	Setup
+special occasion	special occasion
+22
+33
+33
+1111	11
+11
+5 Setup cards
+Event	Event
+Booby Traps	Booby Traps	
+“Don’t leave the house!”
+All Victims inside the house panic. Any	
+Victim leaving the house is killed.
+Discard this card.
+10 Event cards
+Mysterious Pills	Mysterious Pills	
+“I hope these at least help get rid of this migraine.”
+Discard this during the Action phase and
+	choose one of the following:
+or
+The Obliterator	The Obliterator	
+“This is going to hurt you more
+	than it’s going to hurt me.”
+The Obliterator may not be used to
+	modify Reaction cards and all movement
+	is reduced by 1 (to a minimum of 1).
+	When used, receive 1 for each “1”
+	in your fi nal Horror roll result.
+00
+Wood, Rope, Discarded
+	Tools, Nails and 4
+ITEM	ITEM	
+crafted	crafted
+ITEM	ITEM
+16 Item cards	10 Crafted Item cards
+nails	nails	
+“I’m going to put these to good use.”
+Used for Crafting. 1 to pick up.
+Supply	Supply
+ITEM	ITEM
+4 Supply Item cards
+1 Location board
+11 Various Tokens
+Director (design): Mike Martins 	Director of Photography (art): Heather Vaughan
+Board & Item Art: Roland MacDonald, Tyler Johnson
+19
+
+-- 19 of 44 --
+
+Special setup
+Setup the game as normal, with the following changes when playing with Wingard Cottage:
+* Place the four Supply Item cards faceup in the play area.
+* Shuffle the Crafted Item cards together and deal out four faceup cards in the play area.
+Special rules
+DEFINITIONS
+* HOUSE: Refers to all of the following spaces: Kitchen, Bedroom x2, Bathroom, Family Room, Foyer,
+Laundry Room, and Garage.
+* INDOORS: Refers to all spaces inside the house as well as the Shed and the Boathouse.
+* OUTDOOR SPACE: Refers to all spaces that are not considered Indoors.
+SUPPLY ITEMS
+Some spaces on the board have Supply Item symbols corresponding to a specific type of Supply Item (Discarded
+Tools, Nails, Rope, Wood). While on one of these spaces, you may gain the corresponding Supply Item card at the
+cost of 	(you cannot do this while moving through the space). Place it
+into a Backpack slot. When discarding a Supply Item card, it goes back
+in the play area faceup, available to be gained again.
+CRAFTED ITEMS
+Crafting allows you to gain an available Crafted Item card by discarding the Item cards and/or Supply Item cards
+listed on the Crafted Item card, as well as losing the required amount of Time. When you gain a Crafted Item
+card, either place it into a Hand or Backpack slot. When discarding a Crafted Item card, it goes back in the play
+area faceup, available to be Crafted again.
+When Items with limited uses are discarded to gain a Crafted Item card, those uses carry over to the Crafted
+Item. For example, if the Shotgun has one use left when it is discarded to craft the Sawed-off Shotgun, then the
+Sawed-off Shotgun will also have one use left. The same would apply if the Trashcan Lid is discarded to craft
+the Porcupine.
+Nail Bat	Nail Bat
+“This is my kind of baseball.”
+00
+Wooden Bat, Nails and 2
+Ava has a Wooden Bat and Nails. She
+spends 2 Time to craft the Nail Bat, taking
+it into her hand. Finally, she discards the
+Wooden Bat and returns the Nails faceup
+next to the other Supply Item cards.
+20
+
+-- 20 of 44 --
+
+achievements
+Win a game at Wingard Cottage.
+Win a game using only Crafted Items (regular Items can still be used for crafting).
+Craft 4 Crafted Items.
+Use the Sawed-off Shotgun to deal damage to at least 3 Enemies at the same time.
+Witness an Enemy trigger the Nail Trap and the Snare on the same turn.
+Use the Blender to deal 6 damage to an Enemy.
+Witness a Victim move at least 2 spaces and be saved, while resolving the Escape
+Attempt event.
+Save 4 Victims with the Boat.
+Win a game without you entering the house.
+Save a Victim on each of the 3 Exits on the same turn.
+21
+
+-- 21 of 44 --
+
+Components
+The Intruders believe they are doing holy work... freeing souls from a pitiful existence
+in our world, one consumed by greed, ambition, lust, and jealousy. In their eyes, the
+rich, successful, and well-to-do’s are the ones most suffering from this sinful way of
+living. They feel it is up to them to relieve these people of their worldly burdens.
+“We're not going to make	“We're not going to make
+	it through the night!”	it through the night!”
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+Maskaphobia	Maskaphobia
+Once per turn, when a Killer moves into your space, .
+	You may not purchase Focus while a Killer is in your space.
+1 Epic Dark Power card
+won’t stay down	won’t stay down
+When a Killer dies, immediately restore 2 normal
+	health and a random black Final Health token for
+	that Killer. Then, remove this card from the game.
+epic dark power	epic dark power
+3 Finale cards
+You’re gonna die	You’re gonna die
+All Killers:
+2 Final Girl cards
+Ava	Ava	55
+Move
+1 Space
+Move
+1 Space
+ginny	ginny	66
+Move
+1 Space
+Take the
+Guard
+Reaction
+Card	
+22
+2 Killer Meeples 	2 Various Tokens
+Director (design): Mike Martins 	Director of Photography (art): Heather Vaughan
+Board & Item Art: Roland MacDonald, Tyler Johnson
+22
+
+-- 22 of 44 --
+
+Special setup
+Setup the game as normal, with the following changes when playing with The Intruders:
+* Place all three Killer meeples (red - from the Core Box, black, and grey) on the Killer start location indicated
+on the Setup card.
+* Give each Killer their starting health including a Final Health token.
+* Place the Active Killer token on Trish's (the Red Killer) circle space on the Killer board.
+Special rules
+The Intruders are a group of 3 Killers, but at any given moment only ONE is active when resolving 	, 	, or
+placing the Killer. The Active Killer is identified by the Active Killer token.
+changing the active killer
+The Active Killer will change throughout the game, sometimes even more than once in the same round. There are 3 ways the Active Killer
+can change:
+1. 	When you attack one of the Killers (whether you damage it or not) or use an Item card to damage it, that Killer immediately becomes
+the Active Killer. Place the Active Killer token on the circle for that Killer.
+2. 	When resolving the following symbols, the Active Killer token will move accordingly. The Killer it ends up on is now the Active Killer.
+Move the Active Killer token UP to the next Killer.
+Move the Active Killer token DOWN to the next Killer.
+If a Killer is dead, it is skipped when determining the Active Killer.
+NOTE! When moving the Active Killer token, the token will wrap around from top to bottom or bottom to top. For example, if the
+Active Killer token is on the top-most Killer and you need to move it UP, it moves to the Killer on the bottom.
+3. 	When the Active Killer is killed, move the Active Killer token to the top-most Killer that is still alive.
+23
+
+-- 23 of 44 --
+
+Additional Rules and Clarifications
+resolving "all killers" effects
+Some cards will have an effect that "All Killers" will resolve. When this occurs, ignore the Active Killer token and
+start by resolving the effect for the top-most Killer on the Killer board followed in order by each one below it. The
+Active Killer token does not change.
+panic
+For the purposes of resolving panic, Victims in spaces with any Killer (not just the Active Killer) will panic during
+the Panic phase if a Victim was killed that turn.
+minor dark powers
+Effects from these apply to ALL Killers, not just the Active Killer. When damage is applied to any Killer and a
+Minor Dark Power card is in play, the damage is first applied to the Minor Dark Power card.
+Intruder Death and Final Health Tokens
+When one of the Killers still has its black Final Health token and loses its final health, and there is still at least
+one other Killer on the board, the phase doesn't immediately end as it normally would. First, lay the "dead" Killer
+on its side. Then, change the Active Killer and finish the current phase. After the phase is done, check the "dead"
+Killer's black Final Health token. If the token is blank, the Killer is truly dead and should be removed from the
+board. If the token has health, however, replenish the Killer's health per the normal rules, replacing the black
+Final Health token with a white one, and stand the meeple back up. That Killer is still alive, ready to continue to
+terrorize you.
+Although each Killer has its own Final Health token, you only get the +1 	bonus once regardless of how many
+of the Killers are down to their final health.
+24
+
+-- 24 of 44 --
+
+active killer example
+1. 	During the Action phase, Ginny attacks Trish (red meeple) with the Sawed-off Shotgun
+doing 3 damage. Place the Active Killer token on Trish’s circular space. Trish now
+has 1 health left.
+2. 	At the start of the subsequent Killer phase, the Killer Action is resolved and Trish
+attacks Ginny. Ginny uses the Retaliate Reaction card, and with 1 success inflicts 1
+damage on Trish. Since this was Trish’s final health, lay Trish’s red meeple on its side
+without revealing the black Final Health token, move the Active Killer token to the
+top-most Killer that’s still alive, which is Baghead (gray meeple), and continue the
+Killer phase.
+3. 	The Terror card revealed is “They’re Everywhere!”.
+The top Killer Action is resolved by Baghead, the Active Killer.
+The 2nd Killer Action starts by moving the Active Killer token UP to the next Killer.
+Since Trish is possibly killed, the marker wraps around and ends up on Zeke (black
+meeple), who resolves the rest of the 2nd Killer Action.
+The 3rd Killer Action again starts by moving the Active Killer token UP to the next
+Killer, and is moved to Baghead, who resolves the rest of the 3rd Killer Action on the
+Terror card.
+4. 	Once the Terror card has been resolved, the Killer phase is over and Trish’s black Final Health token is revealed
+to be blank. Trish is dead and the red meeple is removed from the board. Had Trish’s black Final Health token
+instead had health, then Trish’s red meeple would have been stood up and that amount of health would have
+been replenished as per normal rules.
+"They're	"They're
+everywhere!"	everywhere!"
+25
+
+-- 25 of 44 --
+
+achievements
+Defeat the Intruders at Wingard Cottage.
+Defeat the Intruders at five different locations.
+Defeat the Intruders in Extreme Horror Mode.
+Defeat the Intruders by killing the 3 Killers after the Finale is revealed.
+Defeat the Intruders before the Finale is revealed.
+Witness the Intruders kill 5 or more Victims in a single turn.
+Witness all three Killers recovering health from their black Final Health token.
+Survive an attack from each Killer on the same turn.
+Survive 3 attacks from the same Killer on the same turn.
+Kill all 3 Killers on the same turn.
+26
+
+-- 26 of 44 --
+
+Components
+It is a wondrous place filled with beauty and magic. Animals and fairies share the land
+with humans and a winding river twists and turns through the forest. But don't let the
+chirping birds and colorful flowers fool you, for blood flows in the woods all the same.
+The Killer recovers
+Once upon a time	Once upon a time
+Place 2 new Victims at Grandmother’s House.
+Terror	Terror
+8 Terror cards	Setup	Setup
+bre
+adcrumb trail
+bre
+adcrumb trail
+22
+11 	11	55
+11
+11
+11
+5 Setup cards
+Event	Event
+Travelers	Travelers	
+“What is this wondrous place?”
+Place 2 new Victims at the Dell, 2 new Victims at
+	the Meadow, and 2 new Victims at the Clearing.
+Discard this card.
+10 Event cards
+Skidozer Keys	Skidozer Keys	
+“I always wanted to drive that thing!”
+You may now use the Skidozer. The Skidozer	
+token must remain outdoors. It may be used
+	for either of the following effects: Move to any
+	outdoor space OR when in the outdoor space
+	just outside of the Lab, place the “Hole” token
+	there which makes those two spaces adjacent.
+ITEM	ITEM
+18 Item cards
+1 Location board
+12 Various Tokens
+Director (design): Julie Ahern 	Director of Photography (art): Tyler Johnson
+27
+
+-- 27 of 44 --
+
+Special setup
+Setup the game as normal there are no special setup rules for this Location.
+Special rules
+fewer spaces
+Storybook Woods has fewer spaces than most locations! Be careful, as this can make it seem easy, but the
+woods can become very dangerous, very quickly.
+bridges
+There are three bridges on the board that cross the River
+(circled in red to the right). They are built very poorly and
+could collapse with too much weight! Therefore, only
+1 Victim will follow you when crossing a bridge.
+Additionally, the Troll Bridge Event card may have you
+placing a Troll Bridge token on the board. Just like the
+other three bridges, only 1 Victim will follow you across
+the Troll Bridge.
+The Raft
+One of the items you may find is a Raft. When you find the Raft, you will need to choose 4 spaces where the Raft
+can go ashore (these spaces are clearly marked on the board). You must place the Raft tokens such that they are
+touching both the river and one non-exit space. With the Raft you will be able to move to and from these spaces
+along the river as indicated on the Raft Item card.
+28
+
+-- 28 of 44 --
+
+achievements
+Win a game at Storybook Woods.
+Win a game where at least half of the victims were saved.
+Defeat the Killer at Grandmother’s House.
+Move Victims across each of the 3 Bridges.
+Attack the Killer with 6 dice.
+Have the Killer target you instead of a Victim, due to wearing the Red Cape.
+Witness a Killer trigger Chicken Bones and Thorny Vines on the same turn.
+Replenish the Slingshot Item’s uses twice.
+Use the Raft move to a space that is at least 4 spaces away.
+Use the Songbirds to deliver the killing blow to the Killer.
+29
+
+-- 29 of 44 --
+
+Components
+"Terrible noises it makes... and its red glowing eyes are so, so scary. Such bad
+breath it has in that big sharp-toothed maw. Fairies like me fly fast,so I lived
+to tell the tale. Humans and woodland creatures are not so lucky."
+— Arala, a friendly woodland Sprite
+Director (design): Julie Ahern 	Director of Photography (art): Tyler Johnson
+The Killer recovers
+Once upon a time	Once upon a time
+Place 2 new Victims at Grandmother’s House.
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+destructive ROAR	destructive ROAR
+When revealed and once during each Upkeep	
+phase, remove from the game the top Item card
+	of the closest Item deck to the Big Bad Wolf.	
+MODE	MODE
+MODE
+1 Epic Dark Power card
+epic dark power	epic dark power	
+A Killing Machine	A Killing Machine
+For the rest of the game, resolve both
+	the and Killer Actions.	
+MODE &
+3 Finale cards
+When revealed, the Big
+	Bad Wolf recovers	
+for each dead Victim.
+Tasty Treats	Tasty Treats
+If : 	If :
+2 Final Girl cards
+Red	Red	55
+Take any
+top Item
+Card	
+22
+Move up to
+2 Spaces
+	Take an
+Action Card
+(max
+2 )
+Gretel	Gretel	66
+Take the
+Long Rest
+Action
+Card	
+22
+Move up to
+2 Spaces
+30
+
+-- 30 of 44 --
+
+Special Rules
+Hunt & Slay modes
+Most of the Terror cards for the Big Bad Wolf have different effects based on what MODE the killer is in. There are
+two modes, TRACK and SLAY, each denoted by a different icon.
+The Wolf begins the game in TRACK mode. If the Wolf is in this mode at the beginning of the Killer phase,
+you will apply these effects (and NOT the effects for SLAY mode).
+When the Dark Power is revealed, the Wolf goes into SLAY mode. If the Wolf is in this mode at the beginning of the
+Killer phase, you will apply these effects (and NOT the effects for TRACK mode).
+If the Wolf goes into SLAY mode during the Killer phase but started out in TRACK mode, you will not start
+applying the SLAY effects until next Killer phase.
+The Wolf will always be in one mode or the other. The only exception is the Killing Machine Epic Dark Power card
+which has you apply both the TRACK and SLAY effects.
+Many Terror card effects are not subject to the Wolf's mode and should be applied regardless of which mode the
+Wolf is in.
+The Claws that	The Claws that
+Scratch	Scratch
+For you and every Victim in the Big Bad Wolf's space:
+(Maximum Bloodlust increase of 3)
+Deal the Big Bad Wolf's damage amongst as many
+Victims as possible. If you are also in the space, you take
+any remaining damage after all the Victims are killed.
+The Big Bad Wolf is in 	mode. When resolving
+the Terror card to the left, the Wolf will first target
+the closest Victim (or you, if closer) and move toward
+it. Then, resolve the 	effect which is to increase
+Bloodlust for you and every Victim in its space. Because
+the Wolf is not in 	mode, those effects are ignored.
+Note, if the Wolf was in 	mode, it would still go after
+the closest Target, but then it would attack, dealing its
+damage one at a time to as many Victims as it can. If
+you were in the space you'd take any leftover damage.
+31
+
+-- 31 of 44 --
+
+achievements
+Defeat the Big Bad Wolf at Storybook Woods.
+Defeat the Big Bad Wolf at five different Locations.
+Defeat the Big Bad Wolf in Extreme Horror Mode.
+Defeat the Big Bad Wolf while it’s in Track Mode.
+Defeat the Big Bad Wolf where all 3 Minor Dark Powers came into play.
+Defeat the Big Bad Wolf after revealing its Epic Dark Power.
+Defeat the Big Bad Wolf with your bare hands (you cannot attack with any weapons).
+Defeat the Big Bad Wolf with Bloodlust at maximum.
+Witness the Big Bad Wolf kill a victim when moving 4 or more spaces.
+Use an Axe to deliver the killing blow to the Big Bad Wolf.
+32
+
+-- 32 of 44 --
+
+Components
+“Constructed in 1899 by the eccentric oil baron and philanthropist Jebediah Wolfe, Wolfe Asylum was built to
+hold 300 patients, but by the 1950’s was home to over 2,500 souls. Overcrowding was the least of its problems,
+however, as ‘difficult’ patients were routinely locked in cages, while others went unattended for weeks or were
+left to wander the dank halls completely naked. Before the reforms of the late ’70s, Wolfe orderlies frequently
+performed lobotomies with ice picks, and electroshock treatment often resulted in death. Today, Wolfe
+Asylum claims to be a haven for the mentally ill, but some say it will never truly be free of its dark past.”
+— From the Wikipedia entry for “Wolfe Asylum”
+"what is this place	"what is this place
+doing to me?"	doing to me?"
+Draw 2 Side Effects cards.
+Terror	Terror
+8 Terror cards
+“It’s coming and I can’t stop
+	it! Everything is hopeless!”
+Discard 2 Terror cards.
+	Do not draw any more	
+Side Effects cards.
+panic attack	panic attack
+side	side
+effects	effects
+10 Side Effects cards
+amped	amped
+“I’ll tear it apart with my damn hands if I have to!”
+Furious Strike is now a 0 cost card.
+rabid fury	rabid fury
+5 Amped cards
+pill effects	pill effects
+available pills
+Move 1 Space
+Draw an Amped card
+Recover All
++5
+Do not draw	
+Side Effects
+cards
+Draw
+2 Side Effects
+cards
+Draw
+3 Side Effects
+cards
+pill effects	pill effects
+1 Pill Effects card
+Setup	Setup
+a solit
+ary life
+a solit
+ary life
+11 22
+11
+11
+11
+11	11
+11 11
+11
+11
+5 Setup cards
+Event	Event
+powerful meds	powerful meds
+Whenever you consume a Pill or Pills,
+	draw an additional Side Effects card.
+“Whoa! These hit hard.”
+10 Event cards
+Mysterious	Mysterious
+	Pills	Pills
+Immediately discard this card
+	and take 2 tokens.
+“Everything has gone to hell, so... why not?”
+ITEM	ITEM
+18 Item cards
+1 Location board
+18 Various tokens
+Directors (design): A.J. Porfirio & Evan Derrick 	Director of Photography (art): Vladyslava Ladkova
+Additional Item & Board Art: Tyler Johnson, Roland MacDonald
+33
+
+-- 33 of 44 --
+
+Special setup
+* Place the Stun 	tokens in a pile next to your play area.
+* Shuffle the 	tokens facedown and place them in a pool next to your play area.
+* You will start with four 	tokens on the board; each Setup card will tell you where to place them. Draw
+them from the pool and place them on the board facedown. Place the Pill Effects card next to your Player
+board. Draw 1 	token and place it faceup beneath the card. There should now be 5 	tokens left in the
+pool.
+* Shuffle and place the Amped and Side Effects cards next to your play area.
+Special rules
+PILLS, SIDE EFFECT CARDS, & AMPED CARDS
+There are various Pills spread around Wolfe Asylum that you can
+collect and consume.
+* There are four types of Pills: 3 yellow, 3 blue, 3 pink, and 1 wild
+(which can be any color).
+* When you end your movement in a space with a 	token
+(not while passing through), you may spend 	to pick it up. Place it faceup beneath your Pill Effects card.
+* At any point during the Action phase you may consume any number of Pills that you have collected,
+discarding their 	tokens. If the pile of 	tokens ever runs out, shuffle any discarded 	tokens and
+form a new facedown pile.
+* Refer to the Pill Effects card for what occurs, based on which Pills you take. If you take two or three Pills
+at once, after applying the benefit, you must draw a number of Side Effects cards. Draw the cards one at a
+time and apply any effects on them.
+* You may take Pills in any order and as many as you want. For example, you may take a single Pill and apply
+its benefits, and then take a combination of two Pills and apply their benefits (as well as be forced to draw
+Side Effects cards).
+* If you take one of each Pill, you will get to randomly draw an Amped card. Amped cards provide powerful
+abilities that may mean the difference between victory and defeat.
+stunned
+Some Item cards have the keyword Stunned on them.
+* Only Enemies can become Stunned. When that occurs, place a 	token underneath the Enemy. During the
+next Killer phase, it will ignore all 	(although it will still apply any 	).
+* During the Upkeep phase, discard all 	tokens still underneath Enemies.
+34
+
+-- 34 of 44 --
+
+achievements
+Win a game at Wolfe Asylum.
+Obtain at least 8 Pill tokens.
+Consume Pills for a 1 Pill effect, a 2 Pill effect, and a 3 Pill effect.
+Save more than half the Victims in a game where the Scratching and Biting event was
+revealed.
+Win a game where Dr. Sunshine is killed on your space.
+Witness Dr. Death and Hannibal the Cannibal kill a victim in your space.
+Deal 3 damage with the Hospital Gurney.
+Win a game where you received at least 2 negative Side Effects.
+Obtain 2 Amped cards.
+Stun Enemies 5 times.
+35
+
+-- 35 of 44 --
+
+Components
+6 Maniac meeples
+3 Finale cards
+feed the madness	feed the madness
+Ratchet Lady
+recovers
+At the start of the Killer phase, if there
+	are no Maniacs on the board, spawn a	
+Maniac in the Ratchet Lady’s space.
+3 Dark Power cards
+bloodfear	bloodfear
+Killer Phase: the first time or increases
+	by at least 1, the Ratchet Lady recovers .
+“There once was a woman who loved helping people. Her greatest joy was to bandage a wound, offer a kind word,
+or hold a sickly hand. Then, one day, she witnessed something so horrible, so soul-shattering, that it changed
+her completely. Utterly. Irrevocably. And now, kindness and joy have been replaced with cruelty and despair.
+There is still a smile, but it is a hateful smile, and may the God of Abraham have mercy on you if you see it.”
+— From “A History of New England Asylums” by Dr. M. Forman
+Directors (design): A.J. Porfirio & Evan Derrick 	Director of Photography (art): Vladyslava Ladkova
+Maniacs only:
+Whispers in the Dark	Whispers in the Dark
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+The closest Victim to the Ratchet
+	Lady becomes a Maniac.
+Action	Action
+Terror	Terror
+or
+CALM	CALM
+1 Maniac in your space
+	or an adjacent space
+	becomes a Victim
+2
+1 Maniac in your space or an
+	adjacent space becomes a Victim
+Up to 2 Maniacs in your space or
+	an adjacent space become Victims
+2
+"I know you're angry, but just stay calm
+	and don't do anything rash."
+16 Terror cards
+2 Action cards
+1 Epic Dark Power card
+epic dark power	epic dark power	
+shield of madness	shield of madness
+The Ratchet Lady cannot lose health if
+	there are any Maniacs on the board.
+2 Final Girl cards
+Veronica	Veronica	55
+22
+33 	33
+22
+heather	heather	55
+22
+Move
+1 Space
+1 Killer board
+36
+
+-- 36 of 44 --
+
+Special setup
+* Place the Maniac meeples in a pile next to the Victim meeples.
+* Place two Maniac meeples in the Ratchet Lady’s starting space.
+Special rules
+health
+The Ratchet Lady only starts with 6 health but has no upper health value. There are multiple ways she can recover
+health.
+maniacs
+The Ratchet Lady is accompanied by Minions called Maniacs, former Victims who have become crazed lunatics
+willing to do whatever the Ratchet Lady tells them to. In addition to the special rules listed below, refer to the
+general rules on Minions on pg. 32 of the Core Rulebook.
+* Maniacs have 1 health.
+* Maniacs have an Attack and Movement value of 1.
+* Maniacs will not follow you and cannot be saved.
+* When a Victim becomes a Maniac, replace its meeple with a red Maniac meeple. Do not increase 	since no
+one died.
+* Special Victims do NOT become Maniacs. Only normal Victims can become Maniacs.
+* When a Maniac is killed, place its meeple back into the pool of Maniac meeples. Do not increase 	even if the
+Maniac was formerly a Victim.
+* If there are Maniacs in your space and you want to leave the space, you receive 	for each Maniac more than one.
+For example, if there is a single Maniac in your space there is no penalty for leaving, but if there are three Maniacs
+you would receive 2 	when leaving the space.
+* There is a hard limit of 6 Maniacs on the board at one time. If you are instructed to spawn a Maniac and they are
+all on the board, ignore it.
+calm
+When playing against the Ratchet Lady you will have access to the new Calm Action cards.
+* Calm allows you to turn Maniacs back into peaceful Victims.
+* When successfully resolving a Calm Action card, replace the indicated number of Maniac meeples with Victim
+meeples. They will now follow you, can be saved as normal, and can be killed by Enemies.
+37
+
+-- 37 of 44 --
+
+achievements
+Defeat Ratchet Lady at Wolfe Asylum.
+Defeat Ratchet Lady at five different Locations.
+Defeat Ratchet Lady in Extreme Horror Mode.
+Defeat Ratchet Lady after she reaches at least 15 Health.
+Defeat Ratchet Lady without her ever exceeding her starting Health.
+Defeat Ratchet Lady without killing any Maniacs.
+Defeat Ratchet Lady without Calming any Maniacs.
+Defeat Ratchet Lady in a game where you could not place a Maniac due to running
+out of meeples.
+Convert 4 Maniacs to Victims and save them on the same turn.
+Calm 2 Maniacs and kill 2 Maniacs on the same turn.
+38
+
+-- 38 of 44 --
+
+Components
+3 Finale cards
+finale	finale
+After all Zombies	
+have moved
+Their numbers are endless!	Their numbers are endless!
+If there is an Enemy in your space at the
+	end of the Action phase, you lose .
+Move all Zombies before resolving attacks
+3 Dark Power cards
+dark power	dark power
+runners	runners
+Zombies no longer ignore icons on Terror	
+cards. When resolving actions on Terror cards, always
+	move all Zombies before resolving attacks.
+1 Final Girl card
+Once per Action phase, you
+	may spend 2 to deal	
+to an Enemy in your space.
+The Killer cannot lose its Final
+	Health as a result of this effect.
+66 Patsy	Patsy
+For each additional Victim saved, Move 1 Space
+Patsy	Patsy	66
+Move
+1 Space
+	Move
+1 Space
+33
+“I watched in horror as they surrounded my brother. His screams will be forever etched in my memory.”
+— Sister to a Zombie
+Director (design): A.J. Porfirio 	Director of Photography (art): Tyler Johnson
+*The Horde Rings are for use with the optional miniatures, which are sold separately!
+Terror from the Grave requires the Final Girl Core Box and any Location from a Feature Film box (each sold separately).
+"They're coming	"They're coming
+to get you!"	to get you!"
+Terror	Terror
+16 Terror cards
+bloodlust	bloodlust
+track	track
+2 Bloodlust cards
+vehicle	vehicle
+Action	Action
+motorboat	motorboat
+"Looks like the groundskeeper was
+	fi shin' with dynamite again."
+May only be used from the center of the lake.
+2
+Kill all Victims and Zombies	
+in the target space
+Kill all Victims and up to 2	
+Zombies in the target space
+13 Vehicle Action cards
+27 Various tokens
+x2x2 	x2x2
+x2x2
+x2x2
+x2x2
+3 Horde tokens/rings*
+39
+
+-- 39 of 44 --
+
+Special setup
+Follow the normal setup rules unless otherwise indicated below.
+* There is no Killer Board. Instead, align and place the two Bloodlust Cards next to the Location board. Place
+the Bloodlust marker on the start space of the Bloodlust card.
+* The Horror level starts at 4.
+* There is no Killer placed during setup, instead place 1 Zombie on each 	space and on the Killer’s
+starting space. If there is only one 	,
+place 1 Zombie there, 2 on the starting Killer space, and 1 on a 	space of your choice.
+* Place one of the Horde tokens on the facedown Dark Power card. Then, place the other Zombies and
+Horde tokens in the space below the Bloodlust track.
+* Take the 4 Vehicle tokens and shuffle them face down. Then, evenly distribute them facedown to the
+spaces.
+Odd amount of 	spaces? Distribute the extra(s) on the farthest 	space from your starting space.
+Only one 	space? Distribute the other 3 tokens to spaces a vehicle might thematically occupy.
+how you win
+The win conditions are different for this expansion. You must Kill ALL Zombies and Hordes. When there are no
+Zombies or Hordes on the board, the game immediately ends in victory.
+how you lose
+You lose immediately if: There are 3 Hordes in play and a 4th one would be created OR You die.
+t	he zombies
+Zombies are represented by tokens and are considered Minions (see pg. 32 of
+the Core Rulebook for specific rules regarding Minions).
+Spawning zombies
+When you see this symbol 	, spawn a number of Zombies as indicated by the current bloodlust level. Place
+one Zombie at a time in each 	space starting with the one with the least number of Zombies in it, then the
+one with the next least, and so on until the number of spawned Zombies indicated has been placed. If multiple
+spaces are tied for the least, start with the farthest one from you.
+40
+
+-- 40 of 44 --
+
+zombie movement
+Zombies use normal targeting rules for movement, with one
+exception: if a Zombie does not have enough movement to get to
+its target, it will instead panic. This means that if there is no valid
+target within range of the Zombie’s movement it will shamble ONE
+space in a random direction.
+zombie attacks
+Zombies attack as a group, attacking ONE target in their space
+and dealing damage equal to the number of Zombies in the space.
+Zombies always prioritize Victims over the Final Girl if both are in
+the same space.
+hordes
+There are 3 Horde tokens, each with a symbol that matches one of the Victim Holding boards.
+horde creation
+* If there are 3 or more Zombies in a space at the END of the Killer phase, they become a Horde.
+* Replace all the Zombies in the space with a Horde token. If it is the first time a Horde is created, use the
+Horde token on the Dark Power card and reveal the Dark Power.
+* Give the Horde health equal to the number of Zombies that formed the Horde (always at least 3). Use
+health markers (and the included multiplier tokens if needed) and put them on the Holding board to keep
+track of how much health the Horde has. Hordes do NOT use Final Health tokens.
+horde rules
+* A Horde is considered a Killer for all purposes (i.e. targeting and movement rules, Victims will not follow
+you into the space, etc) and the Zombie rules do not apply to it. The term Killer refers to all Hordes except
+for when a special effect makes you place or move the Killer somewhere. In these cases, choose only the
+closest Horde to the destination space and apply the effect.
+* Hordes Movement and Attack values are on the Bloodlust track.
+* When a Victim is killed by a Horde, the Horde’s health is increased by 1.
+* Hordes have no upper health limit and will always gain a health for 	effects.
+* A Horde always remains a Horde. It does NOT ever ‘disband’ back into single zombies when its health
+drops below 3.
+* A Horde moves as a single unit and if it ever shares a space with a Zombie, the Zombie is removed from
+the board and the health of the Horde is increased by 1. Multiple Hordes may share a space, but they do
+NOT combine.
+* Any game effect that let’s you “Kill X Zombies” can instead be read as “Deal X
+damage to a Horde” when using such an effect against a Horde.
+IMPORTANT! Zombies are SLOW!
+They will only move ONCE during
+the Killer phase (during the Minion
+Action) and as such, Zombies ignore
+ALL 	icons on Terror cards.
+IMPORTANT! Anytime a Victim is
+killed by a Zombie attack, replace
+that Victim with a Zombie token
+(increase Bloodlust as usual).
+41
+
+-- 41 of 44 --
+
+Vehicle: Motorboat
+When you are with the Motorboat and move 1
+space, you may travel to any other space bordering
+the water OR to the center of the lake (this is the
+literal center of the lake, and while it is treated as
+a space, it is different from the space labled “Lake”
+on the board). Victims may follow you as normal.
+Unless you are in the center of the lake, you are
+considered in the space the Motorboat is touching
+even if on the boat. All spaces bordering the
+water of the entire lake may be targeted using the
+Motorboat’s Vehicle Action card.
+Vehicle: Helicopter
+The Helicopter has a pilot and you do not need to
+be with it to use its Vehicle Action card. It may only
+move in outdoor spaces.
+Vehicle: Cable Cars
+When the vehicle is found, this represents the park’s
+new cable car system connecting the 	spaces.
+Victims may follow you as normal.
+Vehicle: Golf Cart
+Victims may not drive the Golf Cart but may follow
+you as normal. It is not subject to the normal
+restrictions and you may drive it to all of the spaces on
+the board.
+Vehicle: Police Car
+The Police Car may only move in street spaces. It has
+a driver and you do not need to be with it to use its
+Vehicle Action card.
+Special rules—Vehicles
+Each Location has one vehicle that has a special Action card that comes with this Vignette expansion. Ignore
+the normal rules and cards for such vehicles. If the vehicle item card appears, replace it with a random
+item card from out of play.
+The vehicle may be found at one of the 	spaces. When you enter an 	space for the first time, reveal the
+Vehicle token(s) there. If the 	is revealed, remove ALL Vehicle tokens from the board and place that specific
+vehicle’s token in your space. Exception! If the vehicle is a water-bound vehicle, place it in the closest eligible
+space instead! Then, take the Vehicle Action card(s) associated with that vehicle into your hand. For the rest of
+the game, this Action card will function as normal (going back into the tableau, needing to be repurchased, etc).
+If a Vehicle Action card title has a 	icon, it means that you do not need to be in the same space with the
+vehicle to resolve the card because it has its own pilot/driver. If it does NOT have that icon, the vehicle and the
+Vehicle Action card can only be used if you are in the same space as the vehicle.
+When moving with a normal Action card (like Walk or Sprint) and you are with a vehicle, you may move the
+vehicle with you (subject to its rules).
+vehicle action card rules
+42
+
+-- 42 of 44 --
+
+achievements
+Win a game at five different Locations.
+Win a game with one or fewer Hordes being formed.
+Kill a Horde that had at least 8 health.
+Kill 5 Zombies on the same turn.
+Witness 3 Hordes being formed on the same turn.
+Vehicle: Super Loader
+The Super Loader may not move through
+Maintenance Shafts.
+Vehicle: Skidozer
+The Skidozer may only move in outdoor spaces. If
+adjacent to the Lab and there are no Zombies in
+your space, you may place the ‘Hole’ token for 2 .
+Vehicle: Scooter
+The Scooter may only move in outdoor spaces.
+Victims may follow you as normal.
+Vehicle: Raft
+When found, place each of the 4 Raft tokens so that
+each is touching both the river and a non-exit space.
+One token must be placed in the rafts starting space
+closest to the 	space you are in when it is found.
+The Raft may only move along the river from one
+token to the next. You are considered in the space the
+token is touching even if on the Raft. Victims will not
+follow you on the Raft.
+Vehicle: Gurney
+May move with you anywhere on the board.
+43
+
+-- 43 of 44 --
+
+
+
+-- 44 of 44 --
+

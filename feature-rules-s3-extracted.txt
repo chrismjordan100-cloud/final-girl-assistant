@@ -1,0 +1,1925 @@
+feature film rulebook
+S E R I E S 3
+
+-- 1 of 25 --
+
+ITEM	ITEM
+grenade	grenade	
+“Pull the pin, count to two, pray
+	to Jesus, boomy boom!”
+Discard during the Action phase and spend	
+2 to deal to an Enemy	
+in an adjacent space OR to add a	
+Destroyed Wall token to a wall
+	of the store you are currently in.
+Terror	Terror
+"It's coming for me!	"It's coming for me!
+I gotta hide!"	I gotta hide!"
+Panic the Savior 3 times.
+If the Savior is not on the board, discard
+	and draw the next Terror card. Otherwise:
+Savior	Savior
+GO TO
+HELL!
+EAT ME
+I GUESS
+	YOU'RE OK
+I BELIEVE
+	YOU!
+"You're not the	"You're not the
+boss of me!"	boss of me!"
+Move the Savior up to	
+2 spaces in any direction.
+Move the Savior 2 spaces
+	away from you.
+Move the Savior up to	
+1 space in any direction.
+Move the Savior 3 spaces
+	away from you.
+special delivery	special delivery	
+22
+33
+22 11	11
+11
+11
+11
+S
+Setup	Setup
+Lockdown!	Lockdown!	
+“This is NOT a drill, people!”
+Both spaces are sealed off. Place a Lockdown token
+	in Security. If you end the Action phase there, remove
+	the token. As long as the Lockdown token is on the board,
+	no one can be saved or exit at a space.
+Discard this card when the Lockdown token is removed.
+Event	Event
+Action	Action
+or
+build trust	build trust
+2
+Increase Trust by 2
+Increase Trust by 1
+Increase Trust by 1
+2
+“Come with me if you want to live.”
+Can only be resolved when in the same space as the Savior.
+TRUST	TRUST
+Cannot exit the board. Can only
+	use the bottom 2 Ally actions.	
+EAT ME
+Cannot exit the board.
+	Cannot use any Ally actions.	
+GO TO
+HELL!
+Can exit the board.
+	Can use all Ally actions.	
+I BELIEVE
+YOU!
+Cannot exit the board. Can only
+	use the bottom 4 Ally actions.	
+I GUESS
+	YOU'RE OK
+Trust	Trust
+Move 1 Space
+Move 1 Space
+Recover
+Reduce	
+from attack by 1
+4
+EAT ME
+I GUESS
+YOU'RE OK
+I BELIEVE
+YOU!
+Savior	Savior
+ally	ally
+or
+build trust	build trust
+2
+Increase Trust by 2
+Increase Trust by 1
+Increase Trust by 1
+2
+“Come with me if you want to live.”
+Can only be resolved when in the same space as the Savior.
+Cannot exit the board. Can only
+	use the bottom 2 Ally actions.	
+EAT ME
+Cannot exit the board.
+	Cannot use any Ally actions.	
+GO TO
+HELL!
+Can exit the board.
+	Can use all Ally actions.	
+I BELIEVE
+YOU!
+Cannot exit the board. Can only
+	use the bottom 4 Ally actions.	
+I GUESS
+	YOU'RE OK
+Trust	Trust
+Components
+"Welcome to the ultimate shopping experience! Step into the heart of fashion, excitement, and endless
+possibilities! Introducing Sunnydaze Mall, your premiere shopping destination! Sunnydaze has the latest
+trends in fashion, state-of-the-art electronics, and a wide variety of culinary delights... all under one roof!
+Sunnydaze... where every day is filled with sunshine and joy!"
+— Television commercial for Sunnydaze Mall
+8 Terror cards
+5 Setup cards	10 Event cards
+18 Item
+cards
+1 Location board 2 Action cards
+1 Trust card 	10 Savior cards
+12 Various Tokens
+4 Action Cubes
+1 Trust marker
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+1 Ally card
+Special Setup
+* Place the Savior meeple (represented by the orange Special Victim meeple) in the 	space indicated
+by the Setup card.
+* Place the Savior Ally card in your play area, putting 4 Health markers on it and 4 Action cubes nearby.
+* Place the Savior Trust card next to the Ally card putting the Trust marker on the bottom "Go to Hell!"
+space.
+* Shuffle the Savior cards to form the Savior deck.
+* Add the Build Trust Action cards to the tableau.
+* Place the Chopper token in the Atrium space.
+special rules
+the savior
+The Savior is a young teenager upon whom the fate of the human race depends. It is your job to protect him,
+because if he dies then you immediately lose the game. However, the Savior is reckless and mistrusting and
+refuses to believe you until you’ve built enough trust with him. The Savior is considered an Ally (see Ally rules
+at the end).
+TARGETING THE SAVIOR and losing the game
+The Savior is the Killer’s primary target. When an Enemy would target you 	, it instead targets the Savior.
+These targeting rules are in addition to those mentioned in the Ally rules at the end. If the Savior dies you
+immediately lose the game.
+Building trust with the savior
+There is a new Action card called Build Trust which can only be used when
+you are in the same space as the Savior. This will allow you to increase his
+Trust level on the Trust card. Increasing Trust moves the marker up while
+decreasing Trust moves it down. The Trust level will affect how much control
+you have over the Savior and how he will act of his own accord.
+S
+2 	3
+
+-- 2 of 25 --
+
+X
+SAVIOR CARDS
+While the Savior is in play or until the Savior deck runs out, draw a Savior card during the Upkeep phase.
+Resolve the effect based on the current Trust level.
+having the savior exit the board
+If the Savior’s Trust level is at its highest ("I Believe You!") and he is in an 	space, he may exit the board
+during the Action phase. If he does exit, you immediately receive all unclaimed Victim rewards on your Final
+Girl card. Flip your card; your Ultimate Ability is unlocked. If your card is already flipped, receive the Additional
+Victims Saved reward three times.
+When the Savior exits, you'll once again become the Enemy’s target when they are targeting you. The game will
+now end as normal (you defeating the Killer or the Killer defeating you).
+PANICking the savior
+During the Panic phase, the Savior will panic the same way Victims do.
+RAILINGS
+Spaces marked with 	are considered Railing spaces.
+* Railing spaces have white arrows indicating which direction you can move. While moving, you or an Ally
+can choose to "jump" from a Railing space to an adjacent Food Court space. If you do this, roll a single
+die. If the result is a 5-6, you land safely and receive no extra damage. If the result is a 1-4, receive 	.
+Victims will not follow you when you jump.
+* Enemies will never jump or voluntarily move from a Railing space to a Food Court space. If an effect
+causes Enemies or Victims to move from a Railing space to an adjacent Food Court space below, they
+will receive 	(this includes when Victims panic).
+* Whenever anyone takes damage in a Railing space, they are knocked over the railing and into the
+adjacent Food Court space below, receiving 	(in addition to any other damage they received).
+* When attacking with a ranged weapon from a Food Court space, Railing spaces cannot be targeted.
+STORES
+There are six stores: Military Surplus ‘R Us; Boards ‘N Bones; Zap Shack; Joystick Heroes; Stan’s Sporting
+Goods; and Smokin’ Subject.
+Whenever anyone takes damage in a store, they will be knocked through an eligible
+wall of your choice (see below) and into the newly adjacent space, receiving one 	(in
+addition to any other damage they received). Place a Destroyed Wall token between the
+two spaces.
+Eligible walls in a store are those that are between 2 spaces and don’t have any openings
+for movement or Destroyed Wall tokens. If all eligible walls in the store already have a
+Destroyed Wall token on them, then treat this store space like a normal space when
+someone takes damage there.
+allies
+Allies are companions that can help you against the Killer.
+* Allies are not considered Victims. You cannot choose to have an Ally follow you.
+* Unless otherwise specified, Allies cannot carry or use Items, Victims will not follow Allies, and Allies
+cannot save Victims.
+* When you and an Ally (or Allies) are in the same space and one is being attacked, you can freely choose
+who in that space will receive the attack, you or an Ally.
+* Allies are not considered Victims for targeting. So unless specified otherwise, they are typically only
+targeted if the Enemy is resolving 	as its target and an Ally is the closest. If there are also Victims in
+their space, the Victims are targeted first, unless the Ally was specifically targeted.
+Note the following when using an Ally with other Killers or Locations:
+* Most effects that would damage you would similarly damage Allies.
+* Most effects that would affect your movement would similarly affect Ally movement.
+* There may be some exceptions to these so use the rules on Game Ambiguity if anything seems like it
+wouldn't make sense or is unclear.
+TAKING ACTIONS AND REACTIONS
+Allies use Action cubes to take Actions (which are only allowed during the Action phase), or Reactions (which
+are allowed in any phase but only as a reaction to an attack—denoted in blue on the Ally card). To take an Action,
+place an Action cube on the leftmost space next to the Action being taken. An Action is not available if there’s
+already a cube in the row for that Action.
+During the Upkeep phase, move all Action cubes one space to the right, removing them from the card when they
+leave the last space. Once a cube has left the card it is available again to use.
+4 	5
+
+-- 3 of 25 --
+
+Relentless Pursuit	Relentless Pursuit
+When revealed,
+reinforced endoskeleton	reinforced endoskeleton
+The Mark V ignores all effects.
+	( effects still apply.)
+The Mark V
+ ignores all
+ effects.
+( effects still apply.)
+epic dark power	epic dark power
+The Mark V has an attack range of 0-1. When it
+	attacks at range 1, Reaction cards cannot be played.
+The Mark V
+ does an additional
+ when
+attacking and has an attack range of
+ 0-1.	
+M134 minigun armament	M134 minigun armament
+tali	tali	66
+Take a
+Retaliate
+Card
+Take a
+Guard
+Card
+	Move
+1 Space
+Take any
+top Item
+Card
+kat	kat	44
+22
+Take a
+Guard
+Card
+Move
+up to
+2 Spaces
+Move
+1 Space
+Move 1 Space
+Move 1 Space
+MARK V POWER
+Reduce	
+from attack by 1
+mark v	mark v
+ally	ally
+1 Mark X
+meeple
+4 Action
+cubes
+"move or be	"move or be
+	eliminated."	eliminated."
+Kill 1 Victim in each space the	
+Hunter passes through including
+	its starting and ending spaces.
+Increase for each Victim killed,
+	up to a maximum of 2 times.
+Hunter Mark X	Hunter Mark X
+If the Mark V is the Active Killer, it
+	immediately shuts down; increase to the top
+	of the track. Place any remaining Cybernetic
+	Part tokens in its space. Place its Dark Power	
+card underneath its Ally card. Leave any Minor
+	Dark Powers as the Mark X will inherit them.
+If the Mark X is not on the board, discard the
+	remaining Countdown tokens. Draw a new Setup	
+card and place the Mark X in the space.
+Discard any remaining Terror cards and reveal
+	the Finale.
+If any effect causes this card to be discarded,
+	resolve this card's effects before discarding.
+16 Terror cards
+1 Mark X Terror card
+achievements
+Win a game at Sunnydaze Mall.
+Win a game without using the Build Trust Action card.
+Place all Destroyed Wall tokens.
+Witness the Killer lose it’s final health from falling off the Railing.
+Use the Chopper to deliver the killing blow to the Killer.
+Win a game with the Savior still on the board.
+Win a game without the Savior taking any damage.
+Witness Bart the Mall Cop deliver the killing blow to the Killer.
+Witness at least 4 Victims panic off the railing on the same turn.
+Use both Boomsticks to deal at least 8 damage to the Killer in a single attack.
+"I knew the guy was bad news the moment I saw him. Over 6 foot tall, face hidden by that hoodie, big bulge
+underneath his jacket. I tried to stop him but he just shoved me aside like I was made of cotton. I took the hint
+and I was outta there! I'm just a mall cop for crying out loud. They don't pay me enough for this kind of shit!"
+— Bart Stanislawsky, Mall Cop, Sunnydaze Mall
+1 Ally card
+1 Killer board
+3 Dark Power cards
+1 Epic Dark Power card
+Terror	Terror
+Terror	Terror
+3 Finale cards
+2 Final Girl cards
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+18 Various Tokens
+Components
+Special Setup
+* Place the two Countdown tokens 	on the back of the Finale
+card. Then, randomly choose 3 Cybernetic Part tokens
+and, without looking at them, place them face down on top of the
+Countdown tokens. There should be a stack of 5 tokens on the
+back of the Finale card.
+6 	7
+
+-- 4 of 25 --
+
+reinforced endoskeleton	reinforced endoskeleton
+The Mark V
+ ignores all
+ 
+effects.
+( 
+effects still apply.)
+The Mark V ignores all effects.
+( effects still apply.)
+Move 1 Space
+Move 1 Space
+MARK V POWER
+Reduce	
+from attack by 1
+* Set aside the Hunter Mark X Terror card and build the Terror deck as normal. Then, take the bottom two
+cards of the Terror deck, shuffle them with the Hunter Mark X Terror card, and place the three cards at
+the bottom of the Terror deck.
+* Place the Mark V meeple (red Killer meeple from the Core box) on the Killer starting space indicated on
+the Setup card. Place the Mark X meeple (silver Killer meeple) next to your play area to be used later
+in the game when the Mark X appears.
+* Place the Mark V Ally card and 4 Action cubes next to your play area. These will only be used when the
+Mark V has been defeated and repaired.
+ACtive Killer
+The Active Killer at the start of the game is the Mark V model. Near the end of the game, the Mark X model will
+appear and become the Active Killer. If the rules or an effect refer to the Hunter, it applies to whichever model
+is the Active Killer.
+BLOODLUST
+Since the Hunter is focused on its primary target, it derives no satisfaction from the deaths of bystanders. So,
+unlike other Killers, Bloodlust does not increase when a Victim is killed. Instead, Bloodlust increases when the
+Hunter either deals damage to you or an Ally or is damaged itself. This represents the Hunter’s cybernetic brain
+learning from these attacks and becoming smarter after each clash.
+Bloodlust can only be increased this way once per phase. For example, if you were to play a Retaliate card and
+both you AND the Hunter damaged each other, Bloodlust would still only go up once that phase.
+PANIC PHASE
+During the Panic phase, in addition to normal panicking rules, Victims in the Hunter’s space also panic if Bloodlust
+increased that turn.
+defeating the mark v
+The Final Health token and Health markers on the Killer board are for the Mark X and do NOT apply to the Mark
+V. Instead, in order to defeat the Mark V you must destroy each of its Cybernetic Parts. It takes 2 	to remove
+a single part. Damage can accumulate with multiple attacks but does not carry over to subsequent phases. For
+example, you can perform a Weak Attack to deal 	and then a Furious Strike to deal another 	, destroying
+a Cybernetic Part. If you had instead ended the Action phase without performing the Furious Strike, then the
+single 	from the Weak Attack would have been wasted.
+special rules
+Multiple Cybernetic Parts can be removed with one or multiple attacks in the same
+phase. For example, if your combined attacks in a single phase did 5 	, then 2
+Cybernetic Parts are destroyed.
+When a Cybernetic Part is destroyed, remove the top Cybernetic Part token from
+the back of the Finale card. Then, roll a die and place the Cybernetic Part token
+in or adjacent to the Mark V’s space according to the number rolled and the Panic
+numbers on the Mark V’s space.
+The Mark V is defeated and shuts down once all of the Cybernetic Part tokens have
+been removed from the Finale card. Leave the Mark V’s meeple where it was on the
+Location board. Then, take the Mark V’s Dark Power card, revealing it if it’s still face
+down, and slide it under the Ally card so that the special ability is showing at the
+bottom. If the Mark V was defeated during the Action phase, you may continue your
+turn. Otherwise, the phase immediately ends. For all game effects, the Mark V is no
+longer considered a Killer or Enemy.
+countdown tokens
+When all the Cybernetic Part tokens have been removed and only Countdown tokens remain on top of the
+Finale card, ignore the Killer action on the back of the Finale card and do not draw a Terror card. Instead,
+remove a Countdown token at the beginning of the Killer phase and increase Bloodlust by 1. When the second
+Countdown token is removed (as well as when resolving the Hunter Mark X Terror card), draw a new Setup
+card and place the silver Killer meeple for the Mark X in the Killer starting space indicated on that card. The
+Mark X is now the Active Killer. On the following turn, resolve the Killer phase as normal.
+RETRIEVING CYBERNETIC PARTS
+The Mark V can be repaired and converted into an Ally (see Ally rules at the end). To do this, its destroyed
+Cybernetic Parts must first be retrieved. To pick up a Cybernetic Part token, spend 	during the Action phase
+while in the token’s space (you cannot do this while moving through the space). If there are multiple tokens on the
+space, each token requires you to spend 	. Keep the token facedown when taking it and place it in your Backpack.
+Cybernetic Parts may be picked up even before the Mark V has been defeated.
+REPAIRING THE MARK V
+Once you have one or more Cybernetic Parts in your Backpack and the Mark V has been defeated, you may
+begin re-installing them on the Mark V to repair it. While in a space with the Mark V, you may spend 	to flip 1
+Cybernetic Part token in your Backpack and place that many Health markers on the Mark V Ally card. The first
+time a Cybernetic Part token is flipped, also place the Mark V Ally card in your play area along with the 4 Action
+cubes. The Mark V is now considered an Ally.
+If you have additional Cybernetic Part tokens, you can make further repairs in the same manner, spending 	for
+each token. Further repairs can be made on the same or future turns to increase Mark V’s health. Once an Ally, if
+the Mark V loses all its health it is permanently destroyed and removed from the board. Further repairs cannot be
+made once it loses all its health.
+8 	9
+
+-- 5 of 25 --
+
+allies
+Allies are companions that can help you against the Killer.
+* Allies are not considered Victims. You cannot choose to have an Ally follow you.
+* Unless otherwise specified, Allies cannot carry or use Items, Victims will not follow Allies, and Allies
+cannot save Victims.
+* When you and an Ally (or Allies) are in the same space and one is being attacked, you can freely choose
+who in that space will receive the attack, you or an Ally.
+* Allies are not considered Victims for targeting. So unless specified otherwise, they are typically only
+targeted if the Enemy is resolving 	as its target and an Ally is the closest. If there are also Victims
+in their space, the Victims are targeted first, unless the Ally was specifically targeted.
+Note the following when using an Ally with other Killers or Locations:
+* Most effects that would damage you would similarly damage Allies.
+* Most effects that would affect your movement would similarly affect Ally movement.
+* There may be some exceptions to these so use the rules on Game Ambiguity if anything seems like it
+wouldn’t make sense or is unclear..
+TAKING ACTIONS AND REACTIONS
+Allies use Action cubes to take Actions (which are only allowed during the Action phase), or Reactions (which
+are allowed in any phase but only as a reaction to an attack—denoted in blue on the Ally card). To take an Action,
+place an Action cube on the leftmost space next to the Action being taken. An Action is not available if there’s
+already a cube in the row for that Action.
+During the Upkeep phase, move all Action cubes one space to the right, removing them from the card when they
+leave the last space. Once a cube has left the card it is available again to use.
+achievements
+Defeat the Hunter at Sunnydaze Mall.
+Defeat the Hunter at five different locations.
+Defeat the Hunter in Extreme Horror Mode.
+Use the Mark V to deliver the killing blow to the Hunter Mark X.
+Defeat the Hunter Mark X without the Mark V being repaired.
+Defeat the Hunter Mark X without the Mark V taking any damage after it has been repaired.
+Destroy at least 3 Cybernetic Parts on the same turn.
+Defeat the Hunter before the Finale is revealed.
+Repair the Mark V to at least 10 health.
+Repair the Mark V and have it damage the Mark X on the same turn.
+10 	11
+
+-- 6 of 25 --
+
+Action	Action
+"Years of Rubiks' Cubes." 2
+Rearrange all Hellscape	
+tiles as you choose
+Swap any 2 Hellscape	
+tiles of your choice
+2
+hellshift	hellshift
+Terror	Terror
+Spiral of Death	Spiral of Death
+Shift each Hellscape tile 1	
+space counterclockwise.
+Place 1 new Victim on and 1 new	
+Victim on in the spaces of your choice.
+ITEM	ITEM
+Pins of Pain &	Pins of Pain &
+	Pleasure	Pleasure	
+“Wish I had a thimble.”
+Once per Action phase when you
+	are in the Killer’s space, the Killer	
+recovers . Then, 3 .
+rapture	rapture
+22
+11
+11
+Setup	Setup	
+When you Search in the	
+House of Mutilation, .
+Endless Suffering	Endless Suffering	
+“A moment of pain, an eternity of torment.”
+Event	Event
+* Shuffle the Hellscape tiles and deal one to each of the four blank spaces on the Location board. Tiles
+should always be oriented so that the symbol is on the top left ensuring the Panic numbers are not
+upside-down.
+* Place 1 Victim in each space of each Hellscape tile. There should be 8 Victims on the board. Then
+reveal the Setup card to place the remaining Victims, Final Girl, and Killer.
+* Add the Hellshift Action card to the tableau.
+"Our first explorations of the Hellscape proved unsuccessful. Out of the first two
+battalions to go in, only three soldiers returned from their mission. From what was
+left of each of them, it was clear the landscape itself was toying with us."
+— Colonel B.L. Rogers, US Army, Project CAGE
+8 Terror cards
+5 Setup cards	10 Event cards
+18 Item cards
+1 Location board 	1 Action card
+6 Various Tokens
+4 Hellscape Tiles 	2 Hellscape Dice
+Director (design): Ryan Jorjorian 	Director of Photography (art): Roland Macdonald
+Components
+special setup
+special rules
+hellscape tiles
+The Hellscape is ever-changing. There are 4 double-sided tiles, each with one of the following symbols: 	,
+, 	, and 	. The position of the tiles will change throughout the game. Sometimes this will be done at your
+whim using the Hellshift Action card or an Item, and sometimes it will be done outside of your control due to a
+game effect. When a tile is moved, all pieces (Final Girl, Enemies, Victims, Tokens, etc.) remain on the tile, so you
+will have to be very careful when moving the tiles around!
+* Shifting Tiles - if an effect says to Shift, you will move each tile in the direction indicated (clockwise or
+counter-clockwise).
+* Swapping Tiles - if an effect says to Swap, the chosen or indicated tiles will trade places.
+* Flipping Tiles - if an effect says to Flip, take the tile and remove all pieces from the tile, noting
+which colored space they were in. Then flip the tile and return the pieces to it, placing them in their
+corresponding colored spaces.
+* Rearranging Tiles - if an effect says to Rearrange, you may arrange ALL the tiles on the board to
+whatever configuration you choose. Tiles cannot be Flipped when Rearranging.
+hellscape dice
+Once during each Upkeep phase, you must roll the Hellscape dice and do the following:
+* If the symbols match, Flip the indicated tile.
+* If the symbols are different, Swap the indicated tiles.
+WALLS AND ADJACENCY
+Each Hellscape tile has one or two sides which are a wall that cannot be moved through. Depending on the
+current layout of the tiles, there will often be times where a tile or section of tiles will be completely blocked off
+from you and/or any Enemies. You’ll need to manipulate the tiles or wait for them to change if you need to get to
+one of those areas.
+* Panic - if a Victim (or anyone) panics into a wall/unconnected direction, they simply stay in their current
+space.
+12 	13
+
+-- 7 of 25 --
+
+* Killer Targeting and Range – range and targeting are always done by calculating the number of spaces
+required to move from the source to the target. If there is no valid path to the target of a Killer Action,
+then the Killer will not move as part of that action—attack icons will still be resolved in the Killer’s space.
+* Farthest/Closest – some effects will have you determine the farthest or closest Victim to you, or to the
+Killer. When making this determination, only consider Victims that are reachable through paths not
+blocked by walls. If no Victims can be reached through unblocked paths, then ignore walls on Hellscape
+tiles that are blocking paths and use your best judgment to determine the specified Victim. This also
+applies if you’re determining specific spaces or objects (e.g. nearest Exit space).
+* Placing someone – effects that place the Killer, Final Girl, or Victims are not affected by walls. The term
+“place” is different than “move”—"place” ignores walls, while “move” does not.
+Ryan rolls the Hellscape dice during the Upkeep phase, rolling the same symbol ( 	) on each
+die. He finds the matching Hellscape tile and, because the symbols matched, he must Flip the tile.
+He removes all of the pieces, making careful note of which spaces they were on, and then flips the
+tile to its opposite side. He places the Final Girl and two Victim meeples on their matching colored
+space (purple) and he places the lone Victim meeple on its matching colored space (red).
+achievements
+Win a game at Hellscape.
+Win a game where at least half the Victims were saved.
+Win a game without using the Hellshift Action card.
+Save 2 or more Special Victims.
+Use any 2 of the Discipline of Courage, the Discipline of Choices, or the Discipline of Cruely on the
+same turn.
+Deal the killing blow to the Killer when you and the Killer are in a space that is completely blocked
+off from any Victim.
+Use the Hellshift Action card to Rearrange tiles so that the Killer becomes blocked off from you and
+any Victims.
+Use The Nexus space to save a victim and acquire an item in the same turn.
+Use the Bone Chariot to reach a space that would be inaccessible through normal movement.
+Use the Gambler’s Cube while down to your Final Health token.
+14 	15
+
+-- 8 of 25 --
+
+The Gift	The Gift
+	of Pain	of Pain
+Purge Requirement	Purge Requirement
+Deal at least 3 to	
+Razorface in 1 Action phase.
+Purge effect	Purge effect
+“All will writhe in splendid agony.”
+affliction	affliction
+Soulbound	Soulbound
+When this is revealed,
+	gain a new Affl iction.
+Infinite Despair	Infinite Despair
+	epic dark power	epic dark power
+If at least 1 Victim panics during the	
+Panic phase, . Otherwise, .
+christie	christie	55
+Move
+1 Space
+22
+Kenzie	Kenzie	55
+Move
+1 Space
+	Move
+1 Space
+22
+When Razorface enters a space
+	with at least 1 Victim, .
+Chains of Torment	Chains of Torment
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+Place Razorface with the farthest Victim.
+Sadistic	Sadistic
+	Manifestation	Manifestation
+Terror	Terror
+16 Terror cards
+8 Affliction
+cards
+1 Killer board	3 Dark Power cards
+1 Epic Dark Power card
+3 Finale cards
+2 Final Girl cards
+Director (design): Ryan Jorjorian 	Director of Photography (art): Roland Macdonald
+“The practitioner will be caused and encouraged to call forth all great beasts of the
+pit, yet not this one, lest ye be consumed by great and unholy agonies.”
+— Librum Infernalis, Part VI, The Canticle of Dread Covenants
+Components
+* Shuffle the Affliction cards. Draw and place 3 Affliction cards faceup on the table.
+Afflictions
+Hellish Afflictions can be physical, mental, spiritual, or otherwise. To be unbound from the influence and power
+of Razorface, you must Purge all of your Afflictions (usually 3, but you may gain more during the game) so that
+you can kill Razorface and escape with your life and soul intact.
+* Purging an Affliction – each Affliction card has a Purge Requirement that you must achieve to
+Purge that Affliction. During the Action phase, if the Purge Requirement has been met, you may
+choose to Purge the Affliction by resolving the Purge Effect on the bottom half of the card. If you
+choose not to Purge the Affliction when the requirement is met, then the Purge Requirement needs
+to be achieved again later to Purge that Affliction. Once an Affliction has been Purged, remove the
+Affliction from the game.
+* Impossible Afflictions – it could happen that, during
+the course of play, a particular Affliction becomes
+impossible to Purge (due to there being no Victims on
+the board, for example). When this occurs, remove the
+Affliction from the game and draw a new one to replace
+it. You immediately lose the game if you need to draw an
+Affliction and none remain.
+Final Health Token
+Razorface’s Final Health token may only be revealed if there are NO Afflictions in play. As such, when Razorface
+is down to its Final Health token and one or more Afflictions are still in play, damage to Razorface that would
+normally reveal the Final Health token is instead ignored.
+special setup
+special rules
+NOTE! You may only Purge
+ONE Affliction per turn.
+16 	17
+
+-- 9 of 25 --
+
+44 thth of july weekend	of july weekend
+22	11
+33
+33
+11
+11
+11	Setup	Setup
+Missing Friend	Missing Friend
+Value
+A1
+A2
+B1
+B2
+C1
+C2
+Clue	
+East of the River.
+	West of the River.
+	North Falconwood.
+	South Falconwood.
+	First in Alphabetical order.
+	Last in Alphabetical order.
+expose the lab	expose the lab
+Value
+1
+2
+3
+4
+5
+6
+Clue	
+Best Friend’s House
+	School
+Library
+	Fanghorn Forest
+	Community Pool
+	Town Fair
+A1
+A4	A3
+A2
+A5
+1
+4 	3
+2
+5
+A6
+6
+Lose 2 when crossing a bridge.
+packed bridge	packed bridge	
+“Is there a sale at Kmart?”
+Event	Event
+Adopted Father	Adopted Father	
+“Use your brain and stay out of trouble!”
+While the Adopted Father is in your space, change	
+1 to a when resolving Action cards that
+	deal damage and deal 1 additional . If the	
+Adopted Father is killed in your space, 2 .
+If the Adopted Father leaves play, discard this card.
+friend	friend
+Government officials have imprisoned your father to keep him
+	quiet. Help him escape before he’s transported to another prison.	
+Additional Components	
+* 9 Mission tokens (6 with key symbols and 3 blanks)	
+* Adopted Father Friend card.	
+setup
+* Place the Adopted Father Friend card near the play area.	
+* Separate the 3 blank tokens and place them facedown in
+	the play area (or place them in a bag or opaque cup).	
+* For the remaining Mission tokens, place 2 facedown on
+	each of the following spaces: Government Lab, Shopping
+	Mall, and the Best Friend’s House.	
+note
+For this Mission, you will be using the “key” symbol on the	
+Mission token.
+save your father 	They say your friend died but it’s a lie. Look for clues to fi nd your
+	friend.
+additional components	
+* 6 Mission tokens (do not include the ones that are blank
+	on one side)
+* Best Friend Friend card	
+* Spell Book Mission Item card	
+* Token Reference card	
+setup
+* Place the Best Friend Mission Event and the Spell Book
+	Mission Item card near the play area.	
+* Shuffle the 6 Mission tokens and randomly place one face
+	down in each of the 6 named spaces that aren’t spaces.
+	Have the Token Reference card nearby.	
+note
+For this Mission, you will be using the letter-number combination
+	on the Mission token (eg A1) and referring to the Token
+	Reference card to determine the meaning of this value.
+Missing friend
+Discard during the Action phase
+	and choose an adjacent space. Roll
+	the 20 8 . Everyone in that space
+	takes based on the result.
+spell book	spell book	
+“Holy shit! I didn’t think that would actually work!”
+1-10: 2	
+11-19: 4 20: 8
+mission	mission
+ITEM	ITEM
+ITEM	ITEM
+The AK-47 cannot modify an Action card
+	and must be used without one. Once per	
+Action phase, spend 3 to deal 3	
+to 1 Enemy within range or	
+to all Enemies within range.
+0-10-1
+AK-47	AK-47	
+“Soviet workmanship at its finest.”
+**
+16 Item cards
+Terror	Terror
+"This indecision's	"This indecision's
+bugging me."	bugging me."
+Choose 1:
+* Lose Progress on the Mission	
+(refer to the Mission sheet for details)
+* Discard a random Item card
+*
+achievements
+Defeat Razorface at Hellscape.
+Defeat Razorface at five different locations.
+Defeat Razorface in Extreme Horror Mode.
+Purge an Affliction on 3 consecutive turns.
+Defeat Razorface after having purged 5 Afflictions.
+Defeat Razorface on the same turn that you purged your last Affliction.
+Defeat Razorface without purging any Afflictions before the Finale is revealed.
+Defeat Razorface without dealing any damage before you’ve purged all your Afflictions.
+Get Razorface down to his Final Health token before you have purged your last Affliction.
+Defeat Razorface in a game where you purge “A Delicious Sacrifice” AFTER the Dark Power has
+been revealed.
+* Set aside the “Survive the Hunt” Terror card, both Mission Item cards, and the Friend cards.
+They will only be used when instructed by the Mission rules.
+* Before normal setup, randomly select a Mission and follow the setup instructions on that Mission
+sheet.
+At its peak, Falconwood had a population of 16,715. That was before the government lab
+went into operation. Since then, strange events have plagued the town...mysterious deaths,
+disappearances. Several families have left. Many who remain seem oblivious to what is going
+on, but not everyone—some are adamant about exposing those behind these atrocities.
+9 Terror cards
+5 Setup cards	10 Event cards
+5 Friend cards
+2 Mission
+Item cards
+1 Location board
+1 20-sided die
+5 Mission sheets
+1 Mission Token
+Reference card
+16 Various Tokens
+Director (design): Mike Martins 	Director of Photography (art): Vincent Dutrait
+Components
+special setup
+18 	19
+
+-- 10 of 25 --
+
+20
+special rules
+definitions
+* BRIDGE: Refers to the paths with roads that cross the river and the Bridge token (if it has been placed
+on the board).
+* RIVER CROSSING: Refers to the paths with blue lines that cross the river.
+river crossings
+You will normally not be able to use River Crossings, but some effects will allow you to use them. Victims may
+follow you as normal. Enemies cannot use River Crossings. The spaces connected by a River Crossing are not
+considered adjacent nor connected for the purpose of determining range (or when resolving effects that refer
+to adjacent spaces).
+missions
+Each Mission sheet will have specific instructions on how to setup and complete the Mission. Completing the
+Mission is mandatory to win the game. The Killer can only lose their final health and reveal their Final Health
+token after the Mission is completed. Any damage that would reveal the Killer’s Final Health token before the
+Mission is completed is ignored. If there is more than one Killer, this only applies to the last remaining Killer.
+Some cards will instruct you to Gain Progress or Lose Progress on the Mission. Refer to the Mission sheet for
+an explanation on how to resolve this and place a Tracking marker on the marked space as a reminder of the
+progress effect.
+friends
+When you complete a Mission, a Friend will join you to help you defeat the Killer. Friends are considered Special
+Victims but have three important differences:
+* Friends will follow you into the Killer’s space.
+* Other Victims in the same space as a Friend will be attacked before Friends are attacked.
+* Friends will not panic if they are in your space.
+Twenty-sided die
+Many cards will instruct you to roll the 20-sided die, or d20, as indicated by 20
+.
+achievements
+Win a game at Falconwood.
+Win a game with each of the 5 Missions.
+Reduce Horror by 6 with the Game of Chance Event.
+Win a game without using any of the Bridges.
+Use Spell Book to deal damage to multiple Enemies.
+Deliver the killing blow to the Killer with the Best Friend on the Killer’s space.
+Witness the Conspiracy Theorist deliver the killing blow to the Killer.
+Replenish the Slingshot Item’s uses twice.
+Roll a result of 20 on the d20.
+Use Telekinises to deliver the killing blow to the Killer.
+20 	21
+
+-- 11 of 25 --
+
+let’s finish this	let’s finish this
+"People are	"People are
+	disappearing."	disappearing."
+Terror	Terror
+or
+open a rift	open a rift
+"This really takes a lot out of me." 2
+Go to Mirror
+	Dimension. Special
+	Victims may follow.
+Go to Mirror Dimension.	
+Special Victims may follow.
+Go to Mirror Dimension. Special
+	Victims may follow.
+2
+Action	Action
+Mind Control	Mind Control
+During the Upkeep phase, all Victims in the	
+Mirror Dimension move 1 space towards Slayer.
+“It’s in my head!”	“It’s in my head!”
+	epic dark power	epic dark power
+At the start of each Action phase, discard 1 random Action card
+	from your hand OR lose to choose which Action card to discard.
+janelle	janelle	55
+Move
+1 Space
+Take a
+Guard
+Card
+octavia	octavia	55
+Move
+1 Space
+	Move
+1 Space
+Take an
+Action Card
+(max
+2 )
+* Slayer will only attack Victims in the Mirror
+	Dimension. However, it can attack you in any
+	dimension.	
+* To attack Slayer, you must be in the same dimension.
+	However, playing a Reaction card will deal damage to	
+Slayer from any dimension.	
+* Victims can only be saved via the Exit spaces in Our
+	Dimension.	
+* Tokens on spaces (and location effects in general) apply
+	to both dimensions unless the dimension is specified.	
+* Only Victims in same dimension and same space as	
+Slayer will panic druring the Panic phase.
+Reminders for	Reminders for
+	Mirror Dimension	Mirror Dimension
+* Determine the closest Victim in Our Dimension to	
+Slayer. If there’s a tie, then from the space with the
+	most Victims.	
+* For a normal Victim, replace yellow meeple with gray
+	meeple. For a Special Victim, move their token on
+	the Dimension tracker. Panic the Victim when they
+	enter the Mirror Dimension.	
+* If there are no available gray meeples when one is
+	needed, then the Victim furthest from Slayer in the	
+Mirror Dimension is killed to free up a gray meeple
+	to be used.	
+* If there are no Victims in Our Dimension when
+	resolving , increase instead.	
+* When Slayer targets and there are no Victims	
+in the Mirror Dimension, resolve instead and
+	ignore the rest of the Killer Action.
+Resolving	Resolving
+dimension	dimension
+tracker	tracker
+our dimension	our dimension
+will follow you.	will follow you.
+If you are in the	If you are in the Mirror Dimension	Mirror Dimension duringduring
+	thethe UpkeepUpkeep phase, you lose	phase, you lose ..
+will follow you.	will follow you.
+mirror	mirror dimension	dimension
+No one knows how the Mirror Dimension came into existence, or how Slayer has now been able
+to start opening rifts to suck people into its dimension. What we do know is that Slayer needs
+to be stopped, especially since it seems to have some kind of vendetta against you.
+16 Terror cards
+2 Action cards
+1 Mirror Dimension
+Reference card
+1 Dimension
+Tracker card
+1 Killer board	3 Dark Power cards
+1 Epic Dark
+Power card
+3 Finale cards
+6 Mirror Dimension
+meeples
+2 Final Girl
+cards
+Director (design): Mike Martins 	Director of Photography (art): Vincent Dutrait
+4 Various Tokens
+Components
+* Place the Dimension Tracker card near the play area.
+* Place the Final Girl and Special Victim tokens in the “Our Dimension” half of the Dimension Tracker
+card.
+* Add a Mirror Dimension Victim (gray meeple) on your space.
+* Add a Mirror Dimension Victim on the closest 	space to Slayer.
+* Add the Open a Rift Action cards to the Action Tableau.
+The Mirror Dimension
+The Mirror Dimension is a dark, dreary version of Our Dimension and both are represented on the same
+Location board. The following rules apply:
+* Slayer only moves in the Mirror Dimension, unless an effect says otherwise.
+* Victims in Our Dimension are represented by yellow meeples, and Victims in the Mirror Dimension
+are represented by gray meeples.
+* The dimensions you and any Special Victims are in currently is indicated by their token on the
+Dimension Tracker card. A token on the upper half means that the character is in Our Dimension, and
+a token on the lower half means the Mirror Dimension.
+* Normal movement rules apply. However, only Victims in your current Dimension will follow you.
+* A Victim can only be saved when both you and the Victim are at a 	space in Our Dimension.
+* spaces can be interacted with in both dimensions.
+* For simplicity, tokens on spaces, and location effects in general, apply to both dimensions unless the
+dimension is specified. If a token or location effect targets a Victim on a space and there are Victims
+in both Our Dimension as well as the Mirror Dimension, then Victims in Our Dimension are targeted
+first, unless Mirror Dimension Victims are specifically targeted.
+special setup
+special rules
+22 	23
+
+-- 12 of 25 --
+
+PULLING VICTIMS INTO THE MIRROR DIMENSION
+Victims can be pulled from Our Dimension into the Mirror Dimension. When you see this symbol 	, Slayer
+targets the closest Victim in Our Dimension. Perform the following:
+* For a normal Victim, replace the yellow meeple with a gray meeple. If all the gray meeples are already
+on the board, then the Mirror Dimension Victim farthest from Slayer is immediately killed. That gray
+meeple is then used for the new Victim pulled into the Mirror Dimension.
+* For a Special Victim, move their token to the Mirror Dimension half of the Dimension Tracker card.
+* Panic the Victim.
+* If no Victim was pulled into the Mirror Dimension, increase 	instead.
+ENTERING THE MIRROR DIMENSION
+When the rifts started appearing, it awakened a power within you. During the Action phase, with intense mental
+energy, you can open a rift to the Mirror Dimension in your space. Resolve the Open a Rift Action card. Special
+Victims on your space may cross with you into the Mirror Dimension but normal (yellow) Victims cannot. When
+entering the Mirror Dimension, move the associated tokens to the Mirror Dimension half of the Dimension
+Tracker card.
+our dimension	our dimension
+will follow you.	will follow you.
+If you are in the	If you are in the Mirror Dimension	Mirror Dimension duringduring
+	thethe Upkeep	Upkeep phase, you lose	phase, you lose ..
+will follow you.	will follow you.
+mirror	mirror dimension	dimension
+or
+open a rift	open a rift
+"This really takes a lot out of me." 	2
+Go to Mirror
+	Dimension. Special
+	Victims may follow.
+Go to Mirror Dimension.	
+Special Victims may follow.
+Go to Mirror Dimension. Special
+	Victims may follow.
+2
+our dimension	our dimension
+will follow you.	will follow you.
+If you are in the	If you are in the Mirror Dimension	Mirror Dimension duringduring
+	thethe Upkeep	Upkeep phase, you lose	phase, you lose ..
+will follow you.	will follow you.
+mirror	mirror dimension	dimension
+our dimension	our dimension
+will follow you.	will follow you.
+If you are in the	If you are in the Mirror Dimension	Mirror Dimension duringduring
+	thethe Upkeep	Upkeep phase, you lose	phase, you lose ..
+will follow you.	will follow you.
+mirror	mirror dimension	dimension
+At the beginning of the Killer phase, Slayer pulls the
+closest Victim into the Mirror Dimension. Unfortunately,
+it's the Best Friend (indicated by the orange Special
+Victim meeple). Mike moves the token on the
+Dimension Tracker card that matches the Victim, from
+Our Dimension to the Mirror Dimension, to indicate
+that the Best Friend has changed dimensions. The
+Best Friend immediately panics. Mike rolls a 4 and
+moves the Best Friend into the same space as Slayer.
+Mike decides to play Open a Rift and
+succeeds, allowing him to move to the
+Mirror Dimension. He moves his token on
+the Dimension Tracker card to note this.
+He decides that the Best Friend is a lost
+cause and instead chooses to return to Our
+Dimension. He brings the Mirror Dimension
+Victim with him, replacing the grey meeple
+with a yellow one. He moves his token
+back to Our Dimension on the card.
+RETURNING TO OUR DIMENSION
+During the Action phase, you may return to Our Dimension at any time (except while in the middle of
+resolving an Action card). Move your token on the Dimension Tracker card to Our Dimension. Any Victims
+on your space may also come back to Our Dimension with you by replacing the gray meeple with a yellow
+meeple. For Special Victims, move their token to the Our Dimension half of the Dimension Tracker card.
+If you are in the Mirror Dimension during the Upkeep phase, lose 	.
+ATTACKING
+To attack Slayer, you must be in the same dimension to perform actions or use Items that deal damage.
+The exception is when you’re attacked while you’re in Our Dimension and play a Reaction card that deals
+damage.
+targeting
+Slayer has a mental connection with you and can sense you regardless of which dimension you are in, but it
+can only sense Victims in the Mirror Dimension.
+* When targeting 	, Slayer will target a Victim in the Mirror Dimension, or you, whichever is closer.
+Note that if Slayer is attacking on a space with only you and other Victims in Our Dimension, that
+Slayer will attack you, ignoring the Victims in Our Dimension.
+* When targeting 	, it will target the closest Mirror Dimension Victim. If there are none, it will
+instead resolve 	and ignore the rest of that Killer Action. Continue to resolve the rest of the
+Terror card if there are additional effects.
+* When targeting 	, it will target you regardless of which dimension you are in.
+panic phase
+During the Panic phase, do not panic Victims in Our Dimension (unless the Interdimensional Rift
+Collapse Finale card is in play). For example, Slayer is in the Mirror Dimension and at the start of the
+Panic phase, is in a space with 2 Victims in Our Dimension and 2 Mirror Dimension Victims. Since a
+Victim was killed earlier this turn, the Mirror Dimension Victims will panic but the
+Victims in Our Dimension will not.
+24 	25
+
+-- 13 of 25 --
+
+units per hour	units per hour
+22 	22
+11 	11
+	11	11
+11
+	22
+	11	
+Setup	Setup
+The Supervisor	The Supervisor	
+“What are you two doing in there? Are those... packing peanuts?”
+Place the Supervisor and 2 new Victims in the	
+Supply Cage. When panicking Victims in the	
+Supervisor’s space, roll 1 die and move all Victims	
+(including the Supervisor) according to the result.	
+If the Supervisor leaves play, discard this card.
+Event	Event
+Action	Action
+climb	climb
+"If I could just get up there."
+May only be played while adjacent to a space.
+During the Action Phase:	
+Discard Walk to take
+	this or discard Sprint
+	to take this and Leap
+Return this card to your hand
+Move to an
+	adjacent space
+Move to an
+	adjacent space
+2 	Terror	Terror
+Click!	Click!
+The Main Entrance is now Unlocked.
+If any effect causes this card to be discarded,
+	unlock the exit as described below but
+	do not apply any other effects.
+Draw the next Terror card.
+ITEM	ITEM
+forklift keys	forklift keys	
+“Pull this lever? Push that lever?”
+You may now use the Forklift. The	
+Forklift may move with you, but may
+	not enter or spaces. While
+	with the Forklift, you may spend	
+to safely move a Victim from an
+	adjacent space to your space.
+16 Item cards12 Various Tokens
+achievements
+Defeat Slayer at five different locations.
+Defeat Slayer in Extreme Horror Mode.
+Defeat Slayer without having more than 3 Victims in the Mirror Dimension at any time.
+Deliver the killing blow to Slayer from Our Dimension.
+Defeat Slayer without returning any Victims from the Mirror Dimension to Our Dimension.
+Stay at least 5 consecutive turns in the Mirror Dimension.
+Take 2 Special Victims with you to the Mirror Dimension using the Open a Rift Action card.
+Return to Our Dimension with at least 4 Victims.
+Witness Slayer lose its last health when the Interdimensional Rift Collapse Finale card is revealed.
+"The locking system in Marrek Warehouse is state of the art and the first of its kind. Devised by
+our ingenious mechanical engineers, the system ensures precise shift changes and security."
+— Loctrocel Inc. spokesperson during the ribbon cutting ceremony for Marrek Warehouse
+8 Terror cards
+5 Setup cards	10 Event cards
+1 Location board 2 Action cards
+Director (design): A.J. Porfirio 	Director of Photography (art): Agnieszka Dabrowiecka
+* Place the Forklift token in The Pit space. It will only be used if you find the Forklift Keys Item card.
+* Place a Locked token 	on each of the 	spaces.
+* Set aside the 3 “Click” Terror cards before setting up the Terror deck as normal. After the Terror
+deck is set up, set aside the top 2 cards and shuffle in the 3 "Click" Terror cards with the remaining
+cards in the Terror deck. Then return the 2 set aside cards to the top of the deck.
+* Place the Climb and Leap Action cards in the Action Tableau.
+Components
+special setup
+26 	27
+
+-- 14 of 25 --
+
+Special Rules
+Locked Exits
+The warehouse has been locked by the Killer! While an Exit is Locked, no Victims may be saved at that Exit.
+The spaces themselves can be moved into, but to save Victims you will have to find ways to Unlock the Exits
+or wait for the automatic timers (the “Click” Terror cards) to open them. When an Exit becomes Unlocked,
+discard the Locked token from that space.
+Rack Spaces
+These spaces represent the top of the warehouse's storage racks. Unless noted on a card or effect, Enemies and
+Victims can move to and from 	spaces normally.
+Climb & Leap Action cards
+These cards are like other Action cards except that they cannot be acquired in the normal way. Instead, at any
+time during the Action phase, you may:
+* Discard a Walk card to take Climb OR Leap into your hand.
+* Discard a Sprint card to take Climb AND Leap into your hand.
+CLIMB: You will have to use Climb to move to an adjacent 	space. Victims may follow you when you Climb.
+You may not use Climb to move out of a 	space. Instead, simply use normal movement actions or effects
+(i.e. Walk, Sprint, etc) to do so.
+LEAP: Use Leap to jump from one 	space to another. Victims may follow you when you Leap. If you fail the
+Leap Action you will end up on the ground. Victims following you do not suffer damage, they just climb down
+the rack onto your space (to see if you’re ok).
+the pit
+The workers in the warehouse call the area in the middle of the warehouse “The Pit”. When panicking someone
+from this space, roll 2 dice instead of 1 to determine the direction they panic.
+achievements
+Win a game at Marrek Warehouse.
+Save a Victim before any Click! Terror cards are resolved.
+Win a game where at least half the Victims were saved.
+Use both the Climb and Leap Action cards on the same turn.
+Save the Heroic Best Friend.
+Use the Bowling Ball to deliver the killing blow to the Killer.
+Unlock an Exit using an Item.
+Win a game where zero Victims were saved.
+Use the Chain Saw to deliver the killing blow to the Killer.
+Witness 2 or more victims save themselves without you being in their space.
+28 	29
+
+-- 15 of 25 --
+
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+A Victim that matches the first applicable
+	condition below is now Trapped:	
+* In the space furthest from you	
+* In a space	
+* In a space adjacent to a space	
+* In the space furthest from you
+Let's play a game	Let's play a game
+Victim	Victim
+Terror	Terror
+16 Terror cards
+2 Final Girl cards
+cassie	cassie	55
+Take a
+Distraction
+Card
+Take a
+Sprint
+Card
+Move
+1 Space
+Move
+1 Space
+mandy	mandy	66
+Move
+1 Space
+	Move
+1 Space
+reverse bear trap	reverse bear trap	
+“Find the key and unlock the lock behind your head before it is too late!”
+First, fi nd the key: 4
+Lastly, unlock the mechanism: 4
+START 22
+Fail Result:
+death trap	death trap
+Victim	Victim
+7 Victim Death
+Trap cards
+1 Killer board
+17 Various Tokens
+3 Dark Power cards
+Overkill Traps	Overkill Traps
+When a Victim is killed by a Death Trap, you
+	and each Victim in that space take .
+1 Epic Dark Power card
+Endless Traps	Endless Traps	epic dark power	epic dark power
+Each time a Victim is freed from a Death Trap, resolve a new Victim	
+on the furthest Victim. You lose if there are no Victim to resolve.
+3 Finale cards
+When the Tormentor ends her movement on an Unlocked	
+space, place a Locked token there. At the start of the Killer	
+phase, if all spaces are Locked, you lose the game.
+no Escape!	no Escape!
+Closest
+Unlocked
+Electric Cage	Electric Cage	
+“The shock power will increase every few minutes until it reaches a deadly voltage.”
+First, fi nd the power source: 2
+Then, damage the power source:
+Lastly, destroy the power source: 2
+START 	You are
+Killed
+death trap	death trap
+Final Girl	Final Girl
+4 Final Girl
+Death Trap cards
+Victim	Victim 	Final Girl	Final Girl
+"When we first discovered the scene, all that was left was gore and viscera. The
+intricate and devious nature of the trap was... well... none of us could believe it..."
+— Douglas Furlong, Crime Scene Investigator
+Director (design): A.J. Porfirio 	Director of Photography (art): Agnieszka Dabrowiecka
+Components
+special setup
+special rules
+* The Tormentor does NOT start on the board.
+* As per normal rules, keep the Setup card faceup above the Location board for future reference.
+Keep the remaining Setup cards nearby (don't return them to the box).
+* Shuffle the Victim Death Trap cards and place the deck facedown in the play area. Do the same for
+the Final Girl Death Trap cards, forming a second deck.
+* Place a Victim in the space where the Killer would start the game (the 	space) and resolve a
+Victim Death Trap card for this Victim (see Becoming Trapped below).
+The Tormentor
+The Tormentor will not appear until the Finale is revealed. Until then, Killer Actions ( 	& 	) on Terror
+cards are ignored. Also, while the Tormentor is not on the board, if an effect asks you to:
+* Place something, or count spaces, in relation to the Killer – Reveal a random Setup card and treat
+the 	space on the Setup card as the Killer’s space for the purposes of resolving the effect.
+Then shuffle the Setup card back in with the others.
+* Place the Killer - Ignore the effect.
+Once the Finale has been revealed, the Tormentor will be placed on the board at the beginning of the
+NEXT Killer phase. At that point, reveal a random Setup card and place the Tormentor in the 	space
+indicated on that Setup card. The Tormentor then proceeds to perform the Killer Actions on the Finale
+card and the game continues with the Tormentor now on the board for the rest of the game.
+Becoming trapped in a death trap
+A Death Trap will be set when you see one of the above icons. These are all the devious traps the Tormentor
+has prepared for you and the Victims.
+When you’re required to resolve a Death Trap, draw a Death Trap card from the appropriate deck. Then
+place the matching Death Trap token in the space of the target as indicated, and place the target's meeple
+on the start space of the Death Trap card. The target is now Trapped.
+Trapped subjects are never targeted by the Tormentor unless specifically noted otherwise.
+30 	31
+
+-- 16 of 25 --
+
+Fail Result:
+START
+Swinging Blades	Swinging Blades
+“These swinging blades will slowly lower. You’ll have
+to hope someone saves you in time.”
+First, time the blades: 5
+Then, cut the ropes: 2
+Lastly, dive to safety: Move 2 spaces
+Trapped subjects may not move, ignoring all movement effects including
+panic (with the exception that you may use movement effects towards the
+requirement of escaping a trap). While Trapped, you may not play Reaction
+cards, search, or perform attacks on Enemies. If a card effect requires you to
+determine whether the Trapped subject is considered to be in a space or on
+the board, refer to the rules on Game Ambiguity to determine how to best
+resolve it. If you’re still unsure, then consider the Trapped subject to be off
+the board for that effect.
+progressing death traps
+When you see 	, advance the meeples on all active Death Traps to the
+next space and apply the effect on that space. For example, if there are three
+Trapped Victims and two advance to spaces with 	and one advances to
+a space with 2 	, you would increase Horror twice and lose 2 time.
+When a Victim advances to the final space on the Death Trap card (noted with a 	), the Death Trap is
+complete. The Victim is killed (yes, Bloodlust increases) and you must apply the Fail Result effects.
+When the Final Girl meeple advances to the final space of a Death Trap, you are killed and immediately lose
+the game (do not reveal your Final Health token). Don’t let that happen! Note! If you lose your final health
+before the final space, your Final Health token is still revealed as normal. If health is recovered, you remain in
+the Death Trap.
+During the Panic phase, Victims in a space with a completed Death Trap will panic. In the Upkeep phase,
+tokens and cards for completed Death Traps are removed from the game.
+escaping death traps
+Each Death Trap has a series of tasks that need to be completed to escape. While on the space with a Death
+Trap (or in a Death Trap yourself!), you may perform the Escape Tasks. Escape Tasks involve spending time,
+doing damage, moving, losing health, etc.
+Escape Tasks must be completed in order from top to bottom. Once an Escape Task is resolved, mark it with
+a tracking marker. Then, you can work on resolving the next task (if any remain). When the last Escape Task
+is completed, the subject has escaped. Place the meeple on the board space with the Death Trap token. Then,
+remove the Death Trap token and card from the game.
+A few things to note about completing Escape Tasks:
+* If an Escape Task requires you to spend time to complete it, you may only do so if it does not cause
+the time marker to go below 0.
+* As long as you are in the same space, any effects (regardless of the source) can be used towards
+completing Escape Tasks.
+* Using Action cards or Items to complete the Escape Tasks does NOT also let you
+use the effect as you normally would. Any unused excess from the effect is lost. Other
+effects resulting from resolving the Action card or using the Item are still applied.
+For example, if an Escape Task requires you to “Move 1 Space” and you get a double success for
+Sprint that allows you to move 3 spaces, you can use this result to complete the “Move 1 Space”
+Escape Task but cannot use the excess towards another Escape Task, or to move spaces on the
+board. However, you would still lose 1 time as part of resolving the effect.
+* You may play multiple cards to complete an Escape Task. However, you must fully complete the
+task before the Action phase ends or your progress will be lost. For example, if you need 2
+to complete the task, but are only able to do 1 	, that damage will be wasted and lost when the
+Action phase ends.
+* If you are in a Death Trap yourself, you may not resolve Escape Tasks for Victim Death Traps on
+your space.
+* Work together! If at least one untrapped Victim is in the space with you, you may add +1 	to
+your Horror rolls when you are resolving Action cards towards completing Escape Tasks. If there
+are multiple untrapped Victims with you, you can still only add +1 	.
+Bottoming Terror Cards
+When you see this 	icon on a Terror card, you are being instructed to place that card face down on the
+bottom of the Terror deck. If it is the only card left or if there is an endless loop of cards being bottomed in
+succession, discard the card(s) instead.
+No Escape Finale
+During the “No Escape!” Finale the Tormentor will try to lock all the 	spaces. While a 	is Locked,
+no Victims may be saved at that Exit. At some locations (like Marrek Warehouse), you may have ways to
+Unlock the 	. If a Locked space becomes Unlocked, remove the Locked token 	from that space and
+the Tormentor will have to try to return to it to lock it again.
+32 	33
+
+-- 17 of 25 --
+
+Terror	Terror
+“These two have no	“These two have no
+	idea what they just	idea what they just
+	walked into.”	walked into.”
+Roll a die and place 2 new Victims	
+in the following space:	
+1-2: Scrap Yard	
+3-4: General Store	
+5-6: Sheep Farm
+welcome to uptopia	welcome to uptopia
+22
+22
+22
+11 11 	11
+11
+	11
+	11	
+Setup	Setup
+ITEM	ITEM
+bulldozer	bulldozer
+	Keys	Keys	
+“Nothing can stop us now!”
+Place the Bulldozer token in your
+	space. The Bulldozer may move with
+	you. While with the Bulldozer, you
+	and all Victims in your space may
+	ignore the effects of Sand Snakes.
+Earthquake!	Earthquake!	
+“I’ve never seen readings like this!”
+A sinkhole opens up! Roll to determine which space collapses:	
+1-3: Crossroads 4-6: Trailer Park
+	Place a Sinkhole token in the collapsed
+	space and apply the Sinkhole effects.
+Discard this card.
+Event	Event
+sand snakes	sand snakes
+A Sand Snake attacks at the	
+Crossroads (if it has collapsed, attack
+	the Bunker instead). The Sand Snake	
+does to ONE TARGET on that
+	space using the following priority:
+Victim You Minion Killer
+achievements
+Defeat the Tormentor at Marrek Warehouse.
+Defeat the Tormentor at five different locations.
+Defeat the Tormentor in Extreme Horror Mode.
+Defeat the Tormentor after escaping from 3 or more Final Girl Death Traps.
+Defeat the Tormentor after freeing 5 or more Victims from Death Traps.
+Defeat the Tormentor without any Victims being killed in Death Traps.
+Free a Victim from a Death Trap and save that Victim on the same turn.
+Defeat the Tormentor on the turn immediately after she appears on the Location board.
+Free a Victim from a Death Trap on the turn immediately after it appears.
+Free both yourself and a Victim from Death Traps on the same turn.
+8 Terror cards
+5 Setup cards	10 Event cards
+12 Sand Snake
+cards
+1 Location board
+6 Various Tokens
+We have an old joke around these parts, it goes like this... "Where can you find Utopia?" The owner
+of the General Store smiles and fidgets, waiting for Ronda to answer, but she just shrugs. Barely
+able to contain himself, he bursts out, "Nowhere!" and he begins laughing uncontrollably.
+18 Item cards
+Director (design): Katia Howatson 	Assistant Director (additional design): AJ. Porfirio
+Director of Photography (art): Kari L. Smith
+Components
+34 	35
+
+-- 18 of 25 --
+
+* Shuffle the 12 Sand Snake cards together to form the Sand Snake deck.
+SPECIAL rules
+Sand Snake Attack!
+Each turn, Sand Snakes will rise up out of the ground and attack! At the end of the Killer phase, draw 2 Sand
+Snake cards and follow the instructions on the cards. A Sand Snake does 	to ONE TARGET on the named
+space using the following priority: Victim 	Final Girl 	Minion 	Killer.
+After attacking, all Sand Snakes immediately burrow back underground. Sand Snakes are NOT considered
+Minions and cannot be attacked, killed, or otherwise interacted with other than you may use Reaction cards
+and Item effects to prevent 	being dealt to you by the Sand Snakes.
+One of the Sand Snake cards will instruct you to reshuffle the discard pile back into the deck. This is done after
+resolving all the other Sand Snake cards drawn at the same time.
+Sinkholes
+Some spaces can ‘Collapse’. This will be indicated on certain Terror or Event cards. When this occurs, any
+Victims in the affected space are killed. You and any Enemies in the space take 	and then anyone left
+there panics until they leave that space. Place a Sinkhole token in the space. A space with a Sinkhole token
+can no longer be moved to or through by ANYONE for the rest of the game.
+BOULDER SPACES
+Some spaces are Boulder spaces. These spaces are safe from Sand Snake attacks and some card effects may
+reference them.
+special setup 	achievements
+Win a game at Utopia.
+Witness a Sand Snake deliver the killing blow to the Killer.
+Witness the Killer lose it’s final health from being in a space that Collapses.
+Witness all 4 Sinkholes in the same game.
+Deal 6 damage using Household Chemicals.
+Use the Scoped Rifle at a range of 4 to deliver the killing blow to the Killer.
+Witness a Sand Snake attack you, a Victim, and the Killer.
+Save the Defiant Teenager.
+Win a game with Dehydration as the starting Event.
+Use the Crowbar’s discard effect to acquire a weapon with a damage modifier of 2+.
+36 	37
+
+-- 19 of 25 --
+
+1 Noise marker
+Hard skin	Hard skin
+The Eyeless ignores the first it takes each turn.
+Place the Eyeless on your space. You may reduce
+	the Noise level by 1 for every 2 you spend.
+"If we're careful, we	"If we're careful, we
+	might just make it!"	might just make it!"
+22
+Otherwise:
+Terror	Terror
+You may use Movement effects
+	to move Victims instead.
+No more running	No more running
+Place the Eyeless	
+in your space	
+Move 1
+Space
+High Alert	High Alert
+	epic dark power	epic dark power
+at the beginning of each Killer phase.
++1 Noise
+Noise	Noise
+Couldbeheardbyothersnear
+	you(inthesamespace).Melee
+	typeattacks,polevaulting,etc.
+Noise	Noise
+Couldbeheardatadistance
+	(inotherspaces).Gunshots,a
+	whistle, vehicle use, etc.
++3 Noise
+1 Killer board	3 Dark Power cards
+Ronda	Ronda	66
+Move
+1 Space
+Take a
+Search
+Action
+Card
+meghan	meghan	55
+Take a
+Sprint
+Action
+Card
+Move
+1 Space
+Scientists, were they able to study the Eyeless, would have been fascinated by
+its ability to move and kill so precisely without possessing eyes. Unfortunately,
+that will probably never happen since soon they'll all be dead.
+2 Final Girl cards
+Director (design): Katia Howatson 	Assistant Director (additional design): AJ. Porfirio
+Director of Photography (art): Kari L. Smith
+16 Terror cards
+4 Noise cards
+1 Epic Dark Power card
+3 Finale cards
+Components
+* Place the Noise marker on the zero space of the Time track.
+* Place the Noise cards beside your play area.
+noise level
+Your Noise level will increase by 1 for EACH Action card you resolve during the Action phase. The result of
+the Action does not impact the amount of Noise, it is simply a Noise level increase of 1 for each Action card
+resolved. Cards discarded for Time or to convert successes are NOT counted for Noise, however, resolving Close
+Call does increase the Noise level because you’re resolving an Action card. Action cards played in other phases
+(for example Reaction cards or Close Call played in the Killer phase) are not counted for Noise.
+The Noise level only applies to you and can impact who the Eyeless will target when resolving certain Terror
+cards during the Killer phase (see Eyeless Targeting, opposite). Each time you make Noise, move the Noise
+marker up on the Time track accordingly. The current Noise level is equal to the number on the Time track
+where the Noise marker is. Some effects will reduce Noise, but the Noise level cannot go below zero. The Noise
+marker resets to zero at the END of the Upkeep phase.
+USING ITEMS
+Many Items make noise, sometimes lots of it. Use the following guidelines for applying Noise from Items. When
+an Item is used during the Action phase, increase the Noise level based on which category below best applies
+to the Item being used. If in doubt, apply rules on Game Ambiguity.
+* Can be done silently: no noise increase – things like a map, drinking water, applying first aid, etc.
+* Could be heard by others near you (in the same space): +1 noise – melee type attacks, pole vaulting, etc.
+* Could be heard at a distance (in other spaces): +3 noise – gun shots, a whistle, vehicle use, etc.
+When you acquire an Item, determine which category it fits in to and, if applicable, place a Noise card beneath it
+with the corresponding Noise value showing at the bottom. This is just a helpful reminder to increase Noise when
+using that Item.
+special setup
+special rules
+38 	39
+
+-- 20 of 25 --
+
+Noise	Noise
+Couldbeheardatadistance
+(inotherspaces).Gunshots,a
+whistle, vehicle use, etc.
++3 Noise	
++1 Noise
+Noise	Noise
+Couldbeheardbyothersnear
+you(inthesamespace).Melee
+typeattacks,polevaulting,etc.
+You may add one success to an attack
+	with the Pickaxe. If you do, discard the	
+Pickaxe after resolving the attack.
+Pickaxe	Pickaxe
+“FUCKKKKK YOUUUUUU!”
+00	
+1*1*
+Six-Shooter	Six-Shooter
+“Pow, pow, pow, pow, pow, pow, click, click.”
+May be used at a Range of 2 while
+you are on a space.
+Every time you use an	
+Action card to recover health,
+	recover an additional
+First Aid Kit	First Aid Kit
+“Gotta stop this bleeding.”
+On the Hunt	On the Hunt
+44
+Otherwise:
+Move 1	
+Space
+33
+eyeless targeting
+The Eyeless targets normally based on the targeting icon UNLESS there is a Final Girl Noise
+icon on a Terror card. In this case, the Eyeless will target you if BOTH of the following conditions
+are true:
+* The current Noise level is greater than or equal to the value on the Final Girl Noise icon.
+* The Eyeless can reach you with its movement.
+If either condition is not true, resolve the effect after “Otherwise” on the Terror card (note that this still could
+result in you being targeted!).
+Katia has managed to acquire three different
+items. The Six-Shooter will make a lot of noise,
+so she places a Noise card underneath it with +3
+showing. The Pickaxe will make some noise (but
+not as much as the gun), so she places a Noise
+card underneath with the +1 showing. Using a
+First Aid Kit would not make any noise at all, so
+she doesn't place a Noise card underneath it.
+You reveal the Terror card On the Hunt. First you
+raise the Horror Level by 1. Then, the Eyeless will
+resolve the effect targeting you because: 1) the
+current Noise level is 4, which is equal to the value
+on the Final Girl Noise icon; and 2) the Eyeless can
+reach you with its movement of 3. If you had been
+4 or more spaces away or made 3 or less Noise,
+then Eyeless would have targeted the closest
+target (which would be the Victim in its space) per
+the “Otherwise” effect indicated.
+Katia resolved 4 Action cards during the Action
+phase and did not use any Items. As such, the
+Noise marker is on space 4 on the Time track
+indicating the current Noise level
+is 4. It is now the Killer phase
+and the Eyeless first moves
+1 space towards the closest
+target due to the Killer Action on
+the back of the Finale card. The
+Eyeless is now in a space with a
+Victim and Katia is 2 spaces away.
+44
+achievements
+Defeat the Eyeless at Utopia.
+Defeat the Eyeless at five different locations.
+Defeat the Eyeless in Extreme Horror Mode.
+Defeat the Eyeless by never making more than 3 Noise each turn.
+Defeat the Eyeless by making more than 3 Noise every turn.
+Defeat the Eyeless before the Finale is revealed.
+Win a game where all Reaction cards were removed from the game.
+Win a game where Unlimited Endurance was shuffled back into the Terror deck.
+Make at least 10 Noise in one turn.
+Make 0 Noise in one turn.
+40 	41
+
+-- 21 of 25 --
+
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+“Something is trying to kill us, and in a very specific order.”
+— Gabrielle
+Terror from Destiny requires the Final Girl Core Box and any Location from a Feature
+Film box (each sold separately).
+Components
+It costs 3 for a Fated Victim	
+to exit via a space.
+Hourglass of despair	Hourglass of despair
+deathcoaster	deathcoaster 	:
+START
+dark power	dark power
+death order	death order
+consequence	consequence
+punishment	punishment
+You must have saved at least 5 Victims (not
+	including Fated Victims). Place them on this card.
+punishment	punishment
+Mass Hysteria	Mass Hysteria
+Panic all Victims.
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+FATED DEATH	FATED DEATH	
+If another effect causes this card to be discarded,
+	resolve this card's effect before discarding.
+Saved
+Limbo
+(max once per phase)
+Terror	Terror
+Terror	Terror
+bloodlust	bloodlust
+track	track
+“If Destiny thinks it can mess with me,
+	its got another thing coming.” 1
+thwart destiny	thwart destiny
+Ignore one
+May be played during any phase.
+Action	Action
+3 Dark Power cards
+3 Death Order cards
+10 Punishment cards
+10 Punishment cards
+16 Various tokens
+10 Consequence
+cards
+gabrielle	gabrielle	55
+Take a
+Search
+Card
+Move
+1 Space
+1 Final Girl card
+17 Terror cards
+5 Fated Terror
+cards
+2 Bloodlust
+Cards
+3 Action cards
+4	
+5	
+6
+special setup
+Follow the normal setup rules with the following differences:
+* There is no Killer board. Instead, align and place the two Bloodlust cards next to the Location board. Place the
+Bloodlust marker on the start space of the Bloodlust card. The Horror level starts at 5.
+* When building the Terror deck, keep the 5 Fated Death Terror cards to the side and shuffle this Vignette’s
+remaining Terror cards together with the Location’s Terror cards. Deal out 8 cards and place the remaining
+Terror cards back into their respective boxes. Of the 8 cards you dealt, place 1 of these off to the side and
+shuffle the remaining 7 cards with the 5 Fated Death Terror cards. Finally, place the single Terror card you set
+aside earlier on top. You will now have a Terror deck of 13 cards (rather than the normal 10), and you know for
+sure that the top card will not be a Fated Death card.
+* Randomly choose a Death Order card and place it faceup next to the Location board. Then, shuffle the 5
+Death tokens (the circular ones with the 	on the back) and randomly place them facedown on the Death
+Order card (A).
+* Shuffle the Consequence and Punishment cards. Then, place 5 Consequence cards facedown in a row,
+and below each of these cards place a Punishment card (B). Place the Arrow token above the leftmost
+Consequence card (C). Place any remaining Consequence and Punishment cards back in the box.
+* Place the Victims and Final Girl on the spaces indicated in the Setup card but do not place a Killer as there is
+none for this Vignette.
+* Using the colored arrows to line them up, lay the Setup Grid rulers along the left side (blue arrows) and the
+bottom (green arrows) of the Location board (D).
+* Select one die to represent the horizontal axis and another die to represent the vertical axis. Roll the two dice
+and, consulting the Setup Grid rulers, place one of the Fated Victim tokens (the square ones) on a space
+within the resulting grid section following these rules:
+> 	At least half of the space needs to be in the grid section for you to be able to place the Fated Victim there.
+> 	A Fated Victim cannot be placed with the Final Girl.
+> 	A Fated Victim cannot be placed on a 	space.
+> 	A Fated Victim cannot be placed in a space that already has a Fated Victim.
+If you cannot place a Fated Victim as a result of these constraints, then re-roll the dice and try again. Repeat
+these steps until all 5 Fated Victim tokens have been placed (E1-E5).
+* Add the Thwart Destiny Action card and 1 Premonition Action card to the Action Tableau. For an easier
+mode, add both Premonition Action cards.
+Death at 30,000 Ft.	Death at 30,000 Ft. 	: 2
+START
+consequence	consequence	
+consequence	consequence
+punishment	punishment	
+punishment	punishment 	punishment	punishment	
+punishment	punishment	
+punishment	punishment
+consequence	consequence	
+consequence	consequence 	consequence	consequence	
+consequence	consequence
+This is how the Death Order, Consequence, and Punishment cards should be laid out during setup.	C
+B
+A
+42 	43
+
+-- 22 of 25 --
+
+special rules
+Your goal is to save as many Fated Victims as possible, but it must be done in the correct order (as indicated
+by the facedown tokens on the Death Order card)! If you save a Fated Victim out of order there will be
+consequences! At the end of the game, once the Terror deck has run out, you will have to face the ultimate
+consequences of Fate. If you come up short, Destiny will once again exact its awful price—your life.
+FATED VICTIMS
+Fated Victims are treated like Victims, with a few differences.
+* Fated Victims can’t be replaced with Special Victims.
+* Fated Victims can leave the board via 	spaces as normal, but they are not yet saved. Instead, place their
+token on top of the first Death token on the Death Order card that doesn’t already have a Fated Victim
+token on it. Whether they are saved or not is determined later when resolving a Fated Death Terror card.
+* If a Fated Victim dies for reasons OTHER than drawing a Fated Death Terror card, they are immediately
+placed on the Limbo area of the Bloodlust card. Do NOT increase bloodlust at this point. Bloodlust will be
+increased when the Fated Victim’s Death token is revealed.
+Note! If the Fated Victim was still on the board, do NOT suffer the Limbo
+consequences on the Fated Death Terror card.
+welcome to uptopia	welcome to uptopia
+22
+22
+22
+11 	11 	11
+11
+	11
+	11
+The Location is Utopia and the setup card was
+“Welcome to Utopia.” Evan sets up the Final Girl and
+Victim meeples as normal, but does not place the
+Killer meeple as there isn’t one when playing this
+Vignette. He then places the Setup Grid rulers around
+the edges of the board.
+Evan’s first roll is a 1 for the
+vertical guides and a 4 for the
+horizontal guides. There are three legal
+places he could place the Fated Victim: the
+Crossroads, the Water Tower, and the General
+Store. He chooses to place the Fated Victim at
+the General Store.
+Evan’s second roll is two 3’s.
+This ends up being in the exact
+same grid section as the last Fated Victim. The
+General Store is no longer a legal placement
+since there’s already a Fated Victim there,
+so he places the new Fated Victim at the
+Crossroads.
+The third roll is a 5 for the vertical
+guide and a 3 for the horizontal
+guide. Evan wishes he could place the Fated
+Victim in his own space, but he can’t, so he
+places him at the Sheep Farm instead.
+Evan’s final roll is a 6 for the vertical guide and a 1
+for the horizontal guide. The Mountain Pass isn’t an
+option since it’s an Exit space, so he can choose between the
+Trailer Park and the Boulder space with the two other Victims.
+He chooses to place her in the Boulder space.
+The fourth roll is a 5 for the
+vertical guide and a 6 for the
+horizontal guide. The Exit space isn’t a legal
+placement, so he places the Fated Victim at
+the House instead.
+1 	4
+3 	3
+5 	3
+6 	1
+5 	6
+FATED Death terror cards
+When you draw a Fated Death Terror card, check the next Death token on the Death Order card (the first token
+is in the space marked START, and the arrows indicate which tokens come after). If there is a Fated Victim token
+on top, set it to the side. Then, if the indicated Death token is facedown, flip it faceup.
+If the Death token is by itself and there isn’t a Fated Victim token on top, find the victim pictured on the Death
+token. If they are in Limbo, apply the Limbo consequences on the Fated Death Terror card. Then, kill the Fated
+Victim (whether they are on the board, in Limbo, or were on top of a different Death token on the Death Order
+card), increasing bloodlust, and place the Fated Victim token on the Consequence card indicated by the Arrow
+token. The Fated Victim is killed even if the location rules indicate that Victims cannot be killed is certain
+circumstances.
+If there was a Fated Victim token that was set aside, check to see if it and the Death token match. If they do,
+immediately take the Saved reward on the Fated Death Terror card and place the token onto your Final Girl
+card. At the start of the next Action phase, you may apply the effects from saving the Fated Victim, same as
+when a normal Victim is saved.
+If there was a Fated Victim token on top but it does NOT match the Death token, then follow the procedure
+described above to kill the victim pictured on the Death token. Then, take the Fated Victim token that was on
+top (the one that didn’t match) and place their token in Limbo on the Bloodlust card. You tried to save them, but
+unfortunately you did it in the wrong order.
+Finally, discard the Death token and then move the Arrow token above the Consequence cards one space to the
+right, to the next card in line. The position of the Arrow token should always match which Death token is next on
+the Death Order card (i.e., if the next Death token is the fourth one on the card, then the Arrow token should be
+above the fourth Consequence card).
+D
+E1
+E2
+E3
+E4
+E5
+Ginny has drawn a Fated Death Terror card,
+so she checks which Death token is next.
+She had previously saved the cheerleader
+and placed her Fated Victim token on top,
+so she removes it and flips the Death token
+(A). Unfortunately, the tokens don’t match.
+The Victim on the Death token is actually
+the rebel, whom she also saved... but in the
+wrong order.
+She finds the rebel’s Fated Victim token (it’s on top of the next Death token) and kills him, increasing Bloodlust and moving his token
+to the Consequence card indicated by the Arrow token (B). Next, because she saved the cheerleader out of order, she moves her Fated
+Victim token to Limbo (C). Finally, she moves the Arrow token to the next card in the row (D) and discards the Death token.
+Death at 30,000 Ft.	Death at 30,000 Ft. 	: 2
+START 	STARTING
+HORROR
+55
+LIMBO	LIMBO
+If there are no longer any Fated Victims on the board, resolve	
+2 Terror cards during the Killer phase instead of 1.
+consequence	consequence
+punishment	punishment	
+punishment	punishment 	punishment	punishment
+consequence	consequence	
+consequence	consequence
+A 	C
+B
+D
+44 	45
+
+-- 23 of 25 --
+
+No More fated victims on the board
+When there are no longer any Fated Victims on the board (with all of them either being on the Death Order
+card, on a Consequence card, in Limbo, or saved on the FG card) then draw and resolve 2 Terror cards instead
+of one for all subsequent Killer phases.
+Destiny symbol
+The Death Order card will indicate what effect is resolved when the Destiny symbol appears. You may play the
+Thwart Destiny Reaction card to ignore one Destiny symbol.
+Killer Actions
+Treat a Killer Action on a Terror card as if it was a Destiny symbol. So if a Terror card
+has two Killer Actions, then the Destiny symbol is resolved twice. Ignore other effects
+on the Terror card related to the Killer.
+Premonition Action card
+There is a new Action card called Premonition. When you play this card, it may allow you to examine one or
+more Unknowns. An Unknown refers to any token or card that is facedown. This includes: a facedown Death
+token; a facedown Consequence card; a facedown Punishment card; and any other facedown card (i.e. the
+next Terror card, the next Event card, card on top of an Item deck, or the Dark Power card). When resolving
+Premonition flip the appropriate number of Unknowns faceup, thereby giving you more information about what
+is coming.
+End of the game & the destiny phase
+After the final Terror card is resolved, the game immediately ends. There is no Finale. This begins the Destiny
+phase of the game. Going from left to right, resolve each Consequence card that has a Fated Victim on top
+of it. If the card is facedown, flip it faceup. If you are unable to fulfill the requirement on the card, reveal the
+Punishment card beneath it and lose that much health. If you must flip your Final Health token, treat it as you
+normally would. If you come back with health, ignore any excess loss of health from the current Punishment
+card before continuing to resolve any remaining Consequence cards. After resolving all Consequence cards
+that have a Fated Victim on them, if you are still alive you win the game.
+Fire alarm	Fire alarm
+Panic all Victims twice.
+consequence	consequence
+punishment	punishment	punishment	punishment	punishment	punishment
+You must have at least 3 Items.
+	Discard them now.
+consequence	consequence
+ 	The Horror level must be at 1 or lower.
+consequence	consequence
+It’s the Destiny phase at the end of the game. Two Fated Victims were killed, the rebel and the cheerleader, so Ginny flips both
+of their Consequence and Punishment cards (if they weren’t already faceup). She ignores any Consequence cards that do not
+have a Fated Victim on top of them.
+The first consequence is that she must have
+at least 3 Items to discard. If she doesn’t,
+she immediately loses 3 health. The second
+consequence is that the Horror level must be
+at 1 or lower. If it isn’t, she will lose 2 health.
+After checking each consequence and applying the health loss if the condition was not fulfilled, Ginny wins the game if
+she is still alive.
+achievements
+Win a game at five different locations.
+Win a game with each Death Order card.
+Win a game with no Fated Victim being in Limbo.
+Win a game with all Fated Victims being saved.
+Win a game where all 5 Consequence cards are resolved.
+46 	47
+
+-- 24 of 25 --
+
+48
+
+-- 25 of 25 --
+

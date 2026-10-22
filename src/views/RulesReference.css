@@ -1,0 +1,183 @@
+.rulebook-link {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.12s ease, border-color 0.15s ease, box-shadow 0.15s;
+}
+.rulebook-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--fg-blood);
+  box-shadow: var(--shadow-red);
+  text-decoration: none;
+}
+.rulebook-link:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.rulebook-link__cover {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 94px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--fg-black-2);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.rulebook-link__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.rulebook-link__cover-fallback {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--fg-blood-bright);
+  font-size: 1.1rem;
+}
+.rulebook-link__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+.rulebook-link__kicker {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.62rem;
+  color: var(--text-dim);
+}
+.rulebook-link__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.1rem;
+}
+.rulebook-link__desc {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+.rulebook-link__arrow {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  color: var(--fg-blood-bright);
+  align-self: flex-start;
+}
+
+.rules-search {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.7rem;
+}
+.rules-search:focus-within { border-color: var(--fg-blood); }
+.rules-search__icon { opacity: 0.6; }
+.rules-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.rules-search input:focus { outline: none; }
+.rules-search input::placeholder { color: var(--text-dim); }
+.rules-search__clear {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+.rules-search__clear:hover { color: var(--fg-blood-bright); }
+
+.rules-count {
+  margin: 0.6rem 0 1rem;
+  font-size: 0.82rem;
+}
+
+.rules-authority { margin: 0 0 1.1rem; }
+
+.rules-list { gap: 0.6rem; }
+
+.rules-sections { gap: 1.8rem; }
+.rule-section__title {
+  font-size: 1.35rem;
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--fg-blood);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.rule-topic__titlewrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.rule-topic__page {
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+.rule-topic { overflow: hidden; }
+.rule-topic__head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+.rule-topic__head:hover { background: rgba(255, 255, 255, 0.02); }
+.rule-topic__head:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: -2px; }
+.rule-topic__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+}
+.rule-topic__toggle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--fg-blood-bright);
+  line-height: 1;
+}
+.rule-topic__body {
+  padding: 0 1.2rem 1.1rem;
+  border-top: 1px solid var(--border);
+}
+.rule-topic__body p { margin: 0.9rem 0; color: var(--text); }
+
+.rules-empty {
+  padding: 1.4rem;
+  text-align: center;
+  color: var(--text-dim);
+}
+

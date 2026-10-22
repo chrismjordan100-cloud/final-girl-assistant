@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Shared headline stat cards
+   ========================================================================== */
+.statcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+.statcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--border-strong);
+}
+.statcard--good { border-left-color: var(--fg-sick-green); }
+.statcard--bad { border-left-color: var(--fg-blood); }
+.statcard--gold { border-left-color: var(--fg-gold); }
+.statcard__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+.statcard--good .statcard__value { color: var(--fg-sick-green); }
+.statcard--bad .statcard__value { color: var(--fg-blood-bright); }
+.statcard--gold .statcard__value { color: var(--fg-gold); }
+.statcard__label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.64rem;
+  color: var(--text-dim);
+  margin-top: 0.2rem;
+}
+.statcard__sub { font-size: 0.72rem; }

@@ -1,0 +1,752 @@
+/* Empty state */
+.tg-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-style: dashed;
+}
+.tg-empty__glyph { font-size: 2.6rem; display: block; margin-bottom: 0.6rem; }
+.tg-empty__title { font-size: 1.5rem; margin: 0 0 0.4rem; }
+.tg-empty__body { color: var(--text-dim); max-width: 48ch; margin: 0 auto; }
+
+/* Selection bar */
+.tg-selectionbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.tg-selectionbar__chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.tg-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+}
+.tg-chip__kind {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.62rem;
+  color: var(--fg-blood-bright);
+}
+.tg-chip__none { color: var(--text-dim); font-style: italic; }
+.tg-chip__icon { width: 1.4rem; height: 1.4rem; object-fit: contain; margin-right: 0.1rem; }
+.tg-selectionbar__actions { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.tg-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 0.35em 0.6em;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.tg-mode input { accent-color: var(--fg-gold); }
+.tg-testbadge {
+  margin-left: 0.6rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--fg-gold);
+  border: 1px solid var(--fg-gold);
+  border-radius: 999px;
+  padding: 0.15em 0.6em;
+  vertical-align: middle;
+}
+.tg-clear { padding: 0.4em 0.9em; font-size: 0.72rem; }
+.tg-startgame { padding: 0.45em 1em; font-size: 0.78rem; }
+.tg-start-test {
+  padding: 0.45em 0.9em;
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+.tg-start-real {
+  padding: 0.55em 1.2em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Official / mix-up scenario banner */
+.tg-scenario {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+}
+.tg-scenario--official {
+  background: rgba(217, 164, 65, 0.12);
+  border: 1px solid var(--fg-gold);
+}
+.tg-scenario--official strong { color: var(--fg-gold); }
+.tg-scenario--mix {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+}
+.tg-scenario__star { color: var(--fg-gold); font-size: 1.2rem; }
+.tg-scenario__sub { color: var(--text-dim); }
+.tg-startgame.is-speaking {
+  border-color: var(--fg-blood);
+  color: var(--fg-blood-bright);
+  animation: tg-pulse 1.1s ease-in-out infinite;
+}
+@keyframes tg-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 30, 36, 0.0); }
+  50% { box-shadow: 0 0 14px 0 rgba(224, 30, 36, 0.5); }
+}
+
+/* Saved confirmation */
+.tg-saved {
+  margin: 0 0 1.2rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--fg-sick-green);
+  background: rgba(95, 125, 58, 0.12);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.9rem;
+}
+
+/* End-game record panel */
+.tg-endgame {
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--fg-blood);
+}
+.tg-endgame__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tg-endgame__title { margin: 0; font-size: 1.25rem; }
+.tg-endgame__since { font-size: 0.78rem; }
+.tg-endgame__intro { margin: 0.3rem 0 1rem; font-size: 0.88rem; }
+
+.tg-endgame__outcome { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1rem; }
+.tg-outcome {
+  flex: 1 1 180px;
+  padding: 0.7rem 1rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tg-outcome:hover { border-color: var(--text-dim); }
+.tg-outcome--won.is-selected {
+  border-color: var(--fg-sick-green);
+  background: rgba(95, 125, 58, 0.2);
+  color: #fff;
+}
+.tg-outcome--lost.is-selected {
+  border-color: var(--fg-blood);
+  background: rgba(177, 18, 26, 0.22);
+  color: #fff;
+}
+.tg-outcome--abandoned.is-selected {
+  border-color: var(--fg-gold);
+  background: rgba(217, 164, 65, 0.18);
+  color: #fff;
+}
+
+/* End-game achievements checklist */
+.tg-achievements { margin-bottom: 1rem; }
+.tg-achievements__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-blood-bright);
+  margin: 0 0 0.6rem;
+}
+.tg-achievements__count {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.tg-achievements__intro { margin: 0 0 0.7rem; font-size: 0.84rem; }
+.tg-achievements__warn { margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--fg-gold); }
+
+/* Yes/No question flow */
+.tg-achievements__qlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 340px;
+  overflow-y: auto;
+}
+.tg-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--radius);
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+}
+.tg-q.is-answered { border-color: var(--border); opacity: 0.9; }
+.tg-q.is-yes { border-left: 3px solid var(--fg-sick-green); }
+.tg-q__text { display: flex; flex-direction: column; font-size: 0.88rem; }
+.tg-q__owner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  color: var(--text-dim);
+}
+.tg-q__auto,
+.tg-q__trackable {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.52rem;
+  padding: 0.1em 0.4em;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+.tg-q__auto { color: var(--fg-sick-green); }
+.tg-q__trackable { color: var(--text-dim); border-color: var(--border-strong); }
+.tg-q__buttons { display: flex; gap: 0.35rem; flex: 0 0 auto; }
+.tg-q__btn {
+  border: 1px solid var(--border-strong);
+  background: var(--fg-panel);
+  color: var(--text-dim);
+  border-radius: var(--radius);
+  padding: 0.3em 0.75em;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.tg-q__btn--yes.is-active {
+  background: rgba(95, 125, 58, 0.25);
+  border-color: var(--fg-sick-green);
+  color: #fff;
+}
+.tg-q__btn--no.is-active {
+  background: rgba(177, 18, 26, 0.2);
+  border-color: var(--fg-blood);
+  color: #fff;
+}
+.tg-q__btn:hover { border-color: var(--text-dim); }
+.tg-achievements__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.tg-achievements__list label {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 0.3rem 0.2rem;
+}
+.tg-achievements__list input { position: absolute; opacity: 0; width: 0; height: 0; }
+.tg-ach__box {
+  flex: 0 0 auto;
+  margin-top: 0.1rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 3px;
+  border: 2px solid var(--border-strong);
+  background: var(--fg-black-2);
+  position: relative;
+}
+.tg-achievements__list input:checked + .tg-ach__box {
+  background: var(--fg-sick-green);
+  border-color: var(--fg-sick-green);
+}
+.tg-achievements__list input:checked + .tg-ach__box::after {
+  content: '\2713';
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  color: #0a0708; font-size: 0.8rem; font-weight: 700;
+}
+.tg-achievements__list input:focus-visible + .tg-ach__box {
+  outline: 2px solid var(--accent-bright); outline-offset: 2px;
+}
+.tg-ach__text { display: flex; flex-direction: column; font-size: 0.88rem; }
+.tg-ach__owner {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.6rem;
+  color: var(--text-dim);
+}
+
+.tg-endgame__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.tg-field { display: flex; flex-direction: column; gap: 0.3rem; flex: 1 1 150px; }
+.tg-field--wide { flex: 2 1 260px; }
+.tg-field__label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  color: var(--fg-blood-bright);
+}
+.tg-field__input {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.5rem 0.7rem;
+}
+.tg-field__input:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 1px; }
+.tg-endgame__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+/* Sections */
+.tg-section { margin-bottom: 2rem; }
+.tg-section__title {
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--fg-blood);
+}
+
+/* Verify flag (uncertain data entries) */
+.tg-verify {
+  margin: 0 0 0.9rem;
+  padding: 0.5rem 0.8rem;
+  border-left: 3px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.08);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.85rem;
+}
+
+/* Side-by-side pair (flavour, art, final girl cards) */
+.tg-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+/* Headingless pairs (flavour, art) get their own spacing between sections. */
+.tg-pair--plain { margin-bottom: 1.5rem; }
+
+/* Special play-rules summary */
+.tg-playrules__intro { margin: 0 0 1rem; font-size: 0.88rem; }
+.tg-playrules__block {
+  background: var(--fg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+.tg-playrules__block:last-child { margin-bottom: 0; }
+.tg-playrules__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  margin: 0 0 0.7rem;
+}
+.tg-playrules__badge {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+}
+.tg-playrules__badge--killer {
+  background: rgba(177, 18, 26, 0.2);
+  color: var(--fg-blood-bright);
+  border: 1px solid var(--fg-blood);
+}
+.tg-playrules__badge--location {
+  background: rgba(95, 125, 58, 0.2);
+  color: var(--fg-sick-green);
+  border: 1px solid var(--fg-sick-green);
+}
+.tg-playrules__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+.tg-playrules__list li::marker { color: var(--fg-blood); }
+.tg-playrules__watch {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.08);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.tg-playrules__watch li { font-size: 0.88rem; color: var(--fg-bone); }
+
+/* Image tile */
+.tg-tile { margin: 0; padding: 0.6rem; overflow: hidden; }
+.tg-tile__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+.tg-tile__cap {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+/* Rule sheets */
+.tg-rules-block { margin-bottom: 1.6rem; }
+.tg-rules-block:last-child { margin-bottom: 0; }
+.tg-rules-block__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+.tg-rules-block__badge {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+}
+.tg-rules-block__badge--killer {
+  background: rgba(177, 18, 26, 0.2);
+  color: var(--fg-blood-bright);
+  border: 1px solid var(--fg-blood);
+}
+.tg-rules-block__badge--location {
+  background: rgba(95, 125, 58, 0.2);
+  color: var(--fg-sick-green);
+  border: 1px solid var(--fg-sick-green);
+}
+
+/* Pages (scrollable stack) */
+.tg-pages { display: flex; flex-direction: column; gap: 1rem; }
+
+/* Missing placeholder */
+.tg-missing {
+  padding: 1rem 1.2rem;
+  border-style: dashed;
+}
+.tg-missing p { margin: 0; }
+.tg-missing code {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+  font-size: 0.85em;
+}
+
+/* ==========================================================================
+   Mistake tracking — log rules/strategy slip-ups at end of game
+   ========================================================================== */
+.tg-mistakes { margin-bottom: 1rem; }
+.tg-mistakes__head {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.86rem;
+  color: var(--fg-blood-bright);
+  margin: 0 0 0.3rem;
+}
+.tg-mistakes__intro { margin: 0 0 0.7rem; font-size: 0.84rem; color: var(--text-dim); }
+
+.tg-mistakes__list {
+  list-style: none;
+  margin: 0 0 0.8rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.tg-mistake {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.tg-mistake--rules { border-left: 3px solid var(--fg-blood); }
+.tg-mistake--strategy { border-left: 3px solid var(--fg-gold); }
+.tg-mistake__tag {
+  flex: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.6rem;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+}
+.tg-mistake--rules .tg-mistake__tag {
+  color: var(--fg-blood-bright);
+  border: 1px solid var(--fg-blood);
+  background: rgba(177, 18, 26, 0.18);
+}
+.tg-mistake--strategy .tg-mistake__tag {
+  color: var(--fg-gold);
+  border: 1px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.14);
+}
+.tg-mistake__text { flex: 1; font-size: 0.9rem; }
+.tg-mistake__del {
+  flex: none;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.3rem;
+  transition: color 0.12s;
+}
+.tg-mistake__del:hover { color: var(--fg-blood-bright); }
+
+.tg-mistakes__add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.tg-mistakes__type { display: flex; gap: 0.3rem; flex: none; }
+.tg-mtype {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.68rem;
+  padding: 0.45em 0.7em;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.tg-mtype.is-active {
+  border-color: var(--fg-blood);
+  color: var(--fg-blood-bright);
+  background: rgba(177, 18, 26, 0.16);
+}
+.tg-mistakes__add .tg-field__input { flex: 1; min-width: 14ch; }
+.tg-mistakes__addbtn { flex: none; }
+
+/* Recurring-mistake reminders, shown before starting a game */
+.tg-reminders {
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.08);
+}
+.tg-reminders__title {
+  font-size: 1.05rem;
+  margin: 0 0 0.25rem;
+  color: var(--fg-gold);
+}
+.tg-reminders__intro { margin: 0 0 0.7rem; font-size: 0.84rem; color: var(--text-dim); }
+.tg-reminders__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.tg-reminder {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.tg-reminder--rules { border-left: 3px solid var(--fg-blood); }
+.tg-reminder--strategy { border-left: 3px solid var(--fg-gold); }
+.tg-reminder__tag {
+  flex: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.6rem;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+}
+.tg-reminder--rules .tg-reminder__tag {
+  color: var(--fg-blood-bright);
+  border: 1px solid var(--fg-blood);
+  background: rgba(177, 18, 26, 0.18);
+}
+.tg-reminder--strategy .tg-reminder__tag {
+  color: var(--fg-gold);
+  border: 1px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.14);
+}
+.tg-reminder__text { flex: 1; font-size: 0.9rem; }
+.tg-reminder__count {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--fg-gold);
+}
+
+/* Scenario rule icons for this game */
+.tg-ruleicons__intro { margin: 0 0 0.8rem; font-size: 0.86rem; color: var(--text-dim); }
+.tg-ruleicons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.7rem;
+}
+.tg-ruleicon {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.7rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.tg-ruleicon__img {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+.tg-ruleicon__text { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.tg-ruleicon__label { font-family: var(--font-display); font-size: 0.92rem; }
+.tg-ruleicon__desc { font-size: 0.78rem; line-height: 1.45; }
+
+.tg-ruleicons__note {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--border-strong);
+  background: var(--fg-black-2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.tg-ruleicons__note strong { color: var(--text); }
+
+/* Strategy tips for this game */
+.tg-tips__intro { margin: 0 0 0.8rem; font-size: 0.86rem; color: var(--text-dim); }
+.tg-tips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.tg-tip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-sick-green);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.tg-tip__text { line-height: 1.5; font-size: 0.92rem; }
+.tg-tip__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.6rem; }
+.tg-tip__source { font-size: 0.72rem; color: var(--text-dim); font-style: italic; }
+.tg-tip__badge {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.56rem;
+  padding: 0.12em 0.5em;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  flex: none;
+}
+.tg-tip__badge--confirmed { color: var(--fg-sick-green); }
+.tg-tip__badge--reported { color: var(--fg-gold); }
+
+/* Merged showcase: scenario graphic + flavour + key art (no headings) */
+.tg-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Scenario title graphic */
+.tg-scenario-graphic {
+  margin: 0;
+  text-align: center;
+}
+.tg-scenario-graphic__cap {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-gold);
+}
+.tg-scenario-graphic__img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  display: block;
+}

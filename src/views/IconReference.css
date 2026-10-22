@@ -1,0 +1,86 @@
+.icon-ref__figure {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.icon-ref__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 820px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.icon-ref__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.icon-ref__group { padding: 1.1rem 1.2rem; }
+.icon-ref__group-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--fg-blood-bright);
+  margin: 0 0 0.7rem;
+}
+.icon-ref__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.icon-ref__item { display: flex; align-items: center; gap: 0.8rem; }
+.icon-ref__glyph {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  color: var(--fg-bone);
+}
+.icon-ref__label { font-size: 0.9rem; color: var(--text-dim); }
+
+/* Scenario rule icons */
+.icon-ref__rules { margin-top: 2.5rem; }
+.icon-ref__rules-head { margin-bottom: 1.2rem; }
+.icon-ref__rules-title {
+  font-size: 1.4rem;
+  margin: 0 0 0.3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--fg-gold);
+}
+.icon-ref__rules-head p { font-size: 0.86rem; color: var(--text-dim); max-width: 60ch; }
+
+.icon-ref__rulelist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.7rem;
+}
+.icon-ref__ruleitem {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.7rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.icon-ref__ruleimg {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+.icon-ref__ruleimg.is-lowres { image-rendering: auto; opacity: 0.92; }
+.icon-ref__ruletext { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.icon-ref__rulelabel { font-family: var(--font-display); font-size: 0.92rem; }
+.icon-ref__ruledesc { font-size: 0.78rem; line-height: 1.45; }
+
+.icon-ref__rulenote { margin: 0; font-size: 0.84rem; color: var(--text-dim); font-style: italic; }

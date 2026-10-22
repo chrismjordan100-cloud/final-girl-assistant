@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Ask a Question — offline rules search
+   ========================================================================== */
+.ask-bar {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.ask-input {
+  flex: 1;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.05rem;
+  padding: 0.75rem 0.9rem;
+}
+.ask-input:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 1px; }
+.ask-go { flex: none; }
+
+.ask-controls { margin-bottom: 1.5rem; }
+.ask-scope {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.ask-scope input { accent-color: var(--fg-blood); }
+.ask-scope__game { font-size: 0.82rem; }
+
+/* Suggestions */
+.ask-suggest__title { margin: 0 0 0.6rem; font-size: 0.9rem; }
+.ask-suggest__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.ask-chip {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 0.86rem;
+  padding: 0.45em 0.9em;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.ask-chip:hover { border-color: var(--fg-blood); color: var(--text); }
+.ask-chip:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+
+/* Results */
+.ask-results__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--fg-blood);
+}
+.ask-results__title { margin: 0; font-size: 1.2rem; }
+.ask-results__q { font-size: 0.86rem; }
+
+.ask-scope__hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+/* Grouped results */
+.ask-group { margin-bottom: 1.6rem; }
+.ask-group__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.7rem;
+  color: var(--text-dim);
+}
+.ask-group__title--scenario { color: var(--fg-gold); }
+.ask-group__sub {
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+}
+
+.ask-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.ask-hit { padding: 0.85rem 1rem; border-left: 3px solid var(--border-strong); }
+.ask-hit--core { border-left-color: var(--fg-blood); }
+.ask-hit--icon { border-left-color: var(--accent-bright); }
+.ask-hit--setup { border-left-color: var(--fg-sick-green); }
+.ask-hit--play { border-left-color: var(--fg-blood-bright); }
+.ask-hit--phase { border-left-color: var(--fg-gold); }
+.ask-hit--tip { border-left-color: var(--fg-sick-green); }
+.ask-hit--achievement { border-left-color: var(--fg-gold); }
+
+.ask-hit__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+.ask-hit--flagged { box-shadow: 0 0 0 1px var(--fg-gold) inset; }
+.ask-hit__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.ask-hit__badge {
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-gold);
+  border: 1px solid var(--fg-gold);
+  border-radius: 999px;
+  padding: 0.12em 0.5em;
+}
+.ask-hit__source {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+.ask-hit__body { margin: 0; font-size: 0.92rem; line-height: 1.55; }
+
+.ask-empty { padding: 1.2rem 1.3rem; }
+.ask-empty p { margin: 0; color: var(--text-dim); }
+
+.ask-disclaimer {
+  margin: 1.2rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-dim);
+}

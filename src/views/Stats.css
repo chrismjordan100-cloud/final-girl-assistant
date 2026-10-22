@@ -1,0 +1,281 @@
+/* Headline win rate */
+.stats-headline {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--fg-blood);
+}
+.stats-headline__big {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--fg-blood-bright);
+}
+.stats-headline__detail { display: flex; flex-direction: column; gap: 0.2rem; }
+.stats-headline__detail strong {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.stats-headline__detail span { font-size: 0.85rem; }
+
+/* Blocks */
+.stats-block { margin-bottom: 2rem; }
+.stats-block__title {
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--fg-blood);
+}
+.stats-empty { color: var(--text-dim); }
+
+/* Win-rate rows */
+.stats-rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.stats-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1.4fr) minmax(80px, 3fr) auto;
+  grid-template-areas: 'name bar pct' 'count count count';
+  align-items: center;
+  gap: 0.3rem 0.8rem;
+}
+.stats-row__name {
+  grid-area: name;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.stats-row__icon { width: 1.4rem; height: 1.4rem; object-fit: contain; flex: none; }
+.stats-row__bar {
+  grid-area: bar;
+  height: 10px;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.stats-row__fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--fg-blood-deep), var(--fg-sick-green));
+  transition: width 0.3s ease;
+}
+.stats-row__pct {
+  grid-area: pct;
+  font-family: var(--font-display);
+  font-weight: 700;
+  min-width: 3ch;
+  text-align: right;
+}
+.stats-row__count { grid-area: count; font-size: 0.75rem; }
+
+/* Achievement trackers */
+.stats-achv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.stats-achv { padding: 0.9rem 1rem; }
+.stats-achv.is-complete { border-color: var(--fg-sick-green); }
+.stats-achv__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.stats-achv__name { margin: 0; font-size: 1.05rem; }
+.stats-achv__count {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--fg-blood-bright);
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
+.stats-achv__count.is-complete { color: var(--fg-sick-green); border-color: var(--fg-sick-green); }
+.stats-achv__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+.stats-achv__list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  color: var(--text-dim);
+}
+.stats-achv__list li.is-on { color: var(--fg-bone); }
+.stats-achv__mark { flex: 0 0 auto; color: var(--text-dim); }
+.stats-achv__list li.is-on .stats-achv__mark { color: var(--fg-gold); }
+
+/* ==========================================================================
+   Extended MI — stat cards, outcome bar, favourites, activity
+   ========================================================================== */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--border-strong);
+}
+.stats-card--good { border-left-color: var(--fg-sick-green); }
+.stats-card--bad { border-left-color: var(--fg-blood); }
+.stats-card--gold { border-left-color: var(--fg-gold); }
+.stats-card__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+.stats-card--good .stats-card__value { color: var(--fg-sick-green); }
+.stats-card--bad .stats-card__value { color: var(--fg-blood-bright); }
+.stats-card--gold .stats-card__value { color: var(--fg-gold); }
+.stats-card__label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.64rem;
+  color: var(--text-dim);
+  margin-top: 0.2rem;
+}
+.stats-card__sub { font-size: 0.72rem; }
+
+/* Outcome breakdown bar */
+.stats-outcome { display: flex; flex-direction: column; gap: 0.6rem; }
+.stats-outcome__bar {
+  display: flex;
+  height: 1.6rem;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--fg-black-2);
+}
+.stats-outcome__seg { display: block; }
+.stats-outcome__seg--won { background: var(--fg-sick-green); }
+.stats-outcome__seg--lost { background: var(--fg-blood); }
+.stats-outcome__seg--abandoned { background: var(--fg-gold); }
+.stats-outcome__legend { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; }
+.stats-outcome__legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.stats-dot { width: 0.8rem; height: 0.8rem; border-radius: 3px; display: inline-block; }
+.stats-dot--won { background: var(--fg-sick-green); }
+.stats-dot--lost { background: var(--fg-blood); }
+.stats-dot--abandoned { background: var(--fg-gold); }
+
+.stats-note { margin: -0.5rem 0 1rem; font-size: 0.82rem; color: var(--text-dim); }
+
+/* Best / worst matchups */
+.stats-rivals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+}
+.stats-rival {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--border-strong);
+}
+.stats-rival--good { border-left-color: var(--fg-sick-green); }
+.stats-rival--bad { border-left-color: var(--fg-blood); }
+.stats-rival__label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+}
+.stats-rival__name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+.stats-rival__icon { width: 1.5rem; height: 1.5rem; object-fit: contain; flex: none; }
+.stats-rival__pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.stats-rival--good .stats-rival__pct { color: var(--fg-sick-green); }
+.stats-rival--bad .stats-rival__pct { color: var(--fg-blood-bright); }
+.stats-rival__sub { font-size: 0.74rem; }
+.stats-rival__none { font-size: 0.82rem; font-style: italic; }
+
+/* Favourites */
+.stats-fav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+.stats-favcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+}
+.stats-favcard__kind {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+}
+.stats-favcard__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+.stats-favcard__name--none { color: var(--text-dim); }
+.stats-favcard__sub { font-size: 0.78rem; }
+
+/* Activity over time */
+.stats-activity {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  height: 9rem;
+  padding-top: 0.5rem;
+}
+.stats-activity__col {
+  flex: 1;
+  min-width: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.3rem;
+}
+.stats-activity__stack {
+  width: 100%;
+  max-width: 2.4rem;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  min-height: 3px;
+}
+.stats-activity__seg { display: block; width: 100%; }
+.stats-activity__seg--won { background: var(--fg-sick-green); }
+.stats-activity__seg--lost { background: var(--fg-blood); }
+.stats-activity__seg--abandoned { background: var(--fg-gold); }
+.stats-activity__label {
+  font-size: 0.58rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}

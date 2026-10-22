@@ -1,0 +1,212 @@
+.setup-progress {
+  padding: 1rem 1.2rem;
+}
+.setup-progress__bar {
+  height: 12px;
+  background: var(--fg-black-2);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.setup-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--fg-blood-deep), var(--fg-blood-bright));
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(224, 30, 36, 0.5);
+}
+.setup-progress__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+.setup-reset { padding: 0.35em 0.9em; font-size: 0.75rem; }
+
+.setup-group { padding: 1.2rem 1.3rem; }
+.setup-group__head {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.setup-group__num {
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fg-blood-deep);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  border: 1px solid var(--fg-blood);
+}
+.setup-group__title { margin: 0; font-size: 1.3rem; }
+.setup-group__check { color: var(--fg-sick-green); }
+.setup-group__blurb { margin: 0.2rem 0 0; color: var(--text-dim); font-size: 0.9rem; }
+
+.setup-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.setup-step {
+  border-radius: var(--radius);
+  transition: background 0.15s;
+}
+.setup-step:hover { background: rgba(255, 255, 255, 0.02); }
+
+.setup-step__label {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.7rem 0.6rem;
+  cursor: pointer;
+}
+.setup-step__label input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.setup-step__box {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 4px;
+  border: 2px solid var(--border-strong);
+  background: var(--fg-black-2);
+  position: relative;
+  transition: border-color 0.15s, background 0.15s;
+}
+.setup-step__label input:checked + .setup-step__box {
+  background: var(--fg-blood);
+  border-color: var(--fg-blood-bright);
+}
+.setup-step__label input:checked + .setup-step__box::after {
+  content: '\2713';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.setup-step__label input:focus-visible + .setup-step__box {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.setup-step__text { display: flex; flex-direction: column; gap: 0.3rem; }
+.setup-step__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.98rem;
+}
+.setup-step__body { color: var(--text-dim); font-size: 0.92rem; }
+.setup-step.is-done .setup-step__title { color: var(--text-dim); text-decoration: line-through; }
+.setup-step__tip { margin-top: 0.25rem; }
+
+/* Killer / Location picker inside step s1 */
+.game-picker {
+  margin: 0.6rem 0 0.4rem 2.1rem;
+  padding: 0.9rem 1rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-blood);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+.game-picker__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1 1 200px;
+}
+.game-picker__label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--fg-blood-bright);
+}
+.game-picker__select {
+  background: var(--fg-panel);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.game-picker__select:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+.game-picker__hint {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* Special setup (per Killer / Location) */
+.setup-group--special { border-top: 3px solid var(--fg-blood); }
+.setup-group__num--special {
+  background: var(--fg-black-2);
+  border-color: var(--fg-blood);
+  color: var(--fg-blood-bright);
+  font-size: 1.3rem;
+}
+.setup-extra { margin-bottom: 1rem; }
+.setup-extra:last-child { margin-bottom: 0; }
+.setup-extra__badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25em 0.7em;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+.setup-extra__badge--killer {
+  background: rgba(177, 18, 26, 0.2);
+  color: var(--fg-blood-bright);
+  border: 1px solid var(--fg-blood);
+}
+.setup-extra__badge--location {
+  background: rgba(95, 125, 58, 0.2);
+  color: var(--fg-sick-green);
+  border: 1px solid var(--fg-sick-green);
+}
+.setup-extra__none { margin: 0; color: var(--text-dim); font-size: 0.9rem; }
+
+.setup-step__itemwarn { margin: 0.4rem 0 0.2rem 2.1rem; font-size: 0.85rem; }
+
+.setup-done {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 1.6rem;
+  border-color: var(--fg-blood);
+  box-shadow: var(--shadow-red);
+}
+.setup-done h2 { font-size: 1.8rem; margin-bottom: 0.2rem; }
+.setup-done p { margin: 0; }

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   CollapsibleSection — shared collapsible block used across all tabs
+   ========================================================================== */
+.collapsible { margin-bottom: 1.5rem; }
+
+.collapsible__title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--fg-blood);
+  color: var(--text);
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  padding: 0 0 0.4rem;
+  cursor: pointer;
+}
+.collapsible__title:hover { color: var(--fg-blood-bright); }
+.collapsible__title:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+
+.collapsible__caret {
+  flex: none;
+  font-size: 0.7rem;
+  color: var(--fg-blood);
+}
+.collapsible__titletext { flex: 1; min-width: 0; }
+.collapsible__count {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}

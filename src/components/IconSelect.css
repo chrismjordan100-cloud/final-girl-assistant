@@ -1,0 +1,84 @@
+/* ==========================================================================
+   IconSelect — custom dropdown with per-option icons
+   ========================================================================== */
+.iconselect { position: relative; }
+
+.iconselect__button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--fg-black-2);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: left;
+}
+.iconselect__button:hover { border-color: var(--fg-blood); }
+.iconselect__button:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+
+.iconselect__placeholder { color: var(--text-dim); flex: 1; }
+.iconselect__name { flex: 1; }
+.iconselect__note {
+  font-size: 0.72rem;
+  color: var(--fg-gold);
+  font-style: italic;
+  white-space: nowrap;
+}
+.iconselect__caret { flex: none; font-size: 0.6rem; color: var(--text-dim); }
+
+.iconselect__icon {
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: contain;
+}
+.iconselect__icon--empty { visibility: hidden; }
+
+/* Popup list */
+.iconselect__list {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.3rem;
+  list-style: none;
+  max-height: 20rem;
+  overflow-y: auto;
+  background: var(--fg-panel, #16100f);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+.iconselect__list ul { list-style: none; margin: 0; padding: 0; }
+
+.iconselect__option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.iconselect__option:hover { background: rgba(255, 255, 255, 0.06); }
+.iconselect__option.is-selected {
+  background: rgba(177, 18, 26, 0.22);
+  box-shadow: inset 0 0 0 1px var(--fg-blood);
+}
+
+.iconselect__group + .iconselect__group { margin-top: 0.3rem; }
+.iconselect__group-label {
+  display: block;
+  padding: 0.3rem 0.5rem 0.15rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.62rem;
+  color: var(--fg-blood-bright);
+}

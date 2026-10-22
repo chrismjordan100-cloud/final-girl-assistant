@@ -1,0 +1,1315 @@
+feature film rulebook
+S E R I E S 1
+
+-- 1 of 36 --
+
+Components
+Welcome to Camp Happy Trails, home to teenage love, unforgettable friendships and idyllic
+summer memories! Go fishing on the lake, get in some archery practice at the range,
+listen to ghost stories around the firepit, or sneak off to makeout point! Life is always an
+adventure at Camp Happy Trails! Wait a second, is that screaming I hear in the distance?
+Oh fiddlesticks, those spooky stories must be getting to me, I'm sure it's just screams of joy
+from the other campers. Hot dawg, summers at Camp Happy Trails really are to die for!
+"Let's go see if the	"Let's go see if the
+rumors are true!"	rumors are true!"
+Place 2 new Victims in the space
+	where the Killer started the game.
+Terror	Terror
+8 Terror cards	Setup	Setup
+Capture the Flag	Capture the Flag
+22
+22
+	22
+22
+11	11
+5 Setup cards
+Event	Event
+Stubborn Kids	Stubborn Kids	
+“Damn teenagers think they know everything!”
+1 less Victim will follow you.
+10 Event cards
+Mysterious Pills	Mysterious Pills	
+“No telling what the hell these are, but I’m out of
+	options. Down the hatch and fingers crossed.”
+Discard this during the Action phase and
+	choose one of the following:	
+or
+ITEM	ITEM
+18 Item cards
+1 Location board
+6 Various Tokens
+Director (design): Evan Derrick 	Director of Photography (art): Tyler 	Additional Item Art: Tumo Mere
+Johnson
+2
+
+-- 2 of 36 --
+
+Special Rules
+There are no special rules for Camp Happy Trails.
+achievements
+Win a game at Camp Happy Trails.
+Defeat five different Killers at Camp Happy Trails.
+Lure the Killer into the Bear Trap by using the Fireworks.
+Save both your Boyfriend and your Girlfriend in a single game.
+Save the Damned in a game.
+Deliver the killing blow to the Killer with the Axe IMMEDIATELY after using the Pepper Spray.
+Use the Lucky Rabbit’s Foot and receive all four bonuses.
+Have a space burst into flames when both you and the Killer are there at the same time.
+Defeat the Killer in the Lake.
+During the Bonfire setup, save all 6 Victims that begin at the Firepit.
+Save 5 Victims in a single turn.
+3
+
+-- 3 of 36 --
+
+Components
+"They say he wears a worn butcher's smock, stained dark with blood. His sledgehammer, which he drags
+behind him, supposedly weighs over 50 pounds and could crush an elephant's skull. He's over 7 feet tall and
+his eyes glow a bright scarlet. But the worst part is the iron mask he wears, fashioned to look like a pig, and
+the wet crunching sounds that can be heard beneath it."
+- Excerpt from "A History of Happy Trails"
+Horrific	Horrific
+Hammer Rush	Hammer Rush
+For each Victim killed during this attack:
+If there are no Victims on the board,
+	discard and draw the next Terror card.
+	Otherwise:
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+Dark Obsession	Dark Obsession
+Whenever Hans attacks you at least
+	once, he attacks an additional time.
+1 Epic Dark Power card
+blood frenzy	blood frenzy
+	epic dark power	epic dark power
+For every Victim that	
+Hans kills, +1 .
+3 Finale cards
+Butcher Bloodlust	Butcher Bloodlust
+2 Final Girl cards
+Reiko	Reiko	66
+22
+Move
+1 Space
+Take the
+Planning
+Action
+Card
+Move
+1 Space
+Laurie	Laurie	55
+22
+22
+Take an
+Action Card
+(max
+2 )
+Move
+1 Space
+THE BUTCHER
+Director (design): Evan Derrick 	Director of Photography (art): Tyler Johnson
+4
+
+-- 4 of 36 --
+
+Special Rules
+There are no special rules for Hans.
+achievements
+Defeat Hans at Camp Happy Trails.
+Defeat Hans at five different Locations.
+Defeat Hans when his Epic Dark Power has been revealed.
+Defeat Hans in Extreme Horror Mode.
+Defeat Hans without saving any Victims.
+Defeat Hans without losing any health.
+Defeat Hans with your bare hands (you cannot attack with any weapons).
+Defeat Hans after he has revived once.
+Inflict 6 damage on Hans in a single attack.
+Discard BOTH of Hans’ Minor Dark Powers in a single attack.
+5
+
+-- 5 of 36 --
+
+Components
+Creech Manor is over 100 years old with the kind of character and historic charm that people love.
+It is the kind of home where every step, every new room, can call to one’s imagination a story from
+the past. But the stories of Creech Manor are filled with horrifying events, macabre happenings,
+and supernatural powers beyond human understanding. Go away, for evil reigns within...
+"The windows	"The windows
+	and doors just	and doors just
+	slammed shut!"	slammed shut!"
+If you are inside, you may not move
+	during the next Action phase.
+If you are outside, you may not enter the
+	house during the next Action phase.	
+Terror	Terror
+8 Terror cards
+Setup	Setup
+creepshow	creepshow
+ 	33
+22
+11
+11
+	11	11
+11
+5 Setup cards
+Event	Event
+Light’s out	Light’s out	
+“Who turned out the lights? What was that?”
+Roll 1 fewer dice (minimum of 1) when resolving
+	an Action card that allows movement.
+	Ignore this effect if you have a Flashlight or Candle.
+10 Event cards
+Mysterious Pills	Mysterious Pills	
+“They might make me hallucinate, but what
+	hallucination could be worse than this?”
+Discard this during the Action phase and
+	choose one of the following:	
+or
+ITEM	ITEM
+18 Item cards
+1 Location board 5 Various Tokens
+Director (design): A.J. Porfirio 	Director of Photography (art): Tyler Johnson 	Additional Item Art: Tumo Mere
+6
+
+-- 6 of 36 --
+
+Special Rules
+One-Way movement spaces
+* A few of the spaces have exits in one direction (there are three of them). These spaces have white
+arrows and lines indicating which direction you can move. The spaces are still considered to be
+adjacent in both directions.
+* You’re not allowed to move against an arrow. You can’t climb up the tire swing and go back in a
+window, nor can you go up through the hole in the ceiling in the washroom on the left side of the
+board.
+* Enemies and Victims are also subject to these rules.
+* The Rope Ladder item, if used, is the only exception and turns a one-way space into a normal space.
+Example of one-way space
+Window spaces
+Window spaces are a new type of space on the Creech Manor Location board. There are two Window
+spaces on the right side of the house and one on the left side. Window spaces do not have any special rules,
+but many Terror and Event cards will specifically reference them.
+The Ladder
+Cards that refer to 'The Ladder' are specifically referring to the ladder on the outside of the building that
+connects the left exit space and the washroom on the 3rd floor. The "ladder" leading to the attic is artistic in
+nature only and is never impacted by any game effects.
+Inside/Outside
+All spaces are considered to be Inside except for the 3 	spaces, which are Outside.
+7
+
+-- 7 of 36 --
+
+achievements
+Win a game at Creech Manor.
+Defeat 5 different Killers at Creech Manor.
+Save 2 Victims with the Helicopter at the same time.
+Witness at least 2 Victims jump out a window to their death.
+Win a game where the Ghost Hunters event was revealed.
+Kill a Victim with the Ritual Dagger.
+Move 6 or more spaces in one Action phase.
+Find 4 or more Item cards in one game.
+Win a game where at least half of the Victims were saved.
+Win a game with the Lights Out event in play.
+8
+
+-- 8 of 36 --
+
+Components
+"How do you fight a poltergeist? Let me ask you something... how does one fight something one cannot see?
+It's simple: you don't. You get the hell out of there and you don't look back, you don't turn back, you don't do
+anything but run. If you do, it will ruin you. Mentally. Physically. And Emotionally. Then, it will kill you."
+- Testimony of a former Creech Manor groundskeeper
+"Everything was	"Everything was
+flying around!"	flying around!"
+Place the Poltergeist with the closest Victim, or in
+	your space if there are no Victims.
+"Carolyn? Where	"Carolyn? Where
+are you?!?!?"	are you?!?!?"
+If Carolyn is not with you, discard and
+	draw the next Terror card. Otherwise:
+Shuffle Carolyn into the Item	
+deck of the nearest . Do NOT	
+reveal the top card of the deck.
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+Invisible Barrier	Invisible Barrier
+You may not enter a with	
+Carolyn unless you have full health.
+1 Epic Dark Power card
+epic dark power	epic dark power	
+Forgetting something?	Forgetting something?
+You may not win the game unless you reach an	
+with Carolyn and the Mr. Floppy Item card.
+3 Finale cards
+Relentless Assault	Relentless Assault
+Place the Poltergeist	
+in your space
+2 Final Girl cards
+Selena	Selena	66
+22
+Take a
+Search
+Action
+Card
+Move
+1 Space
+Alice	Alice	44
+22
+Move up to
+2 Spaces
+	Take a
+Cost 2 or less
+Action
+Card
+Move
+1 Space
+2 Item cards
+OF CREECH MANOR
+mr. Floppy	mr. Floppy
+If the Dark Power has been
+	revealed, you may remove this from
+	the game to ignore the effects of	
+”Carolyn? Where are you?!?!?”	
+If this card is discarded for any reason,
+	shuffle it into the nearest Item deck.
+“That looks like Carolyn’s doll.”
+ITEM	ITEM
+Carolyn	Carolyn	
+“But... Mr. Floppy said to hide.”
+When Carolyn joins you, remove all	
+Minor Dark Power cards from the game. You
+	must escape with Carolyn to win the game.	
+Carolyn cannot be killed or discarded for any
+	reason. You cannot place her in your backpack.
+Director (design): A.J. Porfirio 	Director of Photography (art): Tyler Johnson
+THE
+9
+
+-- 9 of 36 --
+
+Special Setup
+Setup the game as normal, with the following changes to the Item decks when playing with the Poltergeist.
+The Carolyn and Mr. Floppy Item cards will always be included in the game, but neither
+will ever start the game faceup on an Item deck. Create the Item decks as follows (or
+using your own method, as long as you ensure the previous statement is true):
+1. 	Take 10 of the chosen Location's Item cards (instead of the normal 12) and
+shuffle them. Then, return the unused Item cards to the Location box.
+2. 	Set aside an Item card for each Item deck that will be needed.
+3. 	Take the remaining Item cards and shuffle them together with the Carolyn and Mr. Floppy Item cards.
+4. 	Deal the cards facedown into equal piles and place them in their slots above the board.
+5. 	Take the Item cards you set aside and place one faceup on the top of each Item deck.
+When finished, Carolyn and Mr. Floppy should be hidden within the Location's Item decks.
+Special rules
+* The Poltergeist has no health and cannot be attacked, damaged, or killed. Ignore any effects that
+would damage the Poltergeist.
+NOTE! Action cards that inflict damage may still be useful
+against some of the Poltergeist's Terror cards.
+* Since the Poltergeist cannot be attacked, you do not win against her in the
+normal way. Instead, the only way to win against the Poltergeist is to find
+Carolyn and save her by reaching a 	while she is with you.
+* If the "Forgetting Something?" Epic Dark Power card is revealed, in addition to finding
+and saving Carolyn, you will also have to find her stuffed friend, Mr. Floppy.
+* Carolyn may never be discarded or removed from the game and any game effect doing so should
+be ignored. However, Carolyn may get shuffled back into an Item deck which is perfectly normal.
+* Mr. Floppy has an effect that can be used if it is discarded, but cannot be used until the Dark
+Power is revealed. Mr. Floppy can NEVER be discarded due to a game effect before the Dark
+Power is revealed OR if the "Forgetting Something?" Epic Dark Power is in play.
+10
+
+-- 10 of 36 --
+
+achievements
+Defeat the Poltergeist at Creech Manor.
+Defeat the Poltergeist at five different Locations.
+Defeat the Poltergeist in Extreme Horror Mode.
+Defeat the Poltergeist with Mr. Floppy in your inventory.
+Defeat the Poltergeist having searched in 3 separate spaces.
+Defeat the Poltergeist in under 5 turns.
+Defeat the Poltergeist ending the game with full health.
+Unlock your Ultimate Ability against Poltergeist.
+Witness the Poltergeist kill 3 or more Victims in one turn.
+Defend against all damage from Unstoppable Evil.
+11
+
+-- 11 of 36 --
+
+Components
+The gods are furious over the desecration of their sacred places by idiotic, obnoxious tourists! They’ve
+forged an unholy pact with the Killer, unleashing their wrath upon you and the oblivious victims in an
+attempt to cleanse the Groves with blood and fire. As you fight to survive against the Killer’s onslaught,
+you’ll need to simultaneously contend with the fury of the gods, represented by Divine Wrath.
+"no one will notice if I	"no one will notice if I
+	break off one of these	break off one of these
+	pretty branches..."	pretty branches..."
+Increase by # of Victims at spaces.
+Unleash
+Place 2 new Victims at the Holy Groves.
+All Victims adjacent to the	
+Holy Groves move there.
+Terror	Terror
+8 Terror cards
+Setup	Setup
+Dueling Tour Guides	Dueling Tour Guides
+44
+44 11
+11
+11
+11
+5 Setup cards
+Event	Event
+hallowed ground	hallowed ground	
+“I don’t put much stock in the supernatural, but
+	even I can feel that this place is different.”
+Roll a die and place the Hallowed Ground token on the:	
+1-2: Burial Grounds 3-4: Sacred Shrine	
+5-6: Holy Groves	
+Anytime you end the Action phase on that space, gain 2 .
+10 Event cards
+ITEM	ITEM
+War Club	War Club	
+“This club was just for display, but
+	now it’s time to put it to work.”
+Whenever you inflict damage with
+	the War Club, choose or and	
+Decrease it by the damage inflicted.
+00
+17 Item cards
+5 Various tokens
+Divine wrath	Divine wrath
+10.
+9.
+8.
+7.
+6.
+5.
+4.
+3.
+2.
+1.
+2
+Discard 1 random Action card
+Increase by 1
+Discard 1 random	
+Action card
+Discard 2 random Action cards
+4
+2
+5
+4
+Discard ALL Action cards except Atonement	
+and decrease by the number of cards discarded.
+1 Divine Wrath card
+Increase by # of Victims at	
+spaces & Unleash
+Increase by # of Victims	
+at spaces
+Increase by # of Victims	
+at spaces
+Unleash
+Unleash
+1 Sacred
+Groves
+Bloodlust
+track
+1 Sacred Groves
+Finale token
+1 Location board
+Special Setup
+Setup the game as normal, with the following changes when playing with the Sacred Groves:
+1. 	Place the Divine Wrath card in the play area and place a tracking marker on level 2.
+2. 	Place the Sacred Groves Bloodlust Track directly to the right of the chosen Killer's board, lining it up
+with the bottom on the Killer's Bloodlust track.
+3. 	Set the Sacred Groves Finale token to the side. It is only needed if the Finale is revealed.
+4. 	Include both Atonement Action cards in the Action Tableau (these are included with Inkanyamba).
+Director (design): Evan Derrick 	Director of Photography (art): Tumo Mere
+12
+
+-- 12 of 36 --
+
+Special Rules
+Divine wrath
+* Whenever you are instructed to Increase or Decrease 	, move the Tracking marker on
+the Divine Wrath card up or down the appropriate number of levels. The marker can never
+be below 1 or above 10, so ignore any additional increases or decreases that would move the
+marker beyond those levels.
+* Whenever you are instructed to Unleash 	, check the current level on the Divine Wrath card and
+apply any effects listed there.
+* Whenever 	increases, in addition to applying any effects on the Killer board (such as increasing
+Horror or revealing the Killer's Dark Power), you must also apply the effect (if any) listed on the matching
+line of the Sacred Groves Bloodlust track.
+* Some Items or card effects will allow you reduce 	, but the primary way is to purchase and play
+Atonement Action cards.
+* If the Finale is triggered, take the Sacred Groves Finale token and place it on top of the Finale card.
+During the Killer phase, after the Killer Action is completed, you must Unleash 	and then Increase
+by 1, as indicated on the token.
+sacred spaces
+Sacred spaces are a new type of space on the Sacred Groves Location board. The Burial Ground, Sacred
+Shrine, and Holy Groves are all considered Sacred spaces. The more Victims that are located at Sacred spaces,
+the angrier the gods may become, and the higher the chance that 	will increase.
+Divine
+Wrath
+Unleash 	Increase 	by 3
+Violent Tantrum	Violent Tantrum
+13
+
+-- 13 of 36 --
+
+achievements
+Win a game at the Sacred Groves.
+Defeat five different Killers at the Sacred Groves.
+Be in the same space as the Holy Man when he reaches the Killer.
+Use the Airhorn to panic at least 6 Victims at once.
+Defeat the Killer on Hallowed Ground.
+Defeat the Killer at a Sacred space that has been Closed for Maintenance.
+Win a game without playing any Atonement cards.
+Win a game where Divine Wrath never gets higher than 4.
+Deliver the killing blow to the Killer using the Old Rifle while at a Sacred space.
+Witness at least 8 Victims at a single Sacred space.
+Win a game without ever letting the Tour Guide 1) leave your side or 2) die.
+14
+
+-- 14 of 36 --
+
+Components
+Whoever Inkanyamba used to be (or where he came from) no longer matters. He has taken for
+himself the name of the legendary monster and has become a creature of pure wrath. His sole
+purpose is to exact vengeance on those around him, even if he long ago forgot the reasons
+for that vengeance. In order to overcome him, you will need to manage his ever rising anger,
+represented by Killer Wrath. If it boils over, you will never survive the ensuing onslaught!
+wrath of death	wrath of death
+Unleash
+Increase equal to your current health.
+If there are no Victims, target the Final Girl instead.
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+volatile temper	volatile temper
+At the end of Upkeep, make a Horror roll:
+	No effect Unleash
+1 Epic Dark Power card
+Dark Lightning	Dark Lightning
+Whenever Inkanyamba kills a Victim, kill a second	
+Victim in the same or an adjacent space if able.
+epic dark power	epic dark power
+3 Finale cards
+Unleash Increase by 3
+Violent Tantrum	Violent Tantrum
+If is at 1-2, Increase by 1
+2 Final Girl cards
+Adelaide	Adelaide	66
+22
+Move
+1 Space
+22
+Barbara	Barbara	77
+22
+Take
+Any
+Top
+Item Card
+	Move
+1 Space
+atonement	atonement
+"Maybe this will appease these
+	goddamn gods once and for all." 	2
+Decrease or to 1.
+Decrease or	
+by half, (rounded up).
+Decrease or by 1.
+2
+Action	Action
+2 Atonement Action cards
+10.
+9.
+8.
+7.
+6.
+5.
+4.
+3.
+2.
+1.
+Killer wrath	Killer wrath
+Increase by 1
+Increase by 2
+1 Killer Wrath card
+THE AVENGER
+Director (design): Evan Derrick 	Director of Photography (art): Tumo Mere 	Epic Dark Power Art: Tyler Johnson
+15
+
+-- 15 of 36 --
+
+Special setup
+Setup the game as normal, with the following changes when playing with Inkanyamba:
+1. 	Place the Killer Wrath card in the play area and place a Tracking marker on level 2.
+2. 	Include both Atonement Action cards in the Action Tableau.
+Special rules
+killer wrath
+* Whenever you are instructed to Increase or Decrease 	, move the Tracking marker on
+the Killer Wrath card up or down the appropriate number of levels. The marker can never
+be below 1 or above 10, so ignore any additional increases or decreases that would move the
+marker beyond those levels.
+* Whenever you are instructed to Unleash 	, check the current level on the Killer Wrath card and
+apply any effects listed there. This may include increasing Horror, Inkanyamba recovering health,
+Inkanyamba performing a Killer Action, or a combination of things.
+* Some card effects will allow you to reduce 	, but the primary way is to purchase and
+play Atonement Action cards.
+Atonement action cards
+Atonement cards may be played to try and Decrease Killer Wrath 	or Divine Wrath 	. They are unique in that
+there is an additional success line for if you get 3 or more successes on a Horror Roll.
+Killer
+Wrath
+16
+
+-- 16 of 36 --
+
+achievements
+Defeat Inkanyamba at the Sacred Groves.
+Defeat Inkanyamba at five different Locations.
+Defeat Inkanyamba in Extreme Horror Mode.
+Defeat Inkanyamba after all five “Wrath of...” Terror cards have been revealed.
+Defeat Inkanyamba without playing any Atonement cards.
+Defeat Inkanyamba before his Dark Power has been revealed.
+Delier the killing blow to Inkanyamba while the Horror level is maxed out.
+Deliver the killing blow to Inkanyamba when Killer Wrath is at 10.
+Survive attacks from Inkanyamba in a single turn totaling at least 6 worth of damage.
+Witness Inkanyamba kill 4 Victims in a single turn.
+17
+
+-- 17 of 36 --
+
+Components
+"Of course the public doesn't know we call it the Carnival of Blood. We ARE still trying to sell tickets you know!
+There is a reason we roam the country finding new towns to set up in, and it ain't because we like to travel. The
+'management' pays good and they leave the help like me alone, so that's good enough for me. Someone comes
+in and never makes it home? That's not my problem."
+- Name withheld by request, Manager of the House of Mirrors
+"how did the tiger	"how did the tiger
+	get loose?"	get loose?"
+All Victims panic.
+If there are no Victims on the board, discard this
+	card and draw the next Terror card. Otherwise:
+Do the following for the Animal Cages	
+space and all spaces adjacent to it:	
+Victims there are killed. Enemies there take .
+	If you are there, .
+Terror	Terror
+8 Terror cards
+Setup	Setup
+late for the show	late for the show
+22
+22
+22
+33
+11
+	11
+	11
+5 Setup cards
+Event	Event
+so much junk	so much junk	
+“Someone sure needs a hoarding intervention!”
+When this card is revealed, find the Zappo Item card and
+	put it in your backpack. Reset the Item deck(s) if necessary.
+	If you lose Zappo, roll one fewer dice (minimum 1) when
+	resolving Search Action cards for the remainder of the game.
+10 Event cards
+You may use Zappo to resolve a Search	
+card from up to 2 spaces away from a .
+	If you use Zappo and an Item Trap is
+	revealed, he flees in terror. Ignore the
+	effects of the trap and discard Zappo.
+zappo	zappo
+	the carnival monkey	the carnival monkey	
+“Such a cute monkey, always ready
+	to lend a helping hand.”
+ITEM	ITEM
+18 Item cards
+1 Location board
+Special Setup
+Setup the game as normal with the following changes to the Item decks when playing with Carnival of Blood.
+1. 	Set the three Item Trap cards aside and shuffle the remaining Item cards.
+2. 	Deal out three (3) decks of two (2) Item cards facedown and randomly add one (1) Item Trap card
+facedown to each deck. Then, shuffle the three Item decks separately.
+3. 	Deal out one (1) Item card faceup on top of each Item deck. Return the unused Item cards to the Location box.
+When finished, you will have three Item decks of four cards, each with an Item Trap hidden inside.
+hidden cobra trap	hidden cobra trap	
+It’s a trap!
+	A hidden cobra strikes you!
+Put this next to your Final Girl card.
+	During Upkeep: Lose .
+	The next time you recover health,
+	you must instead discard this card.
+ITEM	ITEM
+3 Item Trap cards
+terror trap reference	terror trap reference
+Whenever a Terror Trap card comes in to play from the	
+Terror deck, place the appropriate Trap token in your space.
+	The trap immediately takes effect on you and all Victims in
+	your space. Any time a Victim enters (or is in) a space with
+	a Trap token, they are killed. Whenever you enter (or are
+	in) a space with a Trap token, suffer the following effects:
+Rope Trap	
+Discard 1 Action card at random.
+Spinning Floor Blade Trap	
+Roll 2 dice. For each result do the following:	
+1-4: You take 1	
+5-6: You may move 1 space
+Acid Pitfall Trap	
+You lose 1 .
+1 Terror Trap Reference card	5 Various Tokens
+Directors (design): A.J. Porfirio and Evan Derrick Director of Photography (art): Vladyslava Ladkova
+Additional Item & Token Art: Tumo Mere, Tyler Johnson, Roland MacDonald
+18
+
+-- 18 of 36 --
+
+Special Rules
+Carnival of Blood comes with two kinds of traps: Item Traps and Terror Traps.
+Item Traps
+There are three Item Traps randomly hidden within the Item decks during setup. They will only be discovered
+by searching at a 	. Each Item deck will have a single Item Trap, but you won't know where in the deck
+they are located.
+* After successfully searching, if you draw an Item Trap you MUST resolve it unless otherwise noted (i.e.
+you have Zappo with you).
+* If your search revealed an item in addition to the Item Trap, you may still take the item, but must
+resolve the trap first.
+* Item Trap cards are discarded after they are resolved unless otherwise noted.
+Terror Traps
+There are three Terror Trap cards in the Carnival of Blood Terror deck. They may be revealed
+during the Killer phase when a Terror card is drawn.
+* When a Terror Trap card is drawn, resolve it like you would any other Terror card.
+* When the Terror Trap card instructs you to place the accompanying Trap token,
+place it in your current space. The effects of the trap occur IMMEDIATELY and apply to
+you and any Victims in your space.
+* Victims are always killed, but each trap affects you differently. Refer to the
+Terror Trap Reference card for each trap's specific effects.
+* After resolving the trap's effects, finish resolving the Terror Trap
+card (if there are any other effects to resolve) and discard it as
+normal.
+* Trap tokens are NOT discarded and remain on the board for the
+rest of the game. Each time you or a Victim enters a space with
+a Trap token, apply the trap's effects accordingly.
+* Enemies are not affected by Trap tokens for any reason and
+completely ignore them.
+19
+
+-- 19 of 36 --
+
+achievements
+Win a game at the Carnival of Blood.
+Defeat five different Killers at the Carnival of Blood.
+Win a game where no traps were triggered.
+Win a game where 3 or more traps were triggered.
+Deliver the killing blow to the Killer with the Golf Cart.
+Witness the Werewolf kill a Minion.
+Win with Zappo still with you.
+Move 5 or more spaces in one Action phase.
+Find an item by the end of turn 2.
+Unlock your Ultimate Ability at the Carnival of Blood.
+Save 3 or more Victims in one turn.
+20
+
+-- 20 of 36 --
+
+Components
+"He travels from state to state and runs his operation for a few days just like any other freakshow would.
+When it grows in popularity... that's when he makes his move adding as many of them to his family as he can.
+He keeps us around to keep up appearances, but I fear one day soon he will welcome me into the family too."
+- Excerpt from the journal of Harris Campbell, theme park ride operator
+there is no escape	there is no escape
+Place Geppetto and each Puppet at
+	a space (distribute evenly).	
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+immortal master	immortal master
+If all of the Puppets are on the board, Geppetto cannot be killed.
+	Any damage that would remove his Final Health token is ignored.
+1 Epic Dark Power card
+epic dark power	epic dark power	
+join the family	join the family
+During the Killer phase if all 3 Puppets are in your space, you lose all
+	remaining . You still resolve your Final Health token as normal.
+3 Finale cards
+remember them?	remember them?
+When revealed, spawn all remaining	
+Puppets to the board.
+	When moving Puppets, they
+	move 1 space less than normal.
+Spawn
+1 Puppet
+2 Final Girl cards
+22
+Charlie
+Move 1
+Space
+	Move 1
+Space
+77	asami
+Take a
+Search
+Action
+Card
+Move 1
+Space
+55
+Special Setup
+Setup the game as normal, with the following additions when playing with Geppetto:
+1. 	Place the Puppets card next to the Killer board.
+2. 	Place all 3 Puppet tokens on the "Ready" space of the card.
+puppets	puppets
+Puppets may not end normal movement more
+	than 2 spaces away from Geppetto.
+* is equal to Geppetto's
+	Movement Value
+Ready
+Exhausted
+11
+1 Puppets card
+THE PUPPET MASTER
+3 Puppet tokens
+Directors (design): A.J. Porfirio and Evan Derrick Director of Photography (art): Vladyslava Ladkova
+21
+
+-- 21 of 36 --
+
+Special Rules
+Puppets
+The Puppets are considered Minions. Refer to pg. 32 of the Core Rulebook for the general rules regarding
+Minions. The following are rules specific to the Puppets.
+* There are 3 total Puppets, which is the maximum number that can be on the board and/or the
+Puppets card at any time.
+* Whenever a Puppet is killed, place it on the Puppets card on the "Exhausted" space.
+* Each Killer phase up until the Finale is revealed, the first step in the Minion Action line on the back
+of the Finale card is to spawn a Puppet. When spawning a Puppet, take a token from the "Ready"
+space of the Puppets card and place it in Geppetto's space. If there are no tokens in the "Ready"
+space, no Puppet is spawned. Whether one was spawned or not, move all the Puppet tokens in the
+"Exhausted" space to the "Ready" space.
+* Some of Geppetto's Terror cards will specify whether an Action line only applies to the Puppets,
+but many do not (likewise, your chosen Location's Terror cards will not specify this either). When
+resolving a Killer Action on any Terror card that does NOT specify whether it only applies to the
+Puppets, each Puppet on the board will resolve the full action, one at a time. If there are multiple
+Puppets, you may choose which order they resolve the action in. After each Puppet has gone,
+resolve the same action for Geppetto.
+* Puppets have 1 	and their Attack Value is 1 	. Their Movement Value is the same as
+Geppetto's and will change accordingly when his Bloodlust increases. These stats are located on
+the Puppets card as a reminder.
+* Puppets have strings and are attached to their master, so they must end their movement within 2
+spaces of Geppetto. They may move farther than 2 spaces from Geppetto AS LONG AS they end
+their movement within 2 spaces of him. This can sometimes happen when a Puppet's target is
+within 2 spaces of Geppetto, but taking the most direct route to reach that target will momentarily
+place them 3 or more spaces away from him.
+* If a special effect from a Terror card or other game effect results in a Puppet being more than 2 spaces
+away from Geppetto, the next time that Puppet must choose a target it will instead target Geppetto,
+attempting to end its movement as soon as it is exactly within 2 spaces of him. If it runs out of movement
+it may be forced to stop farther than 2 spaces from Geppetto, in which case it will repeat this process the
+next time it must choose a target.
+* When a Puppet must stop moving, either because further movement would cause it to end more than
+2 spaces from Geppetto OR it was returning to Geppetto and made it exactly 2 spaces from him, any
+additional movement it may have had is lost.
+22
+
+-- 22 of 36 --
+
+achievements
+Defeat Geppetto at the Carnival of Blood.
+Defeat Geppetto at five different locations.
+Defeat Geppetto in Extreme Horror Mode.
+Kill 5 or more Puppets in one game.
+Kill 3 Puppets in one turn.
+Deal 5 or more damage to Geppetto in one Action phase.
+Defeat Geppetto after revealing your Final Health token.
+Defeat Geppetto after revealing his Epic Dark Power.
+Kill multiple Puppets in different spaces in one Action phase.
+Kill a Puppet with Furious Strike.
+23
+
+-- 23 of 36 --
+
+Components
+Maple Lane runs through a typical American suburban neighborhood in the quaint town of Spring Hill.
+Maple Lane was a street like any other... at least until someone got murdered. Now the residents are
+fearful of outsiders and weary of each other, but that doesn't stop them from gathering for holidays and
+letting their children play in the streets. They may soon regret having such a false sense of security.
+Terror	Terror
+"They just got	"They just got
+	hit by a car!"	hit by a car!"
+If there are no Victims in any Street	
+spaces, discard and draw another Terror	
+card. Otherwise:
+1 Victim in a Street space
+	of your choice is killed.
+8 Terror cards
+A QUIET PLACE	A QUIET PLACE
+22
+22
+22	11
+11
+11
+11
+11
+11
+MAPLE LANE	MAPLE LANE
+22
+33
+33
+11	11
+11 	11
+5 Setup cards
+The Smalleys	The Smalleys	
+“A killer on the loose? Must just be Maple Lane
+	gossip. Unless... you don’t think?”
+Place 2 Special Victims in the Smalley’s House.
+	Each time one of the Smalleys is killed, +1 .
+Discard this card when the Smalleys are no longer on the board.
+Event	Event
+10 Event cards
+ITEM	ITEM
+When you take this card, place the Bicycle	
+token on the Street space adjacent to
+	you. If you do not have any items in your
+	hands and you are with the Bicycle, you
+	may move yourself and it to any other	
+Street space on the board once per turn.
+Bicycle	Bicycle	
+“Hi ho silver! Away!
+16 Item cards
+1 Location board
+Action	Action
+oror
+"Please! Let me in! I don't want to die out here!" 1
+Enter an adjacent
+Enter an adjacent
+Enter an adjacent
+Immediately return
+	this card to the	
+Action Tableau
+convince	convince
+or
+Enter an adjacent . You may
+	take the top Item. If you do,
+	mark the with a token.
+2 Action cards
+Special Setup
+Setup the game as normal with the following changes when playing with Maple Lane.
+1. 	There are 4 Item decks for Maple Lane. Form the Item decks following the normal rules, but make
+four (4) decks of three (3) Item cards instead. The top Item card of each deck is revealed as normal.
+There is one deck for each quadrant of houses (Northwest, Southwest, Northeast, and Southeast).
+2. 	Include both Convince Action cards in the Action Tableau.
+21 Various Tokens
+Director (design): A.J. Porfirio Director of Photography (art): Roland MacDonald Additional Item Art: Tumo Mere
+24
+
+-- 24 of 36 --
+
+Special Rules
+Street spaces
+The normal and 	spaces are all considered Street spaces, as well as the Intersection space. There are
+no special rules for these spaces, but some cards will refer to them.
+House spaces and quadrants
+House spaces are a new type of space on the Maple Lane Location board. They are located in one of four
+Quadrants (NW, SW, NE, and SE), and each Quadrant has 3 Houses, for a total of 12 Houses.
+* Each House may be searched and counts as a 	space. They are both colored orange to remind
+you of this.
+* When a House is successfully searched, draw the Item card(s) from the Item deck for the House's
+Quadrant. Then, place an “X” token on the House that you searched. It may no longer be searched.
+* When a search yields multiple items, choose whch you want and place the other on top of the
+Quadrant's Item deck faceup, or on the bottom facedown as normal.
+* In the rare event that an Item needs to be added to an Item deck but all the Houses in that
+Quadrant have been searched (i.e., every House has an "X" token), add it to the deck for
+the closest Quadrant that hasn't been fully searched.
+* Since the residents of Maple Lane are so suspicious, you cannot enter an occupied House (one or
+more Victims in the House) using Walk, Sprint, or any other cards that allow movement. They will
+have to be 'convinced' to let you into their house (see below). Panicking Victims and Enemies are not
+restricted, so they may move into an occupied House freely.
+* If a House is unoccupied, normal movement rules apply and you can enter and exit the space as
+normal.
+Convince Action Cards and entering occupied houses
+There is a new Action card called Convince used only when playing on Maple Lane.
+* To enter an occupied House from the adjacent Street space, you must successfully convince your
+neighbor to let you in using a Convince Action card.
+* Convince cards can only be used to enter an occupied House. To exit a House, whether it is occupied or
+not, simply use the normal movement rules.
+* Convince cards have an additional success line for when you get 3 or more successes on a Horror Roll.
+25
+
+-- 25 of 36 --
+
+achievements
+Win a game at Maple Lane.
+Defeat five different Killers at Maple Lane.
+Save a Victim with Officer Kopp.
+Search each quadrant at least once.
+Gain an item using Convince.
+Search all 3 houses in one quadrant.
+Find 2 or more Crucifixes.
+Win a game where 3 or more events were revealed.
+Win a game where at least half of the Victims were killed.
+Win a game where two exits had Road Blocks.
+Kill an Enemy with an Odds and Ends token.
+26
+
+-- 26 of 36 --
+
+Components
+"I was in some sort of boiler room and a grotesque man with a pitchfork was chasing me! I was sure he was
+going to kill me... it felt so real! He had pock mark scars all over his skin and his eyes were milky white. A
+strange black... something, maybe a cloud but with eyes, swirled behind him. I was terrified, so I turned and
+ran. I rounded a corner and lost my footing. I staggered into some pipes and they burnt my skin so badly.
+That's when I woke up. I thought it was all a dream, but I had a severe burn on my arm from the pipes!"
+- Spring Hill Police Report, Case ID 26006135
+Franky's coming	Franky's coming
+	for you	for you
+If Dr. Fright is in a space with at least one Victim:
+Otherwise:
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+The Frightmare is inevitable	The Frightmare is inevitable
+Dr. Fright may attack you
+	even if you are Awake.
+1 Epic Dark Power card
+epic dark power	epic dark power	epic dark power	epic dark power	
+Shock Factor	Shock Factor
+If a Victim would panic, it is killed
+	instead. (Max 3 per turn)
+3 Finale cards
+everyone must die	everyone must die
+When this card is revealed, remove Dr. Fright	
+from the board and place him on this card.
+For the remainder of the game, Dr. Fright may
+	be attacked from any space if you are Asleep.
+Kill 2 Victims automatically (you may choose which).
+	If none remain, you lose .
+2 Final Girl cards
+sheila
+Take an
+Improvise
+Action
+card
+Move
+1 Space
+22
+Take the
+Long Rest
+Action
+card
+66	nancy
+Take the
+Long Rest
+Action
+card
+Take the
+Planning
+Action
+card
+Move
+2 Spaces
+22
+44
+boiler room	boiler room
+4 Boiler Room cards
+Special Setup
+Setup the game as normal, with the following changes when playing with Dr. Fright:
+* Shuffle the Boiler Room cards and place them facedown. Then place the Awake/Asleep card on top
+of the deck with the Awake side faceup. This is the Boiler Room deck.
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+1 Awake/Asleep card
+THE DREAM DOCTOR
+Director (design): A.J. Porfirio 	Director of Photography (art): Roland MacDonald
+27
+
+-- 27 of 36 --
+
+Special Rules
+Awake and asleep
+When playing against Dr. Fright there are two important game states to understand: being Awake and being
+Asleep. When you are Awake, the game mostly proceeds as normal, but when you are Asleep you enter the
+Boiler Room, a terrifying dream world where nothing is as it seems.
+* Your current state is determined by which side of the Awake/Asleep card is showing. You will start
+the game Awake.
+* Whenever a game effect says you go to or fall Asleep, take the Awake/Asleep card and without
+flipping it, put it on the bottom of the Boiler Room deck. Then, flip the deck over. If you have done this
+correctly, the Asleep side of the card should be faceup on top of the deck. You are now Alseep and
+inside the Boiler Room.
+* Some Terror cards will cause you to fall Asleep, but if you want to go to sleep and enter the Boiler
+Room by choice, you can do so by resolving a Short Rest or Long Rest Action card. Regardless of the
+result, apply the normal effects and you fall Asleep.
+when you are Awake (NOT in the Boiler Room)
+* You can move, search, save Victims and do everything else as normal.
+* Dr. Fright is NOT able to attack you and you are NOT able to attack him.
+* When Dr. Fright resolves a Killer Action that begins with 	, treat it as a 	unless an effect (such
+as the Dark Power card ‘The Frightmare is Inevitable’) allows Dr. Fright to attack you while you are
+Awake.
+* When Dr. Fright resolves a Killer Action that begins with 	, he will still move toward you but cannot
+attack you (if a Victim is in the space he ends his movement in he WILL attack the Victim).
+when you are Asleep (In the Boiler Room)
+* You may move around the board, attack Dr. Fright, and even search for items! This represents you
+moving around in the dream and perhaps finding (manifesting?) an item or weapon.
+* Dr. Fright can now attack you! He will resolve all Killer Actions as normal.
+* Victims will NOT follow you, nor are you able to save them.
+* You MUST resolve one Boiler Room card at the end of the Killer Phase.
+28
+
+-- 28 of 36 --
+
+the boiler room
+In order to kill Dr. Fright, you will have to confront him in the dream world on his turf... in his Boiler Room! No
+one has ever fought back before, but, if you play your cards right, he will soon find out that he can be hurt or
+even killed.
+* To exit the Boiler Room (BR) and wake up, you must resolve all of the cards in the BR deck. You can
+choose to resolve as many as you wish during the Action phase (including none), but you must ALWAYS
+resolve one, and exactly one BR card (unless a game effect changes this) during the Killer phase. As
+such, you will have some control over how long you stay asleep depending on your plans.
+* Resolving a BR card is simple. You will slide the deck of card(s) Up, Down, Left, or Right such that half
+(or sometimes a quarter) of the next unresolved card is showing. You cannot slide it in a direction that
+would not reveal any of the card and it must always be in a direction such that it extends the previous
+revealed card (see the detailed example on the next page). If there is an illustration of Dr. Fright visible
+on the newly revealed card, he attacks you! It does not matter if he is currently in your space or not,
+as he is able to reach you within the Boiler Room from anywhere on the board. Resolve the following
+Killer Action: 	. You may defend as normal.
+* As you resolve the BR cards you will be able to use your
+knowledge to possibly avoid future attacks because Dr. Fright
+will appear in each of the four quadrants only once.
+* You will be able to intelligently reduce the chance of attacks
+based on your knowledge of the BR cards such that sometimes
+you may not get attacked at all, but most times you will get
+attacked once or twice.
+* When you successfully exit the Boiler Room by revealing
+all four BR cards, immediately shuffle them facedown and
+place the Asleep/Awake card on top with the Awake
+side showing.
+29
+
+-- 29 of 36 --
+
+1. 	Nancy starts with the four Boiler Room cards neatly
+tucked underneath the Awake/Asleep card with
+the Asleep side showing. The Awake/Asleep card
+should COMPLETELY cover the BR cards, with no edges
+showing!
+2. 	Nancy first slides the Awake/Asleep card UP, revealing
+the lower half of the BR card below (highlighted in red
+in the example). There is no Dr. Fright, so she is not
+attacked! The remaining three BR cards are still hidden
+underneath where she cannot see them.
+3. 	Despite odds being 66% that sliding the top cards up
+again will cause an attack, Nancy has a gut feeling.
+She carefully slides the cards UP a second time
+(making sure that only the next BR card is visible) and
+discovers that she was right! Dr. Fright is not visible
+and she's avoided being attacked twice now! The final
+two BR cards are still hidden, tucked underneath the
+card that was just revealed.
+4. 	Nancy now knows by process of elimination that the
+last two BR cards have Dr. Fright on the bottom half.
+She knows that sliding up AGAIN would cause an
+attack. If she slides left or right, she has a 50% chance
+of avoiding an attack. She decides to slide LEFT,
+revealing the right half of the next card. Dr. Fright
+attacks!
+5. 	Knowing that the fourth and final BR card, which is still
+hidden, has Dr. Fright in the lower left corner, Nancy
+simply slides the cards DOWN. This reveals only the top
+right quadrant of the last card, which is empty. Nancy
+wakes up and immediately exits the Boiler Room.
+6. 	Nancy shuffles the BR cards facedown and places
+the Awake/Asleep card on top with the Awake side
+showing. She's ready to reenter the Boiler Room the
+next time she falls asleep!
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+boiler room example
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+BOILER ROOM	BOILER ROOM
+Asleep	Asleep
+Victims will	Victims will NOTNOT follow you during	follow you during
+	movement and cannot be saved.	movement and cannot be saved.
+awake	awake
+You may not attack or be attacked by Dr. Fright
+1 	2
+3 	4
+5 	6
+30
+
+-- 30 of 36 --
+
+achievements
+Defeat Dr. Fright at Maple Lane.
+Defeat Dr. Fright at five different Locations.
+Defeat Dr. Fright in Extreme Horror Mode.
+Exit the Boiler Room without having taken any damage.
+Retaliate successfully against a Boiler Room attack.
+Damage Dr. Fright while you are Awake.
+Defeat Dr. Fright after he has revived once.
+Resolve 3 or more Boiler Room cards in one turn.
+Use a Short Rest or Long Rest card to go to sleep.
+Defeat Dr. Fright before the Finale is revealed.
+31
+
+-- 31 of 36 --
+
+Components
+“When the skies darkened, I knew what was coming was terror. Pure, animalistic evil.”
+- Bird Attack Survivor
+Director (design): AJ Porfirio 	Director of Photography (art): Vladyslava Ladkova
+Special Rules
+Terror from Above requires the Final Girl Core Box and a Location from a Feature Film box. Follow the normal setup
+rules, but with the exceptions outlined in these rules.
+* There is no Killer board. Instead, place the Bloodlust card and the Bird Spawn card next to the Location board.
+* Place the Bloodlust marker on the start space of the Bloodlust card.
+* The Horror Level starts at 4.
+* Place a Bird token with the 3 birds side up on the 	space indicated on the Location’s Setup card. Place the Final Girl
+and Victims as normal.
+* Place 1 Bird token on each empty space that has no Victims or the Final Girl.
+Bird Spawn
+Card
+Final Girl Card
+Bloodlust
+Card
+3 Dark Power Cards
+17 Terror
+Cards
+3 Finale Cards
+BIRDNADO	BIRDNADO
+During Upkeep, if there are 10 or more total birds in
+	your space and adjacent spaces, you lose .
+fowl agression	fowl agression
+For the remainder of the game, when
+	Spawning Birds, roll one die and place
+	that many birds in your space.
+Melanie	Melanie	55
+Move
+1 Space
+	Take a
+Guard
+Reaction
+card
+Move up to
+2 Spaces
+Roll 2 dice. One of the die values will be how
+	many Birds are placed. The other will be where
+	they are placed based on the below chart. You
+	may choose which result to use for which.
+1 4
+2 5
+3 6
+Distributed in any spaces
+Any single space
+Nearest
+Nearest
+The nearest Victim's space
+Your space
+spawn birds	spawn birds	
+or
+Dark Power
+bloodlust	bloodlust	44
+If Finale is revealed, .
+	Otherwise, discard 1 Terror card
+"They're trying	"They're trying
+to get in!"	to get in!"
+Instead of spawning birds as
+	normal, roll one die and place that
+	many birds in the nearest .
+36 Bird Tokens
+NOTE! Bird tokens have a 1 Bird side and a
+3 Birds side for easy game management
+32
+
+-- 32 of 36 --
+
+How to win
+The win conditions are different for this expansion since there is no “Killer”. To win, you must save ALL of the
+Special Victims (using normal Victim save rules), (2 Special Victims), or Hard (3 Special Victims) difficulty.
+NOTE! The level of difficulty will also be affected by the Final Girl you choose based on how difficult their
+Ultimate Ability is to unlock.
+special victims
+Special Victims will only come out of hiding if and when one of the following conditions occurs:
+You unlock your Ultimate Ability OR There are no more normal Victims on the board.
+When one of the conditions has been met, place the Special Victim meeples in the farthest Search space(s)
+from you with no more than one in a single space.
+The Special Victims can NEVER be attacked or killed, but for all other purposes are treated like normal Victims.
+how you lose
+You lose immediately if: There are 3 Birds on every space of the board OR The Final Girl dies.
+The Birds
+Birds are represented by tokens. They are considered Minions (see
+pg. 32 of the Core Rulebook for specific rules regarding Minions).
+Birds will NEVER move on their own and can only be moved by a
+special game effect such as an effect from an item.
+spawning birds
+When resolving either of these icons 	, roll 2 dice and follow the instructions on the Bird Spawn card. You
+may choose which result to use for the number of Birds spawned and which result to use for where they will
+spawn.
+Birds will ALWAYS spawn at least once per round during the Minion Action, which is the first step of the Killer
+phase. But often times they will spawn more based on the Terror card effects.
+If Birds need to be placed in a space that already has 3 Birds, place them in an adjacent space of your choice
+instead. Continue finding spaces (expanding farther away if necessary) until all of the spawned Birds are placed.
+* per Bird
+33
+
+-- 33 of 36 --
+
+bird attacks
+When resolving this icon 	, an attack will take place in the space with the Final Girl, as long as there is at
+least one Bird, and in every space with 3 Birds (unless otherwise noted).
+Birds attack ONE target in their space, dealing damage equal to the number of Birds in the space.
+Birds always prioritize normal Victims over the Final Girl if both are in the same space.
+destroying birds
+Birds in a space can be attacked and you can remove 1 Bird per damage dealt (excess damage is lost).
+other rules
+* When the Birds attack, the Final Girl can use Reaction cards to prevent damage to anyone in her space
+(normally, Reaction cards cannot be used to defend Victims). However to protect a Victim, all of the damage
+must be prevented as it only takes one damage to kill a Victim.
+* Event cards that require one or more Special Victim meeples to be used should be ignored. When this
+occurs, discard it and redraw a new Event.
+* It may happen that an Event card doesn’t make sense or work with Terror From Above. If this occurs, you
+can ignore it or draw another one.
+* Some Items might be useless against the Birds, for example the Bear Trap at Camp Happy Trails. If you
+don’t like that, you can remove those items and replace them if they come up. However, sometimes you just
+find useless things and our preference is that you just have to deal with that adversity.
+* Some Terror and Event cards refer to the Killer. There is no Killer as the Birds are Minions. In these instances,
+do the following:
+> If a card specifies for the Killer to move, spawn Birds instead.
+> If a card specifies for the Killer to be placed somewhere, place 3 Birds there.
+34
+
+-- 34 of 36 --
+
+achievements
+Defeat the Birds at five different Locations.
+Kill 3 Birds in a single attack.
+Spawn 6 Birds in one spawn.
+Defeat the Birds without using any weapons.
+Defeat the Birds in Extreme Horror Mode.
+35
+
+-- 35 of 36 --
+
+
+
+-- 36 of 36 --
+
