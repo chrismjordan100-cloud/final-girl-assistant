@@ -192,9 +192,6 @@ export default function SetupAssist() {
         </div>
       </div>
 
-      {/* Capture the setup variant + starting event as you build the game. */}
-      <SetupCapture heading="Record setup &amp; starting event as you go" />
-
       <div className="stack" style={{ marginTop: '1.5rem' }}>
         {setupGroups.map((group, gi) => {
           const groupDone = group.steps.every((s) => done[s.id]);
@@ -232,6 +229,8 @@ export default function SetupAssist() {
                           )}
                         </span>
                       </label>
+                      {step.id === 's12' && <SetupCapture only="setup" />}
+                      {step.id === 's18' && <SetupCapture only="event-start" />}
                       {step.id === 's2' && (
                         <div className="game-picker" onClick={(e) => e.stopPropagation()}>
                           <div className="game-picker__field">

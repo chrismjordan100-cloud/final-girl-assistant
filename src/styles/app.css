@@ -564,6 +564,28 @@
 .setup-capture__hint { margin: 0 0 0.7rem; font-size: 0.82rem; }
 .setup-capture__warn { color: var(--fg-gold); font-style: normal; }
 
+/* Inline capture sat beneath a specific setup step */
+.setup-inline {
+  margin: 0.6rem 0 0 2rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--fg-gold);
+  background: rgba(217, 164, 65, 0.06);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.setup-inline__label {
+  display: block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fg-gold);
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 720px) {
+  .setup-inline { margin-left: 0.5rem; }
+}
+
 /* Card picker (datalist-backed input + effect preview) */
 .card-picker { flex: 1 1 14rem; min-width: 0; display: flex; flex-direction: column; gap: 0.3rem; }
 .card-picker .turn-events__input { flex: none; width: 100%; }

@@ -10,19 +10,25 @@ import CardPicker from './CardPicker.jsx';
    Setup Assist or Turn Tracker tab updates both. */
 
 const SETUP_TYPES = [
-  { type: 'setup', label: 'Setup', glyph: '\uD83E\uDDE9', placeholder: 'Setup cards / board configuration' },
-  { type: 'event-start', label: 'Starting event', glyph: '\u2728', placeholder: 'Event card revealed at setup' },
+  { type: 'setup', label: 'Setup', glyph: '\uD83E\uDDE9', placeholder: 'Setup card name (or type your own)' },
+  { type: 'event-start', label: 'Starting event', glyph: '\u2728', placeholder: 'Event card name (or type your own)' },
 ];
 
+const BY_TYPE = Object.fromEntries(SETUP_TYPES.map((d) => [d.type, d]));
 const LABELS = Object.fromEntries(SETUP_TYPES.map((d) => [d.type, d.label]));
 
-export default function SetupCapture({ heading = 'Record setup & starting event' }) {
+/* SetupCapture can show the full two-button panel (default) OR a single
+   capture inline with a setup step via the `only` prop ('setup' | 'event-start').
+   The inline form is always open (no extra tap) and shows what's recorded. */
+export default function SetupCapture({ heading = 'Record setup & starting event', only = null }) {
   const { state, addEvent, removeEvent } = useTurnState();
   const { killerId, locationId } = useGameSelection();
   const setupEvents = (state.events || []).filter((e) => e.turn === 0);
 
   const [picking, setPicking] = useState(null);
   const [text, setText] = useState('');
+  // Inline (single-type) mode keeps its own always-visible text field.
+  const [inlineText, setInlineText] = useState('');
 
   function pick(def) {
     setPicking(def);
@@ -41,6 +47,47 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
     setText('');
   }
 
+  // --- Inline single-type mode (used beside a setup step) ---
+  if (only) {
+    const def = BY_TYPE[only];
+    const recorded = setupEvents.filter((e) => e.type === only);
+    function addInline() {
+      const detail = inlineText.trim();
+      if (!detail) return;
+      addEvent({ type: only, detail, turn: 0, phaseName: 'Setup' });
+      setInlineText('');
+    }
+    return (
+      <div className="setup-inline" onClick={(e) => e.stopPropagation()}>
+        <span className="setup-inline__label">{def.glyph} Record your {def.label.toLowerCase()}</span>
+        <div className="turn-events__entry">
+          <CardPicker
+            type={only}
+            combo={{ killerId, locationId }}
+            value={inlineText}
+            onChange={setInlineText}
+            placeholder={def.placeholder}
+            onKeyDown={(e) => { if (e.key === 'Enter') addInline(); }}
+          />
+          <button type="button" className="fg-btn fg-btn--primary fg-btn--small" onClick={addInline} disabled={!inlineText.trim()}>
+            Add
+          </button>
+        </div>
+        {recorded.length > 0 && (
+          <ul className="turn-events__list">
+            {recorded.map((e) => (
+              <li key={e.id} className="te-item">
+                <span className="te-item__text">{e.detail}</span>
+                <button type="button" className="te-item__del" onClick={() => removeEvent(e.id)} aria-label="Remove" title="Remove">&times;</button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  }
+
+  // --- Full panel mode (Turn Tracker) ---
   return (
     <div className="setup-capture">
       <h3 className="setup-capture__head">

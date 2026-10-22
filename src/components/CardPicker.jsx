@@ -49,9 +49,11 @@ export default function CardPicker({
           ))}
         </datalist>
       )}
-      {known && !effect && (
+      {!effect && (
         <span className="card-picker__count">
-          {options.length} known card{options.length === 1 ? '' : 's'} — start typing to pick, or enter your own
+          {known
+            ? `${options.length} known card${options.length === 1 ? '' : 's'} to pick from — or type any name (e.g. a new expansion)`
+            : 'No card list for this combo yet — just type the name'}
         </span>
       )}
       {effect && <span className="card-picker__effect">{effect}</span>}
