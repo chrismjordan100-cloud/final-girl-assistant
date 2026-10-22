@@ -108,7 +108,8 @@ export default function TurnTracker() {
       phaseId: phase.id,
       phaseName: phase.name.replace(' Phase', ''),
     });
-    setPicking(null);
+    // Stay in the same category with a cleared field so you can log several of
+    // the same kind quickly (e.g. two items found this turn). "Done" exits.
     setEventText('');
   }
 
@@ -312,7 +313,7 @@ export default function TurnTracker() {
                 Log
               </button>
               <button type="button" className="fg-btn fg-btn--small" onClick={cancelPick}>
-                Cancel
+                Done
               </button>
             </div>
           ) : (

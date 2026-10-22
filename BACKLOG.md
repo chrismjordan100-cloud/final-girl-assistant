@@ -4,6 +4,23 @@ A running list of ideas and planned work. Newest/active at the top.
 
 ## Backlog
 
+### Real flavour text on cards
+Find and add REAL flavour text (lore/atmosphere) to the card detail dataset
+(`src/data/cards.json`). The current data has rules `effect` text but excludes
+flavour. Source it (verify against physical cards / wiki) and add a `flavour`
+field per card so the app — and the game story generator — can draw on it.
+
+### Update card detail for the extra data
+The card dataset has grown richer (effects, tags, stats, epic flags, etc.).
+Update the places that show card detail (CardPicker effect preview, Game Log
+detail, Codex if relevant) to surface the extra fields now available.
+
+### Richer game summary using the extra card detail
+Feed the extra card-detail JSON (effects, flavour, tags) into the game story
+generator (`src/lib/narrateGame.js`) so recaps can describe what cards actually
+did, not just name them — e.g. "she swung the Aluminum Bat, discarding one of
+Hans' Minor Dark Powers." Pairs naturally with the Tier 2 AI recap.
+
 ### AI game recap (Tier 2 — richer narrative via an LLM)
 **Status:** planned — not started.
 
