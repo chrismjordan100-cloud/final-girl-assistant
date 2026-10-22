@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useGameLog } from '../hooks/useGameLog.js';
 import { getKiller, getLocation, getIcon } from '../data/games.js';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
+import GameDetail from './GameDetail.jsx';
 import './GameLog.css';
 
 function formatDate(iso) {
@@ -16,7 +17,10 @@ function formatDate(iso) {
 }
 
 export default function GameLog() {
-  const { log, manual, deleteEntry, clearLog, restoreLog } = useGameLog();
+  const { log, manual, deleteEntry, updateEntry, clearLog, restoreLog } = useGameLog();
+
+  // Which entry is expanded to show its full detail / edit panel.
+  const [expandedId, setExpandedId] = useState(null);
 
   const wins = log.filter((e) => e.outcome === 'won').length;
   const losses = log.filter((e) => e.outcome === 'lost').length;
@@ -86,7 +90,8 @@ export default function GameLog() {
         <h1>Game Log</h1>
         <p className="lead">
           A record of your past games — who you played, where, and whether you walked
-          away. Synced across your devices. Deleting a game also updates MI and
+          away. Tap a game for the full turn-by-turn detail, and edit it if you need
+          to fix anything. Synced across your devices; deleting also updates MI and
           Achievements.
         </p>
       </div>
@@ -134,9 +139,17 @@ export default function GameLog() {
 
           <CollapsibleSection title="History" count={`${log.length} game${log.length === 1 ? '' : 's'}`}>
           <ul className="gl-list">
-            {log.map((e) => (
-              <li key={e.id} className={'gl-entry fg-panel gl-entry--' + e.outcome}>
-                <div className="gl-entry__main">
+            {log.map((e) => {
+              const isOpen = expandedId === e.id;
+              const eventCount = (e.events && e.events.length) || 0;
+              return (
+              <li key={e.id} className={'gl-entry fg-panel gl-entry--' + e.outcome + (isOpen ? ' is-open' : '')}>
+                <button
+                  type="button"
+                  className="gl-entry__main gl-entry__main--toggle"
+                  onClick={() => setExpandedId(isOpen ? null : e.id)}
+                  aria-expanded={isOpen}
+                >
                   <span className={'gl-entry__outcome gl-entry__outcome--' + e.outcome}>
                     {outcomeLabel[e.outcome] || e.outcome}
                   </span>
@@ -164,6 +177,7 @@ export default function GameLog() {
                   <div className="gl-entry__meta fg-type">
                     {formatDate(e.endedAt)}
                     {e.turns ? `  \u00B7  ${e.turns} turns` : ''}
+                    {eventCount > 0 ? `  \u00B7  ${eventCount} event${eventCount === 1 ? '' : 's'}` : ''}
                   </div>
                   {e.achievements && e.achievements.length > 0 && (
                     <p className="gl-entry__achv">
@@ -182,7 +196,13 @@ export default function GameLog() {
                     </ul>
                   )}
                   {e.notes && <p className="gl-entry__notes">{e.notes}</p>}
-                </div>
+                  <span className="gl-entry__expand" aria-hidden="true">
+                    {isOpen ? 'Hide details \u25B2' : 'Show details \u25BC'}
+                  </span>
+                </button>
+
+                {isOpen && <GameDetail entry={e} onUpdate={updateEntry} />}
+
                 <button
                   className="gl-entry__delete"
                   onClick={() => handleDelete(e)}
@@ -192,7 +212,8 @@ export default function GameLog() {
                   &times;
                 </button>
               </li>
-            ))}
+              );
+            })}
           </ul>
           </CollapsibleSection>
         </>

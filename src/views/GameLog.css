@@ -44,7 +44,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
   padding: 0.9rem 1.1rem;
   border-left: 3px solid var(--border-strong);
 }
@@ -52,6 +53,29 @@
 .gl-entry--lost { border-left-color: var(--fg-blood); }
 .gl-entry--abandoned { border-left-color: var(--fg-gold); }
 .gl-entry__main { display: flex; flex-direction: column; gap: 0.25rem; }
+
+/* The main area doubles as the expand/collapse toggle */
+.gl-entry__main--toggle {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+.gl-entry__main--toggle:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.gl-entry__expand {
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.68rem;
+  color: var(--fg-gold);
+}
+.gl-entry.is-open { background: rgba(255, 255, 255, 0.02); }
 .gl-entry__outcome {
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -213,3 +237,106 @@
   padding: 0 0.2rem;
 }
 .gl-undo__dismiss:hover { color: var(--text); }
+
+/* ==========================================================================
+   Game detail / edit panel (expanded under an entry)
+   ========================================================================== */
+.gd {
+  flex: 1 1 100%;
+  width: 100%;
+  margin-top: 0.8rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border-strong);
+}
+.gd__toolbar { display: flex; justify-content: flex-end; margin-bottom: 0.7rem; }
+
+.gd__summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem 1.2rem;
+  margin: 0 0 1rem;
+}
+.gd__summary > div { display: flex; flex-direction: column; gap: 0.1rem; }
+.gd__summary dt {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.64rem;
+  color: var(--text-dim);
+}
+.gd__summary dd { margin: 0; font-size: 0.95rem; color: var(--text); }
+.gd__none { font-size: 0.88rem; }
+
+/* Turn-by-turn timeline */
+.gd__timeline-head {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-blood-bright);
+  margin: 0 0 0.5rem;
+}
+.gd__turn { margin-bottom: 0.6rem; }
+.gd__turn-num {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--fg-bone);
+  margin-bottom: 0.25rem;
+}
+.gd__events { list-style: none; margin: 0; padding: 0 0 0 0.5rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.gd__event { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; }
+.gd__event-phase {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.58rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.12em 0.5em;
+}
+.gd__event--victim-died > span:last-child { color: var(--fg-blood-bright); }
+.gd__event--victim-saved > span:last-child { color: var(--fg-sick-green); }
+
+/* Edit form */
+.gd__row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 0.8rem; }
+.gd__field { flex: 1 1 14rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.gd__field--sm { flex: 0 0 8rem; }
+.gd__label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.64rem;
+  color: var(--text-dim);
+}
+.gd__input, .gd__textarea {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.5em 0.7em;
+  width: 100%;
+  resize: vertical;
+}
+.gd__input:focus, .gd__textarea:focus { outline: 2px solid var(--accent-bright); outline-offset: 1px; }
+.gd__outcomes { display: flex; gap: 0.3rem; }
+.gd__outcome {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+}
+.gd__outcome.is-active { background: var(--fg-blood); border-color: var(--fg-blood); color: #fff; }
+.gd__editnote { margin: 0 0 0.8rem; font-size: 0.8rem; }
+.gd__actions { display: flex; gap: 0.5rem; }
