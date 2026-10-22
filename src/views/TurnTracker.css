@@ -644,3 +644,25 @@
   padding: 0 0.2rem;
 }
 .te-item__del:hover { color: var(--fg-blood-bright); }
+
+/* Game setup / starting event panel */
+.tt-setup { margin-bottom: 1rem; padding: 0.6rem 1rem; }
+.tt-setup__summary {
+  cursor: pointer;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tt-setup__badge {
+  font-family: var(--font-type);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+.tt-setup__body { margin-top: 0.8rem; }

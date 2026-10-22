@@ -521,11 +521,14 @@ export default function ThisGame() {
                     <span className="tg-captured__count">{capturedEvents.length} event{capturedEvents.length === 1 ? '' : 's'}</span>
                   </h3>
                   <ul className="tg-captured__tallies">
+                    {liveSummary.setup && <li>setup: <strong>{liveSummary.setup}</strong></li>}
+                    {liveSummary.startingEvent && <li>start event: <strong>{liveSummary.startingEvent}</strong></li>}
                     <li><strong>{liveSummary.victimsSaved}</strong> saved</li>
                     <li><strong>{liveSummary.victimsDied}</strong> died</li>
                     <li><strong>{liveSummary.itemsFound.length}</strong> items found</li>
                     <li><strong>{liveSummary.itemsUsed.length}</strong> items used</li>
                     <li><strong>{liveSummary.darkPowers.length}</strong> dark powers</li>
+                    {liveSummary.events.length > 0 && <li><strong>{liveSummary.events.length}</strong> events</li>}
                     {liveSummary.finale && <li>finale: <strong>{liveSummary.finale}</strong></li>}
                   </ul>
                   <p className="tg-captured__hint fg-type">

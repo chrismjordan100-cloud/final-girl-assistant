@@ -10,12 +10,15 @@
    ========================================================================== */
 
 export const SUMMARY_EVENT_TYPES = [
+  'setup',
+  'event-start',
   'victim-died',
   'victim-saved',
   'item-found',
   'item-used',
   'dark-power',
   'finale',
+  'event',
   'terror',
   'weapon',
   'note',
@@ -46,6 +49,9 @@ export function deriveSummary(events = []) {
     finale: details('finale')[0] || '',
     weapons: details('weapon'),
     terror: details('terror'),
+    events: details('event'),            // extra Event cards during play
+    setup: details('setup')[0] || '',    // setup configuration (recorded once)
+    startingEvent: details('event-start')[0] || '', // Event card at setup
     notes: details('note'),
   };
 }

@@ -39,11 +39,14 @@ export default function GameDetail({ entry, onUpdate }) {
     outcome: entry.outcome || 'won',
     turns: entry.turns != null ? String(entry.turns) : '',
     notes: entry.notes || '',
+    setup: storedSummary.setup || '',
+    startingEvent: storedSummary.startingEvent || '',
     victimsSaved: storedSummary.victimsSaved ?? 0,
     victimsDied: storedSummary.victimsDied ?? 0,
     itemsFound: toLines(storedSummary.itemsFound),
     itemsUsed: toLines(storedSummary.itemsUsed),
     finale: storedSummary.finale || '',
+    events: toLines(storedSummary.events),
     weapons: toLines(storedSummary.weapons),
     darkPowers: toLines((storedSummary.darkPowers || []).map((d) => (d.power ? `${d.name} (${d.power})` : d.name))),
     terror: toLines(storedSummary.terror),
@@ -62,11 +65,14 @@ export default function GameDetail({ entry, onUpdate }) {
     });
     const nextSummary = {
       ...storedSummary,
+      setup: form.setup.trim(),
+      startingEvent: form.startingEvent.trim(),
       victimsSaved: Number(form.victimsSaved) || 0,
       victimsDied: Number(form.victimsDied) || 0,
       itemsFound: fromLines(form.itemsFound),
       itemsUsed: fromLines(form.itemsUsed),
       finale: form.finale.trim(),
+      events: fromLines(form.events),
       weapons: fromLines(form.weapons),
       darkPowers,
       terror: fromLines(form.terror),
@@ -110,6 +116,17 @@ export default function GameDetail({ entry, onUpdate }) {
         </div>
 
         <div className="gd__row">
+          <label className="gd__field">
+            <span className="gd__label">Setup (cards / board configuration)</span>
+            <input className="gd__input" type="text" value={form.setup} onChange={(e) => setField('setup', e.target.value)} placeholder="e.g. Standard setup, Bonfire variant" />
+          </label>
+          <label className="gd__field">
+            <span className="gd__label">Starting event</span>
+            <input className="gd__input" type="text" value={form.startingEvent} onChange={(e) => setField('startingEvent', e.target.value)} placeholder="Event card revealed at setup" />
+          </label>
+        </div>
+
+        <div className="gd__row">
           <label className="gd__field gd__field--sm">
             <span className="gd__label">Victims saved</span>
             <input className="gd__input" type="number" min="0" value={form.victimsSaved} onChange={(e) => setField('victimsSaved', e.target.value)} />
@@ -148,9 +165,16 @@ export default function GameDetail({ entry, onUpdate }) {
 
         <div className="gd__row">
           <label className="gd__field">
+            <span className="gd__label">Event cards during play (one per line)</span>
+            <textarea className="gd__textarea" rows={2} value={form.events} onChange={(e) => setField('events', e.target.value)} />
+          </label>
+          <label className="gd__field">
             <span className="gd__label">Terror cards of note (one per line)</span>
             <textarea className="gd__textarea" rows={2} value={form.terror} onChange={(e) => setField('terror', e.target.value)} />
           </label>
+        </div>
+
+        <div className="gd__row">
           <label className="gd__field">
             <span className="gd__label">Notes</span>
             <textarea className="gd__textarea" rows={2} value={form.notes} onChange={(e) => setField('notes', e.target.value)} />
@@ -173,7 +197,8 @@ export default function GameDetail({ entry, onUpdate }) {
   const s = storedSummary;
   const hasSummary =
     s.victimsSaved || s.victimsDied || s.itemsFound?.length || s.itemsUsed?.length ||
-    s.darkPowers?.length || s.finale || s.weapons?.length || s.terror?.length;
+    s.darkPowers?.length || s.finale || s.weapons?.length || s.terror?.length ||
+    s.events?.length || s.setup || s.startingEvent;
 
   return (
     <div className="gd">
@@ -183,6 +208,8 @@ export default function GameDetail({ entry, onUpdate }) {
 
       {hasSummary ? (
         <dl className="gd__summary">
+          {s.setup && <div><dt>Setup</dt><dd>{s.setup}</dd></div>}
+          {s.startingEvent && <div><dt>Starting event</dt><dd>{s.startingEvent}</dd></div>}
           <div><dt>Victims saved</dt><dd>{s.victimsSaved || 0}</dd></div>
           <div><dt>Victims died</dt><dd>{s.victimsDied || 0}</dd></div>
           {s.finale && <div><dt>Finale</dt><dd>{s.finale}</dd></div>}
@@ -191,6 +218,7 @@ export default function GameDetail({ entry, onUpdate }) {
           {s.darkPowers?.length > 0 && (
             <div><dt>Dark Powers</dt><dd>{s.darkPowers.map((d) => d.name + (d.power ? ` (${d.power})` : '')).join(', ')}</dd></div>
           )}
+          {s.events?.length > 0 && <div><dt>Events</dt><dd>{s.events.join(', ')}</dd></div>}
           {s.weapons?.length > 0 && <div><dt>Weapons</dt><dd>{s.weapons.join(', ')}</dd></div>}
           {s.terror?.length > 0 && <div><dt>Terror</dt><dd>{s.terror.join(', ')}</dd></div>}
         </dl>
@@ -203,7 +231,7 @@ export default function GameDetail({ entry, onUpdate }) {
           <h4 className="gd__timeline-head">Turn-by-turn</h4>
           {turns.map((t) => (
             <div key={t.turn} className="gd__turn">
-              <span className="gd__turn-num">Turn {t.turn}</span>
+              <span className="gd__turn-num">{t.turn === 0 ? 'Game start' : `Turn ${t.turn}`}</span>
               <ul className="gd__events">
                 {t.events.map((ev) => (
                   <li key={ev.id} className={'gd__event gd__event--' + ev.type}>

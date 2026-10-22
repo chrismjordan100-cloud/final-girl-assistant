@@ -74,11 +74,12 @@ export function useTurnState() {
   // Append an event to the chronological stream, stamped with the current
   // turn + phase. `phaseName` is stored alongside `phaseId` so later readers
   // (incl. a future AI summary) don't need the rules file to make sense of it.
-  const addEvent = useCallback(({ type, detail = '', meta = {}, phaseId, phaseName }) => {
+  const addEvent = useCallback(({ type, detail = '', meta = {}, phaseId, phaseName, turn }) => {
     const cur = read();
     const event = {
       id: `e-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
-      turn: cur.turn,
+      // Setup / starting-event records pass turn: 0 so they sit before Turn 1.
+      turn: turn != null ? turn : cur.turn,
       phaseId: phaseId ?? null,
       phaseName: phaseName ?? null,
       type,
