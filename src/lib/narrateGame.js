@@ -176,6 +176,8 @@ export function narrateGame(entry, { variant = 0 } = {}) {
   let darkPowerSeen = false;
   let powerEnabled = false;
 
+  const totalTurns = turnNumbers.length;
+  let turnOrdinalPos = 0; // position among played turns (0-based), for pacing
   for (const turn of turnNumbers) {
     const evs = byTurn.get(turn);
     const sentences = [];
@@ -184,13 +186,26 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     const locE = evs.find((e) => e.type === 'location');
     const where = locE && locE.detail ? locE.detail : null;
     const moveBeat = pick(moveBeats);
-    if (chance(0.5)) {
-      const opener = pick([`Turn ${turn}.`, `The ${ordinal(turn)} turn came.`, `The ${ordinal(turn)} turn.`]);
-      sentences.push(where ? `${opener} ${capitalize(moveBeat)} — ${where}.` : `${opener} ${capitalize(moveBeat)}.`);
+
+    // Immersive transition instead of a turn number. Varies by where we are in
+    // the game (opening beats, the thick of it, the closing stretch) so the
+    // story reads with momentum rather than "Turn 3."
+    const frac = totalTurns > 1 ? turnOrdinalPos / (totalTurns - 1) : 0;
+    let transitions;
+    if (turnOrdinalPos === 0) {
+      transitions = ['At first,', 'To begin with,', 'Early on,', 'In the first of it,'];
+    } else if (frac < 0.5) {
+      transitions = ['Then,', 'Next,', 'Not long after,', 'A little while later,', 'Soon enough,'];
+    } else if (frac < 0.85) {
+      transitions = ['As the night wore on,', 'Later,', 'Deeper into it,', 'The hours turned, and', 'By now,'];
     } else {
-      const lead = pick([`By turn ${turn},`, `On the ${ordinal(turn)} turn,`, `Turn ${turn} —`]);
-      sentences.push(where ? `${lead} ${moveBeat} — ${where}.` : `${lead} ${moveBeat}.`);
+      transitions = ['Near the end,', 'As it all closed in,', 'In the last of it,', 'Toward the finish,'];
     }
+    const trans = pick(transitions);
+    sentences.push(where
+      ? `${trans} ${moveBeat} — ${where}.`
+      : `${trans} ${moveBeat}.`);
+    turnOrdinalPos += 1;
 
     for (const e of evs) {
       const f = flavourFor(e);
@@ -344,12 +359,4 @@ export function narrateGame(entry, { variant = 0 } = {}) {
   }
 
   return text;
-}
-
-function ordinal(n) {
-  const words = [
-    '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh',
-    'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth',
-  ];
-  return words[n] || `${n}th`;
 }
