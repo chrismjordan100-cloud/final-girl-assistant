@@ -68,6 +68,13 @@ function wordCount(s) {
 function lower(s) {
   return s ? s.charAt(0).toLowerCase() + s.slice(1) : s;
 }
+/* Wrap a card name in quotes, but not if it already starts/ends with a quote
+   (some card names are stored with their own quotation marks). */
+function q(name) {
+  const s = String(name || '').trim();
+  if (/^["'“”].*["'“”]$/.test(s)) return s; // already quoted
+  return `"${s}"`;
+}
 
 export function narrateGame(entry, { variant = 0 } = {}) {
   if (!entry) return '';
@@ -123,6 +130,34 @@ export function narrateGame(entry, { variant = 0 } = {}) {
       add(pick(['he closed the distance frighteningly fast', 'he moved quicker than anything that size should', 'the gap between them shrank']));
     }
 
+    // --- Killer targeting / attacking / moving (common on Terror/Event) ---
+    if (/target (final girl|victim).*attack|> ?attack|killer.*attack/.test(txt)) {
+      add(pick(['the killer lunged, blade-first', 'he turned and struck without warning', 'he picked a target and went for the kill']));
+    }
+    if (/all victims move.*(towards?|toward).*(enemy|killer)|victims? move.*closer.*killer/.test(txt)) {
+      add(pick(['the survivors drifted, dazed, toward the very thing hunting them', 'the others wandered helplessly into danger', 'the victims stumbled closer to the killer, as if called']));
+    }
+    if (/move the killer|killer moves?|killer.*\d+ spaces?/.test(txt) && !/victims? move/.test(txt)) {
+      add(pick(['the killer prowled to new ground', 'he shifted position, hunting', 'he moved, and she had to guess where to']));
+    }
+    if (/draw .*(next )?terror|discard and draw/.test(txt)) {
+      add(pick(['the night hurried on, one dread folding into the next', 'the terror came faster than she could answer it', 'the dark kept dealing, giving her no breath']));
+    }
+    if (/target.*final girl|killer will target you/.test(txt) && !/victim/.test(txt)) {
+      add(pick(['and his attention fixed on her', 'and suddenly she was the one he wanted', 'and the hunt narrowed to her alone']));
+    }
+
+    // --- Board / movement hindrances ---
+    if (/roadblock|block.*exit|exit.*block|lock.*exit/.test(txt)) {
+      add(pick(['a way out slammed shut', 'an escape route was cut off', 'the map closed in, one exit gone']));
+    }
+    if (/reduce.*move|moves?.*reduced|move.*1 fewer|cannot move/.test(txt)) {
+      add(pick(['her legs felt like lead, every step costing more', 'moving got harder, as if the air itself fought her', 'she could not get where she needed fast enough']));
+    }
+    if (/lose|discard.*(item|card)|remove.*item/.test(txt) && subject !== 'girl') {
+      add(pick(['something she was counting on slipped out of reach', 'she lost ground she could not spare']));
+    }
+
     // --- Victims ---
     if (/place \d* ?.*victims?|add \d* ?victims?|spawn.*victims?/.test(txt)) {
       add(pick(['more lost souls stumbled into the dark around her', 'the board filled with fresh prey', 'more victims appeared, more lives to try to save']));
@@ -150,9 +185,24 @@ export function narrateGame(entry, { variant = 0 } = {}) {
       }
     }
 
-    if (frags.length === 0) return null;
-    // Keep it to one or two fragments so it stays prose, not a list.
-    return frags.slice(0, 2).join(', ');
+    if (frags.length > 0) {
+      // Keep it to one or two fragments so it stays prose, not a list.
+      return frags.slice(0, 2).join(', ');
+    }
+    // No specific pattern matched. For the killer's/night's cards (terror,
+    // event, dark-power, finale) still convey that SOMETHING happened — just
+    // naming the card tells the reader nothing. For the girl's own items we
+    // return null (we won't invent an effect she gained).
+    if (subject === 'killer' && c.effect) {
+      return pick([
+        'and the night bent a little further against her',
+        'and the rules shifted in the killer\u2019s favour',
+        'and whatever it did, it did not help her',
+        'and the odds tilted the wrong way again',
+        'and the dark pressed its advantage',
+      ]);
+    }
+    return null;
   };
 
   const sheWords = [she, 'she', 'she'];
@@ -218,7 +268,7 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     const startE = events.find((e) => e.type === 'event-start');
     if (startE && startE.detail) {
       const f = flavourFor(startE);
-      p.push(`From the first moment the night had its own ideas — "${startE.detail}". ${f ? `${f} ` : ''}She filed it away and kept going.`);
+      p.push(`From the first moment the night had its own ideas — . ${f ? `${f} ` : ''}She filed it away and kept going.`);
     }
     const setupE = events.find((e) => e.type === 'setup');
     if (setupE && setupE.detail) {
@@ -330,18 +380,20 @@ export function narrateGame(entry, { variant = 0 } = {}) {
           darkPowerSeen = true;
           const eff = narrativeEffect(e, 'killer');
           sentences.push(
-            `${killer} changed. "${e.detail}" woke in him${e.meta && e.meta.power === 'epic' ? ' — and it was the epic kind, the very worst of him' : ''}` +
+            `${killer} changed.  woke in him${e.meta && e.meta.power === 'epic' ? ' — and it was the epic kind, the very worst of him' : ''}` +
             (eff ? ` — ${eff} — ` : ', ') +
             `and she felt the odds tilt further from her, the room grow colder, the fight grow longer.`
           );
           break;
         }
         case 'event': {
-          const eff = narrativeEffect(e, 'girl');
+          // Events are the night acting against her — treat as 'killer' so the
+          // killer-side patterns and the generic menace fallback apply.
+          const eff = narrativeEffect(e, 'killer');
           const base = pick([
-            `the night threw "${e.detail}" at her, because of course it did`,
-            `"${e.detail}" came out of nowhere and rewrote the rules mid-stride`,
-            `"${e.detail}" landed, one more thing the dark had been holding back`,
+            `the night threw  at her, because of course it did`,
+            ` came out of nowhere and rewrote the rules mid-stride`,
+            ` landed, one more thing the dark had been holding back`,
           ]);
           sentences.push(capitalize(base) + (eff ? ` — ${eff}. ` : '. ') + pick([
             `She adjusted, because stopping wasn't an option.`,
@@ -353,11 +405,11 @@ export function narrateGame(entry, { variant = 0 } = {}) {
         case 'terror': {
           const eff = narrativeEffect(e, 'killer');
           const base = pick([
-            `Terror rippled out — "${e.detail}"`,
-            `The Terror deck turned up "${e.detail}"`,
-            `"${e.detail}" crept in from the edges of the dark`,
-            `Then came "${e.detail}"`,
-            `The night tightened its grip: "${e.detail}"`,
+            `Terror rippled out — `,
+            `The Terror deck turned up `,
+            ` crept in from the edges of the dark`,
+            `Then came `,
+            `The night tightened its grip: `,
           ]);
           const reaction = pick([
             `and ${nextShe()} braced against it and pressed on`,
@@ -377,8 +429,8 @@ export function narrateGame(entry, { variant = 0 } = {}) {
         case 'finale': {
           const eff = narrativeEffect(e, 'killer');
           sentences.push(pick([
-            `And then everything narrowed to one thing: the Finale. "${e.detail}". No more hiding, no more Terror to draw, no more waiting — just her and him and the end of it, one way or the other.`,
-            `The last act opened — "${e.detail}" — and ${place} itself seemed to hold its breath, waiting to see which of them would still be standing.`,
+            `And then everything narrowed to one thing: the Finale. . No more hiding, no more Terror to draw, no more waiting — just her and him and the end of it, one way or the other.`,
+            `The last act opened —  — and ${place} itself seemed to hold its breath, waiting to see which of them would still be standing.`,
           ]) + (eff ? ` Now ${eff}, and there was nothing left to do but face it.` : ''));
           break;
         }
