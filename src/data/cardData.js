@@ -129,6 +129,22 @@ export function getItems(appLocationId) {
   return slimList(list);
 }
 
+/* Terror cards are drawn from the killer's deck, with location decks adding
+   their own. Combine both, de-duplicated by name. */
+export function getTerror(appKillerId, appLocationId) {
+  const fromKiller = killerRecord(appKillerId)?.terror_cards || [];
+  const fromLocation = locationRecord(appLocationId)?.terror_cards || [];
+  const seen = new Set();
+  const combined = [];
+  for (const c of [...fromKiller, ...fromLocation]) {
+    const key = String(c.name).toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    combined.push(c);
+  }
+  return slimList(combined);
+}
+
 /* A combined options list for a given capture type, given the current combo.
    Returns [{ id, name, effect }]. Empty array = we have no known cards, so
    the UI should just show the free-text field. */
@@ -147,6 +163,8 @@ export function cardOptionsFor(type, { killerId, locationId } = {}) {
       return getEvents(locationId);
     case 'setup':
       return getSetupCards(locationId);
+    case 'terror':
+      return getTerror(killerId, locationId);
     case 'weapon':
       // Weapons are a subset of items tagged as weapons; fall back to all items.
       return getItems(locationId);
