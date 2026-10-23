@@ -138,8 +138,11 @@ export default function TurnTracker() {
       phaseId: phase.id,
       phaseName: phase.name.replace(' Phase', ''),
     });
-    // Stay in the same category with a cleared field so you can log several of
-    // the same kind quickly (e.g. two items found this turn). "Done" exits.
+    // Return to the button grid (the "tableau") after logging, so it's always
+    // visible and the next item is a clean, unambiguous fresh pick. (Previously
+    // it stayed in the same category, which could leave a confusing stuck
+    // input on some mobile browsers.)
+    setPicking(null);
     setEventText('');
   }
 
@@ -353,7 +356,7 @@ export default function TurnTracker() {
                 Log
               </button>
               <button type="button" className="fg-btn fg-btn--small" onClick={cancelPick}>
-                Done
+                Cancel
               </button>
             </div>
           ) : (
