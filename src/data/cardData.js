@@ -68,14 +68,22 @@ function locationRecord(appLocationId) {
   return cardId ? locationsById[cardId] : null;
 }
 
-// Normalise a raw card record down to the fields the UI needs.
+// Normalise a raw card record down to the fields the UI + narrator need.
 function slim(card) {
   if (!card) return null;
   return {
     id: card.id,
     name: card.name,
     effect: card.effect ?? null,
+    // Atmospheric one-liner (unofficial, from the dataset) — used to embellish
+    // the game story and, optionally, card detail.
+    flavour: card.flavour_unofficial ?? null,
     epic: card.epic ?? undefined,
+    // Extra detail for item cards (null for non-items).
+    tags: card.tags ?? undefined,
+    range: card.range ?? undefined,
+    damage: card.damage ?? undefined,
+    hands: card.hands ?? undefined,
   };
 }
 function slimList(arr) {
@@ -148,4 +156,22 @@ export function effectForName(type, name, combo) {
   const opts = cardOptionsFor(type, combo || {});
   const hit = opts.find((o) => o.name.toLowerCase() === String(name).toLowerCase());
   return hit ? hit.effect : null;
+}
+
+/* Find a known card (any of a type's options) by name — returns the full slim
+   record { id, name, effect, flavour, ... } or null. Used by the narrator to
+   pull flavour/effect for a card the player logged by name. */
+export function findCard(type, name, combo) {
+  if (!name) return null;
+  const opts = cardOptionsFor(type, combo || {});
+  return opts.find((o) => o.name.toLowerCase() === String(name).toLowerCase()) || null;
+}
+
+/* The killer's unofficial flavour line (atmosphere), if present. */
+export function killerFlavour(appKillerId) {
+  return killerRecord(appKillerId)?.flavour_unofficial ?? null;
+}
+/* The location's unofficial flavour line. */
+export function locationFlavour(appLocationId) {
+  return locationRecord(appLocationId)?.flavour_unofficial ?? null;
 }

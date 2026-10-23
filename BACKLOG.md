@@ -4,34 +4,34 @@ _Auto-generated from the codebase by `scripts/update-backlog.mjs` — do not edi
 
 **RAG key:** 🟢 built & shipped · 🟡 partially built / in progress · 🔴 not started
 
-_RAG last synced to code: 2026-10-22._
+_RAG last synced to code: 2026-10-23._
 
 ## Backlog
 
-### 🔴 Real flavour text on cards
+### 🟡 Real flavour text on cards
 
 Find and add REAL flavour text (lore/atmosphere) to the card detail dataset
 (`src/data/cards.json`). The current data has rules `effect` text but excludes
 flavour. Source it and add a `flavour` field per card so the app — and the game
 story generator — can draw on it.
 
-**Status:** 🔴 not started.
+**Status:** 🟡 partially built / in progress.
 
-### 🔴 Update card detail for the extra data
+### 🟡 Update card detail for the extra data
 
 The card dataset has richer fields (tags, range/damage/hands, bonus_health,
 epic flags, start_health/horror, etc.). Surface the useful ones in the places
 that show card detail (CardPicker, Game Log detail, Codex if relevant).
 
-**Status:** 🔴 not started.
+**Status:** 🟡 partially built / in progress.
 
-### 🔴 Richer game summary using the extra card detail
+### 🟢 Richer game summary using the extra card detail
 
 Feed the extra card-detail JSON (effects, flavour, tags) into the game story
 generator (`src/lib/narrateGame.js`) so recaps describe what cards actually did,
 not just name them. Pairs naturally with the Tier 2 AI recap.
 
-**Status:** 🔴 not started.
+**Status:** 🟢 built & shipped.
 
 ### 🔴 Rich-data trends in MI / Stats
 

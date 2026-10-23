@@ -10,8 +10,21 @@
    A future Tier 2 (real LLM) can reuse the same structured input; see BACKLOG.
    ========================================================================== */
 
-import { narration } from '../data/games.js';
 import { buildTimeline } from './gameSummary.js';
+import { findCard, killerFlavour, locationFlavour } from '../data/cardData.js';
+
+/* Map an event type to the card type the card database understands, so we can
+   look up the logged card's flavour/effect for embellishment. */
+const EVENT_TO_CARD_TYPE = {
+  'item-found': 'item-found',
+  'item-used': 'item-used',
+  'dark-power': 'dark-power',
+  finale: 'finale',
+  event: 'event',
+  'event-start': 'event-start',
+  setup: 'setup',
+  weapon: 'weapon',
+};
 
 /* Deterministic PRNG from a string seed so a game's story is stable. */
 function seededRandom(seedStr) {
@@ -41,27 +54,38 @@ export function narrateGame(entry, { variant = 0 } = {}) {
   const place = entry.locationName || 'the dark';
   const rnd = seededRandom(`${entry.id || 'game'}:${variant}`);
   const pick = (arr) => arr[Math.floor(rnd() * arr.length)];
+  const chance = (p) => rnd() < p;
+  const combo = { killerId: entry.killerId, locationId: entry.locationId };
 
-  // Flavour snippets (optional embellishment) keyed by the data file's ids.
-  // We match loosely on the name since the narration map is keyed by slug.
-  const locFlavour = Object.values(narration.locations || {});
-  const killFlavour = Object.values(narration.killers || {});
+  // Pull atmospheric flavour for this killer/location from the card dataset.
+  const kFlav = killerFlavour(entry.killerId);
+  const lFlav = locationFlavour(entry.locationId);
+
+  // Look up the flavour line for a logged card (by type + name), if we know it.
+  const flavourFor = (e) => {
+    const t = EVENT_TO_CARD_TYPE[e.type];
+    if (!t || !e.detail) return null;
+    const card = findCard(t, e.detail, combo);
+    return card ? card.flavour : null;
+  };
 
   const out = [];
 
-  // --- Opening ---
+  // --- Opening: location flavour sets the scene, then the confrontation. ---
+  if (lFlav) out.push(lFlav);
   const openers = [
     `${she} arrived at ${place}. ${killer} was already waiting.`,
     `It began at ${place}. ${she} against ${killer} — one of them would not see morning.`,
     `${place}. ${she} knew the stories about ${killer}. Tonight she would live them.`,
   ];
   out.push(pick(openers));
+  if (kFlav) out.push(kFlav);
 
-  // Setup / starting event colour.
-  const setupE = events.find((e) => e.type === 'setup');
+  // Setup / starting event colour, embellished with the card's flavour.
   const startE = events.find((e) => e.type === 'event-start');
   if (startE && startE.detail) {
-    out.push(`The night opened on "${startE.detail}".`);
+    const f = flavourFor(startE);
+    out.push(`The night opened on "${startE.detail}".${f ? ` ${f}` : ''}`);
   }
 
   // --- Body: walk the timeline, turn by turn ---
@@ -75,7 +99,10 @@ export function narrateGame(entry, { variant = 0 } = {}) {
   const foundSoFar = new Set();
   for (const [turn, evs] of [...byTurn.entries()].sort((a, b) => a[0] - b[0])) {
     const parts = [];
+    const turnFlavours = []; // card flavour lines worth surfacing this turn
     for (const e of evs) {
+      const f = flavourFor(e);
+      if (f) turnFlavours.push(f);
       switch (e.type) {
         case 'item-found':
           foundSoFar.add(e.detail);
@@ -136,7 +163,13 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     }
     if (parts.length) {
       const lead = pick([`Turn ${turn}:`, `By turn ${turn},`, `On turn ${turn},`]);
-      out.push(`${lead} ${joinNaturally(parts)}.`);
+      let sentence = `${lead} ${joinNaturally(parts)}.`;
+      // Embellish with one of this turn's card flavour lines, some of the time,
+      // so the recap breathes without repeating a flavour every single turn.
+      if (turnFlavours.length && chance(0.6)) {
+        sentence += ` ${pick(turnFlavours)}`;
+      }
+      out.push(sentence);
     }
   }
 
@@ -154,12 +187,6 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     ]));
   } else {
     out.push(`The game was abandoned before its end — ${she}'s fate at ${place} left untold.`);
-  }
-
-  // A closing flavour sting (optional).
-  if (rnd() < 0.5 && killFlavour.length) {
-    const sting = pick(killFlavour);
-    if (sting) out.push(trimSentence(sting));
   }
 
   return out.join(' ');
@@ -180,10 +207,4 @@ function joinNaturally(parts) {
 
 function capitalize(s) {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
-}
-
-/* Take just the first sentence of a flavour blurb, for a short sting. */
-function trimSentence(text) {
-  const m = String(text).match(/^[^.!?]*[.!?]/);
-  return m ? m[0].trim() : String(text).slice(0, 120);
 }

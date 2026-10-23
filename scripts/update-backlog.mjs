@@ -36,11 +36,13 @@ const ITEMS = [
       'story generator — can draw on it.',
     check() {
       const cards = read('src/data/cards.json');
+      // Official flavour field = green; unofficial atmosphere lines = amber
+      // (partial — we have colour, but not verified official card flavour).
       if (/"flavour"\s*:/.test(cards)) {
-        // Green only if a decent share of cards have it; amber if just a few.
-        const flavourCount = (cards.match(/"flavour"\s*:/g) || []).length;
-        return flavourCount > 50 ? 'green' : 'amber';
+        const n = (cards.match(/"flavour"\s*:/g) || []).length;
+        return n > 50 ? 'green' : 'amber';
       }
+      if (/"flavour_unofficial"\s*:/.test(cards)) return 'amber';
       return 'red';
     },
   },

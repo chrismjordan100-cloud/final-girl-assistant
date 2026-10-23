@@ -600,3 +600,10 @@
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 .card-picker__count { font-size: 0.72rem; color: var(--text-dim); font-style: italic; }
+.card-picker__flavour {
+  font-family: var(--font-type);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--fg-bone-dim);
+  padding: 0.2rem 0.5rem;
+}

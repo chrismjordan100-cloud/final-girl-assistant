@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { cardOptionsFor, effectForName } from '../data/cardData.js';
+import { cardOptionsFor, findCard } from '../data/cardData.js';
 
 /* A text input backed by a <datalist> of the known card names for the current
    capture type + game combo. You get autocomplete/dropdown suggestions for
@@ -25,7 +25,9 @@ export default function CardPicker({
 }) {
   const listId = useId();
   const options = cardOptionsFor(type, combo || {});
-  const effect = effectForName(type, value, combo);
+  const matched = findCard(type, value, combo);
+  const effect = matched ? matched.effect : null;
+  const flavour = matched ? matched.flavour : null;
   const known = options.length > 0;
 
   return (
@@ -49,7 +51,7 @@ export default function CardPicker({
           ))}
         </datalist>
       )}
-      {!effect && (
+      {!matched && (
         <span className="card-picker__count">
           {known
             ? `${options.length} known card${options.length === 1 ? '' : 's'} to pick from — or type any name (e.g. a new expansion)`
@@ -57,6 +59,7 @@ export default function CardPicker({
         </span>
       )}
       {effect && <span className="card-picker__effect">{effect}</span>}
+      {flavour && <span className="card-picker__flavour">{flavour}</span>}
     </span>
   );
 }
