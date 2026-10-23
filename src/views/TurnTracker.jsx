@@ -20,6 +20,7 @@ const EVENT_TYPES = [
   { type: 'event', label: 'Event card', glyph: '\u26A1', tone: 'default', needsText: true, placeholder: 'Event card name / effect' },
   { type: 'terror', label: 'Terror card', glyph: '\uD83C\uDCCF', tone: 'default', needsText: true, placeholder: 'Terror card / effect' },
   { type: 'weapon', label: 'Weapon', glyph: '\uD83D\uDDE1', tone: 'default', needsText: true, placeholder: 'Weapon name' },
+  { type: 'location', label: 'Where she is', glyph: '\uD83D\uDCCD', tone: 'default', needsText: true, placeholder: 'Where she ended the turn (free text)' },
   { type: 'note', label: 'Note', glyph: '\u270E', tone: 'default', needsText: true, placeholder: 'Anything worth remembering' },
 ];
 

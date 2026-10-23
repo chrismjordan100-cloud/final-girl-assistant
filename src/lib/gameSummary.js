@@ -21,6 +21,7 @@ export const SUMMARY_EVENT_TYPES = [
   'event',
   'terror',
   'weapon',
+  'location',
   'note',
 ];
 

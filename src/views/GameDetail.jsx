@@ -223,7 +223,11 @@ export default function GameDetail({ entry, onUpdate }) {
               &#8635; Reshuffle
             </button>
           </div>
-          <p className="gd__story-text">{story}</p>
+          <div className="gd__story-text">
+            {story.split('\n\n').map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
           <p className="gd__story-note fg-type">
             Auto-written from this game&rsquo;s events. (A richer AI recap is on the backlog.)
           </p>

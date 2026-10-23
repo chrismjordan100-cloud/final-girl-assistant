@@ -119,9 +119,24 @@ function buildEventStream({ killer, location, outcome, turns, startedAt, rnd }) 
   const panic = PHASES[3];
   const upkeep = PHASES[4];
 
+  // Generic "where she ended the turn" phrases for demo colour (real games
+  // use free text). Kept location-agnostic so they fit any scenario.
+  const SPOTS = [
+    'near the entrance, back to the wall',
+    'deeper inside, where the light gave out',
+    'by a window, watching the dark',
+    'cornered against the far side',
+    'in the open, exposed and moving fast',
+    'somewhere she hoped he hadn\u2019t seen',
+    'close to the way out, not daring to take it yet',
+  ];
+
   for (let t = 1; t <= totalTurns; t++) {
     const lateGame = t >= Math.ceil(totalTurns * 0.6);
     const lastTurns = t >= totalTurns - 1;
+
+    // Where she ended the turn (location note) — most turns.
+    if (chance(0.75)) add(t, action, 'location', pick(SPOTS));
 
     // Action phase — find items, save victims, occasional event.
     if (chance(0.7)) {

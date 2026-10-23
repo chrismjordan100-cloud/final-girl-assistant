@@ -368,7 +368,9 @@
   margin: 0 0 0.5rem;
   font-family: var(--font-type);
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text);
 }
+.gd__story-text p { margin: 0 0 0.8rem; }
+.gd__story-text p:last-child { margin-bottom: 0; }
 .gd__story-note { margin: 0; font-size: 0.74rem; }
