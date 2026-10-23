@@ -134,6 +134,28 @@ const ITEMS = [
       return /CardPicker/.test(read('src/views/GameDetail.jsx')) ? 'green' : 'red';
     },
   },
+  {
+    id: 'voice-narration',
+    title: 'Voice: better narrator + read the game story aloud',
+    body:
+      'Two related voice improvements:\n' +
+      '1. Improve the start-of-game narration voice (the current Web Speech / system\n' +
+      '   voice sounds poor — "crap voice"). Pick a better voice, tune rate/pitch, or\n' +
+      '   move to a nicer TTS. Relevant code: src/hooks/useNarration.js.\n' +
+      '2. NEW: after a game is saved, let the voice read the generated story\n' +
+      '   narrative aloud — a "read me the recap" button on the Game Log detail\n' +
+      '   (and/or an auto-offer right after Save result). Reuse the narrateGame\n' +
+      '   output as the text to speak.\n' +
+      'Note: if the Tier 2 AI recap lands, prefer speaking that richer text. A nicer\n' +
+      'cloud TTS would also pair with the user-supplied-API-key approach noted above.',
+    check() {
+      // Green when the story narrative can be spoken (narration wired into the
+      // Game Log detail / story). Today narration is only the start-of-game read.
+      const gd = read('src/views/GameDetail.jsx');
+      const speaksStory = /useNarration|speak\s*\(/.test(gd);
+      return speaksStory ? 'green' : 'red';
+    },
+  },
 ];
 
 const RAG = { green: '🟢', amber: '🟡', red: '🔴' };

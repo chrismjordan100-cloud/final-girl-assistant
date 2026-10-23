@@ -75,6 +75,21 @@ benefit from the known-card dropdowns.
 
 **Status:** 🔴 not started.
 
+### 🔴 Voice: better narrator + read the game story aloud
+
+Two related voice improvements:
+1. Improve the start-of-game narration voice (the current Web Speech / system
+   voice sounds poor — "crap voice"). Pick a better voice, tune rate/pitch, or
+   move to a nicer TTS. Relevant code: src/hooks/useNarration.js.
+2. NEW: after a game is saved, let the voice read the generated story
+   narrative aloud — a "read me the recap" button on the Game Log detail
+   (and/or an auto-offer right after Save result). Reuse the narrateGame
+   output as the text to speak.
+Note: if the Tier 2 AI recap lands, prefer speaking that richer text. A nicer
+cloud TTS would also pair with the user-supplied-API-key approach noted above.
+
+**Status:** 🔴 not started.
+
 ## Done (🟢 shipped)
 - Hosting on GitHub Pages with auto-deploy on push.
 - Supabase cloud sync of game log across devices.
