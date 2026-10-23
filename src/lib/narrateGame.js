@@ -91,6 +91,33 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     return c ? c.flavour : null;
   };
 
+  // A short, readable snippet of what a card actually DOES, drawn from its
+  // rules effect text — so the story can describe the effect, not just name
+  // the card. We take the first sentence/clause, trim rules jargon lightly,
+  // and cap the length so it reads as prose rather than a rulebook dump.
+  const effectFor = (e) => {
+    const t = EVENT_TO_CARD_TYPE[e.type];
+    if (!t || !e.detail) return null;
+    const c = findCard(t, e.detail, combo);
+    if (!c || !c.effect) return null;
+    let s = String(c.effect).trim();
+    // First sentence only (keep it punchy).
+    const firstSentence = s.match(/^[^.!?]*[.!?]/);
+    if (firstSentence) s = firstSentence[0];
+    s = s.replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '');
+    // Cap length so a wordy card doesn't swamp the prose.
+    if (s.length > 120) {
+      s = s.slice(0, 117).replace(/\s+\S*$/, '');
+      s = s.replace(/[,;:\s]+$/, ''); // no dangling punctuation before the ellipsis
+      s += '…';
+    }
+    return s || null;
+  };
+  // The effect as a clause. Game effects often start with a name or an
+  // imperative ("Hans now begins…", "Roll 2 dice…"), which read better in
+  // their natural case than forced lowercase, so we keep the original casing.
+  const effectClause = (e) => effectFor(e);
+
   const sheWords = [she, 'she', 'she'];
   const nextShe = () => pick(sheWords);
 
@@ -220,15 +247,17 @@ export function narrateGame(entry, { variant = 0 } = {}) {
             ])) + '.'
           );
           break;
-        case 'item-used':
-          sentences.push(
-            capitalize(pick([
-              `when the moment came, ${nextShe()} brought the ${e.detail} to bear on ${killer} and made it count`,
-              `${nextShe()} put the ${e.detail} to work — no finesse, just need`,
-              `the ${e.detail} came up and ${nextShe()} did not hesitate, because hesitation was how the others had died`,
-            ])) + '.'
-          );
+        case 'item-used': {
+          const eff = effectClause(e);
+          const base = pick([
+            `when the moment came, ${nextShe()} brought the ${e.detail} to bear on ${killer} and made it count`,
+            `${nextShe()} put the ${e.detail} to work — no finesse, just need`,
+            `the ${e.detail} came up and ${nextShe()} did not hesitate, because hesitation was how the others had died`,
+          ]);
+          // Describe what it does, not just that she used it.
+          sentences.push(capitalize(base) + (eff ? ` — ${eff}.` : '.'));
           break;
+        }
         case 'victim-died':
           sentences.push(pick([
             `A scream tore across ${place} and then stopped, cut clean off. ${killer} had taken another, and there was nothing she could do but keep breathing.`,
@@ -260,30 +289,62 @@ export function narrateGame(entry, { variant = 0 } = {}) {
           ]));
           break;
         }
-        case 'dark-power':
+        case 'dark-power': {
           darkPowerSeen = true;
+          const eff = effectClause(e);
           sentences.push(
-            `${killer} changed. "${e.detail}" woke in him${e.meta && e.meta.power === 'epic' ? ' — and it was the epic kind, the very worst of him' : ''}, and she felt the odds tilt further from her, the room grow colder, the fight grow longer.`
+            `${killer} changed. "${e.detail}" woke in him${e.meta && e.meta.power === 'epic' ? ' — and it was the epic kind, the very worst of him' : ''}` +
+            (eff ? ` — ${eff} — ` : ', ') +
+            `and she felt the odds tilt further from her, the room grow colder, the fight grow longer.`
           );
           break;
-        case 'event':
-          sentences.push(pick([
-            `Then the night threw "${e.detail}" at her, because of course it did; nothing here was ever going to be simple.`,
-            `"${e.detail}" came out of nowhere and rewrote the rules mid-stride, and she adjusted because stopping wasn't an option.`,
+        }
+        case 'event': {
+          const eff = effectClause(e);
+          const base = pick([
+            `the night threw "${e.detail}" at her, because of course it did`,
+            `"${e.detail}" came out of nowhere and rewrote the rules mid-stride`,
+            `"${e.detail}" landed, one more thing the dark had been holding back`,
+          ]);
+          sentences.push(capitalize(base) + (eff ? `: ${eff}. ` : '. ') + pick([
+            `She adjusted, because stopping wasn't an option.`,
+            `Nothing here was ever going to be simple.`,
+            `She took it on the chin and kept going.`,
           ]));
           break;
-        case 'terror':
-          sentences.push(`Terror rippled out — "${e.detail}" — and ${nextShe()} rode it out, teeth gritted, and kept moving.`);
+        }
+        case 'terror': {
+          const eff = effectClause(e);
+          const base = pick([
+            `Terror rippled out — "${e.detail}"`,
+            `The Terror deck turned up "${e.detail}"`,
+            `"${e.detail}" crept in from the edges of the dark`,
+            `Then came "${e.detail}"`,
+            `The night tightened its grip: "${e.detail}"`,
+          ]);
+          const reaction = pick([
+            `and ${nextShe()} braced against it and pressed on`,
+            `and ${nextShe()} swallowed the fear and kept moving`,
+            `and ${nextShe()} refused to let it root her to the spot`,
+            `and ${nextShe()} weathered it, barely`,
+            `and it took everything she had not to run blind`,
+          ]);
+          sentences.push(`${base}${eff ? ` — ${eff}` : ''} — ${reaction}.`);
           break;
-        case 'weapon':
-          sentences.push(`${capitalize(nextShe())} readied the ${e.detail}, knuckles white, and told herself it would be enough.`);
+        }
+        case 'weapon': {
+          const eff = effectClause(e);
+          sentences.push(`${capitalize(nextShe())} readied the ${e.detail}, knuckles white` + (eff ? `; ${eff}.` : `, and told herself it would be enough.`));
           break;
-        case 'finale':
+        }
+        case 'finale': {
+          const eff = effectClause(e);
           sentences.push(pick([
             `And then everything narrowed to one thing: the Finale. "${e.detail}". No more hiding, no more Terror to draw, no more waiting — just her and him and the end of it, one way or the other.`,
             `The last act opened — "${e.detail}" — and ${place} itself seemed to hold its breath, waiting to see which of them would still be standing.`,
-          ]));
+          ]) + (eff ? ` From here on, ${eff}.` : ''));
           break;
+        }
         case 'note':
           if (e.detail) sentences.push(capitalize(e.detail) + (/[.!?]$/.test(e.detail) ? '' : '.'));
           break;
