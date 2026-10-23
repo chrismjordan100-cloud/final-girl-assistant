@@ -156,6 +156,20 @@ const ITEMS = [
       return speaksStory ? 'green' : 'red';
     },
   },
+  {
+    id: 'extreme-horror-dice',
+    title: 'Extreme Horror Mode dice track',
+    body:
+      'The Turn Tracker now computes Horror Roll dice from the STANDARD player\n' +
+      'board track (Horror 1 = 3 dice, 2–5 = 2 dice, 6 = 1 die). Extreme Horror\n' +
+      'mode uses a harsher track (and 5 Time per turn instead of 6). Add an\n' +
+      'Extreme-mode toggle and its dice mapping so the dice count is right in that\n' +
+      'mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.',
+    check() {
+      const tt = read('src/views/TurnTracker.jsx');
+      return /extreme/i.test(tt) ? 'green' : 'red';
+    },
+  },
 ];
 
 const RAG = { green: '🟢', amber: '🟡', red: '🔴' };

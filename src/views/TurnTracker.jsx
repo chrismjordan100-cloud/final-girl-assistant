@@ -29,6 +29,16 @@ const EVENT_TYPES = [
 
 const EVENT_LABELS = Object.fromEntries(EVENT_TYPES.map((e) => [e.type, e.label]));
 
+/* Dice rolled for a Horror Roll in STANDARD mode, read off the player board's
+   Horror track (inverse, non-linear — higher Horror = fewer dice):
+     Horror 1 -> 3 dice · Horror 2–5 -> 2 dice · Horror 6 -> 1 die.
+   Clamped for anything outside 1–6. Extreme Horror mode differs (backlog). */
+function diceForHorror(horror) {
+  if (horror <= 1) return 3;
+  if (horror >= 6) return 1;
+  return 2; // Horror 2, 3, 4, 5
+}
+
 /* A compact +/- counter for a live game value. */
 function Counter({ label, value, onChange, min = 0, max = 99, tone, hint }) {
   return (
@@ -71,7 +81,11 @@ export default function TurnTracker() {
   const phase = phases[phaseIndex];
   const extrasForPhase = phaseExtrasByPhase[phase.id] || [];
   const promptsForPhase = phase.prompts || [];
-  const dice = Math.max(1, horror); // always roll at least 1 die
+  // Dice for a Horror Roll come from the player board's Horror track, which is
+  // NOT equal to the Horror Level number — it's an inverse, non-linear mapping.
+  // Standard mode (not Extreme — see BACKLOG to add Extreme later):
+  //   Horror 1 -> 3 dice · Horror 2–5 -> 2 dice · Horror 6 -> 1 die.
+  const dice = diceForHorror(horror);
 
   // --- Per-turn event capture -------------------------------------------
   // When a type needs text, selecting it opens an inline input; otherwise the

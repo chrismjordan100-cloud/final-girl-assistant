@@ -255,7 +255,7 @@ export const phases = [
    -------------------------------------------------------------------------- */
 export const horrorRoll = {
   title: 'The Horror Roll',
-  dicePerLevel: 'Roll a number of dice equal to the current Horror Level.',
+  dicePerLevel: 'Your dice come from the Horror track on your player board — higher Horror means FEWER dice. Standard mode: Horror 1 = 3 dice, Horror 2\u20135 = 2 dice, Horror 6 = 1 die. (Playing most Action cards IS a Horror Roll. Some cards state their own dice count.)',
   results: [
     { range: '5\u20136', label: 'Success', tone: 'success' },
     { range: '3\u20134', label: 'Partial success', tone: 'partial', note: 'Discard 2 Action cards to convert one partial into a success (once per 3/4 rolled).' },

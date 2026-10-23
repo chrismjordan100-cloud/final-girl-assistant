@@ -90,6 +90,16 @@ cloud TTS would also pair with the user-supplied-API-key approach noted above.
 
 **Status:** 🔴 not started.
 
+### 🟢 Extreme Horror Mode dice track
+
+The Turn Tracker now computes Horror Roll dice from the STANDARD player
+board track (Horror 1 = 3 dice, 2–5 = 2 dice, 6 = 1 die). Extreme Horror
+mode uses a harsher track (and 5 Time per turn instead of 6). Add an
+Extreme-mode toggle and its dice mapping so the dice count is right in that
+mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.
+
+**Status:** 🟢 built & shipped.
+
 ## Done (🟢 shipped)
 - Hosting on GitHub Pages with auto-deploy on push.
 - Supabase cloud sync of game log across devices.
