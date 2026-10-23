@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { phases, horrorRoll } from '../data/rules.js';
 import { getKiller, getLocation, getFinalGirl, getPhaseExtras } from '../data/games.js';
 import { finalGirlUltimate } from '../data/cardData.js';
@@ -80,6 +80,25 @@ export default function TurnTracker() {
   const [picking, setPicking] = useState(null); // event type awaiting text, or null
   const [eventText, setEventText] = useState('');
   const [powerKind, setPowerKind] = useState('minor'); // for dark-power events
+  // On "quiet" phases the capture is collapsed behind a link; this opens it.
+  const [forceCaptureOpen, setForceCaptureOpen] = useState(false);
+
+  // Phases where things worth recording routinely happen: the capture bar is
+  // shown by default. Planning / Panic / Upkeep are mostly bookkeeping, so
+  // there it's collapsed behind a "log something anyway" link (never blocked).
+  const CAPTURE_PHASES = ['action', 'killer'];
+  const captureDefault = CAPTURE_PHASES.includes(phase.id);
+  const showCapture = captureDefault || forceCaptureOpen;
+
+  // Reset the in-progress pick and the forced-open state whenever the turn or
+  // phase changes, so advancing always lands back on the fresh button grid
+  // (never a stale input box left over from the previous phase/turn).
+  useEffect(() => {
+    setPicking(null);
+    setEventText('');
+    setForceCaptureOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [turn, phaseIndex]);
 
   const allEvents = events || [];
   const thisTurnEvents = allEvents.filter((e) => e.turn === turn);
@@ -279,7 +298,17 @@ export default function TurnTracker() {
         )}
 
         {/* Per-turn event capture — log what happened, when. Each event is
-            stamped with this turn + phase and feeds the end-of-game summary. */}
+            stamped with this turn + phase and feeds the end-of-game summary.
+            Shown by default in Action/Killer; collapsed elsewhere. */}
+        {!showCapture ? (
+          <button
+            type="button"
+            className="turn-events__open"
+            onClick={() => setForceCaptureOpen(true)}
+          >
+            &#43; Log something this phase
+          </button>
+        ) : (
         <div className="turn-events">
           <h3 className="turn-events__head">
             Log an event <span className="turn-events__ctx">Turn {turn} &middot; {phase.name.replace(' Phase', '')}</span>
@@ -367,6 +396,33 @@ export default function TurnTracker() {
             </ul>
           )}
         </div>
+        )}
+
+        {/* This turn's logged events — always visible (even on quiet phases),
+            so you can see and undo what you've captured this turn. */}
+        {!showCapture && thisTurnEvents.length > 0 && (
+          <ul className="turn-events__list turn-events__list--standalone">
+            {thisTurnEvents.map((e) => (
+              <li key={e.id} className={'te-item te-item--' + e.type}>
+                <span className="te-item__phase">{e.phaseName}</span>
+                <span className="te-item__text">
+                  {EVENT_LABELS[e.type] || e.type}
+                  {e.detail ? `: ${e.detail}` : ''}
+                  {e.meta && e.meta.power ? ` (${e.meta.power})` : ''}
+                </span>
+                <button
+                  type="button"
+                  className="te-item__del"
+                  onClick={() => removeEvent(e.id)}
+                  aria-label="Remove this event"
+                  title="Remove"
+                >
+                  &times;
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Core "don't forget" beats for this phase — every game. */}
         {promptsForPhase.length > 0 && (

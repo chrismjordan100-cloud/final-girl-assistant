@@ -491,6 +491,33 @@
   font-size: 0.8rem;
 }
 .turn-events__buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* Collapsed capture entry point on quiet phases (Planning/Panic/Upkeep). */
+.turn-events__open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 1.25rem;
+  background: transparent;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  padding: 0.5em 0.9em;
+  cursor: pointer;
+  transition: color 0.12s, border-color 0.12s;
+}
+.turn-events__open:hover { color: var(--fg-gold); border-color: var(--fg-gold); }
+.turn-events__open:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.turn-events__list--standalone {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-top: 0;
+  border-top: none;
+}
 .te-btn {
   display: inline-flex;
   align-items: center;
