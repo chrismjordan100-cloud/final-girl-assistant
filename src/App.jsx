@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useGameLog } from './hooks/useGameLog.js';
+import TextSize from './components/TextSize.jsx';
 import Home from './views/Home.jsx';
 import SetupAssist from './views/SetupAssist.jsx';
 import TurnTracker from './views/TurnTracker.jsx';
@@ -97,6 +98,8 @@ export default function App() {
             </button>
           ))}
         </nav>
+
+        <TextSize />
 
         <label
           className={'demo-toggle' + (demoMode ? ' is-on' : '')}

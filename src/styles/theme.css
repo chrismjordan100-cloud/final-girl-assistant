@@ -50,10 +50,17 @@ html, body, #root {
   margin: 0;
 }
 
+:root {
+  /* User text-size multiplier (set by the A-/A+ control, persisted per
+     device). 1 = the base size for this screen. */
+  --text-scale: 1;
+}
+
 html {
   /* Base size that everything in rem scales from. Bumped up on phones below
-     so the whole UI reads a little larger without touching each component. */
-  font-size: 16px;
+     so the whole UI reads a little larger without touching each component.
+     The user's --text-scale multiplies it for the A-/A+ control. */
+  font-size: calc(16px * var(--text-scale));
 }
 
 body {
@@ -66,12 +73,13 @@ body {
 }
 
 /* Larger base text on phones (and slightly larger again on very small
-   screens). ~12.5% bump makes everything more readable in the hand. */
+   screens). ~12.5% bump makes everything more readable in the hand. The
+   user's --text-scale still multiplies on top. */
 @media (max-width: 720px) {
-  html { font-size: 18px; }
+  html { font-size: calc(18px * var(--text-scale)); }
 }
 @media (max-width: 400px) {
-  html { font-size: 18.5px; }
+  html { font-size: calc(18.5px * var(--text-scale)); }
 }
 
 h1, h2, h3, h4 {
