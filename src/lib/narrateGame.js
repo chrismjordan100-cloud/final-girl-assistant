@@ -91,32 +91,69 @@ export function narrateGame(entry, { variant = 0 } = {}) {
     return c ? c.flavour : null;
   };
 
-  // A short, readable snippet of what a card actually DOES, drawn from its
-  // rules effect text — so the story can describe the effect, not just name
-  // the card. We take the first sentence/clause, trim rules jargon lightly,
-  // and cap the length so it reads as prose rather than a rulebook dump.
-  const effectFor = (e) => {
+  // Translate a card's rules effect into a NATURAL-LANGUAGE narrative fragment
+  // (never raw rulebook text). We recognise the common mechanical patterns and
+  // render each as atmospheric prose. If a card's effect doesn't match a known
+  // pattern, we return null so the beat simply names the card dramatically
+  // rather than quoting game language. `subject` is 'killer' or 'girl' to
+  // colour phrasing (a killer's power vs the girl's item).
+  const narrativeEffect = (e, subject = 'girl') => {
     const t = EVENT_TO_CARD_TYPE[e.type];
     if (!t || !e.detail) return null;
     const c = findCard(t, e.detail, combo);
     if (!c || !c.effect) return null;
-    let s = String(c.effect).trim();
-    // First sentence only (keep it punchy).
-    const firstSentence = s.match(/^[^.!?]*[.!?]/);
-    if (firstSentence) s = firstSentence[0];
-    s = s.replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '');
-    // Cap length so a wordy card doesn't swamp the prose.
-    if (s.length > 120) {
-      s = s.slice(0, 117).replace(/\s+\S*$/, '');
-      s = s.replace(/[,;:\s]+$/, ''); // no dangling punctuation before the ellipsis
-      s += '…';
+    const txt = String(c.effect).toLowerCase();
+    const frags = [];
+    const add = (s) => { if (s && !frags.includes(s)) frags.push(s); };
+
+    // --- Killer getting stronger / nastier ---
+    if (/increase bloodlust|\bbloodlust\b.*\+|\+\s*\d*\s*bloodlust|gains?\s+bloodlust/.test(txt)) {
+      add(pick(['his bloodlust swelled', 'the hunger in him deepened', 'he grew hungrier for the kill']));
     }
-    return s || null;
+    if (/increase horror|\+\s*\d*\s*horror|horror.*\+|raise the horror/.test(txt)) {
+      add(pick(['the dread in the air thickened', 'the night grew more terrifying', 'fear tightened its hold on her']));
+    }
+    if (/extend .*health|\+\s*\d*\s*health|gains?\s+health|recover.*health|heal/.test(txt)) {
+      add(pick(['his wounds knitted shut', 'the damage she had dealt him began to undo itself', 'he shrugged off the damage']));
+    }
+    if (/additional (damage|attack)|extra (damage|attack)|attacks? (twice|three|an additional)/.test(txt)) {
+      add(pick(['his blows came harder and faster', 'he struck with redoubled fury', 'every swing of his carried more menace']));
+    }
+    if (/move (twice|three|an additional)|additional move|moves? \d+ (more|extra)/.test(txt)) {
+      add(pick(['he closed the distance frighteningly fast', 'he moved quicker than anything that size should', 'the gap between them shrank']));
+    }
+
+    // --- Victims ---
+    if (/place \d* ?.*victims?|add \d* ?victims?|spawn.*victims?/.test(txt)) {
+      add(pick(['more lost souls stumbled into the dark around her', 'the board filled with fresh prey', 'more victims appeared, more lives to try to save']));
+    }
+    if (/victims?.*(killed|die|dead)|kill.*victim/.test(txt)) {
+      add(pick(['death moved closer to the others', 'the body count threatened to climb']));
+    }
+    if (/less victim.*follow|fewer victims?.*follow|victims? will not follow/.test(txt)) {
+      add(pick(['the ones she was shepherding scattered from her', 'she lost her grip on the survivors trailing her']));
+    }
+
+    // --- Final Girl's own kit (items/abilities helping her) ---
+    if (subject === 'girl') {
+      if (/discard .*dark power|remove .*dark power/.test(txt)) {
+        add(pick(['and she tore one of his dark powers away', 'stripping a sliver of his strength from him', 'and one of his advantages fell away']));
+      }
+      if (/\+\s*\d*\s*time|gain.*time|start.*with.*time/.test(txt)) {
+        add(pick(['buying herself precious seconds', 'and the night gave her a little more time', 'stealing back a moment she badly needed']));
+      }
+      if (/re-?roll|roll again|roll an additional|extra dice|roll \d+ (more|additional)/.test(txt)) {
+        add(pick(['and the dice fell kinder for her', 'tilting her luck, just a little', 'and chance leaned her way for once']));
+      }
+      if (/range|damage|hands/.test(txt) && /weapon|bat|gun|knife|axe|blade/.test(c.name.toLowerCase())) {
+        add(pick(['and it bit into him', 'and it drew something dark from him', 'and he felt it']));
+      }
+    }
+
+    if (frags.length === 0) return null;
+    // Keep it to one or two fragments so it stays prose, not a list.
+    return frags.slice(0, 2).join(', ');
   };
-  // The effect as a clause. Game effects often start with a name or an
-  // imperative ("Hans now begins…", "Roll 2 dice…"), which read better in
-  // their natural case than forced lowercase, so we keep the original casing.
-  const effectClause = (e) => effectFor(e);
 
   const sheWords = [she, 'she', 'she'];
   const nextShe = () => pick(sheWords);
@@ -248,14 +285,14 @@ export function narrateGame(entry, { variant = 0 } = {}) {
           );
           break;
         case 'item-used': {
-          const eff = effectClause(e);
+          const eff = narrativeEffect(e, 'girl');
           const base = pick([
             `when the moment came, ${nextShe()} brought the ${e.detail} to bear on ${killer} and made it count`,
             `${nextShe()} put the ${e.detail} to work — no finesse, just need`,
             `the ${e.detail} came up and ${nextShe()} did not hesitate, because hesitation was how the others had died`,
           ]);
-          // Describe what it does, not just that she used it.
-          sentences.push(capitalize(base) + (eff ? ` — ${eff}.` : '.'));
+          // Describe the EFFECT in natural language as its own clause.
+          sentences.push(capitalize(base) + '.' + (eff ? ` ${capitalize(eff)}.` : ''));
           break;
         }
         case 'victim-died':
@@ -291,7 +328,7 @@ export function narrateGame(entry, { variant = 0 } = {}) {
         }
         case 'dark-power': {
           darkPowerSeen = true;
-          const eff = effectClause(e);
+          const eff = narrativeEffect(e, 'killer');
           sentences.push(
             `${killer} changed. "${e.detail}" woke in him${e.meta && e.meta.power === 'epic' ? ' — and it was the epic kind, the very worst of him' : ''}` +
             (eff ? ` — ${eff} — ` : ', ') +
@@ -300,13 +337,13 @@ export function narrateGame(entry, { variant = 0 } = {}) {
           break;
         }
         case 'event': {
-          const eff = effectClause(e);
+          const eff = narrativeEffect(e, 'girl');
           const base = pick([
             `the night threw "${e.detail}" at her, because of course it did`,
             `"${e.detail}" came out of nowhere and rewrote the rules mid-stride`,
             `"${e.detail}" landed, one more thing the dark had been holding back`,
           ]);
-          sentences.push(capitalize(base) + (eff ? `: ${eff}. ` : '. ') + pick([
+          sentences.push(capitalize(base) + (eff ? ` — ${eff}. ` : '. ') + pick([
             `She adjusted, because stopping wasn't an option.`,
             `Nothing here was ever going to be simple.`,
             `She took it on the chin and kept going.`,
@@ -314,7 +351,7 @@ export function narrateGame(entry, { variant = 0 } = {}) {
           break;
         }
         case 'terror': {
-          const eff = effectClause(e);
+          const eff = narrativeEffect(e, 'killer');
           const base = pick([
             `Terror rippled out — "${e.detail}"`,
             `The Terror deck turned up "${e.detail}"`,
@@ -329,20 +366,20 @@ export function narrateGame(entry, { variant = 0 } = {}) {
             `and ${nextShe()} weathered it, barely`,
             `and it took everything she had not to run blind`,
           ]);
-          sentences.push(`${base}${eff ? ` — ${eff}` : ''} — ${reaction}.`);
+          sentences.push(`${base}${eff ? `, ${eff},` : ' —'} ${reaction}.`);
           break;
         }
         case 'weapon': {
-          const eff = effectClause(e);
-          sentences.push(`${capitalize(nextShe())} readied the ${e.detail}, knuckles white` + (eff ? `; ${eff}.` : `, and told herself it would be enough.`));
+          const eff = narrativeEffect(e, 'girl');
+          sentences.push(`${capitalize(nextShe())} readied the ${e.detail}, knuckles white` + (eff ? `, ${eff}.` : `, and told herself it would be enough.`));
           break;
         }
         case 'finale': {
-          const eff = effectClause(e);
+          const eff = narrativeEffect(e, 'killer');
           sentences.push(pick([
             `And then everything narrowed to one thing: the Finale. "${e.detail}". No more hiding, no more Terror to draw, no more waiting — just her and him and the end of it, one way or the other.`,
             `The last act opened — "${e.detail}" — and ${place} itself seemed to hold its breath, waiting to see which of them would still be standing.`,
-          ]) + (eff ? ` From here on, ${eff}.` : ''));
+          ]) + (eff ? ` Now ${eff}, and there was nothing left to do but face it.` : ''));
           break;
         }
         case 'note':
