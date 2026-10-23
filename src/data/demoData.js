@@ -147,9 +147,14 @@ function buildEventStream({ killer, location, outcome, turns, startedAt, rnd }) 
       add(t, action, 'item-used', pick(found).name);
     }
     if (outcome !== 'lost' && chance(0.45)) add(t, action, 'victim-saved', '');
+    if (outcome !== 'lost' && chance(0.2)) add(t, action, 'victim-escape', '');
     if (chance(0.22)) {
       const ev = pick(events);
       if (ev) add(t, action, 'event', ev.name);
+    }
+    // Final Girl Ultimate comes online around the mid/late game on a win.
+    if (outcome === 'won' && t === Math.ceil(totalTurns * 0.6) && chance(0.7)) {
+      add(t, action, 'fg-power', '');
     }
 
     // Killer phase — victims die, dark powers reveal late, finale near the end.

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { phases, horrorRoll } from '../data/rules.js';
-import { getKiller, getLocation, getPhaseExtras } from '../data/games.js';
+import { getKiller, getLocation, getFinalGirl, getPhaseExtras } from '../data/games.js';
+import { finalGirlUltimate } from '../data/cardData.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import SetupCapture from '../components/SetupCapture.jsx';
@@ -13,6 +14,8 @@ import './TurnTracker.css';
 const EVENT_TYPES = [
   { type: 'victim-died', label: 'Victim died', glyph: '\u2620', tone: 'blood', needsText: false },
   { type: 'victim-saved', label: 'Victim saved', glyph: '\u2665', tone: 'green', needsText: false },
+  { type: 'victim-escape', label: 'Helped a victim escape', glyph: '\uD83C\uDFC3', tone: 'green', needsText: false },
+  { type: 'fg-power', label: 'Enabled Final Girl power', glyph: '\u2728', tone: 'gold', needsText: true, placeholder: 'Her Ultimate / power (auto-filled if known)', isFgPower: true },
   { type: 'item-found', label: 'Found item', glyph: '\uD83C\uDFD5', tone: 'gold', needsText: true, placeholder: 'Item name, as on the card' },
   { type: 'item-used', label: 'Used item', glyph: '\u2692', tone: 'gold', needsText: true, placeholder: 'Item name, as on the card' },
   { type: 'dark-power', label: 'Dark Power', glyph: '\uD83D\uDC41', tone: 'blood', needsText: true, placeholder: 'Dark Power name', hasPower: true },
@@ -59,9 +62,10 @@ export default function TurnTracker() {
   const { state, patch, reset, addEvent, removeEvent } = useTurnState();
   const { turn, phaseIndex, horror, bloodlust, time, victimsSaved, checked, events } = state;
 
-  const { killerId, locationId } = useGameSelection();
+  const { finalGirlId, killerId, locationId } = useGameSelection();
   const killer = getKiller(killerId);
   const location = getLocation(locationId);
+  const finalGirl = getFinalGirl(finalGirlId);
   const phaseExtrasByPhase = getPhaseExtras(killer, location);
 
   const phase = phases[phaseIndex];
@@ -93,7 +97,13 @@ export default function TurnTracker() {
       return;
     }
     setPicking(def);
-    setEventText('');
+    // Pre-fill the Final Girl power with her known Ultimate ability (editable).
+    if (def.isFgPower && finalGirl) {
+      const ult = finalGirlUltimate(finalGirl.name);
+      setEventText(ult && ult.ability ? ult.ability : '');
+    } else {
+      setEventText('');
+    }
     setPowerKind('minor');
   }
 

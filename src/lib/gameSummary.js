@@ -14,6 +14,8 @@ export const SUMMARY_EVENT_TYPES = [
   'event-start',
   'victim-died',
   'victim-saved',
+  'victim-escape',
+  'fg-power',
   'item-found',
   'item-used',
   'dark-power',

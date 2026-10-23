@@ -79,11 +79,20 @@ const ITEMS = [
   },
   {
     id: 'mi-trends',
-    title: 'Rich-data trends in MI / Stats',
+    title: 'Rich-data trends in MI / Stats (embellished with card detail)',
     body:
-      'Surface the captured rich data (items found/used, dark powers, finales, events,\n' +
-      'setup variants) as trends in the MI/Stats tab — e.g. most-found items, which\n' +
-      'finale shows up in losses, average turns to first Dark Power, etc.',
+      'Surface the captured rich data as trends in the MI/Stats tab, and embellish\n' +
+      'them using the card dataset (effects, flavour, tags) so the stats read like\n' +
+      'insight, not just counts. Ideas:\n' +
+      '- Most-found and most-used items (by name); your "signature" item.\n' +
+      '- Win rate when the Epic Dark Power / Finale came out vs not.\n' +
+      '- Average turn the first Dark Power lands; average turn the Finale opens.\n' +
+      '- Average victims saved vs died, and how that correlates with winning.\n' +
+      '- Which Events/Terror cards show up most in your losses ("your nemesis cards").\n' +
+      '- Turn you typically enable your Final Girl Ultimate, and win rate once enabled.\n' +
+      '- Pull card flavour/effect into the trend captions for colour (e.g. show the\n' +
+      "  item's flavour line next to \"most-used item\").\n" +
+      '- Feed these aggregates to the (future) Tier 2 AI for a "meta" season summary.',
     check() {
       const s = read('src/views/Stats.jsx');
       if (/itemsFound|darkPowers|deriveSummary|\.events\b/.test(s)) return 'green';

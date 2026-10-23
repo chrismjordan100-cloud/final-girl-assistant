@@ -59,6 +59,12 @@ const killersById = Object.fromEntries((cards.killers || []).map((k) => [k.id, k
 const locationsById = Object.fromEntries((cards.locations || []).map((l) => [l.id, l]));
 const globalItems = cards.items || [];
 
+// Final girls: the app's ids differ from the card file's, but names match, so
+// index by lowercased name for a reliable lookup.
+const finalGirlsByName = Object.fromEntries(
+  (cards.final_girls || []).map((g) => [String(g.name).toLowerCase(), g])
+);
+
 function killerRecord(appKillerId) {
   const cardId = KILLER_ID_MAP[appKillerId];
   return cardId ? killersById[cardId] : null;
@@ -174,4 +180,19 @@ export function killerFlavour(appKillerId) {
 /* The location's unofficial flavour line. */
 export function locationFlavour(appLocationId) {
   return locationRecord(appLocationId)?.flavour_unofficial ?? null;
+}
+
+/* A Final Girl's Ultimate ability info, looked up by her NAME (the app and the
+   card file use different ids, but names match). Returns:
+     { ability, victimsForUltimate, flavour } or null.
+   Used to pre-fill the "enabled Final Girl power" capture and to narrate it. */
+export function finalGirlUltimate(finalGirlName) {
+  if (!finalGirlName) return null;
+  const g = finalGirlsByName[String(finalGirlName).toLowerCase()];
+  if (!g) return null;
+  return {
+    ability: g.ultimate_ability ?? null,
+    victimsForUltimate: g.victims_for_ultimate ?? null,
+    flavour: g.flavour_unofficial ?? null,
+  };
 }

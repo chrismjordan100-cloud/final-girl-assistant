@@ -33,11 +33,20 @@ not just name them. Pairs naturally with the Tier 2 AI recap.
 
 **Status:** 🟢 built & shipped.
 
-### 🔴 Rich-data trends in MI / Stats
+### 🔴 Rich-data trends in MI / Stats (embellished with card detail)
 
-Surface the captured rich data (items found/used, dark powers, finales, events,
-setup variants) as trends in the MI/Stats tab — e.g. most-found items, which
-finale shows up in losses, average turns to first Dark Power, etc.
+Surface the captured rich data as trends in the MI/Stats tab, and embellish
+them using the card dataset (effects, flavour, tags) so the stats read like
+insight, not just counts. Ideas:
+- Most-found and most-used items (by name); your "signature" item.
+- Win rate when the Epic Dark Power / Finale came out vs not.
+- Average turn the first Dark Power lands; average turn the Finale opens.
+- Average victims saved vs died, and how that correlates with winning.
+- Which Events/Terror cards show up most in your losses ("your nemesis cards").
+- Turn you typically enable your Final Girl Ultimate, and win rate once enabled.
+- Pull card flavour/effect into the trend captions for colour (e.g. show the
+  item's flavour line next to "most-used item").
+- Feed these aggregates to the (future) Tier 2 AI for a "meta" season summary.
 
 **Status:** 🔴 not started.
 
