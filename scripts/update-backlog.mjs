@@ -134,12 +134,13 @@ const ITEMS = [
   },
   {
     id: 'edit-card-suggest',
-    title: 'Edit-form card suggestions',
+    title: 'Card dropdowns when editing a saved game',
     affects: ['Game Log'],
     body:
-      'The Game Log edit form uses plain multi-line text for items/events/etc.\n' +
-      'Add per-line card suggestions (like the in-flow CardPicker) so edits also\n' +
-      'benefit from the known-card dropdowns.',
+      'When you open a saved game in the Game Log and press Edit, the items, events,\n' +
+      'dark powers etc. are plain text boxes, so you have to type card names from\n' +
+      'memory. During live play you get a pick-from-the-list dropdown of the real\n' +
+      'cards instead. Add those same dropdowns to the Edit screen.',
     check() {
       return /CardPicker/.test(read('src/views/GameDetail.jsx')) ? 'green' : 'red';
     },

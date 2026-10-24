@@ -204,9 +204,9 @@ const BACKLOG = [
   {
     title: 'Host on phone / iPad (iOS companion)',
     detail:
-      'An iPhone/iPad version is the real goal — that\u2019s where the game is played. Options: deploy the built site and use it as an offline PWA (add-to-home-screen), or wrap it. Needs a build/deploy step with images/data travelling along.',
+      'Hosted on GitHub Pages with auto-deploy on every push to main, and installed on the phone as a home-screen app (icon + manifest), with the game log synced across devices via Supabase.',
     affects: ['Whole app', 'Hosting'],
-    status: 'todo',
+    status: 'done',
   },
   {
     title: 'Set up ElevenLabs for cinematic Start Game audio',
@@ -243,6 +243,8 @@ const STATUS_ORDER = { todo: 0, partial: 1, done: 2 };
 const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO].sort(
   (a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0)
 );
+const OPEN_BACKLOG = ALL_BACKLOG.filter((i) => i.status !== 'done');
+const DONE_BACKLOG = ALL_BACKLOG.filter((i) => i.status === 'done');
 
 const STATUS_META = {
   done: { label: 'Done', cls: 'done' },
@@ -293,6 +295,35 @@ export default function Admin() {
   function toggleSection(type) {
     setCollapsed((c) => ({ ...c, [type]: !c[type] }));
   }
+
+  // One backlog card (shared by the open and the done lists).
+  const renderBacklogItem = (item) => {
+    const meta = STATUS_META[item.status] || STATUS_META.todo;
+    return (
+      <li key={item.title} className={'admin-backlog__item admin-backlog__item--' + meta.cls}>
+        <h3 className="admin-backlog__item-title">
+          <span className={'admin-rag-dot admin-rag-dot--' + meta.cls} aria-hidden="true" />
+          {item.title}
+          <span className={'admin-rag admin-rag--' + meta.cls}>{meta.label}</span>
+        </h3>
+        <p className="admin-backlog__item-detail">{item.detail}</p>
+        {item.status === 'partial' && item.remaining && (
+          <p className="admin-backlog__remaining">
+            <strong>Still to do:</strong> {item.remaining}
+          </p>
+        )}
+        <div className="admin-backlog__affects">
+          {item.affects.map((a) => (
+            <span key={a} className="fg-tag">{a}</span>
+          ))}
+          {item.auto && <span className="fg-tag admin-backlog__auto">Auto-tracked</span>}
+        </div>
+      </li>
+    );
+  };
+
+  // Done items are tucked behind a toggle (collapsed by default).
+  const showDone = !!collapsed.backlogDone;
 
   // RAG tally for the backlog header.
   const backlogCounts = useMemo(() => {
@@ -493,31 +524,21 @@ export default function Admin() {
           from BACKLOG.md and have their status checked against the code on every build.
         </p>
         <ul className="admin-backlog__list">
-          {ALL_BACKLOG.map((item) => {
-            const meta = STATUS_META[item.status] || STATUS_META.todo;
-            return (
-              <li key={item.title} className={'admin-backlog__item admin-backlog__item--' + meta.cls}>
-                <h3 className="admin-backlog__item-title">
-                  <span className={'admin-rag-dot admin-rag-dot--' + meta.cls} aria-hidden="true" />
-                  {item.title}
-                  <span className={'admin-rag admin-rag--' + meta.cls}>{meta.label}</span>
-                </h3>
-                <p className="admin-backlog__item-detail">{item.detail}</p>
-                {item.status === 'partial' && item.remaining && (
-                  <p className="admin-backlog__remaining">
-                    <strong>Still to do:</strong> {item.remaining}
-                  </p>
-                )}
-                <div className="admin-backlog__affects">
-                  {item.affects.map((a) => (
-                    <span key={a} className="fg-tag">{a}</span>
-                  ))}
-                  {item.auto && <span className="fg-tag admin-backlog__auto">Auto-tracked</span>}
-                </div>
-              </li>
-            );
-          })}
+          {OPEN_BACKLOG.map(renderBacklogItem)}
         </ul>
+        <button
+          className="admin-backlog__done-toggle"
+          onClick={() => toggleSection('backlogDone')}
+          aria-expanded={!!showDone}
+        >
+          <span aria-hidden="true">{showDone ? '\u25BC' : '\u25B6'}</span>
+          {showDone ? 'Hide' : 'Show'} {DONE_BACKLOG.length} done item{DONE_BACKLOG.length === 1 ? '' : 's'}
+        </button>
+        {showDone && (
+        <ul className="admin-backlog__list">
+          {DONE_BACKLOG.map(renderBacklogItem)}
+        </ul>
+        )}
         </div>
         )}
       </div>

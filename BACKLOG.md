@@ -67,11 +67,12 @@ Design notes for when we build it:
 
 **Status:** 🔴 not started.
 
-### 🔴 Edit-form card suggestions
+### 🔴 Card dropdowns when editing a saved game
 
-The Game Log edit form uses plain multi-line text for items/events/etc.
-Add per-line card suggestions (like the in-flow CardPicker) so edits also
-benefit from the known-card dropdowns.
+When you open a saved game in the Game Log and press Edit, the items, events,
+dark powers etc. are plain text boxes, so you have to type card names from
+memory. During live play you get a pick-from-the-list dropdown of the real
+cards instead. Add those same dropdowns to the Edit screen.
 
 **Status:** 🔴 not started.
 

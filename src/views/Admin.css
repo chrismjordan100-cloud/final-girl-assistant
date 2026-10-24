@@ -492,3 +492,20 @@
   color: var(--text-dim);
   word-break: break-all;
 }
+
+/* "Show N done items" toggle under the open backlog items. */
+.admin-backlog__done-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.75rem;
+  padding: 0.45rem 0.8rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.admin-backlog__done-toggle:hover { color: inherit; }
