@@ -101,6 +101,28 @@ mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.
 
 **Status:** 🟡 partially built / in progress.
 
+### 🔴 Named spaces on every location board
+
+Record every named space on every location board (e.g. each cabin, the
+boathouse, exits, search spaces) so that when you log "Where she is" in the
+Turn Tracker you pick the space from a dropdown for that location instead of
+typing it. Plan: a src/data/locationSpaces.js keyed by app location id, each
+space { name, kind: exit | search | special | plain }, then a "location" case
+in cardOptionsFor() in src/data/cardData.js. You will add the names over time,
+board by board; the story generator can then use the real space names too.
+
+**Status:** 🔴 not started.
+
+### 🔴 Card images in the Codex card list
+
+Over time, add a picture of each card to src/assets/cards/ (file named after the
+card's id — tick "Show image slots" in Codex → All cards to see each name). The
+card list shows the image beside the card automatically. Setup cards are the
+priority: they are placement diagrams with no rules text, so an image is the only
+way to capture them.
+
+**Status:** 🔴 not started.
+
 ## Done (🟢 shipped)
 - Hosting on GitHub Pages with auto-deploy on push.
 - Supabase cloud sync of game log across devices.
@@ -112,3 +134,4 @@ mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.
 - Enriched demo data with logical, card-accurate event streams.
 - Tier 1 offline game story generator ("The Story") with reshuffle.
 - Self-updating backlog RAG (this file is regenerated from the code).
+- Codex "All cards (text)" list: every known card per Killer / Location / Final Girl, with missing details flagged and image slots.

@@ -11,12 +11,14 @@ import {
   getIcon,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
+import CardList from './CardList.jsx';
 import './Codex.css';
 
 const TABS = [
   { id: 'killer', label: 'Killers' },
   { id: 'location', label: 'Locations' },
   { id: 'finalgirl', label: 'Final Girls' },
+  { id: 'cards', label: 'All cards (text)' },
 ];
 
 /* A collapsible section with a clickable header showing a count. */
@@ -254,7 +256,7 @@ export default function Codex({ onNavigate }) {
             </button>
           ))}
         </div>
-        <div className="cx-search">
+        {tab !== 'cards' && <div className="cx-search">
           <span className="cx-search__icon" aria-hidden="true">&#128269;</span>
           <input
             type="search"
@@ -268,8 +270,10 @@ export default function Codex({ onNavigate }) {
               &times;
             </button>
           )}
-        </div>
+        </div>}
       </div>
+
+      {tab === 'cards' && <CardList />}
 
       {tab === 'killer' &&
         grouped(killers).map((grp) => {

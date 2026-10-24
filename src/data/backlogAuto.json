@@ -89,5 +89,27 @@
     "status": "partial",
     "remaining": "Extreme toggle (Setup Assist step 3 and the Turn Tracker) and 5 Time per turn are built. Still to do: the dice for each Horror level on the Extreme side of the player board — read them off the board and add an EXTREME_DICE table to TurnTracker.jsx (the tracker says \"see board\" until then).",
     "auto": true
+  },
+  {
+    "id": "location-spaces",
+    "title": "Named spaces on every location board",
+    "detail": "Record every named space on every location board (e.g. each cabin, the boathouse, exits, search spaces) so that when you log \"Where she is\" in the Turn Tracker you pick the space from a dropdown for that location instead of typing it. Plan: a src/data/locationSpaces.js keyed by app location id, each space { name, kind: exit | search | special | plain }, then a \"location\" case in cardOptionsFor() in src/data/cardData.js. You will add the names over time, board by board; the story generator can then use the real space names too.",
+    "affects": [
+      "Turn Tracker",
+      "Card data",
+      "The Story"
+    ],
+    "status": "todo",
+    "auto": true
+  },
+  {
+    "id": "card-images",
+    "title": "Card images in the Codex card list",
+    "detail": "Over time, add a picture of each card to src/assets/cards/ (file named after the card's id — tick \"Show image slots\" in Codex → All cards to see each name). The card list shows the image beside the card automatically. Setup cards are the priority: they are placement diagrams with no rules text, so an image is the only way to capture them.",
+    "affects": [
+      "Codex"
+    ],
+    "status": "todo",
+    "auto": true
   }
 ]

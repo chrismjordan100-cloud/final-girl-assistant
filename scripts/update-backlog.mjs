@@ -10,7 +10,7 @@
 
    Usage: node scripts/update-backlog.mjs
    ========================================================================== */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -191,6 +191,51 @@ const ITEMS = [
   },
 ];
 
+// Add the two content items to the end of the list.
+ITEMS.push(
+  {
+    id: 'location-spaces',
+    title: 'Named spaces on every location board',
+    affects: ['Turn Tracker', 'Card data', 'The Story'],
+    body:
+      'Record every named space on every location board (e.g. each cabin, the\n' +
+      'boathouse, exits, search spaces) so that when you log "Where she is" in the\n' +
+      'Turn Tracker you pick the space from a dropdown for that location instead of\n' +
+      'typing it. Plan: a src/data/locationSpaces.js keyed by app location id, each\n' +
+      'space { name, kind: exit | search | special | plain }, then a "location" case\n' +
+      'in cardOptionsFor() in src/data/cardData.js. You will add the names over time,\n' +
+      'board by board; the story generator can then use the real space names too.',
+    remaining:
+      'locationSpaces.js exists; still to do: fill in the remaining boards and/or wire the "location" case in cardOptionsFor().',
+    check() {
+      const data = read('src/data/locationSpaces.js');
+      const wired = /case 'location'/.test(read('src/data/cardData.js'));
+      if (data && wired) return 'green';
+      if (data) return 'amber';
+      return 'red';
+    },
+  },
+  {
+    id: 'card-images',
+    title: 'Card images in the Codex card list',
+    affects: ['Codex'],
+    body:
+      'Over time, add a picture of each card to src/assets/cards/ (file named after the\n' +
+      "card's id — tick \"Show image slots\" in Codex → All cards to see each name). The\n" +
+      'card list shows the image beside the card automatically. Setup cards are the\n' +
+      'priority: they are placement diagrams with no rules text, so an image is the only\n' +
+      'way to capture them.',
+    remaining: '',
+    check() {
+      const dir = join(root, 'src/assets/cards');
+      const n = existsSync(dir) ? readdirSync(dir).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).length : 0;
+      this.remaining = `${n} card image${n === 1 ? '' : 's'} added so far; keep adding (setup cards first).`;
+      if (n >= 1400) return 'green';
+      return n > 0 ? 'amber' : 'red';
+    },
+  },
+);
+
 const RAG = { green: '🟢', amber: '🟡', red: '🔴' };
 const LABEL = { green: 'built & shipped', amber: 'partially built / in progress', red: 'not started' };
 
@@ -206,6 +251,7 @@ const DONE = [
   'Enriched demo data with logical, card-accurate event streams.',
   'Tier 1 offline game story generator ("The Story") with reshuffle.',
   'Self-updating backlog RAG (this file is regenerated from the code).',
+  'Codex "All cards (text)" list: every known card per Killer / Location / Final Girl, with missing details flagged and image slots.',
 ];
 
 function render() {
