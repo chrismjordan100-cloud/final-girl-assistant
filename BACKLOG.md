@@ -69,10 +69,12 @@ Design notes for when we build it:
 
 ### 🔴 Card dropdowns when editing a saved game
 
-When you open a saved game in the Game Log and press Edit, the items, events,
-dark powers etc. are plain text boxes, so you have to type card names from
-memory. During live play you get a pick-from-the-list dropdown of the real
-cards instead. Add those same dropdowns to the Edit screen.
+Fixing a game you have already saved. Example: you finish a game, then
+realise you forgot to log that you found the Shotgun. You open the game in
+the Game Log and press "Edit details" — but the Items box is just blank text,
+so you have to type "Shotgun" yourself and hope you spell it exactly as the
+card does. During a live game the Turn Tracker gives you a list of the real
+cards to pick from instead. This item gives the Edit screen that same list.
 
 **Status:** 🔴 not started.
 
