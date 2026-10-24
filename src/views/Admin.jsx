@@ -237,7 +237,12 @@ const BACKLOG = [
    feature items from BACKLOG.md. Those come from src/data/backlogAuto.json,
    which scripts/update-backlog.mjs regenerates (with RAG checked against the
    code) on every build — edit the script, not the JSON. */
-const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO];
+// Sorted red (not started) → amber (in progress) → green (done); original
+// order is kept within each group (Array.sort is stable).
+const STATUS_ORDER = { todo: 0, partial: 1, done: 2 };
+const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO].sort(
+  (a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0)
+);
 
 const STATUS_META = {
   done: { label: 'Done', cls: 'done' },
