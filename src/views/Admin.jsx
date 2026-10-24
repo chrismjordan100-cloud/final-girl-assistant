@@ -11,6 +11,7 @@ import {
   hasWrittenRules,
   noWrittenRulesExpected,
 } from '../data/games.js';
+import BACKLOG_AUTO from '../data/backlogAuto.json';
 import './Admin.css';
 
 /* One marker per asset TYPE for an entry (not per page). */
@@ -232,6 +233,12 @@ const BACKLOG = [
   },
 ];
 
+/* The full backlog shown on this screen = the hand-kept list above PLUS the
+   feature items from BACKLOG.md. Those come from src/data/backlogAuto.json,
+   which scripts/update-backlog.mjs regenerates (with RAG checked against the
+   code) on every build — edit the script, not the JSON. */
+const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO];
+
 const STATUS_META = {
   done: { label: 'Done', cls: 'done' },
   partial: { label: 'In progress', cls: 'partial' },
@@ -285,7 +292,7 @@ export default function Admin() {
   // RAG tally for the backlog header.
   const backlogCounts = useMemo(() => {
     const c = { done: 0, partial: 0, todo: 0 };
-    for (const item of BACKLOG) c[item.status || 'todo'] += 1;
+    for (const item of ALL_BACKLOG) c[item.status || 'todo'] += 1;
     return c;
   }, []);
 
@@ -477,10 +484,11 @@ export default function Admin() {
         <div className="admin-backlog__body">
         <p className="admin-backlog__intro fg-type">
           Where each planned feature stands. Green = done, amber = in progress (with
-          what&rsquo;s left), red = not started. Kept current as the app grows.
+          what&rsquo;s left), red = not started. Items tagged <em>Auto-tracked</em> come
+          from BACKLOG.md and have their status checked against the code on every build.
         </p>
         <ul className="admin-backlog__list">
-          {BACKLOG.map((item) => {
+          {ALL_BACKLOG.map((item) => {
             const meta = STATUS_META[item.status] || STATUS_META.todo;
             return (
               <li key={item.title} className={'admin-backlog__item admin-backlog__item--' + meta.cls}>
@@ -499,6 +507,7 @@ export default function Admin() {
                   {item.affects.map((a) => (
                     <span key={a} className="fg-tag">{a}</span>
                   ))}
+                  {item.auto && <span className="fg-tag admin-backlog__auto">Auto-tracked</span>}
                 </div>
               </li>
             );

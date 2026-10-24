@@ -29,6 +29,9 @@ const ITEMS = [
   {
     id: 'flavour-text',
     title: 'Real flavour text on cards',
+    affects: ['Card data', 'Codex', 'The Story'],
+    remaining:
+      'Cards carry unofficial atmosphere lines (flavour_unofficial). Official card flavour still to source and add as a `flavour` field.',
     body:
       'Find and add REAL flavour text (lore/atmosphere) to the card detail dataset\n' +
       '(`src/data/cards.json`). The current data has rules `effect` text but excludes\n' +
@@ -49,6 +52,9 @@ const ITEMS = [
   {
     id: 'card-detail',
     title: 'Update card detail for the extra data',
+    affects: ['Card picker', 'Game Log', 'Codex'],
+    remaining:
+      'cardData.js exposes the extra fields, but the CardPicker (and Game Log detail) do not show them yet.',
     body:
       'The card dataset has richer fields (tags, range/damage/hands, bonus_health,\n' +
       'epic flags, start_health/horror, etc.). Surface the useful ones in the places\n' +
@@ -64,6 +70,7 @@ const ITEMS = [
   {
     id: 'rich-summary',
     title: 'Richer game summary using the extra card detail',
+    affects: ['The Story', 'Game Log'],
     body:
       'Feed the extra card-detail JSON (effects, flavour, tags) into the game story\n' +
       "generator (`src/lib/narrateGame.js`) so recaps describe what cards actually did,\n" +
@@ -80,6 +87,7 @@ const ITEMS = [
   {
     id: 'mi-trends',
     title: 'Rich-data trends in MI / Stats (embellished with card detail)',
+    affects: ['MI / Stats'],
     body:
       'Surface the captured rich data as trends in the MI/Stats tab, and embellish\n' +
       'them using the card dataset (effects, flavour, tags) so the stats read like\n' +
@@ -103,6 +111,7 @@ const ITEMS = [
   {
     id: 'ai-recap',
     title: 'AI game recap (Tier 2 — richer narrative via an LLM)',
+    affects: ['Game Log', 'The Story', 'Settings'],
     body:
       'Tier 1 (offline template recap) is DONE and shipped. Tier 2 would send the\n' +
       'structured game to a real LLM for a creative, interpretive narrative.\n\n' +
@@ -126,6 +135,7 @@ const ITEMS = [
   {
     id: 'edit-card-suggest',
     title: 'Edit-form card suggestions',
+    affects: ['Game Log'],
     body:
       'The Game Log edit form uses plain multi-line text for items/events/etc.\n' +
       'Add per-line card suggestions (like the in-flow CardPicker) so edits also\n' +
@@ -137,6 +147,7 @@ const ITEMS = [
   {
     id: 'voice-narration',
     title: 'Voice: better narrator + read the game story aloud',
+    affects: ['Start Game audio', 'Game Log'],
     body:
       'Two related voice improvements:\n' +
       '1. Improve the start-of-game narration voice (the current Web Speech / system\n' +
@@ -159,6 +170,7 @@ const ITEMS = [
   {
     id: 'extreme-horror-dice',
     title: 'Extreme Horror Mode dice track',
+    affects: ['Turn Tracker'],
     body:
       'The Turn Tracker now computes Horror Roll dice from the STANDARD player\n' +
       'board track (Horror 1 = 3 dice, 2–5 = 2 dice, 6 = 1 die). Extreme Horror\n' +
@@ -219,6 +231,32 @@ function render() {
 
 const out = render();
 writeFileSync(join(root, 'BACKLOG.md'), out);
+
+/* Also emit the items as JSON for the in-app Asset Admin backlog panel, so the
+   app shows these auto-tracked items alongside its own hand-kept list.
+   RAG maps to the Admin statuses: green=done, amber=partial, red=todo.
+   No date in here, and only written when it changes, so it doesn't churn. */
+const STATUS_FOR = { green: 'done', amber: 'partial', red: 'todo' };
+// Join wrapped lines into prose, but keep line breaks before list items.
+const toDetail = (body) => body.replace(/\n(?!\s*(?:- |\d+\.))/g, ' ').replace(/ {2,}/g, ' ');
+const json = JSON.stringify(
+  ITEMS.map((i) => {
+    const rag = i.check();
+    return {
+      id: i.id,
+      title: i.title,
+      detail: toDetail(i.body),
+      affects: i.affects || [],
+      status: STATUS_FOR[rag],
+      ...(rag === 'amber' && i.remaining ? { remaining: i.remaining } : {}),
+      auto: true,
+    };
+  }),
+  null,
+  2
+) + '\n';
+const jsonPath = join(root, 'src/data/backlogAuto.json');
+if (read('src/data/backlogAuto.json') !== json) writeFileSync(jsonPath, json);
 // Print a one-line summary of the current RAG for logs.
 const summary = ITEMS.map((i) => `${RAG[i.check()]} ${i.id}`).join('  ');
 console.log('BACKLOG.md updated — ' + summary);

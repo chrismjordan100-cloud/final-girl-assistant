@@ -1,0 +1,92 @@
+[
+  {
+    "id": "flavour-text",
+    "title": "Real flavour text on cards",
+    "detail": "Find and add REAL flavour text (lore/atmosphere) to the card detail dataset (`src/data/cards.json`). The current data has rules `effect` text but excludes flavour. Source it and add a `flavour` field per card so the app — and the game story generator — can draw on it.",
+    "affects": [
+      "Card data",
+      "Codex",
+      "The Story"
+    ],
+    "status": "partial",
+    "remaining": "Cards carry unofficial atmosphere lines (flavour_unofficial). Official card flavour still to source and add as a `flavour` field.",
+    "auto": true
+  },
+  {
+    "id": "card-detail",
+    "title": "Update card detail for the extra data",
+    "detail": "The card dataset has richer fields (tags, range/damage/hands, bonus_health, epic flags, start_health/horror, etc.). Surface the useful ones in the places that show card detail (CardPicker, Game Log detail, Codex if relevant).",
+    "affects": [
+      "Card picker",
+      "Game Log",
+      "Codex"
+    ],
+    "status": "partial",
+    "remaining": "cardData.js exposes the extra fields, but the CardPicker (and Game Log detail) do not show them yet.",
+    "auto": true
+  },
+  {
+    "id": "rich-summary",
+    "title": "Richer game summary using the extra card detail",
+    "detail": "Feed the extra card-detail JSON (effects, flavour, tags) into the game story generator (`src/lib/narrateGame.js`) so recaps describe what cards actually did, not just name them. Pairs naturally with the Tier 2 AI recap.",
+    "affects": [
+      "The Story",
+      "Game Log"
+    ],
+    "status": "done",
+    "auto": true
+  },
+  {
+    "id": "mi-trends",
+    "title": "Rich-data trends in MI / Stats (embellished with card detail)",
+    "detail": "Surface the captured rich data as trends in the MI/Stats tab, and embellish them using the card dataset (effects, flavour, tags) so the stats read like insight, not just counts. Ideas:\n- Most-found and most-used items (by name); your \"signature\" item.\n- Win rate when the Epic Dark Power / Finale came out vs not.\n- Average turn the first Dark Power lands; average turn the Finale opens.\n- Average victims saved vs died, and how that correlates with winning.\n- Which Events/Terror cards show up most in your losses (\"your nemesis cards\").\n- Turn you typically enable your Final Girl Ultimate, and win rate once enabled.\n- Pull card flavour/effect into the trend captions for colour (e.g. show the item's flavour line next to \"most-used item\").\n- Feed these aggregates to the (future) Tier 2 AI for a \"meta\" season summary.",
+    "affects": [
+      "MI / Stats"
+    ],
+    "status": "todo",
+    "auto": true
+  },
+  {
+    "id": "ai-recap",
+    "title": "AI game recap (Tier 2 — richer narrative via an LLM)",
+    "detail": "Tier 1 (offline template recap) is DONE and shipped. Tier 2 would send the structured game to a real LLM for a creative, interpretive narrative. Design notes for when we build it:\n- Static site on public GitHub Pages — no backend. A billing API key must NOT be baked into the frontend (view-source would leak it).\n- Recommended (single user): a Settings box where you paste your own LLM API key, stored only in `localStorage` (never committed, never synced). An \"AI recap\" button sends the game to the provider and caches the result.\n- Providers: Google Gemini (free tier), OpenAI, Anthropic — keep swappable.\n- Alternative: a serverless proxy (Cloudflare/Vercel) holding the key — overkill for one user.",
+    "affects": [
+      "Game Log",
+      "The Story",
+      "Settings"
+    ],
+    "status": "todo",
+    "auto": true
+  },
+  {
+    "id": "edit-card-suggest",
+    "title": "Edit-form card suggestions",
+    "detail": "The Game Log edit form uses plain multi-line text for items/events/etc. Add per-line card suggestions (like the in-flow CardPicker) so edits also benefit from the known-card dropdowns.",
+    "affects": [
+      "Game Log"
+    ],
+    "status": "todo",
+    "auto": true
+  },
+  {
+    "id": "voice-narration",
+    "title": "Voice: better narrator + read the game story aloud",
+    "detail": "Two related voice improvements:\n1. Improve the start-of-game narration voice (the current Web Speech / system voice sounds poor — \"crap voice\"). Pick a better voice, tune rate/pitch, or move to a nicer TTS. Relevant code: src/hooks/useNarration.js.\n2. NEW: after a game is saved, let the voice read the generated story narrative aloud — a \"read me the recap\" button on the Game Log detail (and/or an auto-offer right after Save result). Reuse the narrateGame output as the text to speak. Note: if the Tier 2 AI recap lands, prefer speaking that richer text. A nicer cloud TTS would also pair with the user-supplied-API-key approach noted above.",
+    "affects": [
+      "Start Game audio",
+      "Game Log"
+    ],
+    "status": "todo",
+    "auto": true
+  },
+  {
+    "id": "extreme-horror-dice",
+    "title": "Extreme Horror Mode dice track",
+    "detail": "The Turn Tracker now computes Horror Roll dice from the STANDARD player board track (Horror 1 = 3 dice, 2–5 = 2 dice, 6 = 1 die). Extreme Horror mode uses a harsher track (and 5 Time per turn instead of 6). Add an Extreme-mode toggle and its dice mapping so the dice count is right in that mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.",
+    "affects": [
+      "Turn Tracker"
+    ],
+    "status": "done",
+    "auto": true
+  }
+]

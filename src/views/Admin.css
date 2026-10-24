@@ -225,7 +225,9 @@
   margin: 0 0 0.7rem;
   font-size: 0.86rem;
   color: var(--text-dim);
+  white-space: pre-line; /* keeps list breaks in auto-tracked items */
 }
+.admin-backlog__auto { opacity: 0.75; font-style: italic; }
 .admin-backlog__affects { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 
 /* RAG status on the backlog */

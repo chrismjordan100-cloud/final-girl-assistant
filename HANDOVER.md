@@ -129,6 +129,11 @@ This is the heart of the recent work. Flow:
   not the md. Each item has a `check(src)` that inspects the code and returns
   green/amber/red; runs on build (prebuild) and on file-save via the hook at
   `.kiro/hooks/sync-backlog-rag.json`.
+- The script ALSO writes `src/data/backlogAuto.json`, which the in-app Asset
+  Admin "Backlog — progress" panel merges with its own hand-kept `BACKLOG` array
+  in `src/views/Admin.jsx` (those show tagged "Auto-tracked"). So the app shows
+  BOTH lists. Feature items with code checks → add to the script; asset/content
+  items → add to the Admin.jsx array.
 - Current big open items: AI recap (Tier 2, user-supplied API key), MI/Stats
   rich-data trends, voice narration (fix start-of-game voice + read the story
   aloud), Extreme Horror dice track, official card flavour text.
