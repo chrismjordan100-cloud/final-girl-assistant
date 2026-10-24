@@ -178,9 +178,15 @@ const ITEMS = [
       'mode uses a harsher track (and 5 Time per turn instead of 6). Add an\n' +
       'Extreme-mode toggle and its dice mapping so the dice count is right in that\n' +
       'mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.',
+    remaining:
+      'Extreme toggle (Setup Assist step 3 and the Turn Tracker) and 5 Time per turn are built. Still to do: the dice for each Horror level on the Extreme side of the player board — read them off the board and add an EXTREME_DICE table to TurnTracker.jsx (the tracker says "see board" until then).',
     check() {
+      // Was fooled by the word "extreme" in a comment. Now: green needs a real
+      // Extreme dice table; amber = toggle wired but dice still "see board".
       const tt = read('src/views/TurnTracker.jsx');
-      return /extreme/i.test(tt) ? 'green' : 'red';
+      if (/EXTREME_DICE\s*=/.test(tt)) return 'green';
+      if (/extremeMode/.test(tt)) return 'amber';
+      return 'red';
     },
   },
 ];

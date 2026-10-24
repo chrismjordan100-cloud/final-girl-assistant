@@ -1,3 +1,4 @@
+import { useGameLog } from '../hooks/useGameLog.js';
 import logo from '../assets/final-girl-logo.png';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { getFinalGirl, getKiller, getLocation } from '../data/games.js';
@@ -93,6 +94,7 @@ const FEATURES = [
 
 export default function Home({ onNavigate }) {
   const { finalGirlId, killerId, locationId, clear } = useGameSelection();
+  const { active } = useGameLog();
 
   const finalGirl = getFinalGirl(finalGirlId);
   const killer = getKiller(killerId);
@@ -123,12 +125,25 @@ export default function Home({ onNavigate }) {
           setting up, tracking, and surviving a game.
         </p>
         <div className="cluster" style={{ justifyContent: 'center' }}>
-          <button className="fg-btn fg-btn--primary" onClick={() => onNavigate('setup')}>
-            Start Setup
-          </button>
-          <button className="fg-btn" onClick={() => onNavigate('turn')}>
-            Track a Turn
-          </button>
+          {active ? (
+            <>
+              <button className="fg-btn fg-btn--primary" onClick={() => onNavigate('turn')}>
+                Resume game &rarr;
+              </button>
+              <button className="fg-btn" onClick={() => onNavigate('thisgame')}>
+                This Game
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="fg-btn fg-btn--primary" onClick={() => onNavigate('setup')}>
+                Start Setup
+              </button>
+              <button className="fg-btn" onClick={() => onNavigate('turn')}>
+                Track a Turn
+              </button>
+            </>
+          )}
         </div>
       </section>
 
@@ -136,7 +151,7 @@ export default function Home({ onNavigate }) {
         <section className="home-game fg-panel">
           <div className="home-game__text">
             <p className="section-eyebrow" style={{ marginBottom: '0.3rem' }}>
-              Current game
+              {active ? (active.isTest ? 'Test game in progress' : 'Game in progress') : 'Current game'}
             </p>
             <p className="home-game__picks">
               {picks.map((p) => p.name).join('  \u00B7  ')}

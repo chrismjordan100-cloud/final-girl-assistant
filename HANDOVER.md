@@ -60,6 +60,33 @@ with cloud sync of the user's game log via Supabase. Single user (the owner).
 - Supabase publishable key + URL live in `src/lib/sync.js` (safe to ship; it's a
   public static site, single user, non-sensitive data — accepted tradeoff).
 - Supabase free tier pauses after ~1 week idle; may need a wake/restore.
+- **Sync safety (`src/lib/sync.js`):** every write to a synced key calls
+  `markLocalChange()`, which sets `fg-sync-pending`. `syncNow()` runs ONCE per
+  app load (plus on `online` / app returning to foreground) and NEVER pulls over
+  pending local changes — it pushes them instead. A cloud copy missing a key
+  (e.g. the active game was ended on the other device) removes it locally.
+  Don't reintroduce a pull-per-component: it used to wipe just-saved games.
+
+## Game flow (start → play → end) — `src/hooks/useGameFlow.js`
+- Start / End / Discard ALWAYS go through `useGameFlow()` (used by This Game,
+  Turn Tracker and Setup Assist). Start resets the Turn Tracker but keeps the
+  turn-0 Setup/Starting-event records; End/Discard clear the tracker and draft.
+  (Before this, the tracker kept the previous game's events and they leaked
+  into the next saved game.)
+- The end-of-game form is a PERSISTED draft (`fg-endgame-draft`, via
+  `usePersistentState`), so it survives screen switches; the Turn Tracker's
+  "Note a mistake" writes into it. `fg-endgame-open` opens the form when you
+  tap "End game" on the tracker.
+- The current screen lives in the URL hash (`#turn`, `#thisgame`…): reloads
+  keep your place and the phone's Back gesture works. Always navigate with the
+  `onNavigate`/`go` prop, not `setView`.
+- Turn Tracker layout is phone-first on purpose: pinned stat bar (sits under
+  `--header-h`, published by App), pinned Back/Next, scenario beats ABOVE the
+  event buttons, setup capture collapsed after turn 1, settings (Extreme mode,
+  Reset tracker) at the bottom. Destructive buttons use a two-tap confirm.
+- Extreme Horror: toggle + 5 Time is built; the per-level dice of the Extreme
+  board track are NOT in the rulebook text — add an `EXTREME_DICE` table to
+  TurnTracker.jsx once read off the board (backlog check goes green on it).
 
 ## The key data pipeline (events → summary → story)
 This is the heart of the recent work. Flow:

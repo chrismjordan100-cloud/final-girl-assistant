@@ -17,7 +17,7 @@ function formatDate(iso) {
 }
 
 export default function GameLog() {
-  const { log, manual, deleteEntry, updateEntry, clearLog, restoreLog } = useGameLog();
+  const { log, manual, deleteEntry, updateEntry, clearLog, restoreLog, demoMode } = useGameLog();
 
   // Which entry is expanded to show its full detail / edit panel.
   const [expandedId, setExpandedId] = useState(null);
@@ -128,14 +128,12 @@ export default function GameLog() {
             )}
           </div>
 
-          <div className="gl-actions">
-            <button className="gl-clear-all" onClick={handleClearAll}>
-              Clear all games
-            </button>
-            <span className="gl-actions__hint fg-type">
-              Handy for resetting after a test run.
-            </span>
-          </div>
+          {demoMode && (
+            <p className="gl-actions__hint fg-type">
+              Showing demo games &mdash; deleting, clearing and editing are switched off until
+              you turn demo data off.
+            </p>
+          )}
 
           <CollapsibleSection title="History" count={`${log.length} game${log.length === 1 ? '' : 's'}`}>
           <ul className="gl-list">
@@ -201,21 +199,35 @@ export default function GameLog() {
                   </span>
                 </button>
 
-                {isOpen && <GameDetail entry={e} onUpdate={updateEntry} />}
+                {isOpen && <GameDetail entry={e} onUpdate={demoMode ? null : updateEntry} />}
 
-                <button
-                  className="gl-entry__delete"
-                  onClick={() => handleDelete(e)}
-                  aria-label="Delete this record"
-                  title="Delete"
-                >
-                  &times;
-                </button>
+                {!demoMode && (
+                  <button
+                    className="gl-entry__delete"
+                    onClick={() => handleDelete(e)}
+                    aria-label="Delete this record"
+                    title="Delete"
+                  >
+                    &times;
+                  </button>
+                )}
               </li>
               );
             })}
           </ul>
           </CollapsibleSection>
+
+          {/* Danger zone lives at the bottom, away from everyday taps */}
+          {!demoMode && (
+            <div className="gl-actions">
+              <button className="gl-clear-all" onClick={handleClearAll}>
+                Clear all games
+              </button>
+              <span className="gl-actions__hint fg-type">
+                Handy for resetting after a test run (you get 10 seconds to undo).
+              </span>
+            </div>
+          )}
         </>
       )}
     </div>

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { DEMO_LOG, DEMO_OVERRIDES } from '../data/demoData.js';
-import { pullState, pushState, applyStateToLocal } from '../lib/sync.js';
+import { pushState, syncNow, markLocalChange } from '../lib/sync.js';
 
 /* ==========================================================================
    Game log — a persisted history of completed games, plus the "in progress"
@@ -63,6 +63,7 @@ function readManual() {
 function writeManual(overrides) {
   try {
     localStorage.setItem(MANUAL_KEY, JSON.stringify(overrides));
+    markLocalChange();
   } catch {
     /* ignore */
   }
@@ -72,6 +73,7 @@ function writeManual(overrides) {
 function writeLog(entries) {
   try {
     localStorage.setItem(LOG_KEY, JSON.stringify(entries));
+    markLocalChange();
   } catch {
     /* ignore */
   }
@@ -82,6 +84,7 @@ function writeActive(active) {
   try {
     if (active) localStorage.setItem(ACTIVE_KEY, JSON.stringify(active));
     else localStorage.removeItem(ACTIVE_KEY);
+    markLocalChange();
   } catch {
     /* ignore */
   }
@@ -139,6 +142,23 @@ export function aggregateMistakes(log, { includeTest = false } = {}) {
   });
 }
 
+/* Module-level sync driver, shared by every useGameLog instance. */
+let syncStarted = false;
+function runSync() {
+  syncNow().then((changed) => {
+    if (changed) window.dispatchEvent(new CustomEvent(EVENT));
+  });
+}
+function startBackgroundSync() {
+  if (syncStarted) return;
+  syncStarted = true;
+  runSync();
+  window.addEventListener('online', runSync);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') runSync();
+  });
+}
+
 export function useGameLog() {
   const [realLog, setRealLog] = useState(readLog);
   const [active, setActive] = useState(readActive);
@@ -160,37 +180,11 @@ export function useGameLog() {
     };
   }, []);
 
-  // Pull the latest cloud state once on load. If it differs from what's on
-  // this device, apply it and refresh so stats recorded on another device
-  // (e.g. your phone) show up here. "Last save wins" across devices.
+  // Cloud sync runs ONCE per app load (not once per screen — every screen
+  // uses this hook), plus whenever the app comes back to the foreground or the
+  // connection returns. Unsent local changes always win over the cloud copy.
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const result = await pullState();
-      if (cancelled) return;
-
-      // If the cloud has data, apply it over local where it differs.
-      const cloudData = result ? result.data : null;
-      const cloudHasLog =
-        cloudData && typeof cloudData['fg-game-log'] === 'string';
-
-      if (cloudHasLog) {
-        const changed = applyStateToLocal(cloudData);
-        if (changed) {
-          setRealLog(readLog());
-          setActive(readActive());
-          setRealManual(readManual());
-          window.dispatchEvent(new CustomEvent(EVENT));
-        }
-      } else if (readLog().length > 0) {
-        // Cloud is empty (first run) but this device already has history —
-        // seed the cloud from local so it isn't lost and other devices get it.
-        pushState();
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
+    startBackgroundSync();
   }, []);
 
   // What the rest of the app sees: demo data when the switch is on.

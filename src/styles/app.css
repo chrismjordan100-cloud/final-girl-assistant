@@ -9,10 +9,15 @@
 }
 
 /* --- Header / Nav --- */
-.app-header {
+/* Banner + header pinned together, so the demo banner can never slide over
+   the header (it used to on phones). */
+.app-top {
   position: sticky;
   top: 0;
   z-index: 50;
+}
+.app-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -433,9 +438,6 @@
 .demo-toggle.is-on .demo-toggle__dot { background: #140d0a; }
 
 .demo-banner {
-  position: sticky;
-  top: 0;
-  z-index: 60;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -688,4 +690,58 @@
   font-size: 0.78rem;
   color: var(--fg-bone-dim);
   padding: 0.2rem 0.5rem;
+}
+
+/* Phones: the demo banner shrinks to one slim line. */
+@media (max-width: 720px) {
+  .demo-banner { padding: 0.3rem 0.8rem; gap: 0.6rem; flex-wrap: nowrap; }
+  .demo-banner__more { display: none; }
+}
+
+/* In-game shortcuts — a slim row under the header on phones only (the full
+   nav is always visible on desktop). */
+.game-shortcuts { display: none; }
+@media (max-width: 720px) {
+  .game-shortcuts {
+    order: 6;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.3rem;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .game-shortcuts__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    padding: 0.4em 0.3em;
+    background: var(--fg-black-2);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.66rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .game-shortcuts__btn.is-active {
+    color: var(--text);
+    border-color: var(--fg-blood-bright);
+    background: var(--fg-blood-deep);
+  }
+}
+
+/* Long single-word page titles (ACHIEVEMENTS) mustn't push the page sideways. */
+.view-head h1 { overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  .view-head h1 { font-size: clamp(1.6rem, 8.5vw, 2.3rem); }
+  /* At-the-table screens drop the intro paragraph on phones to save space. */
+  .view-head--compact { margin-bottom: 1rem; }
+  .view-head--compact .lead { display: none; }
+}
+@media (max-width: 420px) {
+  .game-shortcuts__btn > span[aria-hidden] { display: none; }
 }

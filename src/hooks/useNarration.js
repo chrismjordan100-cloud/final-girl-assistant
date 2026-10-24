@@ -42,7 +42,7 @@ function pickSpookyVoice() {
 }
 
 export function useNarration() {
-  const [speaking, setSpeaking] = useState(false);
+  const [speaking, setSpeaking] = useState(() => supported && window.speechSynthesis.speaking);
   const voiceRef = useRef(null);
 
   useEffect(() => {
@@ -50,9 +50,10 @@ export function useNarration() {
     const load = () => { voiceRef.current = pickSpookyVoice(); };
     load();
     window.speechSynthesis.addEventListener('voiceschanged', load);
+    // Speech is deliberately NOT cancelled on unmount: pressing Start and then
+    // switching to the Turn Tracker used to cut the intro off mid-sentence.
     return () => {
       window.speechSynthesis.removeEventListener('voiceschanged', load);
-      window.speechSynthesis.cancel();
     };
   }, []);
 

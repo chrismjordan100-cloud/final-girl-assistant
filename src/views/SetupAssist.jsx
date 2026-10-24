@@ -13,6 +13,8 @@ import {
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import IconSelect from '../components/IconSelect.jsx';
 import SetupCapture from '../components/SetupCapture.jsx';
+import { useGameFlow } from '../hooks/useGameFlow.js';
+import { useTurnState } from '../hooks/useTurnState.js';
 import './SetupAssist.css';
 
 const finalGirlGroups = getFinalGirlGroups();
@@ -66,8 +68,17 @@ function SpecialSetupList({ kind, label, entryName, steps, done, onToggle }) {
   );
 }
 
-export default function SetupAssist() {
+export default function SetupAssist({ onNavigate }) {
   const [done, setDone] = useState(loadProgress);
+  const { active, canStart, start } = useGameFlow();
+  const { state: turnState, patch: patchTurns } = useTurnState();
+  const extremeMode = Boolean(turnState.extreme);
+
+  // Start straight from setup and jump to the Turn Tracker.
+  function startAndPlay(isTest) {
+    start(isTest);
+    if (onNavigate) onNavigate('turn');
+  }
 
   // Refresh the checklist if progress is cleared elsewhere (e.g. Home's
   // "Clear this game" button).
@@ -229,6 +240,16 @@ export default function SetupAssist() {
                           )}
                         </span>
                       </label>
+                      {step.id === 's3' && (
+                        <label className="setup-extreme" onClick={(e) => e.stopPropagation()}>
+                          <input
+                            type="checkbox"
+                            checked={extremeMode}
+                            onChange={(e) => patchTurns({ extreme: e.target.checked, time: e.target.checked ? 5 : 6 })}
+                          />
+                          <span>Playing Extreme Horror Mode (the Turn Tracker gives you 5 Time per turn)</span>
+                        </label>
+                      )}
                       {step.id === 's12' && <SetupCapture only="setup" />}
                       {step.id === 's18' && <SetupCapture only="event-start" />}
                       {step.id === 's2' && (
@@ -311,6 +332,34 @@ export default function SetupAssist() {
           <p className="fg-type">The killer is waiting. Good luck.</p>
         </div>
       )}
+
+      {/* Straight from the last setup step into the game */}
+      <div className="setup-start fg-panel">
+        {active ? (
+          <>
+            <p className="setup-start__text">A game is already in progress.</p>
+            {onNavigate && (
+              <button className="fg-btn fg-btn--primary" onClick={() => onNavigate('turn')}>
+                Go to the Turn Tracker &rarr;
+              </button>
+            )}
+          </>
+        ) : canStart ? (
+          <>
+            <p className="setup-start__text">Set up? Start the game and open the Turn Tracker.</p>
+            <div className="setup-start__btns">
+              <button className="fg-btn" onClick={() => startAndPlay(true)} title="Never affects Achievements or MI">
+                &#9654; Start test
+              </button>
+              <button className="fg-btn fg-btn--primary" onClick={() => startAndPlay(false)}>
+                &#9760; Start real game
+              </button>
+            </div>
+          </>
+        ) : (
+          <p className="setup-start__text">Choose your Killer, Location and Final Girl in the first steps to start a game.</p>
+        )}
+      </div>
     </div>
   );
 }

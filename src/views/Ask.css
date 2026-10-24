@@ -8,6 +8,7 @@
 }
 .ask-input {
   flex: 1;
+  min-width: 0;
   background: var(--fg-black-2);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);

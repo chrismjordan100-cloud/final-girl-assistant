@@ -21,6 +21,7 @@ const DEFAULT = {
   bloodlust: 0,
   time: 6,          // Time resets to 6 in Planning (5 in Extreme Horror)
   victimsSaved: 0,
+  extreme: false,   // Extreme Horror Mode: 5 Time per turn, harsher Horror track
   checked: {},      // keyed "{phaseIndex}:{i}" and "x:{phaseIndex}:{i}"
   // Chronological event stream for THIS game. Each event is stamped with the
   // turn + phase it happened in, so the saved game holds the full narrative
@@ -102,8 +103,18 @@ export function useTurnState() {
   }, []);
 
   // Reset for a brand-new game (optionally with a starting Horror level).
-  const reset = useCallback((startHorror = DEFAULT.horror) => {
-    const next = { ...DEFAULT, horror: startHorror };
+  // `keepSetup` keeps the turn-0 Setup / Starting-event records, because those
+  // are captured on Setup Assist BEFORE you press Start. Extreme mode is a
+  // table choice, so it carries over too.
+  const reset = useCallback((startHorror = DEFAULT.horror, { keepSetup = false } = {}) => {
+    const cur = read();
+    const next = {
+      ...DEFAULT,
+      horror: startHorror,
+      extreme: Boolean(cur.extreme),
+      time: cur.extreme ? 5 : DEFAULT.time,
+      events: keepSetup ? (cur.events || []).filter((e) => e.turn === 0) : [],
+    };
     write(next);
     setState(next);
   }, []);

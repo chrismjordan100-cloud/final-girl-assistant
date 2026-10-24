@@ -258,3 +258,16 @@
 }
 .ach-season-row__pct { font-family: var(--font-display); font-weight: 700; min-width: 3ch; text-align: right; }
 .ach-season-row__count { font-size: 0.76rem; color: var(--text-dim); }
+
+/* Phones: name + count on one line, the progress bar full-width beneath it,
+   so the row never pushes the page sideways. */
+@media (max-width: 560px) {
+  .ach-closest__item {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'icon name count' 'bar bar bar';
+  }
+  .ach-closest__icon { grid-area: icon; }
+  .ach-closest__name { grid-area: name; min-width: 0; overflow-wrap: anywhere; }
+  .ach-closest__bar { grid-area: bar; }
+  .ach-closest__count { grid-area: count; }
+}

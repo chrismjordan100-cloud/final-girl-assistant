@@ -215,12 +215,20 @@
 .phase-notes li::marker { color: var(--fg-blood); }
 
 .phase-card__nav {
+  /* Pinned to the bottom of the screen while the phase card is on screen, so
+     Back / Next are always under your thumb. */
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--border);
+  margin: 1.5rem -1.5rem -1.4rem;
+  padding: 0.8rem 1.5rem calc(0.8rem + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(180deg, rgba(25, 17, 21, 0.92), var(--fg-panel) 40%);
+  border-top: 1px solid var(--border-strong);
+  border-radius: 0 0 var(--radius) var(--radius);
+  backdrop-filter: blur(4px);
 }
 
 /* Horror roll block */
@@ -276,7 +284,7 @@
    ========================================================================== */
 .tt-stats {
   position: sticky;
-  top: 0.5rem;
+  top: calc(var(--header-h, 0px) + 0.4rem);
   z-index: 20;
   display: flex;
   align-items: center;
@@ -298,6 +306,14 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.58rem;
+  color: var(--text-dim);
+}
+.tt-stats__phase {
+  display: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.55rem;
   color: var(--text-dim);
 }
 .tt-stats__turn-num {
@@ -428,15 +444,178 @@
 .horror-roll__summary:hover { color: var(--text); }
 .phase-details[open] .phase-card__cols { margin-top: 0.8rem; }
 
-.fg-btn--small { padding: 0.3em 0.8em; font-size: 0.7rem; }
 
 /* Bigger, obvious primary advance button */
 .phase-card__next { font-size: 1rem; padding: 0.6em 1.3em; }
 
 @media (max-width: 560px) {
-  .tt-stats { position: static; }
   .phase-card__next { flex: 1; }
+  .phase-card { padding: 1.1rem 1rem; }
+  .phase-card__nav { margin: 1.25rem -1rem -1.1rem; padding-left: 1rem; padding-right: 1rem; }
+
+  /* Compact pinned stat bar on phones: one tight row, so it can stay on screen. */
+  .tt-stats {
+    top: var(--header-h, 0px);
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+  }
+  /* Turn + phase become one slim line, so the four counters get the full
+     width and finger-sized buttons. */
+  .tt-stats { flex-direction: column; align-items: stretch; gap: 0.25rem; }
+  .tt-stats__turn {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0;
+    border: none;
+  }
+  .tt-stats__turn-label { font-size: 0.55rem; }
+  .tt-stats__turn-num { font-size: 1rem; }
+  .tt-stats__phase { display: inline; }
+  .tt-stats__counters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+  .tt-counter { padding: 0; min-width: 0; }
+  .tt-counter__label { font-size: 0.5rem; letter-spacing: 0.06em; white-space: nowrap; }
+  .tt-counter__controls { gap: 0.1rem; }
+  .tt-counter__btn { width: 1.55rem; height: 1.55rem; font-size: 0.95rem; flex: none; }
+  .tt-counter__value { min-width: 1.1em; font-size: 1.15rem; text-align: center; }
+  .tt-counter__hint { font-size: 0.5rem; white-space: nowrap; }
+
+  /* Event buttons as a tight two-column grid instead of a long single column */
+  .tt .turn-events__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+  .tt .te-btn { justify-content: flex-start; text-align: left; font-size: 0.66rem; padding: 0.55em 0.6em; line-height: 1.2; }
 }
+
+/* ==========================================================================
+   Game bar — what's in play + start / end, right on the tracker
+   ========================================================================== */
+.tt-gamebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.9rem;
+  border-left: 3px solid var(--border-strong);
+}
+.tt-gamebar.is-live { border-left-color: var(--fg-blood-bright); }
+.tt-gamebar__info { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.tt-gamebar__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+.tt-gamebar.is-live .tt-gamebar__status { color: var(--fg-blood-bright); }
+.tt-gamebar__dot {
+  width: 0.55rem; height: 0.55rem; border-radius: 50%;
+  background: var(--fg-blood-bright);
+  box-shadow: 0 0 0 0 rgba(224, 30, 36, 0.6);
+  animation: tt-pulse 1.8s infinite;
+}
+@keyframes tt-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(224, 30, 36, 0.55); }
+  70% { box-shadow: 0 0 0 0.45rem rgba(224, 30, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 30, 36, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .tt-gamebar__dot { animation: none; } }
+.tt-gamebar__combo { font-size: 0.9rem; overflow-wrap: anywhere; }
+.tt-gamebar__actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* Setup capture, collapsible */
+.tt-setup {
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--fg-black-2);
+}
+.tt-setup__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.8rem;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.tt-setup__recorded {
+  font-family: var(--font-type);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.tt-setup[open] > .tt-setup__summary { border-bottom: 1px solid var(--border); }
+.tt-setup > :not(summary) { margin: 0; border-radius: 0 0 var(--radius) var(--radius); }
+
+/* Mid-game mistake note */
+.tt-mistake { margin-top: 0.9rem; }
+.tt-mistake__open {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+}
+.tt-mistake__open:hover { color: var(--text); border-color: var(--fg-gold); }
+.tt-mistake__count { color: var(--fg-gold); }
+.tt-mistake__ok { color: var(--fg-sick-green); text-transform: none; letter-spacing: 0; }
+.tt-mistake__form { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.tt-mistake__types { display: flex; gap: 0.3rem; }
+.tt-mistake__input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.7rem;
+}
+
+/* Settings strip */
+.tt-settings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.9rem 1.2rem;
+  margin-top: 1.3rem;
+}
+.tt-settings__toggle { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; }
+.tt-settings__toggle input { width: 1.1rem; height: 1.1rem; accent-color: var(--fg-blood); }
+.tt-settings__hint { display: block; font-size: 0.78rem; color: var(--text-dim); }
 
 /* Core per-phase prompts ("don't forget" beats) */
 .phase-prompts {

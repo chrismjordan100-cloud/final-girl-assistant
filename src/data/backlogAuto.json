@@ -86,7 +86,8 @@
     "affects": [
       "Turn Tracker"
     ],
-    "status": "done",
+    "status": "partial",
+    "remaining": "Extreme toggle (Setup Assist step 3 and the Turn Tracker) and 5 Time per turn are built. Still to do: the dice for each Horror level on the Extreme side of the player board — read them off the board and add an EXTREME_DICE table to TurnTracker.jsx (the tracker says \"see board\" until then).",
     "auto": true
   }
 ]

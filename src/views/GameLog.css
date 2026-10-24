@@ -32,6 +32,7 @@
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-align: center;
   font-size: 0.68rem;
   color: var(--text-dim);
 }
@@ -154,7 +155,7 @@
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0 1rem;
 }
 .gl-clear-all {
   background: transparent;
@@ -374,3 +375,9 @@
 .gd__story-text p { margin: 0 0 0.8rem; }
 .gd__story-text p:last-child { margin-bottom: 0; }
 .gd__story-note { margin: 0; font-size: 0.74rem; }
+
+@media (max-width: 480px) {
+  .gl-tally { gap: 0.4rem; padding: 0.9rem 0.6rem; }
+  .gl-tally__num { font-size: 1.7rem; }
+  .gl-tally__label { letter-spacing: 0.04em; font-size: 0.6rem; }
+}

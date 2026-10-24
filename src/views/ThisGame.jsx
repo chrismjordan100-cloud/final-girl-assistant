@@ -9,7 +9,6 @@ import {
   getPlayRules,
   getAchievements,
   getOfficialScenario,
-  buildScenario,
   isAutoAchievement,
   getIcon,
   getRuleIcons,
@@ -20,8 +19,9 @@ import {
   getScenarioImage,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useNarration } from '../hooks/useNarration.js';
 import { useGameLog, aggregateMistakes } from '../hooks/useGameLog.js';
+import { useGameFlow, useEndDraft } from '../hooks/useGameFlow.js';
+import { usePersistentState } from '../hooks/usePersistentState.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import { deriveSummary } from '../lib/gameSummary.js';
 import { useEffect, useState } from 'react';
@@ -75,10 +75,11 @@ function PlayRulesBlock({ kind, entry, rules }) {
   );
 }
 
-export default function ThisGame() {
+export default function ThisGame({ onNavigate }) {
   const { finalGirlId, killerId, locationId, clear } = useGameSelection();
-  const { supported: narrationSupported, speaking, speak, stop } = useNarration();
-  const { log, active, startGame, endGame, discardActive } = useGameLog();
+  const { log } = useGameLog();
+  const { active, start, end, discard, narration } = useGameFlow();
+  const { speaking, stop } = narration;
   const { state: turnState } = useTurnState();
 
   const finalGirl = getFinalGirl(finalGirlId);
@@ -138,27 +139,33 @@ export default function ThisGame() {
     : allGroups.filter((g) => g.count > 1)
   ).slice(0, 4);
 
-  // End-of-game record form state.
-  const [outcome, setOutcome] = useState('');
-  const [turns, setTurns] = useState('');
-  const [notes, setNotes] = useState('');
-  const [answers, setAnswers] = useState({}); // achievementId -> 'yes' | 'no'
+  // End-of-game record form. The draft is PERSISTED (useEndDraft), so going to
+  // the Turn Tracker and back — or noting a mistake from there mid-game —
+  // never loses what you've entered.
+  const { draft, update: updateDraft, addMistake: addDraftMistake } = useEndDraft();
+  const { outcome, notes, answers, mistakes, turnsEdited } = draft;
+  // "Turns taken" follows the live Turn Tracker count until you type your own.
+  // (The Turn Tracker counts the turn you're ON, so that's the turns played.)
+  const liveTurns = turnState && turnState.turn ? String(turnState.turn) : '';
+  const turns = turnsEdited ? draft.turns : liveTurns;
+  const setOutcome = (v) => updateDraft({ outcome: v });
+  const setNotes = (v) => updateDraft({ notes: v });
   const [savedMsg, setSavedMsg] = useState(false);
-  const [mistakes, setMistakes] = useState([]);
   const [mistakeType, setMistakeType] = useState('rules');
   const [mistakeText, setMistakeText] = useState('');
-  // Whether the user has hand-edited the turns field, so auto-fill backs off.
-  const [turnsEdited, setTurnsEdited] = useState(false);
-
-  // Auto-fill "Turns taken" from the live Turn Tracker count while a game is
-  // active, unless you've typed your own value. The Turn Tracker counts the
-  // turn you're ON, so when the game ends the completed turns = that number.
+  // Two-tap confirm for Discard, so one stray tap can't throw a game away.
+  const [confirmDiscard, setConfirmDiscard] = useState(false);
   useEffect(() => {
-    if (!active || turnsEdited) return;
-    const live = turnState && turnState.turn ? String(turnState.turn) : '';
-    if (live && live !== turns) setTurns(live);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active, turnState?.turn, turnsEdited]);
+    if (!confirmDiscard) return undefined;
+    const t = setTimeout(() => setConfirmDiscard(false), 4000);
+    return () => clearTimeout(t);
+  }, [confirmDiscard]);
+  // The record form is tucked away while you play (so the rules aren't pushed
+  // down the page) and opens when you're ready — or if you've started filling it.
+  const draftStarted = Boolean(outcome || notes || mistakes.length || Object.keys(answers).length);
+  // Persisted so the Turn Tracker's "End game" button lands here with it open.
+  const [recordOpen, setRecordOpen] = usePersistentState('fg-endgame-open', false);
+  const showRecord = recordOpen || draftStarted;
 
   // Achievements available for this combo (killer + location lists).
   const comboAchievements = [
@@ -187,34 +194,34 @@ export default function ThisGame() {
   // are never affected by saving — they come straight from your win history.)
 
   function handleStartGame(isTest) {
-    if (narrationSupported) speak(buildScenario({ finalGirl, killer, location }));
-    startGame({
-      isTest,
-      finalGirlId: finalGirl ? finalGirl.id : null,
-      killerId: killer ? killer.id : null,
-      locationId: location ? location.id : null,
-      finalGirlName: finalGirl ? finalGirl.name : null,
-      killerName: killer ? killer.name : null,
-      locationName: location ? location.name : null,
-    });
-    setAnswers({});
-    setMistakes([]);
+    start(isTest);
     setMistakeText('');
+    setRecordOpen(false);
   }
 
   function answerAchievement(id, value) {
-    setAnswers((cur) => ({ ...cur, [id]: value }));
+    updateDraft({ answers: { ...answers, [id]: value } });
   }
 
   function addMistake() {
     const text = mistakeText.trim();
     if (!text) return;
-    setMistakes((cur) => [...cur, { type: mistakeType, text }]);
+    addDraftMistake(mistakeType, text);
     setMistakeText('');
   }
 
   function removeMistake(idx) {
-    setMistakes((cur) => cur.filter((_, i) => i !== idx));
+    updateDraft({ mistakes: mistakes.filter((_, i) => i !== idx) });
+  }
+
+  function handleDiscard() {
+    if (!confirmDiscard) {
+      setConfirmDiscard(true);
+      return;
+    }
+    setConfirmDiscard(false);
+    discard();
+    setRecordOpen(false);
   }
 
   function handleEndGame() {
@@ -230,7 +237,7 @@ export default function ThisGame() {
     // derived summary. Both persist so the record is self-contained and a
     // future AI summary can follow the game turn-by-turn.
     const capturedEvents = (turnState && turnState.events) || [];
-    endGame({
+    end({
       outcome,
       turns: turns ? Number(turns) : null,
       notes,
@@ -239,13 +246,8 @@ export default function ThisGame() {
       events: capturedEvents,
       summary: deriveSummary(capturedEvents),
     });
-    setOutcome('');
-    setTurns('');
-    setTurnsEdited(false);
-    setNotes('');
-    setAnswers({});
-    setMistakes([]);
     setMistakeText('');
+    setRecordOpen(false);
     setSavedMsg(true);
     setTimeout(() => setSavedMsg(false), 4000);
   }
@@ -321,9 +323,9 @@ export default function ThisGame() {
             <div className="tg-selectionbar__actions">
               {speaking ? (
                 <button className="fg-btn tg-startgame is-speaking" onClick={stop}>
-                  &#9632; Stop
+                  &#9632; Stop narration
                 </button>
-              ) : (
+              ) : active ? null : (
                 <>
                   <button
                     className="fg-btn tg-start-test"
@@ -386,6 +388,20 @@ export default function ThisGame() {
                   : 'Record the result when you finish (no need to use the Turn Tracker).'}
               </p>
 
+              <div className="tg-endgame__quick">
+                {onNavigate && (
+                  <button className="fg-btn" onClick={() => onNavigate('turn')}>
+                    &#128337; Turn Tracker
+                  </button>
+                )}
+                {!showRecord && (
+                  <button className="fg-btn fg-btn--primary" onClick={() => setRecordOpen(true)}>
+                    End game &amp; record result
+                  </button>
+                )}
+              </div>
+
+              {showRecord && (<>
               <div className="tg-endgame__outcome">
                 <button
                   className={'tg-outcome tg-outcome--won' + (outcome === 'won' ? ' is-selected' : '')}
@@ -451,9 +467,9 @@ export default function ThisGame() {
                       );
                     })}
                   </ul>
-                  {answeredCount < comboAchievements.length && (
+                  {answeredCount < manualAchievements.length && (
                     <p className="tg-achievements__warn fg-type">
-                      &#9888; {comboAchievements.length - answeredCount} still to answer.
+                      &#9888; {manualAchievements.length - answeredCount} still to answer.
                     </p>
                   )}
                 </div>
@@ -548,7 +564,7 @@ export default function ThisGame() {
                     type="number"
                     min="1"
                     value={turns}
-                    onChange={(e) => { setTurns(e.target.value); setTurnsEdited(true); }}
+                    onChange={(e) => updateDraft({ turns: e.target.value, turnsEdited: true })}
                     placeholder="e.g. 8"
                   />
                 </label>
@@ -573,10 +589,19 @@ export default function ThisGame() {
                 >
                   Save result
                 </button>
-                <button className="fg-btn" onClick={discardActive}>
-                  Discard (don&rsquo;t record)
+                <button
+                  className={'fg-btn' + (confirmDiscard ? ' fg-btn--danger' : '')}
+                  onClick={handleDiscard}
+                >
+                  {confirmDiscard ? 'Tap again to discard' : 'Discard (don\u2019t record)'}
                 </button>
+                {!draftStarted && (
+                  <button className="fg-btn fg-btn--ghost" onClick={() => setRecordOpen(false)}>
+                    Not yet
+                  </button>
+                )}
               </div>
+              </>)}
             </section>
           )}
 

@@ -208,7 +208,7 @@ export default function GameDetail({ entry, onUpdate }) {
   return (
     <div className="gd">
       <div className="gd__toolbar">
-        <button className="fg-btn fg-btn--small" onClick={() => setEditing(true)}>Edit details</button>
+        {onUpdate && <button className="fg-btn fg-btn--small" onClick={() => setEditing(true)}>Edit details</button>}
       </div>
 
       {hasEvents && (
