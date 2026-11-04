@@ -9,6 +9,7 @@ import {
   getSetupExtras,
   changesItemDecks,
   getIcon,
+  getOfficialFinalGirls,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import IconSelect from '../components/IconSelect.jsx';
@@ -115,6 +116,12 @@ export default function SetupAssist({ onNavigate }) {
   const itemChangers = [killer, location].filter((e) => changesItemDecks(e));
   const itemDeckChanged = itemChangers.length > 0;
   const itemDeckChangedBy = itemChangers.map((e) => e.name).join(' and ');
+
+  // Official (canon) Final Girls for the chosen Killer / Location, matched by
+  // the Feature Film they share. Shown as a hint — any Final Girl is still
+  // playable with any combo.
+  const officialGirls = getOfficialFinalGirls(killer, location);
+  const hasOfficialGirls = officialGirls.killer.length > 0 || officialGirls.location.length > 0;
 
   function persist(next) {
     setDone(next);
@@ -266,6 +273,37 @@ export default function SetupAssist({ onNavigate }) {
                               )}
                             />
                           </div>
+                          {(killer || location) && (
+                            <div className="game-picker__official">
+                              {hasOfficialGirls ? (
+                                <>
+                                  <span className="game-picker__official-title">
+                                    Official Final Girls for this game:
+                                  </span>
+                                  {officialGirls.killer.length > 0 && (
+                                    <span className="game-picker__official-line">
+                                      <span className="setup-extra__badge setup-extra__badge--killer">Killer</span>
+                                      {killer.name}: {officialGirls.killer.join(', ')}
+                                    </span>
+                                  )}
+                                  {officialGirls.location.length > 0 && (
+                                    <span className="game-picker__official-line">
+                                      <span className="setup-extra__badge setup-extra__badge--location">Location</span>
+                                      {location.name}: {officialGirls.location.join(', ')}
+                                    </span>
+                                  )}
+                                  <span className="game-picker__official-note fg-type">
+                                    You can still pick any Final Girl &mdash; any of them plays with any Killer and Location.
+                                  </span>
+                                </>
+                              ) : (
+                                <span className="game-picker__official-note fg-type">
+                                  No official Final Girl is tied to this{' '}
+                                  {killer && location ? 'Killer or Location' : killer ? 'Killer' : 'Location'} &mdash; pick whichever you like.
+                                </span>
+                              )}
+                            </div>
+                          )}
                           <p className="game-picker__hint fg-type">
                             Picking your Final Girl shows her card on the
                             &ldquo;This Game&rdquo; tab.

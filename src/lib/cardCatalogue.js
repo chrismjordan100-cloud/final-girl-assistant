@@ -76,6 +76,9 @@ export const SERIES_LABEL = { S1: 'Series 1', S2: 'Series 2', S3: 'Series 3', S4
      diagram     setup card: it's a placement diagram, so no rules text exists
      no-text     the card exists but its rules text isn't recorded anywhere yet */
 function cardStatus(card, groupKey) {
+  // Only review paraphrases are flagged for checking. Trusted sources — the
+  // wiki and "user_photo" (transcribed from a photo of the physical card) — are
+  // treated the same: a complete, reliable effect.
   if (card.effect && card.effect_source === 'review_paraphrase') {
     return { status: 'paraphrase', note: 'Wording paraphrased from a review — check it against the card.' };
   }
@@ -119,6 +122,11 @@ function slimCard(card, ownerId, groupKey) {
     recipe: card.recipe ?? null,
     variant: card.variant ?? null,
     sourceUrl: card.source_url || null,
+    // Transcribed from a photo of the physical card (shows a "Checked" badge).
+    photoVerified: card.photo_verified === true,
+    // Multiple printings of the same card with different text. Each entry is
+    // { label, effect }; when present the UI lists these instead of `effect`.
+    printings: Array.isArray(card.printings) && card.printings.length ? card.printings : null,
     status: card.id ? status : 'no-text',
     note: card.id ? note : 'Card has no id in the data — needs tidying.',
     image: cardImageFor(ownerId, card.id),

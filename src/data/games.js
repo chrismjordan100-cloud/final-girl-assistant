@@ -178,6 +178,20 @@ export function getFinalGirl(id) {
   return finalGirls.find((g) => g.id === id) || null;
 }
 
+/* The Final Girls that officially come in the same Feature Film box as a given
+   Killer or Location (matched by the shared `film` title). Any Final Girl can
+   still be played with any combo — this is just the canon pairing, surfaced on
+   the setup screen. Returns { killer: [names], location: [names] }, each a
+   de-duplicated list of Final Girl names (empty if none / nothing selected). */
+export function getOfficialFinalGirls(killer, location) {
+  const byFilm = (film) =>
+    film ? finalGirls.filter((g) => g.film && g.film === film).map((g) => g.name) : [];
+  return {
+    killer: killer ? byFilm(killer.film) : [],
+    location: location ? byFilm(location.film) : [],
+  };
+}
+
 /* --------------------------------------------------------------------------
    Official scenarios.
    Each Feature Film has a "home" pairing of one Killer + one Location with a

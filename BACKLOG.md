@@ -115,7 +115,7 @@ board by board; the story generator can then use the real space names too.
 
 **Status:** 🔴 not started.
 
-### 🔴 Card images in the Codex card list
+### 🟡 Card images in the Codex card list
 
 Over time, add a picture of each card to src/assets/cards/ (file named after the
 card's id — tick "Show image slots" in Codex → All cards to see each name). The
@@ -123,7 +123,7 @@ card list shows the image beside the card automatically. Setup cards are the
 priority: they are placement diagrams with no rules text, so an image is the only
 way to capture them.
 
-**Status:** 🔴 not started.
+**Status:** 🟡 partially built / in progress.
 
 ## Done (🟢 shipped)
 - Hosting on GitHub Pages with auto-deploy on push.

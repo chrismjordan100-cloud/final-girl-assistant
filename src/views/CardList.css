@@ -179,6 +179,12 @@
 .cl-badge--epic { border-color: var(--fg-blood); color: var(--text); background: var(--fg-blood-deep); }
 .cl-badge--mdp { color: var(--text); }
 .cl-badge--img { border-color: var(--fg-sick-green); color: var(--fg-sick-green); }
+.cl-badge--checked { border-color: var(--fg-sick-green); color: var(--fg-sick-green); }
+
+/* Multiple printings of the same card (each with its own label + effect). */
+.cl-card__printings { margin: 0.25rem 0 0; display: flex; flex-direction: column; gap: 0.25rem; }
+.cl-card__printing { margin: 0; font-size: 0.88rem; line-height: 1.45; overflow-wrap: anywhere; }
+.cl-card__printing-label { font-family: var(--font-display); color: var(--fg-gold); }
 
 /* Image slot / thumbnail */
 .cl-thumb { flex: none; }

@@ -109,7 +109,8 @@
     "affects": [
       "Codex"
     ],
-    "status": "todo",
+    "status": "partial",
+    "remaining": "5 card images added so far; keep adding (setup cards first).",
     "auto": true
   }
 ]

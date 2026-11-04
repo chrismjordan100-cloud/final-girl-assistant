@@ -166,6 +166,41 @@
   font-size: 0.8rem;
 }
 
+/* Official Final Girls hint (shown once a Killer / Location is picked) */
+.game-picker__official {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.game-picker__official-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  color: var(--fg-gold);
+}
+.game-picker__official-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+/* Compact the shared badge for inline use on these lines. */
+.game-picker__official-line .setup-extra__badge {
+  margin-bottom: 0;
+  font-size: 0.62rem;
+  padding: 0.15em 0.55em;
+  flex: none;
+}
+.game-picker__official-note { margin: 0; font-size: 0.78rem; color: var(--text-dim); }
+
 /* Special setup (per Killer / Location) */
 .setup-group--special { border-top: 3px solid var(--fg-blood); }
 .setup-group__num--special {

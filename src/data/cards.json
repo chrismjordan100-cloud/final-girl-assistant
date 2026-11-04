@@ -20,7 +20,7 @@
     "minor_dark_powers": "Drawn from the Terror deck; placed on killer board; bonus_health absorbs damage first",
     "item_variant": "Items reused across boxes can differ; 'variant' names the wiki variant applied to this location (null = single version)",
     "setup_cards": "Names only; setup cards are board-placement diagrams with no rules text",
-    "effect_source": "wiki = transcribed card rules text from the fan wiki; review_paraphrase = paraphrased from published reviews (lower confidence, may be incomplete); null = no effect available",
+    "effect_source": "wiki = transcribed card rules text from the fan wiki; review_paraphrase = paraphrased from published reviews (lower confidence, may be incomplete); null = no effect available; user_photo = transcribed from Chris's own photos of the physical cards (highest confidence for printed text)",
     "terror_cards": "Each killer and location has its own terror_cards list (qty = copies); 10 are dealt from the combined pool each game. is_minor_dark_power marks Minor Dark Power cards",
     "special_cards": "Box-specific decks: deck = mission | friend | savior_card | side_effect | amped_card | harvest_madness | ancient_curse | action_card | crafted_item | supply_item | item_trap | terror_trap | mission_item | affliction | victim_death_trap",
     "source_url": "Best-effort link to the card's wiki page (built from the card name; a few disambiguated pages may differ). Use it to fetch flavour text at runtime if wanted",
@@ -5288,28 +5288,31 @@
           "id": "the_volk_ar_regenerative_cloaking",
           "name": "Regenerative Cloaking",
           "epic": true,
-          "effect": "Concealed: Recovers 2 Health. Visible: Target Final Girl or Victim > Move 3 Spaces > Attack > Place 2 facedown Movement cards",
+          "effect": "The Volk'ar now begins the Killer phase by resolving the following: Concealed: Add a Movement card to her Path face up > Recover 2 Health. Visible: Target Final Girl or Victim > Move 3 Spaces > Attack > Conceal twice (add 2 facedown Movement cards to her Path).",
           "source_url": "https://finalgirl.fandom.com/wiki/Regenerative_Cloaking",
-          "effect_source": "wiki",
-          "flavour_unofficial": "It flickers out of sight and the wounds close behind it."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "It flickers out of sight and the wounds close behind it.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_guerilla_warfare",
           "name": "Guerilla Warfare",
           "epic": false,
-          "effect": "The H.U.N.T.E.R. now begins the Killer phase by resolving the following: Concealed: Reveal the Volk'ar > Target Final Girl > Move 3 Spaces > Attack > Conceal the Volk'ar",
+          "effect": "The Volk'ar now begins the Killer phase by resolving the following: Concealed: Reveal the Volk'ar > Target Final Girl > Move 3 Spaces > Attack > Conceal the Volk'ar. Visible: Target Final Girl > Move 3 Spaces > Attack > Conceal the Volk'ar.",
           "source_url": "https://finalgirl.fandom.com/wiki/Guerilla_Warfare",
-          "effect_source": "wiki",
-          "flavour_unofficial": "It fights like a guerrilla, from the trees and never twice from the same spot."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "It fights like a guerrilla, from the trees and never twice from the same spot.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_rampage",
           "name": "Rampage",
           "epic": false,
-          "effect": "The Volk'ar now begins the Killer phase by resolving the following: Visible: Target Final Girl or Victim > Move 3 Spaces > Attack x2",
+          "effect": "When revealed, Reveal the Volk'ar. The Volk'ar now begins the Killer phase by resolving the following: Visible: Target Final Girl or Victim > Move 3 Spaces > Attack x2",
           "source_url": "https://finalgirl.fandom.com/wiki/Rampage",
-          "effect_source": "wiki",
-          "flavour_unofficial": "Patience gone, it tears through the jungle in plain sight."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "Patience gone, it tears through the jungle in plain sight.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_self_destruct",
@@ -5318,7 +5321,8 @@
           "effect": "The Volk'ar now begins the Killer phase by resolving the following: Visible: Remove a Countdown token > Target Final Girl or Victim > Attack When revealed, Reveal the Volk'ar. Place 3 Countdown tokens on this card. To win, you must kill the Volk'ar and be on an Exit space before the final Countdown token is removed.",
           "source_url": "https://finalgirl.fandom.com/wiki/Self-Destruct",
           "effect_source": "wiki",
-          "flavour_unofficial": "If it can't take you, it will take everything with it."
+          "flavour_unofficial": "If it can't take you, it will take everything with it.",
+          "photo_verified": true
         }
       ],
       "dark_powers": [
@@ -5329,16 +5333,18 @@
           "effect": "When the Volk'ar's Path is resolved, resolve the Ambush Penalty on each Movement card.",
           "source_url": "https://finalgirl.fandom.com/wiki/Merciless_Ambush",
           "effect_source": "wiki",
-          "flavour_unofficial": "You'll never see the blow that kills you."
+          "flavour_unofficial": "You'll never see the blow that kills you.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_blades_in_the_dark",
           "name": "Blades in the Dark",
           "epic": false,
-          "effect": "When the Volk'ar's Path is revealed, kill 1 Victim in each space adjacent to her final space.",
+          "effect": "When the Volk'ar's Path is resolved, kill 1 Victim in each space adjacent to her final space.",
           "source_url": "https://finalgirl.fandom.com/wiki/Blades_in_the_Dark",
-          "effect_source": "wiki",
-          "flavour_unofficial": "Blades flash in the undergrowth and someone drops."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "Blades flash in the undergrowth and someone drops.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_chameleon_of_death",
@@ -5347,16 +5353,18 @@
           "effect": "When the Volk'ar is attacked while Concealed and does not receive damage, you receive Damage equal to the Volk'ar's Attack Value.",
           "source_url": "https://finalgirl.fandom.com/wiki/Chameleon_of_Death",
           "effect_source": "wiki",
-          "flavour_unofficial": "Strike at it while it's hidden and it simply isn't there."
+          "flavour_unofficial": "Strike at it while it's hidden and it simply isn't there.",
+          "photo_verified": true
         },
         {
           "id": "the_volk_ar_stress_of_the_unknown",
           "name": "Stress of the Unknown",
           "epic": false,
-          "effect": "The first time you resolve Reveal each turn, lose 2 Time.",
+          "effect": "The first time you resolve Conceal each turn, lose 2 Time.",
           "source_url": "https://finalgirl.fandom.com/wiki/Stress_of_the_Unknown",
-          "effect_source": "wiki",
-          "flavour_unofficial": "Not knowing where it is wears you down."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "Not knowing where it is wears you down.",
+          "photo_verified": true
         }
       ],
       "minor_dark_powers": [
@@ -17470,10 +17478,11 @@
             "Orange Character Events"
           ],
           "qty": 1,
-          "effect": "Roll a die and place the Archeologist at that space. 1-2: Ancient Ruins 3-4: Rebel Camp 5-6: Supply Depot Roll 1 fewer die when searching at a space with the Archeologist unless you pat 3 Time. Resolve this card again during each Upkeep phase. If the Archeologist leaves play, discard this card.",
+          "effect": "Roll a die and place the Archeologist at that space. 1-2: Ancient Ruins 3-4: Rebel Camp 5-6: Supply Depot Roll 1 fewer die when searching at a space with the Archeologist unless you pay 3 Time. Resolve this card again during each Upkeep phase. If the Archeologist leaves play, discard this card.",
           "source_url": "https://finalgirl.fandom.com/wiki/Archeologist",
           "effect_source": "wiki",
-          "flavour_unofficial": "An archaeologist digging for something better left buried."
+          "flavour_unofficial": "An archaeologist digging for something better left buried.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_cursed_temple_event",
@@ -17484,7 +17493,8 @@
           "effect": "Place the Cursed token at the Cursed Temple. Whenever you enter the Cursed Temple, lose 3 Health. Then, discard the token. Discard this card once the Cursed token is discarded.",
           "source_url": "https://finalgirl.fandom.com/wiki/Cursed_Temple_%28Event%29",
           "effect_source": "wiki",
-          "flavour_unofficial": "The old temple stirs, and the curse wakes with it."
+          "flavour_unofficial": "The old temple stirs, and the curse wakes with it.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_get_to_the_choppa",
@@ -17495,7 +17505,8 @@
           "effect": "If the Huey token is not on the board, place it in the Clearing. For each Victim saved with the Huey, choose one of the following: * Gain 2 Health * Gain 3 Time * Lower Horror level by 1 * Take an Action card (max 2 Time cost) Discard this card when the Huey token is removed from the board.",
           "source_url": "https://finalgirl.fandom.com/wiki/%22Get_to_the_Choppa%21%22",
           "effect_source": "wiki",
-          "flavour_unofficial": "A helicopter is coming. Get to it."
+          "flavour_unofficial": "A helicopter is coming. Get to it.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_heavy_rains",
@@ -17506,7 +17517,8 @@
           "effect": "Unless you are moving from a River space, it costs 2 Time to enter a River space.",
           "source_url": "https://finalgirl.fandom.com/wiki/Heavy_Rains",
           "effect_source": "wiki",
-          "flavour_unofficial": "The rain falls in sheets and the rivers rise."
+          "flavour_unofficial": "The rain falls in sheets and the rivers rise.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_piranhas",
@@ -17517,7 +17529,8 @@
           "effect": "Roll a die and place the Piranhas! token in: * 1-2: Lower River * 3-4: Central River * 5-6: Upper River Everyone in the space loses 1 Health. Whenever anyone enters that space, they lose 1 Health.",
           "source_url": "https://finalgirl.fandom.com/wiki/%22Piranhas%21%22",
           "effect_source": "wiki",
-          "flavour_unofficial": "The water boils with teeth."
+          "flavour_unofficial": "The water boils with teeth.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_rebel_leader",
@@ -17530,7 +17543,8 @@
           "effect": "Place the Rebel Leader at the Rebel Camp. During the Upkeep phase, move the Rebel Leader one space closer to the nearest Victim who is NOT at the Rebel Camp. Then, move 1 Victim in their space to the Rebel Camp. Soldiers at the Rebel Camp cannot be ordered to take Actions. The Rebel Leader will not follow you. If the Rebel Leader leaves play, discard this card.",
           "source_url": "https://finalgirl.fandom.com/wiki/Rebel_Leader",
           "effect_source": "wiki",
-          "flavour_unofficial": "The rebel commander, who has his own plans."
+          "flavour_unofficial": "The rebel commander, who has his own plans.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_rebel_raiding_party",
@@ -17541,7 +17555,8 @@
           "effect": "Roll a die to choose which space is targeted: * 1-3: Ancient Ruins * 4-6: Supply Depot Take all Items at that space, shuffle them facedown, and place them at the bottom of the Rebel Camp Item deck. Discard this card.",
           "source_url": "https://finalgirl.fandom.com/wiki/Rebel_Raiding_Party",
           "effect_source": "wiki",
-          "flavour_unofficial": "A rebel raiding party sweeps through."
+          "flavour_unofficial": "A rebel raiding party sweeps through.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_sgt_weathers",
@@ -17554,7 +17569,8 @@
           "effect": "Place Sgt. Weathers in the space with the most Victims. He is considered a Soldier. When ordered, Sgt. Weathers and any Victims with him can move 1 additional space and add +1 to their attack range. If Sgt. Weathers is killed, increase Horror level by 2. If Sgt. Weathers leaves play, discard this card.",
           "source_url": "https://finalgirl.fandom.com/wiki/Sgt._Weathers",
           "effect_source": "wiki",
-          "flavour_unofficial": "A hard-bitten sergeant who has seen too much."
+          "flavour_unofficial": "A hard-bitten sergeant who has seen too much.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_supply_drop",
@@ -17565,7 +17581,8 @@
           "effect": "Take 3 random Item cards that were not used and place each of them faceup next to the Supply Depot's Item deck. When successfully searching there, you may choose one of the faceup cards instead of drawing from the deck. Discard this card when all 3 additional Item cards are no longer next to the Item deck.",
           "source_url": "https://finalgirl.fandom.com/wiki/Supply_Drop",
           "effect_source": "wiki",
-          "flavour_unofficial": "Crates drop from the sky."
+          "flavour_unofficial": "Crates drop from the sky.",
+          "photo_verified": true
         },
         {
           "id": "pesadilla_verde_twitchy_soldiers",
@@ -17573,10 +17590,11 @@
           "deck": "event",
           "tags": [],
           "qty": 1,
-          "effect": "If you have Unlocked the \"No Friendly Fire Upgrade, immediately Lock it. When rolling for friendly fire, Soldiers are killed on a result of 1-3. Discard this card if the \"No Friendly Fire\" Upgrade is Unlocked.",
+          "effect": "If you have Unlocked the \"No Friendly Fire\" Upgrade, immediately Lock it. When rolling for friendly fire, Soldiers are killed on a result of 1-3. Discard this card if the \"No Friendly Fire\" Upgrade is Unlocked.",
           "source_url": "https://finalgirl.fandom.com/wiki/Twitchy_Soldiers",
           "effect_source": "wiki",
-          "flavour_unofficial": "The soldiers are jumpy and their fingers are on the triggers."
+          "flavour_unofficial": "The soldiers are jumpy and their fingers are on the triggers.",
+          "photo_verified": true
         }
       ],
       "items": [
@@ -17597,7 +17615,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Axe",
           "effect_source": null,
-          "flavour_unofficial": "The camp's woodpile tool, repurposed."
+          "flavour_unofficial": "The camp's woodpile tool, repurposed.",
+          "photo_verified": true
         },
         {
           "id": "backpack_radio",
@@ -17615,7 +17634,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Backpack_Radio",
           "effect_source": "wiki",
-          "flavour_unofficial": "A field radio for calling in help."
+          "flavour_unofficial": "A field radio for calling in help.",
+          "photo_verified": true
         },
         {
           "id": "booby_trap",
@@ -17632,7 +17652,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Booby_Trap",
           "effect_source": "wiki",
-          "flavour_unofficial": "A tripwire and a nasty surprise."
+          "flavour_unofficial": "A tripwire and a nasty surprise.",
+          "photo_verified": true
         },
         {
           "id": "bowie_knife",
@@ -17646,11 +17667,22 @@
           "damage": "1",
           "hands": "1",
           "uses": null,
-          "effect": null,
+          "effect": "The two Bowie Knife cards have different text. \"Pig Sticker\": If you have a Bowie Knife in each hand, you may use both when attacking. \"Goat Slicer\": If you have a Bowie Knife in each hand, add +1 Damage.",
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Bowie_Knife",
-          "effect_source": null,
-          "flavour_unofficial": "A big knife for a big jungle."
+          "effect_source": "user_photo",
+          "flavour_unofficial": "A big knife for a big jungle.",
+          "printings": [
+            {
+              "label": "Pig Sticker",
+              "effect": "If you have a Bowie Knife in each hand, you may use both when attacking."
+            },
+            {
+              "label": "Goat Slicer",
+              "effect": "If you have a Bowie Knife in each hand, add +1 Damage."
+            }
+          ],
+          "photo_verified": true
         },
         {
           "id": "cigar",
@@ -17663,11 +17695,12 @@
           "damage": null,
           "hands": null,
           "uses": null,
-          "effect": "Roll a +1 Die when resolving a Train Action card. The Cigar comes with three tokens.",
+          "effect": "Roll +1 Die when resolving a Train Action card. The Cigar comes with three tokens.",
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Cigar",
           "effect_source": "wiki",
-          "flavour_unofficial": "A fat cigar for steady nerves."
+          "flavour_unofficial": "A fat cigar for steady nerves.",
+          "photo_verified": true
         },
         {
           "id": "compound_bow",
@@ -17687,7 +17720,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Compound_Bow",
           "effect_source": "wiki",
-          "flavour_unofficial": "A compound bow for silent shots."
+          "flavour_unofficial": "A compound bow for silent shots.",
+          "photo_verified": true
         },
         {
           "id": "cursed_idol",
@@ -17702,7 +17736,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Cursed_Idol",
           "effect_source": "wiki",
-          "flavour_unofficial": "A cursed idol from the temple. Put it down."
+          "flavour_unofficial": "A cursed idol from the temple. Put it down.",
+          "photo_verified": true
         },
         {
           "id": "first_aid_kit",
@@ -17720,7 +17755,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/First_Aid_Kit",
           "effect_source": "wiki",
-          "flavour_unofficial": "Bandages, antiseptic and hope."
+          "flavour_unofficial": "Bandages, antiseptic and hope.",
+          "photo_verified": true
         },
         {
           "id": "grenade",
@@ -17738,7 +17774,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Grenade",
           "effect_source": "wiki",
-          "flavour_unofficial": "Pull the pin and count to three."
+          "flavour_unofficial": "Pull the pin and count to three.",
+          "photo_verified": true
         },
         {
           "id": "m16",
@@ -17757,7 +17794,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/M16",
           "effect_source": "wiki",
-          "flavour_unofficial": "A standard-issue rifle with plenty of punch."
+          "flavour_unofficial": "A standard-issue rifle with plenty of punch.",
+          "photo_verified": true
         },
         {
           "id": "mini_gun",
@@ -17768,11 +17806,12 @@
           "damage": null,
           "hands": "2",
           "uses": null,
-          "effect": "Damage: When attacking, deal an additional Damage for each Star in our final Horror Roll result. When moving, move 1 less space (minimum of 1 space). The Mini-Gun cannot be placed in your backpack. The Mini-Gun comes with two tokens.",
+          "effect": "Damage: When attacking, deal an additional Damage for each Star in your final Horror Roll result. When moving, move 1 less space (minimum of 1 space). The Mini-Gun cannot be placed in your backpack. The Mini-Gun comes with two tokens.",
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Mini-Gun",
           "effect_source": "wiki",
-          "flavour_unofficial": "A heavy rotary gun that chews through the trees."
+          "flavour_unofficial": "A heavy rotary gun that chews through the trees.",
+          "photo_verified": true
         },
         {
           "id": "mre_s",
@@ -17787,7 +17826,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/MRE%27s",
           "effect_source": "wiki",
-          "flavour_unofficial": "Ration packs that keep the soldiers going."
+          "flavour_unofficial": "Ration packs that keep the soldiers going.",
+          "photo_verified": true
         },
         {
           "id": "mysterious_pills",
@@ -17806,7 +17846,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Mysterious_Pills",
           "effect_source": "wiki",
-          "flavour_unofficial": "Unlabelled pills from an unlocked cabinet. What could go wrong?"
+          "flavour_unofficial": "Unlabelled pills from an unlocked cabinet. What could go wrong?",
+          "photo_verified": true
         },
         {
           "id": "river_mud",
@@ -17821,7 +17862,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/River_Mud",
           "effect_source": "wiki",
-          "flavour_unofficial": "Cover yourself in mud and it can't see you."
+          "flavour_unofficial": "Cover yourself in mud and it can't see you.",
+          "photo_verified": true
         },
         {
           "id": "walkie_talkies",
@@ -17832,11 +17874,12 @@
           "damage": null,
           "hands": "1",
           "uses": null,
-          "effect": "Soldiers may more 1 additional space when moving,",
+          "effect": "Soldiers may move 1 additional space when moving.",
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Walkie-Talkies",
           "effect_source": "wiki",
-          "flavour_unofficial": "Walkie-talkies to coordinate the soldiers."
+          "flavour_unofficial": "Walkie-talkies to coordinate the soldiers.",
+          "photo_verified": true
         },
         {
           "id": "wet_suit",
@@ -17851,7 +17894,8 @@
           "variant": null,
           "source_url": "https://finalgirl.fandom.com/wiki/Wet_Suit",
           "effect_source": "wiki",
-          "flavour_unofficial": "A wet suit for swimming against the current."
+          "flavour_unofficial": "A wet suit for swimming against the current.",
+          "photo_verified": true
         }
       ],
       "minor_dark_powers": [

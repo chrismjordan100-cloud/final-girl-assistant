@@ -59,9 +59,23 @@ function CardRow({ c, showSlots }) {
           {c.epic && <span className="cl-badge cl-badge--epic">Epic</span>}
           {c.minorDarkPower && <span className="cl-badge cl-badge--mdp">Minor Dark Power</span>}
           {c.variant && <span className="cl-badge">{c.variant}</span>}
+          {c.photoVerified && (
+            <span className="cl-badge cl-badge--checked" title="Transcribed from a photo of the physical card">
+              ✓ Checked against card
+            </span>
+          )}
           <StatusBadge status={c.status} />
         </div>
-        {c.effect ? (
+        {c.printings ? (
+          <div className="cl-card__printings">
+            {c.printings.map((p, i) => (
+              <p key={i} className="cl-card__printing">
+                <span className="cl-card__printing-label">{p.label}:</span>{' '}
+                {p.effect}
+              </p>
+            ))}
+          </div>
+        ) : c.effect ? (
           <p className="cl-card__effect">{c.effect}</p>
         ) : (
           <p className="cl-card__missing">{c.note}</p>
