@@ -1211,7 +1211,7 @@ export const playRules = {
       'Buddies are Minions with their own health, Attack and Movement values on each Buddy card. "Spawn a Buddy" reveals the top Buddy card and places its token in a space adjacent to Billy (preferring an empty one). If Billy isn\u2019t in play, the spawn is ignored.',
       'Each Buddy card has an Initiative number (top-right). When resolving Minion Actions / Terror effects, resolve Buddies from LOWEST to highest Initiative. A Buddy that spawns during the Killer phase doesn\u2019t activate until the NEXT Killer phase.',
       'Killing a Buddy: remove its token, take the Kill Reward on its card, then remove the card from the game. If a Buddy is killed outside the Action phase, take the reward at the start of the next Action phase.',
-      'Power Sources: 4 Power Source tokens start Active. While at least one is Active, Billy\u2019s recover-health icon heals him; if none are Active, ignore that icon. Spend the shown cost while in a Power Source\u2019s space (even just passing through) to Deactivate it (flip to Inactive).',
+      'Power Sources: 4 Power Source tokens start Active. While at least one is Active, the Power Source icon makes Billy recover 1 health; if none are Active, ignore that icon. Spend Time (the hourglass icon on the sheet) while in a Power Source\u2019s space, even if you are only passing through, to Deactivate it (flip to Inactive).',
       'Bloodlust Track tokens: when Bloodlust rises to a level with a facedown token, reveal it and apply its effect.',
     ],
     watchOuts: [
@@ -1323,22 +1323,33 @@ export const playRules = {
       'Because the T-Rex kills outright and can\u2019t be fought, route around it \u2014 don\u2019t get cornered in its space.',
     ],
   },
+  buddyland: {
+    points: [
+      'Buddyland has no special setup and only one special rule: the 4 spaces in the middle of the board marked with the Arcade icon are Arcade spaces.',
+      'Arcade spaces have no rules of their own. Some cards refer to them, for example the Arcade Token item, which is spent while standing in an Arcade space. Know where the four are before you commit to a route.',
+    ],
+  },
 
   // ===== SPECIAL FEATURES =====
 
   // --- Killers ---
   mort: {
     points: [
-      'Mort is a whodunit. He\u2019s secretly disguised as one of 10 Suspects (each dressed as a Final Girl villain). Suspects are NOT the Killer, an Enemy or a Victim \u2014 they\u2019re never targeted and can\u2019t be damaged. Each has 7 attributes on its Suspect card that help you deduce the real Mort.',
-      'Reveal Clues with the Interrogate (played in a Suspect\u2019s space) and Coerce (played in an Informant\u2019s space) Action cards. Each revealed Clue flips a Reminder token, points to an attribute Mort does NOT have, and lets you discard every Suspect with that attribute \u2014 replacing each discarded Suspect\u2019s miniature with an Informant meeple. A Clue always eliminates at least one Suspect.',
-      'Suspects temporarily acting as Killer: on the matching icon (or any Killer Action/effect on a Location card) draw a token from the Suspect bag \u2014 that Suspect becomes the Active Killer for that resolution, then the token goes back. If the drawn Suspect has already been cleared, nothing happens and the token is discarded.',
-      'Informants count as Victims with three twists: saving one lets you reduce Horror once; if one is killed you must increase Horror once (after Bloodlust); and on ties for Killer targeting, prioritise Informants over normal Victims.',
-      'Until Mort is revealed, Victims do NOT panic in the Panic phase. Minor Dark Powers with health spaces get no Health markers (Mort can\u2019t be attacked while disguised) and can be discarded on an Interrogate/Coerce success.',
+      'Mort is a deduction (whodunit) game. He starts the game NOT on the board \u2014 instead he is secretly disguised as one of 10 Suspects, each dressed as a Final Girl villain and placed around the board. The whole game is working out which Suspect he is, then killing him. A Basic Finale card supplies the Killer Action until you unmask him.',
+      'Suspects are NOT the Killer, an Enemy or a Victim: they are never targeted and cannot be damaged. Each Suspect card lists 7 attributes (Series of Origin, Height, favourite board-game style, favourite horror genre, favourite villain, favourite VRG game, and Mask or Facepaint). Those attributes are the evidence \u2014 compare them against the Clues to rule Suspects out.',
+      'A secret Clue card (chosen at setup, read only through the Clue Viewer) defines Mort\u2019s true disguise. Its 5 Clues each state one attribute Mort does NOT have. Reveal Clues to narrow the lineup until a single Suspect remains.',
+      'Two special Action cards do the detective work. INTERROGATE can only be played while you share a space with a Suspect (they panic afterwards). COERCE can only be played while you share a space with an Informant (they are removed from the board afterwards). Successfully resolving either reveals one Clue.',
+      'Revealing a Clue (the 5-step loop): (1) flip a facedown Reminder token, numbered 1\u20135; (2) use the Clue Viewer to read that numbered Clue \u2014 it names an attribute Mort LACKS; (3) discard every Suspect card in the lineup that has that attribute; (4) for each discarded Suspect, swap its miniature on the board for an Informant meeple; (5) leave the Reminder token faceup so you know which Clues you have seen. A Clue ALWAYS eliminates at least one Suspect, sometimes several.',
+      'Suspects temporarily acting as Killer: whenever you see the Suspect-as-Killer icon \u2014 and for ANY Killer Action/effect on a Location card \u2014 draw a token from the Suspect bag; that Suspect becomes the Active Killer for that whole card/resolution, then the token goes back in the bag (it can come up again). If the drawn Suspect has already been cleared from the lineup, nothing happens and that token is discarded instead of returned.',
+      'Informants (unmasked innocents) count as Victims for everything, with three exceptions: saving one lets you reduce Horror once afterwards; if one is killed you must increase Horror once (after the usual Bloodlust increase); and when a Killer targets by nearest/farthest, break ties towards Informants over normal Victims.',
+      'Minor Dark Powers with Health-marker spaces get NO Health markers while Mort is disguised (he can\u2019t be attacked yet). Such a drawn Minor Dark Power can instead be discarded when you resolve an Interrogate or Coerce with two successes.',
     ],
     watchOuts: [
-      'Revealing all 5 Clues identifies Mort: discard Minor Dark Powers and remaining Terror cards, swap the correct Suspect miniature for Mort\u2019s, flip that Suspect card onto the Basic Finale slot (that\u2019s now the active Finale), reveal the Dark Power if needed, and give Mort the health on the card (+ Final Health token). Always clear leftover Informant meeples.',
-      'If the Terror deck runs out before you\u2019ve found him, the Finale triggers anyway: reveal Mort, and he gets a bonus based on how many Clues were still unrevealed (Anonymous Terror counts each unrevealed Clue double; the Epic Dark Power adds +2 Attack per unrevealed Clue) \u2014 so stalling is dangerous.',
-      'Horror Track token: when Bloodlust hits the top of the track, move it onto the Horror-max symbol on your Player board. After that, exceeding max Horror makes you LOSE instead of just capping.',
+      'Unmasking Mort (reveal all 5 Clues): one Suspect is left \u2014 flip the Clue card over and use the Viewer to confirm the disguise. Discard any Minor Dark Powers and all remaining Terror cards, replace that Suspect\u2019s miniature with Mort\u2019s, remove ALL Informant meeples from the board, then flip the final Suspect card and put it on the Basic Finale slot \u2014 the Finale is now active. Reveal the Dark Power if it isn\u2019t out. Mort gains the health printed on that Suspect card (+ a Final Health token) \u2014 only now can he be attacked.',
+      'Don\u2019t stall: if the Terror deck runs out before you\u2019ve unmasked him, the Finale triggers anyway and Mort is revealed with a penalty based on how many Clues were still UNREVEALED (mark the count with a Reminder token). Each unrevealed Clue adds +2 to his printed Attack Value, and the Anonymous Terror Dark Power counts every unrevealed Clue as 2 \u2014 so a half-solved mystery leaves a much deadlier Mort.',
+      'Snitches Get Stitches (Epic Dark Power): after you place Informants from revealing a Clue, roll a die \u2014 on 1\u20134, one of the Informants just placed is killed.',
+      'Until Mort is unmasked, Victims do NOT panic in the Panic phase \u2014 the normal panic pressure is off while the mystery runs.',
+      'Horror Track token: when Bloodlust reaches the top space of its track, move the token from the Killer board onto the Bloodlust symbol at the end of your Player board\u2019s Horror track. From then on, if Horror would rise above its maximum you lose Time instead of taking the Bloodlust increase.',
     ],
   },
   krampus: {
@@ -1353,7 +1364,7 @@ export const playRules = {
       'Search anywhere: you may resolve a Search in ANY space. Which Item deck you draw from depends on the space type \u2014 Exhibit Area, Food Court, or General Area. Spaces have no search icon, but every space counts as a search space for effects.',
       'Three areas: Exhibit Areas (yellow booth spaces), the Food Court (bottom-left), and General Areas (everything else). A visual key is on the back of the rule sheet.',
       'Restricted following: Victims won\u2019t follow you OUT of an Exhibit Area into a General Area. Use the Create a Panic Action card (or normal panic effects) to scare them across that boundary.',
-      'Hallways & docks: moving into a space connected by the hallway/dock icon gives +1 to the movement Action card, but the first space you move to must be an adjacent hallway/dock space. Panicking from the Main Hallway rolls 2 dice for direction instead of 1.',
+      'Hallways & docks: if you intend to move to a space connected by the hallway/dock icon, you roll +1 die to resolve the Action card that grants the movement, but the first space you move to must be an adjacent space connected with that icon. Panicking from the Main Hallway rolls 2 dice for direction instead of 1.',
       'Booth cards: each Upkeep draw a Booth card and roll a die \u2014 1\u20133 spawns a normal Victim in the Booth\u2019s space; 4\u20136 draws a Booth Event and applies it there. Discard the Booth card after. (When an effect just needs a Booth location, don\u2019t roll \u2014 only place the Booth.)',
     ],
     watchOuts: [

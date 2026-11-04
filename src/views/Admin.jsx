@@ -266,11 +266,28 @@ const STATUS_META = {
   todo: { label: 'Not started', cls: 'todo' },
 };
 
+/* Every collapsible panel that holds asset entries: each section (Final Girls /
+   Killers / Locations), each season group inside it, and Scenario graphics.
+   Built from the data so a new season is picked up automatically. */
+const ENTRY_KEYS = [
+  ...SECTIONS.flatMap((s) => [
+    s.type,
+    ...[...new Set(s.entries.map((e) => e.season))].map((n) => `${s.type}-s${n}`),
+  ]),
+  'scenario-graphics',
+];
+
+/* The screen opens fully collapsed so you can jump straight to the section you
+   want. (backlogDone is deliberately left out: for that one key, true means
+   "shown", and the done list is meant to start hidden.) */
+const startCollapsed = () =>
+  Object.fromEntries(['howto', 'backlog', ...ENTRY_KEYS].map((k) => [k, true]));
+
 export default function Admin() {
   const [query, setQuery] = useState('');
   const [onlyMissing, setOnlyMissing] = useState(false);
-  // Collapsed state per section. Default: all expanded.
-  const [collapsed, setCollapsed] = useState({});
+  // Collapsed state per panel (true = collapsed). Default: everything collapsed.
+  const [collapsed, setCollapsed] = useState(startCollapsed);
 
   const q = query.trim().toLowerCase();
 
@@ -305,6 +322,12 @@ export default function Admin() {
       return { ...section, entries, seasons, done, totalEntries: section.entries.length };
     });
   }, [q, onlyMissing]);
+
+  // Open every entry panel. Used when a filter starts, so the matches are
+  // visible instead of sitting behind closed headers.
+  function expandEntries() {
+    setCollapsed((c) => ({ ...c, ...Object.fromEntries(ENTRY_KEYS.map((k) => [k, false])) }));
+  }
 
   function toggleSection(type) {
     setCollapsed((c) => ({ ...c, [type]: !c[type] }));
@@ -563,7 +586,10 @@ export default function Admin() {
           <input
             type="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              if (!query && e.target.value) expandEntries();
+              setQuery(e.target.value);
+            }}
             placeholder="Filter by name, film or short name..."
             aria-label="Filter assets"
           />
@@ -577,7 +603,10 @@ export default function Admin() {
           <input
             type="checkbox"
             checked={onlyMissing}
-            onChange={(e) => setOnlyMissing(e.target.checked)}
+            onChange={(e) => {
+              if (e.target.checked) expandEntries();
+              setOnlyMissing(e.target.checked);
+            }}
           />
           Only show items with missing assets
         </label>
