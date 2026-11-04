@@ -1,0 +1,117 @@
+Components
+He has slumbered in the bowels of the earth for many centuries. The last of his
+worshippers now lost to ancient times. But something has reawakened this strange
+god and his cohort. Is it the season? The bad harvest? Or the moon rising just
+right over the old oak tree? No mortal can possibly understand his power, or stop
+it. He has returned and his hunger demands a grim and bountiful harvest.
+If the Horror Level is 5 or higher,	
+and discard this card. Otherwise:
+Roots of Insanity	Roots of Insanity
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+Rite of the Old One	Rite of the Old One
+Whenever your Harvest Madness increases
+	to a new level, discard the next Terror card.
+1 Epic Dark Power card
+Fields of Madness	Fields of Madness
+	epic dark power	epic dark power
+Your Horror Rolls are modified based on the Harvest Madness level:	
+Level 0 or 1: -1 (minimum of 1) Level 2: No Effect Level 3: +1
+3 Finale cards
+Withered Harbinger	Withered Harbinger
+For every space Grimlash moves
+	during the Killer phase, .
+If a Victim was
+killed,	
+Move 1
+Space
+1 Epic Finale card
+epic Finale	epic Finale	
+God of Blood and Grain	God of Blood and Grain
+When revealed, kill all Victims.
+If a Victim was
+killed,	
+Move 1
+Space
+2 Final Girl cards
+Joy	66
+Move
+1 Space
+Vicky	55
+Move
+1 Space
+Director (design): Ryan Jorjorian Director of Photography (art): Ondine Champetier de Ribes
+1 Harvest Madness marker
+15 Harvest Madness cards (5 per Level)
+Thorn-choked	Thorn-choked
+	VeinsVeins	
+“We are all bound by blood.”
+Increase your maximum
+	health by 1 and .
+When this card is discarded from play,
+	reduce your maximum health by 1. Any
+	health above your maximum health is lost.
+harvest	harvest
+	madness	madness
+	Level 1Level 1
+Blood of	Blood of
+	the Reaper	the Reaper	
+“Don’t fear the Reaper!”
+Flip this card facedown
+	during a Horror Roll and	
+to reroll all your .
+One with	One with
+	the Land	the Land	
+“This land is your land...”
+Increase your maximum
+	health by 3 and .
+When this card is discarded from play,
+	reduce your maximum health by 3. Any
+	health above your maximum health is lost.
+harvest	harvest
+	madness	madness
+	Level 2	Level 2
+harvest	harvest
+	madness	madness
+	Level 3	Level 3
+
+-- 1 of 2 --
+
+Special Setup
+* Separate the Harvest Madness cards by level and shuffle each to create 3 separate decks.
+* Place the Harvest Madness marker on the starting space on the Harvest Madness track
+(outlined in orange), located near the top of the Killer board.
+SPECIAL Rules
+Harvest Madness
+Increasing your Harvest Madness will give you additional abilities, but it may
+come at a price, possibly death!
+Whenever you see the 	icon, move the Harvest Madness marker one
+space to the right on the track. When your Harvest Madness marker reaches a
+space corresponding to a new level, draw 2 cards from the Harvest Madness
+deck for that level and choose 1 to keep, discarding the other. The Harvest
+Madness card abilities remain in effect as long as your Harvest Madness
+remains at that level or above.
+When resolving 	, you may recover health as normal or reduce your Harvest Madness. If you
+choose to reduce your Harvest Madness, move the Harvest Madness marker 1 space to the left
+for each 	. You must choose to either recover health or lower your Harvest Madness - you
+cannot do both.
+If your Harvest Madness drops to a lower level, you must discard the corresponding Harvest
+Madness card for the level you just left. If your Harvest Madness later returns to that level, you
+once again draw 2 cards from the appropriate Harvest Madness deck, choosing 1 to keep and
+discarding the other. When drawing Harvest Madness cards, if there are not enough in the deck,
+reshuffle the discard pile for that level and form a new deck.
+Some Harvest Madness once-per-turn effects require you to flip the Harvest Madness card
+facedown. During the Upkeep phase, flip them faceup. Their effects can be used again.
+harvest	harvest
+madness	madness
+Level 1	Level 1
+harvest	harvest
+madness	madness
+Level 1	Level 1
+Important! If your Harvest Madness increases beyond Level 3
+(indicated by the space with a skull), you immediately lose the game!
+
+-- 2 of 2 --
+

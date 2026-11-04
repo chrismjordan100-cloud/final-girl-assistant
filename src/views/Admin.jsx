@@ -225,6 +225,20 @@ const BACKLOG = [
       'Add any remaining per-ruleset symbols you still want (some rule sheets have more icons than are extracted). A few current ones are flagged low-res in the JSON and could be re-captured at higher resolution.',
   },
   {
+    title: 'Periodically harvest new online tips (especially Series 4)',
+    detail:
+      'Community strategy tips keep surfacing over time as more people play, so revisit the web periodically and fold new ones into the Tips data (generalTips / killerTips / locationTips in src/data/games.js), each with its source and a confirmed/reported confidence tag like the existing ones. Series 4 is the priority: it is newest and under-covered, and tips will grow as it gets played around the world \u2014 watch for per-Killer and per-Location advice for Billy/Buddyland, Grimlash/Shady Acres, Berith/L\u2019Armes Abbey, The Volk\u2019ar/Pesadilla Verde, The Raptors/Isla Lagarto, and the Shriek Special Feature (Mort). Also backfill the S1\u2013S3 combos as new guides appear. Good sources to sweep: BoardGameGeek forums/strategy threads, the Final Girl wiki, YouTube playthrough/strategy channels (e.g. Dude Take Your Turn), Reddit, and Van Ryder\u2019s own posts. Rough cadence: every few months, and whenever a new S4 box hits the table. Note: S4 tips are currently EMPTY (no S4 entries in the tips data yet), so the first pass is a from-scratch build, not just a top-up.',
+    affects: ['Tips', 'Ask', 'This Game'],
+    status: 'todo',
+  },
+  {
+    title: 'Final Girl Series 4 \u2013 card reference sheet',
+    detail:
+      'A searchable, sortable reference of every card in each Series 4 Feature Film, built from photos of the physical cards. One section per film: Bad Times at Buddyland (Billy the Bear / Buddyland), A Rotten Harvest (Grimlash / Shady Acres), A Demon in the Shadows (Berith / L\u2019Armes Abbey), The Green Terror (The Volk\u2019ar / Pesadilla Verde), The Raptor Games (The Raptors / Isla Lagarto), and Shriek \u2013 Special Feature (Mort / Mega Board Game Con). Capture per Location and Killer: Terror cards (Location and Killer decks kept separate), Setup cards, Item cards (noting the Search space / Item deck where shown), Event cards, and killer-specific extras where present (Buddy cards, Harvest Madness, Raptor Spawn, Volk\u2019ar Movement, Clue/Suspect cards) plus Dark Power, Epic Dark Power, Finale and Epic Finale cards. Fields per card: Feature Film, Source (Location or Killer), Card type, Card name, Flavour text, full Effect text, key stats where relevant (range, damage, hands, one-time/limited use, weapon/reaction/passive), and Notes (e.g. clarifications from the rules PDF \u201CCard Notes\u201D section). Input: uploaded photos of each deck spread on a table, cross-checked against the official rules PDFs on the Van Ryder Games product pages; flag any card whose text isn\u2019t legible rather than guessing. Output: a single filterable view (filter by Feature Film, Location/Killer and card type, free-text search across names and effect text), also exportable as a spreadsheet. Waiting on card photos.',
+    affects: ['Codex', 'Card data', 'Export'],
+    status: 'todo',
+  },
+  {
     title: 'Series 4 icons — add with the S4 import',
     detail:
       'When Series 4 is added, remember the icon assets too: (a) the main Killer/Location emblems in src/assets/icons/ named S4-killer-{id}-icon.png / S4-location-{id}-icon.png; and (b) any S4 scenario rule icons in src/assets/icons/rules/ with rule-icons.json entries. Without these the S4 entries show no icons in Codex, This Game, Scenarios, Tips and the pickers.',

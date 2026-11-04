@@ -31,11 +31,22 @@ export const killers = [
   { id: 'slayer', season: 3, name: 'Slayer', shortName: 'slayer', film: 'The Falconwood Files' },
   { id: 'tormentor', season: 3, name: 'The Tormentor', shortName: 'tormentor', film: 'The Marrek Murders' },
   { id: 'eyeless', season: 3, name: 'The Eyeless', shortName: 'eyeless', film: "Don't Make a Sound" },
+  // Series 4 (names confirmed from the Kickstarter line-up + retailer listings;
+  // verify spelling/short-names against the boxes when they arrive).
+  { id: 'raptors', season: 4, name: 'The Raptors', shortName: 'raptors', film: 'The Raptor Games' },
+  { id: 'volkar', season: 4, name: "Volk'ar", shortName: 'volkar', film: 'The Green Terror' },
+  { id: 'berith', season: 4, name: 'Berith', shortName: 'berith', film: 'A Demon in the Shadows' },
+  { id: 'grimlash', season: 4, name: 'Grimlash', shortName: 'grimlash', film: 'A Rotten Harvest' },
+  { id: 'billy', season: 4, name: 'Billy', shortName: 'billy', film: 'Bad Times at Buddyland' },
   // Vignettes — killer-only, no fixed Location, playable with any Location.
   // isVignette flags the different data shape (no official-scenario pairing).
   { id: 'the-birds', season: 1, name: 'The Birds', shortName: 'the-birds', film: 'Terror From Above', isVignette: true },
   { id: 'patsy-zombies', season: 2, name: 'The Zombies', shortName: 'patsy-zombies', film: 'Terror From the Grave', isVignette: true },
   { id: 'destiny', season: 3, name: 'Destiny', shortName: 'destiny', film: 'Terror From Destiny', isVignette: true },
+  { id: 'pods', season: 4, name: 'The Pods', shortName: 'pods', film: 'Terror From Beyond', isVignette: true, note: 'S4 vignette (plant pods that take over humans). Official killer name not yet published — placeholder id/name, verify against the box.' },
+  // Special Features (season 0 = not a numbered series; a full Killer + Location each).
+  { id: 'mort', season: 0, name: 'Mort the Teenage Dirtbag', shortName: 'mort', film: 'Shriek' },
+  { id: 'krampus', season: 0, name: 'Krampus', shortName: 'krampus', film: 'North Pole Nightmare', note: 'Rules not yet transcribed — no rule sheet imported. Card data is present.' },
 ];
 
 export const locations = [
@@ -57,6 +68,16 @@ export const locations = [
   { id: 'falconwood', season: 3, name: 'Falconwood', shortName: 'falconwood', film: 'The Falconwood Files' },
   { id: 'marrek-warehouse', season: 3, name: 'Marrek Warehouse', shortName: 'marrek-warehouse', film: 'The Marrek Murders' },
   { id: 'utopia', season: 3, name: 'Utopia', shortName: 'utopia', film: "Don't Make a Sound" },
+  // Series 4 (names confirmed from the Kickstarter line-up + retailer listings;
+  // verify spelling/short-names against the boxes when they arrive).
+  { id: 'isla-lagarto', season: 4, name: 'Isla Lagarto', shortName: 'isla-lagarto', film: 'The Raptor Games' },
+  { id: 'pesadilla-verde', season: 4, name: 'Pesadilla Verde', shortName: 'pesadilla-verde', film: 'The Green Terror' },
+  { id: 'larmes-abbey', season: 4, name: "L'Armes Abbey", shortName: 'larmes-abbey', film: 'A Demon in the Shadows' },
+  { id: 'shady-acres', season: 4, name: 'Shady Acres', shortName: 'shady-acres', film: 'A Rotten Harvest' },
+  { id: 'buddyland', season: 4, name: 'Buddyland', shortName: 'buddyland', film: 'Bad Times at Buddyland' },
+  // Special Features (season 0)
+  { id: 'megabgcon', season: 0, name: 'Mega Boardgame Con', shortName: 'megabgcon', film: 'Shriek' },
+  { id: 'santas-village', season: 0, name: "Santa's Village", shortName: 'santas-village', film: 'North Pole Nightmare' },
 ];
 
 /* --------------------------------------------------------------------------
@@ -106,15 +127,17 @@ export const finalGirls = [
   { id: 'meghan', season: 3, name: 'Meghan', shortName: 'meghan', group: 'Series 3', film: "Don't Make a Sound" },
   { id: 'ronda', season: 3, name: 'Ronda', shortName: 'ronda', group: 'Series 3', film: "Don't Make a Sound" },
 
-  // Series 4
-  { id: 'bad-times-a', season: 4, name: 'Rena / Jen', shortName: 'bad-times-a', group: 'Series 4', film: 'Bad Times at Buddyland', note: 'Sources disagree (Rena/Gwynn vs Jen/Rina) — verify against the box.' },
-  { id: 'bad-times-b', season: 4, name: 'Gwynn / Rina', shortName: 'bad-times-b', group: 'Series 4', film: 'Bad Times at Buddyland', note: 'Sources disagree (Rena/Gwynn vs Jen/Rina) — verify against the box.' },
-  { id: 'vicky', season: 4, name: 'Vicky', shortName: 'vicky', group: 'Series 4', film: 'A Rotten Harvest' },
-  { id: 'joy', season: 4, name: 'Joy', shortName: 'joy', group: 'Series 4', film: 'A Rotten Harvest' },
+  // Series 4 (pairings from the Kickstarter line-up; verify spelling against the boxes)
+  { id: 'maud', season: 4, name: 'Maud', shortName: 'maud', group: 'Series 4', film: 'The Raptor Games' },
+  { id: 'christina', season: 4, name: 'Christina', shortName: 'christina', group: 'Series 4', film: 'The Raptor Games' },
+  { id: 'dakota', season: 4, name: 'Dakota', shortName: 'dakota', group: 'Series 4', film: 'The Green Terror' },
+  { id: 'alois', season: 4, name: 'Alois', shortName: 'alois', group: 'Series 4', film: 'The Green Terror' },
   { id: 'rita', season: 4, name: 'Rita', shortName: 'rita', group: 'Series 4', film: 'A Demon in the Shadows' },
   { id: 'lindi', season: 4, name: 'Lindi', shortName: 'lindi', group: 'Series 4', film: 'A Demon in the Shadows' },
-  { id: 'alois', season: 4, name: 'Alois', shortName: 'alois', group: 'Series 4', film: 'The Green Terror' },
-  { id: 'dakota', season: 4, name: 'Dakota', shortName: 'dakota', group: 'Series 4', film: 'The Green Terror' },
+  { id: 'vicky', season: 4, name: 'Vicky', shortName: 'vicky', group: 'Series 4', film: 'A Rotten Harvest' },
+  { id: 'joy', season: 4, name: 'Joy', shortName: 'joy', group: 'Series 4', film: 'A Rotten Harvest' },
+  { id: 'rena', season: 4, name: 'Rena', shortName: 'rena', group: 'Series 4', film: 'Bad Times at Buddyland' },
+  { id: 'gwynn', season: 4, name: 'Gwynn', shortName: 'gwynn', group: 'Series 4', film: 'Bad Times at Buddyland' },
 
   // Vignettes
   { id: 'melanie', season: 1, name: 'Melanie', shortName: 'melanie', group: 'Vignettes', film: 'Terror From Above' },
@@ -187,6 +210,15 @@ export const OFFICIAL_SCENARIOS = {
   'slayer|falconwood': 'The Falconwood Files',
   'tormentor|marrek-warehouse': 'The Marrek Murders',
   'eyeless|utopia': "Don't Make a Sound",
+  // Series 4
+  'raptors|isla-lagarto': 'The Raptor Games',
+  'volkar|pesadilla-verde': 'The Green Terror',
+  'berith|larmes-abbey': 'A Demon in the Shadows',
+  'grimlash|shady-acres': 'A Rotten Harvest',
+  'billy|buddyland': 'Bad Times at Buddyland',
+  // Special Features
+  'mort|megabgcon': 'Shriek',
+  'krampus|santas-village': 'North Pole Nightmare',
 };
 
 export function getOfficialScenario(killer, location) {
@@ -538,6 +570,168 @@ export const setupExtras = {
     {
       title: 'Add the Destiny Action cards',
       body: 'Add the Thwart Destiny Action card and 1 Premonition Action card to your Action Tableau. For an easier game, add both Premonition Action cards instead of one.',
+    },
+  ],
+
+  // ===== SERIES 4 =====
+
+  // --- Killers ---
+  billy: [
+    {
+      title: 'Place the Power Source tokens',
+      body: 'Before revealing the Setup card, place 4 Power Source tokens Active-side up in four separate spaces, so that no Power Source is adjacent to another. Set the 5th Power Source token aside \u2014 it may come into play later.',
+    },
+    {
+      title: 'Hide the Bloodlust Track tokens',
+      body: 'Take the two types of Bloodlust Track token and shuffle each type facedown (backs showing). Place 6 facedown on the Killer board in the Bloodlust track spaces matching their colour/icon. The remaining one of each type is unused \u2014 do not reveal them.',
+    },
+    {
+      title: 'Build the Buddy deck & spawn the first Buddy',
+      body: 'Shuffle the 5 Buddy cards facedown into the Buddy deck. Set aside the 2 Special Buddy cards (Billy Jr. and Boris) \u2014 they may come in later and follow normal Buddy rules once in play. Then Spawn a Buddy: reveal the top Buddy card, put its Health markers on it, and place its token in a space adjacent to Billy (preferring an empty one).',
+    },
+  ],
+  grimlash: [
+    {
+      title: 'Build the three Harvest Madness decks',
+      body: 'Separate the 15 Harvest Madness cards by level (5 per level) and shuffle each into its own facedown deck (Level 1, 2, 3).',
+    },
+    {
+      title: 'Set the Harvest Madness marker',
+      body: 'Place the Harvest Madness marker on the starting space of the Harvest Madness track (outlined in orange, near the top of the Killer board). This is YOUR track \u2014 rising it grants powers but risks death.',
+    },
+  ],
+  berith: [
+    {
+      title: 'Choose a Divine Blessings difficulty',
+      body: 'Place the Divine Blessings sheet next to the play area and choose which side to use: Heavenly (normal) or Hellish (hard).',
+    },
+    {
+      title: 'Add the Expel Demon Action cards',
+      body: 'Place the 2 Expel Demon Action cards in the Action Tableau \u2014 they\u2019re your main way to place Final Health tokens onto the Divine Blessings sheet (played only while sharing Ursula\u2019s space).',
+    },
+  ],
+  volkar: [
+    {
+      title: 'Add the Track cards & Attack Resolution set',
+      body: 'Place the 2 Track Action cards into the Action Tableau. Place the Attack Resolution card, the Damage tokens and the Attack token next to the play area.',
+    },
+    {
+      title: 'Set up the Movement deck and Path',
+      body: 'Shuffle the 22 Movement cards into a facedown deck by the board. Deal ONE card facedown next to the deck (leaving room for up to five more) \u2014 this starts her hidden Path.',
+    },
+    {
+      title: 'The Volk\u2019ar starts off the board (Concealed)',
+      body: 'After revealing the Setup card, do NOT place the Killer meeple on the board. Put it on the back of the Finale card in the space indicated. Place one Origin marker where the Killer would have begun, and the second Origin marker on the back of the single facedown Movement card. She begins Concealed.',
+    },
+  ],
+  raptors: [
+    {
+      title: 'Build the Spawn deck & ready the Raptors',
+      body: 'Shuffle the 8 Spawn cards into a facedown deck near the play area, alongside the Raptors card. Place all 6 Raptor meeples on the Raptors card.',
+    },
+    {
+      title: 'Place the Pack (not the core Killer meeple)',
+      body: 'Place the Pack meeple on the Killer start space from the Setup card \u2014 it is used instead of the Core-box Killer meeple. The Pack starts at 5 health (1 Final Health token + 4 Health markers) and has NO upper limit; its health IS the number of Raptors in the pack.',
+    },
+  ],
+  pods: [
+    {
+      title: 'S4 vignette \u2014 rules not yet transcribed',
+      body: 'Terror From Beyond (invading plant pods that take over human subjects). Its rule sheet wasn\u2019t among the imported PDFs \u2014 add the setup here once you have it. Playable at any Location.',
+    },
+  ],
+
+  // --- Locations ---
+  buddyland: [
+    {
+      title: 'No special setup',
+      body: 'Buddyland has no special setup steps \u2014 set up as normal. Just note the 4 Arcade spaces in the middle of the board (some card effects refer to them).',
+    },
+  ],
+  'shady-acres': [
+    {
+      title: 'Build the Ancient Curse deck',
+      body: 'Shuffle the 8 Ancient Curse cards into a facedown Ancient Curse deck.',
+    },
+    {
+      title: 'Set up the Children',
+      body: 'Place the Children card near the play area and put one Child meeple on the Altar of the Old Gods space; the other Children go on the Children card. Place the Children Action token ABOVE any Minion/Killer Actions on the Finale card \u2014 the Children act before any other Enemies.',
+    },
+  ],
+  'larmes-abbey': [
+    {
+      title: 'Seed the starting Malice tokens',
+      body: 'Place a Malice token in the Killer\u2019s start space and in 3 spaces adjacent to the Killer (4 total). If there are only 2 adjacent spaces, place the extra in the next-closest space of your choice.',
+    },
+    {
+      title: 'Place the Donkey & Benediction cards',
+      body: 'Place the Donkey token in the Cloister space. Put both Benediction Action cards in the Action Tableau \u2014 they remove Malice tokens.',
+    },
+  ],
+  'pesadilla-verde': [
+    {
+      title: 'Place the Huey & Train cards',
+      body: 'Place the Huey token in the Clearing space. Put the 2 Train Action cards into the Action Tableau (they Unlock Soldier upgrades).',
+    },
+    {
+      title: 'Set up the Soldiers card & upgrades',
+      body: 'Place the Soldiers card and the Action cubes next to the play area. Put all 8 Upgrade tokens on the card: the 2 starting Upgrades (marked) Unlocked-side up; the other 6 on their Locked side. Every normal Victim is a Soldier.',
+    },
+  ],
+  'isla-lagarto': [
+    {
+      title: 'Place the Electric Fence markers',
+      body: 'Place Electric Fence markers in the GREEN sections shown on the Setup card (not the red ones). Fences block movement along that path and make the spaces either side non-adjacent until the fence flickers off.',
+    },
+    {
+      title: 'Build the Lava deck & ready the T-Rex',
+      body: 'Shuffle the 3 Lava cards into a facedown deck and set the Lava tokens beside it. Place the T-Rex card near the play area with the T-Rex meeple on its start space (it stays secured in the Dino Pen until it breaks out).',
+    },
+  ],
+
+  // ===== SPECIAL FEATURES =====
+
+  // --- Killers ---
+  mort: [
+    {
+      title: 'Use the Basic Finale card to start',
+      body: 'Place the Basic Finale card on the Killer board \u2014 it supplies the Killer Action until Mort\u2019s true Finale is revealed. Add the Interrogate and Coerce Action cards to the Action Tableau.',
+    },
+    {
+      title: 'Lay out the 10 Suspects',
+      body: 'Place the 10 Suspect cards in a row above the board, attributes-side up. Put the 10 Suspect tokens in the Suspect bag. Place the Horror Track token in its designated space on the Killer board.',
+    },
+    {
+      title: 'Hide Mort among the Suspects',
+      body: 'Mort does NOT start on the board \u2014 he\u2019s wearing a disguise. After placing Victims and the Final Girl, randomly place each of the 10 Suspect miniatures on an empty space (no other characters) until spaces or Suspects run out; any leftover Suspects go on the farthest Victim-occupied spaces from you, one per space.',
+    },
+    {
+      title: 'Pick the secret Clue card',
+      body: 'Randomly choose one Clue card and place it beside the board on whichever side you like \u2014 this secretly determines who Mort is disguised as. Place the Clue Viewer and the facedown Reminder tokens next to it. Do NOT open the Finale Secret Envelope until instructed (it spoils the surprise).',
+    },
+  ],
+  krampus: [
+    {
+      title: 'Rules not yet transcribed',
+      body: 'North Pole Nightmare (Krampus @ Santa\u2019s Village). Its rule sheet wasn\u2019t among the imported PDFs, so the special setup steps still need to be read in and added. The card data is already present. Ask Kiro to add the rules once you have the sheet.',
+    },
+  ],
+
+  // --- Locations ---
+  megabgcon: [
+    {
+      title: 'Build the Booth decks',
+      body: 'Shuffle the 12 Booth cards into a facedown Booth deck and the 10 Booth Event cards into a facedown Booth Event deck. Add the 2 Create a Panic Action cards to the Action Tableau.',
+    },
+    {
+      title: 'Prime the Finale Reminder',
+      body: 'Place the Finale Reminder card underneath the Finale card, Finale-Reminder side up \u2014 it only matters after the Finale is revealed (then you stop drawing Booth cards).',
+    },
+  ],
+  'santas-village': [
+    {
+      title: 'Rules not yet transcribed',
+      body: 'North Pole Nightmare location. Its rule sheet wasn\u2019t among the imported PDFs, so any special setup still needs adding. The card data is already present.',
     },
   ],
 };
@@ -1007,6 +1201,170 @@ export const playRules = {
       'END OF GAME / DESTINY PHASE: after the final Terror card the game ends \u2014 there is no Finale. Resolve each Consequence card that has a Fated Victim on top (flip if facedown): meet its requirement or lose that much health via the Punishment beneath it; if flipping your Final Health token, treat it as normal health. Consequence cards without a Fated Victim are ignored. Survive all of them and you win.',
     ],
   },
+
+  // ===== SERIES 4 =====
+
+  // --- Killers ---
+  billy: {
+    points: [
+      'Billy is protected by his Buddies (animatronic Minions). IMPORTANT: Billy cannot be attacked while there is ANY Buddy in his space \u2014 clear the Buddies first.',
+      'Buddies are Minions with their own health, Attack and Movement values on each Buddy card. "Spawn a Buddy" reveals the top Buddy card and places its token in a space adjacent to Billy (preferring an empty one). If Billy isn\u2019t in play, the spawn is ignored.',
+      'Each Buddy card has an Initiative number (top-right). When resolving Minion Actions / Terror effects, resolve Buddies from LOWEST to highest Initiative. A Buddy that spawns during the Killer phase doesn\u2019t activate until the NEXT Killer phase.',
+      'Killing a Buddy: remove its token, take the Kill Reward on its card, then remove the card from the game. If a Buddy is killed outside the Action phase, take the reward at the start of the next Action phase.',
+      'Power Sources: 4 Power Source tokens start Active. While at least one is Active, Billy\u2019s recover-health icon heals him; if none are Active, ignore that icon. Spend the shown cost while in a Power Source\u2019s space (even just passing through) to Deactivate it (flip to Inactive).',
+      'Bloodlust Track tokens: when Bloodlust rises to a level with a facedown token, reveal it and apply its effect.',
+    ],
+    watchOuts: [
+      'Power Surge (Epic Finale): when revealed, spawn Boris \u2014 you must then kill BOTH Billy and Boris to win.',
+      'A Power Source can be re-Activated by effects; if that happens, Billy can heal again, so keep them Deactivated near the end.',
+    ],
+  },
+  grimlash: {
+    points: [
+      'Grimlash runs on YOUR Harvest Madness track (0\u20133). The Harvest Madness icon moves the marker one space right; reaching a new level lets you draw 2 cards from that level\u2019s deck and keep 1 (its ability stays active while you remain at that level or above).',
+      'Lowering it: when you resolve a recover-health icon you may EITHER recover health as normal OR move the Harvest Madness marker left 1 space per heart \u2014 not both. Dropping to a lower level forces you to discard that level\u2019s Harvest Madness card (you redraw if you climb back).',
+      'Some Harvest Madness effects are once-per-turn \u2014 flip the card facedown to use, then flip faceup again in Upkeep.',
+      'Higher Madness grants stronger abilities (and modifies your Horror Rolls via the Epic Dark Power) but is a gamble with your life.',
+    ],
+    watchOuts: [
+      'INSTANT LOSS: if your Harvest Madness ever increases beyond Level 3 (onto the skull space), you immediately lose the game \u2014 watch every Harvest Madness icon before you trigger it.',
+      'Cards that raise maximum health also drop it again when discarded; any health above the new maximum is lost.',
+    ],
+  },
+  berith: {
+    points: [
+      'Berith is a demon possessing Ursula, a nun. The Killer meeple, its health, Attack and Movement all represent Ursula\u2019s possessed body. Defeating "the Killer" means killing possessed Ursula by the normal rules (reveal her black Final Health token, restoring health if needed).',
+      'Winning is a TWO-step condition: first kill possessed Ursula; then Ursula must come back from the dead. Reveal every Final Health token you placed on the Divine Blessings sheet \u2014 if ANY shows health, she revives and you win; if all are blank, you lose.',
+      'Divine Blessings: when you see the Blessing icon (most often via the Expel Demon Action card, played while in Ursula\u2019s space), place a black Final Health token facedown on the topmost empty space of the Divine Blessings sheet and resolve its effect. The more blessings bestowed, the better her odds of reviving.',
+      'Final Health tokens on the sheet can\u2019t be removed or revealed unless stated. The token supply is limited \u2014 tokens removed/assigned elsewhere mean fewer available for the sheet.',
+    ],
+    watchOuts: [
+      'You do NOT need to fill all 7 blessing slots before killing Ursula \u2014 but the fewer blessings, the likelier she stays dead (and you lose).',
+    ],
+  },
+  volkar: {
+    points: [
+      'The Volk\u2019ar has NO Movement Value and spends much of the game Concealed (meeple on the Finale card, true position tracked by a hidden Path of Movement cards). Concealed at the start of the Killer phase = resolve the UPPER Killer Action on the Finale card; Visible = resolve the LOWER one.',
+      'Building her Path: the Path icon draws a Movement card faceup into the next Path slot (facedown variant draws facedown). If she was Visible, she immediately becomes Concealed again: put an Origin marker on the new card and one in her current space, and move her meeple onto the Finale card.',
+      'Resolving her Path (she reveals) happens when you resolve a Reveal icon, add a 6th Movement card, OR land a damaging attack while she\u2019s Concealed. Place her meeple on the Origin-marker space, then resolve each Movement card in order from the Origin card, moving/attacking as the cards dictate; location movement penalties apply to her. Discard the Path afterwards.',
+      'Tracking: the Track Action card reveals Movement cards (the Origin or others). If every Path card is faceup you know her EXACT space; one facedown card means you must guess.',
+      'While Concealed: treat the Origin-marker space as her space for counting/placing relative to the Killer; ignore effects that place the Killer; treat a Killer Action line as a Path icon; Victims don\u2019t panic.',
+    ],
+    watchOuts: [
+      'Attacking her while Concealed is a gamble: place the Attack token on a guessed space and bank the damage on the Attack Resolution card, THEN resolve her Path. Only if her final space matches your Attack token does the damage land \u2014 otherwise it\u2019s wasted and she ambushes YOU (resolve the Ambush Penalty on the bottom of her final Movement card).',
+      'Never look through the discarded Movement cards.',
+    ],
+  },
+  raptors: {
+    points: [
+      'The Pack meeple is the Killer for all purposes. Its health = the number of Raptors in the Pack; it starts at 5 (1 Final Health token + 4 markers) with NO upper limit. Its Attack Value is the damage per attack regardless of pack size. Kill the Pack and you WIN, even if individual Raptors remain.',
+      'Individual Raptor meeples are Minions (1 health each, Killer-board Movement Value). "Raptor(s)" on a card means only the individuals, never the Pack; "Pack" means only the Pack. Individual Raptors rarely attack, but when they do each deals 1 damage.',
+      'Joining the Pack: the join icon targets the Pack for Raptor movement. Raptors take the shortest path to the Pack and, when they share its space, immediately join \u2014 remove the meeple and add 1 Health marker to the Pack per Raptor that joins.',
+      'Raptors stop as soon as they enter (or start movement in) a space with you or a Victim.',
+      'Spawning: the spawn icon makes you draw a Spawn card and spawn that many Raptors, placing them by rolling a die against the spawn table on the Raptors card. If meeples run out, the Raptor closest to the Pack joins it and that meeple is reused. The final Bloodlust-track effect also spawns 1 Raptor.',
+    ],
+    watchOuts: [
+      'Because every Raptor that reaches the Pack adds health, letting the board fill with Raptors can balloon the Pack far past its starting 5 \u2014 intercept or thin them before they merge.',
+      'Scaly Hide (Epic Dark Power): the Pack and Raptors ignore all damage from Reaction cards.',
+    ],
+  },
+
+  // --- Locations ---
+  'shady-acres': {
+    points: [
+      'The Children are Enemies but NOT Minions. The Children card holds their shared health, Attack and Movement values. They have their own Action line on the Children Action token and act at the START of the Killer phase, before the Minion and Killer Actions.',
+      'Children only resolve Killer/Minion actions on Terror (or other) cards when the card specifically says the Children do it. Activate them one at a time, starting with the Child closest to the Altar of the Old Gods and ending with the farthest.',
+      'Each Upkeep phase, spawn a Child onto the Altar of the Old Gods space \u2014 ignored if all Children are already out OR if there are no Victims on the board. Killed Children return to the Children card to be respawned later.',
+      'Attacking Children: if several share a space you attack ALL of them, dividing your damage as you like (leftover damage is lost).',
+      'Abduction icon: when a Child resolves it while sharing a Victim\u2019s space, roll a die \u2014 1\u20132 sacrifices the Victim (return the Child to the Altar, increase Bloodlust, and place the Victim on the back of the top Ancient Curse card); 3\u20136 nothing. With no Victim in the Child\u2019s space, treat Abduction as a Move instead.',
+      'Ancient Curses: once 3 sacrificed Victims sit on the back of the top Ancient Curse card, remove them and reveal that Ancient Curse into play (several can be active at once).',
+      'Field spaces (the Field icon) are referenced by several cards. Victims follow you into a Child\u2019s space unless the Killer is also there.',
+    ],
+    watchOuts: [
+      'The Children acting FIRST each Killer phase (before the Killer) can wreck a rescue plan \u2014 account for their move/abduction before your own turn ends.',
+    ],
+  },
+  'larmes-abbey': {
+    points: [
+      'Malice tokens drive the Abbey. The Malice icon places a token in the Active Killer\u2019s space (or the nearest token-free space if occupied). With multiple Active Killers, only the one closest to you places it; with no Killer on the board, reveal a random Setup card and use its Killer-start space.',
+      'Blessed & Cursed dice replace normal dice on Horror Rolls when their icons appear (you never roll both in one roll; equal numbers of each icon cancel out). While you stand in a space with a Malice token you must replace 1 die with the Cursed die. A Cursed icon in your final result costs you health.',
+      'Remove Malice tokens with the Benediction Action cards (or other effects): the three success tiers remove a token from your space / your space + 1 adjacent / your space + all adjacent. Removed tokens go back to the pool.',
+    ],
+    watchOuts: [
+      'INSTANT LOSS: if all 14 Malice tokens are on the board and you must place another, you immediately lose \u2014 keep clearing them with Benediction.',
+      'The Improvise Action card\u2019s effects also apply to the 5 on the Cursed die.',
+    ],
+  },
+  'pesadilla-verde': {
+    points: [
+      'Every normal Victim is a Soldier. Soldiers act like Victims for most effects BUT will follow you into the Killer\u2019s space and can be given orders. (The Archeologist and Rebel Leader Special Victims are NOT Soldiers and can\u2019t be ordered.)',
+      'Upgrades: there are 4 Action Upgrades (Attack, Move \u2014 you start with one of each Unlocked and one Locked) and 4 Ability Upgrades (Saving Soldiers, Friendly Fire, Attack Range, Damage). The Train Action card Unlocks an Upgrade (flip Locked\u2192Unlocked); some effects Lock one again.',
+      'Ordering Soldiers (Action phase): pick the space of the Soldier(s), choose an Action Upgrade token and put an Action cube on its leftmost slot (unavailable if a cube is already in that row), then resolve the Action for all Soldiers there. In Upkeep, shift every Action cube one slot right, freeing it when it leaves the token.',
+      'Damage ability: locked, Soldiers deal (# Soldiers / 2, rounded DOWN) \u2014 so a lone Soldier does 0. Unlocked, it rounds UP. Friendly Fire (while locked): roll a die per attacking Soldier; on 1\u20132 one of them is killed. Saving a Soldier costs 2 Time until the save upgrade is Unlocked.',
+      'The River: four River spaces flow one way (follow the arrows). Moving downriver, one movement can carry you across multiple River spaces (resolving every space passed through); you can never move upriver, though the upstream space is still adjacent. Soldiers get the same multi-space river move; Enemies only move to the adjacent River space.',
+      'The Huey: its space is a save space \u2014 while there you can save any number of Victims, then remove the Huey token (revealing the Clearing, no longer a save space) unless an effect returns it.',
+    ],
+    watchOuts: [
+      'Until you Unlock Damage, small Soldier groups do nothing \u2014 prioritise the right upgrades via Train before relying on Soldier attacks.',
+      'With Friendly Fire still locked, every Soldier attack risks killing your own Soldiers \u2014 weigh the die rolls.',
+    ],
+  },
+  'isla-lagarto': {
+    points: [
+      'Three Electric Fences (A, B, C). While a fence marker is present, movement along that path is blocked and the spaces either side are NOT adjacent. Panic in a blocked direction = stay put. Distance/targeting uses only unblocked paths (if ALL markers are out and the only target is across the fences, measure as if there were none). Effects that place someone ignore fences.',
+      'Each Upkeep, roll the Electric Fence die: toggle the indicated fence (remove its marker if present, place one if absent).',
+      'The T-Rex is NOT a Killer or Minion and cannot be attacked, damaged or killed. The T-Rex-move icon advances it along its card; at the Break Out! space it enters at the Dino Pen and its Action token goes below the Killer Action on the Finale card (ignore later T-Rex-move icons). It resolves AFTER the Minion and Killer Actions on the Finale.',
+      'T-Rex movement (value 2): it stops the moment it reaches a space with anyone, and won\u2019t move if someone is in its starting space. Instead of damaging, it INSTANTLY KILLS one target in its space by priority: Victim, then Minion, then You, then Killer (you/the Killer die outright \u2014 no Final Health token). For multi-unit Enemies (Raptor Pack, Zombie Horde) it kills one unit (= 1 damage to that Enemy).',
+      'Victims won\u2019t follow you into the T-Rex\u2019s space; in the Panic phase everyone in its space panics regardless of whether a Victim died.',
+      'Beach spaces (3 corners) and Cliff spaces (2 edges) are referenced by some cards.',
+    ],
+    watchOuts: [
+      'Volcano: the first Volcano icon erupts \u2014 everyone at the Volcano takes damage, anyone left panics, and a Lava token seals the space permanently. Later Volcano icons spread lava to an adjacent space (draw a Lava card); after all 4 Lava tokens are placed, ignore further Volcano icons. Lava spaces are inaccessible to everyone.',
+      'Because the T-Rex kills outright and can\u2019t be fought, route around it \u2014 don\u2019t get cornered in its space.',
+    ],
+  },
+
+  // ===== SPECIAL FEATURES =====
+
+  // --- Killers ---
+  mort: {
+    points: [
+      'Mort is a whodunit. He\u2019s secretly disguised as one of 10 Suspects (each dressed as a Final Girl villain). Suspects are NOT the Killer, an Enemy or a Victim \u2014 they\u2019re never targeted and can\u2019t be damaged. Each has 7 attributes on its Suspect card that help you deduce the real Mort.',
+      'Reveal Clues with the Interrogate (played in a Suspect\u2019s space) and Coerce (played in an Informant\u2019s space) Action cards. Each revealed Clue flips a Reminder token, points to an attribute Mort does NOT have, and lets you discard every Suspect with that attribute \u2014 replacing each discarded Suspect\u2019s miniature with an Informant meeple. A Clue always eliminates at least one Suspect.',
+      'Suspects temporarily acting as Killer: on the matching icon (or any Killer Action/effect on a Location card) draw a token from the Suspect bag \u2014 that Suspect becomes the Active Killer for that resolution, then the token goes back. If the drawn Suspect has already been cleared, nothing happens and the token is discarded.',
+      'Informants count as Victims with three twists: saving one lets you reduce Horror once; if one is killed you must increase Horror once (after Bloodlust); and on ties for Killer targeting, prioritise Informants over normal Victims.',
+      'Until Mort is revealed, Victims do NOT panic in the Panic phase. Minor Dark Powers with health spaces get no Health markers (Mort can\u2019t be attacked while disguised) and can be discarded on an Interrogate/Coerce success.',
+    ],
+    watchOuts: [
+      'Revealing all 5 Clues identifies Mort: discard Minor Dark Powers and remaining Terror cards, swap the correct Suspect miniature for Mort\u2019s, flip that Suspect card onto the Basic Finale slot (that\u2019s now the active Finale), reveal the Dark Power if needed, and give Mort the health on the card (+ Final Health token). Always clear leftover Informant meeples.',
+      'If the Terror deck runs out before you\u2019ve found him, the Finale triggers anyway: reveal Mort, and he gets a bonus based on how many Clues were still unrevealed (Anonymous Terror counts each unrevealed Clue double; the Epic Dark Power adds +2 Attack per unrevealed Clue) \u2014 so stalling is dangerous.',
+      'Horror Track token: when Bloodlust hits the top of the track, move it onto the Horror-max symbol on your Player board. After that, exceeding max Horror makes you LOSE instead of just capping.',
+    ],
+  },
+  krampus: {
+    points: [
+      'Rules not yet transcribed \u2014 the North Pole Nightmare rule sheet wasn\u2019t among the imported PDFs. The card data (Terror, Dark Powers, Finales, etc.) is present, so the Codex and dropdowns work; the at-the-table play summary still needs reading in from the sheet.',
+    ],
+  },
+
+  // --- Locations ---
+  megabgcon: {
+    points: [
+      'Search anywhere: you may resolve a Search in ANY space. Which Item deck you draw from depends on the space type \u2014 Exhibit Area, Food Court, or General Area. Spaces have no search icon, but every space counts as a search space for effects.',
+      'Three areas: Exhibit Areas (yellow booth spaces), the Food Court (bottom-left), and General Areas (everything else). A visual key is on the back of the rule sheet.',
+      'Restricted following: Victims won\u2019t follow you OUT of an Exhibit Area into a General Area. Use the Create a Panic Action card (or normal panic effects) to scare them across that boundary.',
+      'Hallways & docks: moving into a space connected by the hallway/dock icon gives +1 to the movement Action card, but the first space you move to must be an adjacent hallway/dock space. Panicking from the Main Hallway rolls 2 dice for direction instead of 1.',
+      'Booth cards: each Upkeep draw a Booth card and roll a die \u2014 1\u20133 spawns a normal Victim in the Booth\u2019s space; 4\u20136 draws a Booth Event and applies it there. Discard the Booth card after. (When an effect just needs a Booth location, don\u2019t roll \u2014 only place the Booth.)',
+    ],
+    watchOuts: [
+      'Once the Finale is revealed you STOP drawing Booth cards \u2014 flip the Finale Reminder card and place it on top of the Booth deck as the reminder.',
+    ],
+  },
+  'santas-village': {
+    points: [
+      'Rules not yet transcribed \u2014 the North Pole Nightmare rule sheet wasn\u2019t among the imported PDFs. Card data is present; add the play summary once you have the sheet.',
+    ],
+  },
 };
 
 /** Return the special play-rules summary for an entry (or null). */
@@ -1126,6 +1484,45 @@ export const phaseExtras = {
       'If NO Fated Victims remain on the board (all on the Death Order, in Limbo, or saved): draw and resolve 2 Terror cards this phase instead of 1.',
     ],
     upkeep: ['When the Terror deck runs out the game ends (no Finale) \u2014 then resolve the end-of-game Destiny phase: for each Consequence card with a Fated Victim on it, meet its requirement or lose the Punishment health. Survive them all to win.'],
+  },
+
+  // ----- Season 4 -----
+  billy: {
+    killer: ['Spawn a Buddy as part of the Minion Action (reveal the top Buddy card, place its token adjacent to Billy). A Buddy that spawns this phase doesn\u2019t activate until the NEXT Killer phase. Resolve Buddies by Initiative, lowest first.'],
+  },
+  grimlash: {
+    upkeep: ['Flip any once-per-turn Harvest Madness cards back faceup so their effects can be used again.'],
+  },
+  berith: {
+    upkeep: ['Satanic Influence (Epic Dark Power): take damage equal to the number of normal Victims in your space.'],
+  },
+  volkar: {
+    killer: ['Check if the Volk\u2019ar is Concealed or Visible: Concealed = resolve the UPPER Killer Action on the Finale card; Visible = resolve the LOWER one.'],
+  },
+  raptors: {
+    killer: ['A Raptor that spawned this phase doesn\u2019t activate until the NEXT Killer phase. Individual Raptors move toward and join the Pack (each join adds 1 to the Pack\u2019s health).'],
+  },
+  'shady-acres': {
+    killer: ['The Children act FIRST this phase \u2014 before the Minion and Killer Actions \u2014 one at a time, starting with the Child closest to the Altar of the Old Gods.'],
+    upkeep: ['Spawn a Child on the Altar of the Old Gods space \u2014 skipped if all Children are already out OR there are no Victims on the board.'],
+  },
+  'pesadilla-verde': {
+    upkeep: ['Move every Soldier Action cube one slot to the right; a cube leaving the last slot frees that Action to be used again.'],
+  },
+  'isla-lagarto': {
+    killer: ['If the T-Rex has broken out, resolve its Action AFTER the Minion and Killer Actions on the Finale \u2014 it stops on the first space with anyone and instantly kills one target (Victim \u2192 Minion \u2192 You \u2192 Killer).'],
+    upkeep: ['Roll the Electric Fence die and toggle the indicated fence (remove its marker if present, place one if absent).'],
+  },
+  // Buddyland has no per-phase extra (Arcade spaces only); L'Armes Abbey's Malice
+  // placement is driven by card icons, not a fixed phase step.
+
+  // ----- Special Features -----
+  mort: {
+    panic: ['Until Mort\u2019s disguise is revealed, Victims do NOT panic this phase.'],
+    killer: ['On the Suspect-acts-as-Killer icon (and for any Killer Action/effect on a Location card), draw a token from the Suspect bag \u2014 that Suspect is the Active Killer for that resolution. If the drawn Suspect has already been cleared, discard the token and ignore the action.'],
+  },
+  megabgcon: {
+    upkeep: ['Draw a Booth card and roll a die: 1\u20133 spawn a Victim in the Booth\u2019s space; 4\u20136 draw and apply a Booth Event there. STOP drawing Booth cards once the Finale is revealed.'],
   },
 };
 

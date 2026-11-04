@@ -1,0 +1,198 @@
+Components
+The raptors were built for speed, agility, and sudden violence. Their sickle-shaped toe claws
+are designed to slash and pin prey, turning a single leap into a mortal wound. With sharp teeth
+and powerful jaws, they can tear flesh quickly once they’ve closed the distance. Hunting in
+coordinated groups, they overwhelm victims through intelligence and relentless pursuit rather
+than sheer size. A raptor doesn’t need to be big to be deadly—it only needs a moment of surprise.
+Pack only:
+"Did You Hear That?"	"Did You Hear That?"	
+If there are no Victims on the
+	board, discard and draw the next	
+Terror card. Otherwise:
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+Each time the Pack	
+kills a Victim, .
+Blood Thirsty	Blood Thirsty
+1 Epic Dark Power card
+Scaly Hide	Scaly Hide
+	epic dark power	epic dark power
+The Pack and Raptors ignore all
+	damage from Reaction cards.
+3 Finale cards
+Claws like Knives	Claws like Knives
+The fi rst damage from
+	each attack is .
+Move 1
+Space
+1 Epic Finale card
+epic Finale	epic Finale	
+Deadly Quick	Deadly Quick
+When revealed, immediately
+	place the Pack in your
+	space and lose 4 .
+Move 1
+Space
+2 Final Girl cards
+maud	66
+Take a
+Sprint
+Card
+Move 1
+Space
+	Move 1
+Space
+22
+Christina	55
+Take a
+Search
+Card
+Take a
+Guard
+Card
+	Move 1
+Space
+22
+Director (design): Byron Jorjorian and AJ Porfirio Director of Photography (art): Tyler Johnson
+1 Pack Meeple
+6 Raptor Meeples 8 Spawn cards
+Roll a die and check the spawn	Roll a die and check the spawn
+	table on thetable on the RaptorsRaptors card.card.
+3	3	Spawn	Spawn
+1 Raptors card
+Raptors	Raptors
+Raptors will not move if they start with
+	you or a Victim in their space.	
+Raptors will stop any time they enter
+	a space with you or a Victim.	
+* is equal to the Pack's
+	Movement Value	
+1
+Spawn Location	Result	
+Your space	1
+2
+3
+4
+5
+6
+Closest space to the Pack	
+Closest space to the Pack	
+Furthest space from the Pack	
+Furthest space from the Pack	
+Furthest space from you
+m
+5mm
+Pantone: 1797 C
+ors_RaptorPackMeeple_v1_12-23-25.pdf 1 12/26/25 3:42 PM
+Raptor Meeple
+WIDTH: 19mm
+HEIGHT: 17.5mm
+Depth: 7mm
+Pantone: 378 C
+C
+M
+Y
+CM
+MY
+CY
+CMY
+K
+FF20_Raptors_RaptorMeeple_v1_12-23-25.pdf 1 12/26/25 3:35 PM
+Raptor Meeple
+WIDTH: 19mm
+HEIGHT: 17.5mm
+Depth: 7mm
+Pantone: 378 C
+C
+M
+Y
+CM
+MY
+CY
+CMY
+K
+FF20_Raptors_RaptorMeeple_v1_12-23-25.pdf 1 12/26/25 3:35 PM
+Raptor Meeple
+WIDTH: 19mm
+HEIGHT: 17.5mm
+Depth: 7mm
+Pantone: 378 C
+C
+M
+Y
+CM
+MY
+CY
+CMY
+K
+FF20_Raptors_RaptorMeeple_v1_12-23-25.pdf 1 12/26/25 3:35 PM
+
+-- 1 of 4 --
+
+Special Setup
+* Shuffle the Spawn cards and form a face down deck. Place it near the play area along with
+the Raptors card and place the Raptor meeples on the Raptors card.
+* Place the Pack meeple on the Killer starting space 	indicated on the Setup card. It is
+used instead of the Killer meeple from the Core box.
+SPECIAL Rules
+The Pack
+The Pack meeple represents a large and coordinated group of Raptors. The Pack is considered a
+Killer for all purposes.
+The health of the Pack represents the number of Raptors in the Pack. Health starts the game at
+5 (one Final Health token and 4 Health markers), but there is no upper limit. The Attack Value on
+the Killer board represents how much damage the Pack does in a single attack, regardless of the
+size of the pack.
+When the Pack is eliminated, you win, even if there are still individual Raptors on the board.
+Individual Raptors
+Individual Raptors are represented by the Raptor meeples. When a card refers to ‘Raptor(s)’ for
+an effect, that effect does NOT include the Pack, only the individual Raptors. Similarly, when a
+card refers to ‘Pack’ for an effect, it does not include individual Raptors.
+Raptors are considered Minions for all purposes (familiarize yourself with the Minion rules on
+pg. 32 of the Core Rulebook).
+* Individual Raptors have 1 health.
+* They use the Movement Value on the Killer board.
+* Individual Raptors don’t attack very often, but when they do, they EACH attack individually
+for 1 	.
+JOINING THE PACK
+Raptors are generally trying to move to, and join, the Pack. When you see the 	icon, the
+Raptors are targeting the Pack for movement.
+
+-- 2 of 4 --
+
+Raptors know they are at risk when not with the Pack, so when moving they will
+stop any time they enter (or begin movement in) a space with you or a Victim. This is
+reflected by the 	icon as a reminder.
+When targeting the Pack, the Raptors will take the shortest path to reach it. If there are multiple
+equidistant paths, the Raptors will choose the path that gets them as close to the Pack as possi-
+ble before having to stop their movement.
+When individual Raptors are in the same space as the Pack, they automatically and immediately
+join it. Simply remove the individual Raptors and add one Health marker to the Pack’s health for
+each one that joins.
+When Raptor meeples are removed from the board, place them on the Raptors card to be used
+again for future spawns.
+Spawning Raptors
+When you resolve an 	icon, you must draw a Spawn card and spawn the indicated number of
+individual Raptors. The space they spawn in is determined by rolling a die and referring to the
+spawn table on the Raptors card. If there are multiple legal spawn spaces, you may choose where
+to spawn the Raptors. Then, discard the Spawn card.
+* Spawns cannot occur in spaces that are no longer accessible.
+* If there are not enough Raptor meeples to resolve the spawn, the Raptor closest to the
+Pack immediately joins it, and then use that Raptor meeple for the spawn. Repeat this until
+the Spawn card is fully resolved.
+* If you ever need to draw a Spawn card and none remain, shuffle the discard pile to create a
+new deck and then draw.
+* The final effect on the Bloodlust track will also spawn a Raptor. Resolve this as if you had
+drawn a Spawn card with a value of 1.
+Note! Location Terror cards will not have this icon, but it still applies
+when individual Raptors resolve the 	icon!
+Note! If a Raptor spawns during the Killer phase, it will not activate
+until the NEXT Killer phase.
+
+-- 3 of 4 --
+
+
+
+-- 4 of 4 --
+

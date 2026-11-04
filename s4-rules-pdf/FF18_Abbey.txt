@@ -1,0 +1,93 @@
+Components
+“The town of L’Armes was abandoned centuries ago. War ravaged the area countless times, to the
+point that locals believed the land was cursed. No one remembers how the town got its name...some
+claim it was because weapons had been stockpiled there during the various wars; while others claim
+it was due to all the weeping over the souls that have been lost. Maybe it was both, or maybe it was
+neither...no record exists of the origin. Ursuline nuns had the abbey built in the hopes of converting
+the many non-believers in the area, but the horrible events in the abbey just further reinforced their
+belief that the area was indeed cursed and that there was no god interested in helping them.”
+—Amelie Rosier, local historian
+Terror	Terror
+LustLust	
+The closest Victim to you in a space with
+	a Malice token is killed. If you're in a
+	space with a Malice token, you take	
+. You may defend as normal.
+A Victim in your space is killed.
+8 Terror cards
+Sunday mass	Sunday mass
+22
+22
+22
+11
+11
+22
+11
+11
+Setup	Setup
+5 Setup cards
+Black Mass	Black Mass	
+“This is blasphemous!”
+During the Upkeep phase, if no	
+Malice tokens were added this turn.	
+Event	Event
+10 Event cards
+ITEM	ITEM
+Spend 2 during the Killer	
+phase to ignore a .
+“That’s a lot of Hail Marys.”	
+Rosary	Rosary
+18 Item cards
+1 Location board
+Director (design): Mike Martins Director of Photography (art): Lars Krause
+18 Various Tokens 	2 Action cards
+Action	Action
+Benediction	Benediction
+1	“In nómine Patris, et Fílii, et Spíritus Sancti. Amen."
+Remove a Malice token from either
+	your space or 1 adjacent space
+Remove a Malice token from your
+	space and 1 adjacent space
+Remove a Malice token from your
+	space and all adjacent spaces
+1 Blessed die
+1 Cursed die
+
+-- 1 of 2 --
+
+Special Setup
+* Place a Malice token in the Killer’s starting space and in 3 adjacent spaces
+to the Killer. If there are only 2 adjacent spaces, then place one in the next
+closest space of your choice. There will be 4 Malice tokens on the board.
+* Place the Donkey token in the Cloister space.
+* Place the Benediction Action cards in the Action Tableau.
+SPECIAL rules
+BLESSED AND CURSED DICE
+The Blessed die 	and Cursed die 	will sometimes replace the normal dice for Horror
+Rolls, impacting your chances of success, and possibly even affecting your health . When you see
+one of these icons, replace 1 	with the corresponding die when performing Horror Rolls.
+You will never roll both the Blessed and Cursed die in the same
+Horror Roll. If both icons are present but there are more of one
+kind than the other, you will replace 1 	with the corresponding
+die. If there is an equal number of each icon, they cancel each
+other out and neither die is used.
+If your final Horror Roll result has a 	icon, you lose 	.
+Malice
+When you see the 	icon on a card, place a Malice token in the Active Killer’s space. If that
+space already has a token, place it in the closest space to the Killer without a token.
+* If there are multiple Active Killers, resolve this only with the Killer closest to you.
+* If there is no Killer on the board when you need to place a Malice token, reveal a random
+Setup card and treat the 	space as the Killer's space for the purpose of resolving 	.
+Malice tokens have a 	symbol so you need to replace 1 	with the Cursed die when
+performing Horror Rolls while in spaces with Malice tokens.
+When Malice tokens are removed, from playing the Benediction Action card or other effects,
+place the token back in the general pool.
+Important! You immediately lose if all 14 Malice tokens have been placed
+on the board and you need to place another one.
+Note! The effects on
+the Improvise Action
+card also apply to the 5
+on the Cursed die.
+
+-- 2 of 2 --
+

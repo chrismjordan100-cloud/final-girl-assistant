@@ -1,0 +1,133 @@
+Components
+“Uhhh, hello? I was walking by about an hour ago and saw some strange movement
+through the window. It’s late and you’re closed so I thought I’d call in to warn you that
+someone may have broken into the place. I couldn’t get a good look, but they appeared
+to be disguised in animatronics costumes, which seemed kind of strange.”
+—Last message found on the Night Guard’s voicemail before he was found dead.
+"Do the Splits"	"Do the Splits"	
+Buddies only:
+Billy only:
+Billy only:
+Terror	Terror
+16 Terror cards
+1 Killer board
+3 Dark Power cards
+DeatHlust	DeatHlust
+Add +1 to Billy’s	
+Movement and Attack values.
+1 Epic Dark Power card
+Merciless Minions	Merciless Minions
+	epic dark power	epic dark power
+For the Minion Action on the Finale	
+card, add a before the .
+3 Finale cards
+1 Epic Finale card
+It’s Showtime!	It’s Showtime!
+You may not play Reaction cards if
+	more than one Enemy is in your space.
+epic Finale	epic Finale	
+Power Surge	Power Surge
+When revealed, spawn Boris. You
+	must kill both Billy and Boris to win.
+2 Final Girl cards
+5 Buddy cards 	2 Special Buddy
+cards
+rena
+Take a
+Guard
+Card
+Take any
+top Item
+Card
+Move
+1 Space
+66
+gwynn	55
+Director (design): Motti Eisenbach Director of Photography (art): Jacqui Davis
+Toby	Toby
+Kill Reward:	Kill Reward:
+If Toby kills a Victim, + .
+1	33
+11	11 	22
+Billy	Billy Jr.Jr.
+Kill Reward:	Kill Reward:
+6	22
+00	11 	toto BillyBilly
+Always in the same space as Billy.
+buddy	buddy 	special	special
+	buddy	buddy
+20 Various Tokens
+Billy Jr.
+
+-- 1 of 4 --
+
+Special Setup
+* Before revealing the Setup card, place 4 Power Source tokens on their Active side
+Billy Jr.
+,
+in four separate spaces so that no Power Source token is in a space adjacent to any other
+Power Source token. Set aside the 5th Power Source token as it may come into play later.
+* Take the two types of Bloodlust Track tokens ( 	and 	) and shuffle them face down
+by type (with only the backs showing).
+* Place 6 Bloodlust Track tokens face down on the Killer board (in Bloodlust track spaces
+corresponding to their color and icon). The remaining Bloodlust Track tokens (1 of each
+type) will not be used and should not be revealed.
+* Shuffle the five Buddy cards face down to form the Buddy deck.
+* Set aside the two Special Buddy cards. They may come into play later and follow the same
+rules as other Buddies once they are in play.
+* Spawn a Buddy (see rules on Spawning a Buddy below).
+SPECIAL Rules
+Bloodlust Track Tokens
+When Bloodlust increases to a level with a Bloodlust Track token, reveal the token and apply its
+effects.
+Power Source Tokens
+When Deactivating a Power Source, flip the token to the Inactive
+side. You may Deactivate a Power Source by spending
+while in the same space as the token, even if you are just moving
+through the space. If an Inactive 	is ever Activated, flip it back
+to the Active
+Billy Jr.
+side.
+resolving
+When you see this icon 	, Billy recovers one 	as long as at least one of the Power Sources
+is Active. Ignore this effect if none are Active.
+Billy Jr.
+
+-- 2 of 4 --
+
+billy's buddies
+Buddies are Minions and follow normal Minion rules (familiarize
+yourself with the Minion rules on pg. 32 of the Core Rulebook).
+Each Buddy card represents an animatronic with their own
+health ( 	), Attack Value ( 	), and Movement Value ( 	).
+spawning a buddy
+When an effect says to “Spawn a Buddy”, reveal the top card of
+the Buddy deck. Place the card in the play area and place the
+indicated number of Health markers on top of the Buddy card.
+Place the Buddy’s token in any space adjacent to Billy, choosing
+a space that does not already have a Buddy if possible.
+Note! If Billy is no longer in play the effect is ignored (no Buddy spawns).
+Activating Buddies
+Each Buddy card has an Initiative number found in the circle in the top right corner of the card.
+When resolving Minion Actions and/or Terror card effects, resolve them in the order of the
+Initiative number from lowest to highest.
+Note! If a Buddy spawns during the Killer phase, it will not activate until the NEXT Killer phase.
+killing Buddies
+When a Buddy is killed, remove the Buddy’s token from the board. Take the Kill Reward indicated
+on the Buddy’s card and then remove the card from the game. If a Buddy is killed in a phase other
+than the Action phase, take the reward at the beginning of the next Action phase.
+attacking billy
+IMPORTANT! Buddies will protect Billy at all costs. This means that Billy cannot be attacked
+while there is a Buddy in his space.
+Toby	Toby
+Kill Reward:	Kill Reward:
+If Toby kills a Victim, + .
+1	33
+11	11 22
+
+-- 3 of 4 --
+
+
+
+-- 4 of 4 --
+

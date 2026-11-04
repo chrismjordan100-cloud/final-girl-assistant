@@ -1,0 +1,138 @@
+Components
+Terror	Terror 	If you are in a space, place
+	the Killer in your space.
+"You belong to	"You belong to
+	the fields now."	the fields now."
+8 Terror cards
+Dark Fields	Dark Fields	
+“Hey, what’s that kid doing out there in the field?”
+Children treat spaces as
+	adjacent to each other.
+Ancient curse	Ancient curse
+Demands of the E
+arth
+Demands of the E
+arth
+22
+	22	44
+11
+22 22
+	11	
+Setup	Setup
+5 Setup cards
+8 Ancient Curse cards
+“The Fields	“The Fields
+	Are Moving...”	Are Moving...”	
+“Didn’t we just walk down that row?”	
+Place a Field token in both the Hayfi eld and Cow
+	Pasture spaces. They are now considered spaces.
+Event	Event
+10 Event cards
+ITEM	ITEM
+Combine	Combine
+	KeysKeys
+“Let’s mow em down!”
+Place the Combine in your space. When
+	moving with the Combine and resolving
+	a Walk Action card, you may move
+	an additional space. When moving into
+	a space with the Combine, place
+	a Harvested token in that space. It is
+	no longer considered a space.
+16 Item cards	1 Location board
+12 Various Tokens 	1 Children Action Token
+“Rural town, Shady Acres, in hardship as missing persons cases top thirteen this fall.
+Locals have given reports of lost children wandering the town. Officials claim no evidence
+of foul play as the latest investigation concludes. If you have information on a missing
+person or a child in distress, please contact the Shady Acres Sheriff’s Department."
+— The Today Farmer, Local Headlines, Issue #1013
+Director (design): Ryan Jorjorian Director of Photography (art): Ondine Champetier de Ribes
+Board and Item Art: Agnieszka Dabrowiecka
+1 Children card
+the children	the children	
+During the Upkeep phase, if there are	
+Victims on the board, spawn a Child on
+	the Altar of the Old Gods space.
+11 	11	11
+The	The
+Children	Children
+3 Children Meeples
+
+-- 1 of 4 --
+
+Special Setup
+* Shuffle the Ancient Curse cards and make a facedown Ancient Curse deck.
+* Place the Children card near the play area
+and place a Child meeple on the Altar of the
+Old Gods space. Place the other Children on the Children card.
+* Place the Children Action token above any
+Minion or Killer Actions on the Finale card,
+indicating that the Children will act before
+any other Enemies.
+SPECIAL rules
+Children
+Children at Shady Acres have gone missing...it has been rumored that they’ve been doing some
+despicable things. The Children card has the Children’s health 	, Attack Value 	, and
+Movement Value 	.
+* The Children are not Minions but are considered Enemies.
+* Children have their own Action line on the Children Action token. The Children Action
+is performed at the beginning of the Killer phase, before the Minion Action (if applicable)
+and the Killer Action.
+* Children DO NOT resolve Killer or Minion actions on Terror cards or anywhere else unless
+the card specifically states that the action is to be performed by the Children.
+* Children are activated one at a time starting with the Child closest to the Altar of the Old
+Gods space and ending with the Child farthest from that space.
+* During the Upkeep phase, spawn a Child by placing its meeple on the Altar of the Old
+Gods space. If all Children are already on the board OR if there are no Victims on the board,
+the spawn is ignored.
+* Children may be attacked and killed. If a Child is killed, their meeple goes back onto the
+Children card, available to be spawned in the future.
+* If you choose to attack the Children and there are more than one of them in the same space,
+you are attacking ALL of them and you may divide damage among the Children in the target
+space as you wish. Any leftover damage is lost.
+If a Victim was
+killed,	
+Move 1
+Space
+
+-- 2 of 4 --
+
+* Victims will follow you into a space that contains Children unless that space also contains
+the Killer.
+* During the Panic phase, Victims on a space with a Child will panic if at least one Victim
+was killed that turn.
+Abducted Victims
+The Children appear to be under the control of ancient gods and abduct people to offer them as
+sacrifices. When the Children resolve the Abduction icon 	while on a space with a Victim,
+roll a die:
+* On a 1-2 the Victim has been abducted to the altar of the Old
+Gods and sacrificed (killed). Return the Child to the Altar of the
+Old Gods space. Then, increase 	as normal and place the
+Victim on the back of the top card of the Ancient Curse deck.
+* On a 3-6 the Child failed to abduct the Victim and nothing happens.
+If there are no Victims in a Child's space when trying to resolve the 	icon, treat 	as a
+instead.
+Ancient Curses
+As soon as there are 3 sacrificed Victims on the
+back of the top card of the Ancient Curse deck,
+the Old Gods have been fed and they unleash a
+curse upon the children's enemies. Remove the
+Victims from the card and reveal the Ancient
+Curse card, putting it into play. There may be
+multiple Ancient Curse cards in play at the same time.
+Field Spaces
+Bad things always seem to happen in the fields. Spaces with the 	icon are considered Field
+spaces. Several cards have effects that involve 	spaces.
+Dark Fields	Dark Fields	
+“Hey, what’s that kid doing out there in the field?”
+Children treat spaces as
+	adjacent to each other.
+Ancient curse	Ancient curse
+Ancient curse	Ancient curse
+
+-- 3 of 4 --
+
+
+
+-- 4 of 4 --
+

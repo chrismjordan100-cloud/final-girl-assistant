@@ -1,405 +1,587 @@
 [
-  {
-    "ruleset": "hans",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "Hans",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Rule sheet says there are no special rules for Hans – he only uses core icons."
-  },
-  {
-    "ruleset": "poltergeist",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "The Poltergeist",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Special rules (Carolyn, Mr. Floppy) use core icons only."
-  },
-  {
-    "ruleset": "inkanyamba",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "Inkanyamba",
-    "icon_count": 1,
-    "icons": [
-      "S1-killer-inkanyamba-icon-killer-wrath"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "geppetto",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "Geppetto",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Puppet rules use core icons only."
-  },
-  {
-    "ruleset": "dr-fright",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "Dr. Fright",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Awake/Asleep and Boiler Room rules use core icons only."
-  },
-  {
-    "ruleset": "the-birds",
-    "series": "S1",
-    "type": "killer",
-    "ruleset_name": "The Birds (Terror From Above vignette)",
-    "icon_count": 4,
-    "icons": [
-      "S1-killer-the-birds-icon-killer-start-space",
-      "S1-killer-the-birds-icon-spawn-birds",
-      "S1-killer-the-birds-icon-bird-attack",
-      "S1-killer-the-birds-icon-spawn-birds-claw"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "camp-happy-trails",
-    "series": "S1",
-    "type": "location",
-    "ruleset_name": "Camp Happy Trails",
-    "icon_count": 1,
-    "icons": [
-      "S1-location-camp-happy-trails-icon-vehicle-motorboat"
-    ],
-    "note": "Rule sheet says there are no special rules for Camp Happy Trails. Its only extra icon is the Motorboat vehicle (used with Patsy & the Zombies)."
-  },
-  {
-    "ruleset": "creech-manor",
-    "series": "S1",
-    "type": "location",
-    "ruleset_name": "Creech Manor",
-    "icon_count": 2,
-    "icons": [
-      "S1-location-creech-manor-icon-window-space",
-      "S1-location-creech-manor-icon-vehicle-helicopter"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "sacred-groves",
-    "series": "S1",
-    "type": "location",
-    "ruleset_name": "Sacred Groves",
-    "icon_count": 6,
-    "icons": [
-      "S1-location-sacred-groves-icon-divine-wrath",
-      "S1-location-sacred-groves-icon-sacred-space",
-      "S1-location-sacred-groves-icon-token-warning",
-      "S1-location-sacred-groves-icon-token-sign",
-      "S1-location-sacred-groves-icon-token-fire",
-      "S1-location-sacred-groves-icon-token-burst"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "carnival-of-blood",
-    "series": "S1",
-    "type": "location",
-    "ruleset_name": "Carnival of Blood",
-    "icon_count": 1,
-    "icons": [
-      "S1-location-carnival-of-blood-icon-vehicle-golf-cart"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "maple-lane",
-    "series": "S1",
-    "type": "location",
-    "ruleset_name": "Maple Lane",
-    "icon_count": 3,
-    "icons": [
-      "S1-location-maple-lane-icon-house-space",
-      "S1-location-maple-lane-icon-searched-house-x",
-      "S1-location-maple-lane-icon-vehicle-police-car"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "evomorph",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "The Evomorph",
-    "icon_count": 3,
-    "icons": [
-      "S2-killer-evomorph-icon-vanish",
-      "S2-killer-evomorph-icon-scan-token",
-      "S2-killer-evomorph-icon-evolve"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "organism",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "The Organism",
-    "icon_count": 1,
-    "icons": [
-      "S2-killer-organism-icon-finale-revealed"
-    ],
-    "note": "Uses the Finale (F) icon; Test Results are cards rather than icons."
-  },
-  {
-    "ruleset": "intruders",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "The Intruders",
-    "icon_count": 4,
-    "icons": [
-      "S2-killer-intruders-icon-active-killer-up",
-      "S2-killer-intruders-icon-active-killer-down",
-      "S2-killer-intruders-icon-active-killer-token",
-      "S2-killer-intruders-icon-final-health-bonus"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "big-bad-wolf",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "Big Bad Wolf",
-    "icon_count": 2,
-    "icons": [
-      "S2-killer-big-bad-wolf-icon-track-mode",
-      "S2-killer-big-bad-wolf-icon-slay-mode"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "ratchet-lady",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "The Ratchet Lady",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Maniac and Calm rules use core icons only."
-  },
-  {
-    "ruleset": "patsy-zombies",
-    "series": "S2",
-    "type": "killer",
-    "ruleset_name": "Patsy & the Zombies (Terror From the Grave vignette)",
-    "icon_count": 2,
-    "icons": [
-      "S2-killer-patsy-zombies-icon-spawn-zombies",
-      "S2-killer-patsy-zombies-icon-vehicle-token"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "uss-konrad",
-    "series": "S2",
-    "type": "location",
-    "ruleset_name": "USS Konrad",
-    "icon_count": 5,
-    "icons": [
-      "S2-location-uss-konrad-icon-vehicle-super-loader",
-      "S2-location-uss-konrad-icon-keycard-token",
-      "S2-location-uss-konrad-icon-maintenance-space",
-      "S2-location-uss-konrad-icon-self-destruct-countdown",
-      "S2-location-uss-konrad-icon-super-loader-token"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "station-2891",
-    "series": "S2",
-    "type": "location",
-    "ruleset_name": "Arctic Station 2891",
-    "icon_count": 3,
-    "icons": [
-      "S2-location-station-2891-icon-vehicle-skidozer",
-      "S2-location-station-2891-icon-helicopter-move",
-      "S2-location-station-2891-icon-frostbite"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "storybook-woods",
-    "series": "S2",
-    "type": "location",
-    "ruleset_name": "Storybook Woods",
-    "icon_count": 2,
-    "icons": [
-      "S2-location-storybook-woods-icon-vehicle-raft",
-      "S2-location-storybook-woods-icon-raft"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "wingard-cottage",
-    "series": "S2",
-    "type": "location",
-    "ruleset_name": "Wingard Cottage",
-    "icon_count": 5,
-    "icons": [
-      "S2-location-wingard-cottage-icon-vehicle-scooter",
-      "S2-location-wingard-cottage-icon-supply-discarded-tools",
-      "S2-location-wingard-cottage-icon-supply-nails",
-      "S2-location-wingard-cottage-icon-supply-rope",
-      "S2-location-wingard-cottage-icon-supply-wood"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "wolfe-asylum",
-    "series": "S2",
-    "type": "location",
-    "ruleset_name": "Wolfe Asylum",
-    "icon_count": 7,
-    "icons": [
-      "S2-location-wolfe-asylum-icon-vehicle-gurney",
-      "S2-location-wolfe-asylum-icon-stun-token",
-      "S2-location-wolfe-asylum-icon-pill-token",
-      "S2-location-wolfe-asylum-icon-pill-yellow",
-      "S2-location-wolfe-asylum-icon-pill-wild",
-      "S2-location-wolfe-asylum-icon-pill-blue",
-      "S2-location-wolfe-asylum-icon-pill-pink"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "hunter",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "H.U.N.T.E.R.",
-    "icon_count": 2,
-    "icons": [
-      "S3-killer-hunter-icon-countdown-token",
-      "S3-killer-hunter-icon-cybernetic-part"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "razorface",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "Razorface",
-    "icon_count": 0,
-    "icons": [],
-    "note": "Affliction rules use no special icons."
-  },
-  {
-    "ruleset": "slayer",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "Slayer",
-    "icon_count": 1,
-    "icons": [
-      "S3-killer-slayer-icon-mirror-dimension-pull"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "tormentor",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "The Tormentor",
-    "icon_count": 6,
-    "icons": [
-      "S3-killer-tormentor-icon-victim-death-trap",
-      "S3-killer-tormentor-icon-final-girl-death-trap",
-      "S3-killer-tormentor-icon-progress-death-traps",
-      "S3-killer-tormentor-icon-bottom-terror-card",
-      "S3-killer-tormentor-icon-death-trap-skull-space",
-      "S3-killer-tormentor-icon-death-trap-final-space"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "eyeless",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "The Eyeless",
-    "icon_count": 3,
-    "icons": [
-      "S3-killer-eyeless-icon-final-girl-noise",
-      "S3-killer-eyeless-icon-noise-marker",
-      "S3-killer-eyeless-icon-noise-card"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "destiny",
-    "series": "S3",
-    "type": "killer",
-    "ruleset_name": "Destiny (Terror From Destiny vignette)",
-    "icon_count": 3,
-    "icons": [
-      "S3-killer-destiny-icon-destiny-symbol",
-      "S3-killer-destiny-icon-death-token",
-      "S3-killer-destiny-icon-arrow-token"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "sunnydaze-mall",
-    "series": "S3",
-    "type": "location",
-    "ruleset_name": "Sunnydaze Mall",
-    "icon_count": 2,
-    "icons": [
-      "S3-location-sunnydaze-mall-icon-savior-space",
-      "S3-location-sunnydaze-mall-icon-railing-space"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "hellscape",
-    "series": "S3",
-    "type": "location",
-    "ruleset_name": "Hellscape",
-    "icon_count": 5,
-    "icons": [
-      "S3-location-hellscape-icon-tile-star",
-      "S3-location-hellscape-icon-tile-circle",
-      "S3-location-hellscape-icon-tile-bars",
-      "S3-location-hellscape-icon-tile-cog",
-      "S3-location-hellscape-icon-hellscape-dice"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "falconwood",
-    "series": "S3",
-    "type": "location",
-    "ruleset_name": "Falconwood",
-    "icon_count": 1,
-    "icons": [
-      "S3-location-falconwood-icon-d20"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "marrek-warehouse",
-    "series": "S3",
-    "type": "location",
-    "ruleset_name": "Marrek Warehouse",
-    "icon_count": 2,
-    "icons": [
-      "S3-location-marrek-warehouse-icon-locked-exit",
-      "S3-location-marrek-warehouse-icon-rack-space"
-    ],
-    "note": ""
-  },
-  {
-    "ruleset": "utopia",
-    "series": "S3",
-    "type": "location",
-    "ruleset_name": "Utopia",
-    "icon_count": 2,
-    "icons": [
-      "S3-location-utopia-icon-sinkhole",
-      "S3-location-utopia-icon-boulder-space"
-    ],
-    "note": ""
-  }
+ {
+  "ruleset": "hans",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "Hans",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Rule sheet says there are no special rules for Hans – he only uses core icons."
+ },
+ {
+  "ruleset": "poltergeist",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "The Poltergeist",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Special rules (Carolyn, Mr. Floppy) use core icons only."
+ },
+ {
+  "ruleset": "inkanyamba",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "Inkanyamba",
+  "icon_count": 1,
+  "icons": [
+   "S1-killer-inkanyamba-icon-killer-wrath"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "geppetto",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "Geppetto",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Puppet rules use core icons only."
+ },
+ {
+  "ruleset": "dr-fright",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "Dr. Fright",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Awake/Asleep and Boiler Room rules use core icons only."
+ },
+ {
+  "ruleset": "the-birds",
+  "series": "S1",
+  "type": "killer",
+  "ruleset_name": "The Birds (Terror From Above vignette)",
+  "icon_count": 4,
+  "icons": [
+   "S1-killer-the-birds-icon-killer-start-space",
+   "S1-killer-the-birds-icon-spawn-birds",
+   "S1-killer-the-birds-icon-bird-attack",
+   "S1-killer-the-birds-icon-spawn-birds-claw"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "camp-happy-trails",
+  "series": "S1",
+  "type": "location",
+  "ruleset_name": "Camp Happy Trails",
+  "icon_count": 1,
+  "icons": [
+   "S1-location-camp-happy-trails-icon-vehicle-motorboat"
+  ],
+  "note": "Rule sheet says there are no special rules for Camp Happy Trails. Its only extra icon is the Motorboat vehicle (used with Patsy & the Zombies)."
+ },
+ {
+  "ruleset": "creech-manor",
+  "series": "S1",
+  "type": "location",
+  "ruleset_name": "Creech Manor",
+  "icon_count": 2,
+  "icons": [
+   "S1-location-creech-manor-icon-window-space",
+   "S1-location-creech-manor-icon-vehicle-helicopter"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "sacred-groves",
+  "series": "S1",
+  "type": "location",
+  "ruleset_name": "Sacred Groves",
+  "icon_count": 6,
+  "icons": [
+   "S1-location-sacred-groves-icon-divine-wrath",
+   "S1-location-sacred-groves-icon-sacred-space",
+   "S1-location-sacred-groves-icon-token-warning",
+   "S1-location-sacred-groves-icon-token-sign",
+   "S1-location-sacred-groves-icon-token-fire",
+   "S1-location-sacred-groves-icon-token-burst"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "carnival-of-blood",
+  "series": "S1",
+  "type": "location",
+  "ruleset_name": "Carnival of Blood",
+  "icon_count": 1,
+  "icons": [
+   "S1-location-carnival-of-blood-icon-vehicle-golf-cart"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "maple-lane",
+  "series": "S1",
+  "type": "location",
+  "ruleset_name": "Maple Lane",
+  "icon_count": 3,
+  "icons": [
+   "S1-location-maple-lane-icon-house-space",
+   "S1-location-maple-lane-icon-searched-house-x",
+   "S1-location-maple-lane-icon-vehicle-police-car"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "evomorph",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "The Evomorph",
+  "icon_count": 3,
+  "icons": [
+   "S2-killer-evomorph-icon-vanish",
+   "S2-killer-evomorph-icon-scan-token",
+   "S2-killer-evomorph-icon-evolve"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "organism",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "The Organism",
+  "icon_count": 1,
+  "icons": [
+   "S2-killer-organism-icon-finale-revealed"
+  ],
+  "note": "Uses the Finale (F) icon; Test Results are cards rather than icons."
+ },
+ {
+  "ruleset": "intruders",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "The Intruders",
+  "icon_count": 4,
+  "icons": [
+   "S2-killer-intruders-icon-active-killer-up",
+   "S2-killer-intruders-icon-active-killer-down",
+   "S2-killer-intruders-icon-active-killer-token",
+   "S2-killer-intruders-icon-final-health-bonus"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "big-bad-wolf",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "Big Bad Wolf",
+  "icon_count": 2,
+  "icons": [
+   "S2-killer-big-bad-wolf-icon-track-mode",
+   "S2-killer-big-bad-wolf-icon-slay-mode"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "ratchet-lady",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "The Ratchet Lady",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Maniac and Calm rules use core icons only."
+ },
+ {
+  "ruleset": "patsy-zombies",
+  "series": "S2",
+  "type": "killer",
+  "ruleset_name": "Patsy & the Zombies (Terror From the Grave vignette)",
+  "icon_count": 2,
+  "icons": [
+   "S2-killer-patsy-zombies-icon-spawn-zombies",
+   "S2-killer-patsy-zombies-icon-vehicle-token"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "uss-konrad",
+  "series": "S2",
+  "type": "location",
+  "ruleset_name": "USS Konrad",
+  "icon_count": 5,
+  "icons": [
+   "S2-location-uss-konrad-icon-vehicle-super-loader",
+   "S2-location-uss-konrad-icon-keycard-token",
+   "S2-location-uss-konrad-icon-maintenance-space",
+   "S2-location-uss-konrad-icon-self-destruct-countdown",
+   "S2-location-uss-konrad-icon-super-loader-token"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "station-2891",
+  "series": "S2",
+  "type": "location",
+  "ruleset_name": "Arctic Station 2891",
+  "icon_count": 3,
+  "icons": [
+   "S2-location-station-2891-icon-vehicle-skidozer",
+   "S2-location-station-2891-icon-helicopter-move",
+   "S2-location-station-2891-icon-frostbite"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "storybook-woods",
+  "series": "S2",
+  "type": "location",
+  "ruleset_name": "Storybook Woods",
+  "icon_count": 2,
+  "icons": [
+   "S2-location-storybook-woods-icon-vehicle-raft",
+   "S2-location-storybook-woods-icon-raft"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "wingard-cottage",
+  "series": "S2",
+  "type": "location",
+  "ruleset_name": "Wingard Cottage",
+  "icon_count": 5,
+  "icons": [
+   "S2-location-wingard-cottage-icon-vehicle-scooter",
+   "S2-location-wingard-cottage-icon-supply-discarded-tools",
+   "S2-location-wingard-cottage-icon-supply-nails",
+   "S2-location-wingard-cottage-icon-supply-rope",
+   "S2-location-wingard-cottage-icon-supply-wood"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "wolfe-asylum",
+  "series": "S2",
+  "type": "location",
+  "ruleset_name": "Wolfe Asylum",
+  "icon_count": 7,
+  "icons": [
+   "S2-location-wolfe-asylum-icon-vehicle-gurney",
+   "S2-location-wolfe-asylum-icon-stun-token",
+   "S2-location-wolfe-asylum-icon-pill-token",
+   "S2-location-wolfe-asylum-icon-pill-yellow",
+   "S2-location-wolfe-asylum-icon-pill-wild",
+   "S2-location-wolfe-asylum-icon-pill-blue",
+   "S2-location-wolfe-asylum-icon-pill-pink"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "hunter",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "H.U.N.T.E.R.",
+  "icon_count": 2,
+  "icons": [
+   "S3-killer-hunter-icon-countdown-token",
+   "S3-killer-hunter-icon-cybernetic-part"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "razorface",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "Razorface",
+  "icon_count": 0,
+  "icons": [],
+  "note": "Affliction rules use no special icons."
+ },
+ {
+  "ruleset": "slayer",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "Slayer",
+  "icon_count": 1,
+  "icons": [
+   "S3-killer-slayer-icon-mirror-dimension-pull"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "tormentor",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "The Tormentor",
+  "icon_count": 6,
+  "icons": [
+   "S3-killer-tormentor-icon-victim-death-trap",
+   "S3-killer-tormentor-icon-final-girl-death-trap",
+   "S3-killer-tormentor-icon-progress-death-traps",
+   "S3-killer-tormentor-icon-bottom-terror-card",
+   "S3-killer-tormentor-icon-death-trap-skull-space",
+   "S3-killer-tormentor-icon-death-trap-final-space"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "eyeless",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "The Eyeless",
+  "icon_count": 3,
+  "icons": [
+   "S3-killer-eyeless-icon-final-girl-noise",
+   "S3-killer-eyeless-icon-noise-marker",
+   "S3-killer-eyeless-icon-noise-card"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "destiny",
+  "series": "S3",
+  "type": "killer",
+  "ruleset_name": "Destiny (Terror From Destiny vignette)",
+  "icon_count": 3,
+  "icons": [
+   "S3-killer-destiny-icon-destiny-symbol",
+   "S3-killer-destiny-icon-death-token",
+   "S3-killer-destiny-icon-arrow-token"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "sunnydaze-mall",
+  "series": "S3",
+  "type": "location",
+  "ruleset_name": "Sunnydaze Mall",
+  "icon_count": 2,
+  "icons": [
+   "S3-location-sunnydaze-mall-icon-savior-space",
+   "S3-location-sunnydaze-mall-icon-railing-space"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "hellscape",
+  "series": "S3",
+  "type": "location",
+  "ruleset_name": "Hellscape",
+  "icon_count": 5,
+  "icons": [
+   "S3-location-hellscape-icon-tile-star",
+   "S3-location-hellscape-icon-tile-circle",
+   "S3-location-hellscape-icon-tile-bars",
+   "S3-location-hellscape-icon-tile-cog",
+   "S3-location-hellscape-icon-hellscape-dice"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "falconwood",
+  "series": "S3",
+  "type": "location",
+  "ruleset_name": "Falconwood",
+  "icon_count": 1,
+  "icons": [
+   "S3-location-falconwood-icon-d20"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "marrek-warehouse",
+  "series": "S3",
+  "type": "location",
+  "ruleset_name": "Marrek Warehouse",
+  "icon_count": 2,
+  "icons": [
+   "S3-location-marrek-warehouse-icon-locked-exit",
+   "S3-location-marrek-warehouse-icon-rack-space"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "utopia",
+  "series": "S3",
+  "type": "location",
+  "ruleset_name": "Utopia",
+  "icon_count": 2,
+  "icons": [
+   "S3-location-utopia-icon-sinkhole",
+   "S3-location-utopia-icon-boulder-space"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "billy-the-bear",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "Billy the Bear",
+  "icon_count": 5,
+  "icons": [
+   "S4-killer-billy-the-bear-icon-bloodlust-token-a",
+   "S4-killer-billy-the-bear-icon-bloodlust-token-b",
+   "S4-killer-billy-the-bear-icon-power-source-active",
+   "S4-killer-billy-the-bear-icon-power-source-inactive",
+   "S4-killer-billy-the-bear-icon-recharge"
+  ],
+  "note": "Buddies use the core Minion rules (Core Rulebook p.32); health, attack and movement on Buddy cards use core icons."
+ },
+ {
+  "ruleset": "buddyland",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "Buddyland",
+  "icon_count": 5,
+  "icons": [
+   "S4-location-buddyland-icon-arcade-space",
+   "S4-location-buddyland-icon-skull-token",
+   "S4-location-buddyland-icon-unidentified-token-1",
+   "S4-location-buddyland-icon-unidentified-token-2",
+   "S4-location-buddyland-icon-green-token"
+  ],
+  "note": "Rule sheet says no special setup. Its board tokens are included but aren't explained on the rule sheet; two are too small to identify."
+ },
+ {
+  "ruleset": "grimlash",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "Grimlash",
+  "icon_count": 2,
+  "icons": [
+   "S4-killer-grimlash-icon-harvest-madness",
+   "S4-killer-grimlash-icon-harvest-madness-skull-space"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "shady-acres",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "Shady Acres",
+  "icon_count": 8,
+  "icons": [
+   "S4-location-shady-acres-icon-children-action",
+   "S4-location-shady-acres-icon-children-action-token",
+   "S4-location-shady-acres-icon-abduction",
+   "S4-location-shady-acres-icon-field-space",
+   "S4-location-shady-acres-icon-field-token",
+   "S4-location-shady-acres-icon-combine-token",
+   "S4-location-shady-acres-icon-unidentified-token",
+   "S4-location-shady-acres-icon-harvested-token"
+  ],
+  "note": "Field, Harvested and (likely) Combine tokens are identified from card text, not the rule sheet. One dark token is included as 'unidentified'."
+ },
+ {
+  "ruleset": "berith",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "Berith",
+  "icon_count": 1,
+  "icons": [
+   "S4-killer-berith-icon-divine-blessing"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "larmes-abbey",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "L'Armes Abbey",
+  "icon_count": 6,
+  "icons": [
+   "S4-location-larmes-abbey-icon-blessed-die",
+   "S4-location-larmes-abbey-icon-cursed-die",
+   "S4-location-larmes-abbey-icon-cursed-wound-result",
+   "S4-location-larmes-abbey-icon-malice",
+   "S4-location-larmes-abbey-icon-malice-token",
+   "S4-location-larmes-abbey-icon-donkey-token"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "volkar",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "The Volk'ar",
+  "icon_count": 6,
+  "icons": [
+   "S4-killer-volkar-icon-path-faceup",
+   "S4-killer-volkar-icon-path-facedown-conceal",
+   "S4-killer-volkar-icon-reveal",
+   "S4-killer-volkar-icon-attack-token",
+   "S4-killer-volkar-icon-damage-token",
+   "S4-killer-volkar-icon-origin-marker"
+  ],
+  "note": "The Ambush Penalty uses the core Horror mask icon."
+ },
+ {
+  "ruleset": "pesadilla-verde",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "Pesadilla Verde",
+  "icon_count": 7,
+  "icons": [
+   "S4-location-pesadilla-verde-icon-upgrade-unlocked",
+   "S4-location-pesadilla-verde-icon-upgrade-locked",
+   "S4-location-pesadilla-verde-icon-huey-token",
+   "S4-location-pesadilla-verde-icon-river-space",
+   "S4-location-pesadilla-verde-icon-piranhas-token",
+   "S4-location-pesadilla-verde-icon-unidentified-token-1",
+   "S4-location-pesadilla-verde-icon-unidentified-token-2"
+  ],
+  "note": "Two round tokens aren't named or legible on the rule sheet; they're included as 'unidentified'. Huey exits use the core exit icon."
+ },
+ {
+  "ruleset": "raptors",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "The Raptors",
+  "icon_count": 3,
+  "icons": [
+   "S4-killer-raptors-icon-join-the-pack",
+   "S4-killer-raptors-icon-raptor-stop",
+   "S4-killer-raptors-icon-spawn-raptors"
+  ],
+  "note": ""
+ },
+ {
+  "ruleset": "isla-lagarto",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "Isla Lagarto",
+  "icon_count": 11,
+  "icons": [
+   "S4-location-isla-lagarto-icon-t-rex-advance",
+   "S4-location-isla-lagarto-icon-t-rex-stops-at-anyone",
+   "S4-location-isla-lagarto-icon-volcano",
+   "S4-location-isla-lagarto-icon-beach-space",
+   "S4-location-isla-lagarto-icon-cliff-space",
+   "S4-location-isla-lagarto-icon-electric-fence-marker",
+   "S4-location-isla-lagarto-icon-electric-fence-die",
+   "S4-location-isla-lagarto-icon-t-rex-action-token",
+   "S4-location-isla-lagarto-icon-parachute-token",
+   "S4-location-isla-lagarto-icon-goat-token",
+   "S4-location-isla-lagarto-icon-tail-token"
+  ],
+  "note": "The parachute, goat and tail tokens are included, but the rule sheet doesn't explain them; their cards do. The T-Rex Kill Priority strip is made of core icons."
+ },
+ {
+  "ruleset": "mort",
+  "series": "S4",
+  "type": "killer",
+  "ruleset_name": "Mort the Teenage Dirtbag (Shriek Special Feature)",
+  "icon_count": 2,
+  "icons": [
+   "S4-killer-mort-icon-active-killer-suspect",
+   "S4-killer-mort-icon-horror-track-token"
+  ],
+  "note": "Interrogate/Coerce stars, Informant Horror effects and the Bloodlust splat all use core icons. The Suspect tokens are character portraits, not icons, so they're not included."
+ },
+ {
+  "ruleset": "mega-board-game-con",
+  "series": "S4",
+  "type": "location",
+  "ruleset_name": "Mega Board Game Con (Shriek Special Feature)",
+  "icon_count": 6,
+  "icons": [
+   "S4-location-mega-board-game-con-icon-exhibit-area-space",
+   "S4-location-mega-board-game-con-icon-hallway-dock-fast-move",
+   "S4-location-mega-board-game-con-icon-shopping-bag-token",
+   "S4-location-mega-board-game-con-icon-wet-floor-sign-token",
+   "S4-location-mega-board-game-con-icon-price-tag-token",
+   "S4-location-mega-board-game-con-icon-crowd-token"
+  ],
+  "note": "Its 4 board tokens (bag, sign, price tag, crowd) are included, but the rule sheet doesn't explain them; the cards that place them do."
+ }
 ]

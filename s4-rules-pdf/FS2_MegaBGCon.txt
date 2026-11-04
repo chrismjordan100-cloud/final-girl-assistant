@@ -1,0 +1,154 @@
+Components
+“It is the best week of gaming! Here you will find board games, card games, miniatures games,
+and all of the fine folks who make them."
+- Slappy McBride, board game enthusiast
+Director (design): A.J. Porfirio Director of Photography (art): Tyler Johnson
+Item Art: Agnieszka Dabrowiecka
+Terror	Terror
+Action	Action
+booth	booth
+x
+1-3: Spawn a Victim	
+4-6: Resolve a Booth Event	
+Roll a die:
+When the Finale is revealed, flip this card over
+	and place it on top of the Booth deck.
+FINALE REMINDER	FINALE REMINDER
+Do not draw Booth cards during
+	the Upkeep phase any longer.
+x	x
+"A lot going on	"A lot going on
+	today!"	today!"
+If there is 1 or fewer Events*	
+in play, .
+If there are 2 or more Events* in
+	play, resolve another Terror card.
+*Do not include Booth Events.
+Create a Panic	Create a Panic
+"If I just start coughing uncontrollably,
+	that should do the trick..."
+Panic each Victim	
+in your space.
+Panic each Victim in your
+	space. You may modify each
+	Panic roll result by 1.
+Panic each Victim in your
+	space in the direction
+	of your choice.
+May only be played while in a space with one or more Victims.
+During the Action Phase:	
+Discard any Action
+	card to take this
+8 Terror cards
+2 Action cards
+1 Finale Reminder card
+12 Booth cards
+First Day	First Day
+44
+11 11
+11	11
+Setup	Setup
+5 Setup cards
+Industry Bad Boy	Industry Bad Boy	
+“Some love him, some hate him.”	
+Reveal a Booth card and place the Bad Boy in that space.
+	Immediately choose him to be your Friend or Enemy.
+If the Bad Boy leaves play, discard this card.
+Friend is Saved:	
+Friend is Killed:
+Enemy is Saved:	
+Enemy is Killed: Do NOT increase
+Sold Out!	Sold Out!	
+“Their new release just sold out, dammit!”
+Panic all Victims in the Booth space.
+Discard this card.
+Event	Event
+booth Event	booth Event
+10 Event cards
+10 Booth Event cards
+ITEM	ITEM
+00
+“The blade is a little dull...”	
+Box cutter	Box cutter
+18 Item cards
+1 Location board
+6 Various tokens
+1 Pink Special
+Victim meeple
+1 Medical Buggy
+miniature
+
+-- 1 of 4 --
+
+Special Setup
+* Shuffle the 12 Booth cards and make a facedown Booth deck.
+* Shuffle the 10 Booth Event cards and make a facedown Booth Event deck.
+* Add the 2 Create a Panic Action cards to the Action Tableau.
+* Place the Finale Reminder card underneath the Finale card
+(Finale Reminder side facing up). It will only be used after the
+Finale is revealed.
+SPECIAL Rules
+DEFINITIONS
+* EXHIBIT AREAS: The yellow spaces marked with this icon 	are considered Exhibit
+Area spaces. Thematically this is where the vendor booths are and where everyone wants
+to be!
+* FOOD COURT: The Food Court is located in the bottom left-hand corner of the board.
+* GENERAL AREAS: All remaining spaces not captured in the 2 areas above are considered
+the General Areas.
+NOTE! See the back of this rulebook for a visual key to each of these areas on the board.
+Restricted Victim following
+The Victims are having such a great time at the convention that they will not willingly follow you
+OUT of Exhibit Areas and into General Areas! You may not have ANY Victims follow you when
+moving from a 	space to a General Area space. Instead, you will need to use the Create a
+Panic Action card to attempt to scare them from a 	space to a General Area space. Victims
+could also panic and move from a 	space to a General Area space per the normal rules (i.e. if
+panicking during the Panic phase or panicking from other effects).
+Main hallway
+When panicking someone from the Main Hallway, roll 2 dice instead of 1 to determine the
+direction they panic.
+When the Finale is revealed, flip this card over
+	and place it on top of the Booth deck.
+FINALE REMINDER	FINALE REMINDER
+
+-- 2 of 4 --
+
+Searching
+At Mega Boardgame Con you can search in ANY space (by resolving a Search Action card). The
+Item deck you draw from depends on the kind of space you are searching in: an Exhibit Area
+space 	; the Food Court space; or a General Area space.
+MOVING THROUGH Hallways and docks
+Hallways and docks are sparsely populated and you can move to other connected hallways and
+docks quickly! If you intend to move to a space connected by this icon 	, you get +1
+to resolve the Action card that grants the movement, but the first space you move to MUST be an
+adjacent space connected with a 	icon.
+booth cards and booth events
+During each Upkeep phase you will draw a Booth card. If you need to draw a Booth card but the
+deck is empty, shuffle the discard pile to create a new deck.
+When resolving a Booth card, roll a die and do one of the following:
+* 1-3: Spawn a normal Victim in the space with the Booth. This represents a new attendee
+showing up to the convention!
+* 4-6: Draw a Booth Event card and apply its effects in the space with the Booth.
+Discard the Booth card after resolving it. Booth Event cards will instruct you as to whether or not
+the card should be discarded.
+NOTE! Some card effects will instruct you to draw a Booth card for determining a Booth location.
+In these instances, do not resolve the Booth card by rolling a die.
+IMPORTANT! Because all spaces can be searched, there are no 	icons on the spaces.
+However, each space is considered a 	space for the purpose of effects that reference
+them. If unsure what to do in certain instances, apply the Rules on Game Ambiguity.
+IMPORTANT! You will no longer draw a Booth card after the
+Finale is revealed. Take the Finale Reminder card, flip it over, and
+place it on top of the Booth deck. 	Do not draw Booth cards during
+	the Upkeep phase any longer.
+x	x
+
+-- 3 of 4 --
+
+Exhibit
+areas
+General
+areas
+food
+court
+
+-- 4 of 4 --
+

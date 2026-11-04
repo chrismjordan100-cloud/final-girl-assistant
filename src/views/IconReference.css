@@ -84,3 +84,47 @@
 .icon-ref__ruledesc { font-size: 0.78rem; line-height: 1.45; }
 
 .icon-ref__rulenote { margin: 0; font-size: 0.84rem; color: var(--text-dim); font-style: italic; }
+
+/* Series grouping within the scenario rule icons */
+.icon-ref__series { margin-bottom: 1.6rem; }
+.icon-ref__series-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  color: var(--fg-blood-bright);
+  margin: 1.4rem 0 0.8rem;
+}
+.icon-ref__series-count { font-size: 0.75rem; letter-spacing: 0; text-transform: none; }
+
+/* Low-res badge */
+.icon-ref__ruleimgwrap { position: relative; flex: none; }
+.icon-ref__lowres-badge {
+  position: absolute;
+  bottom: -0.35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.58rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.3rem;
+  border-radius: 3px;
+  background: var(--fg-gold);
+  color: var(--fg-black, #111);
+  white-space: nowrap;
+  font-family: var(--font-display);
+}
+.icon-ref__lowres-key {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  background: var(--fg-gold);
+  color: var(--fg-black, #111);
+}

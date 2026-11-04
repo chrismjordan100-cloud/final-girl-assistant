@@ -1,0 +1,339 @@
+Components
+"We went in thinking it was just another mission—drug runners, maybe a paramilitary outfit, nothing
+we couldn’t handle. The jungle was thick, humid, crawling with noise, but it wasn’t the noise that got
+to us. It was the silence. One by one, the guys started disappearing. Not captured, not calling out—just
+gone. When we found them, there wasn’t anything left but skinned bodies hanging like trophies. I’ve
+seen firefights, ambushes, all kinds of hell, but this... there's only one word for what this was: inhuman."
+Sergeant First Class Errol Dickson, Bravo Company
+Psy ops	Psy ops
+Discard all Track Action cards in your hand.
+If the Volk'ar is Visible, discard and
+	draw the next Terror card. Otherwise:
+Terror	Terror
+16 Terror cards 	or
+Track	Track
+2
+Reveal the Origin card OR	
+2 other Movement cards
+	Reveal 2 Movement cards
+	(not the Origin card)
+	Reveal 1 Movement card
+	(not the Origin card)
+“There's something out there huntin'
+	us... and it ain't human.”
+Action	Action
+2 Action cards
+When attacking, place the token
+	in the space being targeted.
+	Then, before resolving the Volk'ar's
+	Path, resolve the attack and place	
+tokens on this card equal to
+	the damage done by the attack.	
+Attack	Attack
+	Resolution	Resolution
+1 Attack Resolution card
+1 Killer board
+3 Dark Power cards
+Blades in the dark	Blades in the dark
+When the Volk’ar’s Path is resolved, kill	
+1 Victim in each space adjacent to her final space.
+1 Epic Dark Power card
+Merciless Ambush	Merciless Ambush
+When the Volk’ar’s Path is resolved, resolve the	
+Ambush Penalty on each Movement card.
+epic dark power	epic dark power
+3 Finale cards
+Guerilla Warfare	Guerilla Warfare
+Move
+3 Spaces	
+Move
+3 Spaces
+Roll a Die,
+on 1-4:
+1 Epic Finale card
+Regenerative Cloaking	Regenerative Cloaking
+Move
+3 Spaces
+epic Finale	epic Finale
+Roll a Die,
+on 1-4:
+2 Final Girl cards
+Dakota	66
+Alois	55
+Director (design): Evan Derrick Director of Photography (art): Agnieszka Dabrowiecka
+22 Movement cards
+Move 1 space towards the
+	closest Named space.	
+Do not consider the current space.
+	Break ties in alphabetical order.	
+Movement	Movement
+2 Origin markers 	12 Various Tokens
+
+-- 1 of 8 --
+
+Special Setup
+* Place the Track Action cards into the Action Tableau.
+* Place the Attack Resolution card, the Damage tokens 	, and the Attack token 	next
+to the play area.
+* Shuffle the Movement cards and place the facedown deck next to the board. Then, deal out
+one card facedown next to the deck, leaving room to deal out up to five additional cards.
+* After revealing the Setup card, do not place the Killer meeple onto the board. Instead, place
+the Killer meeple onto the back of the Finale card in the space indicated. Then, place an
+Origin marker onto the space where the Killer would begin and place the second Origin
+marker onto the back of the single facedown Movement card.
+SPECIAL Rules
+The Volk’ar has sophisticated cloaking technology and will spend much of the game hiding
+in the shadows, hunting her prey. The Volk’ar does NOT have a Movement Value. Instead, her
+movement will be directed by the path of Movement cards.
+Definition of terms
+* CONCEALED - The Volk’ar cannot be seen, although
+she is ALWAYS somewhere on the board (indicated
+by her Path - see below). When Concealed, her
+current space is hidden and her Killer meeple is on
+the Finale card. If the Volk'ar is Concealed at the
+start of the Killer phase, resolve the upper Killer
+Action on the Finale card.
+* VISIBLE - The Volk’ar’s cloaking tech is disengaged
+and she can be seen normally. Her Killer meeple will
+be on the board when she is Visible. If the Volk'ar is
+Visible at the start of the Killer phase, resolve the lower Killer Action on the Finale card.
+Movement	Movement	Movement	Movement	
+Movement	Movement	Movement	Movement Movement	Movement
+Roll a Die,
+on 1-4:
+Example starting setup for the Volk'ar.
+Roll a Die,
+	on 1-4:
+The Volk'ar will resolve one Killer
+Action if she is Concealed and a
+different one if she is Visible.
+
+-- 2 of 8 --
+
+* PATH - The hidden route the Volk’ar is following, indicated by the row of
+Movement cards.
+* ORIGIN CARD - This is the first Movement card in the Path (denoted by
+placing an Origin marker on top of it) and indicates where the Volk'ar
+will begin her hidden movement.
+BUILDING THE Volk'ar's path
+Whenever you see the 	icon, draw a Movement card and place it faceup in the next spot in
+the Path. Whenever you see the 	icon, draw a Movement card and place it facedown instead.
+If the Volk’ar is Visible when the 	icon is resolved, she will immediately become Concealed.
+Place one Origin marker on the newly drawn Movement card and the second Origin marker in
+the Volk’ar’s current space. Then, place the Volk’ar’s Killer meeple onto the Finale card.
+If you ever need to draw a Movement card and the
+deck is empty, shuffle the discard pile and form a new
+Movement deck.
+Movement	Movement
+
+-- 3 of 8 --
+
+Resolving the Volk'ar's path
+The Volk’ar will resolve her Path and reveal herself when one of three things occurs:
+* You resolve the Reveal icon 	on a card.
+* You add a 6th Movement card to her Path. If this occurs while resolving the Killer Action
+on the Finale card, finish resolving the Killer Action first before resolving her Path. If this
+happens while resolving a Terror (or other) card, finish resolving the entire card first before
+resolving her Path. This may result in there being more than 6 Movement cards to resolve.
+* While Concealed, an attempted attack against her would do damage (see Attacking the
+Volk'ar below).
+When any of the above occurs and the Volk'ar is revealed, immediately do the following:
+1. 	Place the Volk’ar’s Killer meeple onto the board in the space with the Origin marker,
+even if that space is no longer accessible due to a location effect. Then, place both Origin
+markers next to the Movement deck.
+2. 	Starting with the Origin card, resolve each card in the Path one at a time, flipping the card
+faceup if necessary. Follow the instructions on each Movement card to move the Volk’ar,
+attacking in her current space if indicated. Any spaces with movement restrictions or
+penalties for the Killer will apply to the Volk’ar and sometimes result in her not moving for
+a particular Movement card.
+3. 	If either you or Volk’ar take damage while resolving a Movement card and need to reveal
+the Final Health token, wait until all the Movement cards have been resolved first.
+4. 	After resolving all the cards in the Path, discard the Movement cards.
+Tracking the Volk'ar
+You can use the Track Action card in order to hone in on the exact space
+where the Volk’ar is hiding. If all Movement cards in the Path are faceup,
+then you will know EXACTLY which space the Volk'ar is in, but if even one
+card is facedown, you will have to guess at her exact location.
+Note! You are never allowed to look through the pile of discarded Movement cards.
+or
+Track	Track
+2
+Reveal the Origin card OR	
+2 other Movement cards
+Reveal 2 Movement cards
+	(not the Origin card)
+Reveal 1 Movement card
+	(not the Origin card)
+“There's something out there huntin'
+	us... and it ain't human.”
+
+-- 4 of 8 --
+
+Roll a Die,
+on 1-4:
+Movement	Movement	Movement	Movement	
+Movement	Movement	Movement	Movement 	Movement	Movement
+Move 2 spaces towards
+	the closest space.	
+Do not consider the current space.
+	Break ties in alphabetical order.
+Move 2 spaces towards
+	the closest space.	
+Do not consider the current space.
+	Break ties in alphabetical order.
+Move 2 spaces towards
+	the closest space.	
+Do not consider the current space.
+	Break ties in alphabetical order.
+Move 3 spaces towards
+	the closest space.	
+Do not consider the current space.
+	Break ties in reverse alphabetical order.
+Move 3 spaces towards
+	the closest space.	
+Do not consider the current space.
+	Break ties in reverse alphabetical order.
+Move 1 space on a 6 .
+Move 1 space on a 6 .
+Move 1 space towards the
+	closest Named space.	
+Do not consider the current space.
+	Break ties in alphabetical order.
+Move 1 space towards the
+	closest Named space.	
+Do not consider the current space.
+	Break ties in alphabetical order.
+Move 1 space towards the
+	closest Named space.	
+Do not consider the current space.
+	Break ties in alphabetical order.	Movement	Movement
+It's the Killer phase and Liz has just
+drawn the Out of the Shadows Terror
+card, which has the 	icon on it. She
+must now resolve the Volk'ar's Path,
+currently four cards long.
+She first moves the Killer meeple from
+the back of the Finale card to the space
+on the board marked by the Origin
+marker and places both Origin markers
+next to the Movement deck.
+Liz flips the two facedown Movement cards faceup, revealing the route
+the Volk'ar will take. Card 1 says "Move 3 spaces towards the closest
+space." Because both the Rebel Camp and the Ancient Ruins are
+equidistant, the tie is broken in reverse alphabetical order (per the card),
+so the Volk'ar moves to the Rebel Camp. There's a Killer Action line on
+the card so she kills the lone Victim present there. Card 2 says "Move 2
+spaces towards the closest 	space," but says NOT to consider the cur-
+rent space. Because the Rebel Camp doesn't count, the Volk'ar moves 2
+spaces towards the Ancient Ruins, ending up in the space she started in.
+There's a Killer Action line, but the space is empty, so nothing happens.
+Card 3 in the Volk'ar's Path says "Move 1 space on a 6." Checking the space's
+panic numbers, Liz moves the Volk'ar's Killer meeple one space to the left.
+There's a Victim there but no Killer Action line on the Movement card, so
+the Victim escapes death (for now). The fourth and final card says "Move 1
+space towards the closest Named space." There's a tie between the Central
+River and the Ancient Ruins, but per the card ties are broken in alphabetical
+order, so the Volk'ar moves to the Ancient Ruins. There's a Killer Action line
+on the card and (unfortunately) Liz's Final Girl meeple is at the ruins, so she
+gets attacked by the Volk'ar. Finally, Liz gathers up the Movement cards and
+discards them. The Volk'ar is now Visible, although who knows for how long.
+1 	2
+3 	4
+
+-- 5 of 8 --
+
+ATTACKING THE VOLK’AR WHen she's CONCEALED
+When Concealed, the Volk’ar is always at a specific space on the board, indicated by her Path.
+Any space on the board within range can be targeted (following normal attack rules) AS IF the
+Volk’ar was present there. Place the Attack token 	in the space being targeted and resolve the
+attack. Track how much damage resulted from the attack by placing Damage tokens 	on the
+Attack Resolution card. If the attack resulted in no damage, the Volk'ar remains Concealed and
+her Path is not resolved. Otherwise, resolve the Volk'ar's Path as previously described.
+If the Volk’ar’s final space is the same as the space with the 	token,
+the attack's damage is resolved! Apply the damage on the Attack
+Resolution card to the Volk’ar.
+If the Volk’ar ended her movement in a different space, the attack had no
+effect. Instead, the Volk’ar ambushes YOU (regardless of who the attack
+came from). Resolve the Ambush Penalty on the bottom of the final
+Movement card in her Path.
+Finally, discard any 	tokens on the Attack Resolution card and
+remove the 	token from the board.
+When the VOLK’AR IS CONCEALED
+If the Volk’ar is Concealed, the following exceptions apply:
+* If an effect asks you to place something, or count spaces, in relation to the Killer, treat the
+space with the Origin marker as the Volk’ar’s current space for the purposes of resolving
+the effect.
+* If an effect asks you to place the Killer, ignore the effect.
+* If a card has a Killer Action line, treat it as a 	icon.
+* Victims will not panic during the Panic phase.
+Note! If you attacked your current space AND the Volk’ar ended her movement in that
+space AND there was a Killer Attack line on the final Movement card in her Path, both your
+attack and the Volk’ar’s are considered to have happened simultaneously.
+Move 2 spaces towards
+the closest space.
+Do not consider the current space.
+	Break ties in alphabetical order.
+The Ambush Penalty.
+
+-- 6 of 8 --
+
+There's currently only one card in the Volk'ar's
+path, the Origin card, so Maggie decides
+to take a risk and attack. She deduces that
+there's a good chance the card will direct the
+Volk'ar to the nearest 	space (she hasn't
+seen many of those so far this game, and
+she knows there are three in the Movement
+deck), so she targets the Supply Depot and
+places the 	token there. Using a Furious
+Strike Action card along with her M16, she
+rolls a 5 and a 6! She does 	with
+Furious Strike and an additional
+with the M16 for a total of 4 	! She places
+tokens on the Attack Resolution card
+to match the amount of damage her attack
+inflicted. Now to see if she actually managed
+to hit the Volk'ar!
+Because Maggie did damage with an attack, the
+Volk'ar automatically resolves her Path. Maggie
+flips the lone Movement card faceup and
+discovers that she guessed incorrectly: the card
+says to move towards the closest 	space,
+NOT the closest 	space. Maggie moves the
+Volk'ar's meeple one space south to the Cave.
+Because the Volk'ar did not end up in the space
+with the 	token, Maggie's attack is wasted.
+She discards the 	tokens with no effect.
+Finally, because the attack was directed at
+the wrong space, Maggie suffers the Ambush
+Penalty on the bottom of the Movement card.
+She increases Horror by one and vows to make
+a better guess next time.
+Movement	Movement
+When attacking, place the token
+	in the space being targeted.
+Then, before resolving the Volk'ar's
+	Path, resolve the attack and place	
+tokens on this card equal to
+	the damage done by the attack.
+When attacking, place the token
+	in the space being targeted.
+Then, before resolving the Volk'ar's
+	Path, resolve the attack and place	
+tokens on this card equal to
+	the damage done by the attack.
+Move 2 spaces towards
+the closest space.	
+Do not consider the current space.
+	Break ties by highest panic number.
+Move 2 spaces towards
+the closest 	s	 	p	 	a	 	c	 	e	 	.
+Do not consider the current space.
+Break ties by highest panic number.
+
+-- 7 of 8 --
+
+
+
+-- 8 of 8 --
+

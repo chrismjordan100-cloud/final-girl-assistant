@@ -1,0 +1,358 @@
+Components
+Terror	Terror
+Cursed Sacrifice	Cursed Sacrifice
+Move all Victims 1 space closer
+	to the Cursed Temple.
+Kill all Victims at the Cursed Temple.
+If no Victims died, kill the 2 closest	
+Victims to the Cursed Temple.
+If there are no Victims on the board, discard
+	and draw the next Terror card. Otherwise:
+8 Terror cards
+River Rats	River Rats
+11 22
+11 33
+	11
+11
+22
+11
+Setup	Setup
+5 Setup cards
+“Piranhas!”	“Piranhas!”	
+“They can strip a cow to the bone in a minute flat.”	
+Roll a die and place the Piranhas! token in:
+	Everyone in the space loses . Whenever
+	anyone enters that space, they lose .	
+1-2: Lower River 3-4: Central River 5-6: Upper River	
+Event	Event
+10 Event cards
+ITEM	ITEM
+00
+bowie Knife	bowie Knife	
+“I call this one Pig Sticker.”
+If you have a Bowie Knife in each hand,
+	you may use both when attacking.
+18 Item cards1 Location board
+5 Various Tokens
+"Deep in the heart of South America lies a stretch of jungle where the air is oppressive like a thick,
+rotten blanket and the canopy seals out the sun so completely that the trees live in perpetual
+twilight. The undergrowth is tangled and wet, vines dangling like nooses, and the locals whisper
+of paths that shift and close behind them. Those who venture in too deep often vanish without a
+trace—no tracks, no remains, just an unsettling emptiness left in their place—feeding the legend
+that some terror in that suffocating green wilderness is watching, waiting, and choosing its prey."
+— From the introduction to A History of the Green Terror, by Dr. Archibald Schwartz
+Director (design): Evan Derrick Director of Photography (art): Agnieszka Dabrowiecka
+2 Action cards
+oror
+Train	Train
+2
+Unlock an Upgrade
+Unlock an Upgrade
+Lock an Upgrade
+“I'll whip you green pieces of shit into
+	shape if it's the last thing I do.”
+3
+3
+Action	Action
+1 Soldiers card
+Soldiers	Soldiers
+4 Action Upgrade Tokens
+Move 1 Space
+Move 1 Space
+Attack
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+4 Ability Upgrade Tokens
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+4 Action cubes
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1	No Friendly Fire
+Saving a Soldier does not cost Time
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+No Friendly Fire
+Saving a Soldier does not cost Time
+
+-- 1 of 4 --
+
+Special Setup
+* Place the Huey token in the Clearing space.
+* Place the Train Action cards into the Action Tableau.
+* Place the Soldiers card and the Action cubes next to
+the play area. Take the 8 Upgrade tokens and place
+them on the card. The 2 starting Upgrades (indicated
+with the 	icon) should be placed on their Unlocked
+side. The remaining 6 Upgrade tokens should be placed on
+their Locked side (indicated with the 	icon).
+SPECIAL rules
+THE SOLDIERS
+Every normal Victim is a Soldier, deployed to the conflict zone of Pesadilla Verde and eager to
+fight! They act like normal Victims for almost all game effects. Unlike normal Victims, Soldiers
+WILL follow you into the Killer's space and they can be given orders (see Ordering Soldiers).
+upgrades
+There are two types of Upgrades: Action Upgrades (indicated by tokens with blank squares)
+and Ability Upgrades (those without squares). At the beginning of the game, Soldiers only have
+access to two Action Upgrades: moving and attacking. However, the Train Action card can be
+used to Unlock additional Upgrades.
+When you Unlock an Upgrade, choose an Upgrade token and flip it from its Locked side 	to
+its Unlocked side. If a game effect tells you to Lock an Upgrade, flip it from its Unlocked side to
+its Locked side.
+There are 4 Action Upgrades, indicated by the tokens with
+blank squares:
+* Attack: You begin the game with one of these Unlocked
+and one Locked. Using this Action will allow a Soldier or group of Soldiers to attack
+Enemies in a space up to their range.
+* Move: You begin the game with one of these Unlocked and one Locked. Using this Action
+will allow a group of Soldiers to move 1 space.
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Attack
+Attack Range: 0
+= # of Soldiers/2, rounded DOWN
+Attack
+Attack Range: 0
+= # of Soldiers/2, rounded DOWN
+Attack
+Attack Range: 0
+= # of Soldiers/2, rounded DOWN
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+The Soldiers card and
+Upgrade tokens.
+An Action Upgrade token.
+Move 1 Space
+Move 1 Space
+Attack
+
+-- 2 of 4 --
+
+There are 4 Ability Upgrades, indicated by the tokens
+WITHOUT any squares:
+* Saving Soldiers: Soldiers are very stubborn and do
+not want to be “rescued.” They want to fight! At the start
+of the game it costs 2 	to save a Soldier. If Unlocked, you can save Soldiers for no time
+loss.
+* Friendly Fire: At the start of the game, your Soldiers are not very skilled. Whenever you use
+an Attack action, they will potentially shoot one another. Roll a die for each Soldier involved
+in the attack. On a roll of 1-2, you must kill one of the Soldiers involved in the attack. If
+Unlocked, there will no longer be any friendly fire when they attack.
+* Attack Range: At the start of the game, Soldiers can only attack their current space. If
+Unlocked, they can attack either their current space or an adjacent space.
+* Damage: At the start of the game, when Soldiers attack they do 	equal to the number
+of Soldiers divided by 2, rounded DOWN. This means that a single Soldier by itself cannot
+do any damage, and three Soldiers together can only do 1 	. If Unlocked, when
+Soldiers attack they will do 	equal to the number of Soldiers divided by 2, rounded UP.
+Now a single Soldier will do 1 	and three Soldiers together will do 2 	.
+Ordering Soldiers
+Soldiers can be ordered to take Actions during the Action phase as follows:
+* Select the space with the Soldier or Soldiers to be ordered.
+* Choose an Action Upgrade token (the tokens with blank squares) and place an Action
+cube on the leftmost space. An Action is not available if there’s already a cube in the row
+for that Action.
+* Resolve the Action for all Soldiers in that space.
+During the Upkeep phase, move all Action cubes one space to the right, removing them from
+the Action Upgrade token when they leave the last space. Once a cube has left the token it is
+available again to use.
+Note! The Archeologist and the Rebel Leader Special Victims are NOT considered
+Soldiers and cannot be ordered to take Actions!
+An Ability Upgrade token.
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+
+-- 3 of 4 --
+
+the huey
+The space with the Huey token is considered a 	space. When you are in the same space as the Huey,
+you can save any number of Victims there. Then, remove the Huey token from the board, revealing the
+Clearing, which is not a 	space. Unless a game effect returns the Huey token to the board, you will
+not be able to use it to save Victims again.
+the River
+There are four River spaces on the board: the Waterfall, the Upper
+River, the Central River, and the Lower River. When moving
+downriver (following the arrows), you can move to any space on
+the River with a movement of 1 space . For example, if you’re at the
+Waterfall and resolve a Walk Action card with a single success,
+you could move all the way to the Lower River if you wished. When
+moving from one River space to a non-adjacent River space, you are
+considered to be passing through all spaces in between and must
+resolve any effects on those spaces.
+River movement also applies to Soldiers but not to Enemies. In other words, when ordering Soldiers
+to move on the river, they may move across multiple River spaces for 1 space of movement. Enemies,
+however, can only move downriver to an adjacent River space.
+No one (you, Victims, or Enemies) can move upriver against the direction of the arrows. However, the
+space upriver is still considered adjacent.
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Attack
+Attack Range: 0
+= # of Soldiers/2, rounded DOWN
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Friendly Fire: 1-2
+Saving a Soldier costs 2
+Attack
+Attack Range: 0
+= # of Soldiers/2, rounded DOWN
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Attack
+= # of Soldiers/2, rounded UP
+Attack Range: 0-1
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+Move 1 Space
+Move 1 Space
+Attack
+Mike wants to order a group of three Soldiers to
+attack the Killer. Their Range ability is still locked,
+however, so he'll have to move them one space into
+the Upper River. While one of his Attack actions
+is unavailable (he used it on a previous turn) and
+he hasn't unlocked his second Move action, he
+fortunately has one Move and one Attack action free.
+He places an Action cube onto the free Move action
+and moves the Soldiers one space. Then, he places
+a second Action cube onto the free Attack action.
+Because he unlocked the Damage ability, the Sol-
+diers do 	to the Killer. Then, because Mike
+hasn't unlocked the Friendly Fire ability, he has to
+roll three dice, one for each Soldier. Fortunately he
+rolls a 3, 5, and 6; the Soldiers do not inadvertently
+shoot one another (this time).
+You can move from the Water-
+fall to the Upper River (with
+the arrow), but not in the other
+direction (against the arrow).
+
+-- 4 of 4 --
+

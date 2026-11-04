@@ -33,6 +33,15 @@ const KILLER_ID_MAP = {
   tormentor: 'the_tormentor',
   eyeless: 'the_eyeless',
   destiny: 'destiny',
+  // Series 4
+  grimlash: 'grimlash',
+  berith: 'berith_the_fallen_angel',
+  billy: 'billy_the_bear',
+  volkar: 'the_volk_ar',
+  raptors: 'raptors',
+  // Special Features
+  mort: 'mort_the_teenage_dirtbag',
+  krampus: 'krampus',
 };
 
 // App location id -> card-file location id.
@@ -52,6 +61,15 @@ const LOCATION_ID_MAP = {
   falconwood: 'falconwood',
   'marrek-warehouse': 'marrek_warehouse',
   utopia: 'utopia',
+  // Series 4
+  'shady-acres': 'shady_acres',
+  'larmes-abbey': 'l_armes_abbey',
+  buddyland: 'buddyland',
+  'pesadilla-verde': 'pesadilla_verde',
+  'isla-lagarto': 'isla_lagarto',
+  // Special Features
+  megabgcon: 'megabgcon',
+  'santas-village': 'santa_s_village',
 };
 
 // Index the card-file collections by their own id for O(1) lookup.

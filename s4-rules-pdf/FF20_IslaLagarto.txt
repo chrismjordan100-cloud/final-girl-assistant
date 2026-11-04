@@ -1,0 +1,191 @@
+Components
+"Holy Mosasaurus!"	"Holy Mosasaurus!"
+The space with the most Victims and/or	
+Enemies gets attacked by a Mosasaurus and
+	everyone in that space takes .
+If you did not take damage and
+	no Victims were killed, .
+8 Terror cards
+Let the games begin!	Let the games begin!
+22
+11 22
+	22
+11
+11 11
+22	
+Setup	Setup
+5 Setup cards
+Power Surge	Power Surge	
+“Now what!!?”
+Place all Electric Fence markers on the
+	board. Do not roll the Electric Fence die
+	during the next Upkeep phase.	
+Discard this card at the end of the next Upkeep phase.
+Event	Event
+10 Event cards
+ITEM	ITEM
+Tranquilizer Gun	Tranquilizer Gun	
+“It’s nap time you bastards!”
+Use anytime to deal 1	
+to an Enemy in an adjacent
+	space. If the Enemy was
+	moving, end its movement.
+16 Item cards
+1 Location board
+An island of prehistoric proportions. Let the games begin!
+Director (design): Byron Jorjorian and AJ Porfirio Director of Photography (art): Tyler Johnson
+Board and Item Art: Agnieszka Dabrowiecka
+1 T-Rex card
+22	T-RexT-Rex KillKill Priority:Priority:
+When the T-Rex reaches the Break
+	Out! space, place it at the Dino Pen and
+	place the T-Rex Action token below the	
+Killer Action on the Finale card.
+	Start Break
+Out!
+t-rex	t-rex
+Lava	Lava
+Everyone at the North Beach takes .
+	Everyone left in this space panics
+	until they leave the space.
+	Place the North Beach Lava token.
+3 Lava cards
+1 T-Rex meeple
+1 T-Rex Action
+token
+3 Electric Fence markers
+4 Lava tokens
+6 various tokens
+1 Electric Fence die
+KILLKILL
+11
+Electric Fence
+Marker
+WIDTH: 30mm
+HEIGHT: 14.5mm
+Depth: 7mm
+Pantone: 432 C 	Bars: White Lightning: Pantone 3955C
+C
+M
+Y
+CM
+MY
+CY
+CMY
+K
+FF20_IslaLagarto_ElectricFenceToken_v1_12-23-25.pdf 1 12/26/25 3:15 PM
+T-Rex Meeple
+WIDTH: 34mm
+HEIGHT: 24mm
+Depth: 10mm
+Pantone: 463 C
+C
+M
+Y
+CM
+MY
+CY
+CMY
+K
+FF20_IslaLagarto_TRexMeeple_v1_12-23-25.pdf 1 12/26/25 3:37 PM
+
+-- 1 of 4 --
+
+Special Setup
+* Place Electric Fence markers in the green sections
+indicated on the Setup card. Do not place Electric Fence
+markers in the red sections.
+* Shuffle the 3 Lava cards and create a facedown deck.
+Place the Lava tokens next to the deck.
+* Place the T-Rex card near the play area and place the
+T-Rex meeple on the start space.
+SPECIAL rules
+Electric Fences
+The power to each electric fence fluctuates to keep the games exciting!
+There are three Electric Fences (A, B, and C).
+While an Electric Fence marker is present, movement on the path is blocked and the spaces on
+either side of the fence are NOT considered adjacent.
+* Panic - if anyone panics in a direction blocked by a fence, they simply stay in their current
+space.
+* Farthest/Closest – when determining distance to a space or target, only use paths that are
+not blocked by Electric Fence markers. If all markers are on the board and the only space
+or target is on the other side of the fences, determine distance as if there were no Electric
+Fence markers.
+* Enemy Targeting – if there is no unblocked path between an Enemy and its target, then
+the Enemy will not move as part of that action. Attack icons will still be resolved in the
+Enemy’s space.
+* Placing someone – effects that place someone are not affected by fences.
+During each Upkeep phase, the fence power fluctuates. Roll the Electric Fence die to determine
+which fence is affected. If there’s an Electric Fence marker already there, remove it from the
+board. If there isn’t an Electric Fence marker there, place one.
+Let the games begin!	Let the games begin!
+22
+11 	22
+22
+11
+11 	11
+22
+For example, if this was the
+Setup card drawn, you would
+place an Electric Fence marker
+on section A and Section C.
+Section B would remain empty.
+
+-- 2 of 4 --
+
+T-Rex
+The T-Rex begins the game secured in the Dino Pen but it may eventually break free!
+When you see the 	icon, move the T-Rex meeple one space to the right on the T-Rex card.
+When the T-Rex reaches the “Break out!” space, place the T-Rex meeple on the board in the Dino
+Pen, and place the T-Rex Action token below the Killer Action on the Finale card. Ignore any
+subsequent 	icons as the T-Rex is now in play.
+The T-Rex is NOT considered a Killer or a Minion and cannot be attacked, damaged, or killed. After
+resolving the Minion and Killer Actions on the Finale card, resolve the T-Rex Action.
+Victims will not follow you into the T-Rex’s space (unless there is an effect that allows them to
+follow you into the Killer’s space). During the Panic phase, everyone in the T-Rex’s space panics,
+regardless of whether or not a Victim was killed that turn.
+Moving
+The T-Rex's Movement Value is on the T-Rex card (it's a 2). While moving, the 	icon means
+the T-Rex will stop moving as soon as it reaches a space with ANYONE (e.g. you, Victims,
+Enemies, etc.). It will also NOT move if anyone is in its starting space.
+Killing
+The T-Rex doesn't attack like a normal Enemy. Instead of doing
+damage, the T-Rex instantly KILLS one target in its space! If there
+are multiple targets, it will kill ONE of them using the following
+priority: Victim; Minion; You; Killer. If you
+or the Killer were attacked by the T-Rex,
+you (or they) are instantly killed; do not
+reveal any Final Health
+tokens.
+22	T-Rex	T-Rex Kill	Kill Priority:	Priority:
+When the T-Rex reaches the Break
+Out! space, place it at the Dino Pen a
+place the T-Rex Action token below t
+Killer Action on the Finale card.
+Start 	Brea
+Out
+Note! For Enemies made up of multiple
+coordinated units (i.e. Raptor Pack, Zombie
+Horde, etc) the T-Rex kills ONE unit, which is
+equivalent to dealing 1 damage to that Enemy.
+
+-- 3 of 4 --
+
+Volcano
+The first time you resolve a 	icon, the volcano erupts! Follow these steps:
+1. 	Everyone at the Volcano takes 	.
+2. 	Anyone left in the space panics.
+3. 	Place the Volcano Lava token in that space on the board. It is no longer accessible to
+anyone!
+When you resolve subsequent 	icons, the lava from the volcano will spread to an adjacent
+space. Draw a Lava card to determine which space and follow the instructions on the card.
+After all 4 Lava tokens are on the board, ignore any subsequent 	icons. Spaces with Lava
+tokens are no longer accessible to anyone.
+Special Spaces
+The 3 spaces at the corners of the Location board marked with this icon 	are Beach spaces
+(some card effects will refer to these spaces).
+The 2 spaces at the edges of the Location board marked with this icon 	are Cliff spaces
+(some card effects will refer to these spaces).
+
+-- 4 of 4 --
+
