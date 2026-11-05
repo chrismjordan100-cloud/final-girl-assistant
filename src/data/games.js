@@ -2861,6 +2861,16 @@ export function getFinalGirlCards(entry) {
   };
 }
 
+/* Card-image completeness for a Final Girl, for the Setup picker dot:
+     'both' = front AND back present (no dot)
+     'one'  = exactly one present (amber dot)
+     'none' = neither present (red dot) */
+export function finalGirlCardStatus(entry) {
+  const { front, back } = getFinalGirlCards(entry);
+  const n = (front ? 1 : 0) + (back ? 1 : 0);
+  return n === 2 ? 'both' : n === 1 ? 'one' : 'none';
+}
+
 /* --------------------------------------------------------------------------
    SCENARIO GRAPHIC — the big title image for a named official scenario, or
    for a vignette (killer-only, any Location). Shown at the top of This Game

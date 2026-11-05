@@ -80,6 +80,13 @@ export default function IconSelect({
         <span className="iconselect__icon iconselect__icon--empty" aria-hidden="true" />
       )}
       <span className="iconselect__name">{o.name}</span>
+      {(o.dot === 'one' || o.dot === 'none') && (
+        <span
+          className={'iconselect__dot iconselect__dot--' + o.dot}
+          title={o.dot === 'one' ? 'Only one card face added (front or back)' : 'No card images added'}
+          aria-hidden="true"
+        />
+      )}
       {o.note && <span className="iconselect__note">{o.note}</span>}
     </li>
   );

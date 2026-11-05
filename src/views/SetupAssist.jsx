@@ -10,6 +10,7 @@ import {
   changesItemDecks,
   getIcon,
   getOfficialFinalGirls,
+  finalGirlCardStatus,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import IconSelect from '../components/IconSelect.jsx';
@@ -277,7 +278,7 @@ export default function SetupAssist({ onNavigate }) {
                               value={finalGirlId || ''}
                               onChange={setFinalGirl}
                               options={finalGirlGroups.flatMap(([group, girls]) =>
-                                girls.map((g) => ({ id: g.id, name: g.name, group }))
+                                girls.map((g) => ({ id: g.id, name: g.name, group, dot: finalGirlCardStatus(g) }))
                               )}
                             />
                           </div>

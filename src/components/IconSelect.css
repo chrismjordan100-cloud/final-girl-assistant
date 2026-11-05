@@ -31,6 +31,17 @@
 }
 .iconselect__caret { flex: none; font-size: 0.6rem; color: var(--text-dim); }
 
+/* Card-image status dot (Final Girl picker): amber = one face, red = none. */
+.iconselect__dot {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  margin-left: 0.4rem;
+}
+.iconselect__dot--one { background: var(--fg-gold); }
+.iconselect__dot--none { background: var(--fg-blood-bright); }
+
 .iconselect__icon {
   flex: none;
   width: 1.6rem;
