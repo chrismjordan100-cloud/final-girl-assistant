@@ -151,3 +151,84 @@
   font-style: italic;
   color: var(--text-dim);
 }
+
+/* ===== AI answers (Tier 2) ===== */
+
+/* Controls row: settings toggle sits to the right of the scope control. */
+.ask-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
+.ask-settings-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.ask-settings-toggle:hover { border-color: var(--fg-blood); color: var(--text); }
+
+.ask-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--fg-blood-bright);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}
+
+.ask-suggest__ai { margin-top: 1rem; font-size: 0.86rem; }
+
+/* Settings panel */
+.ask-settings { padding: 1.1rem 1.2rem; margin-bottom: 1.25rem; }
+.ask-settings__title { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.ask-settings__blurb { font-size: 0.84rem; line-height: 1.5; margin: 0 0 0.9rem; max-width: 65ch; }
+.ask-settings__field { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.7rem; font-size: 0.8rem; }
+.ask-settings__field > span:first-child { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); }
+.ask-settings__field input {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+.ask-settings__keyrow { display: flex; gap: 0.5rem; }
+.ask-settings__keyrow input { flex: 1 1 auto; }
+.ask-settings__show { flex: none; }
+.ask-settings__btns { display: flex; gap: 0.5rem; margin-top: 0.3rem; flex-wrap: wrap; }
+.ask-settings__clear { margin-left: auto; color: var(--fg-blood-bright); border-color: var(--fg-blood); }
+.ask-settings__help { margin-top: 1rem; font-size: 0.84rem; }
+.ask-settings__help summary { cursor: pointer; color: var(--fg-gold); font-family: var(--font-display); }
+.ask-settings__help ol { margin: 0.6rem 0; padding-left: 1.3rem; line-height: 1.6; }
+.ask-settings__help li { margin-bottom: 0.3rem; }
+.ask-settings__help code { background: var(--fg-black-2); padding: 0.05em 0.35em; border-radius: 3px; }
+
+/* The AI answer block, sitting above the source passages */
+.ask-ai {
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--fg-gold);
+}
+.ask-ai__head { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.5rem; }
+.ask-ai__badge {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  color: var(--fg-black, #111);
+  background: var(--fg-gold);
+  padding: 0.18em 0.6em;
+  border-radius: 999px;
+}
+.ask-ai__model { font-size: 0.72rem; }
+.ask-ai__loading { margin: 0.3rem 0; color: var(--text-dim); font-style: italic; }
+.ask-ai__error { margin: 0.3rem 0; color: var(--fg-blood-bright); font-size: 0.9rem; }
+.ask-ai__body { margin: 0.2rem 0 0.6rem; }
+.ask-ai__body p { margin: 0 0 0.6rem; line-height: 1.55; }
+.ask-ai__body p:last-child { margin-bottom: 0; }
+.ask-ai__disclaimer { margin: 0.4rem 0 0; font-size: 0.76rem; color: var(--text-dim); line-height: 1.45; }
