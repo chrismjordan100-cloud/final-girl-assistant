@@ -77,24 +77,49 @@ export async function askAI(question, results, { killerName, locationName, signa
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(
     model
   )}:generateContent?key=${encodeURIComponent(key)}`;
+  const requestBody = JSON.stringify({
+    contents: [{ role: 'user', parts: [{ text: userText }] }],
+    generationConfig: { temperature: 0.2, maxOutputTokens: 600 },
+  });
 
-  let res;
-  try {
-    res = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts: [{ text: userText }] }],
-        generationConfig: { temperature: 0.2, maxOutputTokens: 600 },
-      }),
+  const sleep = (ms) =>
+    new Promise((resolve, reject) => {
+      const id = setTimeout(resolve, ms);
+      if (signal) {
+        signal.addEventListener('abort', () => {
+          clearTimeout(id);
+          reject(new DOMException('Aborted', 'AbortError'));
+        }, { once: true });
+      }
     });
-  } catch (e) {
-    if (e.name === 'AbortError') throw e;
-    throw new Error('Could not reach the AI service. Check your connection and try again.');
-  }
 
-  if (!res.ok) {
+  // Google returns 503 (model overloaded) and 429 (rate spike) transiently.
+  // Auto-retry those a few times with backoff before surfacing an error, so a
+  // momentary spike doesn't make the user click Retry by hand.
+  const MAX_ATTEMPTS = 3;
+  let res;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal,
+        body: requestBody,
+      });
+    } catch (e) {
+      if (e.name === 'AbortError') throw e;
+      throw new Error('Could not reach the AI service. Check your connection and try again.');
+    }
+    if (res.ok) break;
+
+    const transient = res.status === 503 || res.status === 429;
+    if (transient && attempt < MAX_ATTEMPTS) {
+      // 0.8s, then 1.6s — short enough to stay responsive.
+      await sleep(800 * attempt);
+      continue;
+    }
+
+    // Not retryable, or out of attempts — build a helpful message.
     let detail = '';
     try {
       const j = await res.json();
@@ -113,8 +138,13 @@ export async function askAI(question, results, { killerName, locationName, signa
         `The model "${model}" was not found. Google retires model names over time — open AI settings and set the Model field to a current one (e.g. a "gemini-...-flash" listed in Google AI Studio).`
       );
     }
+    if (res.status === 503) {
+      throw new Error(
+        `The model "${model}" is overloaded right now (tried ${MAX_ATTEMPTS} times). This is temporary on Google's side — wait a moment and press Retry, or switch to a lighter model (e.g. a "-flash-lite" variant) in AI settings.`
+      );
+    }
     if (res.status === 429) {
-      throw new Error('Rate limit reached for your key — wait a moment and try again.');
+      throw new Error('Rate limit reached for your key \u2014 wait a moment and try again.');
     }
     throw new Error(`AI request failed (${res.status})${detail ? ': ' + detail : ''}.`);
   }
