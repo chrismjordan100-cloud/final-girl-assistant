@@ -257,6 +257,14 @@ export default function SetupAssist({ onNavigate }) {
                           <span>Playing Extreme Horror Mode (the Turn Tracker gives you 5 Time per turn)</span>
                         </label>
                       )}
+                      {step.id === 's6' && (
+                        <p className="callout setup-step__tip setup-step__signature">
+                          <strong>Optional (Box of Props):</strong> add ONE Signature Action card to
+                          the Tableau as an extra card you can buy &mdash; choose one or pick at
+                          random. It behaves like any Action card. See &ldquo;Signature Action
+                          cards&rdquo; in Rules Reference &rarr; Add-ons.
+                        </p>
+                      )}
                       {step.id === 's12' && <SetupCapture only="setup" />}
                       {step.id === 's18' && <SetupCapture only="event-start" />}
                       {step.id === 's2' && (

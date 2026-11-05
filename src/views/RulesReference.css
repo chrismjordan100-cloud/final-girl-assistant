@@ -140,6 +140,24 @@
   letter-spacing: 0.04em;
 }
 
+/* Confidence badge on add-on topics */
+.rule-topic__conf {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.6rem;
+  padding: 0.12em 0.55em;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.rule-topic__conf--official { border-color: var(--fg-sick-green); color: var(--fg-sick-green); }
+.rule-topic__conf--wiki { border-color: var(--border-strong); color: var(--text-dim); }
+.rule-topic__conf--provisional { border-color: var(--fg-gold); color: var(--fg-gold); }
+.rule-topic__conf--unknown { border-color: var(--fg-blood-bright); color: var(--fg-blood-bright); }
+.rule-topic__source { margin: 0 0 0.4rem; font-size: 0.74rem; color: var(--text-dim); font-style: italic; }
+
 .rule-topic { overflow: hidden; }
 .rule-topic__head {
   width: 100%;

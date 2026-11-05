@@ -21,7 +21,16 @@ function matches(topic, q) {
   return hay.includes(q);
 }
 
+// Confidence badge wording + style for add-on topics (core topics have none).
+const CONFIDENCE_META = {
+  official: { label: 'Official', cls: 'official' },
+  wiki: { label: 'From the wiki', cls: 'wiki' },
+  'fan-source': { label: 'Provisional \u2013 check your card', cls: 'provisional' },
+  unknown: { label: 'Card text not yet captured', cls: 'unknown' },
+};
+
 function RuleTopic({ topic, open, onToggle }) {
+  const conf = topic.confidence ? CONFIDENCE_META[topic.confidence] : null;
   return (
     <article className="rule-topic fg-panel">
       <button
@@ -32,12 +41,16 @@ function RuleTopic({ topic, open, onToggle }) {
         <span className="rule-topic__titlewrap">
           <span className="rule-topic__title">{topic.title}</span>
           {topic.page && <span className="rule-topic__page">{topic.page}</span>}
+          {conf && <span className={'rule-topic__conf rule-topic__conf--' + conf.cls}>{conf.label}</span>}
         </span>
         <span className="rule-topic__toggle" aria-hidden="true">{open ? '\u2212' : '+'}</span>
       </button>
       {open && (
         <div className="rule-topic__body">
           <p>{topic.body}</p>
+          {topic.source && (
+            <p className="rule-topic__source fg-type">Source: {topic.source}</p>
+          )}
           <div className="cluster">
             {topic.tags.map((t) => (
               <span key={t} className="fg-tag">{t}</span>
