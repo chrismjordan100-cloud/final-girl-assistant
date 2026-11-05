@@ -2,9 +2,20 @@ import { useMemo, useState } from 'react';
 import { useGameLog, aggregateMistakes } from '../hooks/useGameLog.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { getKiller, getLocation } from '../data/games.js';
+import { gamePhotoUrl, gamePhotoFileName, GAME_PHOTO_FOLDER } from '../lib/gamePhotos.js';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import { StatCard, StatCardGrid } from '../components/StatCards.jsx';
 import './Debrief.css';
+
+// Rough "is this a desktop?" check — upload of board photos is a PC job.
+const IS_DESKTOP =
+  typeof window !== 'undefined' &&
+  window.matchMedia &&
+  window.matchMedia('(pointer: fine)').matches;
+
+function comboLabel(g) {
+  return [g.finalGirlName, g.killerName, g.locationName].filter(Boolean).join(' \u00b7 ') || 'your last game';
+}
 
 function formatDate(iso) {
   if (!iso) return '';
@@ -47,6 +58,15 @@ export default function Debrief() {
 
   const groups = useMemo(() => aggregateMistakes(scopedLog), [scopedLog]);
   const shown = filter === 'all' ? groups : groups.filter((g) => g.type === filter);
+
+  // Most recent real game and whether its board photo has been added yet. Used
+  // for the "add a board photo" reminder (the photo is uploaded on the PC and
+  // committed like any asset; see src/lib/gamePhotos.js).
+  const latestGame = useMemo(() => log.find((g) => !g.isTest) || null, [log]);
+  const latestPhotoUrl = latestGame ? gamePhotoUrl(latestGame) : null;
+  const latestPhotoFile = latestGame ? latestGame.photoFile || gamePhotoFileName(latestGame.id) : null;
+  const [reminderDismissed, setReminderDismissed] = useState(false);
+  const showPhotoReminder = Boolean(latestGame && !latestPhotoUrl && !reminderDismissed);
 
   const totalLogged = groups.reduce((n, g) => n + g.count, 0);
   const recurring = groups.filter((g) => g.count > 1);
@@ -105,6 +125,32 @@ export default function Debrief() {
           the top. Fix the recurring ones and your win rate follows.
         </p>
       </div>
+
+      {showPhotoReminder && (
+        <div className="db-photo-reminder fg-panel" role="note">
+          <button
+            className="db-photo-reminder__close"
+            onClick={() => setReminderDismissed(true)}
+            aria-label="Dismiss photo reminder"
+          >
+            &times;
+          </button>
+          <span className="db-photo-reminder__icon" aria-hidden="true">&#128247;</span>
+          <div className="db-photo-reminder__body">
+            <h2 className="db-photo-reminder__title">Add a photo of the final board</h2>
+            <p className="db-photo-reminder__text fg-type">
+              Build your visual diary for <strong>{comboLabel(latestGame)}</strong>.
+              {IS_DESKTOP
+                ? ' On this PC, save your board photo into the game-photos folder using the filename below, then it appears in the Game Log on every device.'
+                : ' Photos are added on the PC app (not the phone). When you\u2019re next at the PC, save your board photo using the filename below.'}
+            </p>
+            <p className="db-photo-reminder__file">
+              Save as: <code>{latestPhotoFile}</code>
+              <span className="db-photo-reminder__folder fg-type"> in <code>{GAME_PHOTO_FOLDER}</code></span>
+            </p>
+          </div>
+        </div>
+      )}
 
       <div className="db-scope">
         {hasSelection ? (

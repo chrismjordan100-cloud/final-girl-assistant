@@ -213,8 +213,13 @@ export function useGameLog() {
   const endGame = useCallback((result) => {
     const current = readActive();
     const isTest = Boolean(current?.isTest);
+    const id = `g-${Date.now()}`;
     const entry = {
-      id: `g-${Date.now()}`,
+      id,
+      // Expected board-photo filename for the visual diary. You save the photo
+      // into src/assets/game-photos/ under this name on the PC; it then shows in
+      // the Game Log detail on all devices. See src/lib/gamePhotos.js.
+      photoFile: `game-${id}.png`,
       isTest,
       finalGirlId: current?.finalGirlId || null,
       killerId: current?.killerId || null,

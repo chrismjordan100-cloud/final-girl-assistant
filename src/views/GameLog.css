@@ -251,6 +251,40 @@
 }
 .gd__toolbar { display: flex; justify-content: flex-end; margin-bottom: 0.7rem; }
 
+/* Board photo (visual diary) */
+.gd__photo { margin: 0 0 1rem; }
+.gd__photo img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+}
+.gd__photo-cap {
+  margin: 0.3rem 0 0;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+.gd__photo-missing {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  background: var(--fg-black-2);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
+.gd__photo-missing code {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.05em 0.35em;
+  border-radius: 3px;
+}
+
 .gd__summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

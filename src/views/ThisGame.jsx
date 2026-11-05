@@ -368,7 +368,18 @@ export default function ThisGame({ onNavigate }) {
           )}
 
           {savedMsg && (
-            <p className="tg-saved" role="status">Game recorded to the Game Log.</p>
+            <div className="tg-saved fg-panel" role="status">
+              <p className="tg-saved__msg">Game recorded to the Game Log.</p>
+              <p className="tg-saved__next fg-type">
+                Head to the <strong>Debrief</strong> to review how it went &mdash; and it&rsquo;ll
+                remind you to add a photo of the final board (done on the PC).
+              </p>
+              {onNavigate && (
+                <button className="fg-btn fg-btn--primary" onClick={() => onNavigate('debrief')}>
+                  Go to Debrief &rarr;
+                </button>
+              )}
+            </div>
           )}
 
           {active && (

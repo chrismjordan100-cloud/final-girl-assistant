@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { deriveSummary, groupByTurn } from '../lib/gameSummary.js';
 import { narrateGame } from '../lib/narrateGame.js';
+import { gamePhotoUrl, gamePhotoFileName, GAME_PHOTO_FOLDER } from '../lib/gamePhotos.js';
 
 /* Expandable detail + edit for one logged game. Shows the full turn-by-turn
    event timeline, summary tallies, achievements, mistakes and notes; and an
@@ -205,11 +206,28 @@ export default function GameDetail({ entry, onUpdate }) {
     s.darkPowers?.length || s.finale || s.weapons?.length || s.terror?.length ||
     s.events?.length || s.setup || s.startingEvent;
 
+  const photoUrl = gamePhotoUrl(entry);
+  const photoFile = entry.photoFile || gamePhotoFileName(entry.id);
+
   return (
     <div className="gd">
       <div className="gd__toolbar">
         {onUpdate && <button className="fg-btn fg-btn--small" onClick={() => setEditing(true)}>Edit details</button>}
       </div>
+
+      {photoUrl ? (
+        <figure className="gd__photo">
+          <a href={photoUrl} target="_blank" rel="noreferrer" title="Open the full photo">
+            <img src={photoUrl} alt="Photo of the final board for this game" loading="lazy" />
+          </a>
+          <figcaption className="gd__photo-cap fg-type">Final board</figcaption>
+        </figure>
+      ) : (
+        <p className="gd__photo-missing fg-type">
+          &#128247; No board photo yet. On the PC, save one as <code>{photoFile}</code> in{' '}
+          <code>{GAME_PHOTO_FOLDER}</code>, then commit &amp; push &mdash; it&rsquo;ll show here on all devices.
+        </p>
+      )}
 
       {hasEvents && (
         <div className="gd__story">

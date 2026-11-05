@@ -225,3 +225,39 @@
 .db-scope__toggle input { accent-color: var(--fg-blood); }
 .db-scope__game { font-size: 0.82rem; }
 .db-scope__none { font-size: 0.85rem; }
+
+/* Board-photo reminder (shown until the latest game's photo is added) */
+.db-photo-reminder {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--fg-gold);
+}
+.db-photo-reminder__icon { font-size: 1.6rem; line-height: 1; flex: none; }
+.db-photo-reminder__body { min-width: 0; }
+.db-photo-reminder__title { margin: 0 0 0.3rem; font-size: 1.05rem; }
+.db-photo-reminder__text { margin: 0 0 0.5rem; font-size: 0.86rem; line-height: 1.5; max-width: 62ch; }
+.db-photo-reminder__file { margin: 0; font-size: 0.86rem; }
+.db-photo-reminder__file code {
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.82rem;
+}
+.db-photo-reminder__folder { margin-left: 0.3rem; }
+.db-photo-reminder__close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.db-photo-reminder__close:hover { color: var(--text); }
