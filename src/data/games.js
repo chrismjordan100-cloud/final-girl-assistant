@@ -1,3 +1,4 @@
+import { communityKillerTips, communityLocationTips, communityGeneralTips } from './communityTips.js';
 /* ==========================================================================
    Final Girl — Killers & Locations (for the "This Game" feature)
    Season 1 Feature Films. Extra rules are shown as page images supplied by
@@ -2011,6 +2012,15 @@ export const locationTips = {
     tip('Maureen and Adrianne need saved victims to work. The reviewer would avoid using them at Station 2891.', 'Dude Take Your Turn \u00b7 Shriek review'),
   ],
 };
+
+// Merge in the community tips from finalgirlstats.com (see communityTips.js).
+for (const [id, items] of Object.entries(communityKillerTips)) {
+  killerTips[id] = (killerTips[id] || []).concat(items);
+}
+for (const [id, items] of Object.entries(communityLocationTips)) {
+  locationTips[id] = (locationTips[id] || []).concat(items);
+}
+generalTips.push(...communityGeneralTips);
 
 /** Normalise a tip to the { text, source, confidence } object shape. */
 export function normaliseTip(t) {
