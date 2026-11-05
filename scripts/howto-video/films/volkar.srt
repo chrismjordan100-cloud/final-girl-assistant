@@ -1,0 +1,144 @@
+1
+00:00:00,300 --> 00:00:03,969
+The Volk'ar: an alien hunter, cloaked and invisible, stalking the jungle.
+
+2
+00:00:04,189 --> 00:00:05,491
+Here's how she plays.
+
+3
+00:00:06,300 --> 00:00:10,467
+Add the two Track cards to your Action Tableau, and put the Attack Resolution card
+
+4
+00:00:10,467 --> 00:00:11,889
+and tokens beside the board.
+
+5
+00:00:12,109 --> 00:00:14,861
+Shuffle the Movement deck and deal one card face down.
+
+6
+00:00:15,081 --> 00:00:18,324
+Her meeple doesn't go on the board. It sits on the Finale card.
+
+7
+00:00:18,544 --> 00:00:20,714
+One Origin marker goes where she'd start;
+
+8
+00:00:20,714 --> 00:00:22,725
+the other goes on that face-down card.
+
+9
+00:00:23,533 --> 00:00:26,728
+She has no Movement Value. For most of the game she's Concealed:
+
+10
+00:00:26,728 --> 00:00:28,824
+always on the board somewhere, but hidden.
+
+11
+00:00:29,044 --> 00:00:33,193
+If she's Concealed at the start of the Killer phase, resolve the upper Killer Action
+
+12
+00:00:33,193 --> 00:00:35,465
+on the Finale card. If Visible, the lower one.
+
+13
+00:00:36,300 --> 00:00:38,625
+Her route is a hidden Path of Movement cards.
+
+14
+00:00:38,845 --> 00:00:43,475
+An open eye icon adds a card face up. A crossed-out eye adds one face down.
+
+15
+00:00:43,695 --> 00:00:47,849
+If she was Visible, she vanishes again: the Origin markers go on the new card and
+
+16
+00:00:47,849 --> 00:00:48,772
+her current space.
+
+17
+00:00:49,600 --> 00:00:53,776
+She breaks cover when you resolve the Reveal icon, when a sixth Movement card joins
+
+18
+00:00:53,776 --> 00:00:56,341
+the Path, or when an attack on her would do damage.
+
+19
+00:00:56,561 --> 00:01:00,693
+Place her on the Origin space, then play out each card in order, moving her, and
+
+20
+00:01:00,693 --> 00:01:03,431
+attacking wherever a card shows a Killer Action line.
+
+21
+00:01:04,267 --> 00:01:07,176
+The Track action card lets you flip Movement cards over.
+
+22
+00:01:07,176 --> 00:01:10,709
+If every card in the Path is face up, you know exactly where she is.
+
+23
+00:01:10,929 --> 00:01:13,788
+And you're never allowed to look through the discarded Movement cards.
+
+24
+00:01:14,600 --> 00:01:16,656
+You can attack a space you think she's in.
+
+25
+00:01:16,656 --> 00:01:20,573
+Place the Attack token, roll, and park the damage on the Attack Resolution card.
+
+26
+00:01:20,793 --> 00:01:24,911
+Any damage makes her Path resolve. If she ends on your target, the damage lands.
+
+27
+00:01:25,131 --> 00:01:29,184
+If not, she ambushes you. Take the Ambush Penalty on the last Movement card.
+
+28
+00:01:30,000 --> 00:01:34,165
+While she's Concealed, anything measured from the Killer uses the Origin space, and
+
+29
+00:01:34,165 --> 00:01:36,272
+effects that place the Killer are ignored.
+
+30
+00:01:36,492 --> 00:01:40,097
+Killer Action lines count as a crossed eye, and Victims don't panic.
+
+31
+00:01:40,933 --> 00:01:44,150
+A few tips. Use Track to flip cards before a blind attack:
+
+32
+00:01:44,150 --> 00:01:46,203
+every face-up card narrows the guess.
+
+33
+00:01:46,423 --> 00:01:49,089
+Strike while the Path is short, when she can't have gone far.
+
+34
+00:01:49,309 --> 00:01:53,139
+She's very beatable: about three wins in four on Final Girl Stats.
+
+35
+00:01:53,139 --> 00:01:55,517
+But Self Destruct is her toughest Finale.
+
+36
+00:01:55,737 --> 00:01:57,849
+Keep the rule sheet handy, and good hunting.
+

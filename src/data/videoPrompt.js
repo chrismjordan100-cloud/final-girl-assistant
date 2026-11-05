@@ -1,0 +1,25 @@
+/* The prompt to give Claude each time a new How-to-play video is wanted.
+   Shown (with a Copy button) in Asset Admin → Training videos, and kept in
+   VIDEO-PROMPT.md at the project root. Replace the [square brackets] first. */
+export const VIDEO_PROMPT = `Make a How-to-play video for the Final Girl [Killer / Location] "[NAME]" (Series [N], [FEATURE FILM]) for my Final Girl Rule Assistant, in exactly the same format as the Volk'ar and Pesadilla Verde videos.
+
+1. Work in the GitHub repo chrismjordan100-cloud/final-girl-assistant and push to main yourself when done. Don't hand me commands to run.
+
+2. Use the existing builder, unchanged: run scripts/howto-video/setup.sh, then copy scripts/howto-video/films/volkar.py (for a Killer) or scripts/howto-video/films/pesadilla-verde.py (for a Location) to scripts/howto-video/films/[shortName].py, taking the season and shortName from src/data/games.js. Don't edit build.py: it fixes the house style (voice, layout, fonts, colours, subtitles, length limit).
+
+3. Rules: take them from the rule-sheet pages in src/assets/games/S[season]-[killer|location]-[shortName]-1.png, -2.png… (and any matching text in the s[season]-rules-pdf folder), cross-checked against the rulespal.com rulebook for that film.
+
+4. Graphics: only from the tracker: the -art and -flavour images, crops of the rule-sheet pages, token icons in src/assets/icons/ and src/assets/icons/rules/, and setup cards in src/assets/cards/. No images from the web.
+
+5. Structure, in this order:
+   - Intro: flavour + key art, a one-line hook, then "Here's how she/he/it plays."
+   - Special setup.
+   - 4 to 6 scenes on the special rules, in the order you meet them in play.
+   - A Tips scene with 3 or 4 tips. Use the tips already in src/data/communityTips.js and src/data/games.js for this entry first. In your reply, tell me which tips are your own reasoning rather than sourced.
+   Each scene: a short title, 3 to 5 bullets of about 6 words, 1 or 2 cropped tracker images, and token icons where they help.
+
+6. Narration: British spelling, plain friendly English, under 2 minutes in total (the builder stops if it's longer). Spell tricky names phonetically in the spoken text only; the subtitles keep the real spelling.
+
+7. Check before rendering: run the builder in "frames" mode and look at every frame. Fix any image that is tiny, cut off or blurry.
+
+8. Render in "video" mode. It writes src/assets/videos/S[season]-[killer|location]-[shortName]-video.mp4, which the This Game tab and the Training videos checklist in Asset Admin pick up automatically. Commit the video, the film script and its .srt, push, and send me the MP4 too.`;

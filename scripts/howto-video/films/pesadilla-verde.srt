@@ -1,0 +1,140 @@
+1
+00:00:00,300 --> 00:00:04,938
+Pesadilla Verde: a suffocating South American jungle, a one-way river, and a squad
+
+2
+00:00:04,938 --> 00:00:07,596
+of soldiers who'd rather fight than be rescued.
+
+3
+00:00:07,816 --> 00:00:09,565
+Here's how the location plays.
+
+4
+00:00:10,400 --> 00:00:14,183
+Put the Huey token in the Clearing, and the two Train cards into your Action
+
+5
+00:00:14,183 --> 00:00:14,581
+Tableau.
+
+6
+00:00:14,801 --> 00:00:18,526
+Lay out the Soldiers card and Action cubes, then the eight Upgrade tokens:
+
+7
+00:00:18,526 --> 00:00:21,244
+the two green starters unlocked, the other six locked.
+
+8
+00:00:22,067 --> 00:00:26,192
+Every normal Victim is a Soldier. Unlike normal Victims, they'll follow you into the
+
+9
+00:00:26,192 --> 00:00:28,403
+Killer's space, and you can order them about.
+
+10
+00:00:28,623 --> 00:00:32,441
+The Archeologist and the Rebel Leader are not Soldiers, and can't be ordered.
+
+11
+00:00:33,267 --> 00:00:37,507
+In the Action phase, choose a space with Soldiers, and drop an Action cube on the
+
+12
+00:00:37,507 --> 00:00:40,648
+leftmost slot of a free Action Upgrade, like Move or Attack.
+
+13
+00:00:40,868 --> 00:00:42,617
+Every Soldier there carries it out.
+
+14
+00:00:42,837 --> 00:00:47,326
+In Upkeep, cubes slide one slot right. Once a cube falls off, that action is free
+
+15
+00:00:47,326 --> 00:00:47,659
+again.
+
+16
+00:00:48,467 --> 00:00:51,645
+Your squad starts out green. Saving one costs two Time.
+
+17
+00:00:51,865 --> 00:00:55,812
+When they attack, roll for each Soldier: a one or two means one of them gets shot.
+
+18
+00:00:56,032 --> 00:01:00,099
+They can only hit their own space, and damage is the number of Soldiers halved,
+
+19
+00:01:00,099 --> 00:01:02,261
+rounded down. A lone Soldier does nothing.
+
+20
+00:01:03,067 --> 00:01:07,773
+Use the Train card to unlock Upgrades: free rescues, no friendly fire, attacks into
+
+21
+00:01:07,773 --> 00:01:11,515
+adjacent spaces, and damage rounded up, so even one Soldier hurts.
+
+22
+00:01:11,735 --> 00:01:13,399
+Some effects can lock them again.
+
+23
+00:01:14,233 --> 00:01:16,976
+While the Huey is in the Clearing, it's an escape space.
+
+24
+00:01:16,976 --> 00:01:19,865
+Stand there and you can save any number of Victims at once.
+
+25
+00:01:20,085 --> 00:01:22,005
+Then the Huey leaves, so pick your moment.
+
+26
+00:01:22,833 --> 00:01:25,328
+The river runs one way, from the Waterfall down.
+
+27
+00:01:25,328 --> 00:01:29,485
+Moving downriver, one space of movement takes you or your Soldiers as far as you
+
+28
+00:01:29,485 --> 00:01:29,745
+like.
+
+29
+00:01:29,965 --> 00:01:32,995
+But you pass through every space on the way, piranhas included.
+
+30
+00:01:33,215 --> 00:01:36,393
+Enemies only drift one space, and no one moves upriver.
+
+31
+00:01:37,200 --> 00:01:41,104
+A few tips. Unlock No Friendly Fire early, or your squad thins itself out.
+
+32
+00:01:41,324 --> 00:01:45,570
+Keep Soldiers together: damage is half the group, so one big squad hits far harder
+
+33
+00:01:45,570 --> 00:01:46,657
+than scattered pairs.
+
+34
+00:01:46,877 --> 00:01:49,437
+Gather Victims in the Clearing before you use the Huey.
+
+35
+00:01:49,657 --> 00:01:53,583
+And finish anything upriver first. The river's a fast lane with no way back.
+

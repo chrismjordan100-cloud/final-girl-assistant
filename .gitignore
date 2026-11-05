@@ -15,3 +15,6 @@ final_girl_cards 2.json
 # Local helper for updating this PC copy (not part of the app)
 Update from GitHub.bat
 update-log.txt
+
+# How-to video builder downloads (voice model) and working files
+scripts/howto-video/.cache/

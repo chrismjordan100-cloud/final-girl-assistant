@@ -788,3 +788,24 @@
 }
 .tg-captured__tallies strong { color: var(--fg-gold); }
 .tg-captured__hint { margin: 0; font-size: 0.8rem; }
+
+/* How-to-play videos (under the key art) */
+.tg-videos { margin-top: -0.5rem; }
+.tg-video { padding: 0; overflow: hidden; }
+.tg-video__play {
+  display: flex; align-items: center; gap: 0.9rem; width: 100%;
+  padding: 0.9rem 1.1rem; background: none; border: 0; color: inherit;
+  font: inherit; text-align: left; cursor: pointer;
+}
+.tg-video__play:hover .tg-video__icon { transform: scale(1.08); }
+.tg-video__icon {
+  flex: none; display: grid; place-items: center;
+  width: 2.6rem; height: 2.6rem; border-radius: 50%;
+  background: var(--accent, #c62828); color: #fff; font-size: 1rem;
+  transition: transform 0.15s ease;
+}
+.tg-video__title { display: block; font-weight: 700; margin: 0; }
+.tg-video__sub, .tg-video__file { display: block; margin: 0.15rem 0 0; font-size: 0.82rem; opacity: 0.8; }
+.tg-video__player { display: block; width: 100%; background: #000; }
+.tg-video--missing { display: flex; align-items: center; gap: 0.9rem; padding: 0.9rem 1.1rem; opacity: 0.6; }
+.tg-video--missing .tg-video__icon { background: var(--border, #555); }

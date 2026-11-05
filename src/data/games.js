@@ -2863,6 +2863,49 @@ export function getFlavourImage(type, entry) {
   return getImage(type, entry, 'flavour');
 }
 
+/* --------------------------------------------------------------------------
+   How-to-play VIDEOS — one per Killer and one per Location.
+   Drop the MP4 into src/assets/videos/ named:
+     S{season}-killer-{shortName}-video.mp4
+     S{season}-location-{shortName}-video.mp4
+   e.g. S4-killer-volkar-video.mp4, S4-location-pesadilla-verde-video.mp4.
+   It then appears under the key art on This Game automatically, and the
+   Training videos panel in Asset Admin ticks it off.
+   -------------------------------------------------------------------------- */
+export const VIDEOS_FOLDER = 'src/assets/videos/';
+
+const videoFiles = import.meta.glob('../assets/videos/*.mp4', { eager: true, import: 'default' });
+const videosByBaseName = {};
+for (const [path, url] of Object.entries(videoFiles)) {
+  const base = path.split('/').pop().replace(/\.[^.]+$/, '').toLowerCase();
+  videosByBaseName[base] = url;
+}
+
+/** The file name a How-to video for this entry must have. */
+export function getVideoFileName(type, entry) {
+  return `S${entry.season}-${type}-${entry.shortName}-video.mp4`;
+}
+
+/** URL of the How-to video for a Killer or Location, or null if not added yet. */
+export function getVideo(type, entry) {
+  if (!entry) return null;
+  const base = `s${entry.season}-${type}-${entry.shortName}-video`.toLowerCase();
+  return videosByBaseName[base] || null;
+}
+
+/** Every Killer and Location with its expected video file and whether it's present. */
+export function getVideoChecklist() {
+  return [
+    ...killers.map((e) => ({ type: 'killer', entry: e })),
+    ...locations.map((e) => ({ type: 'location', entry: e })),
+  ].map(({ type, entry }) => ({
+    type,
+    entry,
+    file: getVideoFileName(type, entry),
+    present: Boolean(getVideo(type, entry)),
+  }));
+}
+
 /** Final Girl card faces: front and back images (either may be null). */
 export function getFinalGirlCards(entry) {
   return {

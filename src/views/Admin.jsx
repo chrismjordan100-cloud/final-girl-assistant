@@ -10,7 +10,10 @@ import {
   getScenarioAssetList,
   hasWrittenRules,
   noWrittenRulesExpected,
+  getVideoChecklist,
+  VIDEOS_FOLDER,
 } from '../data/games.js';
+import { VIDEO_PROMPT } from '../data/videoPrompt.js';
 import BACKLOG_AUTO from '../data/backlogAuto.json';
 import './Admin.css';
 
@@ -89,9 +92,23 @@ const SECTIONS = [
   { type: 'location', title: 'Locations', entries: locations },
 ];
 
+/* How-to-play videos: one per Killer and Location. Worked out from the files
+   present, so the backlog item and the Training videos panel stay current. */
+const VIDEO_LIST = getVideoChecklist();
+const VIDEOS_DONE = VIDEO_LIST.filter((v) => v.present).length;
+const VIDEOS_TOTAL = VIDEO_LIST.length;
+
 /* Running backlog of material still to scan / transcribe with Kiro. Add to
    this list as new ideas come up so nothing gets forgotten. */
 const BACKLOG = [
+  {
+    title: 'How-to-play videos for every Killer and Location',
+    detail:
+      'A short (under 2 minutes), narrated, subtitled video for each Killer and each Location, shown under the key art on This Game. The Volk\u2019ar and Pesadilla Verde are done. To make the next one, copy the prompt in Training videos (below) and give it to Claude with the name filled in.',
+    affects: ['This Game', 'Asset Admin'],
+    status: VIDEOS_DONE === VIDEOS_TOTAL ? 'done' : VIDEOS_DONE > 0 ? 'partial' : 'todo',
+    remaining: `${VIDEOS_TOTAL - VIDEOS_DONE} of ${VIDEOS_TOTAL} videos still to make (${VIDEOS_DONE} done). See Training videos for the list.`,
+  },
   // status: 'done' (green) | 'partial' (amber) | 'todo' (red).
   // `remaining` is shown ONLY for 'partial' items — what's left to finish.
   // Keep this RAG + remaining notes current as the app grows.
@@ -281,10 +298,17 @@ const ENTRY_KEYS = [
    want. (backlogDone is deliberately left out: for that one key, true means
    "shown", and the done list is meant to start hidden.) */
 const startCollapsed = () =>
-  Object.fromEntries(['howto', 'backlog', ...ENTRY_KEYS].map((k) => [k, true]));
+  Object.fromEntries(['howto', 'backlog', 'videos', ...ENTRY_KEYS].map((k) => [k, true]));
 
 export default function Admin() {
   const [query, setQuery] = useState('');
+  const [copied, setCopied] = useState(false);
+  function copyPrompt() {
+    navigator.clipboard?.writeText(VIDEO_PROMPT).then(
+      () => { setCopied(true); setTimeout(() => setCopied(false), 2000); },
+      () => setCopied(false)
+    );
+  }
   const [onlyMissing, setOnlyMissing] = useState(false);
   // Collapsed state per panel (true = collapsed). Default: everything collapsed.
   const [collapsed, setCollapsed] = useState(startCollapsed);
@@ -576,6 +600,65 @@ export default function Admin() {
           {DONE_BACKLOG.map(renderBacklogItem)}
         </ul>
         )}
+        </div>
+        )}
+      </div>
+
+      <div className="admin-howto admin-videos fg-panel">
+        <button
+          className="admin-panel-toggle"
+          onClick={() => toggleSection('videos')}
+          aria-expanded={!collapsed.videos}
+        >
+          <span className="admin-panel-toggle__caret" aria-hidden="true">
+            {collapsed.videos ? '\u25B6' : '\u25BC'}
+          </span>
+          <h2 className="admin-howto__title">
+            Training videos
+            <span className={'admin-section__count' + (VIDEOS_DONE === VIDEOS_TOTAL ? ' is-complete' : '')}>
+              {VIDEOS_DONE}/{VIDEOS_TOTAL} made
+            </span>
+          </h2>
+        </button>
+
+        {!collapsed.videos && (
+        <div className="admin-howto__body">
+          <p className="fg-type">
+            Each Killer and Location gets a short How-to-play video, shown under its key art
+            on This Game (with a &ldquo;coming soon&rdquo; placeholder until it&rsquo;s added).
+            Videos live in <code>{VIDEOS_FOLDER}</code> and must be named exactly:
+          </p>
+          <ul className="admin-videos__names">
+            <li><code>S&#123;season&#125;-killer-&#123;shortName&#125;-video.mp4</code></li>
+            <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-video.mp4</code></li>
+          </ul>
+
+          <h3 className="admin-howto__sub">Prompt for a new video</h3>
+          <p className="fg-type">
+            Copy this, replace the [square brackets], and give it to Claude. It uses the same
+            builder as the first two videos, so every one comes out in the same format.
+          </p>
+          <div className="admin-videos__prompt-wrap">
+            <button className="fg-btn admin-videos__copy" onClick={copyPrompt}>
+              {copied ? 'Copied \u2713' : 'Copy prompt'}
+            </button>
+            <pre className="admin-videos__prompt">{VIDEO_PROMPT}</pre>
+          </div>
+
+          <h3 className="admin-howto__sub">Checklist</h3>
+          <ul className="admin-asset-list admin-videos__list">
+            {VIDEO_LIST.map((v) => (
+              <li key={v.file} className={'admin-asset' + (v.present ? ' is-present' : '')}>
+                <span className={'admin-asset__status ' + (v.present ? 'is-ok' : 'is-missing')}>
+                  {v.present ? '\u2713' : '\u2715'}
+                </span>
+                <span className="admin-asset__label">
+                  {v.entry.name} <span className="fg-type">({v.type === 'killer' ? 'Killer' : 'Location'})</span>
+                </span>
+                <code className="admin-asset__file">{v.file}</code>
+              </li>
+            ))}
+          </ul>
         </div>
         )}
       </div>
