@@ -40,6 +40,63 @@ export function setModel(model) {
   writePersistent(MODEL_STORE, (model || '').trim() || undefined);
 }
 
+/* List the models THIS key can use for content generation. Calls Gemini's
+   ListModels endpoint and keeps only models whose supportedGenerationMethods
+   include "generateContent". Returns [{ id, label }] sorted with the handy
+   flash/lite models first. Throws a friendly Error on failure. */
+export async function listModels({ signal } = {}) {
+  const key = getApiKey();
+  if (!key) throw new Error('no-key');
+
+  const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}&pageSize=200`;
+  let res;
+  try {
+    res = await fetch(url, { signal });
+  } catch (e) {
+    if (e.name === 'AbortError') throw e;
+    throw new Error('Could not reach Google to list models. Check your connection.');
+  }
+  if (!res.ok) {
+    let detail = '';
+    try {
+      detail = (await res.json())?.error?.message || '';
+    } catch {
+      /* ignore */
+    }
+    if (res.status === 400 || res.status === 403) {
+      throw new Error('Could not list models — the API key was rejected. Check it in Settings.');
+    }
+    throw new Error(`Could not list models (${res.status})${detail ? ': ' + detail : ''}.`);
+  }
+  let data;
+  try {
+    data = await res.json();
+  } catch {
+    throw new Error('Google returned an unreadable model list.');
+  }
+  const models = (data?.models || [])
+    .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
+    .map((m) => ({
+      id: String(m.name || '').replace(/^models\//, ''),
+      label: m.displayName || String(m.name || '').replace(/^models\//, ''),
+    }))
+    .filter((m) => m.id);
+
+  // Sort: generally-useful text models first (flash/lite/pro), newest-looking
+  // names near the top; hide clearly non-chat ones like embeddings/aqa.
+  const hidden = /embedding|aqa|imagen|veo|tts|image-generation|learnlm-vision/i;
+  const score = (id) => {
+    let s = 0;
+    if (/lite/.test(id)) s += 3; // lite = fast, least likely to be overloaded
+    if (/flash/.test(id)) s += 2;
+    if (/pro/.test(id)) s += 1;
+    return s;
+  };
+  return models
+    .filter((m) => !hidden.test(m.id))
+    .sort((a, b) => score(b.id) - score(a.id) || a.id.localeCompare(b.id));
+}
+
 /* Turn the ranked search passages into a compact, numbered context block the
    model can cite. `scenario` passages (this game's Killer/Location) are marked
    so the model knows they override the general rules. */

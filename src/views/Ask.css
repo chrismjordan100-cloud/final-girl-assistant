@@ -200,6 +200,23 @@
 .ask-settings__keyrow { display: flex; gap: 0.5rem; }
 .ask-settings__keyrow input { flex: 1 1 auto; }
 .ask-settings__show { flex: none; }
+
+/* Model row: dropdown (or free-text fallback) + load button */
+.ask-settings__modelrow { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.ask-settings__modelrow input,
+.ask-settings__modelselect {
+  flex: 1 1 14rem;
+  min-width: 0;
+  background: var(--fg-black-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+.ask-settings__loadmodels { flex: none; }
+.ask-settings__modelerror { display: block; margin-top: 0.35rem; font-size: 0.8rem; color: var(--fg-blood-bright); }
+.ask-settings__modelhint { display: block; margin-top: 0.35rem; font-size: 0.76rem; line-height: 1.4; }
 .ask-settings__btns { display: flex; gap: 0.5rem; margin-top: 0.3rem; flex-wrap: wrap; }
 .ask-settings__clear { margin-left: auto; color: var(--fg-blood-bright); border-color: var(--fg-blood); }
 .ask-settings__help { margin-top: 1rem; font-size: 0.84rem; }

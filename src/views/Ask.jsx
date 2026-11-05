@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { searchRules, EXAMPLE_QUESTIONS } from '../data/rulesSearch.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { getKiller, getLocation } from '../data/games.js';
-import { askAI, getApiKey, setApiKey, getModel, setModel, hasApiKey } from '../lib/aiAnswer.js';
+import { askAI, getApiKey, setApiKey, getModel, setModel, hasApiKey, listModels } from '../lib/aiAnswer.js';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import './Ask.css';
 
@@ -32,6 +32,26 @@ function AiSettings({ open, onClose, onKeyChange }) {
   const [key, setKey] = useState(getApiKey());
   const [model, setModelState] = useState(getModel());
   const [show, setShow] = useState(false);
+  const [models, setModels] = useState(null); // null = not loaded yet
+  const [modelsLoading, setModelsLoading] = useState(false);
+  const [modelsError, setModelsError] = useState('');
+
+  function loadModels() {
+    // Save the key first so listModels() uses what's currently typed.
+    setApiKey(key);
+    onKeyChange();
+    setModelsError('');
+    setModelsLoading(true);
+    listModels()
+      .then((list) => {
+        setModels(list);
+        if (list.length && !list.some((m) => m.id === model)) {
+          setModelState(list[0].id); // default to the top (lite/flash) option
+        }
+      })
+      .catch((e) => setModelsError(e.message === 'no-key' ? 'Enter your API key first.' : e.message))
+      .finally(() => setModelsLoading(false));
+  }
 
   function save() {
     setApiKey(key);
@@ -70,16 +90,59 @@ function AiSettings({ open, onClose, onKeyChange }) {
           </button>
         </span>
       </label>
-      <label className="ask-settings__field">
+      <div className="ask-settings__field">
         <span>Model</span>
-        <input
-          type="text"
-          value={model}
-          onChange={(e) => setModelState(e.target.value)}
-          placeholder="gemini-3.8-flash"
-          spellCheck={false}
-        />
-      </label>
+        <div className="ask-settings__modelrow">
+          {models && models.length > 0 ? (
+            <select
+              className="ask-settings__modelselect"
+              value={models.some((m) => m.id === model) ? model : ''}
+              onChange={(e) => setModelState(e.target.value)}
+            >
+              {!models.some((m) => m.id === model) && (
+                <option value="" disabled>
+                  &mdash; choose a model &mdash;
+                </option>
+              )}
+              {models.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.label}{/lite/i.test(m.id) ? '  (fast / least busy)' : ''}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <input
+              type="text"
+              value={model}
+              onChange={(e) => setModelState(e.target.value)}
+              placeholder="gemini-3.8-flash"
+              spellCheck={false}
+            />
+          )}
+          <button
+            type="button"
+            className="fg-btn ask-settings__loadmodels"
+            onClick={loadModels}
+            disabled={modelsLoading || !key.trim()}
+          >
+            {modelsLoading ? 'Loading\u2026' : models ? 'Refresh list' : 'Load available models'}
+          </button>
+        </div>
+        {modelsError && <span className="ask-settings__modelerror">{modelsError}</span>}
+        {models && models.length > 0 && (
+          <span className="ask-settings__modelhint fg-type">
+            {models.length} model{models.length === 1 ? '' : 's'} your key can use. A
+            &ldquo;lite&rdquo; model is fastest and least likely to be overloaded; the full
+            flash/pro models give slightly richer answers.
+          </span>
+        )}
+        {models && models.length === 0 && (
+          <span className="ask-settings__modelhint fg-type">
+            No content-generation models came back for this key. Type a model name manually, or
+            check the key in Google AI Studio.
+          </span>
+        )}
+      </div>
       <div className="ask-settings__btns">
         <button type="button" className="fg-btn fg-btn--primary" onClick={save}>Save</button>
         <button type="button" className="fg-btn" onClick={onClose}>Cancel</button>
@@ -97,10 +160,10 @@ function AiSettings({ open, onClose, onKeyChange }) {
           <li>That&rsquo;s it. Gemini has a free tier that is plenty for occasional rules questions. You can delete or rotate the key any time back on that same page.</li>
         </ol>
         <p className="fg-type">
-          The <strong>Model</strong> field defaults to a current Gemini Flash model. Google
-          occasionally retires model names; if answers start failing with a &ldquo;model not
-          found&rdquo; message, check <a href="https://aistudio.google.com/" target="_blank" rel="noreferrer">AI Studio</a>{' '}
-          for the current model name and paste it into that field.
+          For the <strong>Model</strong>, press <strong>Load available models</strong> to fetch
+          the exact list your key can use and pick one from the dropdown &mdash; no need to look
+          anything up. If a model keeps timing out (it&rsquo;s overloaded), choose a
+          &ldquo;lite&rdquo; model: they&rsquo;re faster and least likely to be busy.
         </p>
         <p className="fg-type">
           Keep the key private &mdash; treat it like a password. If you ever think it leaked,
