@@ -12,11 +12,11 @@ FILM = dict(
     type='location', season=1, shortName='creech-manor', name='Creech Manor', heading='CREECH MANOR', film='The Haunting of Creech Manor',
     background=G+'S1-location-creech-manor-art.png', flavour=G+'S1-location-creech-manor-flavour.png',
     scenes=[
-        dict(title='Creech Manor', kind='intro', images=[(P+'6', (0.01, 0.33, 0.37, 0.555))],
+        dict(title='Creech Manor', kind='intro', images=[(G+'S1-location-creech-manor-board.jpg', None)],
              lines=[("Creech Manor: over a hundred years old, full of historic charm, and every room has a horrifying story.", None),
                     ("Here's how the location plays.", None)]),
         dict(title='Setup', bullets=['No special setup', 'One-way spaces', 'Window spaces', 'Inside and Outside'],
-             images=[(P+'6', (0.01, 0.30, 0.99, 0.76))],
+             images=[(G+'S1-location-creech-manor-board.jpg', None)],
              lines=[("Creech Manor has no special setup, but the house itself has a few rules of its own.", None)]),
         dict(title='One-way spaces', bullets=['3 spaces exit one way only', 'No one moves against an arrow', 'Still adjacent both ways', 'Rope Ladder undoes it'],
              images=[(P+'7', (0.30, 0.32, 0.68, 0.56))],

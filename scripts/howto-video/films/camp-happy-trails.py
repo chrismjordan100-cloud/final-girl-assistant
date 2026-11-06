@@ -12,11 +12,11 @@ FILM = dict(
     type='location', season=1, shortName='camp-happy-trails', name='Camp Happy Trails', heading='CAMP HAPPY TRAILS', film='The Happy Trails Horror',
     background=G+'S1-location-camp-happy-trails-art.png', flavour=G+'S1-location-camp-happy-trails-flavour.png',
     scenes=[
-        dict(title='Camp Happy Trails', kind='intro', images=[(P+'2', (0.05, 0.35, 0.42, 0.60))],
+        dict(title='Camp Happy Trails', kind='intro', images=[(G+'S1-location-camp-happy-trails-board.jpg', None)],
              lines=[("Camp Happy Trails: fishing on the lake, archery, ghost stories round the firepit, and screams in the distance.", None),
                     ("Here's how the location plays.", None)]),
         dict(title='No special rules', bullets=['No special setup', 'No special rules', 'Plays on the core rules'],
-             images=[(P+'2', (0.03, 0.31, 0.98, 0.70))],
+             images=[(G+'S1-location-camp-happy-trails-board.jpg', None)],
              lines=[("Camp Happy Trails has no special setup and no special rules, so it's the classic place to learn the game.", None),
                     ("The box brings ten Events, five Setup cards, eight Terror cards and eighteen Items.", None)]),
         dict(title='Achievements to chase', bullets=['Bear Trap the Killer using Fireworks', 'Defeat the Killer in the Lake', 'Save 5 Victims in one turn'],

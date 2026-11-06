@@ -534,6 +534,7 @@ export default function Admin() {
               <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-flavour.png</code></li>
               <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-1.png</code>, <code>-2.png</code>, &hellip; (rules pages)</li>
               <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-icon.png</code> &mdash; in the <code>icons/</code> folder</li>
+              <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-board.jpg</code> &mdash; sharp, straightened board photo (used in the how-to videos)</li>
             </ul>
           </div>
           <div className="admin-naming__type">

@@ -11,7 +11,9 @@ Make a How-to-play video for the Final Girl [Killer / Location] "[NAME]" (Series
 
 3. Rules: take them from the rule-sheet pages in src/assets/games/S[season]-[killer|location]-[shortName]-1.png, -2.png… and the Feature Film rulebook PDFs in the project root (FeatureFilmRules.pdf, _S2, _S3, and the s4-rules-pdf folder), cross-checked against the rulespal.com rulebook for that film. Rulebook PDF pages can be used as images too: write P + 'N' for page N (see the Season 1 film scripts).
 
-4. Graphics: only from the tracker: the -art and -flavour images, crops of the rule-sheet pages, token icons in src/assets/icons/ and src/assets/icons/rules/, and setup cards in src/assets/cards/. No images from the web.
+4. Graphics: from the tracker: the -art and -flavour images, crops of the rule-sheet pages, token icons in src/assets/icons/ and src/assets/icons/rules/, and setup cards in src/assets/cards/. No other web images, except the location board below.
+
+   Location boards must be sharp. Never use a board cropped from a rule sheet or rulebook page: they are far too low-res. Use src/assets/games/S[season]-location-[shortName]-board.jpg. If it doesn't exist yet, make it: the publisher's shop (vanrydergames.com, a Shopify store; /products.json lists every image) has a 3000x2000 "FFn-compview.png" for most Feature Films with the board laid out at an angle. Ask me before downloading it, download it through the in-app browser on my PC into Downloads, straighten the board with a perspective warp (see the Season 1 boards, about 1580 px wide), and save it under that name so the app keeps it too. If no sharp board can be found, tell me rather than using a blurry one. Show the board in the intro and in the scene about the board's spaces.
 
 5. Structure, in this order:
    - Intro: flavour + key art, a one-line hook, then "Here's how she/he/it plays."

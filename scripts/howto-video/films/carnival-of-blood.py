@@ -12,7 +12,7 @@ FILM = dict(
     type='location', season=1, shortName='carnival-of-blood', name='The Carnival of Blood', heading='THE CARNIVAL OF BLOOD', film='Carnage at the Carnival',
     background=G+'S1-location-carnival-of-blood-art.png', flavour=G+'S1-location-carnival-of-blood-flavour.png',
     scenes=[
-        dict(title='The Carnival of Blood', kind='intro', images=[(P+'18', (0.02, 0.29, 0.38, 0.565))],
+        dict(title='The Carnival of Blood', kind='intro', images=[(G+'S1-location-carnival-of-blood-board.jpg', None)],
              lines=[("The Carnival of Blood: a travelling show where some visitors never make it home.", None),
                     ("Here's how the location plays.", None)]),
         dict(title='Special setup', bullets=['Set the 3 Item Traps aside', '3 decks: 2 Items + 1 Trap each', 'Shuffle each deck', '1 Item face up on top'],
