@@ -1,0 +1,272 @@
+1
+00:00:00,300 --> 00:00:03,735
+Slayer: something from the other side of a rift, with a vendetta against you.
+
+2
+00:00:03,955 --> 00:00:05,235
+Here's how it plays.
+
+3
+00:00:06,067 --> 00:00:09,902
+Put the Dimension Tracker card near the board, with your token and the Special
+
+4
+00:00:09,902 --> 00:00:11,869
+Victim tokens in the Our Dimension half.
+
+5
+00:00:12,089 --> 00:00:16,207
+Add a grey Mirror Dimension Victim on your space, and another on the exit space
+
+6
+00:00:16,207 --> 00:00:17,145
+closest to Slayer.
+
+7
+00:00:17,365 --> 00:00:20,224
+Add the Open a Rift Action cards to the Action Tableau.
+
+8
+00:00:21,033 --> 00:00:25,321
+The board shows both dimensions at once. Yellow Victims are in Our Dimension;
+
+9
+00:00:25,321 --> 00:00:27,604
+grey Victims are in the Mirror Dimension.
+
+10
+00:00:27,824 --> 00:00:31,380
+Where you and the Special Victims are is shown on the Dimension Tracker:
+
+11
+00:00:31,380 --> 00:00:34,096
+top half for Our Dimension, bottom half for the Mirror.
+
+12
+00:00:34,316 --> 00:00:38,007
+Slayer only moves in the Mirror Dimension unless a card says otherwise.
+
+13
+00:00:38,833 --> 00:00:42,844
+Movement works as normal, but only Victims in your current dimension follow you.
+
+14
+00:00:43,064 --> 00:00:47,395
+A Victim can only be saved when both of you are at an exit space in Our Dimension.
+
+15
+00:00:47,615 --> 00:00:52,341
+Search spaces can be used in either dimension, and tokens and location effects apply
+
+16
+00:00:52,341 --> 00:00:54,873
+to both dimensions unless they say otherwise.
+
+17
+00:00:54,873 --> 00:00:59,544
+If one targets a Victim in a space with both kinds, Our Dimension's Victims are hit
+
+18
+00:00:59,544 --> 00:00:59,881
+first.
+
+19
+00:01:00,700 --> 00:01:04,545
+When you see this pull symbol, Slayer drags the Victim in Our Dimension closest to
+
+20
+00:01:04,545 --> 00:01:05,436
+it into the Mirror.
+
+21
+00:01:05,656 --> 00:01:08,626
+For a normal Victim, swap the yellow meeple for a grey one.
+
+22
+00:01:08,626 --> 00:01:12,200
+For a Special Victim, move its token to the Mirror half of the tracker.
+
+23
+00:01:12,200 --> 00:01:13,357
+Then panic that Victim.
+
+24
+00:01:13,577 --> 00:01:17,546
+There are only six grey meeples. If they're all in use, the Mirror Victim farthest
+
+25
+00:01:17,546 --> 00:01:19,337
+from Slayer is killed to free one up.
+
+26
+00:01:19,557 --> 00:01:22,224
+And if no Victim could be pulled, raise Horror instead.
+
+27
+00:01:23,033 --> 00:01:27,474
+To cross into the Mirror Dimension, buy and play Open a Rift, which costs two Time.
+
+28
+00:01:27,474 --> 00:01:31,648
+Every result takes you across, and Special Victims in your space may come too.
+
+29
+00:01:31,648 --> 00:01:34,323
+Two successes is free; one success costs one Time;
+
+30
+00:01:34,323 --> 00:01:36,517
+no successes costs a health and two Time.
+
+31
+00:01:36,517 --> 00:01:39,567
+The card also shows an alternative bottom row, marked OR.
+
+32
+00:01:39,787 --> 00:01:41,941
+Normal yellow Victims can't cross with you.
+
+33
+00:01:42,161 --> 00:01:46,507
+Coming back is free: any time in your Action phase, except mid-card, move your token
+
+34
+00:01:46,507 --> 00:01:49,974
+back to Our Dimension. Any Victims in your space can come with you:
+
+35
+00:01:49,974 --> 00:01:53,233
+swap grey meeples for yellow, and move Special Victims' tokens.
+
+36
+00:01:54,067 --> 00:01:57,889
+If you're in the Mirror Dimension during the Upkeep phase, you lose one health.
+
+37
+00:01:57,889 --> 00:02:01,469
+Keep your trips short: go in, gather grey Victims, and come straight back.
+
+38
+00:02:02,300 --> 00:02:06,597
+To attack Slayer with actions or Items, you must be in the Mirror Dimension with it.
+
+39
+00:02:06,597 --> 00:02:10,690
+The exception: if you're attacked in Our Dimension and play a Reaction card that
+
+40
+00:02:10,690 --> 00:02:12,583
+deals damage, it hurts Slayer anyway.
+
+41
+00:02:12,803 --> 00:02:16,226
+Slayer senses you anywhere, but only senses Victims in the Mirror.
+
+42
+00:02:16,226 --> 00:02:19,287
+Targeting you or a Victim, it goes for whichever is closer:
+
+43
+00:02:19,287 --> 00:02:23,540
+a Mirror Victim, or you. If it's attacking a space with only you and Our Dimension
+
+44
+00:02:23,540 --> 00:02:25,667
+Victims, it attacks you and ignores them.
+
+45
+00:02:25,887 --> 00:02:28,288
+Targeting a Victim: the closest Mirror Victim.
+
+46
+00:02:28,288 --> 00:02:32,516
+If there are none, it resolves the pull symbol instead and skips the rest of that
+
+47
+00:02:32,516 --> 00:02:33,247
+Killer Action.
+
+48
+00:02:33,467 --> 00:02:36,645
+Targeting the Final Girl: you, whichever dimension you're in.
+
+49
+00:02:37,467 --> 00:02:41,246
+In the Panic phase, Victims in Our Dimension never panic, unless the
+
+50
+00:02:41,246 --> 00:02:43,970
+Interdimensional Rift Collapse Finale is in play.
+
+51
+00:02:43,970 --> 00:02:47,749
+Only Mirror Victims in Slayer's space panic, under the normal rules.
+
+52
+00:02:48,567 --> 00:02:53,021
+Mind Control: in each Upkeep, every Victim in the Mirror Dimension moves one space
+
+53
+00:02:53,021 --> 00:02:53,836
+towards Slayer.
+
+54
+00:02:54,056 --> 00:02:58,570
+Renewed Determination moves Slayer one space towards you or the nearest Victim after
+
+55
+00:02:58,570 --> 00:03:02,440
+its pull, and Master Plan punishes having lots of Victims in the Mirror.
+
+56
+00:03:02,660 --> 00:03:07,060
+The Epic Dark Power, It's in My Head!: at the start of each Action phase, discard a
+
+57
+00:03:07,060 --> 00:03:11,513
+random Action card from your hand, or lose one Time to choose which card to discard.
+
+58
+00:03:12,333 --> 00:03:15,297
+Interdimensional Rift Collapse brings Slayer into our world.
+
+59
+00:03:15,297 --> 00:03:18,706
+Every Victim in the Mirror dies, and you take damage if you're there.
+
+60
+00:03:18,706 --> 00:03:21,571
+It now attacks twice, but you can hit it without crossing.
+
+61
+00:03:21,791 --> 00:03:26,206
+Welcome to My World pulls every Victim into the Mirror, killing any beyond the six
+
+62
+00:03:26,206 --> 00:03:28,468
+grey meeples, and Horror rises every turn.
+
+63
+00:03:28,688 --> 00:03:32,059
+Let's Finish This pulls a Victim, then targets and attacks twice.
+
+64
+00:03:32,867 --> 00:03:35,248
+A few tips. Retaliate is your best weapon:
+
+65
+00:03:35,248 --> 00:03:37,347
+it damages Slayer from Our Dimension.
+
+66
+00:03:37,567 --> 00:03:40,553
+Bring grey Victims back home, where Slayer can't sense them.
+
+67
+00:03:40,773 --> 00:03:42,971
+And keep Mirror trips short to save health.
+
+68
+00:03:42,971 --> 00:03:43,483
+Good luck.
+
