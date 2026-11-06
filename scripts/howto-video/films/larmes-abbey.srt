@@ -1,0 +1,160 @@
+1
+00:00:00,300 --> 00:00:03,735
+L'Armes Abbey: built on cursed land, where you may end up blessed, or cursed.
+
+2
+00:00:03,955 --> 00:00:05,704
+Here's how the location plays.
+
+3
+00:00:06,533 --> 00:00:10,576
+Put a Malice token in the Killer's start space and in three spaces next to it.
+
+4
+00:00:10,576 --> 00:00:14,773
+If there are only two adjacent spaces, put the third in the next closest space of
+
+5
+00:00:14,773 --> 00:00:16,795
+your choice. That's four Malice tokens.
+
+6
+00:00:17,015 --> 00:00:19,916
+Put the Donkey token in the Cloister; cards refer to it.
+
+7
+00:00:20,136 --> 00:00:22,397
+Add the Benediction Action cards to the Tableau.
+
+8
+00:00:23,233 --> 00:00:27,430
+The Blessed and Cursed dice sometimes replace a normal die in your Horror Rolls.
+
+9
+00:00:27,430 --> 00:00:30,892
+When you see one of their icons, swap one normal die for that one.
+
+10
+00:00:31,112 --> 00:00:33,977
+The Blessed die is kinder: it shows two stars on a six.
+
+11
+00:00:33,977 --> 00:00:37,832
+The Cursed die has fewer good faces, and a broken-heart symbol on its one.
+
+12
+00:00:38,052 --> 00:00:41,992
+You never roll both. If there are more of one icon than the other, use that die.
+
+13
+00:00:41,992 --> 00:00:44,751
+If they're equal, they cancel out and you roll normally.
+
+14
+00:00:44,971 --> 00:00:48,516
+If your final Horror Roll shows the broken heart, you lose a health.
+
+15
+00:00:48,516 --> 00:00:52,373
+And the Improvise card's effects also apply to the five on the Cursed die.
+
+16
+00:00:53,200 --> 00:00:57,086
+When you see the Malice icon, put a Malice token in the Active Killer's space.
+
+17
+00:00:57,086 --> 00:01:00,624
+If it already has one, use the closest space to the Killer without one.
+
+18
+00:01:00,844 --> 00:01:03,887
+With more than one Active Killer, use the one closest to you.
+
+19
+00:01:03,887 --> 00:01:07,927
+With no Killer on the board, reveal a random Setup card and use its Killer space.
+
+20
+00:01:08,147 --> 00:01:12,370
+Malice tokens carry the cursed symbol, so any Horror Roll you make in a Malice space
+
+21
+00:01:12,370 --> 00:01:13,928
+swaps a die for the Cursed die.
+
+22
+00:01:14,733 --> 00:01:18,617
+There are fourteen Malice tokens. If all fourteen are on the board and you need to
+
+23
+00:01:18,617 --> 00:01:20,323
+place another, you lose immediately.
+
+24
+00:01:20,543 --> 00:01:23,444
+Tokens you remove go back into the pool, so keep clearing them.
+
+25
+00:01:24,267 --> 00:01:27,253
+Benediction is how you clear Malice. It costs one Time.
+
+26
+00:01:27,473 --> 00:01:31,881
+The best result removes a Malice token from your space and every adjacent space.
+
+27
+00:01:31,881 --> 00:01:35,186
+The next removes one from your space and one adjacent space.
+
+28
+00:01:35,186 --> 00:01:38,823
+A weaker result removes one from your space or one adjacent space.
+
+29
+00:01:39,043 --> 00:01:41,368
+The card's bottom row shows the cost of failing.
+
+30
+00:01:42,200 --> 00:01:45,912
+Black Mass adds a Malice token every Upkeep in which none was added.
+
+31
+00:01:45,912 --> 00:01:47,277
+Treat it as an emergency.
+
+32
+00:01:47,497 --> 00:01:51,202
+Father Damian follows you even into the Killer's space and gives you the Blessed die
+
+33
+00:01:51,202 --> 00:01:52,084
+while he's with you.
+
+34
+00:01:52,304 --> 00:01:56,148
+Lust kills the Victim closest to you in a Malice space, and hurts you if you're in
+
+35
+00:01:56,148 --> 00:01:56,336
+one.
+
+36
+00:01:57,167 --> 00:02:01,561
+A few tips. Use Benediction often: fourteen Malice tokens is an instant loss.
+
+37
+00:02:01,781 --> 00:02:05,195
+Keep Victims out of the cursed rooms, and keep Father Damian close.
+
+38
+00:02:05,415 --> 00:02:08,065
+The search spaces are far apart, so plan your route.
+
+39
+00:02:08,065 --> 00:02:10,409
+It's rated one of the best boards in the game.
+
+40
+00:02:10,409 --> 00:02:10,919
+Good luck.
+
