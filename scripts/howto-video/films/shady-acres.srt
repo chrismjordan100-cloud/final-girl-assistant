@@ -1,0 +1,192 @@
+1
+00:00:00,300 --> 00:00:04,614
+Shady Acres: a rural town where children keep going missing, and something lives in
+
+2
+00:00:04,614 --> 00:00:05,185
+the fields.
+
+3
+00:00:05,405 --> 00:00:07,155
+Here's how the location plays.
+
+4
+00:00:07,967 --> 00:00:10,655
+Shuffle the Ancient Curse cards into a face-down deck.
+
+5
+00:00:10,875 --> 00:00:14,953
+Put the Children card out, one Child meeple on the Altar of the Old Gods, and the
+
+6
+00:00:14,953 --> 00:00:15,909
+others on the card.
+
+7
+00:00:16,129 --> 00:00:20,584
+Put the Children Action token above any Minion or Killer Actions on the Finale card:
+
+8
+00:00:20,584 --> 00:00:21,804
+the Children act first.
+
+9
+00:00:22,633 --> 00:00:25,775
+The Children card gives their health, Attack and Movement Values.
+
+10
+00:00:25,775 --> 00:00:27,369
+They're Enemies, but not Minions.
+
+11
+00:00:27,589 --> 00:00:31,685
+They have their own action on the Children Action token, resolved at the start of
+
+12
+00:00:31,685 --> 00:00:34,365
+the Killer phase, before any Minion or Killer Action.
+
+13
+00:00:34,365 --> 00:00:38,512
+They don't resolve Killer or Minion actions on Terror cards unless a card says so.
+
+14
+00:00:38,732 --> 00:00:42,845
+They act one at a time, starting with the Child closest to the Altar of the Old
+
+15
+00:00:42,845 --> 00:00:43,105
+Gods.
+
+16
+00:00:43,933 --> 00:00:48,327
+In every Upkeep, a Child spawns on the Altar of the Old Gods, unless all three are
+
+17
+00:00:48,327 --> 00:00:50,952
+already out or there are no Victims on the board.
+
+18
+00:00:51,172 --> 00:00:55,413
+You can attack and kill Children. A dead Child goes back on the card, ready to spawn
+
+19
+00:00:55,413 --> 00:00:55,716
+again.
+
+20
+00:00:55,936 --> 00:01:00,068
+If several are in the space you attack, you attack them all and split the damage as
+
+21
+00:01:00,068 --> 00:01:01,461
+you like. Any extra is lost.
+
+22
+00:01:02,267 --> 00:01:06,320
+Victims will follow you into a space with Children, unless the Killer is also there.
+
+23
+00:01:06,540 --> 00:01:10,993
+In the Panic phase, Victims in a space with a Child panic if at least one Victim was
+
+24
+00:01:10,993 --> 00:01:11,895
+killed that turn.
+
+25
+00:01:12,700 --> 00:01:14,964
+The Children abduct people as sacrifices.
+
+26
+00:01:14,964 --> 00:01:19,271
+When a Child resolves the abduction icon in a space with a Victim, roll a die.
+
+27
+00:01:19,491 --> 00:01:22,169
+On a one or two, the Victim is sacrificed and killed.
+
+28
+00:01:22,169 --> 00:01:26,362
+Return the Child to the Altar, raise Bloodlust as normal, and put the Victim on the
+
+29
+00:01:26,362 --> 00:01:28,131
+back of the top Ancient Curse card.
+
+30
+00:01:28,351 --> 00:01:32,523
+On three to six, nothing happens. With no Victim in the Child's space, treat the
+
+31
+00:01:32,523 --> 00:01:33,983
+abduction icon as an attack.
+
+32
+00:01:34,800 --> 00:01:39,093
+When three sacrificed Victims sit on the top Ancient Curse card, the Old Gods have
+
+33
+00:01:39,093 --> 00:01:42,862
+been fed. Remove the Victims and reveal the Curse, putting it into play.
+
+34
+00:01:42,862 --> 00:01:44,485
+Several can be in play at once.
+
+35
+00:01:44,705 --> 00:01:47,959
+Dark Fields lets Children treat all Field spaces as adjacent.
+
+36
+00:01:47,959 --> 00:01:52,279
+Others include Decaying Earth, lose a health entering a Field, and Omen of Death,
+
+37
+00:01:52,279 --> 00:01:54,625
+the Killer heals whenever he kills a Victim.
+
+38
+00:01:55,433 --> 00:01:59,465
+Spaces with the corn icon are Field spaces, and plenty of cards hit them.
+
+39
+00:01:59,685 --> 00:02:03,911
+The Fields Are Moving adds Field tokens to the Hayfield and Cow Pasture, making them
+
+40
+00:02:03,911 --> 00:02:04,464
+Fields too.
+
+41
+00:02:04,684 --> 00:02:07,002
+The Combine Keys let you drive the Combine:
+
+42
+00:02:07,002 --> 00:02:11,315
+an extra space with Walk, and any Field you drive into is Harvested, no longer a
+
+43
+00:02:11,315 --> 00:02:11,639
+Field.
+
+44
+00:02:12,467 --> 00:02:16,808
+A few tips. The setup uses fourteen Victims on a cramped map, so they die fast.
+
+45
+00:02:16,808 --> 00:02:17,523
+Rescue early.
+
+46
+00:02:17,743 --> 00:02:22,051
+Deal with Children next to Victims before they abduct anyone, and plan your route to
+
+47
+00:02:22,051 --> 00:02:24,206
+the search spaces, which all need detours.
+
+48
+00:02:24,206 --> 00:02:24,719
+Good luck.
+
