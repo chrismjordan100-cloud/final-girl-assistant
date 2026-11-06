@@ -1,0 +1,232 @@
+1
+00:00:00,300 --> 00:00:04,439
+Terror From the Grave: no single Killer, just the dead, rising in endless numbers.
+
+2
+00:00:04,659 --> 00:00:06,344
+Here's how this vignette plays.
+
+3
+00:00:07,167 --> 00:00:11,494
+There's no Killer board: line up the two Bloodlust cards instead, with the marker on
+
+4
+00:00:11,494 --> 00:00:13,503
+the start space. Horror starts at four.
+
+5
+00:00:13,723 --> 00:00:18,069
+No Killer is placed. Put one Zombie on each exit and on the Killer's start space.
+
+6
+00:00:18,069 --> 00:00:22,576
+With only one exit, put one there, two on the start space and one on a search space.
+
+7
+00:00:22,796 --> 00:00:27,268
+Put a Horde token on the face-down Dark Power card, and shuffle the four Vehicle
+
+8
+00:00:27,268 --> 00:00:30,007
+tokens face down, spread evenly across the exits.
+
+9
+00:00:30,833 --> 00:00:32,927
+To win, kill every Zombie and every Horde.
+
+10
+00:00:32,927 --> 00:00:35,271
+The moment none are left on the board, you win.
+
+11
+00:00:35,491 --> 00:00:39,422
+You lose immediately if three Hordes are in play and a fourth would be created, or
+
+12
+00:00:39,422 --> 00:00:39,949
+if you die.
+
+13
+00:00:40,767 --> 00:00:43,071
+Zombies are tokens, and count as Minions.
+
+14
+00:00:43,291 --> 00:00:47,330
+When you see the spawn icon, spawn the number of Zombies shown at the current
+
+15
+00:00:47,330 --> 00:00:51,578
+Bloodlust level. Place them one at a time on exit spaces, always the one with the
+
+16
+00:00:51,578 --> 00:00:54,725
+fewest Zombies first. Ties go to the exit farthest from you.
+
+17
+00:00:55,533 --> 00:00:59,714
+Zombies are slow. They move only once per Killer phase, during the Minion Action,
+
+18
+00:00:59,714 --> 00:01:01,933
+and ignore every move icon on Terror cards.
+
+19
+00:01:02,153 --> 00:01:06,342
+They use the normal targeting rules, except that a Zombie that can't reach its
+
+20
+00:01:06,342 --> 00:01:09,940
+target panics instead: it shambles one space in a random direction.
+
+21
+00:01:10,767 --> 00:01:14,850
+Zombies in a space attack together, at one target, dealing damage equal to the
+
+22
+00:01:14,850 --> 00:01:18,148
+number of Zombies there. They always go for Victims before you.
+
+23
+00:01:18,368 --> 00:01:23,069
+Every Victim killed by Zombies is replaced with a Zombie token, and Bloodlust rises
+
+24
+00:01:23,069 --> 00:01:24,939
+as normal. Losses feed the swarm.
+
+25
+00:01:25,767 --> 00:01:29,871
+At the end of the Killer phase, any space with three or more Zombies becomes a
+
+26
+00:01:29,871 --> 00:01:34,081
+Horde. Replace them with a Horde token; the first one uses the token on the Dark
+
+27
+00:01:34,081 --> 00:01:36,028
+Power card, revealing the Dark Power.
+
+28
+00:01:36,248 --> 00:01:40,063
+A Horde's health equals the number of Zombies that formed it, at least three,
+
+29
+00:01:40,063 --> 00:01:43,629
+tracked on a Victim Holding board. Hordes don't use Final Health tokens.
+
+30
+00:01:44,433 --> 00:01:48,930
+A Horde counts as a Killer: Victims won't follow you into its space, and it uses the
+
+31
+00:01:48,930 --> 00:01:51,606
+Movement and Attack values on the Bloodlust track.
+
+32
+00:01:51,606 --> 00:01:56,103
+If a card moves or places the Killer, use only the Horde closest to the destination.
+
+33
+00:01:56,323 --> 00:02:00,568
+Each Victim it kills adds a health. It has no maximum, and gains a health from any
+
+34
+00:02:00,568 --> 00:02:04,813
+heal effect. If it shares a space with a Zombie, it absorbs it for another health.
+
+35
+00:02:05,033 --> 00:02:09,567
+A Horde never breaks back into Zombies, even below three health, and two Hordes in a
+
+36
+00:02:09,567 --> 00:02:13,993
+space don't combine. Effects that kill X Zombies deal X damage to a Horde instead.
+
+37
+00:02:14,800 --> 00:02:18,944
+Each location has one special vehicle with its own Vehicle Action card.
+
+38
+00:02:18,944 --> 00:02:21,454
+Ignore that location's normal vehicle Item;
+
+39
+00:02:21,454 --> 00:02:24,315
+if it turns up, swap it for a random unused Item.
+
+40
+00:02:24,535 --> 00:02:27,691
+The first time you enter an exit, reveal its Vehicle tokens.
+
+41
+00:02:27,691 --> 00:02:31,953
+If you find the vehicle, remove all the tokens, put the vehicle in your space, or
+
+42
+00:02:31,953 --> 00:02:35,109
+the nearest water space for boats, and take its Action card.
+
+43
+00:02:35,109 --> 00:02:36,951
+It then works like any Action card.
+
+44
+00:02:37,171 --> 00:02:40,689
+If the card's title has the driver icon, you can use it from anywhere.
+
+45
+00:02:40,689 --> 00:02:44,509
+Otherwise you must be with the vehicle, and normal moves can bring it along.
+
+46
+00:02:45,333 --> 00:02:49,464
+The Dark Powers. Runners: Zombies now follow move icons, always moving before
+
+47
+00:02:49,464 --> 00:02:53,435
+attacks. Legion: every spawn adds one more Zombie at the exit nearest you.
+
+48
+00:02:53,435 --> 00:02:57,673
+Super Horde: Hordes that meet merge, and any Horde with twelve health makes you
+
+49
+00:02:57,673 --> 00:02:57,941
+lose.
+
+50
+00:02:58,161 --> 00:03:01,490
+In every Finale, all Zombies and Hordes move before any attacks.
+
+51
+00:03:01,490 --> 00:03:05,755
+Their Numbers Are Endless costs you a health whenever no Enemy is in your space at
+
+52
+00:03:05,755 --> 00:03:10,020
+the end of your Action phase. They've All Been Bitten turns every remaining Victim
+
+53
+00:03:10,020 --> 00:03:10,748
+into a Zombie.
+
+54
+00:03:11,567 --> 00:03:15,450
+A few tips. Break up groups of Zombies before the end of the Killer phase, so they
+
+55
+00:03:15,450 --> 00:03:16,303
+can't form Hordes.
+
+56
+00:03:16,523 --> 00:03:20,213
+Keep Victims away from them: every one they kill becomes another Zombie.
+
+57
+00:03:20,433 --> 00:03:23,469
+And hunt for the vehicle early; it's often your best weapon.
+
+58
+00:03:23,469 --> 00:03:23,975
+Good luck.
+

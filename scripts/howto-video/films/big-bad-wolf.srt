@@ -1,0 +1,160 @@
+1
+00:00:00,300 --> 00:00:04,481
+The Big Bad Wolf: red glowing eyes, terrible noises, and very bad breath.
+
+2
+00:00:04,701 --> 00:00:05,981
+Here's how it plays.
+
+3
+00:00:06,800 --> 00:00:10,896
+There's no special setup for the Wolf. It starts with nine health, in Track mode.
+
+4
+00:00:11,700 --> 00:00:15,775
+The Wolf is always in one of two modes, Track or Slay, each with its own icon.
+
+5
+00:00:15,995 --> 00:00:19,058
+Most of its Terror cards have different effects for each mode.
+
+6
+00:00:19,058 --> 00:00:22,961
+At the start of the Killer phase, check which mode it's in, and apply only that
+
+7
+00:00:22,961 --> 00:00:24,592
+mode's lines, ignoring the other.
+
+8
+00:00:24,812 --> 00:00:28,225
+Effects without a mode icon always apply, whichever mode it's in.
+
+9
+00:00:29,033 --> 00:00:33,279
+The Wolf starts in Track mode. When its Dark Power is revealed, it switches to Slay
+
+10
+00:00:33,279 --> 00:00:33,535
+mode.
+
+11
+00:00:33,755 --> 00:00:37,908
+If that happens during a Killer phase that started in Track mode, keep using Track
+
+12
+00:00:37,908 --> 00:00:41,605
+effects for the rest of that phase. Slay effects start next Killer phase.
+
+13
+00:00:41,825 --> 00:00:46,067
+The only exception is the Epic Dark Power, A Killing Machine, which makes it resolve
+
+14
+00:00:46,067 --> 00:00:48,844
+both the Track and Slay lines for the rest of the game.
+
+15
+00:00:49,667 --> 00:00:53,927
+Take The Claws That Scratch. In Track mode, the Wolf targets the closest Victim, or
+
+16
+00:00:53,927 --> 00:00:56,237
+you if you're closer, and moves towards them.
+
+17
+00:00:56,237 --> 00:01:00,138
+Then Bloodlust rises once for you and each Victim in its space, up to three.
+
+18
+00:01:00,138 --> 00:01:01,421
+The Slay line is ignored.
+
+19
+00:01:01,641 --> 00:01:06,160
+In Slay mode, it still goes after the closest target, but then attacks, dealing its
+
+20
+00:01:06,160 --> 00:01:09,210
+damage one point at a time to as many Victims as it can.
+
+21
+00:01:09,210 --> 00:01:12,585
+If you're in the space, you take whatever damage is left over.
+
+22
+00:01:13,400 --> 00:01:17,805
+Its Dark Powers: Destructive Roar removes the top card of the Item deck closest to
+
+23
+00:01:17,805 --> 00:01:20,760
+the Wolf from the game, when revealed and every Upkeep.
+
+24
+00:01:20,980 --> 00:01:25,125
+Ravenous Hunger places it in the space with the most Victims and kills them all.
+
+25
+00:01:25,125 --> 00:01:28,959
+And Sixth Sense makes it ignore damage from Reaction cards like Retaliate.
+
+26
+00:01:29,767 --> 00:01:32,208
+Its Minor Dark Powers are the fairytale lines.
+
+27
+00:01:32,208 --> 00:01:36,295
+What big ears you have: entering or starting in its space costs you a health.
+
+28
+00:01:36,515 --> 00:01:39,627
+What big eyes: the same, but you discard a random Action card.
+
+29
+00:01:39,627 --> 00:01:43,694
+What big teeth: if it attacks you and you block all the damage, you lose a health
+
+30
+00:01:43,694 --> 00:01:44,045
+anyway.
+
+31
+00:01:44,867 --> 00:01:48,102
+Its Finales: Tasty Treats heals it one for every dead Victim.
+
+32
+00:01:48,102 --> 00:01:50,755
+Thrill of the Hunt heals it one whenever it moves.
+
+33
+00:01:50,975 --> 00:01:54,781
+Rampant Growth attacks twice and raises your Horror each time it hits you.
+
+34
+00:01:54,781 --> 00:01:58,228
+And the Epic Finale, One More Bite, always finds someone to attack.
+
+35
+00:01:59,033 --> 00:02:03,101
+A few tips. Track mode is your window: it hurts with Bloodlust, not damage, so
+
+36
+00:02:03,101 --> 00:02:03,727
+attack then.
+
+37
+00:02:03,947 --> 00:02:06,605
+Once it's in Slay mode, keep Victims out of its reach:
+
+38
+00:02:06,605 --> 00:02:07,787
+it tears through groups.
+
+39
+00:02:08,007 --> 00:02:11,510
+And Sixth Sense can make Retaliate useless, so don't build around it.
+
+40
+00:02:11,510 --> 00:02:12,017
+Good luck.
+

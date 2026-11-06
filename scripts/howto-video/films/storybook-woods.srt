@@ -1,0 +1,116 @@
+1
+00:00:00,300 --> 00:00:03,012
+Storybook Woods: fairies, flowers and a winding river.
+
+2
+00:00:03,012 --> 00:00:05,121
+But blood flows in the woods all the same.
+
+3
+00:00:05,341 --> 00:00:07,091
+Here's how the location plays.
+
+4
+00:00:07,900 --> 00:00:09,543
+There's no special setup here.
+
+5
+00:00:09,763 --> 00:00:12,559
+But the woods have fewer spaces than most locations.
+
+6
+00:00:12,559 --> 00:00:16,914
+That makes it look easy, but with everything so close together, it gets dangerous
+
+7
+00:00:16,914 --> 00:00:17,613
+very quickly.
+
+8
+00:00:18,433 --> 00:00:21,423
+Three rickety bridges cross the River, circled in red here.
+
+9
+00:00:21,423 --> 00:00:25,679
+They could collapse under too much weight, so only one Victim will follow you across
+
+10
+00:00:25,679 --> 00:00:26,135
+a bridge.
+
+11
+00:00:26,355 --> 00:00:30,356
+The Troll Bridge event can add a fourth bridge token, with the same one-Victim
+
+12
+00:00:30,356 --> 00:00:30,664
+limit.
+
+13
+00:00:31,500 --> 00:00:35,891
+If you find the Raft, place its four tokens on the marked Raft spaces, each touching
+
+14
+00:00:35,891 --> 00:00:37,303
+both the River and a space.
+
+15
+00:00:37,523 --> 00:00:41,778
+When you're in one of those spaces, you can use one movement to travel to any other
+
+16
+00:00:41,778 --> 00:00:45,674
+space with a Raft token. But you pay one Time for every Raft token you pass,
+
+17
+00:00:45,674 --> 00:00:47,827
+counting the ones you start and finish at.
+
+18
+00:00:48,633 --> 00:00:50,727
+A few cards change how you move and fight.
+
+19
+00:00:50,727 --> 00:00:54,564
+The Red Cape makes the Killer target you instead of a Victim when it's a tie.
+
+20
+00:00:54,784 --> 00:00:59,046
+The Songbirds cost three Time to hit a Killer within two spaces for three damage.
+
+21
+00:00:59,046 --> 00:01:03,360
+The Breadcrumb Path event links two spaces as a shortcut, but only you can use it.
+
+22
+00:01:04,167 --> 00:01:08,258
+Watch for The Full Moon is Out: roll to place the Killer in the Clearing, Meadow or
+
+23
+00:01:08,258 --> 00:01:09,884
+Glen, killing every Victim there.
+
+24
+00:01:10,104 --> 00:01:13,983
+Two Terror cards have the Killer carry a Victim off towards Grandmother's House.
+
+25
+00:01:13,983 --> 00:01:17,037
+And the Pied Piper event kills any Victim who ends up with him.
+
+26
+00:01:17,867 --> 00:01:21,082
+A few tips. The board is small, so the Killer is never far away:
+
+27
+00:01:21,082 --> 00:01:21,685
+keep moving.
+
+28
+00:01:21,905 --> 00:01:25,252
+Crossing a bridge takes one Victim at a time, so plan your trips.
+
+29
+00:01:25,252 --> 00:01:25,767
+Good luck.
+
