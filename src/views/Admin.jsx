@@ -102,6 +102,28 @@ const VIDEOS_TOTAL = VIDEO_LIST.length;
    this list as new ideas come up so nothing gets forgotten. */
 const BACKLOG = [
   {
+    title: 'How-to videos for add-on and optional rules (not tied to a Killer or Location)',
+    detail:
+      'Videos in the same format as the Killer and Location ones, for each optional rule set from the add-on boxes, so when you decide to bring one into a game you can watch how to introduce it. Rules explained thoroughly, as with the other videos. Each would be found under its name below. The planned file name is shown so the app can pick it up when it exists (src/assets/videos/). Where the card text is still unknown (marked "cards needed"), photograph the cards first. Make them in one batch using the Training videos prompt, adapted to "add-on rule sets" instead of a season. Nothing made yet.',
+    affects: ['Rules Reference', 'Asset Admin', 'This Game'],
+    status: 'todo',
+    list: [
+      { name: 'Extreme Horror Mode', from: 'Core Box', what: 'the harsher back of the Player board: tougher Horror track and 5 Time per turn.', file: 'S0-addon-extreme-horror-video.mp4' },
+      { name: 'Desperation Die', from: 'Box of Props', what: 'once a game, swap a red die for the black die: +1 success, or a skull and you lose. Includes the Book of Desperate Deaths.', file: 'S0-addon-desperation-die-video.mp4' },
+      { name: 'Ultimate Dice', from: 'Box of Props', what: 'take a Tier 1\u20133 die instead of your Ultimate Ability (4/5/6 saves), which cards each die boosts, and Ultimate Desperation.', file: 'S0-addon-ultimate-dice-video.mp4' },
+      { name: 'Signature Action cards (Box of Props set)', from: 'Box of Props', what: 'add one to the Action Tableau each game; the 10 cards (Dodge, Meditate, Double Up, Parkour, Discipline, Scavenge, Intimidate, Throw, Ambush, Protect). Most text provisional: cards needed.', file: 'S0-addon-signature-actions-video.mp4' },
+      { name: 'Signature Action cards (Guest Stars set)', from: 'Guest Stars Box', what: 'Bribe, Combo, Kick, Prescience, Will to Live. Cards needed.', file: 'S0-addon-signature-actions-2-video.mp4' },
+      { name: 'Vehicle Action cards', from: 'Guest Stars Box', what: 'Bone Chariot, Bulldozer, Chopper, Forklift, Van, and how they work with vehicles. Cards needed.', file: 'S0-addon-vehicle-actions-video.mp4' },
+      { name: 'Carolyn\u2019s Revenge', from: 'Guest Stars Box', what: 'psychic attacks, teleporting, attuned items and the Psychic Expulsion alternative win, usable against any Killer. Cards needed.', file: 'S0-addon-carolyns-revenge-video.mp4' },
+      { name: 'Grandma\u2019s Grudge', from: 'Guest Stars Box', what: 'Grandma\u2019s character pack and Handbag. Cards needed.', file: 'S0-addon-grandmas-grudge-video.mp4' },
+      { name: 'Promo and guest Final Girls with special rules', from: 'Box of Props / Guest Stars / promo packs', what: 'Layla (Signature Actions), Agnes (Ultimate Dice), Julia, Constance, Jamie, Paula and Julie: anything their cards change about play.', file: 'S0-addon-promo-final-girls-video.mp4' },
+      { name: 'Secret Envelopes and unlockable items', from: 'Core rules / Guest Stars', what: 'when you open an envelope and how the unlocked items join your games.', file: 'S0-addon-secret-envelopes-video.mp4' },
+      { name: 'Epic Finales (Series 3)', from: 'S3 Bonus Features Box', what: 'the 5 extra Epic Finale cards and how to add them.', file: 'S0-addon-s3-epic-finales-video.mp4' },
+      { name: 'Lore & Scenario Book scenarios', from: 'Series 1\u20134 Lore Books', what: 'how to set up and play a scenario, including any scenario-only rules.', file: 'S0-addon-scenarios-video.mp4' },
+      { name: 'Series 4 add-on boxes', from: 'Mausoleum Box, S4 Bonus Features, S3 Accessories Box, Vehicle Pack 3', what: 'check these for any optional rules (contents not yet catalogued) and add a line here for each rule set found.', file: '' },
+    ],
+  },
+  {
     title: 'How-to-play videos for every Killer and Location',
     detail:
       'A narrated, subtitled how-to-play video for each Killer and each Location, shown under the key art on This Game. The rules are explained thoroughly enough to play from; setup and tips stay brief because the app covers them elsewhere. All of Season 1 plus the Volk\u2019ar and Pesadilla Verde are done. Videos are made a whole season at a time: copy the prompt in Training videos (below) and give it to Claude with the season filled in.',
@@ -368,6 +390,18 @@ export default function Admin() {
           <span className={'admin-rag admin-rag--' + meta.cls}>{meta.label}</span>
         </h3>
         <p className="admin-backlog__item-detail">{item.detail}</p>
+        {item.list && (
+          <ul className="admin-backlog__list-rules">
+            {item.list.map((r) => (
+              <li key={r.name}>
+                <strong>{r.name}</strong>
+                {r.from && <span className="fg-type"> ({r.from})</span>}
+                {' \u2014 '}{r.what}
+                {r.file && <> <code className="admin-backlog__file">{r.file}</code></>}
+              </li>
+            ))}
+          </ul>
+        )}
         {item.status === 'partial' && item.remaining && (
           <p className="admin-backlog__remaining">
             <strong>Still to do:</strong> {item.remaining}

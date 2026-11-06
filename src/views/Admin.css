@@ -523,3 +523,9 @@
 }
 .admin-videos__list { columns: 2 22rem; }
 .admin-videos__list .admin-asset { break-inside: avoid; }
+
+/* Rule-set list inside a backlog item */
+.admin-backlog__list-rules { margin: 0 0 0.8rem 1.1rem; padding: 0; font-size: 0.84rem; color: var(--text-dim); }
+.admin-backlog__list-rules li { margin: 0.25rem 0; }
+.admin-backlog__list-rules strong { color: var(--text, inherit); }
+.admin-backlog__file { font-size: 0.75rem; opacity: 0.8; }
