@@ -104,7 +104,7 @@ const BACKLOG = [
   {
     title: 'How-to-play videos for every Killer and Location',
     detail:
-      'A short (under 2 minutes), narrated, subtitled video for each Killer and each Location, shown under the key art on This Game. The Volk\u2019ar and Pesadilla Verde are done. To make the next one, copy the prompt in Training videos (below) and give it to Claude with the name filled in.',
+      'A short (under 2 minutes), narrated, subtitled video for each Killer and each Location, shown under the key art on This Game. All of Season 1 plus the Volk\u2019ar and Pesadilla Verde are done. To make the next one, copy the prompt in Training videos (below) and give it to Claude with the name filled in.',
     affects: ['This Game', 'Asset Admin'],
     status: VIDEOS_DONE === VIDEOS_TOTAL ? 'done' : VIDEOS_DONE > 0 ? 'partial' : 'todo',
     remaining: `${VIDEOS_TOTAL - VIDEOS_DONE} of ${VIDEOS_TOTAL} videos still to make (${VIDEOS_DONE} done). See Training videos for the list.`,

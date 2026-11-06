@@ -50,8 +50,26 @@ def bg_image(path):
     return ImageEnhance.Brightness(im).enhance(0.32)
 
 
+def pdf_page(path):
+    """'.../FeatureFilmRules.pdf#12' -> a cached 250 dpi PNG of page 12."""
+    pdf, page = path.rsplit('#', 1)
+    os.makedirs(os.path.join(CACHE, 'pdf'), exist_ok=True)
+    stem = os.path.join(CACHE, 'pdf', f'{os.path.basename(pdf)[:-4]}-{int(page)}')
+    if not os.path.exists(stem + '.png'):
+        subprocess.run(['pdftoppm', '-r', '250', '-png', '-singlefile', '-f', page, '-l', page, pdf, stem],
+                       check=True, stderr=subprocess.DEVNULL)
+    return stem + '.png'
+
+
 def load(path, crop=None):
+    """An image from the tracker. `path` may be a PNG/JPG, or a rulebook PDF
+    page written 'file.pdf#N'. `crop` is a pixel box, or fractions of the
+    image (all values <= 1) such as (0.05, 0.3, 0.5, 0.7)."""
+    if '.pdf#' in path:
+        path = pdf_page(path)
     im = Image.open(path).convert('RGBA')
+    if crop and all(v <= 1 for v in crop):
+        crop = (int(crop[0] * im.width), int(crop[1] * im.height), int(crop[2] * im.width), int(crop[3] * im.height))
     return im.crop(crop) if crop else im
 
 

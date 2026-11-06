@@ -9,7 +9,7 @@ Make a How-to-play video for the Final Girl [Killer / Location] "[NAME]" (Series
 
 2. Use the existing builder, unchanged: run scripts/howto-video/setup.sh, then copy scripts/howto-video/films/volkar.py (for a Killer) or scripts/howto-video/films/pesadilla-verde.py (for a Location) to scripts/howto-video/films/[shortName].py, taking the season and shortName from src/data/games.js. Don't edit build.py: it fixes the house style (voice, layout, fonts, colours, subtitles, length limit).
 
-3. Rules: take them from the rule-sheet pages in src/assets/games/S[season]-[killer|location]-[shortName]-1.png, -2.png… (and any matching text in the s[season]-rules-pdf folder), cross-checked against the rulespal.com rulebook for that film.
+3. Rules: take them from the rule-sheet pages in src/assets/games/S[season]-[killer|location]-[shortName]-1.png, -2.png… and the Feature Film rulebook PDFs in the project root (FeatureFilmRules.pdf, _S2, _S3, and the s4-rules-pdf folder), cross-checked against the rulespal.com rulebook for that film. Rulebook PDF pages can be used as images too: write P + 'N' for page N (see the Season 1 film scripts).
 
 4. Graphics: only from the tracker: the -art and -flavour images, crops of the rule-sheet pages, token icons in src/assets/icons/ and src/assets/icons/rules/, and setup cards in src/assets/cards/. No images from the web.
 
