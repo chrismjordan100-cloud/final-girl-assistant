@@ -1,0 +1,312 @@
+1
+00:00:00,300 --> 00:00:04,456
+Terror From Destiny: there's no Killer. Something is trying to kill them, in a very
+
+2
+00:00:04,456 --> 00:00:05,207
+specific order.
+
+3
+00:00:05,427 --> 00:00:07,731
+Here's how the vignette plays, with any Location.
+
+4
+00:00:08,567 --> 00:00:12,838
+There's no Killer board. Line up the two Bloodlust cards beside the Location board,
+
+5
+00:00:12,838 --> 00:00:15,308
+with the marker on START. Horror starts at five.
+
+6
+00:00:15,528 --> 00:00:18,512
+For the Terror deck, set the five Fated Death cards aside.
+
+7
+00:00:18,512 --> 00:00:22,473
+Shuffle the vignette's other Terror cards with the Location's and deal eight.
+
+8
+00:00:22,473 --> 00:00:26,795
+Put one aside, shuffle the other seven with the Fated Deaths, then put the set-aside
+
+9
+00:00:26,795 --> 00:00:30,653
+card on top. That's thirteen cards, and the top one is never a Fated Death.
+
+10
+00:00:30,873 --> 00:00:34,460
+Add the Thwart Destiny card and one Premonition card to the Tableau.
+
+11
+00:00:34,460 --> 00:00:36,676
+For an easier game, add both Premonitions.
+
+12
+00:00:37,500 --> 00:00:41,705
+Choose a random Death Order card and put the five Death tokens face down on its
+
+13
+00:00:41,705 --> 00:00:42,663
+circles, shuffled.
+
+14
+00:00:42,883 --> 00:00:47,304
+Lay five Consequence cards face down in a row, with a Punishment card below each,
+
+15
+00:00:47,304 --> 00:00:50,307
+and put the Arrow token above the leftmost Consequence.
+
+16
+00:00:50,527 --> 00:00:54,089
+Then place the Victims and yourself from the Setup card, but no Killer.
+
+17
+00:00:54,900 --> 00:00:58,914
+Lay the Setup Grid rulers along the left and bottom edges of the board, matching the
+
+18
+00:00:58,914 --> 00:00:59,679
+coloured arrows.
+
+19
+00:00:59,899 --> 00:01:04,434
+For each of the five Fated Victims, roll two dice, one for each ruler, and place the
+
+20
+00:01:04,434 --> 00:01:07,835
+square token on a space at least half inside that grid section.
+
+21
+00:01:08,055 --> 00:01:12,411
+It can't go in your space, on an exit, or where another Fated Victim already is.
+
+22
+00:01:12,411 --> 00:01:14,263
+If there's no legal space, reroll.
+
+23
+00:01:15,067 --> 00:01:18,410
+Your goal is to save the five Fated Victims, in the right order.
+
+24
+00:01:18,410 --> 00:01:22,747
+They move and follow like normal Victims, but can't be replaced by Special Victims.
+
+25
+00:01:22,967 --> 00:01:25,399
+When one leaves by an exit, it isn't saved yet.
+
+26
+00:01:25,399 --> 00:01:29,694
+Put its token on the first Death token on the Death Order card that doesn't already
+
+27
+00:01:29,694 --> 00:01:33,057
+have a Fated Victim on it. Whether you saved it is decided later.
+
+28
+00:01:33,277 --> 00:01:37,722
+If a Fated Victim dies to anything other than a Fated Death card, put its token in
+
+29
+00:01:37,722 --> 00:01:40,704
+Limbo on the Bloodlust card. Don't raise Bloodlust yet:
+
+30
+00:01:40,704 --> 00:01:43,197
+that happens when its Death token is revealed.
+
+31
+00:01:44,033 --> 00:01:47,953
+When you draw a Fated Death Terror card, look at the next Death token on the Death
+
+32
+00:01:47,953 --> 00:01:50,583
+Order card, starting at START and following the arrows.
+
+33
+00:01:50,803 --> 00:01:53,596
+If a Fated Victim token is on it, set that aside.
+
+34
+00:01:53,596 --> 00:01:57,245
+Then flip the Death token face up. It shows who fate kills next.
+
+35
+00:01:58,067 --> 00:02:01,090
+If nobody was on the Death token, find the Victim it shows.
+
+36
+00:02:01,090 --> 00:02:04,421
+If they're in Limbo, suffer the card's Limbo penalty, two health.
+
+37
+00:02:04,421 --> 00:02:08,521
+Then kill them, wherever they are, even if location rules say Victims can't die.
+
+38
+00:02:08,521 --> 00:02:12,467
+Raise Bloodlust, and put their token on the Consequence card under the Arrow.
+
+39
+00:02:12,687 --> 00:02:15,664
+If the Fated Victim you set aside matches, they're saved:
+
+40
+00:02:15,664 --> 00:02:19,999
+take the Saved reward, two health, put the token on your Final Girl card, and apply
+
+41
+00:02:19,999 --> 00:02:23,289
+the normal save effects at the start of your next Action phase.
+
+42
+00:02:23,509 --> 00:02:25,977
+If they don't match, you saved them out of order.
+
+43
+00:02:25,977 --> 00:02:30,055
+Kill the Victim on the Death token as before, and the one you set aside goes into
+
+44
+00:02:30,055 --> 00:02:30,357
+Limbo.
+
+45
+00:02:30,577 --> 00:02:34,642
+Finally, discard the Death token and move the Arrow one Consequence card to the
+
+46
+00:02:34,642 --> 00:02:34,951
+right.
+
+47
+00:02:35,767 --> 00:02:40,169
+Ginny draws a Fated Death. The cheerleader's token sits on the next Death token, so
+
+48
+00:02:40,169 --> 00:02:44,518
+she sets it aside and flips the token. It's the rebel, whom she also saved, but in
+
+49
+00:02:44,518 --> 00:02:45,367
+the wrong order.
+
+50
+00:02:45,587 --> 00:02:49,831
+The rebel is killed, Bloodlust rises, and his token goes on the Consequence card
+
+51
+00:02:49,831 --> 00:02:52,325
+under the Arrow. The cheerleader goes to Limbo.
+
+52
+00:02:52,325 --> 00:02:53,757
+Then the Arrow moves right.
+
+53
+00:02:54,567 --> 00:02:58,001
+The Death Order card shows what happens when the Destiny symbol appears.
+
+54
+00:02:58,221 --> 00:03:01,554
+Treat every Killer Action on a Terror card as a Destiny symbol.
+
+55
+00:03:01,554 --> 00:03:03,828
+Two Killer Actions mean resolving it twice.
+
+56
+00:03:03,828 --> 00:03:05,944
+Ignore any other Killer-related effects.
+
+57
+00:03:06,164 --> 00:03:10,645
+Thwart Destiny costs one Time and can be played in any phase to ignore one Destiny
+
+58
+00:03:10,645 --> 00:03:11,028
+symbol.
+
+59
+00:03:11,833 --> 00:03:16,105
+Once no Fated Victims are left on the board, draw and resolve two Terror cards every
+
+60
+00:03:16,105 --> 00:03:17,529
+Killer phase instead of one.
+
+61
+00:03:17,749 --> 00:03:22,202
+The Hourglass of Despair Dark Power makes it cost three Time for a Fated Victim to
+
+62
+00:03:22,202 --> 00:03:23,125
+leave by an exit.
+
+63
+00:03:23,345 --> 00:03:25,733
+Premonition lets you flip Unknowns face up:
+
+64
+00:03:25,733 --> 00:03:30,342
+a Death token, a Consequence or Punishment card, the next Terror or Event card, the
+
+65
+00:03:30,342 --> 00:03:34,951
+top Item card or the Dark Power. Use it to learn the Death Order before you commit.
+
+66
+00:03:35,767 --> 00:03:38,534
+After the last Terror card, the game ends at once.
+
+67
+00:03:38,534 --> 00:03:41,356
+There's no Finale. Instead comes the Destiny phase.
+
+68
+00:03:41,576 --> 00:03:45,515
+Going left to right, resolve each Consequence card with a Fated Victim on it.
+
+69
+00:03:45,515 --> 00:03:49,811
+Flip it, and if you can't meet its demand, reveal the Punishment card below and lose
+
+70
+00:03:49,811 --> 00:03:54,006
+that much health. For example, you must have saved at least five ordinary Victims,
+
+71
+00:03:54,006 --> 00:03:55,080
+or lose three health.
+
+72
+00:03:55,300 --> 00:03:59,093
+If your Final Health flips and you come back, ignore the rest of that Punishment.
+
+73
+00:03:59,093 --> 00:04:01,060
+If you're still alive at the end, you win.
+
+74
+00:04:01,867 --> 00:04:05,655
+A few tips. Use Premonition early to reveal the Death Order before you start
+
+75
+00:04:05,655 --> 00:04:07,051
+escorting Fated Victims out.
+
+76
+00:04:07,271 --> 00:04:11,601
+Bank health and Items for the Destiny phase, because Consequences can cost a lot.
+
+77
+00:04:11,821 --> 00:04:14,452
+Players win about eighty per cent of logged games.
+
+78
+00:04:14,452 --> 00:04:14,979
+Good luck.
+
