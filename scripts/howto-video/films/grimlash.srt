@@ -1,0 +1,180 @@
+1
+00:00:00,300 --> 00:00:04,455
+Grimlash: an ancient harvest god, reawakened, and hungry for a grim and bountiful
+
+2
+00:00:04,455 --> 00:00:04,865
+harvest.
+
+3
+00:00:05,085 --> 00:00:06,365
+Here's how he plays.
+
+4
+00:00:07,200 --> 00:00:11,552
+Sort the fifteen Harvest Madness cards by level into three decks, and shuffle each.
+
+5
+00:00:11,772 --> 00:00:15,748
+Put the Harvest Madness marker on the start space of the track, outlined in orange,
+
+6
+00:00:15,748 --> 00:00:17,233
+at the top of the Killer board.
+
+7
+00:00:18,067 --> 00:00:22,143
+Madness gives you power, at a price. Whenever you see the pumpkin icon, move the
+
+8
+00:00:22,143 --> 00:00:23,315
+marker one space right.
+
+9
+00:00:23,535 --> 00:00:27,489
+When it reaches a new level, draw two cards from that level's deck, keep one and
+
+10
+00:00:27,489 --> 00:00:31,492
+discard the other. Its ability lasts as long as you stay at that level or higher.
+
+11
+00:00:31,712 --> 00:00:35,509
+But if Madness goes beyond Level Three, onto the skull, you lose immediately.
+
+12
+00:00:36,333 --> 00:00:40,402
+When you resolve a heart, choose: recover health as normal, or move the Madness
+
+13
+00:00:40,402 --> 00:00:42,925
+marker one space left for each heart. Never both.
+
+14
+00:00:43,145 --> 00:00:46,948
+If you drop to a lower level, discard the card for the level you just left.
+
+15
+00:00:46,948 --> 00:00:49,483
+If you climb back up, draw two and keep one again.
+
+16
+00:00:49,483 --> 00:00:51,764
+If a deck runs short, reshuffle its discards.
+
+17
+00:00:52,600 --> 00:00:56,887
+For example, Thorn-Choked Veins at Level One raises your maximum health by one and
+
+18
+00:00:56,887 --> 00:01:01,122
+heals one. Blood of the Reaper at Level Two lets you flip it and lose a health to
+
+19
+00:01:01,122 --> 00:01:05,357
+reroll all your dice. One With the Land at Level Three adds three maximum health.
+
+20
+00:01:05,577 --> 00:01:09,975
+Health bonuses go when the card is discarded, and any health above your new maximum
+
+21
+00:01:09,975 --> 00:01:10,399
+is lost.
+
+22
+00:01:10,619 --> 00:01:13,809
+Once-per-turn powers are used by flipping the card face down.
+
+23
+00:01:13,809 --> 00:01:15,483
+Flip them back up in the Upkeep.
+
+24
+00:01:16,300 --> 00:01:19,494
+Grimlash only moves one space with his normal Killer action.
+
+25
+00:01:19,494 --> 00:01:23,858
+But a move icon on a Terror card moves him at full speed, and his speed depends on
+
+26
+00:01:23,858 --> 00:01:26,945
+your current Harvest Madness level, as shown on his board.
+
+27
+00:01:27,767 --> 00:01:32,549
+Fields of Madness, his Epic Dark Power: at Madness Level nought or one, roll one die
+
+28
+00:01:32,549 --> 00:01:34,884
+fewer, minimum one. Level two, no change.
+
+29
+00:01:34,884 --> 00:01:36,364
+Level three, one die more.
+
+30
+00:01:36,584 --> 00:01:40,734
+Rite of the Old One: whenever your Madness reaches a new level, discard the next
+
+31
+00:01:40,734 --> 00:01:44,936
+Terror card. Rite of the Corrupted: each Upkeep, Madness goes up one if it didn't
+
+32
+00:01:44,936 --> 00:01:45,715
+rise that turn.
+
+33
+00:01:45,935 --> 00:01:50,340
+Root-Bound Curse: whenever you resolve hearts, to heal or lower Madness, Grimlash
+
+34
+00:01:50,340 --> 00:01:53,657
+recovers half that much, rounded up. It's his nastiest power.
+
+35
+00:01:54,467 --> 00:01:58,526
+Minor powers: Flaming Eyes adds two Madness whenever he enters your space, and
+
+36
+00:01:58,526 --> 00:02:02,637
+Burning Sickle deals one damage to every Victim with you whenever he hurts you.
+
+37
+00:02:02,857 --> 00:02:06,671
+Finales: Withered Harbinger costs you a Time for every space he moves.
+
+38
+00:02:06,671 --> 00:02:09,340
+Hunger of the Old Gods pulls Victims towards him.
+
+39
+00:02:09,340 --> 00:02:12,500
+Ancient Abomination adds your Madness level to his attack.
+
+40
+00:02:12,720 --> 00:02:16,849
+And the Epic God of Blood and Grain kills every Victim when revealed, then hunts you
+
+41
+00:02:16,849 --> 00:02:17,733
+and attacks twice.
+
+42
+00:02:18,567 --> 00:02:22,705
+A few tips. Higher Madness gives better powers, but the skull is an instant loss.
+
+43
+00:02:22,925 --> 00:02:26,061
+When you get hearts, spend them on whichever track is closer to killing you.
+
+44
+00:02:26,281 --> 00:02:29,958
+He's one of the easier killers: players win nearly eighty per cent of games.
+
+45
+00:02:29,958 --> 00:02:30,441
+Good luck.
+
