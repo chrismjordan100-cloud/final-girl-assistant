@@ -1,0 +1,220 @@
+1
+00:00:00,300 --> 00:00:02,904
+Berith, the fallen angel, has possessed Ursula, a nun.
+
+2
+00:00:02,904 --> 00:00:05,121
+You have to kill her, and then bring her back.
+
+3
+00:00:05,341 --> 00:00:06,621
+Here's how he plays.
+
+4
+00:00:07,433 --> 00:00:11,611
+Put the Divine Blessings sheet beside the board, Heavenly side up for a normal game
+
+5
+00:00:11,611 --> 00:00:13,172
+or Hellish side for a hard one.
+
+6
+00:00:13,392 --> 00:00:15,931
+Add the Expel Demon Action cards to the Tableau.
+
+7
+00:00:16,767 --> 00:00:20,873
+The Killer meeple, its health, Attack and Movement Values are all Ursula's body,
+
+8
+00:00:20,873 --> 00:00:21,951
+controlled by Berith.
+
+9
+00:00:22,171 --> 00:00:24,741
+When possessed Ursula is killed, Berith leaves her.
+
+10
+00:00:24,741 --> 00:00:26,203
+But that's only half the job.
+
+11
+00:00:27,033 --> 00:00:31,288
+When you see the Divine Blessing icon, put a black Final Health token face down on
+
+12
+00:00:31,288 --> 00:00:35,439
+the topmost empty space of the Blessings sheet, and resolve that space's effect.
+
+13
+00:00:35,659 --> 00:00:38,806
+There are seven spaces, from Wisdom down to Fear of the Lord.
+
+14
+00:00:38,806 --> 00:00:43,037
+Their individual effects are printed too small on the rule sheet to read, so check
+
+15
+00:00:43,037 --> 00:00:43,915
+the sheet itself.
+
+16
+00:00:44,135 --> 00:00:48,010
+Tokens on the sheet can't be removed or revealed unless a card says so.
+
+17
+00:00:48,010 --> 00:00:52,541
+And the supply is limited: tokens used by the Killer, by you, or removed by effects
+
+18
+00:00:52,541 --> 00:00:53,905
+mean fewer for the sheet.
+
+19
+00:00:54,733 --> 00:00:59,124
+Blessings mostly come from Expel Demon, which you can only play in Ursula's space.
+
+20
+00:00:59,124 --> 00:01:00,088
+It costs two Time.
+
+21
+00:01:00,308 --> 00:01:02,920
+Three successes: two Blessings, and lose a Time.
+
+22
+00:01:02,920 --> 00:01:05,151
+Two successes: one Blessing, lose a Time.
+
+23
+00:01:05,371 --> 00:01:09,412
+One success: one Blessing, but choose to lose a health or raise Horror, and lose a
+
+24
+00:01:09,412 --> 00:01:09,659
+Time.
+
+25
+00:01:09,879 --> 00:01:13,843
+With no successes you still get a Blessing, but the card shows a heavier cost in
+
+26
+00:01:13,843 --> 00:01:14,636
+health and Time.
+
+27
+00:01:15,467 --> 00:01:19,531
+First, kill possessed Ursula under the normal rules, including revealing her black
+
+28
+00:01:19,531 --> 00:01:22,208
+Final Health token and healing her if it shows health.
+
+29
+00:01:22,428 --> 00:01:25,863
+Then Berith leaves her body, and Ursula must come back from the dead.
+
+30
+00:01:25,863 --> 00:01:27,953
+Reveal every token on the Blessings sheet.
+
+31
+00:01:28,173 --> 00:01:31,101
+If any of them shows health, her life is restored and you win.
+
+32
+00:01:31,101 --> 00:01:33,699
+If they're all blank, her soul is lost, and so are you.
+
+33
+00:01:33,919 --> 00:01:37,435
+You don't need all seven before the kill, but the more Blessings, the better your
+
+34
+00:01:37,435 --> 00:01:37,652
+odds.
+
+35
+00:01:38,467 --> 00:01:42,327
+Rejecting God: lose two Time every time a Divine Blessing is resolved.
+
+36
+00:01:42,327 --> 00:01:43,651
+It's his toughest power.
+
+37
+00:01:43,871 --> 00:01:48,019
+Keeping Ursula Alive: in each Upkeep she recovers a health, or if she's already
+
+38
+00:01:48,019 --> 00:01:49,332
+full, Horror goes up one.
+
+39
+00:01:49,552 --> 00:01:53,992
+Lamb to the Slaughter: each Upkeep, the Victim farthest from Ursula is placed in her
+
+40
+00:01:53,992 --> 00:01:54,309
+space.
+
+41
+00:01:54,529 --> 00:01:58,925
+The Epic Satanic Influence: during Upkeep, take damage equal to the number of normal
+
+42
+00:01:58,925 --> 00:02:00,076
+Victims in your space.
+
+43
+00:02:00,900 --> 00:02:05,435
+Two Minor Dark Powers: Blasphemy stops you resolving Expel Demon while it's in play,
+
+44
+00:02:05,435 --> 00:02:07,919
+and Demonic Curse cuts your hand limit to six.
+
+45
+00:02:08,139 --> 00:02:11,153
+Finales: It Wants You! targets, moves, and attacks twice.
+
+46
+00:02:11,153 --> 00:02:14,113
+Hell on Earth pushes Bloodlust to the top when revealed.
+
+47
+00:02:14,113 --> 00:02:17,973
+Spiritual Attack makes you lose an extra health whenever she attacks you.
+
+48
+00:02:18,193 --> 00:02:22,434
+The Epic Legions of Hell hunts twice each Killer phase, and every Victim killed
+
+49
+00:02:22,434 --> 00:02:23,185
+raises Horror.
+
+50
+00:02:24,000 --> 00:02:28,001
+A few tips. Don't rush the kill: every Blessing you add before she dies improves
+
+51
+00:02:28,001 --> 00:02:28,501
+your odds.
+
+52
+00:02:28,721 --> 00:02:32,657
+Expel Demon keeps you close to her, so bring health and Reaction cards, and save
+
+53
+00:02:32,657 --> 00:02:35,313
+Victims early before Lamb to the Slaughter takes them.
+
+54
+00:02:35,533 --> 00:02:38,572
+Players win about sixty-two per cent of games against him.
+
+55
+00:02:38,572 --> 00:02:39,096
+Good luck.
+
