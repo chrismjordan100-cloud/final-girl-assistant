@@ -1,0 +1,81 @@
+# How-to-play video script. Built by scripts/howto-video/build.py — see the
+# Training videos panel in Asset Admin for the prompt that makes these.
+import os
+A = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'src', 'assets')
+G = os.path.join(A, 'games') + '/'
+I = os.path.join(A, 'icons') + '/'
+R = I + 'rules/'
+# Series 3 Feature Film rulebook in the project root; P + 'N' is page N.
+P = os.path.join(A, '..', '..', 'FeatureFilmRules_S3.pdf') + '#'
+# Sharp 600 dpi crops of small cards from that rulebook.
+S = os.path.join(os.path.dirname(os.path.abspath(__file__)), 's3img') + '/'
+
+FILM = dict(
+    type='location',
+    season=3,
+    shortName='marrek-warehouse',
+    name='Marrek Warehouse',
+    heading='MARREK WAREHOUSE',
+    film='The Marrek Murders',
+    background=G+'S3-location-marrek-warehouse-art.png', flavour=G+'S3-location-marrek-warehouse-flavour.png',
+    scenes=[
+        dict(title='Marrek Warehouse',
+             kind='intro',
+             images=[(G+'S3-location-marrek-warehouse-board.jpg', None)],
+             lines=[('Marrek Warehouse: a state-of-the-art locking system, and someone has locked you in.', 'Marrick Warehouse: a state-of-the-art locking system, and someone has locked you in.'),
+                    ("Here's how the location plays.", None)]),
+        dict(title='Special setup',
+             bullets=['Forklift token in The Pit', 'Locked token on every exit', '3 Click! cards: not in the top 2', 'Climb & Leap into the Tableau'],
+             icons=[R+'S3-location-marrek-warehouse-icon-locked-exit.png'],
+             images=[(P+'14', (0.51, 0.7, 1.0, 0.95))],
+             lines=[("Put the Forklift token in The Pit. It's only used if you find the Forklift Keys.", None),
+                    ('Put a Locked token on each exit space.', None),
+                    ('Set the three Click! Terror cards aside and build the Terror deck as normal. Then take off the top two cards, shuffle the Click! cards into the rest, and put the two back on top.', None),
+                    ('Put the Climb and Leap Action cards in the Tableau.', None)]),
+        dict(title='Locked exits',
+             bullets=['Locked: no Victims saved there', 'You can still enter the space', 'Unlock with Items or events', 'Click! cards unlock automatically', 'Unlocked: remove the token'],
+             icons=[R+'S3-location-marrek-warehouse-icon-locked-exit.png'],
+             images=[(S+'click.png', None)],
+             lines=[('While an exit is Locked, no Victims can be saved there, though you can still move into the space.', None),
+                    ("To save Victims you'll need to find ways to unlock exits, such as Bolt Cutters or the Power Drill, or wait for the timers: the Click! Terror cards. When an exit is unlocked, remove its Locked token.", None),
+                    ('Each Click! card unlocks its named exit, then you draw the next Terror card. If a Click! card is discarded by another effect, still unlock the exit, but ignore the rest.', None)]),
+        dict(title='Rack spaces',
+             bullets=['Tops of the storage racks', 'Enemies & Victims move in and out normally', 'YOU need Climb to get up', 'Leave by normal movement'],
+             icons=[R+'S3-location-marrek-warehouse-icon-rack-space.png'],
+             images=[(G+'S3-location-marrek-warehouse-board.jpg', None)],
+             lines=[('Rack spaces, with this icon, are the tops of the storage racks. Enemies and Victims move to and from them normally, unless a card says otherwise.', None),
+                    ("But you have to use the Climb card to get up onto one. You can't use Climb to come down: just use normal movement like Walk or Sprint.", None)]),
+        dict(title='Getting Climb and Leap',
+             bullets=['Not bought normally', 'Discard Walk: take Climb OR Leap', 'Discard Sprint: take BOTH', 'Any time in the Action phase'],
+             images=[(P+'15', (0.0, 0.4, 0.5, 0.56))],
+             lines=[("Climb and Leap aren't bought like other Action cards.", None),
+                    ('At any time in your Action phase, discard a Walk card to take Climb or Leap into your hand, or discard a Sprint card to take both.', None)]),
+        dict(title='Climb',
+             bullets=['Only when next to a Rack space', '2 successes: up, −1 Time', '1 success: up, −2 Time', 'No successes: −1 Health, card back to hand', 'Victims may follow'],
+             images=[(S+'climb.png', None)],
+             lines=[("Climb can only be played when you're next to a Rack space.", None),
+                    ('Two successes: move up onto the adjacent Rack, losing one Time. One success: move up, losing two Time. No successes: lose one health, and the card goes back to your hand to try again.', None),
+                    ('Victims may follow you when you climb.', None)]),
+        dict(title='Leap',
+             bullets=['Jump from one Rack to another', '2 successes: −1 Time', '1 success: −2 Time', 'Fail: MUST move 1 space, −2 Health', 'Followers climb down unhurt'],
+             images=[(P+'15', (0.0, 0.66, 0.5, 0.74))],
+             lines=[('Leap jumps you directly from one Rack space to another, and Victims may follow.', None),
+                    ('Two successes costs one Time, one success two Time.', None),
+                    ("With no successes you fall: you must move one space, down to the ground, and lose two health. Victims who were following don't get hurt; they just climb down after you to see if you're OK.", None)]),
+        dict(title='The Pit',
+             bullets=['The middle of the warehouse', 'Panicking from here: roll 2 dice, not 1', 'Use its Panic numbers'],
+             images=[(G+'S3-location-marrek-warehouse-board.jpg', None), (P+'15', (0.0, 0.77, 0.5, 0.88))],
+             lines=[('The middle of the warehouse is The Pit. When someone panics out of it, roll two dice instead of one to decide where they go, using the Panic numbers around it.', None)]),
+        dict(title='Warehouse cards',
+             bullets=['Forklift Keys: drive, rescue from Racks', 'Supervisor: his group panics together', '"You aren\'t going anywhere": re-locks exits', 'Smarter Than They Look: self-rescue'],
+             images=[(S+'forklift.png', None)],
+             lines=[('With the Forklift Keys, the Forklift moves with you, though not into Search or Rack spaces, and for one Time you can safely bring a Victim down from an adjacent Rack.', None),
+                    ('The Supervisor event: when Victims in his space panic, roll one die and move them all together, Supervisor included.', None),
+                    ("You Aren't Going Anywhere locks every exit again and shuffles the Click! cards back in. Smarter Than They Look lets Victims on an exit save themselves the moment it unlocks.", None)]),
+        dict(title='Tips',
+             bullets=['Gather Victims at exits before they unlock', 'Racks are your escape routes', 'Keep a Walk or Sprint to swap', 'Bowling Ball from the Racks'],
+             images=[(G+'S3-location-marrek-warehouse-art.png', None)],
+             lines=[('A few tips. Get Victims to an exit before it unlocks, ready to save the moment it opens.', None),
+                    ('Use the racks to move around, and keep a spare Walk or Sprint to trade for Climb or Leap.', None),
+                    ('A Bowling Ball dropped from a rack does three damage. Good luck.', None)]),
+    ])
