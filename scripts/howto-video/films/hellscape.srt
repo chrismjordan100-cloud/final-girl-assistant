@@ -1,0 +1,196 @@
+1
+00:00:00,300 --> 00:00:03,457
+The Hellscape: a landscape that toys with everyone who enters it.
+
+2
+00:00:03,677 --> 00:00:05,427
+Here's how the location plays.
+
+3
+00:00:06,233 --> 00:00:10,299
+Shuffle the four Hellscape tiles and deal one onto each blank space of the board,
+
+4
+00:00:10,299 --> 00:00:14,063
+with its symbol at the top left so the Panic numbers read the right way up.
+
+5
+00:00:14,283 --> 00:00:17,102
+Put one Victim on each space of each tile, eight in all.
+
+6
+00:00:17,102 --> 00:00:20,576
+Then reveal the Setup card for the other Victims, you and the Killer.
+
+7
+00:00:20,796 --> 00:00:22,972
+Add the Hellshift Action card to the Tableau.
+
+8
+00:00:23,800 --> 00:00:26,211
+The four double-sided tiles each have a symbol:
+
+9
+00:00:26,211 --> 00:00:30,417
+star, square, hourglass and clover. They move during the game, and everything on a
+
+10
+00:00:30,417 --> 00:00:33,187
+tile, you, Enemies, Victims and tokens, moves with it.
+
+11
+00:00:33,407 --> 00:00:37,885
+Shift: move every tile one step clockwise or anticlockwise, as the card says.
+
+12
+00:00:37,885 --> 00:00:39,572
+Swap: two tiles trade places.
+
+13
+00:00:39,792 --> 00:00:43,833
+Flip: take everything off, noting the colour of each space, flip the tile and put
+
+14
+00:00:43,833 --> 00:00:46,377
+the pieces back on the matching colours. Rearrange:
+
+15
+00:00:46,377 --> 00:00:49,371
+set all the tiles however you like, but you can't flip them.
+
+16
+00:00:50,200 --> 00:00:53,144
+Once in every Upkeep you must roll the two Hellscape dice.
+
+17
+00:00:53,364 --> 00:00:57,076
+If they match, flip that tile. If they're different, swap those two tiles.
+
+18
+00:00:57,296 --> 00:01:01,186
+In this example both dice show the same symbol, so Ryan flips that tile:
+
+19
+00:01:01,186 --> 00:01:05,723
+he lifts off himself and three Victims, flips it, and puts the purple pieces back on
+
+20
+00:01:05,723 --> 00:01:07,344
+purple and the red one on red.
+
+21
+00:01:08,167 --> 00:01:11,272
+Each tile has one or two wall sides that nobody can cross.
+
+22
+00:01:11,272 --> 00:01:15,662
+Depending on the layout, a tile or a whole area can be completely cut off from you
+
+23
+00:01:15,662 --> 00:01:16,465
+or the Enemies.
+
+24
+00:01:16,685 --> 00:01:19,352
+You'll need to move tiles, or wait for the dice, to get through.
+
+25
+00:01:19,572 --> 00:01:24,137
+Anyone who panics into a wall, or a direction with no connection, simply stays put.
+
+26
+00:01:24,967 --> 00:01:29,145
+Range and targeting always count the spaces needed to actually move from one to the
+
+27
+00:01:29,145 --> 00:01:29,447
+other.
+
+28
+00:01:29,667 --> 00:01:33,748
+If there's no valid path to a Killer Action's target, the Killer doesn't move, but
+
+29
+00:01:33,748 --> 00:01:35,939
+still resolves its attacks in its own space.
+
+30
+00:01:36,159 --> 00:01:39,069
+Closest and farthest only consider reachable Victims.
+
+31
+00:01:39,069 --> 00:01:42,858
+If none can be reached, ignore the tile walls and use your judgement.
+
+32
+00:01:42,858 --> 00:01:45,439
+The same goes for things like the nearest exit.
+
+33
+00:01:45,659 --> 00:01:49,179
+Effects that place someone ignore walls. Effects that move them don't.
+
+34
+00:01:50,000 --> 00:01:53,115
+Hellshift lets you reshape the board. It costs two Time to buy.
+
+35
+00:01:53,335 --> 00:01:56,310
+Two successes: rearrange all the tiles as you like.
+
+36
+00:01:56,310 --> 00:01:59,168
+One success: swap any two tiles, and lose a Time.
+
+37
+00:01:59,168 --> 00:02:00,801
+No successes: lose two Time.
+
+38
+00:02:01,021 --> 00:02:05,126
+Use it to bring Victims to an exit, or to wall the Killer off from you and everyone
+
+39
+00:02:05,126 --> 00:02:05,373
+else.
+
+40
+00:02:06,200 --> 00:02:10,636
+Spiral of Death shifts every tile one step anticlockwise, adds a Victim on the star
+
+41
+00:02:10,636 --> 00:02:14,750
+and square tiles, then the Killer targets you or a Victim, moves and attacks.
+
+42
+00:02:14,750 --> 00:02:16,888
+Spiral of Horrors shifts them clockwise.
+
+43
+00:02:17,108 --> 00:02:20,676
+Stare Into The Abyss costs you a health whenever you move onto a tile.
+
+44
+00:02:20,676 --> 00:02:24,959
+And the Bone Key item lets you ride the Bone Chariot to any tile space for two Time.
+
+45
+00:02:25,767 --> 00:02:29,393
+A few tips. Use Hellshift to strand the Killer on a tile with no Victims.
+
+46
+00:02:29,613 --> 00:02:33,553
+Check your route to the exits before shifting, because the Upkeep dice can cut you
+
+47
+00:02:33,553 --> 00:02:34,755
+off right after a rescue.
+
+48
+00:02:34,975 --> 00:02:37,305
+It's one of the best-rated boards in the game.
+
+49
+00:02:37,305 --> 00:02:37,812
+Good luck.
+
