@@ -1,0 +1,152 @@
+1
+00:00:00,300 --> 00:00:04,360
+Utopia: where can you find it? Nowhere. Just desert, a few buildings, and things
+
+2
+00:00:04,360 --> 00:00:05,121
+under the sand.
+
+3
+00:00:05,341 --> 00:00:07,091
+Here's how the location plays.
+
+4
+00:00:07,900 --> 00:00:11,291
+Shuffle the twelve Sand Snake cards to make the Sand Snake deck.
+
+5
+00:00:11,291 --> 00:00:12,721
+That's all the extra setup.
+
+6
+00:00:13,533 --> 00:00:15,768
+Each turn the Sand Snakes rise up and attack.
+
+7
+00:00:15,768 --> 00:00:19,443
+At the end of the Killer phase, draw two Sand Snake cards and follow them.
+
+8
+00:00:19,663 --> 00:00:23,457
+Each snake does one damage to one target in the named space, in this order:
+
+9
+00:00:23,457 --> 00:00:26,340
+a Victim first, then you, then a Minion, then the Killer.
+
+10
+00:00:26,560 --> 00:00:30,396
+For example, this one attacks the Crossroads, or the Bunker if the Crossroads has
+
+11
+00:00:30,396 --> 00:00:30,869
+collapsed.
+
+12
+00:00:31,089 --> 00:00:32,860
+Then they burrow back underground.
+
+13
+00:00:33,667 --> 00:00:37,614
+Sand Snakes aren't Minions. You can't attack, kill or otherwise deal with them,
+
+14
+00:00:37,614 --> 00:00:41,411
+except that Reaction cards and Item effects can prevent their damage to you.
+
+15
+00:00:41,631 --> 00:00:44,823
+One card tells you to reshuffle the discard pile into the deck.
+
+16
+00:00:44,823 --> 00:00:48,116
+Do that after resolving any other Sand Snake cards drawn with it.
+
+17
+00:00:48,933 --> 00:00:53,254
+Boulder spaces, with this icon, are safe from Sand Snake attacks, and some cards
+
+18
+00:00:53,254 --> 00:00:54,011
+refer to them.
+
+19
+00:00:54,231 --> 00:00:56,784
+Some ranged weapons reach further from a Boulder:
+
+20
+00:00:56,784 --> 00:01:00,119
+the Six-Shooter gets range two, and the Scoped Rifle range four.
+
+21
+00:01:00,933 --> 00:01:03,530
+Some Terror and Event cards make a space collapse.
+
+22
+00:01:03,530 --> 00:01:07,789
+Earthquake!, for example: roll a die, one to three the Crossroads, four to six the
+
+23
+00:01:07,789 --> 00:01:08,464
+Trailer Park.
+
+24
+00:01:08,684 --> 00:01:11,387
+When a space collapses, every Victim in it is killed.
+
+25
+00:01:11,387 --> 00:01:15,468
+You and any Enemies there take damage, and anyone left panics until they're out.
+
+26
+00:01:15,688 --> 00:01:19,800
+Put a Sinkhole token there. Nobody can move into or through that space for the rest
+
+27
+00:01:19,800 --> 00:01:21,683
+of the game. There are four Sinkholes.
+
+28
+00:01:22,500 --> 00:01:26,873
+Dehydration resets your Time to five at the end of each Planning phase, unless you
+
+29
+00:01:26,873 --> 00:01:29,113
+have some left over. The Canteen cures it.
+
+30
+00:01:29,333 --> 00:01:32,986
+Stalkers makes you draw three Sand Snakes each turn instead of two.
+
+31
+00:01:32,986 --> 00:01:35,221
+Landslide! closes the Mountain Pass exit.
+
+32
+00:01:35,441 --> 00:01:37,644
+The Bulldozer Keys let you drive the Bulldozer:
+
+33
+00:01:37,644 --> 00:01:41,159
+while you're with it, you and Victims in your space ignore the Sand Snakes.
+
+34
+00:01:41,967 --> 00:01:45,868
+A few tips. Treat the Sand Snakes as a second Killer and check which spaces they
+
+35
+00:01:45,868 --> 00:01:46,063
+hit.
+
+36
+00:01:46,283 --> 00:01:49,781
+Fight from the Boulders, where you're safe and ranged weapons reach further.
+
+37
+00:01:50,001 --> 00:01:53,318
+And Sinkholes are permanent, so keep your route to the exits open.
+
+38
+00:01:53,318 --> 00:01:53,820
+Good luck.
+
