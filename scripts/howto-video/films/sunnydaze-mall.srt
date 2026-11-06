@@ -1,0 +1,292 @@
+1
+00:00:00,300 --> 00:00:03,911
+Sunnydaze Mall: where every day is filled with sunshine and joy.
+
+2
+00:00:03,911 --> 00:00:04,588
+Until today.
+
+3
+00:00:04,808 --> 00:00:06,557
+Here's how the location plays.
+
+4
+00:00:07,367 --> 00:00:11,697
+Put the Savior, the orange Special Victim meeple, on the space the Setup card shows.
+
+5
+00:00:11,917 --> 00:00:15,985
+Put his Ally card in your play area with four Health markers and four Action cubes,
+
+6
+00:00:15,985 --> 00:00:19,661
+and his Trust card beside it with the marker on the bottom row, Go to Hell!
+
+7
+00:00:19,881 --> 00:00:24,003
+Shuffle the Savior cards into a deck, add the Build Trust cards to the Tableau, and
+
+8
+00:00:24,003 --> 00:00:25,791
+put the Chopper token in the Atrium.
+
+9
+00:00:26,600 --> 00:00:29,789
+The Savior is a teenager the fate of humanity depends on.
+
+10
+00:00:29,789 --> 00:00:31,635
+If he dies, you lose immediately.
+
+11
+00:00:31,855 --> 00:00:36,004
+He's the Killer's primary target: whenever an Enemy would target you, it targets him
+
+12
+00:00:36,004 --> 00:00:36,399
+instead.
+
+13
+00:00:36,619 --> 00:00:39,062
+He counts as an Ally, so the Ally rules apply.
+
+14
+00:00:39,062 --> 00:00:41,824
+And in the Panic phase he panics just like a Victim.
+
+15
+00:00:42,633 --> 00:00:45,833
+He doesn't trust you yet. His Trust level decides what he'll do.
+
+16
+00:00:46,053 --> 00:00:48,544
+At Go to Hell! he won't use any Ally actions.
+
+17
+00:00:48,544 --> 00:00:53,192
+At Eat Me he'll use the bottom two: Recover, and his Reaction that reduces damage by
+
+18
+00:00:53,192 --> 00:00:53,413
+one.
+
+19
+00:00:53,633 --> 00:00:57,300
+At I Guess You're OK, the bottom four, adding two Move one space actions.
+
+20
+00:00:57,300 --> 00:01:01,470
+At I Believe You! he'll use all of them, including his attack, and only then can he
+
+21
+00:01:01,470 --> 00:01:02,273
+leave the board.
+
+22
+00:01:03,100 --> 00:01:05,356
+Raise Trust with the Build Trust Action card.
+
+23
+00:01:05,356 --> 00:01:08,113
+You must be in his space, and it costs two Time to buy.
+
+24
+00:01:08,333 --> 00:01:12,745
+The best result raises Trust by two; the next two results raise it by one, one of
+
+25
+00:01:12,745 --> 00:01:15,686
+them costing a Time; and the worst costs you two Time.
+
+26
+00:01:15,686 --> 00:01:18,137
+Moving up the Trust card is increasing Trust;
+
+27
+00:01:18,137 --> 00:01:20,643
+effects that decrease it move the marker down.
+
+28
+00:01:21,467 --> 00:01:25,370
+While he's in play, draw a Savior card each Upkeep and resolve the row for his
+
+29
+00:01:25,370 --> 00:01:28,272
+current Trust level, until he leaves or the deck runs out.
+
+30
+00:01:28,492 --> 00:01:32,480
+For example, You're Not the Boss of Me!: at I Believe You! you move him up to two
+
+31
+00:01:32,480 --> 00:01:36,172
+spaces any way you like. At Go to Hell! he runs three spaces away from you.
+
+32
+00:01:37,000 --> 00:01:40,796
+When his Trust is at I Believe You! and he's on an exit, he may leave the board
+
+33
+00:01:40,796 --> 00:01:41,949
+during the Action phase.
+
+34
+00:01:42,169 --> 00:01:46,569
+You immediately get every unclaimed Victim reward on your Final Girl card and flip
+
+35
+00:01:46,569 --> 00:01:50,916
+it, unlocking your Ultimate Ability. If it's already flipped, take the Additional
+
+36
+00:01:50,916 --> 00:01:52,687
+Victims Saved reward three times.
+
+37
+00:01:52,907 --> 00:01:56,235
+After that, Enemies target you again, and the game ends normally.
+
+38
+00:01:57,067 --> 00:02:01,325
+To use one of his actions, put an Action cube on the leftmost box of that row.
+
+39
+00:02:01,325 --> 00:02:03,728
+A row that already has a cube can't be used.
+
+40
+00:02:03,728 --> 00:02:06,075
+Each Upkeep, slide all cubes one box right;
+
+41
+00:02:06,075 --> 00:02:08,587
+when one drops off, that action is free again.
+
+42
+00:02:08,807 --> 00:02:12,806
+Actions are for the Action phase. The blue Reaction can be used in any phase, in
+
+43
+00:02:12,806 --> 00:02:13,905
+response to an attack.
+
+44
+00:02:14,125 --> 00:02:18,134
+When you share a space with an Ally and one of you is attacked, you choose who takes
+
+45
+00:02:18,134 --> 00:02:21,379
+it. He doesn't follow you, can't carry Items and can't save Victims.
+
+46
+00:02:22,200 --> 00:02:25,136
+Spaces with this icon are Railings, around the Food Court.
+
+47
+00:02:25,136 --> 00:02:27,768
+White arrows show which way you can move along them.
+
+48
+00:02:27,988 --> 00:02:32,406
+While moving, you or an Ally can jump from a Railing to the Food Court space beside
+
+49
+00:02:32,406 --> 00:02:34,907
+it. Roll a die: on five or six you land safely;
+
+50
+00:02:34,907 --> 00:02:38,420
+on one to four you lose one health. Victims won't follow you over.
+
+51
+00:02:38,640 --> 00:02:43,118
+Enemies never jump down by choice. But if an effect pushes Enemies or Victims down,
+
+52
+00:02:43,118 --> 00:02:45,168
+including panic, they lose one health.
+
+53
+00:02:45,388 --> 00:02:49,745
+Anyone damaged on a Railing is knocked over into the Food Court below, taking one
+
+54
+00:02:49,745 --> 00:02:54,156
+extra damage. And from the Food Court, ranged weapons can't target Railing spaces.
+
+55
+00:02:54,967 --> 00:02:59,565
+There are six stores: Military Surplus 'R Us, Boards 'N Bones, Zap Shack, Joystick
+
+56
+00:02:59,565 --> 00:03:02,369
+Heroes, Stan's Sporting Goods and Smokin' Subject.
+
+57
+00:03:02,589 --> 00:03:06,807
+Anyone damaged in a store is knocked through an eligible wall of your choice into
+
+58
+00:03:06,807 --> 00:03:08,994
+the space beyond, taking one extra damage.
+
+59
+00:03:08,994 --> 00:03:11,805
+Put a Destroyed Wall token there: it's now an opening.
+
+60
+00:03:12,025 --> 00:03:16,427
+An eligible wall is a solid one between two spaces, with no opening or token.
+
+61
+00:03:16,427 --> 00:03:19,513
+If none are left, the store works like a normal space.
+
+62
+00:03:20,333 --> 00:03:24,653
+Watch for Lockdown!: both exits are sealed and nobody can be saved or leave until
+
+63
+00:03:24,653 --> 00:03:28,120
+you end an Action phase in Security, removing the Lockdown token.
+
+64
+00:03:28,340 --> 00:03:32,641
+Bart the Mall Cop wanders round the Food Court costing you two Time when you share a
+
+65
+00:03:32,641 --> 00:03:36,276
+space. Busted Escalators charges two Time to move through an escalator.
+
+66
+00:03:36,496 --> 00:03:40,960
+And the Twisted Bond Minor Dark Power drags the Savior one space towards the Killer
+
+67
+00:03:40,960 --> 00:03:41,659
+every Upkeep.
+
+68
+00:03:42,467 --> 00:03:46,526
+A few tips. The Killer heads straight for the Savior, so reach him fast and Build
+
+69
+00:03:46,526 --> 00:03:50,485
+Trust before moving him to an exit. A Walkie-Talkie lets you Build Trust from a
+
+70
+00:03:50,485 --> 00:03:50,936
+distance.
+
+71
+00:03:51,156 --> 00:03:54,804
+Getting him out flips your Ultimate at once, even with no other saves.
+
+72
+00:03:55,024 --> 00:03:58,507
+And Enemies won't jump the railings, so jumping is a great escape.
+
+73
+00:03:58,507 --> 00:03:59,035
+Good luck.
+
