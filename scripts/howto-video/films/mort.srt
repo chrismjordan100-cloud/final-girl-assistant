@@ -1,0 +1,332 @@
+1
+00:00:00,300 --> 00:00:04,178
+Mort the Teenage Dirtbag: he's brought masks of every Final Girl killer to the
+
+2
+00:00:04,178 --> 00:00:06,167
+convention, and he could be any of them.
+
+3
+00:00:06,387 --> 00:00:08,243
+Here's how he plays: it's a whodunit.
+
+4
+00:00:09,067 --> 00:00:11,415
+Put the Basic Finale card on the Killer board.
+
+5
+00:00:11,415 --> 00:00:14,528
+It gives the Killer Action until the real Finale is revealed.
+
+6
+00:00:14,748 --> 00:00:17,979
+Add the Interrogate and Coerce Action cards to the Tableau.
+
+7
+00:00:17,979 --> 00:00:22,523
+Lay the ten Suspect cards in a row above the board, attributes side up, and put the
+
+8
+00:00:22,523 --> 00:00:24,604
+ten Suspect tokens in the Suspect bag.
+
+9
+00:00:25,433 --> 00:00:29,723
+Mort doesn't start on the board. After placing the Victims and yourself, place the
+
+10
+00:00:29,723 --> 00:00:33,647
+ten Suspect miniatures at random on empty spaces, with nobody else in them.
+
+11
+00:00:33,867 --> 00:00:38,135
+If you run out of empty spaces, put the rest in the spaces farthest from you that
+
+12
+00:00:38,135 --> 00:00:40,032
+have Victims, one Suspect per space.
+
+13
+00:00:40,252 --> 00:00:44,560
+Then pick a Clue card at random and put it beside the board with the Clue Viewer and
+
+14
+00:00:44,560 --> 00:00:48,303
+the five Reminder tokens face down. That card decides who Mort really is.
+
+15
+00:00:48,303 --> 00:00:52,406
+Put the Horror Track token on the Killer board, and don't open the Finale Secret
+
+16
+00:00:52,406 --> 00:00:53,585
+Envelope until told to.
+
+17
+00:00:54,400 --> 00:00:57,828
+The ten Suspects are each dressed as a different Final Girl villain.
+
+18
+00:00:57,828 --> 00:01:00,097
+They're not the Killer, an Enemy or a Victim:
+
+19
+00:01:00,097 --> 00:01:02,315
+they're never targeted and can't be damaged.
+
+20
+00:01:02,535 --> 00:01:04,686
+Each Suspect card lists seven attributes:
+
+21
+00:01:04,686 --> 00:01:08,726
+series of origin, height, favourite board game style, favourite horror genre,
+
+22
+00:01:08,726 --> 00:01:12,241
+favourite villain, favourite Van Ryder game, and mask or facepaint.
+
+23
+00:01:12,241 --> 00:01:13,500
+Those are your evidence.
+
+24
+00:01:14,333 --> 00:01:18,790
+Two Action cards do your detective work. Interrogate can only be resolved in a space
+
+25
+00:01:18,790 --> 00:01:22,292
+with a Suspect. A success panics the Suspect and reveals one Clue.
+
+26
+00:01:22,292 --> 00:01:26,643
+With no successes the Suspect still panics, and the card goes back into your hand.
+
+27
+00:01:26,863 --> 00:01:30,950
+Coerce works on Informants instead: it can only be resolved in a space with an
+
+28
+00:01:30,950 --> 00:01:35,247
+Informant, and after a successful Coerce you remove that Informant from the board.
+
+29
+00:01:36,067 --> 00:01:40,373
+To reveal a Clue, flip one of the face-down Reminder tokens, numbered one to five,
+
+30
+00:01:40,373 --> 00:01:43,471
+and use the Clue Viewer to read that Clue on the Clue card.
+
+31
+00:01:43,471 --> 00:01:45,624
+It names an attribute Mort does not have.
+
+32
+00:01:45,844 --> 00:01:49,926
+Discard every Suspect card with that attribute, and swap each discarded Suspect's
+
+33
+00:01:49,926 --> 00:01:52,295
+miniature on the board for an Informant meeple.
+
+34
+00:01:52,295 --> 00:01:55,721
+Keep the Reminder token face up so you know which Clues you've seen.
+
+35
+00:01:55,941 --> 00:01:59,034
+Every Clue eliminates at least one Suspect, often more.
+
+36
+00:01:59,034 --> 00:02:03,475
+For example, Josie reads Clue two: Mort's favourite genre is not comedy horror.
+
+37
+00:02:03,475 --> 00:02:07,355
+The H.U.N.T.E.R. and Baghead both love comedy horror, so they're out.
+
+38
+00:02:08,167 --> 00:02:11,431
+Informants count as Victims for everything, with three exceptions.
+
+39
+00:02:11,651 --> 00:02:16,066
+When you save an Informant, after your Final Girl reward you also lower Horror once.
+
+40
+00:02:16,066 --> 00:02:19,693
+If one is killed, after raising Bloodlust you must raise Horror once.
+
+41
+00:02:19,913 --> 00:02:23,642
+And when the Active Killer targets by nearest or farthest and there's a tie,
+
+42
+00:02:23,642 --> 00:02:25,801
+Informants are chosen before normal Victims.
+
+43
+00:02:26,633 --> 00:02:29,574
+Mort could be impersonating anyone, if only for a moment.
+
+44
+00:02:29,574 --> 00:02:32,927
+When you see the Suspect icon, draw a token from the Suspect bag.
+
+45
+00:02:32,927 --> 00:02:37,105
+That Suspect becomes the Active Killer for the Killer Action, then the token goes
+
+46
+00:02:37,105 --> 00:02:39,220
+back in the bag, so they could act again.
+
+47
+00:02:39,440 --> 00:02:43,645
+Any Location card that makes the Killer act also draws a token, and that Suspect
+
+48
+00:02:43,645 --> 00:02:46,011
+resolves all the Killer effects on that card.
+
+49
+00:02:46,231 --> 00:02:50,526
+If you draw a Suspect who's already been cleared, nothing happens and that token is
+
+50
+00:02:50,526 --> 00:02:54,615
+discarded instead of going back. Clearing Suspects early really slows him down.
+
+51
+00:02:55,433 --> 00:02:59,197
+When Bloodlust reaches the top of its track, move the Horror Track token from the
+
+52
+00:02:59,197 --> 00:03:02,310
+Killer board onto the end of the Horror track on your Player board.
+
+53
+00:03:02,310 --> 00:03:05,097
+From then on, if Horror would go past the maximum, you lose.
+
+54
+00:03:05,317 --> 00:03:08,816
+And until Mort is revealed, Victims don't panic in the Panic phase.
+
+55
+00:03:09,633 --> 00:03:12,606
+When all five Clues are revealed, only one Suspect is left.
+
+56
+00:03:12,606 --> 00:03:14,874
+Flip the Clue card and check with the Viewer:
+
+57
+00:03:14,874 --> 00:03:15,479
+that's Mort.
+
+58
+00:03:15,699 --> 00:03:18,770
+Discard any Minor Dark Powers and the rest of the Terror deck.
+
+59
+00:03:18,770 --> 00:03:22,931
+Swap that Suspect's miniature for Mort's, and remove every Informant from the board.
+
+60
+00:03:23,151 --> 00:03:27,315
+Flip that Suspect's card: it's his Finale, and it replaces the Basic Finale.
+
+61
+00:03:27,315 --> 00:03:31,698
+Reveal the Dark Power if it isn't out yet, and give Mort the health on the card,
+
+62
+00:03:31,698 --> 00:03:35,588
+including a Final Health token. Josie's Mort was Hans, with ten health.
+
+63
+00:03:36,400 --> 00:03:40,484
+If the Terror deck runs out before you've found all five Clues, the Finale comes
+
+64
+00:03:40,484 --> 00:03:44,721
+anyway. Flip the Clue card to reveal him, put Mort's miniature in place, and remove
+
+65
+00:03:44,721 --> 00:03:46,661
+all the other Suspects and Informants.
+
+66
+00:03:46,881 --> 00:03:51,303
+He takes the health on his card, and each Finale gets a bonus for every unrevealed
+
+67
+00:03:51,303 --> 00:03:54,538
+Clue. Put a Reminder token on the card to remember how many.
+
+68
+00:03:54,538 --> 00:03:58,636
+Mort as Hans, for example, adds two to his Attack Value per unrevealed Clue.
+
+69
+00:03:59,467 --> 00:04:03,776
+Anonymous Terror: each unrevealed Clue counts as two when the Finale is revealed.
+
+70
+00:04:03,996 --> 00:04:08,122
+The Epic Snitches Get Stitches: after Suspects become Informants, roll a die;
+
+71
+00:04:08,122 --> 00:04:10,908
+on one to four, one of the new Informants is killed.
+
+72
+00:04:11,128 --> 00:04:15,291
+Relentless Paranoia stops saving Informants lowering Horror, and Toxic Whispers
+
+73
+00:04:15,291 --> 00:04:18,189
+makes you roll one fewer die on Interrogate and Coerce.
+
+74
+00:04:19,000 --> 00:04:23,395
+His Minor Dark Powers, like Quick Slash, which costs you a health per Clue, can be
+
+75
+00:04:23,395 --> 00:04:27,523
+discarded early: each two-star success on Interrogate or Coerce discards one.
+
+76
+00:04:27,523 --> 00:04:29,667
+They all go when the Finale is revealed.
+
+77
+00:04:29,887 --> 00:04:33,856
+If a Location's Minor Dark Power has spaces for Health markers, don't add any:
+
+78
+00:04:33,856 --> 00:04:36,095
+Mort can't be attacked while he's disguised.
+
+79
+00:04:36,900 --> 00:04:41,167
+A few tips. Clear Suspects early: a cleared Suspect's Killer actions do nothing.
+
+80
+00:04:41,387 --> 00:04:45,773
+Aim to reveal all five Clues before the Terror deck runs out, or his Finale gets
+
+81
+00:04:45,773 --> 00:04:46,485
+much nastier.
+
+82
+00:04:46,705 --> 00:04:49,977
+He raises Horror a lot, so keep Horror-reducing cards coming.
+
+83
+00:04:49,977 --> 00:04:52,551
+Players win about two games in three. Good luck.
+
