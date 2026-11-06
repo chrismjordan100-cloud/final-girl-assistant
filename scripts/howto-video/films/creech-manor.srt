@@ -1,0 +1,80 @@
+1
+00:00:00,300 --> 00:00:04,753
+Creech Manor: over a hundred years old, full of historic charm, and every room has a
+
+2
+00:00:04,753 --> 00:00:05,655
+horrifying story.
+
+3
+00:00:05,875 --> 00:00:07,624
+Here's how the location plays.
+
+4
+00:00:08,433 --> 00:00:12,871
+Creech Manor has no special setup, but the house itself has a few rules of its own.
+
+5
+00:00:13,700 --> 00:00:16,513
+Three spaces only exit one way, shown by white arrows.
+
+6
+00:00:16,513 --> 00:00:20,420
+You can't climb back up the tyre swing, or up through the washroom ceiling.
+
+7
+00:00:20,640 --> 00:00:24,905
+Victims and Enemies follow the same rule, though the spaces still count as adjacent
+
+8
+00:00:24,905 --> 00:00:25,419
+both ways.
+
+9
+00:00:25,639 --> 00:00:28,048
+The Rope Ladder item is the only exception:
+
+10
+00:00:28,048 --> 00:00:30,737
+it turns a one-way space back into a normal one.
+
+11
+00:00:31,567 --> 00:00:35,590
+There are three Window spaces. They have no rules of their own, but lots of Terror
+
+12
+00:00:35,590 --> 00:00:36,964
+and Event cards target them.
+
+13
+00:00:37,184 --> 00:00:41,211
+The Ladder always means the outside ladder up to the third-floor washroom, never the
+
+14
+00:00:41,211 --> 00:00:41,835
+attic ladder.
+
+15
+00:00:42,055 --> 00:00:45,639
+And every space is Inside except the three exits, which are Outside.
+
+16
+00:00:46,467 --> 00:00:50,200
+A few tips. The exits are at street level, so bring Victims down early.
+
+17
+00:00:50,420 --> 00:00:53,513
+Avoid the Attic: Victims sent there tend to die in bulk.
+
+18
+00:00:53,733 --> 00:00:56,997
+If Lights Out comes up, a Flashlight or Candle keeps you moving.
+
+19
+00:00:57,217 --> 00:01:01,392
+It's one of the tougher locations, especially against the Poltergeist and the Birds.
+
+20
+00:01:01,392 --> 00:01:01,889
+Good luck.
+

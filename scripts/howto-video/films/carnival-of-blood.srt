@@ -1,0 +1,64 @@
+1
+00:00:00,300 --> 00:00:04,225
+The Carnival of Blood: a travelling show where some visitors never make it home.
+
+2
+00:00:04,445 --> 00:00:06,195
+Here's how the location plays.
+
+3
+00:00:07,000 --> 00:00:10,499
+Set the three Item Trap cards aside and shuffle the other Items.
+
+4
+00:00:10,719 --> 00:00:15,288
+Deal three face-down decks of two Items, add one Item Trap to each, and shuffle each
+
+5
+00:00:15,288 --> 00:00:17,844
+deck. Then put one Item face up on top of each.
+
+6
+00:00:18,667 --> 00:00:22,272
+Each Item deck hides one Item Trap, found only by searching.
+
+7
+00:00:22,492 --> 00:00:26,376
+If you draw one, you must resolve it, unless something like Zappo protects you.
+
+8
+00:00:26,376 --> 00:00:29,916
+If the search also found an Item, you can still take it, after the trap.
+
+9
+00:00:30,733 --> 00:00:34,968
+Three Terror cards are Terror Traps. When one is drawn, place its Trap token in your
+
+10
+00:00:34,968 --> 00:00:38,093
+space: it hits you and kills any Victims there, straight away.
+
+11
+00:00:38,313 --> 00:00:42,318
+Trap tokens stay for the rest of the game, and trigger whenever you or a Victim
+
+12
+00:00:42,318 --> 00:00:44,244
+enter. Enemies ignore them completely.
+
+13
+00:00:45,067 --> 00:00:48,693
+A few tips. Zappo the monkey or Asami let you avoid Item Traps.
+
+14
+00:00:48,913 --> 00:00:52,497
+Charlie can trade health for big Critical Blows once she's made her rescues.
+
+15
+00:00:52,717 --> 00:00:56,975
+It's one of the hardest locations in logged games, so map where the Trap tokens
+
+16
+00:00:56,975 --> 00:00:57,837
+land. Good luck.
+

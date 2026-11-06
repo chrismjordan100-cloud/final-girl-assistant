@@ -1,0 +1,84 @@
+1
+00:00:00,300 --> 00:00:04,098
+Dr. Fright, the Dream Doctor: he hunts you in your nightmares, and the burns are
+
+2
+00:00:04,098 --> 00:00:05,143
+real when you wake up.
+
+3
+00:00:05,363 --> 00:00:06,643
+Here's how he plays.
+
+4
+00:00:07,467 --> 00:00:12,090
+Shuffle the four Boiler Room cards face down, and put the Awake/Asleep card on top,
+
+5
+00:00:12,090 --> 00:00:14,485
+Awake side up. That's the Boiler Room deck.
+
+6
+00:00:15,300 --> 00:00:19,132
+You start Awake. While Awake you play as normal, but he can't attack you and you
+
+7
+00:00:19,132 --> 00:00:22,532
+can't attack him. If a Victim is in his space, he'll still attack them.
+
+8
+00:00:22,752 --> 00:00:26,720
+You fall Asleep when a card says so, or by choice with a Short or Long Rest.
+
+9
+00:00:27,533 --> 00:00:31,182
+Asleep, you're in his Boiler Room. You can move, search and attack him, and he
+
+10
+00:00:31,182 --> 00:00:32,632
+resolves his attacks as normal.
+
+11
+00:00:32,852 --> 00:00:36,821
+Victims won't follow you and can't be saved, and you must resolve one Boiler Room
+
+12
+00:00:36,821 --> 00:00:38,633
+card at the end of each Killer phase.
+
+13
+00:00:39,467 --> 00:00:43,182
+Slide the deck up, down, left or right to reveal part of the next card.
+
+14
+00:00:43,182 --> 00:00:46,165
+If Dr. Fright is showing, he attacks you, wherever he is.
+
+15
+00:00:46,385 --> 00:00:49,603
+He appears in each quadrant only once, so track what you've seen.
+
+16
+00:00:49,603 --> 00:00:51,484
+Reveal all four cards and you wake up.
+
+17
+00:00:52,300 --> 00:00:55,244
+A few tips. Do your rescues while Awake, and choose when to sleep.
+
+18
+00:00:55,464 --> 00:00:59,089
+Keeping Victims alive keeps his Bloodlust low and him nearly still.
+
+19
+00:00:59,089 --> 00:01:00,712
+The Megaphone is a great find.
+
+20
+00:01:00,932 --> 00:01:04,954
+He's one of the easier killers: about three wins in four on Final Girl Stats.
+
+21
+00:01:04,954 --> 00:01:05,476
+Good luck.
+

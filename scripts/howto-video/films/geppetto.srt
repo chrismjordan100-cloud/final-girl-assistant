@@ -1,0 +1,84 @@
+1
+00:00:00,300 --> 00:00:04,467
+Geppetto, the Puppet Master: he runs his show for a few days, then adds as many
+
+2
+00:00:04,467 --> 00:00:06,103
+people to his family as he can.
+
+3
+00:00:06,323 --> 00:00:07,603
+Here's how he plays.
+
+4
+00:00:08,433 --> 00:00:12,565
+Put the Puppets card next to his Killer board, with all three Puppet tokens on its
+
+5
+00:00:12,565 --> 00:00:13,169
+Ready space.
+
+6
+00:00:14,000 --> 00:00:17,121
+The Puppets are Minions with one health and an attack of one.
+
+7
+00:00:17,121 --> 00:00:20,293
+They move as fast as Geppetto, which rises with his Bloodlust.
+
+8
+00:00:20,513 --> 00:00:24,286
+They're on strings, so they must end their movement within two spaces of him.
+
+9
+00:00:24,286 --> 00:00:26,785
+When one is killed, it goes on the Exhausted space.
+
+10
+00:00:27,600 --> 00:00:31,914
+Until the Finale, each Killer phase spawns a Ready Puppet in his space, then moves
+
+11
+00:00:31,914 --> 00:00:33,808
+any Exhausted Puppets back to Ready.
+
+12
+00:00:34,028 --> 00:00:38,273
+When a Terror card's Killer Action doesn't say it's for Puppets only, every Puppet
+
+13
+00:00:38,273 --> 00:00:40,705
+resolves it in turn, then Geppetto does it too.
+
+14
+00:00:41,533 --> 00:00:45,416
+With Immortal Master, he can't be killed while all three Puppets are on the board.
+
+15
+00:00:45,636 --> 00:00:49,744
+His Epic Dark Power, Join the Family, drops you to your Final Health if all three
+
+16
+00:00:49,744 --> 00:00:51,012
+Puppets reach your space.
+
+17
+00:00:51,833 --> 00:00:56,139
+A few tips. Every Puppet copies his actions, so killing them cuts his damage, and
+
+18
+00:00:56,139 --> 00:00:58,212
+keeping one dead stops Immortal Master.
+
+19
+00:00:58,432 --> 00:01:02,421
+Pick one plan early, rescuing or attacking, rather than splitting your effort.
+
+20
+00:01:02,641 --> 00:01:05,379
+Watch for Puppets gathering round groups of Victims.
+
+21
+00:01:05,379 --> 00:01:05,905
+Good luck.
+

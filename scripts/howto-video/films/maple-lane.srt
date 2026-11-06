@@ -1,0 +1,72 @@
+1
+00:00:00,300 --> 00:00:04,374
+Maple Lane: a quiet suburban street in Spring Hill, at least until someone got
+
+2
+00:00:04,374 --> 00:00:04,844
+murdered.
+
+3
+00:00:05,064 --> 00:00:06,813
+Here's how the location plays.
+
+4
+00:00:07,633 --> 00:00:11,806
+Make four Item decks of three cards instead of the usual setup, one for each
+
+5
+00:00:11,806 --> 00:00:14,332
+quadrant of houses, with the top card face up.
+
+6
+00:00:14,552 --> 00:00:17,453
+Then add both Convince Action cards to the Action Tableau.
+
+7
+00:00:18,267 --> 00:00:22,186
+There are twelve Houses, three in each quadrant, and every House counts as a Search
+
+8
+00:00:22,186 --> 00:00:22,469
+space.
+
+9
+00:00:22,689 --> 00:00:26,853
+A successful search draws from that quadrant's deck, then the House gets an X token
+
+10
+00:00:26,853 --> 00:00:28,257
+and can't be searched again.
+
+11
+00:00:29,067 --> 00:00:32,779
+The residents are suspicious, so you can't walk into a House with Victims in it.
+
+12
+00:00:32,999 --> 00:00:36,077
+Use a Convince card from the next Street space to get in.
+
+13
+00:00:36,077 --> 00:00:40,613
+Leaving is normal movement, empty Houses are open, and panicking Victims and Enemies
+
+14
+00:00:40,613 --> 00:00:41,639
+go where they like.
+
+15
+00:00:42,467 --> 00:00:46,695
+A few tips. Each House can only be searched once, so plan routes across all four
+
+16
+00:00:46,695 --> 00:00:47,224
+quadrants.
+
+17
+00:00:47,444 --> 00:00:51,817
+The Bible adds two dice to Convince, and with three successes you can take the top
+
+18
+00:00:51,817 --> 00:00:53,631
+Item without searching. Good luck.
+
