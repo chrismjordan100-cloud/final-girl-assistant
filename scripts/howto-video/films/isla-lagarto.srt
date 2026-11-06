@@ -1,0 +1,228 @@
+1
+00:00:00,300 --> 00:00:04,865
+Isla Lagarto: an island of prehistoric proportions, and home to The Raptor Games.
+
+2
+00:00:05,085 --> 00:00:06,835
+Here's how the location plays.
+
+3
+00:00:07,667 --> 00:00:11,765
+Each Setup card shows the three Electric Fence sections in green or red.
+
+4
+00:00:11,765 --> 00:00:15,067
+Put a fence marker on each green section, and none on red.
+
+5
+00:00:15,067 --> 00:00:18,141
+In this example, A and C get markers and B stays open.
+
+6
+00:00:18,361 --> 00:00:22,265
+Shuffle the three Lava cards face down, with the Lava tokens beside them.
+
+7
+00:00:22,485 --> 00:00:25,664
+Put the T-Rex card out with the T-Rex meeple on its Start space.
+
+8
+00:00:26,500 --> 00:00:28,831
+There are three Electric Fences, A, B and C.
+
+9
+00:00:28,831 --> 00:00:33,174
+While a fence marker is on a path, nobody can move along it, and the spaces either
+
+10
+00:00:33,174 --> 00:00:34,287
+side aren't adjacent.
+
+11
+00:00:34,507 --> 00:00:37,088
+Anyone panicking into a fence just stays where they are.
+
+12
+00:00:37,308 --> 00:00:40,971
+In every Upkeep the power fluctuates: roll the Electric Fence die.
+
+13
+00:00:40,971 --> 00:00:44,135
+If that fence has a marker, remove it. If not, place one.
+
+14
+00:00:44,967 --> 00:00:49,372
+When working out the closest or farthest target, only count paths not blocked by
+
+15
+00:00:49,372 --> 00:00:53,997
+fences. If every fence is up and the only target is beyond them, measure as if there
+
+16
+00:00:53,997 --> 00:00:54,823
+were no fences.
+
+17
+00:00:55,043 --> 00:00:59,486
+If an Enemy has no open path to its target, it doesn't move, but still resolves its
+
+18
+00:00:59,486 --> 00:01:00,824
+attacks in its own space.
+
+19
+00:01:01,044 --> 00:01:03,156
+Effects that place someone ignore fences.
+
+20
+00:01:03,967 --> 00:01:08,651
+The T-Rex starts locked in the Dino Pen. Each time you see the T-Rex icon, move its
+
+21
+00:01:08,651 --> 00:01:11,135
+meeple one space right along the T-Rex card.
+
+22
+00:01:11,355 --> 00:01:15,812
+When it reaches Break Out!, put the T-Rex on the board in the Dino Pen, and the
+
+23
+00:01:15,812 --> 00:01:19,311
+T-Rex Action token below the Killer Action on the Finale card.
+
+24
+00:01:19,311 --> 00:01:20,891
+Ignore any more T-Rex icons.
+
+25
+00:01:21,700 --> 00:01:25,784
+The T-Rex isn't a Killer or a Minion, and can't be attacked, damaged or killed.
+
+26
+00:01:25,784 --> 00:01:28,783
+It acts after the Minion and Killer Actions on the Finale.
+
+27
+00:01:29,003 --> 00:01:33,113
+It moves two spaces, but stops as soon as it reaches a space with anyone in it:
+
+28
+00:01:33,113 --> 00:01:37,224
+you, Victims or Enemies. And it won't move at all if anyone shares its starting
+
+29
+00:01:37,224 --> 00:01:37,536
+space.
+
+30
+00:01:37,756 --> 00:01:41,829
+Victims won't follow you into its space, and in the Panic phase everyone in its
+
+31
+00:01:41,829 --> 00:01:43,943
+space panics, whether or not anyone died.
+
+32
+00:01:44,767 --> 00:01:48,962
+The T-Rex doesn't do damage. It instantly kills one target in its space, choosing a
+
+33
+00:01:48,962 --> 00:01:51,743
+Victim first, then a Minion, then you, then the Killer.
+
+34
+00:01:51,963 --> 00:01:55,963
+If it picks you or the Killer, that's an instant kill, without revealing a Final
+
+35
+00:01:55,963 --> 00:01:56,613
+Health token.
+
+36
+00:01:56,833 --> 00:02:00,764
+Against groups like the Raptor Pack or a Zombie Horde, it kills one unit:
+
+37
+00:02:00,764 --> 00:02:01,356
+one damage.
+
+38
+00:02:02,167 --> 00:02:04,899
+The first volcano icon makes the Volcano erupt.
+
+39
+00:02:04,899 --> 00:02:09,491
+Everyone there takes damage, anyone left panics, and you place the Volcano Lava
+
+40
+00:02:09,491 --> 00:02:12,513
+token. That space is closed to everyone from now on.
+
+41
+00:02:12,733 --> 00:02:15,533
+Each later icon spreads lava to an adjacent space:
+
+42
+00:02:15,533 --> 00:02:18,724
+draw a Lava card and follow it. North Beach, for example:
+
+43
+00:02:18,724 --> 00:02:23,315
+everyone there is hurt, survivors panic until they leave, and the North Beach Lava
+
+44
+00:02:23,315 --> 00:02:24,211
+token goes down.
+
+45
+00:02:24,431 --> 00:02:28,398
+Once all four Lava tokens are out, ignore further volcano icons.
+
+46
+00:02:28,398 --> 00:02:32,303
+Lava spaces are closed to everyone, Raptors and T-Rex included.
+
+47
+00:02:33,133 --> 00:02:37,394
+The three corner spaces with the beach icon are Beaches, and the two edge spaces
+
+48
+00:02:37,394 --> 00:02:40,429
+with the cliff icon are Cliffs. Some cards refer to them.
+
+49
+00:02:40,649 --> 00:02:44,740
+Holy Mosasaurus! attacks the space with the most Victims and Enemies, hurting
+
+50
+00:02:44,740 --> 00:02:48,884
+everyone there. Power Surge puts every fence up and skips the next fence roll.
+
+51
+00:02:49,104 --> 00:02:53,398
+The Tranquilizer Gun can be used any time to deal one damage to an adjacent Enemy,
+
+52
+00:02:53,398 --> 00:02:55,440
+and ends its movement if it was moving.
+
+53
+00:02:56,267 --> 00:03:00,448
+A few tips. Fences change every Upkeep, so check them before you plan a route.
+
+54
+00:03:00,668 --> 00:03:05,027
+Once the T-Rex is loose, lure the Killer into its path and stay out of it yourself.
+
+55
+00:03:05,027 --> 00:03:07,495
+Bait draws Enemies and the T-Rex onto the Goat.
+
+56
+00:03:07,715 --> 00:03:10,337
+Search spaces are close together here, which helps.
+
+57
+00:03:10,337 --> 00:03:10,851
+Good luck.
+
