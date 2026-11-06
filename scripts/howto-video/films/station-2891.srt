@@ -1,0 +1,160 @@
+1
+00:00:00,300 --> 00:00:06,299
+Station 2891: an Arctic research base where you never, ever let go of the guide
+
+2
+00:00:06,299 --> 00:00:06,679
+line.
+
+3
+00:00:06,899 --> 00:00:08,648
+Here's how the location plays.
+
+4
+00:00:09,467 --> 00:00:13,637
+Put the Helicopter card near the board and the Helicopter token on its exit space.
+
+5
+00:00:13,637 --> 00:00:17,147
+Place the Skidozer token in any outdoor space next to a search space.
+
+6
+00:00:17,367 --> 00:00:21,094
+And before building the Item decks, find a Two-Way Radio and put it in your
+
+7
+00:00:21,094 --> 00:00:21,591
+inventory.
+
+8
+00:00:22,400 --> 00:00:26,095
+The five outside spaces, including the Helicopter exit, are Outdoor.
+
+9
+00:00:26,095 --> 00:00:27,563
+Everything else is indoors.
+
+10
+00:00:27,783 --> 00:00:31,965
+The Main Building is every indoor space except the Commander's Hut and the Tool
+
+11
+00:00:31,965 --> 00:00:34,612
+Shed. The long corridors in it are Hallway spaces;
+
+12
+00:00:34,612 --> 00:00:37,630
+use the Victim Holding boards from the Core Box for them.
+
+13
+00:00:37,630 --> 00:00:39,324
+Many cards refer to these types.
+
+14
+00:00:40,133 --> 00:00:44,144
+Victims are saved by helicopter, which has to fly them to the Arctic Airport.
+
+15
+00:00:44,364 --> 00:00:49,288
+When the Helicopter token is on its exit space, you may move it and up to three
+
+16
+00:00:49,288 --> 00:00:53,900
+Victims with it onto the Arctic Station 2891 space of the Helicopter card.
+
+17
+00:00:54,120 --> 00:00:58,346
+Once it has Victims aboard, it can't return to the station until it has dropped them
+
+18
+00:00:58,346 --> 00:01:02,120
+at the Airport. Victims on the Helicopter card can't be targeted or killed.
+
+19
+00:01:02,933 --> 00:01:06,720
+Each Helicopter icon moves it one space along the Helicopter card.
+
+20
+00:01:06,720 --> 00:01:11,424
+Your main way to do that is the new Fly Faster! Action card, which costs one Time.
+
+21
+00:01:11,644 --> 00:01:16,150
+Two successes fly it two spaces, one success flies it one space, and each result
+
+22
+00:01:16,150 --> 00:01:20,263
+also costs you a Time. Or you can pay two Time to resolve the card again.
+
+23
+00:01:20,483 --> 00:01:24,725
+Some Terror cards move it too. When it reaches the Airport, the Victims are saved;
+
+24
+00:01:24,725 --> 00:01:28,864
+if that happens outside your Action phase, take the save rewards at the start of
+
+25
+00:01:28,864 --> 00:01:31,555
+your next one. Then it can fly back and land freely.
+
+26
+00:01:32,367 --> 00:01:36,829
+When the Frostbite icon comes up, you, every Victim, and every Enemy in an outdoor
+
+27
+00:01:36,829 --> 00:01:40,964
+space gains a Frostbite token, or loses one health if they already have one.
+
+28
+00:01:41,184 --> 00:01:44,810
+During each Upkeep, anyone indoors discards their Frostbite token.
+
+29
+00:01:44,810 --> 00:01:47,008
+So stepping inside to warm up resets it.
+
+30
+00:01:47,228 --> 00:01:51,388
+Victims killed by Frostbite still count as killed, and it can hurt the Killer too.
+
+31
+00:01:52,200 --> 00:01:56,248
+If you find the Skidozer Keys, the Skidozer can take you to any outdoor space.
+
+32
+00:01:56,248 --> 00:02:00,400
+It must always stay outdoors. Or, from the space just outside the Lab, place the
+
+33
+00:02:00,400 --> 00:02:02,632
+Hole token to make the two spaces adjacent.
+
+34
+00:02:02,852 --> 00:02:07,198
+Your Two-Way Radio lets you pay one Time to move a Victim one space, but not the
+
+35
+00:02:07,198 --> 00:02:08,719
+same Victim twice in a turn.
+
+36
+00:02:09,533 --> 00:02:13,665
+A few tips. Every trip is slow, so only launch the Helicopter with a full load of
+
+37
+00:02:13,665 --> 00:02:13,971
+three.
+
+38
+00:02:14,191 --> 00:02:18,521
+Buy Fly Faster! early, because the Helicopter is your only way to save anyone.
+
+39
+00:02:18,741 --> 00:02:23,028
+Get back indoors before Upkeep to shed Frostbite, and remember the Killer freezes
+
+40
+00:02:23,028 --> 00:02:24,245
+outside too. Good luck.
+

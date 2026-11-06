@@ -1,0 +1,240 @@
+1
+00:00:00,300 --> 00:00:04,310
+The Evomorph: something hid in the cargo from Titan-6, and now it's loose on the
+
+2
+00:00:04,310 --> 00:00:05,463
+ship, and it's growing.
+
+3
+00:00:05,683 --> 00:00:06,963
+Here's how it plays.
+
+4
+00:00:07,767 --> 00:00:11,052
+Put the Evolution card by the Killer board with its marker on Hatchling.
+
+5
+00:00:11,272 --> 00:00:15,752
+Shuffle the Evomorph's and the location's Terror cards as normal, but use only eight
+
+6
+00:00:15,752 --> 00:00:20,072
+cards, not ten. Shuffle the Ambush cards face down with the light green Youngling
+
+7
+00:00:20,072 --> 00:00:23,325
+side readable. And the Evomorph starts with just four health.
+
+8
+00:00:24,133 --> 00:00:27,653
+The Evomorph has three stages: Hatchling, Youngling and Adult.
+
+9
+00:00:27,873 --> 00:00:31,679
+The word EVOLVE appears twice in the effects column of its Bloodlust track.
+
+10
+00:00:31,679 --> 00:00:35,942
+When Bloodlust rises onto an EVOLVE, move the Evolution marker to the next stage and
+
+11
+00:00:35,942 --> 00:00:37,921
+apply that stage's rules straight away.
+
+12
+00:00:38,733 --> 00:00:42,168
+The Hatchling is slow but very deadly. Attack it at your own risk.
+
+13
+00:00:42,388 --> 00:00:45,771
+Bloodlust only goes up when the Hatchling kills a Victim itself.
+
+14
+00:00:45,771 --> 00:00:49,999
+Every other Bloodlust increase, from Terror cards, Events, or Victims dying some
+
+15
+00:00:49,999 --> 00:00:54,228
+other way, is ignored. Instead, you lose one Time for each increase you ignored.
+
+16
+00:00:55,033 --> 00:00:58,985
+When it evolves into a Youngling, it immediately Vanishes, and from then on
+
+17
+00:00:58,985 --> 00:01:00,303
+Bloodlust rises normally.
+
+18
+00:01:00,523 --> 00:01:05,068
+When the Youngling evolves into an Adult, its maximum health goes from four to ten
+
+19
+00:01:05,068 --> 00:01:09,557
+and it recovers all its health. Reveal its Dark Power card, and rotate the Ambush
+
+20
+00:01:09,557 --> 00:01:12,107
+deck so the dark green Adult side is readable.
+
+21
+00:01:12,933 --> 00:01:16,956
+Whenever you see the Vanish icon, the Evomorph disappears into the shadows and the
+
+22
+00:01:16,956 --> 00:01:20,880
+Killer phase ends. Take its meeple off the board and put it on top of the Terror
+
+23
+00:01:20,880 --> 00:01:21,125
+deck.
+
+24
+00:01:21,345 --> 00:01:24,842
+While it has vanished, skip every normal step of the Killer phase:
+
+25
+00:01:24,842 --> 00:01:27,120
+no Finale Killer Action and no Terror card.
+
+26
+00:01:27,120 --> 00:01:30,881
+Instead draw one Ambush card and follow the side for its current stage.
+
+27
+00:01:31,101 --> 00:01:33,688
+Each side has a red Danger number from one to ten.
+
+28
+00:01:33,688 --> 00:01:36,067
+The higher the number, the nastier the effect.
+
+29
+00:01:36,067 --> 00:01:40,154
+Many Ambush cards bring it back out of nowhere, often in your space, attacking.
+
+30
+00:01:40,154 --> 00:01:42,792
+Reshuffle the Ambush discards if the deck runs out.
+
+31
+00:01:43,600 --> 00:01:47,602
+You get three new Scan Action cards, and they can only be played while the Evomorph
+
+32
+00:01:47,602 --> 00:01:48,229
+has vanished.
+
+33
+00:01:48,449 --> 00:01:52,585
+With two successes, place a Scan token in your space and lower Horror by one.
+
+34
+00:01:52,585 --> 00:01:55,539
+With one success, place a Scan token and lose one Time.
+
+35
+00:01:55,539 --> 00:01:59,031
+With none, your Horror rises, you lose a Time and your turn ends.
+
+36
+00:01:59,251 --> 00:02:03,777
+A Scan token means you know it isn't hiding there, and many Ambush cards can't place
+
+37
+00:02:03,777 --> 00:02:06,632
+it in a space with a Scan token. One token per space;
+
+38
+00:02:06,632 --> 00:02:08,680
+if you run out, move the farthest one.
+
+39
+00:02:08,900 --> 00:02:13,146
+With three successes, you ambush it: place the Evomorph in your space, skip the next
+
+40
+00:02:13,146 --> 00:02:15,876
+Killer phase, and remove that Scan card from the game.
+
+41
+00:02:16,700 --> 00:02:19,341
+Its Dark Power appears when it becomes an Adult.
+
+42
+00:02:19,341 --> 00:02:23,798
+Each one places it in the closest space to you without a Scan token, then removes
+
+43
+00:02:23,798 --> 00:02:24,679
+all Scan tokens.
+
+44
+00:02:24,899 --> 00:02:28,529
+Razor Claws: whenever it damages you, discard a random Action card.
+
+45
+00:02:28,529 --> 00:02:32,323
+Acid Blood: whenever you damage it in your space, you lose one health.
+
+46
+00:02:32,323 --> 00:02:36,658
+Symbiotic Camouflage: draw an extra Ambush card and use the one with the highest
+
+47
+00:02:36,658 --> 00:02:37,037
+Danger.
+
+48
+00:02:37,257 --> 00:02:41,716
+Its Epic Dark Power, Razor Tail, kills every Victim in the most crowded unscanned
+
+49
+00:02:41,716 --> 00:02:45,513
+space, and whenever it attacks, it also attacks every adjacent space.
+
+50
+00:02:46,333 --> 00:02:50,963
+Its Finales change its Killer Action. The Perfect Organism moves twice and attacks
+
+51
+00:02:50,963 --> 00:02:53,843
+twice. Blitz of Death attacks two separate targets.
+
+52
+00:02:54,063 --> 00:02:58,120
+Death in the Dark attacks and then Vanishes every Killer phase, drawing an extra
+
+53
+00:02:58,120 --> 00:02:59,844
+Ambush card and keeping the worst.
+
+54
+00:03:00,064 --> 00:03:04,879
+And its Epic Finale, Impenetrable Armor, reduces all damage you deal it by two, to a
+
+55
+00:03:04,879 --> 00:03:05,739
+minimum of one.
+
+56
+00:03:06,567 --> 00:03:10,880
+A few tips. Don't fight the Hatchling: keep Victims away from it so it can't evolve,
+
+57
+00:03:10,880 --> 00:03:13,756
+and the Time penalty is cheaper than a stronger monster.
+
+58
+00:03:13,976 --> 00:03:18,072
+Hold your Scan cards for when it vanishes, and scan the space you plan to stand in.
+
+59
+00:03:18,292 --> 00:03:22,020
+A three-success Scan drops it into your space with a skipped Killer phase:
+
+60
+00:03:22,020 --> 00:03:24,287
+the perfect moment to hit it hard. Good luck.
+

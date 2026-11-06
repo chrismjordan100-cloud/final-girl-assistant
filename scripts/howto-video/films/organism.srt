@@ -1,0 +1,236 @@
+1
+00:00:00,300 --> 00:00:02,461
+The Organism: it's hiding inside someone.
+
+2
+00:00:02,461 --> 00:00:04,780
+Maybe the person standing right next to you.
+
+3
+00:00:05,000 --> 00:00:06,280
+Here's how it plays.
+
+4
+00:00:07,100 --> 00:00:12,270
+When placing Victims, randomly swap three of them for the Red, Black and Grey Killer
+
+5
+00:00:12,270 --> 00:00:17,008
+meeples. These are Exposed Victims. Nothing goes on the Killer's start space.
+
+6
+00:00:17,008 --> 00:00:20,455
+Away from Station 2891, put the Lab token there instead.
+
+7
+00:00:20,675 --> 00:00:25,002
+Put a Test Kit Item card face up above each Item deck, shuffle the three Test
+
+8
+00:00:25,002 --> 00:00:29,553
+Results cards face down, and lay the Exposed Victim cards face down on the Killer
+
+9
+00:00:29,553 --> 00:00:29,891
+board.
+
+10
+00:00:30,700 --> 00:00:34,717
+To win, you must test the Exposed Victims to find out which ones have been
+
+11
+00:00:34,717 --> 00:00:37,377
+assimilated, then destroy every Mutated Organism.
+
+12
+00:00:37,597 --> 00:00:40,605
+There will always be at least one, and there could be as many as three.
+
+13
+00:00:41,433 --> 00:00:44,463
+Exposed Victims count as Victims, with five exceptions.
+
+14
+00:00:44,683 --> 00:00:47,969
+They can never be targeted or killed by a Mutated Organism.
+
+15
+00:00:47,969 --> 00:00:51,479
+They can't be saved. They can't be replaced by Special Victims.
+
+16
+00:00:51,479 --> 00:00:54,709
+They always panic in the Panic phase, even if no one died.
+
+17
+00:00:54,929 --> 00:00:59,152
+And if any other effect would kill one, immediately draw a Test Results card for it
+
+18
+00:00:59,152 --> 00:00:59,559
+instead.
+
+19
+00:01:00,367 --> 00:01:03,627
+Testing is free: it needs no Action card and costs no Time.
+
+20
+00:01:03,627 --> 00:01:08,213
+Be in the same space as an Exposed Victim, then either discard a Test Kit, or do it
+
+21
+00:01:08,213 --> 00:01:10,479
+in the Lab, and draw a Test Results card.
+
+22
+00:01:10,699 --> 00:01:14,835
+You get Test Kits by searching: whenever you take an Item from a Search, you may
+
+23
+00:01:14,835 --> 00:01:17,781
+also take the Test Kit at that location, if one is there.
+
+24
+00:01:18,600 --> 00:01:22,726
+If the result is Safe, remove that card from the game and replace the meeple with a
+
+25
+00:01:22,726 --> 00:01:26,851
+normal Victim. If they were tested because they'd been killed, they really are dead
+
+26
+00:01:26,851 --> 00:01:28,691
+now: remove them and raise Bloodlust.
+
+27
+00:01:28,911 --> 00:01:33,056
+If it's Assimilated, reveal the rightmost card on the Killer board and swap it for
+
+28
+00:01:33,056 --> 00:01:37,049
+the matching Mutated Organism card. Put the meeple's token above it, set up its
+
+29
+00:01:37,049 --> 00:01:41,093
+health and Final Health token, then apply all of its Bloodlust effects, from the
+
+30
+00:01:41,093 --> 00:01:42,863
+lowest level up to the current one.
+
+31
+00:01:43,083 --> 00:01:46,686
+Then shuffle the Assimilated card back into the Test Results deck.
+
+32
+00:01:46,686 --> 00:01:48,160
+Others may be infected too.
+
+33
+00:01:48,967 --> 00:01:53,421
+There are three Mutated Organisms, Fast, Strong and Tough, with five, six and seven
+
+34
+00:01:53,421 --> 00:01:55,729
+health. Each has its own Bloodlust effects.
+
+35
+00:01:55,949 --> 00:02:00,091
+They are Killers, not Minions. Each takes the Killer Action and Terror card actions
+
+36
+00:02:00,091 --> 00:02:04,133
+as normal. With several in play, resolve them one at a time, left to right on the
+
+37
+00:02:04,133 --> 00:02:04,781
+Killer board.
+
+38
+00:02:05,001 --> 00:02:09,365
+Once the Finale is triggered, they also perform the extra actions marked F, straight
+
+39
+00:02:09,365 --> 00:02:10,612
+after their normal ones.
+
+40
+00:02:11,433 --> 00:02:15,603
+When a Mutated Organism loses its final health and another is still on the board,
+
+41
+00:02:15,603 --> 00:02:19,722
+lay it on its side and finish the current phase before checking its Final Health
+
+42
+00:02:19,722 --> 00:02:20,031
+token.
+
+43
+00:02:20,251 --> 00:02:23,264
+If the token is blank, or it was a white token, it's dead:
+
+44
+00:02:23,264 --> 00:02:25,861
+remove it. Otherwise restore its health as normal.
+
+45
+00:02:26,081 --> 00:02:30,260
+You only get the plus-one Adrenaline die once, however many are on their Final
+
+46
+00:02:30,260 --> 00:02:34,760
+Health. And Minor Dark Powers attach to the Organism closest to you, or wait for the
+
+47
+00:02:34,760 --> 00:02:35,724
+next one revealed.
+
+48
+00:02:36,533 --> 00:02:41,268
+Every Finale immediately assimilates any Exposed Victims still untested, and adds a
+
+49
+00:02:41,268 --> 00:02:41,952
+way to lose.
+
+50
+00:02:42,172 --> 00:02:46,699
+Regenerative Assimilation: with one Organism left, raise Horror by two each Killer
+
+51
+00:02:46,699 --> 00:02:49,404
+phase, and if Horror is ever above six, you lose.
+
+52
+00:02:49,624 --> 00:02:53,870
+Reductive: with one left, you lose if you're in its space at the start of the Killer
+
+53
+00:02:53,870 --> 00:02:58,116
+phase. Cognitive: with one left, discard two Action cards each Killer phase or lose.
+
+54
+00:02:58,116 --> 00:03:02,311
+And the Epic Finale: you lose if you're ever with an Organism at full health during
+
+55
+00:03:02,311 --> 00:03:03,171
+the Killer phase.
+
+56
+00:03:04,000 --> 00:03:07,627
+A few tips. Test early, before the Finale assimilates everyone at once.
+
+57
+00:03:07,847 --> 00:03:11,260
+Take a Test Kit every time you search, so you can test wherever you are.
+
+58
+00:03:11,480 --> 00:03:15,837
+Try to reveal and kill Organisms one at a time, rather than facing all three
+
+59
+00:03:15,837 --> 00:03:16,984
+together. Good luck.
+
