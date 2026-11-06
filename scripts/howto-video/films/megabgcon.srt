@@ -1,0 +1,176 @@
+1
+00:00:00,300 --> 00:00:04,507
+Mega Boardgame Con: the best week of gaming, packed with attendees who refuse to
+
+2
+00:00:04,507 --> 00:00:04,823
+leave.
+
+3
+00:00:05,043 --> 00:00:06,792
+Here's how the location plays.
+
+4
+00:00:07,600 --> 00:00:11,787
+Shuffle the twelve Booth cards into a face-down deck, and the ten Booth Event cards
+
+5
+00:00:11,787 --> 00:00:12,443
+into another.
+
+6
+00:00:12,663 --> 00:00:17,122
+Add the two Create a Panic cards to the Tableau, and tuck the Finale Reminder card
+
+7
+00:00:17,122 --> 00:00:19,297
+under the Finale card, reminder side up.
+
+8
+00:00:20,133 --> 00:00:24,414
+The board has three kinds of area. Exhibit Areas are the yellow booth spaces with
+
+9
+00:00:24,414 --> 00:00:27,585
+the spade icon. The Food Court is in the bottom left corner.
+
+10
+00:00:27,585 --> 00:00:31,760
+Everything else is a General Area. There's a key on the back of the rule sheet.
+
+11
+00:00:32,567 --> 00:00:36,864
+Attendees are having too much fun. No Victim will follow you when you move from an
+
+12
+00:00:36,864 --> 00:00:39,223
+Exhibit Area space into a General Area space.
+
+13
+00:00:39,443 --> 00:00:43,565
+To get them out, use Create a Panic to scare them across, or let normal panic move
+
+14
+00:00:43,565 --> 00:00:43,816
+them.
+
+15
+00:00:44,633 --> 00:00:48,636
+Create a Panic can only be played in a space with Victims, and you can discard any
+
+16
+00:00:48,636 --> 00:00:50,735
+Action card in the Action phase to take it.
+
+17
+00:00:50,955 --> 00:00:55,403
+Two successes: panic each Victim in your space in the direction of your choice.
+
+18
+00:00:55,403 --> 00:00:59,176
+One success: panic them, but you may change each panic roll by one.
+
+19
+00:00:59,176 --> 00:01:02,048
+No successes: just panic them. Each costs one Time.
+
+20
+00:01:02,867 --> 00:01:07,454
+You can search in any space here. Which Item deck you draw from depends on the area:
+
+21
+00:01:07,454 --> 00:01:09,693
+Exhibit Area, Food Court or General Area.
+
+22
+00:01:09,913 --> 00:01:14,236
+There are no search icons on the board, but every space counts as a Search space for
+
+23
+00:01:14,236 --> 00:01:14,905
+card effects.
+
+24
+00:01:15,733 --> 00:01:19,617
+Hallways and docks are quieter. If you move to a space connected by the blue
+
+25
+00:01:19,617 --> 00:01:23,909
+double-arrow icon, you get one extra die on the Action card that moves you, but your
+
+26
+00:01:23,909 --> 00:01:26,464
+first step must be along one of those connections.
+
+27
+00:01:26,684 --> 00:01:30,524
+And when anyone panics out of the Main Hallway, roll two dice instead of one.
+
+28
+00:01:31,333 --> 00:01:33,738
+Every Upkeep, draw a Booth card and roll a die.
+
+29
+00:01:33,738 --> 00:01:37,676
+On one to three, a new attendee arrives: spawn a normal Victim at that booth.
+
+30
+00:01:37,676 --> 00:01:40,848
+On four to six, draw a Booth Event and apply it at that booth.
+
+31
+00:01:41,068 --> 00:01:45,091
+If a card only needs a Booth location, just draw the Booth card without rolling.
+
+32
+00:01:45,091 --> 00:01:47,404
+Reshuffle the discards when the deck runs out.
+
+33
+00:01:47,624 --> 00:01:51,777
+When the Finale is revealed, flip the Finale Reminder card onto the Booth deck:
+
+34
+00:01:51,777 --> 00:01:53,512
+no more Booth cards from then on.
+
+35
+00:01:54,333 --> 00:01:58,365
+Booth Events include Shoulder to Shoulder, a crowd that costs you a die there, Wet
+
+36
+00:01:58,365 --> 00:02:01,757
+Floor, which stops your movement, and Mega Sale, an extra search die.
+
+37
+00:02:01,977 --> 00:02:04,213
+And A Lot Going On Today! draws an Event:
+
+38
+00:02:04,213 --> 00:02:08,738
+with one or no Events in play Horror rises by two, but with two or more you resolve
+
+39
+00:02:08,738 --> 00:02:09,828
+another Terror card.
+
+40
+00:02:10,633 --> 00:02:13,279
+A few tips. Don't forget the Booth roll every Upkeep.
+
+41
+00:02:13,499 --> 00:02:17,670
+Victims in booths won't follow you, so use Create a Panic or the Deodorant to get
+
+42
+00:02:17,670 --> 00:02:18,597
+them moving first.
+
+43
+00:02:18,817 --> 00:02:23,039
+Use the hallways for that extra die, and pick the search area whose Item deck you
+
+44
+00:02:23,039 --> 00:02:23,873
+want. Good luck.
+
