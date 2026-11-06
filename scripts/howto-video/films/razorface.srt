@@ -1,0 +1,192 @@
+1
+00:00:00,300 --> 00:00:04,396
+Razorface: a priest of pain in a face full of nails, and he has come to collect.
+
+2
+00:00:04,616 --> 00:00:05,896
+Here's how he plays.
+
+3
+00:00:06,700 --> 00:00:09,839
+Shuffle the eight Affliction cards, draw three and lay them face up.
+
+4
+00:00:09,839 --> 00:00:11,777
+Those are the hellish chains on your soul.
+
+5
+00:00:12,600 --> 00:00:15,747
+To kill Razorface you must first purge every Affliction you have.
+
+6
+00:00:15,747 --> 00:00:18,168
+Usually that's three, but cards can give you more.
+
+7
+00:00:18,388 --> 00:00:22,291
+Each Affliction has a Purge Requirement on top, and a Purge Effect on the bottom
+
+8
+00:00:22,291 --> 00:00:23,999
+that you resolve when you purge it.
+
+9
+00:00:24,219 --> 00:00:28,588
+For example, The Gift of Pain: deal at least three damage to Razorface in one Action
+
+10
+00:00:28,588 --> 00:00:30,512
+phase. Do that, and you can purge it.
+
+11
+00:00:31,333 --> 00:00:35,156
+During the Action phase, if you've met an Affliction's requirement, you may purge
+
+12
+00:00:35,156 --> 00:00:38,224
+it: resolve its Purge Effect, then remove the card from the game.
+
+13
+00:00:38,444 --> 00:00:42,667
+If you choose not to, the requirement has to be met again later before you can purge
+
+14
+00:00:42,667 --> 00:00:42,817
+it.
+
+15
+00:00:43,037 --> 00:00:46,231
+And you can only purge one Affliction per turn, so start early.
+
+16
+00:00:46,231 --> 00:00:48,157
+Leaving them all to the end is a trap.
+
+17
+00:00:48,967 --> 00:00:53,180
+Sometimes an Affliction becomes impossible, for example one that needs a Victim when
+
+18
+00:00:53,180 --> 00:00:54,535
+none are left on the board.
+
+19
+00:00:54,755 --> 00:00:57,421
+Remove it from the game and draw a new one to replace it.
+
+20
+00:00:57,641 --> 00:01:01,545
+If you ever need to draw an Affliction and the deck is empty, you lose immediately.
+
+21
+00:01:02,367 --> 00:01:07,017
+Razorface's Final Health token can only be revealed when no Afflictions are in play.
+
+22
+00:01:07,237 --> 00:01:11,243
+If he's down to his Final Health token and you still have an Affliction, any damage
+
+23
+00:01:11,243 --> 00:01:13,125
+that would reveal it is simply ignored.
+
+24
+00:01:13,345 --> 00:01:17,212
+So you can wear him down first, but the killing blow only lands after your last
+
+25
+00:01:17,212 --> 00:01:17,505
+purge.
+
+26
+00:01:18,333 --> 00:01:20,893
+Soulbound: when it's revealed, you gain a new Affliction.
+
+27
+00:01:21,113 --> 00:01:25,336
+Helleport lets him kill a Victim wherever they are, and Life Drain is his deadliest
+
+28
+00:01:25,336 --> 00:01:28,388
+power: players win under half their games when it comes out.
+
+29
+00:01:28,608 --> 00:01:32,518
+His Epic Dark Power, Infinite Despair, punishes you every Panic phase:
+
+30
+00:01:32,518 --> 00:01:36,261
+one effect if at least one Victim panicked, a different one if not.
+
+31
+00:01:36,261 --> 00:01:40,171
+The card shows the amounts as icons; expect Horror to rise every turn.
+
+32
+00:01:41,000 --> 00:01:45,329
+Sadistic Manifestation places Razorface with the farthest Victim, then targets a
+
+33
+00:01:45,329 --> 00:01:49,875
+Victim and attacks twice. If there are no Victims on the board, draw the next Terror
+
+34
+00:01:49,875 --> 00:01:50,579
+card instead.
+
+35
+00:01:50,799 --> 00:01:55,130
+One Affliction, Experience Unbound, heals Razorface three health when you purge it,
+
+36
+00:01:55,130 --> 00:01:57,583
+so purge that one before you start hurting him.
+
+37
+00:01:57,803 --> 00:02:02,279
+His Minor Dark Powers, The Pain of Judgement and The Pain of Salvation, make him
+
+38
+00:02:02,279 --> 00:02:05,077
+kill Victims more easily and punish Focus actions.
+
+39
+00:02:05,900 --> 00:02:10,164
+Chains of Torment: each Killer phase he targets a Victim, moves and attacks twice,
+
+40
+00:02:10,164 --> 00:02:14,324
+and whenever he enters a space with at least one Victim, the effect shown on the
+
+41
+00:02:14,324 --> 00:02:15,052
+card triggers.
+
+42
+00:02:15,272 --> 00:02:19,277
+I Feast on Your Pain attacks twice with a bonus based on Bloodlust, and Taste Our
+
+43
+00:02:19,277 --> 00:02:21,501
+Pleasures is the most dangerous of the three.
+
+44
+00:02:22,333 --> 00:02:26,571
+A few tips. You can only purge one Affliction a turn, so start in turn one and keep
+
+45
+00:02:26,571 --> 00:02:26,877
+going.
+
+46
+00:02:27,097 --> 00:02:30,233
+Purge any Affliction that heals him before you start dealing damage.
+
+47
+00:02:30,453 --> 00:02:34,016
+And he's one of the tougher killers: players win just over half their games.
+
+48
+00:02:34,016 --> 00:02:34,485
+Good luck.
+
