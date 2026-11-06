@@ -1,0 +1,480 @@
+1
+00:00:00,300 --> 00:00:04,067
+The H.U.N.T.E.R.: a machine sent back through time with one name in its memory.
+
+2
+00:00:04,067 --> 00:00:04,353
+Yours.
+
+3
+00:00:04,573 --> 00:00:05,853
+Here's how it plays.
+
+4
+00:00:06,667 --> 00:00:09,874
+Put the two Countdown tokens on the back of the Finale card.
+
+5
+00:00:09,874 --> 00:00:14,203
+Then pick three Cybernetic Part tokens at random and, without looking, stack them
+
+6
+00:00:14,203 --> 00:00:16,395
+face down on top. That's a stack of five.
+
+7
+00:00:16,615 --> 00:00:19,724
+Build the Terror deck as normal without the Hunter Mark X card.
+
+8
+00:00:19,724 --> 00:00:23,722
+Then shuffle the Mark X card with the bottom two cards of the deck, and put those
+
+9
+00:00:23,722 --> 00:00:24,956
+three back on the bottom.
+
+10
+00:00:25,176 --> 00:00:29,229
+The red Core box Killer meeple is the Mark V, on the Killer start space.
+
+11
+00:00:29,229 --> 00:00:33,957
+Keep the silver Mark X meeple, the Mark V Ally card and four Action cubes beside you
+
+12
+00:00:33,957 --> 00:00:34,520
+for later.
+
+13
+00:00:35,333 --> 00:00:38,447
+The Hunter comes in two models. You start against the Mark V.
+
+14
+00:00:38,447 --> 00:00:42,224
+Near the end of the game the Mark X arrives and becomes the Active Killer.
+
+15
+00:00:42,444 --> 00:00:45,879
+Any rule or card that says the Hunter means whichever model is active.
+
+16
+00:00:46,099 --> 00:00:50,319
+The health markers and Final Health token on the Killer board belong to the Mark X.
+
+17
+00:00:50,319 --> 00:00:52,200
+The Mark V is beaten a different way.
+
+18
+00:00:53,033 --> 00:00:55,084
+The Hunter doesn't care about bystanders.
+
+19
+00:00:55,084 --> 00:00:57,535
+Bloodlust does not go up when a Victim is killed.
+
+20
+00:00:57,755 --> 00:01:02,081
+Instead, Bloodlust goes up when the Hunter damages you or an Ally, or when it takes
+
+21
+00:01:02,081 --> 00:01:02,811
+damage itself.
+
+22
+00:01:03,031 --> 00:01:07,211
+But only once per phase. If you play Retaliate and you both hurt each other, it's
+
+23
+00:01:07,211 --> 00:01:08,449
+still just one increase.
+
+24
+00:01:08,669 --> 00:01:13,050
+In the Panic phase, as well as the normal panic rules, Victims in the Hunter's space
+
+25
+00:01:13,050 --> 00:01:15,240
+also panic if Bloodlust went up that turn.
+
+26
+00:01:16,067 --> 00:01:20,589
+To beat the Mark V you destroy its Cybernetic Parts, the face-down tokens on the
+
+27
+00:01:20,589 --> 00:01:22,851
+Finale card. Each Part takes two damage.
+
+28
+00:01:23,071 --> 00:01:26,617
+Damage from several attacks adds up, but only within the same phase.
+
+29
+00:01:26,617 --> 00:01:30,684
+For example, a Weak Attack for one damage, then a Furious Strike for one more,
+
+30
+00:01:30,684 --> 00:01:31,519
+destroys a Part.
+
+31
+00:01:31,739 --> 00:01:35,671
+If you'd stopped after the Weak Attack, that single damage would be wasted when the
+
+32
+00:01:35,671 --> 00:01:36,240
+phase ended.
+
+33
+00:01:36,460 --> 00:01:40,843
+Big turns pay: five damage in one phase destroys two Parts, and the fifth point is
+
+34
+00:01:40,843 --> 00:01:41,111
+lost.
+
+35
+00:01:41,933 --> 00:01:46,415
+Each time a Part is destroyed, take the top Part token off the Finale card, roll a
+
+36
+00:01:46,415 --> 00:01:50,623
+die, and place the token in the Mark V's space or next to it, using the Panic
+
+37
+00:01:50,623 --> 00:01:53,411
+numbers on its space, just like panicking a Victim.
+
+38
+00:01:53,631 --> 00:01:56,651
+When the last Part token is gone, the Mark V shuts down.
+
+39
+00:01:56,651 --> 00:02:01,129
+Leave its meeple where it is. Take its Dark Power card, revealing it if needed, and
+
+40
+00:02:01,129 --> 00:02:04,959
+slide it under the Mark V Ally card so the ability shows at the bottom.
+
+41
+00:02:05,179 --> 00:02:08,409
+If that happened in your Action phase, carry on with your turn.
+
+42
+00:02:08,409 --> 00:02:10,615
+In any other phase, the phase ends at once.
+
+43
+00:02:10,615 --> 00:02:13,179
+From now on the Mark V isn't a Killer or an Enemy.
+
+44
+00:02:14,000 --> 00:02:18,235
+Once only the two Countdown tokens are left on the Finale card, ignore the Killer
+
+45
+00:02:18,235 --> 00:02:21,424
+action on the back of the Finale and don't draw Terror cards.
+
+46
+00:02:21,644 --> 00:02:25,814
+Instead, at the start of each Killer phase, remove one Countdown token and raise
+
+47
+00:02:25,814 --> 00:02:26,700
+Bloodlust by one.
+
+48
+00:02:26,920 --> 00:02:31,052
+When the second token comes off, draw a new Setup card and put the silver Mark X
+
+49
+00:02:31,052 --> 00:02:35,339
+meeple on its Killer start space. The Mark X is now the Active Killer, and resolves
+
+50
+00:02:35,339 --> 00:02:37,715
+the Killer phase as normal from the next turn.
+
+51
+00:02:38,533 --> 00:02:42,368
+If you're slow, the Hunter Mark X Terror card, hidden near the bottom of the deck,
+
+52
+00:02:42,368 --> 00:02:43,163
+forces the issue.
+
+53
+00:02:43,383 --> 00:02:47,997
+If the Mark V is still active, it shuts down immediately and Bloodlust jumps to the
+
+54
+00:02:47,997 --> 00:02:52,667
+top of the track. Any remaining Part tokens are dropped in its space, and the Mark X
+
+55
+00:02:52,667 --> 00:02:54,391
+inherits any Minor Dark Powers.
+
+56
+00:02:54,611 --> 00:02:59,187
+If the Mark X isn't on the board yet, discard the Countdown tokens, draw a new Setup
+
+57
+00:02:59,187 --> 00:03:01,693
+card and place the Mark X on its Killer space.
+
+58
+00:03:01,913 --> 00:03:05,159
+Then discard the rest of the Terror deck and reveal the Finale.
+
+59
+00:03:05,159 --> 00:03:07,993
+Even if another card discards it, you still resolve it.
+
+60
+00:03:08,800 --> 00:03:11,557
+The Mark V can be repaired and turned into your Ally.
+
+61
+00:03:11,557 --> 00:03:13,429
+First, collect the Parts it dropped.
+
+62
+00:03:13,649 --> 00:03:17,531
+In the Action phase, while in a token's space, spend one Time to pick it up.
+
+63
+00:03:17,531 --> 00:03:20,903
+One Time per token. You can't grab them while just moving through.
+
+64
+00:03:21,123 --> 00:03:25,310
+Keep them face down in your Backpack. You can collect Parts even before the Mark V
+
+65
+00:03:25,310 --> 00:03:25,923
+is defeated.
+
+66
+00:03:26,733 --> 00:03:31,165
+Once the Mark V is defeated and you're in its space, spend one Time to flip one Part
+
+67
+00:03:31,165 --> 00:03:35,544
+token from your Backpack, and put that many Health markers on the Mark V Ally card.
+
+68
+00:03:35,764 --> 00:03:40,123
+The first time you do this, put the Ally card and its four Action cubes in your play
+
+69
+00:03:40,123 --> 00:03:41,887
+area. The Mark V is now your Ally.
+
+70
+00:03:42,107 --> 00:03:46,383
+Spend one more Time per extra Part, now or on later turns, to add more health.
+
+71
+00:03:46,383 --> 00:03:50,988
+But if the repaired Mark V ever loses all its health, it's destroyed permanently and
+
+72
+00:03:50,988 --> 00:03:52,304
+can't be repaired again.
+
+73
+00:03:53,133 --> 00:03:56,846
+Allies follow a few rules. They aren't Victims, so they don't follow you.
+
+74
+00:03:56,846 --> 00:04:00,965
+Unless a card says otherwise, they can't carry Items or save Victims, and Victims
+
+75
+00:04:00,965 --> 00:04:01,880
+won't follow them.
+
+76
+00:04:02,100 --> 00:04:05,909
+When you and an Ally share a space and one of you is attacked, you choose who takes
+
+77
+00:04:05,909 --> 00:04:06,047
+it.
+
+78
+00:04:06,267 --> 00:04:11,067
+Enemies usually only target an Ally when resolving a Final Girl or Victim target and
+
+79
+00:04:11,067 --> 00:04:15,525
+the Ally is the closest. Even then, Victims in the Ally's space are hit first.
+
+80
+00:04:16,333 --> 00:04:20,804
+The Ally card shows its Actions. To use one in the Action phase, put an Action cube
+
+81
+00:04:20,804 --> 00:04:24,952
+on the leftmost box of that row. A row that already has a cube can't be used.
+
+82
+00:04:25,172 --> 00:04:27,683
+Every Upkeep, slide every cube one box right.
+
+83
+00:04:27,683 --> 00:04:30,696
+When it slides off the end, that action is free again.
+
+84
+00:04:30,696 --> 00:04:33,151
+Rows with more boxes take longer to recover.
+
+85
+00:04:33,371 --> 00:04:36,382
+The Mark V can attack for two damage or move one space.
+
+86
+00:04:36,382 --> 00:04:40,818
+Its blue Reaction, usable in any phase, reduces the damage from an attack by one,
+
+87
+00:04:40,818 --> 00:04:43,611
+and the card shows it hitting back with one damage.
+
+88
+00:04:43,831 --> 00:04:47,756
+Its Dark Power card, tucked underneath, gives it a permanent Mark V Power.
+
+89
+00:04:48,567 --> 00:04:52,619
+Each Dark Power has a top half for the Killer and a side panel for the repaired
+
+90
+00:04:52,619 --> 00:04:52,876
+Ally.
+
+91
+00:04:53,096 --> 00:04:57,428
+Reinforced Endoskeleton: the Mark V ignores all effects that make it lose health,
+
+92
+00:04:57,428 --> 00:05:00,797
+though damage still counts. As an Ally it keeps that toughness.
+
+93
+00:05:01,017 --> 00:05:05,075
+Cybernetic Agility: the Mark V moves one extra space for each Movement.
+
+94
+00:05:05,075 --> 00:05:08,847
+As an Ally, when it moves at least one space it may move one more.
+
+95
+00:05:09,067 --> 00:05:12,901
+Titanium-Laced Bio Tissue: each Part needs three damage, not two.
+
+96
+00:05:12,901 --> 00:05:15,851
+As an Ally, each repair restores one extra health.
+
+97
+00:05:16,071 --> 00:05:20,646
+The Epic M134 Minigun Armament gives it an attack range of nought to one, and when
+
+98
+00:05:20,646 --> 00:05:23,659
+it attacks at range one you can't play Reaction cards.
+
+99
+00:05:23,659 --> 00:05:26,951
+As an Ally it does one extra damage at range nought to one.
+
+100
+00:05:27,767 --> 00:05:32,451
+Move or Be Eliminated sends it after the closest Victim, killing one Victim in every
+
+101
+00:05:32,451 --> 00:05:35,796
+space it passes through, including where it starts and ends.
+
+102
+00:05:35,796 --> 00:05:38,305
+Then Horror rises for each kill, up to twice.
+
+103
+00:05:38,525 --> 00:05:41,576
+Shock and Awe makes you roll one fewer die on Reaction cards.
+
+104
+00:05:41,796 --> 00:05:46,337
+The Advanced AI Minor Dark Power adds two health and raises Bloodlust an extra time
+
+105
+00:05:46,337 --> 00:05:48,580
+whenever the Hunter hurts you or an Ally.
+
+106
+00:05:49,400 --> 00:05:52,515
+All three Finales start the Killer phase by coming straight for you.
+
+107
+00:05:52,735 --> 00:05:55,814
+Relentless Pursuit: when revealed, Bloodlust goes up six.
+
+108
+00:05:55,814 --> 00:06:00,244
+Each Killer phase the Mark X recovers health, then targets you, moves and attacks.
+
+109
+00:06:00,464 --> 00:06:04,217
+Adaptive A.I.: Bloodlust plus one, then target you, move and attack.
+
+110
+00:06:04,217 --> 00:06:08,852
+The Mark X does one extra damage, and damage from the Mark V is reduced by one, to a
+
+111
+00:06:08,852 --> 00:06:09,680
+minimum of one.
+
+112
+00:06:09,900 --> 00:06:14,111
+Termination Mode... Active: Bloodlust plus one, then target you, move, and attack
+
+113
+00:06:14,111 --> 00:06:14,423
+twice.
+
+114
+00:06:15,233 --> 00:06:19,587
+A few tips. Damage doesn't carry between phases, so save your attacks for one big
+
+115
+00:06:19,587 --> 00:06:22,060
+turn and knock off Parts two damage at a time.
+
+116
+00:06:22,280 --> 00:06:26,350
+Collect the dropped Parts as you go, so you can rebuild the Mark V as a bodyguard
+
+117
+00:06:26,350 --> 00:06:27,656
+before the Mark X arrives.
+
+118
+00:06:27,876 --> 00:06:31,641
+Remember its Bloodlust comes from trading blows, not from Victims dying.
+
+119
+00:06:31,641 --> 00:06:34,884
+Players win about seventy per cent of logged games against it.
+
+120
+00:06:34,884 --> 00:06:35,407
+Good luck.
+
