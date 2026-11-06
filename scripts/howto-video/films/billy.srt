@@ -1,0 +1,192 @@
+1
+00:00:00,300 --> 00:00:04,359
+Billy the Bear: Buddyland's mascot, and his animatronic Buddies are coming out to
+
+2
+00:00:04,359 --> 00:00:04,609
+play.
+
+3
+00:00:04,829 --> 00:00:06,109
+Here's how he plays.
+
+4
+00:00:06,933 --> 00:00:11,458
+Before you reveal the Setup card, place four Power Source tokens, Active side up, in
+
+5
+00:00:11,458 --> 00:00:14,421
+four spaces, none next to another. Set the fifth aside.
+
+6
+00:00:14,641 --> 00:00:18,863
+Shuffle the A and B Bloodlust Track tokens face down by type, and place six on the
+
+7
+00:00:18,863 --> 00:00:22,261
+matching spaces of his Bloodlust track. The spare two aren't used;
+
+8
+00:00:22,261 --> 00:00:23,239
+don't look at them.
+
+9
+00:00:23,459 --> 00:00:27,489
+Shuffle the five Buddy cards into a deck, set the two Special Buddies aside, and
+
+10
+00:00:27,489 --> 00:00:28,195
+spawn a Buddy.
+
+11
+00:00:29,000 --> 00:00:33,332
+When Bloodlust rises onto a space with a Bloodlust Track token, reveal it and apply
+
+12
+00:00:33,332 --> 00:00:36,360
+its effect. You won't know what's coming until it happens.
+
+13
+00:00:37,167 --> 00:00:41,327
+When you see the recharge icon, Billy recovers one health, as long as at least one
+
+14
+00:00:41,327 --> 00:00:42,799
+Power Source is still Active.
+
+15
+00:00:43,019 --> 00:00:47,001
+To Deactivate one, spend the Time shown while in its space, even if you're just
+
+16
+00:00:47,001 --> 00:00:49,269
+moving through. Flip it to the Inactive side.
+
+17
+00:00:49,489 --> 00:00:51,994
+Some cards Activate them again, so check the board.
+
+18
+00:00:51,994 --> 00:00:54,204
+Once they're all off, he can't heal this way.
+
+19
+00:00:55,033 --> 00:00:59,269
+Buddies are Minions, and each card gives that animatronic's health, Attack Value and
+
+20
+00:00:59,269 --> 00:01:00,025
+Movement Value.
+
+21
+00:01:00,245 --> 00:01:04,277
+To spawn a Buddy, reveal the top card of the Buddy deck, put that many Health
+
+22
+00:01:04,277 --> 00:01:08,624
+markers on it, and place its token in a space next to Billy, one without a Buddy if
+
+23
+00:01:08,624 --> 00:01:11,189
+possible. If Billy isn't in play, nothing spawns.
+
+24
+00:01:12,000 --> 00:01:15,084
+Each Buddy has an Initiative number in the circle, top right.
+
+25
+00:01:15,084 --> 00:01:18,976
+Resolve Minion Actions and Terror effects for Buddies from lowest to highest.
+
+26
+00:01:19,196 --> 00:01:22,058
+Toby, for example, has three health and Initiative one.
+
+27
+00:01:22,058 --> 00:01:26,169
+Billy Junior, a Special Buddy, has two health, Initiative six, and is always in
+
+28
+00:01:26,169 --> 00:01:26,897
+Billy's space.
+
+29
+00:01:27,117 --> 00:01:31,089
+When you kill a Buddy, remove its token, take the Kill Reward on its card, then
+
+30
+00:01:31,089 --> 00:01:34,306
+remove the card from the game. Killed outside your Action phase?
+
+31
+00:01:34,306 --> 00:01:36,568
+Take the reward at the start of the next one.
+
+32
+00:01:37,400 --> 00:01:41,392
+Buddies protect Billy at all costs. You can't attack Billy while there's a Buddy in
+
+33
+00:01:41,392 --> 00:01:43,075
+his space, so clear them out first.
+
+34
+00:01:43,900 --> 00:01:46,417
+Deathlust adds one to Billy's Movement and Attack.
+
+35
+00:01:46,637 --> 00:01:50,726
+The Epic Merciless Minions adds a move before the attack in the Finale's Minion
+
+36
+00:01:50,726 --> 00:01:54,659
+Action. It's the most punishing: players win under half their games with it.
+
+37
+00:01:54,879 --> 00:01:59,339
+Endless Power reveals an extra Final Health token for each Active Power Source and
+
+38
+00:01:59,339 --> 00:02:03,092
+keeps the best. Introducing Billy Junior spawns him in Billy's space.
+
+39
+00:02:03,900 --> 00:02:08,160
+In every Finale, Buddies act first, then Billy recovers a health if a Power Source
+
+40
+00:02:08,160 --> 00:02:09,511
+is Active, before hunting.
+
+41
+00:02:09,731 --> 00:02:13,740
+It's Showtime!: you can't play Reaction cards if more than one Enemy is in your
+
+42
+00:02:13,740 --> 00:02:16,429
+space. Sizzling Power and Encore are harder versions.
+
+43
+00:02:16,649 --> 00:02:20,937
+The Epic Power Surge spawns Boris, and you must kill both Billy and Boris to win.
+
+44
+00:02:21,767 --> 00:02:25,628
+A few tips. Switch the Power Sources off first, routing through them as you go.
+
+45
+00:02:25,848 --> 00:02:29,669
+Kill Buddies for their rewards, but don't get swarmed, and remember Billy Junior
+
+46
+00:02:29,669 --> 00:02:31,245
+must go before you can hit Billy.
+
+47
+00:02:31,465 --> 00:02:34,363
+Players win about sixty per cent of games against him.
+
+48
+00:02:34,363 --> 00:02:34,900
+Good luck.
+
