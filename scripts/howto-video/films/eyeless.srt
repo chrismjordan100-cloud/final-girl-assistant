@@ -1,0 +1,232 @@
+1
+00:00:00,300 --> 00:00:02,647
+The Eyeless: blind, enormous, and listening for you.
+
+2
+00:00:02,867 --> 00:00:04,147
+Here's how it plays.
+
+3
+00:00:04,967 --> 00:00:09,138
+Put the Noise marker on the zero space of the Time track, and the four Noise cards
+
+4
+00:00:09,138 --> 00:00:10,257
+beside your play area.
+
+5
+00:00:11,067 --> 00:00:15,089
+Your Noise level goes up by one for every Action card you resolve in the Action
+
+6
+00:00:15,089 --> 00:00:16,464
+phase, whatever the result.
+
+7
+00:00:16,684 --> 00:00:20,054
+Cards discarded for Time or to convert successes don't count.
+
+8
+00:00:20,054 --> 00:00:24,474
+Resolving Close Call does. Cards played in other phases, like Reactions or Close
+
+9
+00:00:24,474 --> 00:00:26,241
+Call in the Killer phase, don't.
+
+10
+00:00:26,461 --> 00:00:29,031
+Track it with the Noise marker on the Time track.
+
+11
+00:00:29,031 --> 00:00:33,437
+Some effects lower it, never below zero, and it resets to zero at the end of Upkeep.
+
+12
+00:00:34,267 --> 00:00:38,093
+Items make noise when you use them in the Action phase, by category.
+
+13
+00:00:38,093 --> 00:00:40,795
+Silent things like a map or first aid: no noise.
+
+14
+00:00:41,015 --> 00:00:44,538
+Things heard in the same space, like melee attacks or pole vaulting:
+
+15
+00:00:44,538 --> 00:00:45,004
+plus one.
+
+16
+00:00:45,224 --> 00:00:48,603
+Things heard in other spaces, like gunshots, a whistle or a vehicle:
+
+17
+00:00:48,603 --> 00:00:49,149
+plus three.
+
+18
+00:00:49,369 --> 00:00:53,633
+When you get an Item, tuck a Noise card under it showing its value as a reminder.
+
+19
+00:00:53,633 --> 00:00:57,844
+Katia's Six-Shooter gets plus three, her Pickaxe plus one, and her First Aid Kit
+
+20
+00:00:57,844 --> 00:00:58,265
+nothing.
+
+21
+00:00:59,100 --> 00:01:03,537
+The Eyeless targets normally, except on Terror cards with a Final Girl Noise icon.
+
+22
+00:01:03,757 --> 00:01:05,761
+Then it targets you only if both are true:
+
+23
+00:01:05,761 --> 00:01:09,387
+your Noise is at least the number on the icon, and it can reach you with its
+
+24
+00:01:09,387 --> 00:01:09,816
+movement.
+
+25
+00:01:10,036 --> 00:01:13,870
+If either isn't true, resolve the line after Otherwise, which can still end up
+
+26
+00:01:13,870 --> 00:01:14,559
+targeting you.
+
+27
+00:01:15,367 --> 00:01:19,036
+Katia resolved four Action cards and no Items, so her Noise is four.
+
+28
+00:01:19,256 --> 00:01:23,440
+In the Killer phase the Eyeless first moves one space towards the closest target
+
+29
+00:01:23,440 --> 00:01:27,363
+from the Finale card's action, ending with a Victim, two spaces from Katia.
+
+30
+00:01:27,583 --> 00:01:30,142
+Then she reveals On the Hunt. Horror goes up one.
+
+31
+00:01:30,142 --> 00:01:34,320
+Its Noise icon is four, Katia's Noise is four, and its movement of three reaches
+
+32
+00:01:34,320 --> 00:01:35,625
+her. So it targets Katia.
+
+33
+00:01:35,845 --> 00:01:39,684
+With three Noise, or if she'd been four or more spaces away, it would have attacked
+
+34
+00:01:39,684 --> 00:01:41,349
+the Victim in its own space instead.
+
+35
+00:01:42,167 --> 00:01:45,559
+Hard Skin: the Eyeless ignores the first damage it takes each turn.
+
+36
+00:01:45,779 --> 00:01:49,638
+Reactive Swipe makes you lose one health whenever you leave its space, and Quick
+
+37
+00:01:49,638 --> 00:01:52,243
+Counter hurts you whenever you attack it, hit or miss.
+
+38
+00:01:52,463 --> 00:01:56,894
+The Epic Dark Power, High Alert, triggers at the beginning of every Killer phase.
+
+39
+00:01:56,894 --> 00:02:01,436
+The card shows a red Horror-style icon there, so expect Horror to rise every Killer
+
+40
+00:02:01,436 --> 00:02:01,764
+phase.
+
+41
+00:02:02,600 --> 00:02:06,751
+If We're Careful, We Might Just Make It! places the Eyeless on your space, but you
+
+42
+00:02:06,751 --> 00:02:09,434
+may reduce Noise by one for every two Time you spend.
+
+43
+00:02:09,434 --> 00:02:11,914
+Then it targets you if your Noise is two or more;
+
+44
+00:02:11,914 --> 00:02:14,547
+otherwise it targets the closest, moves and attacks.
+
+45
+00:02:14,767 --> 00:02:17,857
+Unlimited Endurance restores the damage you've dealt it.
+
+46
+00:02:17,857 --> 00:02:22,383
+The Fear Senses Minor Dark Power resets Noise to one instead of zero, and Blinding
+
+47
+00:02:22,383 --> 00:02:24,921
+Speed turns panicking Victims into casualties.
+
+48
+00:02:25,733 --> 00:02:27,440
+Every Finale attacks twice.
+
+49
+00:02:27,660 --> 00:02:31,031
+It Can Hear Everything puts it on you once your Noise reaches four.
+
+50
+00:02:31,031 --> 00:02:33,697
+It Knows My Moves strips your Reaction cards quickly.
+
+51
+00:02:33,917 --> 00:02:38,030
+No More Running places it in your space and attacks twice, but you may use Movement
+
+52
+00:02:38,030 --> 00:02:40,211
+effects to move Victims instead of yourself.
+
+53
+00:02:41,033 --> 00:02:45,159
+A few tips. Count your cards: staying under the Terror card's Noise threshold keeps
+
+54
+00:02:45,159 --> 00:02:45,705
+it off you.
+
+55
+00:02:45,925 --> 00:02:50,357
+Hard Skin ignores the first hit each turn, so plan two hits in a turn rather than
+
+56
+00:02:50,357 --> 00:02:50,576
+one.
+
+57
+00:02:50,796 --> 00:02:54,943
+Wear it down before the Finale, and hold Reaction cards for its double attacks.
+
+58
+00:02:54,943 --> 00:02:55,468
+Good luck.
+
