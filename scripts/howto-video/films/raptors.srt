@@ -1,0 +1,256 @@
+1
+00:00:00,300 --> 00:00:03,841
+The Raptors: built for speed, and hunting as if they share one brain.
+
+2
+00:00:04,061 --> 00:00:05,341
+Here's how they play.
+
+3
+00:00:06,167 --> 00:00:10,299
+Shuffle the eight Spawn cards into a face-down deck, and put the Raptors card beside
+
+4
+00:00:10,299 --> 00:00:12,119
+it with the six Raptor meeples on it.
+
+5
+00:00:12,339 --> 00:00:16,332
+The red Pack meeple goes on the Killer start space from the Setup card, instead of
+
+6
+00:00:16,332 --> 00:00:17,501
+the usual Killer meeple.
+
+7
+00:00:18,333 --> 00:00:22,410
+The Pack meeple is a large, coordinated group of Raptors, and it counts as the
+
+8
+00:00:22,410 --> 00:00:23,560
+Killer for everything.
+
+9
+00:00:23,780 --> 00:00:25,940
+Its health is the number of Raptors in it.
+
+10
+00:00:25,940 --> 00:00:30,054
+It starts at five, a Final Health token plus four Health markers, but there's no
+
+11
+00:00:30,054 --> 00:00:30,671
+upper limit.
+
+12
+00:00:30,891 --> 00:00:35,110
+Its Attack Value on the Killer board is how much damage the Pack does in one attack,
+
+13
+00:00:35,110 --> 00:00:36,416
+however big the Pack gets.
+
+14
+00:00:36,636 --> 00:00:40,391
+Eliminate the Pack and you win, even if loose Raptors are still on the board.
+
+15
+00:00:41,200 --> 00:00:43,257
+The green meeples are individual Raptors.
+
+16
+00:00:43,257 --> 00:00:47,320
+They're Minions for all purposes, with one health each, and they use the Movement
+
+17
+00:00:47,320 --> 00:00:48,624
+Value on the Killer board.
+
+18
+00:00:48,844 --> 00:00:52,603
+They don't attack often, but when they do, each one attacks separately for one
+
+19
+00:00:52,603 --> 00:00:52,940
+damage.
+
+20
+00:00:53,160 --> 00:00:57,258
+Read cards carefully: an effect on Raptors means only the loose Raptors, not the
+
+21
+00:00:57,258 --> 00:01:00,435
+Pack, and an effect on the Pack doesn't include loose Raptors.
+
+22
+00:01:01,267 --> 00:01:05,380
+Loose Raptors want to rejoin the Pack. When you see the join icon, they target the
+
+23
+00:01:05,380 --> 00:01:07,588
+Pack for movement, taking the shortest path.
+
+24
+00:01:07,588 --> 00:01:11,601
+If paths tie, they take the one that gets them closest to the Pack before they'd
+
+25
+00:01:11,601 --> 00:01:12,253
+have to stop.
+
+26
+00:01:12,473 --> 00:01:16,641
+They feel exposed alone, so they stop the moment they enter a space with you or a
+
+27
+00:01:16,641 --> 00:01:19,265
+Victim, and won't move at all if they start in one.
+
+28
+00:01:19,265 --> 00:01:20,345
+That's the stop icon.
+
+29
+00:01:20,565 --> 00:01:24,779
+Location Terror cards don't show that icon, but it still applies whenever loose
+
+30
+00:01:24,779 --> 00:01:25,472
+Raptors move.
+
+31
+00:01:25,692 --> 00:01:28,573
+When Raptors reach the Pack's space they join immediately:
+
+32
+00:01:28,573 --> 00:01:32,697
+take the meeples back to the Raptors card and add one Health marker to the Pack for
+
+33
+00:01:32,697 --> 00:01:32,945
+each.
+
+34
+00:01:33,767 --> 00:01:38,021
+When you resolve the egg icon, draw a Spawn card and place that many loose Raptors.
+
+35
+00:01:38,021 --> 00:01:41,148
+Roll a die and check the table on the Raptors card for where.
+
+36
+00:01:41,368 --> 00:01:45,295
+On a one, they spawn in your space. Two and three put them in the closest space of
+
+37
+00:01:45,295 --> 00:01:49,271
+the type shown to the Pack; four and five in the farthest such space from the Pack;
+
+38
+00:01:49,271 --> 00:01:51,139
+and six in the space farthest from you.
+
+39
+00:01:51,359 --> 00:01:53,729
+If more than one space qualifies, you choose.
+
+40
+00:01:53,729 --> 00:01:56,625
+They can't spawn in a space that's no longer reachable.
+
+41
+00:01:56,625 --> 00:01:58,100
+Then discard the Spawn card.
+
+42
+00:01:58,933 --> 00:02:03,091
+If you run out of Raptor meeples, the Raptor closest to the Pack joins it straight
+
+43
+00:02:03,091 --> 00:02:06,336
+away, and you reuse that meeple. Repeat until the spawn is done.
+
+44
+00:02:06,556 --> 00:02:09,863
+If the Spawn deck runs out, shuffle the discards into a new deck.
+
+45
+00:02:10,083 --> 00:02:14,123
+The final space of the Bloodlust track also spawns a Raptor, as if you'd drawn a
+
+46
+00:02:14,123 --> 00:02:15,032
+Spawn card of one.
+
+47
+00:02:15,252 --> 00:02:18,679
+And a Raptor spawned during the Killer phase doesn't act until the next Killer
+
+48
+00:02:18,679 --> 00:02:18,943
+phase.
+
+49
+00:02:19,767 --> 00:02:23,287
+Blood Thirsty: each time the Pack kills a Victim, its health goes up.
+
+50
+00:02:23,507 --> 00:02:27,536
+Pack Conditioning lets loose Raptors in adjacent spaces join the Pack without
+
+51
+00:02:27,536 --> 00:02:30,153
+entering its space. It's the most punishing power:
+
+52
+00:02:30,153 --> 00:02:32,979
+players win under sixty per cent of games with it out.
+
+53
+00:02:33,199 --> 00:02:35,972
+They're Everywhere makes egg symbols always spawn Raptors.
+
+54
+00:02:36,192 --> 00:02:40,672
+And the Epic Dark Power, Scaly Hide: the Pack and the Raptors ignore all damage from
+
+55
+00:02:40,672 --> 00:02:43,019
+Reaction cards, so Retaliate won't help you.
+
+56
+00:02:43,833 --> 00:02:46,969
+In most Finales the Pack moves at full speed and attacks hard.
+
+57
+00:02:47,189 --> 00:02:51,051
+Claws Like Knives: the first damage from each of its attacks can't be stopped.
+
+58
+00:02:51,271 --> 00:02:55,217
+The Epic Finale, Deadly Quick: when revealed, the Pack is placed in your space
+
+59
+00:02:55,217 --> 00:02:58,353
+immediately, and you lose four of the resource the card shows.
+
+60
+00:02:59,167 --> 00:03:01,919
+A few tips. Thin the Pack out early, before it snowballs.
+
+61
+00:03:02,139 --> 00:03:06,192
+Use weak attacks on loose Raptors, which only have one health, and save your big
+
+62
+00:03:06,192 --> 00:03:09,029
+weapons for the Pack. Kill strays before they rejoin it.
+
+63
+00:03:09,249 --> 00:03:11,826
+They're tough: players win about two games in three.
+
+64
+00:03:11,826 --> 00:03:12,321
+Good luck.
+
