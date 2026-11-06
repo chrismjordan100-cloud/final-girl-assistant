@@ -23,58 +23,162 @@ Put a three-Bird token on the Killer's start space, then one Bird on every empty
 space.
 
 7
-00:00:17,267 --> 00:00:21,576
-To win, save all the Special Victims: one, two or three, depending on difficulty.
+00:00:17,267 --> 00:00:21,531
+There's no Killer to defeat. To win, you must save all of the Special Victims, using
 
 8
-00:00:21,796 --> 00:00:25,908
-They come out when you unlock your Ultimate Ability or no normal Victims are left.
+00:00:21,531 --> 00:00:22,749
+the normal saving rules.
 
 9
-00:00:25,908 --> 00:00:28,516
-You lose if every space has three Birds, or you die.
+00:00:22,969 --> 00:00:27,537
+Choose your difficulty: one Special Victim for easy, two for medium, three for hard.
 
 10
-00:00:29,333 --> 00:00:31,787
-Birds are Minions, and they never move on their own.
+00:00:27,537 --> 00:00:31,289
+How hard your Final Girl's Ultimate Ability is to unlock matters too.
 
 11
-00:00:32,007 --> 00:00:36,261
-To spawn, roll two dice and choose which one sets how many and which sets where,
+00:00:32,100 --> 00:00:35,379
+The Special Victims stay hidden until one of two things happens:
 
 12
-00:00:36,261 --> 00:00:39,559
-using the Bird Spawn card. Full spaces overflow to neighbours.
+00:00:35,379 --> 00:00:39,631
+you unlock your Ultimate Ability, or there are no normal Victims left on the board.
 
 13
-00:00:40,367 --> 00:00:44,951
-Birds attack in your space and in every space with three Birds, one target each, for
+00:00:39,851 --> 00:00:43,840
+Then place them in the search spaces farthest from you, no more than one per space.
 
 14
-00:00:44,951 --> 00:00:47,897
-damage equal to the number of Birds. Victims go first.
+00:00:44,060 --> 00:00:48,241
+They can never be attacked or killed, but otherwise they behave like normal Victims.
 
 15
-00:00:48,117 --> 00:00:52,265
-Your Reactions can protect anyone in your space, and each damage you deal removes
+00:00:49,067 --> 00:00:53,402
+You lose immediately if every space on the board has three Birds, or if your Final
 
 16
-00:00:52,265 --> 00:00:52,725
-one Bird.
+00:00:53,402 --> 00:00:53,931
+Girl dies.
 
 17
-00:00:53,533 --> 00:00:57,794
-A few tips. Birds spread rather than chase, so race for the exits and only kill them
+00:00:54,767 --> 00:00:57,054
+Birds are tokens, and they count as Minions.
 
 18
-00:00:57,794 --> 00:00:58,504
-when you must.
+00:00:57,054 --> 00:01:01,316
+They never move on their own; only special effects, such as some items, move them.
 
 19
-00:00:58,724 --> 00:01:03,282
-Melanie's Ultimate removes Birds cheaply, and small boards like Storybook Woods fill
+00:01:01,536 --> 00:01:04,437
+When a card shows the Spawn Birds icon, roll two dice.
 
 20
-00:01:03,282 --> 00:01:04,313
+00:01:04,437 --> 00:01:08,843
+Use one die for how many Birds appear, and the other for where, using the chart on
+
+21
+00:01:08,843 --> 00:01:11,691
+the Bird Spawn card. You choose which die does which.
+
+22
+00:01:11,911 --> 00:01:15,996
+Depending on the roll, the chart spreads them across any spaces, puts them all in
+
+23
+00:01:15,996 --> 00:01:19,879
+one space, at the nearest of certain spaces shown on the card, in the nearest
+
+24
+00:01:19,879 --> 00:01:21,745
+Victim's space, or in your own space.
+
+25
+00:01:21,965 --> 00:01:26,115
+Birds always spawn at least once a round, as the first step of the Killer phase, and
+
+26
+00:01:26,115 --> 00:01:27,597
+Terror cards often spawn more.
+
+27
+00:01:28,433 --> 00:01:32,662
+A space holds at most three Birds. If Birds need placing in a full space, put them
+
+28
+00:01:32,662 --> 00:01:36,890
+in an adjacent space of your choice, spreading further out if needed until they're
+
+29
+00:01:36,890 --> 00:01:37,457
+all placed.
+
+30
+00:01:37,677 --> 00:01:41,671
+Some cards mention the Killer. If a card moves the Killer, spawn Birds instead.
+
+31
+00:01:41,671 --> 00:01:44,653
+If it places the Killer somewhere, place three Birds there.
+
+32
+00:01:44,873 --> 00:01:48,543
+Event cards that need Special Victim meeples are discarded and redrawn.
+
+33
+00:01:49,367 --> 00:01:53,367
+When the Bird Attack icon resolves, Birds attack in your space, if there's at least
+
+34
+00:01:53,367 --> 00:01:55,873
+one Bird there, and in every space with three Birds.
+
+35
+00:01:56,093 --> 00:02:00,395
+Birds attack one target in their space, dealing damage equal to the number of Birds
+
+36
+00:02:00,395 --> 00:02:03,091
+there. They always go for normal Victims before you.
+
+37
+00:02:03,311 --> 00:02:06,669
+Unusually, your Reaction cards can protect anyone in your space.
+
+38
+00:02:06,669 --> 00:02:11,076
+But to save a Victim, you must prevent all the damage, because one point kills them.
+
+39
+00:02:11,900 --> 00:02:16,164
+You can attack Birds in a space. Each point of damage removes one Bird, and any
+
+40
+00:02:16,164 --> 00:02:17,297
+extra damage is lost.
+
+41
+00:02:17,517 --> 00:02:20,139
+Some items are useless against Birds, like a Bear Trap.
+
+42
+00:02:20,139 --> 00:02:23,619
+That's part of the challenge, though you may swap them out if you prefer.
+
+43
+00:02:24,433 --> 00:02:28,694
+A few tips. Birds spread rather than chase, so race for the exits and only kill them
+
+44
+00:02:28,694 --> 00:02:29,404
+when you must.
+
+45
+00:02:29,624 --> 00:02:34,182
+Melanie's Ultimate removes Birds cheaply, and small boards like Storybook Woods fill
+
+46
+00:02:34,182 --> 00:02:35,213
 up fast. Good luck.
 

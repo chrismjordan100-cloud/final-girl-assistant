@@ -27,66 +27,138 @@ Set the Finale token aside, and add both Atonement cards to the Action Tableau.
 They come in the Inkanyamba box.
 
 8
-00:00:21,600 --> 00:00:26,058
-Divine Wrath is the gods' anger. Increase and Decrease move the marker on the Divine
+00:00:21,600 --> 00:00:24,165
+Here you face the gods' fury as well as the Killer.
 
 9
-00:00:26,058 --> 00:00:28,128
-Wrath card, always between one and ten.
+00:00:24,165 --> 00:00:27,232
+It's tracked on the Divine Wrath card, from level one to ten.
 
 10
-00:00:28,348 --> 00:00:30,929
-Unleash means apply whatever the current level says.
+00:00:27,452 --> 00:00:32,067
+When told to Increase or Decrease Divine Wrath, move the marker up or down that many
 
 11
-00:00:31,733 --> 00:00:35,760
-Whenever Bloodlust rises, also apply the matching line on the Sacred Groves
+00:00:32,067 --> 00:00:34,539
+levels. It never goes below one or above ten:
 
 12
-00:00:35,760 --> 00:00:36,619
-Bloodlust track.
+00:00:34,539 --> 00:00:35,857
+extra steps are ignored.
 
 13
-00:00:36,839 --> 00:00:39,747
-If the Finale is revealed, put the Finale token on it.
+00:00:36,077 --> 00:00:40,086
+When told to Unleash Divine Wrath, look at the current level and apply whatever is
 
 14
-00:00:39,747 --> 00:00:44,163
-Each Killer phase, after the Killer Action, Unleash Divine Wrath, then increase it
+00:00:40,086 --> 00:00:40,771
+printed there.
 
 15
-00:00:44,163 --> 00:00:44,540
-by one.
+00:00:41,600 --> 00:00:43,755
+The higher the Wrath, the worse an Unleash gets.
 
 16
-00:00:45,367 --> 00:00:49,052
-The Burial Ground, Sacred Shrine and Holy Groves are Sacred spaces.
+00:00:43,975 --> 00:00:48,114
+At low levels it does little. Further up it makes you discard random Action cards
 
 17
-00:00:49,052 --> 00:00:52,407
-The more Victims on them, the more likely Divine Wrath rises.
+00:00:48,114 --> 00:00:50,823
+from your hand, and some levels raise Horror as well.
 
 18
-00:00:52,627 --> 00:00:55,507
-Atonement Action cards are your main way to bring it down.
+00:00:51,043 --> 00:00:55,399
+At the top level, you discard every Action card except Atonement, then lower Divine
 
 19
-00:00:56,333 --> 00:01:00,579
-A few tips. Keep Victims off the Sacred spaces to stop Divine Wrath climbing.
+00:00:55,399 --> 00:00:57,656
+Wrath by the number of cards you discarded.
 
 20
-00:01:00,799 --> 00:01:04,905
-The Setup card matters here: there's a big win-rate gap between the easiest and
+00:00:58,467 --> 00:01:03,066
+The Burial Ground, the Sacred Shrine and the Holy Groves are Sacred spaces, marked
 
 21
-00:01:04,905 --> 00:01:05,321
-hardest.
+00:01:03,066 --> 00:01:03,459
+in red.
 
 22
-00:01:05,541 --> 00:01:08,083
-Barbara's extra health helps you hit hard early.
+00:01:03,679 --> 00:01:07,210
+The more Victims standing on Sacred spaces, the angrier the gods.
 
 23
-00:01:08,083 --> 00:01:11,472
+00:01:07,210 --> 00:01:11,557
+Many cards raise Divine Wrath by one for each Victim on a Sacred space, and some
+
+24
+00:01:11,557 --> 00:01:14,111
+Terror cards add Victims there or pull them in.
+
+25
+00:01:14,331 --> 00:01:18,405
+So getting Victims off those spaces, or saving them quickly, keeps the Wrath down.
+
+26
+00:01:19,233 --> 00:01:23,329
+The Sacred Groves Bloodlust track lines up beside the Killer's own Bloodlust track.
+
+27
+00:01:23,549 --> 00:01:27,380
+Whenever Bloodlust goes up, apply the Killer board's effects as normal, and also
+
+28
+00:01:27,380 --> 00:01:30,205
+apply the matching line on the Groves track, if it has one.
+
+29
+00:01:30,425 --> 00:01:35,039
+Those lines raise Divine Wrath by the number of Victims on Sacred spaces, or Unleash
+
+30
+00:01:35,039 --> 00:01:35,204
+it.
+
+31
+00:01:36,033 --> 00:01:40,255
+A few items and effects lower Divine Wrath, but your main tool is the Atonement
+
+32
+00:01:40,255 --> 00:01:44,477
+Action card. It has an extra line for three or more successes on a Horror roll:
+
+33
+00:01:44,477 --> 00:01:46,615
+the more successes, the bigger the drop.
+
+34
+00:01:46,835 --> 00:01:51,383
+If the Finale is revealed, put the Sacred Groves Finale token on top of the Finale
+
+35
+00:01:51,383 --> 00:01:55,765
+card. From then on, every Killer phase, after the Killer Action, Unleash Divine
+
+36
+00:01:55,765 --> 00:01:57,651
+Wrath and then increase it by one.
+
+37
+00:01:58,467 --> 00:02:02,712
+A few tips. Keep Victims off the Sacred spaces to stop Divine Wrath climbing.
+
+38
+00:02:02,932 --> 00:02:07,039
+The Setup card matters here: there's a big win-rate gap between the easiest and
+
+39
+00:02:07,039 --> 00:02:07,455
+hardest.
+
+40
+00:02:07,675 --> 00:02:10,216
+Barbara's extra health helps you hit hard early.
+
+41
+00:02:10,216 --> 00:02:13,605
 It's one of the hardest locations in logged games, so good luck.
 

@@ -31,66 +31,130 @@ Carolyn and Mr. Floppy, deal them face down, then put a set-aside card face up o
 each deck.
 
 9
-00:00:22,300 --> 00:00:25,905
-The Poltergeist has no health and can't be attacked, damaged or killed.
+00:00:22,300 --> 00:00:26,377
+The Poltergeist has no health. She can't be attacked, damaged or killed, so ignore
 
 10
-00:00:26,125 --> 00:00:28,821
-To win, find Carolyn and reach an exit with her.
+00:00:26,377 --> 00:00:28,017
+any effect that would damage her.
 
 11
-00:00:28,821 --> 00:00:32,077
-When Carolyn joins you, remove all Minor Dark Power cards.
+00:00:28,237 --> 00:00:32,186
+That doesn't make attack cards useless. Some of her Terror cards can still be fought
 
 12
-00:00:32,297 --> 00:00:36,013
-Carolyn can't be killed, discarded or put in your backpack, though she can be
+00:00:32,186 --> 00:00:34,019
+off with Action cards that deal damage.
 
 13
-00:00:36,013 --> 00:00:37,268
-shuffled back into a deck.
+00:00:34,833 --> 00:00:38,795
+You can't win the normal way. Instead, find Carolyn, hidden in the Item decks, and
 
 14
-00:00:38,100 --> 00:00:41,068
-Mr. Floppy can't be used until her Dark Power is revealed.
+00:00:38,795 --> 00:00:40,487
+reach an exit while she's with you.
 
 15
-00:00:41,068 --> 00:00:43,626
-After that, you can remove him to ignore 'Carolyn?
+00:00:40,707 --> 00:00:44,589
+When Carolyn joins you, remove all the Minor Dark Power cards from the game.
 
 16
-00:00:43,626 --> 00:00:44,393
-Where are you?'
+00:00:44,809 --> 00:00:48,897
+Carolyn can't be killed or discarded for any reason, so ignore any effect that
 
 17
-00:00:44,613 --> 00:00:48,165
-If her Epic Dark Power, Forgetting Something?, comes out, you need Mr.
+00:00:48,897 --> 00:00:51,465
+tries. You can't put her in your backpack either.
 
 18
-00:00:48,165 --> 00:00:49,840
-Floppy as well as Carolyn to win.
+00:00:51,685 --> 00:00:53,940
+But she can be shuffled back into an Item deck.
 
 19
-00:00:50,667 --> 00:00:54,704
-A few tips. Searching matters more than saving Victims here, so head for a Search
+00:00:53,940 --> 00:00:56,771
+That's what her 'Carolyn? Where are you?' Terror card does:
 
 20
-00:00:54,704 --> 00:00:55,701
-space straight away.
+00:00:56,771 --> 00:01:00,609
+if she's with you, she goes back into the Item deck at the nearest search space,
 
 21
-00:00:55,921 --> 00:00:59,740
-Selena is a great pick: an early Ultimate and extra search dice.
+00:01:00,609 --> 00:01:02,096
+without revealing its top card.
 
 22
-00:00:59,960 --> 00:01:04,141
-Carry Guard for her Unstoppable Evil attacks, and don't waste Time on weapons.
+00:01:02,900 --> 00:01:05,481
+Mr. Floppy is also hidden in the Item decks.
 
 23
-00:01:04,361 --> 00:01:08,610
-She's tougher than average: Final Girls win about fifty-seven percent of logged
+00:01:05,701 --> 00:01:09,469
+Once her Dark Power has been revealed, you can remove him from the game to ignore
 
 24
-00:01:08,610 --> 00:01:09,524
+00:01:09,469 --> 00:01:11,376
+the effects of 'Carolyn? Where are you?'.
+
+25
+00:01:11,596 --> 00:01:15,784
+Until her Dark Power is revealed, Mr. Floppy can never be discarded by a game
+
+26
+00:01:15,784 --> 00:01:20,135
+effect. And if he is discarded for any reason, shuffle him into the nearest Item
+
+27
+00:01:20,135 --> 00:01:20,407
+deck.
+
+28
+00:01:21,233 --> 00:01:25,534
+Her Epic Dark Power, Forgetting Something?, means you can only win by reaching an
+
+29
+00:01:25,534 --> 00:01:28,030
+exit with both Carolyn and the Mr. Floppy card.
+
+30
+00:01:28,030 --> 00:01:30,897
+While it's in play, Mr. Floppy can never be discarded.
+
+31
+00:01:31,117 --> 00:01:35,017
+Invisible Barrier stops you entering an exit with Carolyn unless you're at full
+
+32
+00:01:35,017 --> 00:01:35,363
+health.
+
+33
+00:01:35,583 --> 00:01:39,458
+And several of her cards place her in your space or with the nearest Victim, so she
+
+34
+00:01:39,458 --> 00:01:42,025
+can appear right beside you just as you reach the exit.
+
+35
+00:01:42,833 --> 00:01:46,871
+A few tips. Searching matters more than saving Victims here, so head for a Search
+
+36
+00:01:46,871 --> 00:01:47,868
+space straight away.
+
+37
+00:01:48,088 --> 00:01:51,907
+Selena is a great pick: an early Ultimate and extra search dice.
+
+38
+00:01:52,127 --> 00:01:56,308
+Carry Guard for her Unstoppable Evil attacks, and don't waste Time on weapons.
+
+39
+00:01:56,528 --> 00:02:00,776
+She's tougher than average: Final Girls win about fifty-seven percent of logged
+
+40
+00:02:00,776 --> 00:02:01,691
 games. Good luck.
 

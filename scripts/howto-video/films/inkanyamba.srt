@@ -19,70 +19,118 @@ Put the Killer Wrath card out with a tracking marker on level two, and add both
 Atonement Action cards to the Action Tableau.
 
 6
-00:00:14,167 --> 00:00:18,354
-Killer Wrath is his rising anger. Increase and Decrease move the marker, always
+00:00:14,167 --> 00:00:18,241
+Inkanyamba's anger is tracked on the Killer Wrath card, from level one to ten.
 
 7
-00:00:18,354 --> 00:00:19,415
-between one and ten.
+00:00:18,461 --> 00:00:22,865
+When told to Increase or Decrease Killer Wrath, move the marker up or down that many
 
 8
-00:00:19,635 --> 00:00:23,627
-Unleash means apply the current level, which can raise Horror, heal him, make him
+00:00:22,865 --> 00:00:25,224
+levels. It never goes below one or above ten.
 
 9
-00:00:23,627 --> 00:00:25,352
-take a Killer Action, or all three.
+00:00:25,444 --> 00:00:29,227
+When told to Unleash Killer Wrath, look at the current level and apply everything
 
 10
-00:00:26,167 --> 00:00:30,475
-Atonement cards are your main way to lower his Wrath, or Divine Wrath at the Sacred
+00:00:29,227 --> 00:00:29,881
+printed on it.
 
 11
-00:00:30,475 --> 00:00:30,839
-Groves.
+00:00:30,700 --> 00:00:35,011
+Depending on the level, an Unleash can raise your Horror, heal Inkanyamba, make him
 
 12
-00:00:31,059 --> 00:00:34,600
-They have an extra success line for three or more successes on a Horror roll.
+00:00:35,011 --> 00:00:37,868
+take an extra Killer Action, or a combination of these.
 
 13
-00:00:35,433 --> 00:00:39,160
-Wrath of Death raises his Wrath by your current health, so being at full health
+00:00:38,088 --> 00:00:41,980
+The higher his Wrath, the nastier it gets, so the key to this killer is keeping
 
 14
-00:00:39,160 --> 00:00:39,679
-hurts here.
+00:00:41,980 --> 00:00:43,507
+Wrath low before it boils over.
 
 15
-00:00:39,899 --> 00:00:44,099
-Volatile Temper adds a Horror roll at the end of each Upkeep that can Unleash him,
+00:00:44,333 --> 00:00:47,299
+Atonement Action cards are your main way to calm him down.
 
 16
-00:00:44,099 --> 00:00:47,685
-and Dark Lightning kills a second Victim nearby whenever he kills one.
+00:00:47,519 --> 00:00:49,787
+With one success, lower Killer Wrath by one.
 
 17
-00:00:48,500 --> 00:00:52,780
-A few tips. At the Sacred Groves two Wrath tracks stack, and it's the hardest box in
+00:00:49,787 --> 00:00:53,755
+With two, lower it by half, rounded up. With three or more successes, drop it
 
 18
-00:00:52,780 --> 00:00:54,665
-the game, so try him elsewhere first.
+00:00:53,755 --> 00:00:54,580
+straight to one.
 
 19
-00:00:54,885 --> 00:00:59,579
-Atonement is unreliable on one or two dice, so get Horror down first and roll three.
+00:00:54,800 --> 00:00:58,235
+At the Sacred Groves you can use Atonement on Divine Wrath instead.
 
 20
-00:00:59,799 --> 00:01:02,722
-Look for weapons that hurt him and lower Wrath at once.
+00:00:59,067 --> 00:01:02,843
+His 'Wrath of' Terror cards Unleash his Wrath, and some push it even higher.
 
 21
-00:01:02,722 --> 00:01:05,326
-And beware Savage Whirlwind, his toughest Finale.
+00:01:03,063 --> 00:01:07,183
+Wrath of Death raises it by your current health, so being at full health hurts here.
 
 22
-00:01:05,326 --> 00:01:05,857
+00:01:07,183 --> 00:01:09,783
+If there are no Victims left, it targets you instead.
+
+23
+00:01:10,003 --> 00:01:14,292
+His Violent Tantrum Finale Unleashes Wrath and raises it by three, and keeps nudging
+
+24
+00:01:14,292 --> 00:01:16,232
+it up whenever it falls to one or two.
+
+25
+00:01:17,067 --> 00:01:20,492
+Volatile Temper adds a Horror roll at the end of every Upkeep.
+
+26
+00:01:20,492 --> 00:01:22,315
+A bad result Unleashes his Wrath.
+
+27
+00:01:22,535 --> 00:01:26,888
+His Epic Dark Power, Dark Lightning: whenever he kills a Victim, he also kills a
+
+28
+00:01:26,888 --> 00:01:30,044
+second Victim in the same or an adjacent space, if he can.
+
+29
+00:01:30,867 --> 00:01:35,147
+A few tips. At the Sacred Groves two Wrath tracks stack, and it's the hardest box in
+
+30
+00:01:35,147 --> 00:01:37,032
+the game, so try him elsewhere first.
+
+31
+00:01:37,252 --> 00:01:41,945
+Atonement is unreliable on one or two dice, so get Horror down first and roll three.
+
+32
+00:01:42,165 --> 00:01:45,088
+Look for weapons that hurt him and lower Wrath at once.
+
+33
+00:01:45,088 --> 00:01:47,693
+And beware Savage Whirlwind, his toughest Finale.
+
+34
+00:01:47,693 --> 00:01:48,224
 Good luck.
 

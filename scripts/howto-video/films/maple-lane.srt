@@ -23,50 +23,118 @@ quadrant of houses, with the top card face up.
 Then add both Convince Action cards to the Action Tableau.
 
 7
-00:00:18,267 --> 00:00:22,186
-There are twelve Houses, three in each quadrant, and every House counts as a Search
+00:00:18,267 --> 00:00:21,080
+Maple Lane has twelve Houses, three in each quadrant:
 
 8
-00:00:22,186 --> 00:00:22,469
-space.
+00:00:21,080 --> 00:00:23,733
+north-west, south-west, north-east and south-east.
 
 9
-00:00:22,689 --> 00:00:26,853
-A successful search draws from that quadrant's deck, then the House gets an X token
+00:00:23,733 --> 00:00:26,971
+Every House is a search space, coloured orange to remind you.
 
 10
-00:00:26,853 --> 00:00:28,257
-and can't be searched again.
+00:00:27,191 --> 00:00:30,921
+When you search a House successfully, draw from that quadrant's Item deck.
 
 11
-00:00:29,067 --> 00:00:32,779
-The residents are suspicious, so you can't walk into a House with Victims in it.
+00:00:30,921 --> 00:00:33,996
+Then put an X token on the House. It can't be searched again.
 
 12
-00:00:32,999 --> 00:00:36,077
-Use a Convince card from the next Street space to get in.
+00:00:34,800 --> 00:00:37,351
+If a search finds two Items, keep the one you want.
 
 13
-00:00:36,077 --> 00:00:40,613
-Leaving is normal movement, empty Houses are open, and panicking Victims and Enemies
+00:00:37,351 --> 00:00:41,554
+Put the other face up on top of that quadrant's deck, or face down at the bottom, as
 
 14
-00:00:40,613 --> 00:00:41,639
-go where they like.
+00:00:41,554 --> 00:00:41,904
+normal.
 
 15
-00:00:42,467 --> 00:00:46,695
-A few tips. Each House can only be searched once, so plan routes across all four
+00:00:42,124 --> 00:00:46,128
+If an Item ever needs adding to a quadrant where every House already has an X, add
 
 16
-00:00:46,695 --> 00:00:47,224
-quadrants.
+00:00:46,128 --> 00:00:48,716
+it to the nearest quadrant that isn't fully searched.
 
 17
-00:00:47,444 --> 00:00:51,817
-The Bible adds two dice to Convince, and with three successes you can take the top
+00:00:49,533 --> 00:00:51,624
+The residents are suspicious of outsiders.
 
 18
-00:00:51,817 --> 00:00:53,631
+00:00:51,624 --> 00:00:55,805
+You can't enter a House with any Victims in it using Walk, Sprint, or any other card
+
+19
+00:00:55,805 --> 00:00:56,552
+that moves you.
+
+20
+00:00:56,772 --> 00:01:00,849
+Panicking Victims and Enemies aren't restricted, so they can move into occupied
+
+21
+00:01:00,849 --> 00:01:01,572
+Houses freely.
+
+22
+00:01:01,792 --> 00:01:04,992
+An empty House follows the normal movement rules, in and out.
+
+23
+00:01:05,800 --> 00:01:10,151
+To get into an occupied House, use a Convince Action card from the adjacent Street
+
+24
+00:01:10,151 --> 00:01:14,291
+space. It can only be used for that: never to leave, which is normal movement.
+
+25
+00:01:14,511 --> 00:01:17,436
+Convince has an extra line for three or more successes:
+
+26
+00:01:17,436 --> 00:01:20,894
+you enter, and you may also take the top Item from that quadrant.
+
+27
+00:01:20,894 --> 00:01:22,809
+If you do, mark the House with an X.
+
+28
+00:01:23,633 --> 00:01:27,243
+Every normal space and exit, plus the Intersection, is a Street space.
+
+29
+00:01:27,243 --> 00:01:30,183
+They have no rules of their own, but cards refer to them.
+
+30
+00:01:30,403 --> 00:01:34,443
+For example, one Terror card kills a Victim of your choice on a Street space.
+
+31
+00:01:34,443 --> 00:01:36,227
+Keep Victims moving off the roads.
+
+32
+00:01:37,033 --> 00:01:41,262
+A few tips. Each House can only be searched once, so plan routes across all four
+
+33
+00:01:41,262 --> 00:01:41,791
+quadrants.
+
+34
+00:01:42,011 --> 00:01:46,384
+The Bible adds two dice to Convince, and with three successes you can take the top
+
+35
+00:01:46,384 --> 00:01:48,197
 Item without searching. Good luck.
 

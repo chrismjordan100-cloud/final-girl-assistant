@@ -19,46 +19,118 @@ Deal three face-down decks of two Items, add one Item Trap to each, and shuffle 
 deck. Then put one Item face up on top of each.
 
 6
-00:00:18,667 --> 00:00:22,272
-Each Item deck hides one Item Trap, found only by searching.
+00:00:18,667 --> 00:00:21,326
+There are two kinds of trap here. First, Item Traps:
 
 7
-00:00:22,492 --> 00:00:26,376
-If you draw one, you must resolve it, unless something like Zappo protects you.
+00:00:21,326 --> 00:00:25,365
+one is hidden somewhere in each Item deck, and you only find them by searching.
 
 8
-00:00:26,376 --> 00:00:29,916
-If the search also found an Item, you can still take it, after the trap.
+00:00:25,585 --> 00:00:29,646
+If a successful search draws an Item Trap, you must resolve it, unless something
 
 9
-00:00:30,733 --> 00:00:34,968
-Three Terror cards are Terror Traps. When one is drawn, place its Trap token in your
+00:00:29,646 --> 00:00:31,473
+protects you, like Zappo the monkey.
 
 10
-00:00:34,968 --> 00:00:38,093
-space: it hits you and kills any Victims there, straight away.
+00:00:31,693 --> 00:00:36,175
+If the same search also found an Item, you can still keep the Item, but resolve the
 
 11
-00:00:38,313 --> 00:00:42,318
-Trap tokens stay for the rest of the game, and trigger whenever you or a Victim
+00:00:36,175 --> 00:00:40,440
+trap first. Item Traps are discarded afterwards unless the card says otherwise.
 
 12
-00:00:42,318 --> 00:00:44,244
-enter. Enemies ignore them completely.
+00:00:41,267 --> 00:00:44,834
+For example, the Hidden Cobra trap stays next to your Final Girl card.
 
 13
-00:00:45,067 --> 00:00:48,693
-A few tips. Zappo the monkey or Asami let you avoid Item Traps.
+00:00:44,834 --> 00:00:49,013
+It hurts you every Upkeep, and the next time you would recover health, you discard
 
 14
-00:00:48,913 --> 00:00:52,497
-Charlie can trade health for big Critical Blows once she's made her rescues.
+00:00:49,013 --> 00:00:50,440
+the trap instead of healing.
 
 15
-00:00:52,717 --> 00:00:56,975
-It's one of the hardest locations in logged games, so map where the Trap tokens
+00:00:51,267 --> 00:00:55,425
+Second, Terror Traps. Three of the location's Terror cards are traps, drawn in the
 
 16
-00:00:56,975 --> 00:00:57,837
+00:00:55,425 --> 00:00:57,453
+Killer phase like any other Terror card.
+
+17
+00:00:57,673 --> 00:01:01,323
+When one tells you to place its Trap token, put it in your current space.
+
+18
+00:01:01,323 --> 00:01:04,223
+It goes off immediately, on you and on every Victim there.
+
+19
+00:01:04,443 --> 00:01:07,796
+Victims are always killed. What it does to you depends on the trap.
+
+20
+00:01:07,796 --> 00:01:10,949
+Then finish resolving the Terror card and discard it as normal.
+
+21
+00:01:11,767 --> 00:01:13,962
+The Terror Trap reference card lists them.
+
+22
+00:01:13,962 --> 00:01:16,993
+The Rope Trap makes you discard one Action card at random.
+
+23
+00:01:17,213 --> 00:01:20,002
+The Spinning Floor Blade trap makes you roll two dice:
+
+24
+00:01:20,002 --> 00:01:24,083
+each one to four does one damage, and each five or six lets you move one space.
+
+25
+00:01:24,303 --> 00:01:28,057
+And the Acid Pitfall hurts you straight away, as shown on the reference card.
+
+26
+00:01:28,867 --> 00:01:32,984
+Trap tokens are never discarded. They stay on the board for the rest of the game.
+
+27
+00:01:33,204 --> 00:01:37,765
+Every time you, or a Victim, enter or are in a space with a Trap token, it goes off
+
+28
+00:01:37,765 --> 00:01:40,457
+again. Victims are killed; you suffer its effect.
+
+29
+00:01:40,677 --> 00:01:44,327
+Enemies are never affected by traps, so the Killer walks straight through them.
+
+30
+00:01:44,327 --> 00:01:47,376
+Plan your routes, and your Victims' routes, around trapped spaces.
+
+31
+00:01:48,200 --> 00:01:51,827
+A few tips. Zappo the monkey or Asami let you avoid Item Traps.
+
+32
+00:01:52,047 --> 00:01:55,631
+Charlie can trade health for big Critical Blows once she's made her rescues.
+
+33
+00:01:55,851 --> 00:02:00,108
+It's one of the hardest locations in logged games, so map where the Trap tokens
+
+34
+00:02:00,108 --> 00:02:00,971
 land. Good luck.
 

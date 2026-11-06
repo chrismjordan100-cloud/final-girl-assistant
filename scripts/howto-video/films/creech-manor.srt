@@ -15,66 +15,122 @@ Here's how the location plays.
 Creech Manor has no special setup, but the house itself has a few rules of its own.
 
 5
-00:00:13,700 --> 00:00:16,513
-Three spaces only exit one way, shown by white arrows.
+00:00:13,700 --> 00:00:17,823
+Creech Manor has three one-way spaces. White arrows and lines show the only
 
 6
-00:00:16,513 --> 00:00:20,420
-You can't climb back up the tyre swing, or up through the washroom ceiling.
+00:00:17,823 --> 00:00:19,417
+direction you can leave them.
 
 7
-00:00:20,640 --> 00:00:24,905
-Victims and Enemies follow the same rule, though the spaces still count as adjacent
+00:00:19,637 --> 00:00:23,203
+You can't move against an arrow. So you can't climb up the tyre swing and back in
 
 8
-00:00:24,905 --> 00:00:25,419
-both ways.
+00:00:23,203 --> 00:00:26,857
+through the window, and you can't climb up through the hole in the washroom ceiling
 
 9
-00:00:25,639 --> 00:00:28,048
-The Rope Ladder item is the only exception:
+00:00:26,857 --> 00:00:27,957
+on the left of the board.
 
 10
-00:00:28,048 --> 00:00:30,737
-it turns a one-way space back into a normal one.
+00:00:28,177 --> 00:00:30,384
+Victims and Enemies follow the same rule.
 
 11
-00:00:31,567 --> 00:00:35,590
-There are three Window spaces. They have no rules of their own, but lots of Terror
+00:00:30,384 --> 00:00:34,852
+But the spaces still count as adjacent in both directions, for attacks and anything
 
 12
-00:00:35,590 --> 00:00:36,964
-and Event cards target them.
+00:00:34,852 --> 00:00:36,305
+else that checks adjacency.
 
 13
-00:00:37,184 --> 00:00:41,211
-The Ladder always means the outside ladder up to the third-floor washroom, never the
+00:00:36,525 --> 00:00:38,909
+The one exception is the Rope Ladder item.
 
 14
-00:00:41,211 --> 00:00:41,835
-attic ladder.
+00:00:38,909 --> 00:00:42,541
+Once used, it turns a one-way space into a normal two-way space.
 
 15
-00:00:42,055 --> 00:00:45,639
-And every space is Inside except the three exits, which are Outside.
+00:00:43,367 --> 00:00:45,511
+Window spaces are marked with a window icon.
 
 16
-00:00:46,467 --> 00:00:50,200
-A few tips. The exits are at street level, so bring Victims down early.
+00:00:45,511 --> 00:00:48,679
+There are two on the right side of the house and one on the left.
 
 17
-00:00:50,420 --> 00:00:53,513
-Avoid the Attic: Victims sent there tend to die in bulk.
+00:00:48,899 --> 00:00:53,168
+They have no rules of their own, but many Terror and Event cards target them, for
 
 18
-00:00:53,733 --> 00:00:56,997
-If Lights Out comes up, a Flashlight or Candle keeps you moving.
+00:00:53,168 --> 00:00:56,594
+example sending panicking Victims out of a window to their death.
 
 19
-00:00:57,217 --> 00:01:01,392
-It's one of the tougher locations, especially against the Poltergeist and the Birds.
+00:00:56,594 --> 00:00:58,755
+So keep an eye on who is standing by one.
 
 20
-00:01:01,392 --> 00:01:01,889
+00:00:59,567 --> 00:01:03,368
+Whenever a card mentions The Ladder, it means the ladder on the outside of the
+
+21
+00:01:03,368 --> 00:01:06,585
+building, joining the left exit space to the third-floor washroom.
+
+22
+00:01:06,805 --> 00:01:09,497
+The ladder drawn up to the attic is just artwork.
+
+23
+00:01:09,497 --> 00:01:11,200
+No game effect ever touches it.
+
+24
+00:01:12,033 --> 00:01:16,364
+Every space counts as Inside, except the three exit spaces, which are Outside.
+
+25
+00:01:16,584 --> 00:01:20,408
+Several cards check this. For example, when the windows and doors slam shut:
+
+26
+00:01:20,408 --> 00:01:23,578
+if you're Inside, you can't move during your next Action phase;
+
+27
+00:01:23,578 --> 00:01:25,843
+if you're Outside, you can't enter the house.
+
+28
+00:01:26,063 --> 00:01:30,193
+And the Lights Out event makes you roll one fewer die whenever an Action card lets
+
+29
+00:01:30,193 --> 00:01:32,761
+you move, unless you have a Flashlight or a Candle.
+
+30
+00:01:33,567 --> 00:01:37,300
+A few tips. The exits are at street level, so bring Victims down early.
+
+31
+00:01:37,520 --> 00:01:40,613
+Avoid the Attic: Victims sent there tend to die in bulk.
+
+32
+00:01:40,833 --> 00:01:44,097
+If Lights Out comes up, a Flashlight or Candle keeps you moving.
+
+33
+00:01:44,317 --> 00:01:48,492
+It's one of the tougher locations, especially against the Poltergeist and the Birds.
+
+34
+00:01:48,492 --> 00:01:48,989
 Good luck.
 

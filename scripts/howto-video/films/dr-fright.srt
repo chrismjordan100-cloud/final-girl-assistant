@@ -19,66 +19,178 @@ Shuffle the four Boiler Room cards face down, and put the Awake/Asleep card on t
 Awake side up. That's the Boiler Room deck.
 
 6
-00:00:15,200 --> 00:00:19,032
-You start Awake. While Awake you play as normal, but he can't attack you and you
+00:00:15,200 --> 00:00:19,826
+Against Dr. Fright you're always either Awake or Asleep, shown by the Awake/Asleep
 
 7
-00:00:19,032 --> 00:00:22,432
-can't attack him. If a Victim is in his space, he'll still attack them.
+00:00:19,826 --> 00:00:22,816
+card on top of the Boiler Room deck. You start Awake.
 
 8
-00:00:22,652 --> 00:00:26,620
-You fall Asleep when a card says so, or by choice with a Short or Long Rest.
+00:00:23,036 --> 00:00:27,429
+When an effect sends you to sleep, take the Awake/Asleep card, put it unflipped on
 
 9
-00:00:27,433 --> 00:00:31,082
-Asleep, you're in his Boiler Room. You can move, search and attack him, and he
+00:00:27,429 --> 00:00:30,965
+the bottom of the Boiler Room deck, then flip the whole deck over.
 
 10
-00:00:31,082 --> 00:00:32,532
-resolves his attacks as normal.
+00:00:30,965 --> 00:00:32,572
+The Asleep side is now on top.
 
 11
-00:00:32,752 --> 00:00:36,721
-Victims won't follow you and can't be saved, and you must resolve one Boiler Room
+00:00:32,792 --> 00:00:36,165
+Some Terror cards send you to sleep, but you can also choose to:
 
 12
-00:00:36,721 --> 00:00:38,533
-card at the end of each Killer phase.
+00:00:36,165 --> 00:00:40,380
+resolving a Short Rest or Long Rest card always sends you to sleep, whatever the
 
 13
-00:00:39,367 --> 00:00:42,988
-Slide the deck up, down, left or right to reveal part of the next card.
+00:00:40,380 --> 00:00:40,749
+result.
 
 14
-00:00:42,988 --> 00:00:45,895
-If Dr. Fright is showing, he attacks you, wherever he is.
+00:00:41,567 --> 00:00:44,779
+While Awake, you move, search, save Victims and so on as normal.
 
 15
-00:00:46,115 --> 00:00:49,332
-He appears in each quadrant only once, so track what you've seen.
+00:00:44,779 --> 00:00:47,689
+But Dr. Fright can't attack you, and you can't attack him.
 
 16
-00:00:49,332 --> 00:00:51,213
-Reveal all four cards and you wake up.
+00:00:47,909 --> 00:00:52,030
+When he resolves a Killer Action aimed at you, treat it as aimed at Victims instead,
 
 17
-00:00:52,033 --> 00:00:54,977
-A few tips. Do your rescues while Awake, and choose when to sleep.
+00:00:52,030 --> 00:00:56,151
+unless an effect such as his Frightmare is Inevitable Dark Power lets him attack you
 
 18
-00:00:55,197 --> 00:00:58,822
-Keeping Victims alive keeps his Bloodlust low and him nearly still.
+00:00:56,151 --> 00:00:57,083
+while you're Awake.
 
 19
-00:00:58,822 --> 00:01:00,445
-The Megaphone is a great find.
+00:00:57,303 --> 00:01:01,458
+An action aimed at you and Victims still moves him towards you, but he can't attack
 
 20
-00:01:00,665 --> 00:01:04,687
-He's one of the easier killers: about three wins in four on Final Girl Stats.
+00:01:01,458 --> 00:01:04,663
+you. If he ends in a space with a Victim, he attacks the Victim.
 
 21
-00:01:04,687 --> 00:01:05,209
+00:01:05,467 --> 00:01:08,220
+While Asleep, you're inside his dream world, the Boiler Room.
+
+22
+00:01:08,220 --> 00:01:10,928
+You can still move around the board, search, and attack him.
+
+23
+00:01:11,148 --> 00:01:14,732
+But he can now attack you, resolving all his Killer Actions as normal.
+
+24
+00:01:14,952 --> 00:01:17,213
+Victims won't follow you, and you can't save them.
+
+25
+00:01:17,433 --> 00:01:21,679
+And at the end of every Killer phase, you must resolve exactly one Boiler Room card.
+
+26
+00:01:22,500 --> 00:01:26,686
+To resolve a Boiler Room card, slide the deck up, down, left or right, so that half,
+
+27
+00:01:26,686 --> 00:01:29,028
+or sometimes a quarter, of the next card shows.
+
+28
+00:01:29,248 --> 00:01:33,036
+You can't slide in a direction that reveals nothing, and you must extend the card
+
+29
+00:01:33,036 --> 00:01:34,112
+that's already showing.
+
+30
+00:01:34,332 --> 00:01:38,588
+If Dr. Fright appears on the newly revealed part, he attacks you, wherever he is on
+
+31
+00:01:38,588 --> 00:01:40,433
+the board. You can defend as normal.
+
+32
+00:01:41,267 --> 00:01:45,586
+Dr. Fright appears in each of the four quadrants only once across the four cards, so
+
+33
+00:01:45,586 --> 00:01:49,699
+remember where he's been. With care you can sometimes avoid every attack, though
+
+34
+00:01:49,699 --> 00:01:51,293
+usually you'll take one or two.
+
+35
+00:01:51,513 --> 00:01:55,604
+During your Action phase you may resolve as many Boiler Room cards as you like,
+
+36
+00:01:55,604 --> 00:01:58,297
+including none, to control how long you stay asleep.
+
+37
+00:01:58,517 --> 00:02:00,978
+When all four cards are revealed, you wake up.
+
+38
+00:02:00,978 --> 00:02:05,259
+Shuffle them face down and put the Awake/Asleep card back on top, Awake side up.
+
+39
+00:02:06,067 --> 00:02:09,926
+Watch for The Frightmare is Inevitable, which lets him attack you even while you're
+
+40
+00:02:09,926 --> 00:02:10,205
+Awake.
+
+41
+00:02:10,425 --> 00:02:14,789
+His Epic Dark Power, Shock Factor: any Victim who would panic is killed instead, up
+
+42
+00:02:14,789 --> 00:02:15,631
+to three a turn.
+
+43
+00:02:15,851 --> 00:02:19,082
+And his Everyone Must Die Finale takes him off the board onto the card.
+
+44
+00:02:19,082 --> 00:02:22,677
+For the rest of the game you can attack him from any space while you're Asleep.
+
+45
+00:02:23,500 --> 00:02:26,444
+A few tips. Do your rescues while Awake, and choose when to sleep.
+
+46
+00:02:26,664 --> 00:02:30,289
+Keeping Victims alive keeps his Bloodlust low and him nearly still.
+
+47
+00:02:30,289 --> 00:02:31,912
+The Megaphone is a great find.
+
+48
+00:02:32,132 --> 00:02:36,154
+He's one of the easier killers: about three wins in four on Final Girl Stats.
+
+49
+00:02:36,154 --> 00:02:36,676
 Good luck.
 

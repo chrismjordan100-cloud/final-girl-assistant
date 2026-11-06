@@ -31,114 +31,338 @@ One Origin marker goes where she'd start;
 the other goes on that face-down card.
 
 9
-00:00:23,533 --> 00:00:26,728
-She has no Movement Value. For most of the game she's Concealed:
+00:00:23,533 --> 00:00:27,928
+The Volk'ar has no Movement Value. She moves only by her Path of Movement cards.
 
 10
-00:00:26,728 --> 00:00:28,824
-always on the board somewhere, but hidden.
+00:00:28,148 --> 00:00:31,479
+She is always in one of two states. Concealed means her cloak is on:
 
 11
-00:00:29,044 --> 00:00:33,193
-If she's Concealed at the start of the Killer phase, resolve the upper Killer Action
+00:00:31,479 --> 00:00:35,495
+she is always somewhere on the board, but you can't see where, and her meeple sits
 
 12
-00:00:33,193 --> 00:00:35,465
-on the Finale card. If Visible, the lower one.
+00:00:35,495 --> 00:00:36,425
+on the Finale card.
 
 13
-00:00:36,300 --> 00:00:38,625
-Her route is a hidden Path of Movement cards.
+00:00:36,645 --> 00:00:40,703
+Visible means the cloak is off: her meeple is on the board and she behaves like any
 
 14
-00:00:38,845 --> 00:00:43,475
-An open eye icon adds a card face up. A crossed-out eye adds one face down.
+00:00:40,703 --> 00:00:41,339
+other killer.
 
 15
-00:00:43,695 --> 00:00:47,849
-If she was Visible, she vanishes again: the Origin markers go on the new card and
+00:00:41,559 --> 00:00:44,156
+At the start of each Killer phase, check her state.
 
 16
-00:00:47,849 --> 00:00:48,772
-her current space.
+00:00:44,156 --> 00:00:48,026
+If she's Concealed, resolve the upper Killer Action line on her Finale card.
 
 17
-00:00:49,600 --> 00:00:53,776
-She breaks cover when you resolve the Reveal icon, when a sixth Movement card joins
+00:00:48,026 --> 00:00:50,113
+If she's Visible, resolve the lower line.
 
 18
-00:00:53,776 --> 00:00:56,341
-the Path, or when an attack on her would do damage.
+00:00:50,933 --> 00:00:54,667
+Her hidden route is the Path: a row of Movement cards, read left to right.
 
 19
-00:00:56,561 --> 00:01:00,693
-Place her on the Origin space, then play out each card in order, moving her, and
+00:00:54,887 --> 00:00:59,233
+The first card is the Origin card. One Origin marker sits on it, and the other sits
 
 20
-00:01:00,693 --> 00:01:03,431
-attacking wherever a card shows a Killer Action line.
+00:00:59,233 --> 00:01:02,375
+on the board, on the space where her hidden movement starts.
 
 21
-00:01:04,267 --> 00:01:07,176
-The Track action card lets you flip Movement cards over.
+00:01:02,595 --> 00:01:06,888
+Whenever you see the open eye icon, draw a Movement card and add it face up to the
 
 22
-00:01:07,176 --> 00:01:10,709
-If every card in the Path is face up, you know exactly where she is.
+00:01:06,888 --> 00:01:11,128
+end of the Path. Whenever you see the crossed-out eye, add one face down instead.
 
 23
-00:01:10,929 --> 00:01:13,788
-And you're never allowed to look through the discarded Movement cards.
+00:01:11,348 --> 00:01:14,612
+If the Movement deck runs out, shuffle the discards to make a new one.
 
 24
-00:01:14,600 --> 00:01:16,656
-You can attack a space you think she's in.
+00:01:14,612 --> 00:01:17,876
+But you're never allowed to look through the discarded Movement cards.
 
 25
-00:01:16,656 --> 00:01:20,573
-Place the Attack token, roll, and park the damage on the Attack Resolution card.
+00:01:18,700 --> 00:01:22,241
+If a crossed-out eye comes up while she's Visible, she vanishes straight away.
 
 26
-00:01:20,793 --> 00:01:24,911
-Any damage makes her Path resolve. If she ends on your target, the damage lands.
+00:01:22,461 --> 00:01:26,734
+The card you just drew face down becomes the new Origin card, with an Origin marker
 
 27
-00:01:25,131 --> 00:01:29,184
-If not, she ambushes you. Take the Ambush Penalty on the last Movement card.
+00:01:26,734 --> 00:01:30,956
+on it. The other Origin marker goes on the space she's standing in, and her meeple
 
 28
-00:01:30,000 --> 00:01:34,165
-While she's Concealed, anything measured from the Killer uses the Origin space, and
+00:01:30,956 --> 00:01:32,552
+goes back onto the Finale card.
 
 29
-00:01:34,165 --> 00:01:36,272
-effects that place the Killer are ignored.
+00:01:32,772 --> 00:01:36,271
+From then on, every card added to the Path is another step you can't see.
 
 30
-00:01:36,492 --> 00:01:40,097
-Killer Action lines count as a crossed eye, and Victims don't panic.
+00:01:37,100 --> 00:01:40,663
+Her Path is resolved, and she reveals herself, when one of three things happens.
 
 31
-00:01:40,933 --> 00:01:44,150
-A few tips. Use Track to flip cards before a blind attack:
+00:01:40,883 --> 00:01:43,121
+One: you resolve the Reveal icon on a card.
 
 32
-00:01:44,150 --> 00:01:46,203
-every face-up card narrows the guess.
+00:01:43,121 --> 00:01:45,620
+Two: a sixth Movement card is added to the Path.
 
 33
-00:01:46,423 --> 00:01:49,089
-Strike while the Path is short, when she can't have gone far.
+00:01:45,620 --> 00:01:49,160
+Three: while she's Concealed, an attack against her would do damage.
 
 34
-00:01:49,309 --> 00:01:53,139
-She's very beatable: about three wins in four on Final Girl Stats.
+00:01:49,380 --> 00:01:53,690
+If the sixth card arrives part-way through her Finale Killer Action, or a Terror
 
 35
-00:01:53,139 --> 00:01:55,517
-But Self Destruct is her toughest Finale.
+00:01:53,690 --> 00:01:56,815
+card, finish that whole card first, then resolve the Path.
 
 36
-00:01:55,737 --> 00:01:57,849
+00:01:56,815 --> 00:01:58,916
+So her Path can end up longer than six.
+
+37
+00:01:59,733 --> 00:02:03,853
+To resolve the Path, put her meeple on the space with the Origin marker, even if
+
+38
+00:02:03,853 --> 00:02:06,221
+that space can't normally be entered any more.
+
+39
+00:02:06,221 --> 00:02:08,075
+Put both Origin markers by the deck.
+
+40
+00:02:08,295 --> 00:02:12,330
+Then work through the cards one at a time, starting with the Origin card, flipping
+
+41
+00:02:12,330 --> 00:02:13,265
+any face-down ones.
+
+42
+00:02:13,485 --> 00:02:18,048
+Each card moves her: for example, three spaces towards the closest search space, or
+
+43
+00:02:18,048 --> 00:02:22,445
+one space on a roll of six. The card says how to break ties, and some say not to
+
+44
+00:02:22,445 --> 00:02:24,259
+count the space she's already in.
+
+45
+00:02:24,479 --> 00:02:28,812
+If a card has a Killer Action line, she attacks in the space she ends that card in:
+
+46
+00:02:28,812 --> 00:02:33,145
+Victims, Soldiers, or you. Location rules that stop or slow the Killer apply to her
+
+47
+00:02:33,145 --> 00:02:34,868
+too, so sometimes she won't move.
+
+48
+00:02:35,088 --> 00:02:39,423
+If anyone's Final Health token needs revealing, wait until every card is done.
+
+49
+00:02:39,423 --> 00:02:41,701
+Then discard the Path. She's now Visible.
+
+50
+00:02:42,533 --> 00:02:45,563
+Use the Track action card to flip her Movement cards face up.
+
+51
+00:02:45,783 --> 00:02:49,579
+With your best result you reveal the Origin card, or any two other cards.
+
+52
+00:02:49,579 --> 00:02:53,688
+The middle result reveals two cards, and the lowest reveals one, but neither of
+
+53
+00:02:53,688 --> 00:02:55,404
+those can reveal the Origin card.
+
+54
+00:02:55,624 --> 00:02:59,741
+Revealing the Origin card matters most, because it tells you where her route begins.
+
+55
+00:02:59,961 --> 00:03:04,024
+If every card in the Path is face up, you know exactly which space she's in, and you
+
+56
+00:03:04,024 --> 00:03:07,748
+can follow her route on the board. If even one is face down, you're guessing.
+
+57
+00:03:08,567 --> 00:03:12,536
+While she's Concealed you can attack any space in range, following the normal attack
+
+58
+00:03:12,536 --> 00:03:14,284
+rules, as if she were standing there.
+
+59
+00:03:14,504 --> 00:03:18,636
+Put the Attack token in that space and resolve the attack, placing the damage you
+
+60
+00:03:18,636 --> 00:03:21,288
+roll as Damage tokens on the Attack Resolution card.
+
+61
+00:03:21,508 --> 00:03:23,872
+If the attack did no damage, nothing happens:
+
+62
+00:03:23,872 --> 00:03:26,393
+she stays Concealed and her Path isn't resolved.
+
+63
+00:03:26,613 --> 00:03:30,048
+If it did any damage, resolve her whole Path now, card by card.
+
+64
+00:03:30,867 --> 00:03:34,666
+If her final space is the one with the Attack token, your damage lands.
+
+65
+00:03:34,666 --> 00:03:37,288
+Move it from the Attack Resolution card onto her.
+
+66
+00:03:37,508 --> 00:03:41,635
+If she ends anywhere else, the attack is wasted, and she ambushes you, even if the
+
+67
+00:03:41,635 --> 00:03:45,863
+attack came from your Soldiers. Resolve the Ambush Penalty at the bottom of the last
+
+68
+00:03:45,863 --> 00:03:47,172
+Movement card in her Path.
+
+69
+00:03:47,392 --> 00:03:50,741
+Either way, clear the Damage tokens and the Attack token afterwards.
+
+70
+00:03:50,961 --> 00:03:54,963
+One special case: if you attacked your own space, she ends there, and the last card
+
+71
+00:03:54,963 --> 00:03:58,385
+has a Killer Attack line, your attack and hers happen at the same time.
+
+72
+00:03:59,200 --> 00:04:01,483
+While she's Concealed, a few other rules change.
+
+73
+00:04:01,703 --> 00:04:05,805
+If an effect places something, or counts spaces, relative to the Killer, use the
+
+74
+00:04:05,805 --> 00:04:07,292
+space with the Origin marker.
+
+75
+00:04:07,512 --> 00:04:10,019
+If an effect says to place the Killer, ignore it.
+
+76
+00:04:10,019 --> 00:04:14,267
+If any card has a Killer Action line, treat it as a crossed-out eye instead, adding
+
+77
+00:04:14,267 --> 00:04:15,597
+a hidden card to her Path.
+
+78
+00:04:15,817 --> 00:04:18,271
+And Victims don't panic during the Panic phase.
+
+79
+00:04:19,100 --> 00:04:21,443
+Watch for her Dark Powers. Blades in the Dark:
+
+80
+00:04:21,443 --> 00:04:25,672
+whenever her Path is resolved, she kills one Victim in each space next to where she
+
+81
+00:04:25,672 --> 00:04:25,927
+ends.
+
+82
+00:04:26,147 --> 00:04:30,851
+Her Epic Dark Power, Merciless Ambush: whenever her Path is resolved, you suffer the
+
+83
+00:04:30,851 --> 00:04:35,163
+Ambush Penalty on every Movement card in it, so long hidden Paths become very
+
+84
+00:04:35,163 --> 00:04:35,555
+costly.
+
+85
+00:04:35,775 --> 00:04:39,892
+And her Psy Ops Terror card makes you discard every Track card in your hand if she's
+
+86
+00:04:39,892 --> 00:04:40,383
+Concealed.
+
+87
+00:04:41,200 --> 00:04:44,417
+A few tips. Use Track to flip cards before a blind attack:
+
+88
+00:04:44,417 --> 00:04:46,469
+every face-up card narrows the guess.
+
+89
+00:04:46,689 --> 00:04:49,356
+Strike while the Path is short, when she can't have gone far.
+
+90
+00:04:49,576 --> 00:04:53,405
+She's very beatable: about three wins in four on Final Girl Stats.
+
+91
+00:04:53,405 --> 00:04:55,784
+But Self Destruct is her toughest Finale.
+
+92
+00:04:56,004 --> 00:04:58,116
 Keep the rule sheet handy, and good hunting.
 

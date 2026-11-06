@@ -27,114 +27,310 @@ Lay out the Soldiers card and Action cubes, then the eight Upgrade tokens:
 the two green starters unlocked, the other six locked.
 
 8
-00:00:22,067 --> 00:00:26,192
-Every normal Victim is a Soldier. Unlike normal Victims, they'll follow you into the
+00:00:22,067 --> 00:00:26,389
+Every normal Victim here is a Soldier, sent into the conflict zone and eager to
 
 9
-00:00:26,192 --> 00:00:28,403
-Killer's space, and you can order them about.
+00:00:26,389 --> 00:00:26,717
+fight.
 
 10
-00:00:28,623 --> 00:00:32,441
-The Archeologist and the Rebel Leader are not Soldiers, and can't be ordered.
+00:00:26,937 --> 00:00:29,858
+For almost every game effect they count as normal Victims:
 
 11
-00:00:33,267 --> 00:00:37,507
-In the Action phase, choose a space with Soldiers, and drop an Action cube on the
+00:00:29,858 --> 00:00:32,527
+they follow you, panic, get killed, and can be saved.
 
 12
-00:00:37,507 --> 00:00:40,648
-leftmost slot of a free Action Upgrade, like Move or Attack.
+00:00:32,747 --> 00:00:36,632
+But there are two big differences. Soldiers WILL follow you into the Killer's space.
 
 13
-00:00:40,868 --> 00:00:42,617
-Every Soldier there carries it out.
+00:00:36,632 --> 00:00:37,973
+And you can give them orders.
 
 14
-00:00:42,837 --> 00:00:47,326
-In Upkeep, cubes slide one slot right. Once a cube falls off, that action is free
+00:00:38,193 --> 00:00:42,369
+The two Special Victims, the Archeologist and the Rebel Leader, are not Soldiers, so
 
 15
-00:00:47,326 --> 00:00:47,659
-again.
+00:00:42,369 --> 00:00:43,463
+they can't be ordered.
 
 16
-00:00:48,467 --> 00:00:51,645
-Your squad starts out green. Saving one costs two Time.
+00:00:44,267 --> 00:00:48,277
+What your Soldiers can do is set by eight Upgrade tokens on the Soldiers card.
 
 17
-00:00:51,865 --> 00:00:55,812
-When they attack, roll for each Soldier: a one or two means one of them gets shot.
+00:00:48,497 --> 00:00:51,012
+Action Upgrades are the tokens with squares on them.
 
 18
-00:00:56,032 --> 00:01:00,099
-They can only hit their own space, and damage is the number of Soldiers halved,
+00:00:51,012 --> 00:00:55,025
+There are two Move and two Attack. You start with one Move and one Attack unlocked.
 
 19
-00:01:00,099 --> 00:01:02,261
-rounded down. A lone Soldier does nothing.
+00:00:55,245 --> 00:00:58,002
+Ability Upgrades are the four tokens without squares.
 
 20
-00:01:03,067 --> 00:01:07,773
-Use the Train card to unlock Upgrades: free rescues, no friendly fire, attacks into
+00:00:58,002 --> 00:01:01,539
+They all start locked, and each one changes how the Soldiers behave.
 
 21
-00:01:07,773 --> 00:01:11,515
-adjacent spaces, and damage rounded up, so even one Soldier hurts.
+00:01:01,759 --> 00:01:04,476
+To unlock an Upgrade, flip it from its padlock side.
 
 22
-00:01:11,735 --> 00:01:13,399
-Some effects can lock them again.
+00:01:04,476 --> 00:01:06,409
+If an effect locks one, flip it back.
 
 23
-00:01:14,233 --> 00:01:16,976
-While the Huey is in the Clearing, it's an escape space.
+00:01:07,233 --> 00:01:09,409
+You order Soldiers during the Action phase.
 
 24
-00:01:16,976 --> 00:01:19,865
-Stand there and you can save any number of Victims at once.
+00:01:09,629 --> 00:01:11,975
+Choose a space with one or more Soldiers in it.
 
 25
-00:01:20,085 --> 00:01:22,005
-Then the Huey leaves, so pick your moment.
+00:01:11,975 --> 00:01:16,117
+Then choose an unlocked Action Upgrade with no cube anywhere in its row, and put an
 
 26
-00:01:22,833 --> 00:01:25,328
-The river runs one way, from the Waterfall down.
+00:01:16,117 --> 00:01:17,864
+Action cube on its leftmost square.
 
 27
-00:01:25,328 --> 00:01:29,485
-Moving downriver, one space of movement takes you or your Soldiers as far as you
+00:01:18,084 --> 00:01:21,179
+Every Soldier in that space carries out the action together.
 
 28
-00:01:29,485 --> 00:01:29,745
-like.
+00:01:21,179 --> 00:01:25,253
+Move moves the whole group one space. Attack has them attack Enemies in a space
 
 29
-00:01:29,965 --> 00:01:32,995
-But you pass through every space on the way, piranhas included.
+00:01:25,253 --> 00:01:26,233
+within their range.
 
 30
-00:01:33,215 --> 00:01:36,393
-Enemies only drift one space, and no one moves upriver.
+00:01:26,453 --> 00:01:30,467
+You can give several orders in one turn, as long as each uses a different free
 
 31
-00:01:37,200 --> 00:01:41,104
-A few tips. Unlock No Friendly Fire early, or your squad thins itself out.
+00:01:30,467 --> 00:01:30,827
+Action.
 
 32
-00:01:41,324 --> 00:01:45,570
-Keep Soldiers together: damage is half the group, so one big squad hits far harder
+00:01:31,633 --> 00:01:36,171
+Actions need to recover. In each Upkeep phase, slide every Action cube one square to
 
 33
-00:01:45,570 --> 00:01:46,657
-than scattered pairs.
+00:01:36,171 --> 00:01:36,711
+the right.
 
 34
-00:01:46,877 --> 00:01:49,437
-Gather Victims in the Clearing before you use the Huey.
+00:01:36,931 --> 00:01:39,528
+When a cube slides off the last square, take it off:
 
 35
-00:01:49,657 --> 00:01:53,583
+00:01:39,528 --> 00:01:41,027
+that Action can be used again.
+
+36
+00:01:41,247 --> 00:01:44,777
+So an order you give now is unavailable for the next couple of turns.
+
+37
+00:01:44,777 --> 00:01:48,564
+That's why unlocking the second Move and second Attack token is so useful.
+
+38
+00:01:49,400 --> 00:01:51,683
+Untrained, Soldiers aren't much good in a fight.
+
+39
+00:01:51,903 --> 00:01:56,534
+An attack does damage equal to the number of Soldiers divided by two, rounded down.
+
+40
+00:01:56,534 --> 00:02:00,607
+So one Soldier alone does nothing, and three together do just one damage.
+
+41
+00:02:00,827 --> 00:02:02,981
+They can only attack the space they're standing in.
+
+42
+00:02:03,201 --> 00:02:06,658
+And after every Attack order, roll a die for each Soldier involved.
+
+43
+00:02:06,658 --> 00:02:10,734
+On a one or two, one of the Soldiers in that attack is shot by his own side and
+
+44
+00:02:10,734 --> 00:02:11,095
+killed.
+
+45
+00:02:11,900 --> 00:02:14,247
+Each Ability Upgrade fixes one weakness.
+
+46
+00:02:14,467 --> 00:02:18,759
+Saving Soldiers: they're stubborn and don't want rescuing, so saving one normally
+
+47
+00:02:18,759 --> 00:02:21,037
+costs two Time. Unlocked, it costs nothing.
+
+48
+00:02:21,257 --> 00:02:24,180
+Friendly Fire: unlocked, you stop rolling for friendly fire.
+
+49
+00:02:24,400 --> 00:02:28,091
+Attack Range: unlocked, they can attack their own space or an adjacent one.
+
+50
+00:02:28,311 --> 00:02:31,253
+Damage: unlocked, divide by two and round up instead.
+
+51
+00:02:31,253 --> 00:02:34,028
+Now one Soldier does one damage, and three do two.
+
+52
+00:02:34,833 --> 00:02:39,039
+You unlock Upgrades with the Train Action card, which you buy like any other Action
+
+53
+00:02:39,039 --> 00:02:39,292
+card.
+
+54
+00:02:39,512 --> 00:02:42,037
+A good result unlocks an Upgrade of your choice.
+
+55
+00:02:42,037 --> 00:02:46,403
+A poor result can lock one instead, so check the card's rows before you rely on it.
+
+56
+00:02:46,623 --> 00:02:50,676
+Giving orders doesn't cost Time. It's limited only by which Actions are free.
+
+57
+00:02:51,500 --> 00:02:55,829
+The Huey helicopter starts in the Clearing, and the space with the Huey counts as an
+
+58
+00:02:55,829 --> 00:02:56,087
+exit.
+
+59
+00:02:56,307 --> 00:02:59,976
+When you're in the Huey's space, you can save any number of Victims there at once.
+
+60
+00:03:00,196 --> 00:03:04,237
+Then the Huey leaves: remove the token, and the Clearing stops being an exit.
+
+61
+00:03:04,237 --> 00:03:08,436
+Unless a card brings the Huey back, it's a one-time escape, so fill the Clearing
+
+62
+00:03:08,436 --> 00:03:08,751
+first.
+
+63
+00:03:09,567 --> 00:03:13,423
+There are four River spaces: the Waterfall, the Upper River, the Central River and
+
+64
+00:03:13,423 --> 00:03:15,540
+the Lower River. The arrows show the current.
+
+65
+00:03:15,760 --> 00:03:20,088
+Moving downriver, a single space of movement can take you to any River space further
+
+66
+00:03:20,088 --> 00:03:24,365
+down. For example, one Walk success can carry you from the Waterfall all the way to
+
+67
+00:03:24,365 --> 00:03:25,189
+the Lower River.
+
+68
+00:03:25,409 --> 00:03:29,185
+But you pass through every space in between, and you must resolve anything there.
+
+69
+00:03:29,405 --> 00:03:32,623
+Soldiers get the same fast ride when you order them to move.
+
+70
+00:03:32,623 --> 00:03:35,357
+Enemies don't: they only drift one space downriver.
+
+71
+00:03:35,577 --> 00:03:39,138
+No one, you, Victims or Enemies, can move upriver against the arrows.
+
+72
+00:03:39,138 --> 00:03:43,317
+The space upriver still counts as adjacent, though, for attacks and anything else
+
+73
+00:03:43,317 --> 00:03:44,452
+that checks adjacency.
+
+74
+00:03:45,267 --> 00:03:49,439
+Two cards to watch for. The Piranhas! event puts the Piranhas token on a random
+
+75
+00:03:49,439 --> 00:03:53,558
+River space. Everyone there gets hurt, and so does anyone who enters it later,
+
+76
+00:03:53,558 --> 00:03:56,040
+including when you pass through on the current.
+
+77
+00:03:56,260 --> 00:04:00,702
+And the Cursed Sacrifice Terror card drags every Victim one space towards the Cursed
+
+78
+00:04:00,702 --> 00:04:04,826
+Temple, then kills any Victims there. If none die, the two Victims nearest the
+
+79
+00:04:04,826 --> 00:04:06,201
+Temple are killed instead.
+
+80
+00:04:07,033 --> 00:04:10,937
+A few tips. Unlock No Friendly Fire early, or your squad thins itself out.
+
+81
+00:04:11,157 --> 00:04:15,403
+Keep Soldiers together: damage is half the group, so one big squad hits far harder
+
+82
+00:04:15,403 --> 00:04:16,491
+than scattered pairs.
+
+83
+00:04:16,711 --> 00:04:19,271
+Gather Victims in the Clearing before you use the Huey.
+
+84
+00:04:19,491 --> 00:04:23,416
 And finish anything upriver first. The river's a fast lane with no way back.
 
