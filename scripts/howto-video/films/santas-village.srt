@@ -1,0 +1,108 @@
+1
+00:00:00,300 --> 00:00:04,008
+Santa's Village: snow, lights, and a workshop full of elves who really should have
+
+2
+00:00:04,008 --> 00:00:04,460
+gone home.
+
+3
+00:00:04,680 --> 00:00:06,429
+Here's how the location plays.
+
+4
+00:00:07,233 --> 00:00:09,431
+Santa's Village has no special setup.
+
+5
+00:00:10,267 --> 00:00:13,234
+The Victims here are Santa's elves, busy and in the way.
+
+6
+00:00:13,234 --> 00:00:17,526
+Each time you move into a space with normal yellow Victims, you lose one Time for
+
+7
+00:00:17,526 --> 00:00:18,480
+each Victim there.
+
+8
+00:00:18,700 --> 00:00:22,556
+It only applies when you move in. It doesn't apply when Victims follow you, panic
+
+9
+00:00:22,556 --> 00:00:24,460
+into your space, or are placed with you.
+
+10
+00:00:24,680 --> 00:00:29,050
+So crowded spaces are expensive. The Workshop Hammer item caps it at one Time,
+
+11
+00:00:29,050 --> 00:00:30,675
+however many elves there are.
+
+12
+00:00:31,500 --> 00:00:33,623
+It's Santa! places Santa in Santa's House.
+
+13
+00:00:33,623 --> 00:00:36,605
+While he's with you, any number of Victims will follow you.
+
+14
+00:00:36,605 --> 00:00:39,031
+If he dies, Bloodlust and Horror both go up two.
+
+15
+00:00:39,251 --> 00:00:43,288
+The Head Elf lets you resolve a Search card once a turn as if it were in your hand.
+
+16
+00:00:43,288 --> 00:00:47,180
+Blizzard puts tokens round the Village Centre that you can't move into, and they
+
+17
+00:00:47,180 --> 00:00:48,104
+circle each Upkeep.
+
+18
+00:00:48,324 --> 00:00:52,445
+The Yeti can't be targeted or killed, panics every Upkeep, and does two damage in
+
+19
+00:00:52,445 --> 00:00:54,276
+its space, hitting the Killer first.
+
+20
+00:00:55,100 --> 00:00:58,571
+Fire! rolls for Santa's House, Santa's Workshop or the Stables.
+
+21
+00:00:58,571 --> 00:01:01,436
+Every Victim there dies and its Items are discarded.
+
+22
+00:01:01,656 --> 00:01:05,507
+Where Did It Go? takes the Killer off the board, and at the start of the next Killer
+
+23
+00:01:05,507 --> 00:01:07,203
+phase places him right in your space.
+
+24
+00:01:08,033 --> 00:01:12,236
+A few tips. Plan routes around crowded spaces, because each elf costs you Time.
+
+25
+00:01:12,456 --> 00:01:15,815
+Let Victims follow or panic to you rather than walking into them.
+
+26
+00:01:15,815 --> 00:01:18,915
+And if Santa turns up, use him to lead everyone out at once.
+
+27
+00:01:18,915 --> 00:01:19,432
+Good luck.
+
