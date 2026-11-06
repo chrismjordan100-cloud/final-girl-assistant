@@ -4,7 +4,7 @@ _Auto-generated from the codebase by `scripts/update-backlog.mjs` — do not edi
 
 **RAG key:** 🟢 built & shipped · 🟡 partially built / in progress · 🔴 not started
 
-_RAG last synced to code: 2026-11-05._
+_RAG last synced to code: 2026-11-06._
 
 ## Backlog
 
