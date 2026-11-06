@@ -1,0 +1,308 @@
+1
+00:00:00,300 --> 00:00:04,311
+The Tormentor: a puppeteer who prefers you to do the dying yourself, in her traps.
+
+2
+00:00:04,531 --> 00:00:05,832
+Here's how she plays.
+
+3
+00:00:06,667 --> 00:00:08,744
+The Tormentor doesn't start on the board.
+
+4
+00:00:08,744 --> 00:00:12,341
+Keep the Setup card face up, and keep the other Setup cards nearby too.
+
+5
+00:00:12,561 --> 00:00:16,767
+Shuffle the seven Victim Death Trap cards into one deck and the four Final Girl
+
+6
+00:00:16,767 --> 00:00:18,364
+Death Trap cards into another.
+
+7
+00:00:18,584 --> 00:00:22,458
+Put a Victim on the space where the Killer would start, and immediately put it in a
+
+8
+00:00:22,458 --> 00:00:23,299
+Victim Death Trap.
+
+9
+00:00:24,133 --> 00:00:28,046
+Until the Finale is revealed, ignore the Killer Actions on Terror cards:
+
+10
+00:00:28,046 --> 00:00:29,296
+no moving or attacking.
+
+11
+00:00:29,516 --> 00:00:33,687
+If an effect places something or counts spaces from the Killer, reveal a random
+
+12
+00:00:33,687 --> 00:00:36,749
+Setup card and use its Killer space, then shuffle it back.
+
+13
+00:00:36,749 --> 00:00:38,967
+If it says to place the Killer, ignore it.
+
+14
+00:00:39,187 --> 00:00:43,431
+Once the Finale is revealed, she appears at the start of the next Killer phase, on
+
+15
+00:00:43,431 --> 00:00:47,623
+the Killer space of a random Setup card, and resolves the Finale's Killer Actions
+
+16
+00:00:47,623 --> 00:00:48,296
+from then on.
+
+17
+00:00:49,100 --> 00:00:52,215
+The two Death Trap icons set a trap on a Victim, or on you.
+
+18
+00:00:52,435 --> 00:00:56,459
+Draw a card from the matching deck, put its Death Trap token in the target's space,
+
+19
+00:00:56,459 --> 00:00:59,465
+and move the target's meeple onto the START space of the card.
+
+20
+00:00:59,465 --> 00:01:00,435
+They're now Trapped.
+
+21
+00:01:00,655 --> 00:01:04,004
+The Tormentor never targets Trapped people unless a card says so.
+
+22
+00:01:04,833 --> 00:01:08,774
+Trapped people can't move and ignore all movement effects, including panic.
+
+23
+00:01:08,774 --> 00:01:12,663
+The one exception: you can use movement towards completing an Escape Task.
+
+24
+00:01:12,883 --> 00:01:16,211
+While you're Trapped you can't play Reaction cards, search, or attack Enemies.
+
+25
+00:01:16,431 --> 00:01:20,566
+If it's unclear whether a Trapped person counts as being on the board, use the Game
+
+26
+00:01:20,566 --> 00:01:23,855
+Ambiguity rules, and if still unsure, treat them as off the board.
+
+27
+00:01:24,667 --> 00:01:29,114
+When you see the progress icon, move every trapped meeple one space along its card
+
+28
+00:01:29,114 --> 00:01:33,507
+and apply the effect it lands on. For example, three trapped Victims landing on a
+
+29
+00:01:33,507 --> 00:01:36,164
+Horror icon, a Horror icon, and a two-Time space:
+
+30
+00:01:36,164 --> 00:01:38,171
+raise Horror twice and lose two Time.
+
+31
+00:01:38,391 --> 00:01:41,541
+When a Victim reaches the final space, the trap is complete.
+
+32
+00:01:41,541 --> 00:01:45,217
+They're killed, Bloodlust rises, and you apply the card's Fail Result.
+
+33
+00:01:45,437 --> 00:01:49,380
+If your own meeple reaches the end of a Final Girl trap, you're killed and lose
+
+34
+00:01:49,380 --> 00:01:51,925
+straight away, without revealing your Final Health.
+
+35
+00:01:51,925 --> 00:01:56,117
+Losing your health normally before then still flips your Final Health token, and you
+
+36
+00:01:56,117 --> 00:01:56,765
+stay trapped.
+
+37
+00:01:56,985 --> 00:02:01,205
+Victims in a space with a completed trap panic in the Panic phase, and completed
+
+38
+00:02:01,205 --> 00:02:02,681
+traps are removed in Upkeep.
+
+39
+00:02:03,500 --> 00:02:07,696
+Each trap lists Escape Tasks. While on its space, or trapped in it yourself, you can
+
+40
+00:02:07,696 --> 00:02:11,543
+work on them, in order from top to bottom, marking each one off as it's done.
+
+41
+00:02:11,763 --> 00:02:15,383
+Swinging Blades, for example: first, time the blades, five Time.
+
+42
+00:02:15,383 --> 00:02:18,495
+Then cut the ropes, two damage. Lastly, dive to safety:
+
+43
+00:02:18,495 --> 00:02:19,400
+move two spaces.
+
+44
+00:02:19,620 --> 00:02:21,912
+When the last task is done, the person is free:
+
+45
+00:02:21,912 --> 00:02:25,423
+put their meeple on the trap's space and remove the trap token and card.
+
+46
+00:02:26,233 --> 00:02:30,073
+Spending Time on a task is only allowed if it wouldn't take your Time below zero.
+
+47
+00:02:30,293 --> 00:02:33,447
+Any effect counts towards a task while you're in the space.
+
+48
+00:02:33,447 --> 00:02:37,457
+But using a card for a task replaces its normal effect, and excess is lost.
+
+49
+00:02:37,457 --> 00:02:41,947
+A double-success Sprint can complete Move one space, but the extra moves vanish, and
+
+50
+00:02:41,947 --> 00:02:44,032
+you still lose the Time the card costs.
+
+51
+00:02:44,252 --> 00:02:48,184
+You can use several cards on one task, but you must finish it before the Action
+
+52
+00:02:48,184 --> 00:02:52,216
+phase ends or the progress is lost. If you're trapped yourself, you can't work on
+
+53
+00:02:52,216 --> 00:02:53,660
+Victims' traps in your space.
+
+54
+00:02:53,880 --> 00:02:58,332
+And if at least one untrapped Victim is with you, add one die to Horror rolls for
+
+55
+00:02:58,332 --> 00:03:02,179
+Action cards used on Escape Tasks. Just one die, however many Victims.
+
+56
+00:03:03,000 --> 00:03:07,115
+When a Terror card shows this icon, put it face down on the bottom of the Terror
+
+57
+00:03:07,115 --> 00:03:11,128
+deck. If it's the only card left, or cards keep looping, discard them instead.
+
+58
+00:03:11,933 --> 00:03:16,059
+Overkill Traps: when a Victim is killed by a Death Trap, you and every Victim in
+
+59
+00:03:16,059 --> 00:03:17,245
+that space take damage.
+
+60
+00:03:17,465 --> 00:03:21,898
+The Epic Endless Traps: each time a Victim is freed, put a new Victim Death Trap on
+
+61
+00:03:21,898 --> 00:03:25,103
+the farthest Victim. If there's no Victim to trap, you lose.
+
+62
+00:03:25,323 --> 00:03:29,322
+Let's Play a Game traps a Victim, choosing by the first condition that fits:
+
+63
+00:03:29,322 --> 00:03:33,637
+in the farthest exit space from you, on any exit space, next to an exit, or simply
+
+64
+00:03:33,637 --> 00:03:34,795
+the farthest from you.
+
+65
+00:03:35,600 --> 00:03:38,273
+No Escape!: she heads for the closest unlocked exit.
+
+66
+00:03:38,273 --> 00:03:41,254
+When she ends her move on one, place a Locked token there.
+
+67
+00:03:41,254 --> 00:03:45,469
+No Victim can be saved at a locked exit. If every exit is locked at the start of a
+
+68
+00:03:45,469 --> 00:03:49,787
+Killer phase, you lose. If you can unlock one, she has to go back and lock it again.
+
+69
+00:03:50,007 --> 00:03:53,015
+Game Over: she moves and attacks, then moves and attacks again.
+
+70
+00:03:53,235 --> 00:03:56,795
+The Ultimate Trap puts you in a Death Trap, and she can attack you while you're in
+
+71
+00:03:56,795 --> 00:03:56,925
+it.
+
+72
+00:03:57,733 --> 00:04:01,770
+A few tips. You can't save everyone: give up on traps that are too far away and take
+
+73
+00:04:01,770 --> 00:04:02,299
+the Horror.
+
+74
+00:04:02,519 --> 00:04:05,996
+Bring an untrapped Victim with you for the extra die on Escape Task rolls.
+
+75
+00:04:06,216 --> 00:04:09,735
+If you're ever trapped, escape first: it's an instant loss otherwise.
+
+76
+00:04:09,735 --> 00:04:13,151
+Players win about seventy-two per cent of logged games against her.
+
+77
+00:04:13,151 --> 00:04:13,661
+Good luck.
+
