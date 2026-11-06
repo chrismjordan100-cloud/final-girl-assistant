@@ -126,10 +126,17 @@ const BACKLOG = [
   {
     title: 'How-to-play videos for every Killer and Location',
     detail:
-      'A narrated, subtitled how-to-play video for each Killer and each Location, shown under the key art on This Game. The rules are explained thoroughly enough to play from; setup and tips stay brief because the app covers them elsewhere. All of Season 1 plus the Volk\u2019ar and Pesadilla Verde are done. Videos are made a whole season at a time: copy the prompt in Training videos (below) and give it to Claude with the season filled in.',
+      'A narrated, subtitled how-to-play video for each Killer and each Location, shown under the key art on This Game. The rules are explained thoroughly enough to play from; setup and tips stay brief because the app covers them elsewhere. Seasons 1 to 4 and the Specials are done; only the Pods vignette is waiting (see the next item). Videos are made a whole season at a time: copy the prompt in Training videos (below) and give it to Claude with the season filled in.',
     affects: ['This Game', 'Asset Admin'],
     status: VIDEOS_DONE === VIDEOS_TOTAL ? 'done' : VIDEOS_DONE > 0 ? 'partial' : 'todo',
     remaining: `${VIDEOS_TOTAL - VIDEOS_DONE} of ${VIDEOS_TOTAL} videos still to make (${VIDEOS_DONE} done). See Training videos for the list.`,
+  },
+  {
+    title: 'Pods vignette (Terror From Beyond): scan the rules, then make its video',
+    detail:
+      'The Pods vignette has no rule sheet anywhere yet: it isn\u2019t in the tracker, on RulesPal or on the publisher\u2019s site, and its official name is unconfirmed. When you have the box, scan or photograph the rule sheet and the key cards (Finales, Dark Powers, any special cards), put them in s4-rules-pdf (e.g. FV04_Pods.pdf) and src/assets/games (S4-killer-pods-1.png, -2.png\u2026), add its -flavour.png, and fix the name and setup text in games.js. Then give Claude the Training videos prompt for Season 4: it will only make the missing Pods video (S4-killer-pods-video.mp4).',
+    affects: ['This Game', 'Asset Admin', 'Rules Reference'],
+    status: 'todo',
   },
   // status: 'done' (green) | 'partial' (amber) | 'todo' (red).
   // `remaining` is shown ONLY for 'partial' items — what's left to finish.
