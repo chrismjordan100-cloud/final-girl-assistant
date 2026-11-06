@@ -1,0 +1,292 @@
+1
+00:00:00,300 --> 00:00:04,326
+Falconwood: a quiet town with a government lab, mysterious deaths, and people who
+
+2
+00:00:04,326 --> 00:00:05,271
+want the truth out.
+
+3
+00:00:05,491 --> 00:00:07,240
+Here's how the location plays.
+
+4
+00:00:08,067 --> 00:00:12,265
+Set aside the Survive the Hunt Terror card, both Mission Item cards and the Friend
+
+5
+00:00:12,265 --> 00:00:14,723
+cards. They only come in when a Mission says so.
+
+6
+00:00:14,943 --> 00:00:18,965
+Before normal setup, pick one of the five Missions at random and follow the setup on
+
+7
+00:00:18,965 --> 00:00:19,444
+its sheet.
+
+8
+00:00:20,267 --> 00:00:22,410
+Completing the Mission is mandatory to win.
+
+9
+00:00:22,410 --> 00:00:25,151
+Until it's done, the Killer can't lose its last health:
+
+10
+00:00:25,151 --> 00:00:28,291
+any damage that would reveal its Final Health token is ignored.
+
+11
+00:00:28,291 --> 00:00:31,083
+With more than one Killer, this applies to the last one.
+
+12
+00:00:31,303 --> 00:00:33,620
+Some cards say Gain Progress or Lose Progress.
+
+13
+00:00:33,620 --> 00:00:37,851
+Check your Mission sheet for what that means, and put a tracking marker on the sheet
+
+14
+00:00:37,851 --> 00:00:38,556
+as a reminder.
+
+15
+00:00:39,367 --> 00:00:41,695
+Completing a Mission brings a Friend to help you.
+
+16
+00:00:41,695 --> 00:00:44,167
+Friends are Special Victims, with three differences.
+
+17
+00:00:44,387 --> 00:00:46,385
+They will follow you into the Killer's space.
+
+18
+00:00:46,385 --> 00:00:48,782
+Other Victims in their space are attacked before them.
+
+19
+00:00:48,782 --> 00:00:50,957
+And they don't panic while they're in your space.
+
+20
+00:00:51,177 --> 00:00:55,877
+Each Friend card gives a bonus. The Adopted Father, for example, turns one die into
+
+21
+00:00:55,877 --> 00:00:58,879
+a success on damaging Action cards and adds a damage.
+
+22
+00:00:59,700 --> 00:01:03,134
+In Missing Friend, six tokens sit on the named non-Search spaces.
+
+23
+00:01:03,134 --> 00:01:05,775
+End a move on one and spend one Time to reveal it.
+
+24
+00:01:05,775 --> 00:01:10,107
+Each shows a letter and number; the reference card turns it into a clue, like east
+
+25
+00:01:10,107 --> 00:01:10,793
+of the river.
+
+26
+00:01:11,013 --> 00:01:15,340
+Keep one token of each letter. When you have A, B and C, the clues point to one
+
+27
+00:01:15,340 --> 00:01:18,352
+space. The Best Friend lies there, ignored by everyone.
+
+28
+00:01:18,572 --> 00:01:22,408
+Go there and discard any healing Action card, like Short Rest, to revive her.
+
+29
+00:01:22,408 --> 00:01:24,600
+Take the Spell Book and drop Horror to zero.
+
+30
+00:01:24,600 --> 00:01:26,593
+While she's with you, Horror can't rise.
+
+31
+00:01:27,400 --> 00:01:31,587
+In Save Your Father, pairs of tokens sit at the Government Lab, Shopping Mall and
+
+32
+00:01:31,587 --> 00:01:35,722
+Best Friend's House. End a move there and discard a Search card to add both to a
+
+33
+00:01:35,722 --> 00:01:37,789
+face-down pool, along with three blanks.
+
+34
+00:01:38,009 --> 00:01:42,133
+Once per Action phase at the Police Station, spend one Time at a time to reveal
+
+35
+00:01:42,133 --> 00:01:44,482
+tokens from the pool. Stop whenever you like.
+
+36
+00:01:44,482 --> 00:01:47,823
+If you reveal a second blank, or run out of Time, you must stop.
+
+37
+00:01:48,043 --> 00:01:51,551
+Two blanks ends your Action phase and everything goes back in the pool.
+
+38
+00:01:51,551 --> 00:01:55,207
+Stop before that, and the blanks are removed and the keys go on the sheet.
+
+39
+00:01:55,207 --> 00:01:56,640
+Three keys frees your Father.
+
+40
+00:01:57,467 --> 00:02:01,718
+In Crack the Code, end your move on a token space and spend one Time to reveal it
+
+41
+00:02:01,718 --> 00:02:04,763
+and put it on the sheet. Each has a value from one to six.
+
+42
+00:02:04,983 --> 00:02:09,210
+At the Shopping Mall, spend three Time and roll the d20, adding the values of your
+
+43
+00:02:09,210 --> 00:02:12,407
+tokens. Twenty or more cracks it. Less, and you can try again.
+
+44
+00:02:12,627 --> 00:02:16,464
+The Jockette joins you at the Mall, and you take one Item of your choice from its
+
+45
+00:02:16,464 --> 00:02:16,701
+deck.
+
+46
+00:02:17,533 --> 00:02:20,672
+In Expose the Lab, three tokens sit on the Government Lab.
+
+47
+00:02:20,672 --> 00:02:25,055
+Enter it to reveal the first; its number shows a space on the board, so place the
+
+48
+00:02:25,055 --> 00:02:25,704
+token there.
+
+49
+00:02:25,924 --> 00:02:29,849
+End your move on that space and discard a Search card to collect it, revealing the
+
+50
+00:02:29,849 --> 00:02:33,583
+next. When you have three, end your move at the Police Station to complete it.
+
+51
+00:02:33,803 --> 00:02:37,508
+The Reporter joins you, and you take two Items of your choice from the Police
+
+52
+00:02:37,508 --> 00:02:38,133
+Station deck.
+
+53
+00:02:38,967 --> 00:02:42,955
+In Survive the Hunt, the mission starts when its Terror card appears, somewhere in
+
+54
+00:02:42,955 --> 00:02:46,992
+the top eight cards. Four Agents appear at the Town Fair, Shopping Mall, Government
+
+55
+00:02:46,992 --> 00:02:48,353
+Lab and Best Friend's House.
+
+56
+00:02:48,573 --> 00:02:51,260
+Agents have one health, movement two and attack two.
+
+57
+00:02:51,260 --> 00:02:55,032
+At the end of each Killer phase, each one targets you, moves and attacks.
+
+58
+00:02:55,032 --> 00:02:56,531
+Victims in their space panic.
+
+59
+00:02:56,751 --> 00:03:01,194
+Kill all four to complete it. The Kind Scientist joins you, you take Telekinesis,
+
+60
+00:03:01,194 --> 00:03:03,663
+recover three health and lower Horror by two.
+
+61
+00:03:04,467 --> 00:03:08,248
+Bridges are the roads over the river, plus the Bridge token if it's placed.
+
+62
+00:03:08,248 --> 00:03:10,013
+River Crossings are the blue lines.
+
+63
+00:03:10,233 --> 00:03:14,635
+You normally can't use River Crossings. Some cards let you, and Victims can follow,
+
+64
+00:03:14,635 --> 00:03:15,801
+but Enemies never can.
+
+65
+00:03:16,021 --> 00:03:20,512
+Spaces joined only by a River Crossing are not adjacent, for range or for anything
+
+66
+00:03:20,512 --> 00:03:21,717
+that checks adjacency.
+
+67
+00:03:21,937 --> 00:03:24,753
+Many cards use the twenty-sided die, the d20.
+
+68
+00:03:25,567 --> 00:03:28,382
+A few tips. Plan your route around the Mission from turn one:
+
+69
+00:03:28,382 --> 00:03:30,089
+the Killer can't die until it's done.
+
+70
+00:03:30,309 --> 00:03:34,560
+Keep your Friend alive once they join. The Pizza Delivery van and Dragon's Breath
+
+71
+00:03:34,560 --> 00:03:35,557
+are standout finds.
+
+72
+00:03:35,777 --> 00:03:38,228
+Players find it one of the easier locations.
+
+73
+00:03:38,228 --> 00:03:38,785
+Good luck.
+
