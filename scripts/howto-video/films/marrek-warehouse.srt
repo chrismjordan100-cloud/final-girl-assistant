@@ -1,0 +1,192 @@
+1
+00:00:00,300 --> 00:00:04,204
+Marrek Warehouse: a state-of-the-art locking system, and someone has locked you in.
+
+2
+00:00:04,424 --> 00:00:06,173
+Here's how the location plays.
+
+3
+00:00:07,000 --> 00:00:10,947
+Put the Forklift token in The Pit. It's only used if you find the Forklift Keys.
+
+4
+00:00:11,167 --> 00:00:13,257
+Put a Locked token on each exit space.
+
+5
+00:00:13,477 --> 00:00:17,254
+Set the three Click! Terror cards aside and build the Terror deck as normal.
+
+6
+00:00:17,254 --> 00:00:21,429
+Then take off the top two cards, shuffle the Click! cards into the rest, and put the
+
+7
+00:00:21,429 --> 00:00:22,224
+two back on top.
+
+8
+00:00:22,444 --> 00:00:24,833
+Put the Climb and Leap Action cards in the Tableau.
+
+9
+00:00:25,667 --> 00:00:29,447
+While an exit is Locked, no Victims can be saved there, though you can still move
+
+10
+00:00:29,447 --> 00:00:30,147
+into the space.
+
+11
+00:00:30,367 --> 00:00:34,546
+To save Victims you'll need to find ways to unlock exits, such as Bolt Cutters or
+
+12
+00:00:34,546 --> 00:00:37,899
+the Power Drill, or wait for the timers: the Click! Terror cards.
+
+13
+00:00:37,899 --> 00:00:40,479
+When an exit is unlocked, remove its Locked token.
+
+14
+00:00:40,699 --> 00:00:44,602
+Each Click! card unlocks its named exit, then you draw the next Terror card.
+
+15
+00:00:44,602 --> 00:00:48,812
+If a Click! card is discarded by another effect, still unlock the exit, but ignore
+
+16
+00:00:48,812 --> 00:00:49,275
+the rest.
+
+17
+00:00:50,100 --> 00:00:53,460
+Rack spaces, with this icon, are the tops of the storage racks.
+
+18
+00:00:53,460 --> 00:00:57,780
+Enemies and Victims move to and from them normally, unless a card says otherwise.
+
+19
+00:00:58,000 --> 00:01:00,850
+But you have to use the Climb card to get up onto one.
+
+20
+00:01:00,850 --> 00:01:05,019
+You can't use Climb to come down: just use normal movement like Walk or Sprint.
+
+21
+00:01:05,833 --> 00:01:08,265
+Climb and Leap aren't bought like other Action cards.
+
+22
+00:01:08,485 --> 00:01:12,798
+At any time in your Action phase, discard a Walk card to take Climb or Leap into
+
+23
+00:01:12,798 --> 00:01:15,440
+your hand, or discard a Sprint card to take both.
+
+24
+00:01:16,267 --> 00:01:18,784
+Climb can only be played when you're next to a Rack space.
+
+25
+00:01:19,004 --> 00:01:22,509
+Two successes: move up onto the adjacent Rack, losing one Time.
+
+26
+00:01:22,509 --> 00:01:25,402
+One success: move up, losing two Time. No successes:
+
+27
+00:01:25,402 --> 00:01:29,073
+lose one health, and the card goes back to your hand to try again.
+
+28
+00:01:29,293 --> 00:01:31,213
+Victims may follow you when you climb.
+
+29
+00:01:32,033 --> 00:01:36,172
+Leap jumps you directly from one Rack space to another, and Victims may follow.
+
+30
+00:01:36,392 --> 00:01:39,379
+Two successes costs one Time, one success two Time.
+
+31
+00:01:39,599 --> 00:01:43,742
+With no successes you fall: you must move one space, down to the ground, and lose
+
+32
+00:01:43,742 --> 00:01:46,504
+two health. Victims who were following don't get hurt;
+
+33
+00:01:46,504 --> 00:01:49,113
+they just climb down after you to see if you're OK.
+
+34
+00:01:49,933 --> 00:01:54,255
+The middle of the warehouse is The Pit. When someone panics out of it, roll two dice
+
+35
+00:01:54,255 --> 00:01:58,061
+instead of one to decide where they go, using the Panic numbers around it.
+
+36
+00:01:58,867 --> 00:02:03,159
+With the Forklift Keys, the Forklift moves with you, though not into Search or Rack
+
+37
+00:02:03,159 --> 00:02:07,400
+spaces, and for one Time you can safely bring a Victim down from an adjacent Rack.
+
+38
+00:02:07,620 --> 00:02:12,023
+The Supervisor event: when Victims in his space panic, roll one die and move them
+
+39
+00:02:12,023 --> 00:02:13,871
+all together, Supervisor included.
+
+40
+00:02:14,091 --> 00:02:18,357
+You Aren't Going Anywhere locks every exit again and shuffles the Click! cards back
+
+41
+00:02:18,357 --> 00:02:22,469
+in. Smarter Than They Look lets Victims on an exit save themselves the moment it
+
+42
+00:02:22,469 --> 00:02:22,880
+unlocks.
+
+43
+00:02:23,700 --> 00:02:28,288
+A few tips. Get Victims to an exit before it unlocks, ready to save the moment it
+
+44
+00:02:28,288 --> 00:02:28,628
+opens.
+
+45
+00:02:28,848 --> 00:02:33,033
+Use the racks to move around, and keep a spare Walk or Sprint to trade for Climb or
+
+46
+00:02:33,033 --> 00:02:33,285
+Leap.
+
+47
+00:02:33,505 --> 00:02:36,197
+A Bowling Ball dropped from a rack does three damage.
+
+48
+00:02:36,197 --> 00:02:36,705
+Good luck.
+
