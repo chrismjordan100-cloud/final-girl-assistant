@@ -1,0 +1,80 @@
+1
+00:00:00,300 --> 00:00:04,158
+Buddyland: where everything is awesome, and the toughest question is what to play
+
+2
+00:00:04,158 --> 00:00:04,396
+next.
+
+3
+00:00:04,616 --> 00:00:06,365
+Here's how the location plays.
+
+4
+00:00:07,200 --> 00:00:11,147
+Buddyland has no special setup. Set up from the Setup card as normal.
+
+5
+00:00:11,967 --> 00:00:16,520
+Its only special rule: the four spaces in the middle of the board with the joystick
+
+6
+00:00:16,520 --> 00:00:19,647
+icon are Arcade spaces. Several cards and Items use them.
+
+7
+00:00:19,867 --> 00:00:24,256
+The Arcade Token, for example, is discarded in an Arcade space to trade three Time
+
+8
+00:00:24,256 --> 00:00:25,861
+for the reward the card shows.
+
+9
+00:00:26,667 --> 00:00:31,030
+The Birthday Girl gives four Time if you save her, but raises Bloodlust if she dies.
+
+10
+00:00:31,030 --> 00:00:33,835
+Buddy Up makes you save two or more Victims at a time.
+
+11
+00:00:34,055 --> 00:00:37,340
+Sing-A-Long raises Horror every Upkeep until it reaches the red.
+
+12
+00:00:37,340 --> 00:00:40,881
+Nick the Janitor deals two damage to any Enemy whose space he enters.
+
+13
+00:00:41,101 --> 00:00:44,498
+How'd They Sneak In? rolls three dice and adds a Victim for each:
+
+14
+00:00:44,498 --> 00:00:48,627
+one or two the Jungle Gym, three or four the Dining Area, five or six the Party
+
+15
+00:00:48,627 --> 00:00:48,888
+Room.
+
+16
+00:00:49,700 --> 00:00:54,218
+A few tips. The Items here are worth it: search the Dining Area, Prize Counter and
+
+17
+00:00:54,218 --> 00:00:54,713
+Ball Pit.
+
+18
+00:00:54,933 --> 00:00:58,252
+Exits are close together, so rescues are easier than usual.
+
+19
+00:00:58,252 --> 00:01:02,414
+Use Arcade items in Arcade spaces, and lead Nick the Janitor into Buddies.
+
+20
+00:01:02,414 --> 00:01:02,976
+Good luck.
+
