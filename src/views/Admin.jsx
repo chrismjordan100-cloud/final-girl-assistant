@@ -104,7 +104,7 @@ const BACKLOG = [
   {
     title: 'How-to-play videos for every Killer and Location',
     detail:
-      'A short (under 2 minutes), narrated, subtitled video for each Killer and each Location, shown under the key art on This Game. All of Season 1 plus the Volk\u2019ar and Pesadilla Verde are done. To make the next one, copy the prompt in Training videos (below) and give it to Claude with the name filled in.',
+      'A narrated, subtitled how-to-play video for each Killer and each Location, shown under the key art on This Game. The rules are explained thoroughly enough to play from; setup and tips stay brief because the app covers them elsewhere. All of Season 1 plus the Volk\u2019ar and Pesadilla Verde are done. Videos are made a whole season at a time: copy the prompt in Training videos (below) and give it to Claude with the season filled in.',
     affects: ['This Game', 'Asset Admin'],
     status: VIDEOS_DONE === VIDEOS_TOTAL ? 'done' : VIDEOS_DONE > 0 ? 'partial' : 'todo',
     remaining: `${VIDEOS_TOTAL - VIDEOS_DONE} of ${VIDEOS_TOTAL} videos still to make (${VIDEOS_DONE} done). See Training videos for the list.`,
@@ -634,10 +634,11 @@ export default function Admin() {
             <li><code>S&#123;season&#125;-location-&#123;shortName&#125;-video.mp4</code></li>
           </ul>
 
-          <h3 className="admin-howto__sub">Prompt for a new video</h3>
+          <h3 className="admin-howto__sub">Prompt for a season of videos</h3>
           <p className="fg-type">
-            Copy this, replace the [square brackets], and give it to Claude. It uses the same
-            builder as the first two videos, so every one comes out in the same format.
+            Copy this, fill in [SEASON], and give it to Claude. It makes every missing video for
+            that season in one go, using the same builder, so they all come out in the same format.
+            Rules are explained thoroughly; setup and tips stay brief.
           </p>
           <div className="admin-videos__prompt-wrap">
             <button className="fg-btn admin-videos__copy" onClick={copyPrompt}>

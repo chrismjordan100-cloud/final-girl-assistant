@@ -18,7 +18,7 @@ film script). House style (do not change per video):
   * Subtitles: SubSans Bold 48px, white on a translucent black box, bottom
     centre, kept below all content (content stays above y=900)
   * Accent colour: killer red (214,40,40) / location green (60,170,80)
-  * Total length must be under 2:00 (the script stops if it isn't)
+  * No length limit: rules are explained thoroughly; setup and tips stay brief
 """
 import sys, os, subprocess, textwrap, runpy
 import numpy as np
@@ -33,7 +33,6 @@ SRC = os.path.join(FONTS, 'SourceSans3.ttf')
 G = os.path.join(ROOT, 'src/assets/games') + '/'
 W, H, FPS = 1920, 1080, 30
 ACCENT = {'killer': (214, 40, 40), 'location': (60, 170, 80)}
-MAX_SECONDS = 119.5
 
 
 def font(path, size, weight=700):
@@ -205,8 +204,6 @@ def main(mode, film_path):
         t = st + d; durs.append(d)
         draw_scene(film, bg, i, sc, n).convert('RGB').save(f'{out}/s{i}.png')
     print(f'length {t:.1f}s')
-    if t > MAX_SECONDS:
-        sys.exit(f'Too long ({t:.1f}s): trim narration to get under 2 minutes.')
     sf.write(f'{out}/voice.wav', np.concatenate(audio), SR)
     srt = os.path.splitext(film_path)[0] + '.srt'
     with open(srt, 'w') as f:

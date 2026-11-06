@@ -69,7 +69,7 @@ function VideoTile({ type, entry }) {
           <span className="tg-video__icon" aria-hidden="true">&#9654;</span>
           <span>
             <span className="tg-video__title">How to play {entry.name}</span>
-            <span className="tg-video__sub fg-type">{type === 'killer' ? 'Killer' : 'Location'} video &middot; under 2 min &middot; subtitled</span>
+            <span className="tg-video__sub fg-type">{type === 'killer' ? 'Killer' : 'Location'} video &middot; narrated &middot; subtitled</span>
           </span>
         </button>
       )}
