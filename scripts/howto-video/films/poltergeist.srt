@@ -11,86 +11,86 @@ You don't. You run.
 Here's how she plays.
 
 4
-00:00:06,233 --> 00:00:10,661
+00:00:06,233 --> 00:00:10,643
 Carolyn and Mr. Floppy are always in the game, hidden in the Item decks, and neither
 
 5
-00:00:10,661 --> 00:00:11,609
+00:00:10,643 --> 00:00:11,588
 can start face up.
 
 6
-00:00:11,829 --> 00:00:16,448
+00:00:11,808 --> 00:00:16,457
 Take ten of the Location's Items, set one aside for each deck, shuffle the rest with
 
 7
-00:00:16,448 --> 00:00:20,901
+00:00:16,457 --> 00:00:20,940
 Carolyn and Mr. Floppy, deal them face down, then put a set-aside card face up on
 
 8
-00:00:20,901 --> 00:00:21,451
+00:00:20,940 --> 00:00:21,493
 each deck.
 
 9
-00:00:22,267 --> 00:00:25,872
+00:00:22,300 --> 00:00:25,905
 The Poltergeist has no health and can't be attacked, damaged or killed.
 
 10
-00:00:26,092 --> 00:00:28,787
+00:00:26,125 --> 00:00:28,821
 To win, find Carolyn and reach an exit with her.
 
 11
-00:00:28,787 --> 00:00:32,044
+00:00:28,821 --> 00:00:32,077
 When Carolyn joins you, remove all Minor Dark Power cards.
 
 12
-00:00:32,264 --> 00:00:35,980
+00:00:32,297 --> 00:00:36,013
 Carolyn can't be killed, discarded or put in your backpack, though she can be
 
 13
-00:00:35,980 --> 00:00:37,235
+00:00:36,013 --> 00:00:37,268
 shuffled back into a deck.
 
 14
-00:00:38,067 --> 00:00:41,064
+00:00:38,100 --> 00:00:41,068
 Mr. Floppy can't be used until her Dark Power is revealed.
 
 15
-00:00:41,064 --> 00:00:43,649
+00:00:41,068 --> 00:00:43,626
 After that, you can remove him to ignore 'Carolyn?
 
 16
-00:00:43,649 --> 00:00:44,424
+00:00:43,626 --> 00:00:44,393
 Where are you?'
 
 17
-00:00:44,644 --> 00:00:48,370
+00:00:44,613 --> 00:00:48,165
 If her Epic Dark Power, Forgetting Something?, comes out, you need Mr.
 
 18
-00:00:48,370 --> 00:00:50,127
+00:00:48,165 --> 00:00:49,840
 Floppy as well as Carolyn to win.
 
 19
-00:00:50,933 --> 00:00:54,971
+00:00:50,667 --> 00:00:54,704
 A few tips. Searching matters more than saving Victims here, so head for a Search
 
 20
-00:00:54,971 --> 00:00:55,968
+00:00:54,704 --> 00:00:55,701
 space straight away.
 
 21
-00:00:56,188 --> 00:01:00,007
+00:00:55,921 --> 00:00:59,740
 Selena is a great pick: an early Ultimate and extra search dice.
 
 22
-00:01:00,227 --> 00:01:04,408
+00:00:59,960 --> 00:01:04,141
 Carry Guard for her Unstoppable Evil attacks, and don't waste Time on weapons.
 
 23
-00:01:04,628 --> 00:01:08,876
+00:01:04,361 --> 00:01:08,610
 She's tougher than average: Final Girls win about fifty-seven percent of logged
 
 24
-00:01:08,876 --> 00:01:09,791
+00:01:08,610 --> 00:01:09,524
 games. Good luck.
 

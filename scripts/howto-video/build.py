@@ -139,6 +139,16 @@ def draw_scene(film, bg, i, sc, n):
     return c
 
 
+import re
+# The voice reads the full stop in "Mr." / "Dr." as the end of a sentence and
+# pauses. Spell titles out in the SPOKEN text only; subtitles keep "Mr. Floppy".
+TITLES = {'Mr': 'Mister', 'Mrs': 'Missus', 'Ms': 'Miz', 'Dr': 'Doctor', 'St': 'Saint', 'Prof': 'Professor'}
+
+
+def speakable(text):
+    return re.sub(r'\b(Mrs|Mr|Ms|Dr|St|Prof)\.(?=\s+[A-Z])', lambda m: TITLES[m.group(1)], text)
+
+
 def ass_time(t):
     return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}'
 
@@ -183,7 +193,7 @@ def main(mode, film_path):
         st = t
         audio.append(np.zeros(int(0.3 * SR), np.float32)); t += 0.3
         for sub, spoken in sc['lines']:
-            a, sr = k.create(spoken or sub, voice='bf_emma', speed=1.14, lang='en-gb')
+            a, sr = k.create(speakable(spoken or sub), voice='bf_emma', speed=1.14, lang='en-gb')
             dur = len(a) / SR
             cues += split_cue(sub, t, t + dur)
             audio.append(a.astype(np.float32)); t += dur
