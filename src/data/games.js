@@ -123,8 +123,8 @@ export const finalGirls = [
   { id: 'kenzie', season: 3, name: 'Kenzie', shortName: 'kenzie', group: 'Series 3', film: 'Hell to Pay' },
   { id: 'octavia', season: 3, name: 'Octavia', shortName: 'octavia', group: 'Series 3', film: 'The Falconwood Files' },
   { id: 'janelle', season: 3, name: 'Janelle', shortName: 'janelle', group: 'Series 3', film: 'The Falconwood Files' },
-  { id: 'cassie', season: 3, name: 'Cassie', shortName: 'cassie', group: 'Series 3', film: 'The Marrek Murders', note: 'Pairing unconfirmed — verify against the box.' },
-  { id: 'mandy', season: 3, name: 'Mandy', shortName: 'mandy', group: 'Series 3', film: 'The Marrek Murders', note: 'Pairing unconfirmed — verify against the box.' },
+  { id: 'cassie', season: 3, name: 'Cassie', shortName: 'cassie', group: 'Series 3', film: 'The Marrek Murders' },
+  { id: 'mandy', season: 3, name: 'Mandy', shortName: 'mandy', group: 'Series 3', film: 'The Marrek Murders' },
   { id: 'meghan', season: 3, name: 'Meghan', shortName: 'meghan', group: 'Series 3', film: "Don't Make a Sound" },
   { id: 'ronda', season: 3, name: 'Ronda', shortName: 'ronda', group: 'Series 3', film: "Don't Make a Sound" },
 

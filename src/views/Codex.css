@@ -360,3 +360,55 @@
   border-radius: var(--radius);
 }
 .cx-store__actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ---- Secret Envelope marker ----------------------------------------- */
+.cx-env {
+  margin: 0.2rem 0 0.5rem;
+  font-size: 0.86rem;
+}
+.cx-env--sealed,
+.cx-env--opened {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  color: var(--text-dim);
+}
+.cx-env--unlocked {
+  padding: 0.55rem 0.7rem;
+  border: 2px solid var(--fg-gold);
+  border-radius: var(--radius);
+  background: rgba(217, 164, 65, 0.12);
+  box-shadow: 0 0 14px rgba(217, 164, 65, 0.35);
+}
+.cx-env__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--fg-gold);
+  letter-spacing: 0.02em;
+}
+.cx-env__why { margin: 0.2rem 0 0.45rem; color: var(--text); font-size: 0.82rem; }
+.cx-env__actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.cx-env__btn {
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: var(--fg-black);
+  color: var(--text);
+  cursor: pointer;
+}
+.cx-env__btn--main { border-color: var(--fg-gold); color: var(--fg-gold); font-weight: 600; }
+.cx-env__link {
+  font: inherit;
+  font-size: 0.78rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--accent-bright, var(--fg-blood-bright));
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cx-favbar__toggle--env.has-some:not(.is-on) { border-color: var(--fg-gold); color: var(--fg-gold); }

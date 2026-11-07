@@ -472,6 +472,13 @@ export default function ThisGame({ onNavigate }) {
                 </button>
               </div>
 
+              {outcome === 'won' && finalGirl && !active?.isTest && (
+                <p className="tg-envelope-hint">
+                  &#9993;&#65039; Win saved &rarr; {finalGirl.name}&rsquo;s Secret Envelope unlocks. Open it after
+                  the game and tick &ldquo;I&rsquo;ve opened it&rdquo; on her Codex card.
+                </p>
+              )}
+
               {achievementsRelevant && (
                 <div className="tg-achievements">
                   <h3 className="tg-achievements__head">

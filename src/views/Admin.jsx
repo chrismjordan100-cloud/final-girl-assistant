@@ -227,6 +227,20 @@ const BACKLOG = [
     status: 'done',
   },
   {
+    title: 'Finish the Final Girl card images',
+    detail:
+      'Most Final Girls now have both card sides in the Codex. Still to do: (1) Joy (A Rotten Harvest) \u2014 her back photo needs labelling/retaking: it\u2019s cropped on the left, so her Health number and the start of the \u201cFor each additional Victim saved\u201d line are cut off. (2) Back still needed: Melanie, Paula, Jamie, Carolyn, Grandma, Julie, Meg. (3) Both sides needed: Patsy, Gabrielle, Mrs. Claus, Cindy the Elf, Adrianne, Maureen, Holiday Paula. Lay 6\u20138 cards face up on a dark surface, one photo straight down, flip them in place, second photo, then send them in the chat saying which box they came from. Done when every Final Girl shows a front and an Ultimate Ability side with nothing cut off.',
+    affects: ['Codex', 'This Game', 'Setup Assist'],
+    status: 'partial',
+  },
+  {
+    title: 'Secret Envelope marker on each Final Girl',
+    detail:
+      'Done. Win a (non-test) game with a Final Girl and her Codex card shows a gold \u201c\u2709\ufe0f Envelope unlocked \u2014 open her Secret Envelope!\u201d marker; tap \u201cI\u2019ve opened it\u201d once you have. For games won before the tracker existed, tap \u201cAlready won?\u201d on a sealed card to switch the marker on by hand (e.g. you beat Hans with Laurie last year but never opened her envelope), or \u201cAlready opened?\u201d if it\u2019s been done. \u201cEnvelopes to open\u201d at the top of the Final Girls tab filters to just the ones waiting. The end-of-game screen also reminds you when a win unlocks one. Synced between phone and PC.',
+    affects: ['Codex', 'This Game'],
+    status: 'done',
+  },
+  {
     title: 'Chris to do: scan the Lore & Scenario books',
     detail:
       'Your job before Claude can wire the lore in. Photograph or scan every page of each printed Lore & Scenario book (a phone scanning app like Microsoft Lens or Adobe Scan is fine, one page per image, flat and well lit), then drop them into the chat or a folder on the PC. Example: all 64 pages of the Series 1 book in one go, then Series 2, and so on. Progress: Series 1 \u2014 to scan \u00b7 Series 2 \u2014 to scan \u00b7 Series 3 \u2014 to scan \u00b7 Series 4 \u2014 check whether a book has come out yet.',

@@ -9,6 +9,11 @@ import { markLocalChange, pushState } from '../lib/sync.js';
      favourites  ids you've starred (e.g. for their abilities)
      storage     id -> where she's kept, only when it isn't her own box
                  (e.g. a special edition kept in a promo binder)
+     envelopes   id -> your override for her Secret Envelope:
+                   'unlocked'  won with her before the tracker existed,
+                               envelope still sealed (shows the marker)
+                   'opened'    envelope already opened (hides the marker)
+                 With no override, a logged win unlocks it automatically.
 
    With no note set, a Final Girl is assumed to live in her own Feature Film
    box. Promos and packs have no film box, so they show "not set yet".
@@ -24,9 +29,10 @@ function read() {
     return {
       favourites: Array.isArray(v.favourites) ? v.favourites : [],
       storage: v.storage && typeof v.storage === 'object' ? v.storage : {},
+      envelopes: v.envelopes && typeof v.envelopes === 'object' ? v.envelopes : {},
     };
   } catch {
-    return { favourites: [], storage: {} };
+    return { favourites: [], storage: {}, envelopes: {} };
   }
 }
 
@@ -68,6 +74,30 @@ export function storageSuggestions(storage) {
   return [...set];
 }
 
+/* Secret Envelope status for one Final Girl.
+   wins: number of real (non-test) logged wins with her.
+   Returns { status, source }:
+     status  'unlocked' (won, still to open) | 'opened' | 'sealed'
+     source  'log' (automatic, from a logged win) | 'manual' (your override) | null */
+export function envelopeStatus(fgId, wins, envelopes) {
+  const o = envelopes && envelopes[fgId];
+  if (o === 'opened') return { status: 'opened', source: 'manual' };
+  if (o === 'unlocked') return { status: 'unlocked', source: 'manual' };
+  if (wins > 0) return { status: 'unlocked', source: 'log' };
+  return { status: 'sealed', source: null };
+}
+
+/* Count real wins per Final Girl id from the game log. */
+export function winsByFinalGirl(log) {
+  const out = {};
+  (log || []).forEach((g) => {
+    if (g && !g.isTest && g.outcome === 'won' && g.finalGirlId) {
+      out[g.finalGirlId] = (out[g.finalGirlId] || 0) + 1;
+    }
+  });
+  return out;
+}
+
 export function useFgCollection() {
   const [state, setState] = useState(read);
 
@@ -104,9 +134,20 @@ export function useFgCollection() {
     write({ ...cur, storage });
   }, []);
 
+  /* value: 'opened' | 'unlocked' | null (null = back to automatic). */
+  const setEnvelope = useCallback((id, value) => {
+    const cur = read();
+    const envelopes = { ...cur.envelopes };
+    if (value === 'opened' || value === 'unlocked') envelopes[id] = value;
+    else delete envelopes[id];
+    write({ ...cur, envelopes });
+  }, []);
+
   return {
     favourites: state.favourites,
     storage: state.storage,
+    envelopes: state.envelopes,
+    setEnvelope,
     isFavourite,
     toggleFavourite,
     setStorage,

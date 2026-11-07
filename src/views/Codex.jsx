@@ -11,7 +11,8 @@ import {
   getIcon,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useFgCollection, storageFor, defaultStorage, storageSuggestions } from '../hooks/useFgCollection.js';
+import { useFgCollection, storageFor, defaultStorage, storageSuggestions, envelopeStatus, winsByFinalGirl } from '../hooks/useFgCollection.js';
+import { useGameLog } from '../hooks/useGameLog.js';
 import CardList from './CardList.jsx';
 import './Codex.css';
 
@@ -186,9 +187,60 @@ function StoredIn({ entry, collection }) {
   );
 }
 
+/* Her Secret Envelope. Automatic: a logged win (not a test game) unlocks it.
+   Overrides: "Won before the tracker" (still sealed) and "Opened". */
+function EnvelopeMarker({ entry, wins, collection }) {
+  const { status, source } = envelopeStatus(entry.id, wins, collection.envelopes);
+  const set = (v) => collection.setEnvelope(entry.id, v);
+
+  if (status === 'unlocked') {
+    return (
+      <div className="cx-env cx-env--unlocked" role="status">
+        <p className="cx-env__title">&#9993;&#65039; Envelope unlocked &mdash; open her Secret Envelope!</p>
+        <p className="cx-env__why fg-type">
+          {source === 'log'
+            ? `You’ve won ${wins === 1 ? 'a game' : wins + ' games'} with ${entry.name}.`
+            : `Marked by you: won before the tracker, envelope still sealed.`}
+        </p>
+        <div className="cx-env__actions">
+          <button type="button" className="cx-env__btn cx-env__btn--main" onClick={() => set('opened')}>
+            I&rsquo;ve opened it
+          </button>
+          {source === 'manual' && (
+            <button type="button" className="cx-env__btn" onClick={() => set(null)}>Undo</button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (status === 'opened') {
+    return (
+      <p className="cx-env cx-env--opened">
+        <span>&#9993; Envelope opened</span>
+        <button type="button" className="cx-env__link" onClick={() => set(wins > 0 ? 'unlocked' : null)}>
+          Not opened yet?
+        </button>
+      </p>
+    );
+  }
+
+  return (
+    <p className="cx-env cx-env--sealed">
+      <span>&#128274; Envelope sealed &mdash; win with her to open it</span>
+      <button type="button" className="cx-env__link" onClick={() => set('unlocked')}>
+        Already won?
+      </button>
+      <button type="button" className="cx-env__link" onClick={() => set('opened')}>
+        Already opened?
+      </button>
+    </p>
+  );
+}
+
 /* A Final Girl card: both card faces (front = base, back = Ultimate Ability),
    so you can compare abilities when choosing. */
-function FinalGirlCard({ entry, selected, onPick, collection }) {
+function FinalGirlCard({ entry, selected, onPick, collection, wins }) {
   const { front, back } = getFinalGirlCards(entry);
   const blurb = narration.finalGirls[entry.id] || null;
   const fav = collection.isFavourite(entry.id);
@@ -219,6 +271,7 @@ function FinalGirlCard({ entry, selected, onPick, collection }) {
         </button>
       </header>
       {entry.note && <p className="cx-card__note fg-type">&#9888; {entry.note}</p>}
+      <EnvelopeMarker entry={entry} wins={wins} collection={collection} />
       <StoredIn entry={entry} collection={collection} />
       {blurb && <p className="cx-card__flavour">{blurb}</p>}
       <div className="cx-fg__faces">
@@ -258,6 +311,11 @@ export default function Codex({ onNavigate }) {
     useGameSelection();
   const collection = useFgCollection();
   const [favsOnly, setFavsOnly] = useState(false);
+  const [envOnly, setEnvOnly] = useState(false);
+  const { log } = useGameLog();
+  const wins = useMemo(() => winsByFinalGirl(log), [log]);
+  const isUnlocked = (id) => envelopeStatus(id, wins[id] || 0, collection.envelopes).status === 'unlocked';
+  const unlockedCount = finalGirls.filter((fg) => isUnlocked(fg.id)).length;
 
   // Pick an entry for "This Game" and jump to Setup Assist.
   function pickKiller(entry) {
@@ -295,6 +353,7 @@ export default function Codex({ onNavigate }) {
     for (const fg of finalGirls) {
       if (!matches(fg)) continue;
       if (favsOnly && !collection.favourites.includes(fg.id)) continue;
+      if (envOnly && !isUnlocked(fg.id)) continue;
       const key = fg.group || 'Other';
       if (!map[key]) {
         map[key] = [];
@@ -304,7 +363,7 @@ export default function Codex({ onNavigate }) {
     }
     return order.map((key) => ({ group: key, entries: map[key] }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [q, favsOnly, collection.favourites]);
+  }, [q, favsOnly, envOnly, collection.favourites, collection.envelopes, wins]);
 
   return (
     <div>
@@ -357,6 +416,14 @@ export default function Codex({ onNavigate }) {
             onClick={() => setFavsOnly((v) => !v)}
           >
             {favsOnly ? '\u2605' : '\u2606'} Favourites only ({collection.favourites.length})
+          </button>
+          <button
+            type="button"
+            className={'cx-favbar__toggle cx-favbar__toggle--env' + (envOnly ? ' is-on' : '') + (unlockedCount ? ' has-some' : '')}
+            aria-pressed={envOnly}
+            onClick={() => setEnvOnly((v) => !v)}
+          >
+            &#9993;&#65039; Envelopes to open ({unlockedCount})
           </button>
           <span className="cx-favbar__hint fg-type">
             Tap the star on a Final Girl to make her a favourite.
@@ -437,6 +504,7 @@ export default function Codex({ onNavigate }) {
                     selected={e.id === finalGirlId}
                     onPick={pickFinalGirl}
                     collection={collection}
+                    wins={wins[e.id] || 0}
                   />
                 ))}
               </div>
@@ -450,7 +518,9 @@ export default function Codex({ onNavigate }) {
         <p className="cx-empty fg-type">
           {tab === 'finalgirl' && favsOnly && collection.favourites.length === 0
             ? 'No favourites yet \u2014 tap the \u2606 on any Final Girl to add her.'
-            : 'Nothing matches that filter.'}
+            : tab === 'finalgirl' && envOnly && unlockedCount === 0
+              ? 'No envelopes waiting. Win with a Final Girl (or tap \u201cAlready won?\u201d on her card) and she\u2019ll show here.'
+              : 'Nothing matches that filter.'}
         </p>
       )}
     </div>
