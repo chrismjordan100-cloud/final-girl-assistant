@@ -192,7 +192,8 @@ export async function drawPassage(entry, canvas, cssWidth) {
   const page = await doc.getPage(entry.page);
   const base = page.getViewport({ scale: 1 });
   const dpr = Math.min(window.devicePixelRatio || 1, 3);
-  const scale = (cssWidth / base.width) * dpr;
+  // Scale so the margin-trimmed band fills cssWidth.
+  const scale = (cssWidth / (base.width - 2 * SIDE_MARGIN)) * dpr;
   const vp = page.getViewport({ scale });
 
   const full = document.createElement('canvas');
@@ -200,13 +201,26 @@ export async function drawPassage(entry, canvas, cssWidth) {
   full.height = Math.ceil(vp.height);
   await page.render({ canvasContext: full.getContext('2d'), viewport: vp }).promise;
 
-  // Band in PDF units (from the bottom) → pixels (from the top).
+  // Band in PDF units (from the bottom) → pixels (from the top). If another
+  // passage starts right where this one ends, stop a little higher so its
+  // heading doesn't peep in.
+  const bottom = entry.bottom + (nextStartsAt(entry) ? 6 : 0);
   const y0 = Math.max(0, (base.height - entry.top) * scale);
-  const y1 = Math.min(full.height, (base.height - entry.bottom) * scale);
+  const y1 = Math.min(full.height, (base.height - bottom) * scale);
   const h = Math.max(1, Math.round(y1 - y0));
-  canvas.width = full.width;
+  // Trim the page's side margins so the text is as big as possible.
+  const x0 = Math.round(SIDE_MARGIN * scale);
+  const w = Math.max(1, full.width - 2 * x0);
+  canvas.width = w;
   canvas.height = h;
-  canvas.style.width = `${cssWidth}px`;
-  canvas.style.height = `${Math.round(h / dpr)}px`;
-  canvas.getContext('2d').drawImage(full, 0, y0, full.width, h, 0, 0, full.width, h);
+  canvas.style.width = '100%';
+  canvas.style.height = 'auto';
+  canvas.getContext('2d').drawImage(full, x0, y0, w, h, 0, 0, w, h);
+}
+
+const SIDE_MARGIN = 18; // PDF units trimmed from each side
+
+function nextStartsAt(entry) {
+  const book = index.books[entry.locationId];
+  return book.e.some((x) => x[4] === entry.page && x[5] === entry.bottom);
 }

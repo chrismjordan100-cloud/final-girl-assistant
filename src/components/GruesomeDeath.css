@@ -34,8 +34,9 @@
   margin: 0;
   font-family: var(--font-slash);
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   letter-spacing: 0.04em;
+  line-height: 1.1;
   color: var(--fg-blood-bright);
 }
 .gd-close {
@@ -138,6 +139,7 @@
 
 @media (max-width: 520px) {
   .gd-modal { padding: 12px 12px 8px; }
-  .gd-pick select { max-width: 100%; }
+  .gd-pick { flex: 1 1 100%; }
+  .gd-pick select { width: 100%; max-width: 100%; }
   .gd-actions .fg-btn--primary { margin-left: 0; }
 }
