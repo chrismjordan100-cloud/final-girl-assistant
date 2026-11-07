@@ -6,8 +6,10 @@ import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import SetupCapture from '../components/SetupCapture.jsx';
 import CardPicker from '../components/CardPicker.jsx';
+import GruesomeDeath from '../components/GruesomeDeath.jsx';
+import { hasBook, warmBook } from '../lib/gruesomeDeaths.js';
 import { useGameFlow, useEndDraft } from '../hooks/useGameFlow.js';
-import { writePersistent } from '../hooks/usePersistentState.js';
+import { writePersistent, usePersistentState } from '../hooks/usePersistentState.js';
 import './TurnTracker.css';
 
 /* The per-turn event types the quick-capture bar can log. `needsText` means
@@ -102,6 +104,11 @@ export default function TurnTracker({ onNavigate }) {
   const [mistakeType, setMistakeType] = useState('rules');
   const [mistakeText, setMistakeText] = useState('');
   const [mistakeSaved, setMistakeSaved] = useState(false);
+  // Gruesome Death popup (opens when a Victim dies, if this Location has a book).
+  const [gdOpen, setGdOpen] = useState(false);
+  const [gdAuto, setGdAuto] = usePersistentState('fg-gd-auto', true);
+  const gdAvailable = hasBook(locationId);
+  const gdSeen = state.gdSeen || [];
   // Two-tap confirm for wiping the tracker.
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -128,6 +135,11 @@ export default function TurnTracker({ onNavigate }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [turn, phaseIndex]);
 
+  // Fetch this Location's Gruesome Death book early so the first death shows fast.
+  useEffect(() => {
+    if (gdAuto && gdAvailable) warmBook(locationId);
+  }, [locationId, gdAuto, gdAvailable]);
+
   useEffect(() => {
     if (!confirmReset) return undefined;
     const t = setTimeout(() => setConfirmReset(false), 4000);
@@ -150,6 +162,7 @@ export default function TurnTracker({ onNavigate }) {
     if (type === 'victim-died') patch({ bloodlust: Math.min(20, bloodlust + 1) });
     if (type === 'victim-saved') patch({ victimsSaved: Math.min(30, victimsSaved + 1) });
     addEvent({ type, phaseId: phase.id, phaseName: phase.name.replace(' Phase', '') });
+    if (type === 'victim-died' && gdAuto && gdAvailable) setGdOpen(true);
   }
 
   function pickType(def) {
@@ -490,6 +503,11 @@ export default function TurnTracker({ onNavigate }) {
               {thisTurnEvents.map((e) => (
                 <li key={e.id} className={'te-item te-item--' + e.type}>
                   <span className="te-item__phase">{e.phaseName}</span>
+                  {e.type === 'victim-died' && gdAvailable && (
+                    <button type="button" className="te-item__gd" onClick={() => setGdOpen(true)} title="Show a Gruesome Death">
+                      &#9760; Read
+                    </button>
+                  )}
                   <span className="te-item__text">
                     {EVENT_LABELS[e.type] || e.type}
                     {e.detail ? `: ${e.detail}` : ''}
@@ -603,8 +621,33 @@ export default function TurnTracker({ onNavigate }) {
         </ul>
       </details>
 
+      {gdOpen && (
+        <GruesomeDeath
+          killerId={killerId}
+          locationId={locationId}
+          turnEvents={thisTurnEvents}
+          seen={gdSeen}
+          onSeen={(id) => {
+            const cur = state.gdSeen || [];
+            if (!cur.includes(id)) patch({ gdSeen: [...cur, id] });
+          }}
+          onClose={() => setGdOpen(false)}
+        />
+      )}
+
       {/* Tracker settings — out of the way, but one tap from the table */}
       <div className="tt-settings fg-panel">
+        <label className="tt-settings__toggle">
+          <input type="checkbox" checked={gdAuto} onChange={(e) => setGdAuto(e.target.checked)} />
+          <span>
+            <strong>Gruesome Deaths</strong>
+            <span className="tt-settings__hint">
+              {gdAvailable
+                ? 'Pop up the passage from Van Ryder\u2019s free book when a Victim dies (needs internet)'
+                : 'No free Gruesome Death book for this Location yet (Series 1\u20133 only)'}
+            </span>
+          </span>
+        </label>
         <label className="tt-settings__toggle">
           <input type="checkbox" checked={extremeMode} onChange={(e) => setExtreme(e.target.checked)} />
           <span>

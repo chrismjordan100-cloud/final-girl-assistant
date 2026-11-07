@@ -1,0 +1,143 @@
+/* Gruesome Death popup — sits over everything, page image centred. */
+.gd-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.82);
+  animation: gd-fade 0.25s ease-out;
+}
+@keyframes gd-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.gd-modal {
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  background: linear-gradient(180deg, var(--fg-panel-2), var(--fg-black-2));
+  border: 1px solid var(--fg-blood-deep);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), var(--shadow-red);
+  padding: 14px 16px 10px;
+}
+
+.gd-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.gd-title {
+  margin: 0;
+  font-family: var(--font-slash);
+  font-weight: 400;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-blood-bright);
+}
+.gd-close {
+  background: none;
+  border: 0;
+  color: var(--text-dim);
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.gd-close:hover { color: var(--text); }
+
+.gd-why {
+  margin: 4px 0 10px;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.gd-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.gd-chip {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--fg-black);
+  color: var(--text);
+  cursor: pointer;
+}
+.gd-chip:hover { border-color: var(--fg-blood); }
+.gd-chip.is-active {
+  background: var(--fg-blood-deep);
+  border-color: var(--fg-blood-bright);
+}
+.gd-chip--hazard { color: var(--fg-gold); }
+
+.gd-page {
+  position: relative;
+  min-height: 120px;
+  background: #fff;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.gd-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gd-canvas.is-ready { opacity: 1; }
+.gd-msg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+}
+.gd-msg--error { color: var(--fg-blood-deep); }
+
+.gd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.gd-actions .fg-btn--primary { margin-left: auto; }
+.gd-pick select {
+  font: inherit;
+  font-size: 0.85rem;
+  max-width: 220px;
+  padding: 5px 6px;
+  background: var(--fg-black);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.gd-credit {
+  margin: 10px 0 0;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  opacity: 0.7;
+}
+
+@media (max-width: 520px) {
+  .gd-modal { padding: 12px 12px 8px; }
+  .gd-pick select { max-width: 100%; }
+  .gd-actions .fg-btn--primary { margin-left: 0; }
+}

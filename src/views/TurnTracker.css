@@ -707,3 +707,18 @@
   color: var(--text-dim);
 }
 .tt-setup__body { margin-top: 0.8rem; }
+
+/* "Read" a Gruesome Death again from a logged Victim death */
+.te-item__gd {
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 2px 8px;
+  margin-right: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--fg-blood-deep);
+  background: var(--fg-black);
+  color: var(--fg-blood-bright);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.te-item__gd:hover { border-color: var(--fg-blood-bright); }
