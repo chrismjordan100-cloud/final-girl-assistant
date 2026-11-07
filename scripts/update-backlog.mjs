@@ -236,6 +236,48 @@ ITEMS.push(
       return n > 0 ? 'amber' : 'red';
     },
   },
+  {
+    id: 'where-things-go',
+    title: 'Where things go — storage & Final Girl finder',
+    affects: ['New: Storage tab', 'Card data', 'Codex'],
+    body:
+      'A tracker that always says where every Final Girl component lives, so things go\n' +
+      'back in the right place after a game, especially items that could go in more\n' +
+      'than one place (Final Girl cards, Secret Envelopes, minis, promo/guest cards).\n' +
+      'Rules the app applies by default:\n' +
+      '- Original Final Girl cards and all original cards stay in their own Feature Film box.\n' +
+      '- Special Feature Final Girls (e.g. Shriek, North Pole Nightmare) need a home:\n' +
+      '  each Special Feature box counts as a home in its own right.\n' +
+      '- Promo / guest-star / Kickstarter items with no box go to a named spot I choose.\n' +
+      '- Every item has ONE home, plus an optional "currently at" (on the table, lent out…).\n' +
+      'Storage locations are an editable list (every Feature Film / Special Feature /\n' +
+      'Core / Vignette / Bonus / Guest Stars / Cast and Crew / Mausoleum / Ultimate /\n' +
+      'miniatures box, plus custom spots like "Promo tin"), and can nest\n' +
+      '(e.g. Feature Film box inside the S4 Ultimate Box).\n' +
+      'Items: Final Girl cards, minis (girls, killers, victims, vehicles), Secret Envelopes\n' +
+      '(sealed/opened, and where opened contents now live), promo / signature / vehicle\n' +
+      'Action cards, proxy cards, Lore and Gruesome Death books.\n' +
+      'Screens:\n' +
+      '- "Where does this go?": pick any item, see its home with the full nested path.\n' +
+      '- "Where\'s this Final Girl?": her card\'s home, her mini\'s home, source film, and\n' +
+      '  whether she\'s currently out.\n' +
+      '- Box contents: everything that belongs in a box, as a pack-up checklist.\n' +
+      '- "Out of place": everything not currently in its home.\n' +
+      '- Flag items with more than one possible home and show which was chosen and why.\n' +
+      'Data: editable src/data/storageHomes.json, seeded from the existing Feature Film /\n' +
+      'Final Girl / killer / location data and using the same series and ruleset slugs.\n' +
+      'Anything not yet decided (Special Feature mini homes, boxless promos, opened\n' +
+      'envelope contents) shows as "Unassigned" until I pick a home in the app.',
+    remaining:
+      'storageHomes.json exists; still to do: the Storage screens (where does this go / where is this Final Girl / box checklist / out of place).',
+    check() {
+      const data = read('src/data/storageHomes.json');
+      const view = has(['src/views/Storage.jsx', 'src/views/WhereThingsGo.jsx'], /storageHomes/);
+      if (data && view) return 'green';
+      if (data || view) return 'amber';
+      return 'red';
+    },
+  },
 );
 
 const RAG = { green: '🟢', amber: '🟡', red: '🔴' };

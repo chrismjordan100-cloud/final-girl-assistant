@@ -125,6 +125,38 @@ way to capture them.
 
 **Status:** 🟡 partially built / in progress.
 
+### 🔴 Where things go — storage & Final Girl finder
+
+A tracker that always says where every Final Girl component lives, so things go
+back in the right place after a game, especially items that could go in more
+than one place (Final Girl cards, Secret Envelopes, minis, promo/guest cards).
+Rules the app applies by default:
+- Original Final Girl cards and all original cards stay in their own Feature Film box.
+- Special Feature Final Girls (e.g. Shriek, North Pole Nightmare) need a home:
+  each Special Feature box counts as a home in its own right.
+- Promo / guest-star / Kickstarter items with no box go to a named spot I choose.
+- Every item has ONE home, plus an optional "currently at" (on the table, lent out…).
+Storage locations are an editable list (every Feature Film / Special Feature /
+Core / Vignette / Bonus / Guest Stars / Cast and Crew / Mausoleum / Ultimate /
+miniatures box, plus custom spots like "Promo tin"), and can nest
+(e.g. Feature Film box inside the S4 Ultimate Box).
+Items: Final Girl cards, minis (girls, killers, victims, vehicles), Secret Envelopes
+(sealed/opened, and where opened contents now live), promo / signature / vehicle
+Action cards, proxy cards, Lore and Gruesome Death books.
+Screens:
+- "Where does this go?": pick any item, see its home with the full nested path.
+- "Where's this Final Girl?": her card's home, her mini's home, source film, and
+  whether she's currently out.
+- Box contents: everything that belongs in a box, as a pack-up checklist.
+- "Out of place": everything not currently in its home.
+- Flag items with more than one possible home and show which was chosen and why.
+Data: editable src/data/storageHomes.json, seeded from the existing Feature Film /
+Final Girl / killer / location data and using the same series and ruleset slugs.
+Anything not yet decided (Special Feature mini homes, boxless promos, opened
+envelope contents) shows as "Unassigned" until I pick a home in the app.
+
+**Status:** 🔴 not started.
+
 ## Done (🟢 shipped)
 - Hosting on GitHub Pages with auto-deploy on push.
 - Supabase cloud sync of game log across devices.

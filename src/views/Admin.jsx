@@ -243,9 +243,11 @@ const BACKLOG = [
   {
     title: 'Gruesome Deaths section',
     detail:
-      'Done for Series 1\u20133 (15 books, 2,004 passages). Tap \u201cVictim died\u201d in the Turn Tracker and the matching passage pops up as an image from Van Ryder\u2019s free PDF: the Terror/Event/Dark Power card you logged that turn if it has one (e.g. Fire! asks which spot), otherwise a rolled General Kill for your Killer, with no repeats in a game. Still open: Series 4 books (none published yet), and the Final Girl\u2019s own death, which the books don\u2019t cover.',
+      'Built for Series 1\u20133 (15 books, 2,004 passages). Tap \u201cVictim died\u201d in the Turn Tracker and the matching passage pops up as an image from Van Ryder\u2019s free PDF: the Terror/Event/Dark Power card you logged that turn if it has one (e.g. Fire! asks which spot), otherwise a rolled General Kill for your Killer, with no repeats in a game.',
     affects: ['Turn Tracker'],
-    status: 'done',
+    status: 'partial',
+    remaining:
+      'Series 4 books (none published yet, so S4 deaths show nothing), and the Final Girl\u2019s own death, which the books don\u2019t cover.',
   },
   {
     title: 'Use the full as-written flavour (not paraphrases)',
