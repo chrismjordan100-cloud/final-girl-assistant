@@ -220,6 +220,14 @@ const BACKLOG = [
       'Only Laurie, Reiko and Selena have bespoke lines so far; every other Final Girl (Series 1-4, vignettes, specials, promos) still uses the generic fallback. Write lines for the rest.',
   },
   {
+    title: 'Best-fit Final Girls for a scenario (with reasons)',
+    detail:
+      'Setup Assist shows \u201cBest fits by ability\u201d under the official girls once a Killer or Location is picked: the top 5 Final Girls scored out of 10 for that scenario, each with a one-line summary and a \u201cWhy?\u201d listing her matching strengths, weak spots and any special pairing (e.g. Adelaide lowering Wrath against Inkanyamba). Official girls always show their score. The logic is on Codex \u2192 Fit grid: 11 traits, every girl rated 0\u20133, what every Killer and Location rewards, and scores for any combo. Ratings live in src/data/fgFit.js.',
+    affects: ['Setup Assist', 'Codex'],
+    status: 'partial',
+    remaining: 'Rate the 12 Final Girls with no ability data yet; firm up the estimated Killer/Location profiles (mostly Series 4 and specials) from play.',
+  },
+  {
     title: 'Favourite Final Girls + where each is stored',
     detail:
       'Done. In the Codex \u2192 Final Girls, tap the \u2606 to make one a favourite (e.g. for her abilities), and use \u201cFavourites only\u201d to see just those. Each card shows \u201c\U0001F4E6 Stored in\u201d \u2014 her own Feature Film box by default (e.g. The Happy Trails Horror box); tap Change to set somewhere else for special editions (e.g. Promo binder). Promos start as \u201cnot set yet\u201d. When you pick her, Setup Assist tells you where to find her, and favourites get a \u2605 in the Final Girl list. Synced between phone and PC.',

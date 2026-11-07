@@ -12,6 +12,8 @@ import './BestFits.css';
           isFavourite(id), onOpenGrid()
    ========================================================================== */
 const TOP = 5;
+const lc = (x) => x.charAt(0).toLowerCase() + x.slice(1);
+const reasons = (arr) => arr.map((w) => lc(w.replace(/^(Killer|Location): /, ''))).join('; ');
 
 function band(score) {
   if (score >= 7.5) return 'great';
@@ -63,13 +65,13 @@ function Row({ r, official, selected, fav, onPick }) {
           {fit.strengths.map((s) => (
             <div key={s.trait} className="bf-line bf-line--plus">
               <strong>+ {s.label}:</strong> {s.girlWhy}.
-              <span className="bf-need"> Matters here because {s.needWhy.map((w) => w.replace(/^(Killer|Location): /, '')).join('; ').toLowerCase()}.</span>
+              <span className="bf-need"> Matters here because {reasons(s.needWhy)}.</span>
             </div>
           ))}
           {fit.gaps.map((g) => (
             <div key={g.trait} className="bf-line bf-line--minus">
               <strong>&minus; {g.label}:</strong> {g.girlWhy || 'nothing to help'}.
-              <span className="bf-need"> This scenario wants it: {g.needWhy.map((w) => w.replace(/^(Killer|Location): /, '')).join('; ').toLowerCase()}.</span>
+              <span className="bf-need"> This scenario wants it: {reasons(g.needWhy)}.</span>
             </div>
           ))}
         </div>
