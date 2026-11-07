@@ -220,10 +220,10 @@ const BACKLOG = [
       'Only Laurie, Reiko and Selena have bespoke lines so far; every other Final Girl (Series 1-4, vignettes, specials, promos) still uses the generic fallback. Write lines for the rest.',
   },
   {
-    title: 'Lore & scenario books (per season)',
+    title: 'Lore & Scenario books \u2014 bring in all 4 series',
     detail:
-      'Each season\u2019s lore/scenario book has richer flavour for Locations, Killers and Final Girls than the rule-sheet flavour. Scanning these could deepen This Game text and Start Game narration.',
-    affects: ['This Game', 'Start Game audio'],
+      'Each series has a printed Lore & Scenario book: a backstory for every Killer and Final Girl, tips for playing each Final Girl, and a special scenario for each Killer/Location pair (e.g. a Hans at Camp Happy Trails scenario with its own setup and rules). Van Ryder don\u2019t publish these as free PDFs, so they need scanning from your own copies. Bring them in the same way as the card photos: show the pages as images where they\u2019re relevant (Killer/Final Girl backstory in This Game, scenario rules in Setup Assist and the Turn Tracker), not retyped. Progress: Series 1 \u2014 not started \u00b7 Series 2 \u2014 not started \u00b7 Series 3 \u2014 not started \u00b7 Series 4 \u2014 check a book exists yet. Done when all four are in.',
+    affects: ['This Game', 'Setup Assist', 'Turn Tracker', 'Tips', 'Start Game audio'],
     status: 'todo',
   },
   {
