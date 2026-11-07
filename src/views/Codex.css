@@ -286,3 +286,77 @@
 }
 
 .cx-empty { margin: 2rem 0; text-align: center; }
+
+/* ---- Favourite Final Girls ------------------------------------------- */
+.cx-fav {
+  flex: none;
+  background: none;
+  border: 0;
+  padding: 0 0.1rem;
+  font-size: 1.55rem;
+  line-height: 1;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: transform 0.15s, color 0.15s;
+}
+.cx-fav:hover { color: var(--fg-gold); transform: scale(1.12); }
+.cx-fav.is-on { color: var(--fg-gold); }
+.cx-fav:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; border-radius: 4px; }
+.cx-fg.is-fav { border-color: var(--fg-gold); }
+
+.cx-favbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin: 0 0 1rem;
+}
+.cx-favbar__toggle {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--fg-black);
+  color: var(--text);
+  cursor: pointer;
+}
+.cx-favbar__toggle.is-on {
+  border-color: var(--fg-gold);
+  color: var(--fg-gold);
+}
+.cx-favbar__hint { font-size: 0.78rem; color: var(--text-dim); }
+
+/* ---- Where she's stored ---------------------------------------------- */
+.cx-store {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.88rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.cx-store__label { color: var(--text-dim); }
+.cx-store__value { color: var(--text); font-weight: 600; }
+.cx-store.is-unset .cx-store__value { color: var(--text-dim); font-weight: 400; font-style: italic; }
+.cx-store__edit {
+  font: inherit;
+  font-size: 0.78rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--accent-bright, var(--fg-blood-bright));
+  text-decoration: underline;
+  cursor: pointer;
+}
+.cx-store--edit { flex-direction: column; align-items: stretch; gap: 0.4rem; }
+.cx-store__input {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.55rem;
+  background: var(--fg-black);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.cx-store__actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }

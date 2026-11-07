@@ -11,6 +11,7 @@ import {
   getIcon,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
+import { useFgCollection, storageFor, defaultStorage, storageSuggestions } from '../hooks/useFgCollection.js';
 import CardList from './CardList.jsx';
 import './Codex.css';
 
@@ -126,15 +127,85 @@ function EntryCard({ type, entry, selected, onPick }) {
   );
 }
 
-/* A Final Girl card: both card faces (front = base, back = Ultimate Ability),
-   so you can compare abilities when choosing. */
-function FinalGirlCard({ entry, selected, onPick }) {
-  const { front, back } = getFinalGirlCards(entry);
-  const blurb = narration.finalGirls[entry.id] || null;
+/* "Stored in" line for a Final Girl, with a small inline editor. By default
+   she lives in her own Feature Film box; set a place for special editions. */
+function StoredIn({ entry, collection }) {
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState('');
+  const { text, isDefault } = storageFor(entry, collection.storage);
+  const fallback = defaultStorage(entry);
+  const listId = 'cx-store-' + entry.id;
+
+  function start() {
+    setDraft(isDefault ? '' : text);
+    setEditing(true);
+  }
+  function save(value) {
+    collection.setStorage(entry.id, value);
+    setEditing(false);
+  }
+
+  if (editing) {
+    return (
+      <form className="cx-store cx-store--edit" onSubmit={(e) => { e.preventDefault(); save(draft); }}>
+        <label className="cx-store__label" htmlFor={listId + '-in'}>&#128230; Stored in</label>
+        <input
+          id={listId + '-in'}
+          className="cx-store__input"
+          list={listId}
+          value={draft}
+          autoFocus
+          placeholder={fallback || 'e.g. Promo binder, Guest Stars box'}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setEditing(false); }}
+        />
+        <datalist id={listId}>
+          {storageSuggestions(collection.storage).map((s) => <option key={s} value={s} />)}
+        </datalist>
+        <div className="cx-store__actions">
+          <button type="submit" className="fg-btn fg-btn--small fg-btn--primary">Save</button>
+          {fallback && (
+            <button type="button" className="fg-btn fg-btn--small" onClick={() => save('')}>
+              Her own box
+            </button>
+          )}
+          <button type="button" className="fg-btn fg-btn--small" onClick={() => setEditing(false)}>Cancel</button>
+        </div>
+      </form>
+    );
+  }
 
   return (
-    <article className={'cx-fg fg-panel' + (selected ? ' is-selected' : '')}>
+    <p className={'cx-store' + (text ? '' : ' is-unset')}>
+      <span className="cx-store__label">&#128230; Stored in</span>{' '}
+      <span className="cx-store__value">{text || 'not set yet'}</span>
+      <button type="button" className="cx-store__edit" onClick={start}>
+        {text ? 'Change' : 'Set'}
+      </button>
+    </p>
+  );
+}
+
+/* A Final Girl card: both card faces (front = base, back = Ultimate Ability),
+   so you can compare abilities when choosing. */
+function FinalGirlCard({ entry, selected, onPick, collection }) {
+  const { front, back } = getFinalGirlCards(entry);
+  const blurb = narration.finalGirls[entry.id] || null;
+  const fav = collection.isFavourite(entry.id);
+
+  return (
+    <article className={'cx-fg fg-panel' + (selected ? ' is-selected' : '') + (fav ? ' is-fav' : '')}>
       <header className="cx-card__head">
+        <button
+          type="button"
+          className={'cx-fav' + (fav ? ' is-on' : '')}
+          onClick={() => collection.toggleFavourite(entry.id)}
+          aria-pressed={fav}
+          aria-label={fav ? `Remove ${entry.name} from favourites` : `Add ${entry.name} to favourites`}
+          title={fav ? 'Favourite \u2014 tap to remove' : 'Mark as a favourite'}
+        >
+          {fav ? '\u2605' : '\u2606'}
+        </button>
         <div className="cx-card__headmain">
           <h3 className="cx-card__name">{entry.name}</h3>
           <span className="cx-card__meta fg-type">{entry.film}</span>
@@ -148,6 +219,7 @@ function FinalGirlCard({ entry, selected, onPick }) {
         </button>
       </header>
       {entry.note && <p className="cx-card__note fg-type">&#9888; {entry.note}</p>}
+      <StoredIn entry={entry} collection={collection} />
       {blurb && <p className="cx-card__flavour">{blurb}</p>}
       <div className="cx-fg__faces">
         <figure className="cx-fg__face">
@@ -184,6 +256,8 @@ export default function Codex({ onNavigate }) {
 
   const { finalGirlId, killerId, locationId, setFinalGirl, setKiller, setLocation } =
     useGameSelection();
+  const collection = useFgCollection();
+  const [favsOnly, setFavsOnly] = useState(false);
 
   // Pick an entry for "This Game" and jump to Setup Assist.
   function pickKiller(entry) {
@@ -220,6 +294,7 @@ export default function Codex({ onNavigate }) {
     const map = {};
     for (const fg of finalGirls) {
       if (!matches(fg)) continue;
+      if (favsOnly && !collection.favourites.includes(fg.id)) continue;
       const key = fg.group || 'Other';
       if (!map[key]) {
         map[key] = [];
@@ -229,7 +304,7 @@ export default function Codex({ onNavigate }) {
     }
     return order.map((key) => ({ group: key, entries: map[key] }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [q]);
+  }, [q, favsOnly, collection.favourites]);
 
   return (
     <div>
@@ -272,6 +347,22 @@ export default function Codex({ onNavigate }) {
           )}
         </div>}
       </div>
+
+      {tab === 'finalgirl' && (
+        <div className="cx-favbar">
+          <button
+            type="button"
+            className={'cx-favbar__toggle' + (favsOnly ? ' is-on' : '')}
+            aria-pressed={favsOnly}
+            onClick={() => setFavsOnly((v) => !v)}
+          >
+            {favsOnly ? '\u2605' : '\u2606'} Favourites only ({collection.favourites.length})
+          </button>
+          <span className="cx-favbar__hint fg-type">
+            Tap the star on a Final Girl to make her a favourite.
+          </span>
+        </div>
+      )}
 
       {tab === 'cards' && <CardList />}
 
@@ -345,6 +436,7 @@ export default function Codex({ onNavigate }) {
                     entry={e}
                     selected={e.id === finalGirlId}
                     onPick={pickFinalGirl}
+                    collection={collection}
                   />
                 ))}
               </div>
@@ -355,7 +447,11 @@ export default function Codex({ onNavigate }) {
       {((tab === 'killer' && grouped(killers).length === 0) ||
         (tab === 'location' && grouped(locations).length === 0) ||
         (tab === 'finalgirl' && fgGroups.length === 0)) && (
-        <p className="cx-empty fg-type">Nothing matches that filter.</p>
+        <p className="cx-empty fg-type">
+          {tab === 'finalgirl' && favsOnly && collection.favourites.length === 0
+            ? 'No favourites yet \u2014 tap the \u2606 on any Final Girl to add her.'
+            : 'Nothing matches that filter.'}
+        </p>
       )}
     </div>
   );

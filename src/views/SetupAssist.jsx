@@ -13,6 +13,7 @@ import {
   finalGirlCardStatus,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
+import { useFgCollection, storageFor } from '../hooks/useFgCollection.js';
 import IconSelect from '../components/IconSelect.jsx';
 import SetupCapture from '../components/SetupCapture.jsx';
 import { useGameFlow } from '../hooks/useGameFlow.js';
@@ -109,6 +110,11 @@ export default function SetupAssist({ onNavigate }) {
   // Special setup steps for the currently-selected Killer / Location.
   const killer = getKiller(killerId);
   const location = getLocation(locationId);
+
+  // Favourites (starred in the Codex) and where the chosen Final Girl is kept.
+  const collection = useFgCollection();
+  const pickedGirl = finalGirlGroups.flatMap(([, girls]) => girls).find((g) => g.id === finalGirlId) || null;
+  const pickedStorage = pickedGirl ? storageFor(pickedGirl, collection.storage).text : null;
   const killerExtras = getSetupExtras(killer);
   const locationExtras = getSetupExtras(location);
   const hasExtras = killerExtras.length > 0 || locationExtras.length > 0;
@@ -278,10 +284,24 @@ export default function SetupAssist({ onNavigate }) {
                               value={finalGirlId || ''}
                               onChange={setFinalGirl}
                               options={finalGirlGroups.flatMap(([group, girls]) =>
-                                girls.map((g) => ({ id: g.id, name: g.name, group, dot: finalGirlCardStatus(g) }))
+                                girls.map((g) => ({
+                                  id: g.id,
+                                  name: (collection.isFavourite(g.id) ? '\u2605 ' : '') + g.name,
+                                  group,
+                                  dot: finalGirlCardStatus(g),
+                                }))
                               )}
                             />
                           </div>
+                          {pickedGirl && (
+                            <p className="game-picker__stored">
+                              &#128230; <strong>{pickedGirl.name}</strong> is stored in:{' '}
+                              <strong>{pickedStorage || 'not set yet'}</strong>
+                              {!pickedStorage && (
+                                <span className="fg-type"> &mdash; set it on her card in the Codex.</span>
+                              )}
+                            </p>
+                          )}
                           {(killer || location) && (
                             <div className="game-picker__official">
                               {hasOfficialGirls ? (

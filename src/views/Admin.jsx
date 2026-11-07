@@ -220,6 +220,13 @@ const BACKLOG = [
       'Only Laurie, Reiko and Selena have bespoke lines so far; every other Final Girl (Series 1-4, vignettes, specials, promos) still uses the generic fallback. Write lines for the rest.',
   },
   {
+    title: 'Favourite Final Girls + where each is stored',
+    detail:
+      'Done. In the Codex \u2192 Final Girls, tap the \u2606 to make one a favourite (e.g. for her abilities), and use \u201cFavourites only\u201d to see just those. Each card shows \u201c\U0001F4E6 Stored in\u201d \u2014 her own Feature Film box by default (e.g. The Happy Trails Horror box); tap Change to set somewhere else for special editions (e.g. Promo binder). Promos start as \u201cnot set yet\u201d. When you pick her, Setup Assist tells you where to find her, and favourites get a \u2605 in the Final Girl list. Synced between phone and PC.',
+    affects: ['Codex', 'Setup Assist'],
+    status: 'done',
+  },
+  {
     title: 'Chris to do: scan the Lore & Scenario books',
     detail:
       'Your job before Claude can wire the lore in. Photograph or scan every page of each printed Lore & Scenario book (a phone scanning app like Microsoft Lens or Adobe Scan is fine, one page per image, flat and well lit), then drop them into the chat or a folder on the PC. Example: all 64 pages of the Series 1 book in one go, then Series 2, and so on. Progress: Series 1 \u2014 to scan \u00b7 Series 2 \u2014 to scan \u00b7 Series 3 \u2014 to scan \u00b7 Series 4 \u2014 check whether a book has come out yet.',

@@ -25,7 +25,13 @@ export const SYNCED_KEYS = [
   'fg-game-log',
   'fg-active-game',
   'fg-achievement-overrides',
+  'fg-collection', // favourite Final Girls + where each is stored
 ];
+
+/* Keys that are only ever added to, never deliberately removed. If the cloud
+   copy is missing one (e.g. it was last saved by an older version of the app
+   that didn't know about it), keep this device's copy rather than wiping it. */
+const KEEP_IF_MISSING_IN_CLOUD = new Set(['fg-collection']);
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   auth: { persistSession: false },
@@ -85,6 +91,11 @@ export function applyStateToLocal(state) {
     const incoming = state[key];
     const current = safeGet(key);
     if (incoming === undefined || incoming === null) {
+      if (current !== null && KEEP_IF_MISSING_IN_CLOUD.has(key)) {
+        // Cloud doesn't have it yet — send ours up on the next push.
+        markLocalChange();
+        continue;
+      }
       if (current !== null) {
         safeRemove(key);
         changed = true;
