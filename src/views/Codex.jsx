@@ -15,6 +15,7 @@ import { useFgCollection, storageFor, defaultStorage, storageSuggestions, envelo
 import { useGameLog } from '../hooks/useGameLog.js';
 import CardList from './CardList.jsx';
 import FitGrid from './FitGrid.jsx';
+import FitSummary from './FitSummary.jsx';
 import { usePersistentState } from '../hooks/usePersistentState.js';
 import './Codex.css';
 
@@ -23,6 +24,7 @@ const TABS = [
   { id: 'location', label: 'Locations' },
   { id: 'finalgirl', label: 'Final Girls' },
   { id: 'fit', label: 'Fit grid' },
+  { id: 'fitsum', label: 'Fit summary' },
   { id: 'cards', label: 'All cards (text)' },
 ];
 
@@ -393,7 +395,7 @@ export default function Codex({ onNavigate }) {
             </button>
           ))}
         </div>
-        {tab !== 'cards' && tab !== 'fit' && <div className="cx-search">
+        {tab !== 'cards' && tab !== 'fit' && tab !== 'fitsum' && <div className="cx-search">
           <span className="cx-search__icon" aria-hidden="true">&#128269;</span>
           <input
             type="search"
@@ -436,6 +438,7 @@ export default function Codex({ onNavigate }) {
 
       {tab === 'cards' && <CardList />}
       {tab === 'fit' && <FitGrid />}
+        {tab === 'fitsum' && <FitSummary />}
 
       {tab === 'killer' &&
         grouped(killers).map((grp) => {

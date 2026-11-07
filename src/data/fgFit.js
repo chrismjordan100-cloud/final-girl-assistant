@@ -96,7 +96,31 @@ export const GIRL_TRAITS = {
   maureen: { cards: t(2, 'Uses Victims to play cards straight from the tableau') },
   paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'Save rewards include Horror drops'), rescue: ult(5) },
   jamie: { attack: t(2, 'Two-success rolls deal damage anywhere on the board'), horror: t(1, 'Save rewards lower Horror'), rescue: ult(5) },
+
+  // ---- Rated from Chris's card photos (src/assets/games), not cards.json.
+  // Card reading: top-left number = health; number of meeples = saves needed
+  // for the Ultimate; slashed-mask meeple = -1 Horror (checked against Paula's
+  // card, whose wiki text lists the same rewards).
+  // Both sides photographed:
+  agnes: { dice: t(2, 'Ultimate: gains 2 Ultimate Dice of her choice'), tank: t(1, 'Only 4 health, but two save rewards heal (one heals 2)'), time: t(1, 'Save rewards and extra saves give Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(6) },
+  layla: { cards: t(2, 'Ultimate: takes any Signature Action card from out of play'), tank: t(1, '5 health, and extra saves heal'), time: t(1, 'A save reward gives 2 Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(5) },
+  julia: { tank: t(2, '6 health, and can recover all health by sacrificing a Victim'), attack: t(1, 'Can deal damage by sacrificing a Victim'), move: t(1, 'Can move 2 spaces ignoring penalties by sacrificing a Victim'), rescue: t(1, 'Ultimate after just 1 save, but it flips back after each use and each use costs a Victim') },
+  constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time'), tank: t(1, '5 health'), rescue: ult(5) },
+  'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again'), tank: t(1, '5 health'), rescue: ult(5) },
+  iris: { items: t(3, 'Ultimate: 3 times, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(2, 'Picks the exact Item she wants'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(5) },
+  // Action side only (Ultimate side not photographed yet), so these are
+  // provisional: the Ultimate could move them a lot.
+  julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror'), tank: t(1, '5 health'), rescue: t(1, 'Ultimate after 5 saves (Ultimate side not photographed yet)') },
+  meg: { time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes any top Item'), tank: t(1, '5 health; a save reward takes a Guard card'), horror: t(1, 'A save reward lowers Horror'), rescue: t(2, 'Ultimate after only 4 saves (Ultimate side not photographed yet)') },
+  carolyn: { move: t(1, 'Save rewards include 2 Psychic Travel cards'), attack: t(1, 'Save rewards include 2 Psychic Attack cards'), horror: t(1, 'Save rewards include 2 Psychic Focus cards'), cards: t(1, 'Every save reward is a Psychic card'), tank: t(1, '5 health'), rescue: t(0, 'Ultimate after 6 saves (Ultimate side not photographed yet; Psychic card effects not known)') },
+  // Not rated:
+  //   grandma: action side shows 1 health and five card rewards (Retaliate,
+  //     Gather the Flock, Guard, Slow Walk, Rally). Rating her on 1 health
+  //     alone would mislead; needs the Ultimate side / pack rules.
+  //   gabrielle: no card photos or card data yet.
 };
+// Holiday Paula is an alt-art Paula (cards.json: "alt-art Holiday Paula exists").
+GIRL_TRAITS['holiday-paula'] = GIRL_TRAITS.paula;
 
 /* What each Killer rewards. */
 const need = (v, why) => ({ v, why });

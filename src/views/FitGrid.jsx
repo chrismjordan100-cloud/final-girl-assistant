@@ -167,7 +167,7 @@ export default function FitGrid() {
           </table>
         </div>
         {unrated.length > 0 && (
-          <p className="fgx-dim fgx-small">Not rated yet (no ability details in the card data): {unrated.map((g) => g.name).join(', ')}.</p>
+          <p className="fgx-dim fgx-small">Not rated yet (card details or photos still missing): {unrated.map((g) => g.name).join(', ')}.</p>
         )}
       </section>
 

@@ -19575,9 +19575,9 @@
       "name": "Agnes Crane",
       "box_id": null,
       "other_source": "Series 2 Box of Props",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 4,
+      "victims_for_ultimate": 6,
+      "ultimate_ability": "Gain 2 Ultimate Dice of your choice.",
       "unlockable_item": {
         "name": "Agnes' Magnum",
         "effect": "Range: 1-2 Damage: 2 Hands: 1 Uses: 3 For every 2 Damage (rounded down) dealt while using Agnes' Magnum, -1 Horror. Only Agnes may use this Item.",
@@ -19585,18 +19585,20 @@
         "source_url": "https://finalgirl.fandom.com/wiki/Agnes'_Magnum",
         "flavour_unofficial": "A heavy Magnum and a heavier grudge."
       },
-      "data_status": "partial",
-      "save_rewards_text": null,
+      "data_status": "complete",
+      "save_rewards_text": "Agnes has 4 Health, and requires 6 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +1 Health * +2 Health * Move 1 Space * +1 Time * +1 Time * -1 Horror. Saving any additional Victims gives +1 Time",
       "source_url": "https://finalgirl.fandom.com/wiki/Agnes_Crane",
-      "flavour_unofficial": "A hard-bitten survivor with a big revolver."
+      "flavour_unofficial": "A hard-bitten survivor with a big revolver.",
+      "ultimate_source": "user_photo",
+      "notes": "Health, Ultimate and save rewards transcribed from Chris’s card photos"
     },
     {
       "id": "carolyn_johnson",
       "name": "Carolyn Johnson",
       "box_id": null,
       "other_source": "Carolyn's Revenge character pack (Guest Stars)",
-      "health": null,
-      "victims_for_ultimate": null,
+      "health": 5,
+      "victims_for_ultimate": 6,
       "ultimate_ability": null,
       "unlockable_item": {
         "name": "Mr. Floppy (Attuned)",
@@ -19606,9 +19608,10 @@
         "flavour_unofficial": "Her old stuffed rabbit, now humming with the house's power."
       },
       "data_status": "partial",
-      "save_rewards_text": null,
+      "save_rewards_text": "Carolyn has 5 Health, and requires 6 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * Take a Psychic Travel Card * Take a Psychic Attack Card * Take a Psychic Focus Card * Take a Psychic Travel Card * Take a Psychic Attack Card * Take a Psychic Focus Card",
       "source_url": "https://finalgirl.fandom.com/wiki/Carolyn_Johnson",
-      "flavour_unofficial": "The girl from Creech Manor, grown up and done being afraid."
+      "flavour_unofficial": "The girl from Creech Manor, grown up and done being afraid.",
+      "notes": "Health and save rewards transcribed from Chris’s photo of the action side; Ultimate side not photographed yet"
     },
     {
       "id": "alois",
@@ -20109,9 +20112,9 @@
       "name": "Layla Khaira",
       "box_id": null,
       "other_source": "Series 2 Box of Props",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 5,
+      "victims_for_ultimate": 5,
+      "ultimate_ability": "Choose a Signature Action card from out of play and take it into your hand.",
       "unlockable_item": {
         "name": "Layla's Sickle",
         "effect": "Range: 0 Damage: 1 Hands: 1 If only your Final Health token remains, the damage modifier for Layla's Sickle is 3. Only Layla may use this Item.",
@@ -20119,18 +20122,20 @@
         "source_url": "https://finalgirl.fandom.com/wiki/Layla's_Sickle",
         "flavour_unofficial": "Her sickle, quick and wicked."
       },
-      "data_status": "partial",
-      "save_rewards_text": null,
+      "data_status": "complete",
+      "save_rewards_text": "Layla has 5 Health, and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +1 Health * +2 Time * Move 1 Space * Take an Action Card (max 2 Time) * -1 Horror. Saving any additional Victims gives +1 Health",
       "source_url": "https://finalgirl.fandom.com/wiki/Layla_Khaira",
-      "flavour_unofficial": "A determined survivor with a curved blade."
+      "flavour_unofficial": "A determined survivor with a curved blade.",
+      "ultimate_source": "user_photo",
+      "notes": "Health, Ultimate and save rewards transcribed from Chris’s card photos"
     },
     {
       "id": "grandma",
       "name": "Grandma",
       "box_id": null,
       "other_source": "Grandma's Grudge character pack (Guest Stars)",
-      "health": null,
-      "victims_for_ultimate": null,
+      "health": 1,
+      "victims_for_ultimate": 5,
       "ultimate_ability": null,
       "unlockable_item": {
         "name": "Grandma's Handbag",
@@ -20140,18 +20145,19 @@
         "flavour_unofficial": "Her handbag, heavier than it has any right to be."
       },
       "data_status": "partial",
-      "save_rewards_text": null,
+      "save_rewards_text": "Grandma has 1 Health (as printed on her action side), and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * Take the Retaliate Card * Take the Gather the Flock Card * Take a Guard Card * Take a Slow Walk Card * Take the Rally Card",
       "source_url": "https://finalgirl.fandom.com/wiki/Grandma",
-      "flavour_unofficial": "Red's grandmother, who still has plenty of fight."
+      "flavour_unofficial": "Red's grandmother, who still has plenty of fight.",
+      "notes": "Health and save rewards transcribed from Chris’s photo of the action side; Ultimate side not photographed yet"
     },
     {
       "id": "constance_moreau",
       "name": "Constance Moreau",
       "box_id": null,
       "other_source": "Series 2 Box of Props (Dark Quarter crossover)",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 5,
+      "victims_for_ultimate": 5,
+      "ultimate_ability": "You may use any weapon in your hand from range 0-2.",
       "unlockable_item": {
         "name": "Constance's Voodoo Doll",
         "effect": "The Killer's first space moved is always panicked. Only Constance may use this Item.",
@@ -20159,19 +20165,21 @@
         "source_url": "https://finalgirl.fandom.com/wiki/Constance's_Voodoo_Doll",
         "flavour_unofficial": "A voodoo doll that slows the killer's first step."
       },
-      "data_status": "partial",
-      "save_rewards_text": null,
+      "data_status": "complete",
+      "save_rewards_text": "Constance has 5 Health, and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +1 Health * +2 Time * Move 1 Space * Take an Action Card (max 2 Time) * Take a top Item card. Saving any additional Victims gives +1 Time",
       "source_url": "https://finalgirl.fandom.com/wiki/Constance_Moreau",
-      "flavour_unofficial": "A mystic with a doll that binds."
+      "flavour_unofficial": "A mystic with a doll that binds.",
+      "ultimate_source": "user_photo",
+      "notes": "Health, Ultimate and save rewards transcribed from Chris’s card photos"
     },
     {
       "id": "julia_paris",
       "name": "Julia Paris",
       "box_id": null,
       "other_source": "Series 2 Box of Props (Dark Quarter crossover)",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 6,
+      "victims_for_ultimate": 1,
+      "ultimate_ability": "You may kill a Victim in your space to choose one of the following: * Recover ALL Health * Inflict 1 damage on an Enemy and recover 1 Health * Immediately move 2 spaces, ignoring any movement penalties. Then, flip this card back over.",
       "unlockable_item": {
         "name": "Julia's Ancient Dagger",
         "effect": "Range: 0 Damage: 1 Hands: 1 When Julia damages an Enemy, you may reveal her Ultimate as if she had just saved a Victim. Only Julia may use this Item.",
@@ -20179,18 +20187,20 @@
         "source_url": "https://finalgirl.fandom.com/wiki/Julia's_Ancient_Dagger",
         "flavour_unofficial": "An ancient dagger, carved with old runes."
       },
-      "data_status": "partial",
-      "save_rewards_text": null,
+      "data_status": "complete",
+      "save_rewards_text": "Julia has 6 Health, and requires 1 Victim to be saved to unlock her Ultimate Ability. Saving a Victim gives: * +1 Time. Her Ultimate flips back over after each use.",
       "source_url": "https://finalgirl.fandom.com/wiki/Julia_Paris",
-      "flavour_unofficial": "An adventurer with an ancient blade."
+      "flavour_unofficial": "An adventurer with an ancient blade.",
+      "ultimate_source": "user_photo",
+      "notes": "Health, Ultimate and save rewards transcribed from Chris’s card photos"
     },
     {
       "id": "julie",
       "name": "Julie",
       "box_id": null,
       "other_source": "Series 4 premium promo pack",
-      "health": null,
-      "victims_for_ultimate": null,
+      "health": 5,
+      "victims_for_ultimate": 5,
       "ultimate_ability": null,
       "unlockable_item": {
         "name": "Julie's Mazzy",
@@ -20200,10 +20210,11 @@
         "flavour_unofficial": "Mazzy the cat, small, fierce and unimpressed."
       },
       "data_status": "partial",
-      "save_rewards_text": null,
+      "save_rewards_text": "Julie has 5 Health, and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * Take a top Item card * -1 Horror * -1 Horror * -1 Horror * Take any unused Item card",
       "source_url": "https://finalgirl.fandom.com/wiki/Julie",
       "companion": "Mazzy (cat)",
-      "flavour_unofficial": "A tough survivor whose cat is tougher."
+      "flavour_unofficial": "A tough survivor whose cat is tougher.",
+      "notes": "Health and save rewards transcribed from Chris’s photo of the action side; Ultimate side not photographed yet"
     },
     {
       "id": "gwynn",
@@ -20559,45 +20570,50 @@
       "name": "Meg",
       "box_id": null,
       "other_source": "Promo",
-      "health": null,
-      "victims_for_ultimate": null,
+      "health": 5,
+      "victims_for_ultimate": 4,
       "ultimate_ability": null,
       "unlockable_item": null,
       "companion": "Mipha (dog)",
-      "notes": "Series 4 premium promo pack; a professor",
-      "data_status": "missing",
+      "notes": "Series 4 premium promo pack; a professor; Health and save rewards transcribed from Chris’s photo of the action side; Ultimate side not photographed yet",
+      "data_status": "partial",
       "source_url": null,
-      "flavour_unofficial": "A slight but tenacious professor with a loyal dog called Mipha."
+      "flavour_unofficial": "A slight but tenacious professor with a loyal dog called Mipha.",
+      "save_rewards_text": "Meg has 5 Health, and requires 4 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +2 Time * Take any top Item Card * -1 Horror * Take a Guard Card"
     },
     {
       "id": "jen",
       "name": "Jen",
       "box_id": null,
       "other_source": "Promo",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 5,
+      "victims_for_ultimate": 5,
+      "ultimate_ability": "Furious Strike is now a 0 Time cost card.",
       "unlockable_item": null,
       "companion": null,
-      "notes": "Series 4 premium promo",
-      "data_status": "missing",
+      "notes": "Series 4 premium promo; Health, Ultimate and save rewards transcribed from Chris’s card photos",
+      "data_status": "complete",
       "source_url": null,
-      "flavour_unofficial": "A Series 4 promo Final Girl. Her story is yet to be told."
+      "flavour_unofficial": "A Series 4 promo Final Girl. Her story is yet to be told.",
+      "save_rewards_text": "Jen has 5 Health, and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +2 Time * +1 Health * Take any top Item Card * -1 Horror * -1 Horror. Saving any additional Victims gives -1 Horror",
+      "ultimate_source": "user_photo"
     },
     {
       "id": "iris",
       "name": "Iris",
       "box_id": null,
       "other_source": "Promo",
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 4,
+      "victims_for_ultimate": 5,
+      "ultimate_ability": "Place 3 Tracking markers on this card. Once per turn, you may discard a marker to go through all Items in the Item space you are at and take 1.",
       "unlockable_item": null,
       "companion": null,
-      "notes": "Series 4 premium promo",
-      "data_status": "missing",
+      "notes": "Series 4 premium promo; Health, Ultimate and save rewards transcribed from Chris’s card photos",
+      "data_status": "complete",
       "source_url": null,
-      "flavour_unofficial": "A Series 4 promo Final Girl. Her story is yet to be told."
+      "flavour_unofficial": "A Series 4 promo Final Girl. Her story is yet to be told.",
+      "save_rewards_text": "Iris has 4 Health, and requires 5 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * +2 Time * -1 Horror * -1 Horror * Take a Sprint Action Card * Take any top Item Card. Saving any additional Victims gives +1 Health",
+      "ultimate_source": "user_photo"
     }
   ],
   "known_gaps": [
@@ -20606,7 +20622,7 @@
     "Destiny (Terror from Destiny) and Terror from Beyond: no card data published",
     "Razorface, Krampus, H.U.N.T.E.R.: some effects still missing; Razorface Afflictions mostly unnamed",
     "Locations with incomplete terror decks: Slayer/Tormentor/Eyeless killer decks; Isla Lagarto",
-    "Promo girls Meg, Jen, Iris: name only",
+    "Ultimate abilities still missing for Julie, Meg, Carolyn and Grandma (action side only photographed); Gabrielle has no card data",
     "Flavour text intentionally excluded; source_url provided per card"
   ],
   "counts": {
