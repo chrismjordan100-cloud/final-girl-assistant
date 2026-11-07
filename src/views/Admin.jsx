@@ -220,6 +220,13 @@ const BACKLOG = [
       'Only Laurie, Reiko and Selena have bespoke lines so far; every other Final Girl (Series 1-4, vignettes, specials, promos) still uses the generic fallback. Write lines for the rest.',
   },
   {
+    title: 'Chris to do: scan the Lore & Scenario books',
+    detail:
+      'Your job before Claude can wire the lore in. Photograph or scan every page of each printed Lore & Scenario book (a phone scanning app like Microsoft Lens or Adobe Scan is fine, one page per image, flat and well lit), then drop them into the chat or a folder on the PC. Example: all 64 pages of the Series 1 book in one go, then Series 2, and so on. Progress: Series 1 \u2014 to scan \u00b7 Series 2 \u2014 to scan \u00b7 Series 3 \u2014 to scan \u00b7 Series 4 \u2014 check whether a book has come out yet.',
+    affects: ['You (Chris)'],
+    status: 'todo',
+  },
+  {
     title: 'Lore & Scenario books \u2014 bring in all 4 series',
     detail:
       'Each series has a printed Lore & Scenario book: a backstory for every Killer and Final Girl, tips for playing each Final Girl, and a special scenario for each Killer/Location pair (e.g. a Hans at Camp Happy Trails scenario with its own setup and rules). Van Ryder don\u2019t publish these as free PDFs, so they need scanning from your own copies. Bring them in the same way as the card photos: show the pages as images where they\u2019re relevant (Killer/Final Girl backstory in This Game, scenario rules in Setup Assist and the Turn Tracker), not retyped. Progress: Series 1 \u2014 not started \u00b7 Series 2 \u2014 not started \u00b7 Series 3 \u2014 not started \u00b7 Series 4 \u2014 check a book exists yet. Done when all four are in.',
