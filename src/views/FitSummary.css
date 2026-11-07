@@ -15,7 +15,7 @@
 .fgs-h1 th { position: sticky; top: 0; z-index: 3; background: var(--surface); height: 1.8rem; }
 .fgs-h2 th { position: sticky; top: 1.8rem; z-index: 3; background: var(--surface); }
 .fgs-khead { border-left: 2px solid var(--border-strong); color: var(--fg-gold); font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.7rem; }
-.fgs-khead__txt { position: sticky; left: 10rem; padding: 0 0.5rem; }
+.fgs-khead__txt { position: sticky; left: 12.6rem; padding: 0 0.5rem; }
 .fgs-lhead { height: 8.5rem; width: 2.5rem; min-width: 2.5rem; font-weight: 500; color: var(--text-dim); border-bottom: 1px solid var(--border-strong); }
 .fgs-lhead span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg); max-height: 8rem; overflow: hidden; text-overflow: ellipsis; font-size: 0.72rem; }
 .fgs-lhead--first, .fgs-cell--first { border-left: 2px solid var(--border-strong); }
@@ -34,3 +34,7 @@
 .fgs-table tbody tr.is-hover .fgs-name { color: var(--fg-gold); }
 .fgs-table tbody tr:hover .fgs-cell { filter: brightness(1.25); }
 .fgs-foot .fgs-name, .fgs-foot .fgs-cell { border-top: 2px solid var(--border-strong); }
+.fgs-picker { display: flex; flex-direction: column; gap: 0.35rem; }
+.fgs-picker__sub { padding-left: 0.6rem; border-left: 2px solid var(--border-strong); }
+.fgs-avg--all { opacity: 0.85; border-right: 2px solid var(--border-strong); }
+.fgs-rank { display: inline-block; min-width: 1.5rem; color: var(--text-dim); font-weight: 500; font-size: 0.72rem; }

@@ -12,12 +12,72 @@ import './FitSummary.css';
      - Gold ring: the girl is OFFICIAL for that combo, meaning she comes in the
        same Feature Film box as the Killer or the Location. Gold ring + star:
        both, i.e. her own box's home scenario.
-     - Columns are grouped under each Killer. Filters narrow the grid down.
+     - Columns are grouped under each Killer. Filters narrow the grid down:
+       pick a series, then optionally one Killer / Location within it.
+     - Sort: series order, best for the combos shown ("This" column), or
+       best over every combo ("All" column).
    Scores come straight from scoreGirl() in src/data/fgFit.js, so this always
    agrees with Setup Assist and the Fit grid tab.
    ========================================================================== */
 
-const SERIES = [1, 2, 3, 4];
+/* Series present in a list, in order, with season 0 (Krampus, Mort, promos…)
+   last as "Specials & promos". */
+const seriesOf = (list) => {
+  const s = [...new Set(list.map((x) => x.season))].sort((a, b) => (a || 99) - (b || 99));
+  return s.map((v) => ({ v: String(v), label: v === 0 ? 'Specials & promos' : `Series ${v}` }));
+};
+const seriesLabel = (v) => (Number(v) === 0 ? 'Specials & promos' : `Series ${v}`);
+const inSeries = (x, s) => s === 'all' || x.season === Number(s);
+
+/* Average score for a girl over a set of combos (null if none scored). */
+function avgOver(girlId, ks, ls) {
+  let sum = 0;
+  let n = 0;
+  for (const k of ks) for (const l of ls) {
+    const f = scoreGirl(girlId, k.id, l.id);
+    if (f) { sum += f.score; n += 1; }
+  }
+  return n ? sum / n : null;
+}
+
+/* Series dropdown with a second dropdown underneath for one Killer/Location
+   within that series. `one` is an id or 'all'. */
+function SeriesPicker({ label, noun, list, series, setSeries, one, setOne }) {
+  const options = list.filter((x) => inSeries(x, series));
+  const groups = series === 'all' ? seriesOf(list) : [{ v: series, label: seriesLabel(series) }];
+  return (
+    <div className="fgs-picker">
+      <label>
+        {label}
+        <select
+          value={series}
+          onChange={(e) => {
+            const s = e.target.value;
+            setSeries(s);
+            const cur = list.find((x) => x.id === one);
+            if (cur && !inSeries(cur, s)) setOne('all');
+          }}
+        >
+          <option value="all">All series</option>
+          {seriesOf(list).map((s) => <option key={s.v} value={s.v}>{s.label}</option>)}
+        </select>
+      </label>
+      <label className="fgs-picker__sub">
+        <span className="fgx-dim">&#8627; {noun}</span>
+        <select value={one} onChange={(e) => setOne(e.target.value)} aria-label={`${label}: pick one ${noun.toLowerCase()}`}>
+          <option value="all">All {options.length} {label.toLowerCase()}</option>
+          {groups.map((g) => {
+            const items = options.filter((x) => String(x.season) === g.v);
+            if (!items.length) return null;
+            return series === 'all'
+              ? <optgroup key={g.v} label={g.label}>{items.map((x) => <option key={x.id} value={x.id}>{x.name}</option>)}</optgroup>
+              : items.map((x) => <option key={x.id} value={x.id}>{x.name}</option>);
+          })}
+        </select>
+      </label>
+    </div>
+  );
+}
 
 /* score 1..10 -> background colour (red -> amber -> green). */
 function scoreColour(score) {
@@ -33,13 +93,25 @@ export default function FitSummary() {
   const [kSeries, setKSeries] = usePersistentState('fg-fitsum-kseries', 'all');
   const [lSeries, setLSeries] = usePersistentState('fg-fitsum-lseries', 'all');
   const [gSeries, setGSeries] = usePersistentState('fg-fitsum-gseries', 'all');
-  const [sort, setSort] = usePersistentState('fg-fitsum-sort', 'series');
+  const [kOne, setKOne] = usePersistentState('fg-fitsum-killer', 'all');
+  const [lOne, setLOne] = usePersistentState('fg-fitsum-location', 'all');
+  const [sortRaw, setSort] = usePersistentState('fg-fitsum-sort', 'series');
+  // 'avg' was the old name for "best for this selection".
+  const sort = sortRaw === 'avg' ? 'sel' : sortRaw;
   const [hover, setHover] = useState(null);
 
-  const inSeries = (x, s) => s === 'all' || x.season === Number(s);
-  const ks = useMemo(() => killers.filter((k) => inSeries(k, kSeries)), [kSeries]);
-  const ls = useMemo(() => locations.filter((l) => inSeries(l, lSeries)), [lSeries]);
+  const pick = (list, series, one) => {
+    const inS = list.filter((x) => inSeries(x, series));
+    const single = one !== 'all' && inS.find((x) => x.id === one);
+    return single ? [single] : inS;
+  };
+  const ks = useMemo(() => pick(killers, kSeries, kOne), [kSeries, kOne]);
+  const ls = useMemo(() => pick(locations, lSeries, lOne), [lSeries, lOne]);
   const unrated = finalGirls.filter((g) => !isRated(g.id));
+  // Each girl's average over ALL combos: fixed, so work it out once.
+  const overall = useMemo(() => Object.fromEntries(
+    finalGirls.filter((g) => isRated(g.id)).map((g) => [g.id, avgOver(g.id, killers, locations)]),
+  ), []);
 
   // Score every (girl, killer, location) once for the current filters.
   const rows = useMemo(() => {
@@ -54,13 +126,14 @@ export default function FitSummary() {
         const offL = Boolean(g.film && l.film && g.film === l.film);
         return { score: fit ? fit.score : null, offK, offL };
       }));
-      return { g, cells, avg: n ? sum / n : null };
+      return { g, cells, avg: n ? sum / n : null, all: overall[g.id] };
     });
-    if (sort === 'avg') {
-      out.sort((a, b) => (b.avg ?? 0) - (a.avg ?? 0) || a.g.name.localeCompare(b.g.name));
+    const by = sort === 'sel' ? 'avg' : sort === 'overall' ? 'all' : null;
+    if (by) {
+      out.sort((a, b) => (b[by] ?? 0) - (a[by] ?? 0) || (b.avg ?? 0) - (a.avg ?? 0) || a.g.name.localeCompare(b.g.name));
     }
     return out;
-  }, [ks, ls, gSeries, sort]);
+  }, [ks, ls, gSeries, sort, overall]);
 
   // Column averages (across the girls shown) for spotting combos anyone can do.
   const colAvg = useMemo(() => ks.map((_, ki) => ls.map((_l, li) => {
@@ -74,15 +147,10 @@ export default function FitSummary() {
   })), [rows, ks, ls]);
 
   const colCount = ks.length * ls.length;
-  const sel = (value, set, label) => (
-    <label>
-      {label}
-      <select value={value} onChange={(e) => set(e.target.value)}>
-        <option value="all">All series</option>
-        {SERIES.map((s) => <option key={s} value={s}>Series {s}</option>)}
-      </select>
-    </label>
-  );
+  const scope = [
+    ks.length === 1 ? ks[0].name : kSeries === 'all' ? 'all Killers' : `${seriesLabel(kSeries)} Killers`,
+    ls.length === 1 ? ls[0].name : lSeries === 'all' ? 'all Locations' : `${seriesLabel(lSeries)} Locations`,
+  ].join(' \u00d7 ');
 
   return (
     <div className="fgs">
@@ -94,14 +162,21 @@ export default function FitSummary() {
 
       <section className="fgx-section fg-panel">
         <div className="fgx-pickers">
-          {sel(kSeries, setKSeries, 'Killers')}
-          {sel(lSeries, setLSeries, 'Locations')}
-          {sel(gSeries, setGSeries, 'Final Girls')}
+          <SeriesPicker label="Killers" noun="Killer" list={killers} series={kSeries} setSeries={setKSeries} one={kOne} setOne={setKOne} />
+          <SeriesPicker label="Locations" noun="Location" list={locations} series={lSeries} setSeries={setLSeries} one={lOne} setOne={setLOne} />
+          <label>
+            Final Girls
+            <select value={gSeries} onChange={(e) => setGSeries(e.target.value)}>
+              <option value="all">All series</option>
+              {seriesOf(finalGirls).map((s) => <option key={s.v} value={s.v}>{s.label}</option>)}
+            </select>
+          </label>
           <label>
             Sort girls by
             <select value={sort} onChange={(e) => setSort(e.target.value)}>
               <option value="series">Series order</option>
-              <option value="avg">Best average first</option>
+              <option value="sel">Best for this selection</option>
+              <option value="overall">Best overall (every combo)</option>
             </select>
           </label>
         </div>
@@ -119,8 +194,9 @@ export default function FitSummary() {
         </div>
 
         <p className="fgx-dim fgx-small">
-          {rows.length} Final Girls &times; {colCount} combos. Any Final Girl can be played with any
-          combo; the rings only show the official box pairings.
+          Showing <strong>{scope}</strong>: {rows.length} Final Girls &times; {colCount} combo{colCount === 1 ? '' : 's'}.
+          {' '}<b>This</b> = her average over the combos shown; <b>All</b> = her average over every combo.
+          Any Final Girl can be played with any combo; the rings only show the official box pairings.
         </p>
 
         {rows.length === 0 || colCount === 0 ? (
@@ -131,7 +207,8 @@ export default function FitSummary() {
               <thead>
                 <tr className="fgs-h1">
                   <th className="fgs-corner" rowSpan={2}>Final Girl</th>
-                  <th className="fgs-avg" rowSpan={2} title="Average across the combos shown">Avg</th>
+                  <th className="fgs-avg" rowSpan={2} title="Her average across the combos shown">This</th>
+                  <th className="fgs-avg fgs-avg--all" rowSpan={2} title="Her average across every Killer and Location combo">All</th>
                   {ks.map((k) => (
                     <th key={k.id} colSpan={ls.length} className="fgs-khead" title={k.film || k.name}>
                       <span className="fgs-khead__txt">{k.name}</span>
@@ -151,13 +228,17 @@ export default function FitSummary() {
                 </tr>
               </thead>
               <tbody>
-                {rows.map((r) => (
+                {rows.map((r, ri) => (
                   <tr key={r.g.id} className={hover === r.g.id ? 'is-hover' : ''}>
                     <th className="fgs-name" title={r.g.film} onMouseEnter={() => setHover(r.g.id)} onMouseLeave={() => setHover(null)}>
+                      {sort !== 'series' && <span className="fgs-rank">{ri + 1}</span>}
                       {r.g.name}
                     </th>
                     <td className="fgs-avg" style={r.avg != null ? { background: scoreColour(r.avg) } : undefined}>
                       {r.avg != null ? r.avg.toFixed(1) : '\u2014'}
+                    </td>
+                    <td className="fgs-avg fgs-avg--all" style={r.all != null ? { background: scoreColour(r.all) } : undefined}>
+                      {r.all != null ? r.all.toFixed(1) : '\u2014'}
                     </td>
                     {ks.map((k, ki) => ls.map((l, li) => {
                       const c = r.cells[ki][li];
@@ -183,6 +264,7 @@ export default function FitSummary() {
                 <tr className="fgs-foot">
                   <th className="fgs-name">Average</th>
                   <td className="fgs-avg" />
+                  <td className="fgs-avg fgs-avg--all" />
                   {ks.map((k, ki) => ls.map((l, li) => {
                     const a = colAvg[ki][li];
                     return (
