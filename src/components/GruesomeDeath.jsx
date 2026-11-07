@@ -139,7 +139,7 @@ export default function GruesomeDeath({ killerId, locationId, turnEvents, seen =
           </div>
         )}
 
-        <div className="gd-page" ref={boxRef}>
+        <div className={'gd-page' + (status === 'ready' ? '' : ' is-waiting')} ref={boxRef}>
           {status === 'empty' && <p className="gd-msg">There's no passage for this Killer in this Location's book.</p>}
           {status === 'error' && (
             <p className="gd-msg gd-msg--error">
