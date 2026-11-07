@@ -55,6 +55,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # The site carries ~450 MB of how-to videos; GitHub's file sync can
-          # take longer than the default 10 minutes, so allow 30.
-          timeout: 1800000
+          # GitHub caps this at 10 minutes (anything higher is ignored). Keep the
+          # site small enough to sync within that: the how-to videos are 720p
+          # for that reason (they were 1080p, ~450 MB, and deploys timed out).
+          timeout: 600000
