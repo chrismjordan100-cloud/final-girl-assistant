@@ -1,0 +1,56 @@
+/* Best fits by ability (Setup Assist) */
+.bf {
+  flex: 1 1 100%;
+  margin-top: 0.7rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--fg-gold);
+  border-radius: var(--radius);
+  background: var(--fg-black);
+}
+.bf-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; margin-bottom: 0.4rem; }
+.bf-title { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-gold); font-size: 0.85rem; }
+.bf-sub { font-size: 0.75rem; color: var(--text-dim); }
+.bf-subhead { margin: 0.6rem 0 0.2rem; font-size: 0.8rem; color: var(--text-dim); }
+.bf-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+
+.bf-row { padding: 0.4rem 0.5rem; border-radius: var(--radius); background: var(--surface); }
+.bf-row.is-selected { box-shadow: 0 0 0 1px var(--fg-gold) inset; }
+.bf-row__main { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.55rem; }
+.bf-score {
+  flex: none;
+  min-width: 2.3rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  color: #000;
+}
+.bf-score--great { background: #6fbf4a; }
+.bf-score--good { background: var(--fg-gold); }
+.bf-score--ok { background: #c6701f; }
+.bf-score--poor { background: #7a5a5e; color: var(--text); }
+.bf-name { font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; }
+.bf-fav { color: var(--fg-gold); }
+.bf-tag {
+  font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.05rem 0.4rem; border-radius: 999px; border: 1px solid var(--fg-blood); color: var(--fg-blood-bright);
+}
+.bf-film { font-size: 0.72rem; color: var(--text-dim); flex: 1 1 auto; }
+.bf-why, .bf-pick {
+  font: inherit; font-size: 0.75rem; cursor: pointer; border-radius: var(--radius);
+  padding: 0.2rem 0.55rem; border: 1px solid var(--border-strong); background: var(--fg-black); color: var(--text);
+}
+.bf-pick { border-color: var(--fg-blood); }
+.bf-pick:disabled { color: var(--fg-gold); border-color: var(--fg-gold); cursor: default; }
+.bf-summary { margin: 0.25rem 0 0; font-size: 0.8rem; color: var(--text-dim); }
+.bf-detail { margin-top: 0.4rem; display: grid; gap: 0.3rem; font-size: 0.82rem; }
+.bf-line { margin: 0; line-height: 1.35; }
+.bf-line--plus strong { color: #8fd36a; }
+.bf-line--minus strong { color: var(--fg-blood-bright); }
+.bf-line--special { color: var(--fg-gold); }
+.bf-need { color: var(--text-dim); }
+.bf-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.6rem; }
+.bf-note { font-size: 0.72rem; color: var(--text-dim); flex: 1 1 100%; }

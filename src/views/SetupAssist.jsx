@@ -15,6 +15,8 @@ import {
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useFgCollection, storageFor } from '../hooks/useFgCollection.js';
 import IconSelect from '../components/IconSelect.jsx';
+import BestFits from '../components/BestFits.jsx';
+import { writePersistent } from '../hooks/usePersistentState.js';
 import SetupCapture from '../components/SetupCapture.jsx';
 import { useGameFlow } from '../hooks/useGameFlow.js';
 import { useTurnState } from '../hooks/useTurnState.js';
@@ -332,6 +334,17 @@ export default function SetupAssist({ onNavigate }) {
                                 </span>
                               )}
                             </div>
+                          )}
+                          {(killer || location) && (
+                            <BestFits
+                              killerId={killerId}
+                              locationId={locationId}
+                              officialNames={[...officialGirls.killer, ...officialGirls.location]}
+                              selectedId={finalGirlId}
+                              onPick={setFinalGirl}
+                              isFavourite={collection.isFavourite}
+                              onOpenGrid={onNavigate ? () => { writePersistent('fg-codex-tab', 'fit'); onNavigate('codex'); } : undefined}
+                            />
                           )}
                           <p className="game-picker__hint fg-type">
                             Picking your Final Girl shows her card on the
