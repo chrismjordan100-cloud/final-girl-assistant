@@ -1417,6 +1417,7 @@ export const phaseExtras = {
     killer: ['First step of the Minion Action spawns a Puppet from "Ready" into Geppetto\u2019s space (if any), then move all "Exhausted" Puppets back to "Ready".'],
   },
   'dr-fright': {
+    action: ['While Asleep: you may resolve as many Boiler Room cards as you like now (one is forced at the end of the Killer phase anyway). Resolve all 4 and you wake up.'],
     killer: ['If you are Asleep, you MUST resolve exactly one Boiler Room card at the END of this phase (slide to reveal; Dr. Fright attacks if his art shows).'],
   },
   inkanyamba: {
@@ -1450,6 +1451,7 @@ export const phaseExtras = {
     upkeep: ['Discard all Frostbite tokens from anyone INDOORS. (Frostbite icons give outdoor characters a token or cost 1 health if they already have one.)'],
   },
   'wolfe-asylum': {
+    action: ['Pills: any time this phase, take any number of collected Pills and apply the Pill Effects card. Two or three at once = draw that many Side Effects cards; one of EACH colour = draw an Amped card.'],
     upkeep: ['Discard all Stun tokens still under Enemies.'],
   },
 
@@ -1459,6 +1461,7 @@ export const phaseExtras = {
     panic: ['Also panic Victims in the Hunter\u2019s space if Bloodlust increased this turn (in addition to the normal panic rule).'],
   },
   slayer: {
+    action: ['In the Mirror Dimension? You may step back to Our Dimension any time this phase, bringing the Victims in your space (staying there through Upkeep costs 1 health).'],
     upkeep: ['If you are in the Mirror Dimension during Upkeep, you lose 1 health.'],
   },
   razorface: {
@@ -1485,6 +1488,7 @@ export const phaseExtras = {
     killer: ['The Killer\u2019s Final Health token can\u2019t be revealed until the Mission is complete \u2014 ignore any damage that would reveal it while the Mission is unfinished (with multiple Killers, this applies to the last one).'],
   },
   'marrek-warehouse': {
+    action: ['Climb & Leap: any time this phase, discard a Walk to take Climb OR Leap into hand, or discard a Sprint to take BOTH. Victims may follow you.'],
     killer: ['When a "Click!" Terror card is drawn, it unlocks an Exit and removes its Locked token \u2014 remember you still can\u2019t save Victims at an Exit that\u2019s Locked.'],
   },
   // Storybook Woods, Wingard Cottage, Maple Lane, Creech Manor, Carnival of
@@ -1514,6 +1518,7 @@ export const phaseExtras = {
 
   // ----- Season 4 -----
   billy: {
+    action: ['Buddy killed outside the Action phase since your last turn? Take its Kill Reward now.'],
     killer: ['Spawn a Buddy as part of the Minion Action (reveal the top Buddy card, place its token adjacent to Billy). A Buddy that spawns this phase doesn\u2019t activate until the NEXT Killer phase. Resolve Buddies by Initiative, lowest first.'],
   },
   grimlash: {
@@ -1533,6 +1538,20 @@ export const phaseExtras = {
     upkeep: ['Spawn a Child on the Altar of the Old Gods space \u2014 skipped if all Children are already out OR there are no Victims on the board.'],
   },
   'pesadilla-verde': {
+    action: [
+      {
+        title: 'Order your Soldiers (optional \u2014 one cube per free Action token)',
+        options: [
+          'Pick a space with Soldiers; ALL Soldiers there do the order. (The Archeologist and Rebel Leader aren\u2019t Soldiers and can\u2019t be ordered.)',
+          'MOVE \u2014 put a cube on a free Move token: they move 1 space. Downriver, that 1 move can carry them across several River spaces (never upriver).',
+          'ATTACK \u2014 put a cube on a free Attack token: they attack Enemies in their space (or an adjacent one once Attack Range is Unlocked).',
+          'Damage = Soldiers \u00f7 2, rounded DOWN (a lone Soldier does 0) \u2014 rounded UP once Damage is Unlocked.',
+          'Friendly Fire still Locked? Roll a die per attacking Soldier: on a 1\u20132, kill one of them.',
+          'A token with a cube on it can\u2019t be used again until its cube slides off in Upkeep. You start with 1 Move + 1 Attack Unlocked; the Train Action card Unlocks the second of each (and the Abilities).',
+        ],
+      },
+      'Soldiers follow you into the Killer\u2019s space (normal Victims won\u2019t). Saving a Soldier costs 2 Time until Saving Soldiers is Unlocked.',
+    ],
     upkeep: ['Move every Soldier Action cube one slot to the right; a cube leaving the last slot frees that Action to be used again.'],
   },
   'isla-lagarto': {
@@ -1560,8 +1579,11 @@ export function getPhaseExtras(killer, location) {
     const map = phaseExtras[entry.id];
     if (!map) continue;
     for (const [phaseId, items] of Object.entries(map)) {
-      for (const text of items) {
-        (out[phaseId] ||= []).push({ owner: entry.name, text });
+      for (const item of items) {
+        // An item is a plain reminder string, or { title, options: [...] } for a
+        // box that adds a whole menu of choices (e.g. ordering Soldiers).
+        const x = typeof item === 'string' ? { text: item } : { text: item.title, options: item.options };
+        (out[phaseId] ||= []).push({ owner: entry.name, ...x });
       }
     }
   }

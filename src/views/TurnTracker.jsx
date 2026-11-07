@@ -428,7 +428,12 @@ export default function TurnTracker({ onNavigate }) {
                       <span className="phase-check__box" aria-hidden="true" />
                       <span>
                         <span className="phase-extras__owner">{x.owner}</span>
-                        {x.text}
+                        {x.options ? <strong>{x.text}</strong> : x.text}
+                        {x.options && (
+                          <ul className="phase-extras__options">
+                            {x.options.map((o, j) => <li key={j}>{o}</li>)}
+                          </ul>
+                        )}
                       </span>
                     </label>
                   </li>
