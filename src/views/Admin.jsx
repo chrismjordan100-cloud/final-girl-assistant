@@ -12,7 +12,9 @@ import {
   noWrittenRulesExpected,
   getVideoChecklist,
   VIDEOS_FOLDER,
+  getFinalGirlEnvelopeImage,
 } from '../data/games.js';
+import { finalGirlUnlockableName } from '../data/cardData.js';
 import { VIDEO_PROMPT } from '../data/videoPrompt.js';
 import BACKLOG_AUTO from '../data/backlogAuto.json';
 import './Admin.css';
@@ -22,10 +24,28 @@ function assetTypesFor(type, entry) {
   const prefix = `S${entry.season}-${type}-${entry.shortName}`;
 
   if (type === 'finalgirl') {
-    return [
+    const list = [
       { key: 'front', label: 'Card front', example: `${prefix}-front.png`, present: hasImageBaseName(`${prefix}-front`) },
       { key: 'back', label: 'Card back', example: `${prefix}-back.png`, present: hasImageBaseName(`${prefix}-back`) },
     ];
+    // Her Secret Envelope item card (e.g. S1-item-laurie-bow.png). Only listed
+    // for girls whose card data names an item, or who already have the photo.
+    const itemName = finalGirlUnlockableName(entry);
+    const itemImg = getFinalGirlEnvelopeImage(entry);
+    if (itemName || itemImg) {
+      const itemSlug = String(itemName || 'item')
+        .toLowerCase()
+        .replace(new RegExp(`^${entry.shortName}\\W*s?\\s+`, 'i'), '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      list.push({
+        key: 'item',
+        label: itemName ? `Envelope item: ${itemName}` : 'Envelope item card',
+        example: `S${entry.season}-item-${entry.shortName}-${itemSlug || 'item'}.png`,
+        present: Boolean(itemImg),
+      });
+    }
+    return list;
   }
 
   // killer / location
@@ -100,6 +120,13 @@ const VIDEOS_TOTAL = VIDEO_LIST.length;
 
 /* Running backlog of material still to scan / transcribe with Kiro. Add to
    this list as new ideas come up so nothing gets forgotten. */
+/* Secret Envelope item card photos: worked out from the files present. */
+const ITEM_GIRLS = finalGirls.filter((g) => finalGirlUnlockableName(g) || getFinalGirlEnvelopeImage(g));
+const ITEMS_HAVE = ITEM_GIRLS.filter((g) => getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+const ITEMS_NEED = ITEM_GIRLS.filter((g) => !getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+const ITEMS_DONE = ITEMS_HAVE.length;
+const ITEMS_TOTAL = ITEM_GIRLS.length;
+
 const BACKLOG = [
   {
     title: 'How-to videos for add-on and optional rules (not tied to a Killer or Location)',
@@ -253,6 +280,21 @@ const BACKLOG = [
     detail:
       'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game (e.g. \u201cBring in Laurie\u2019s Bow\u201d). It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
     affects: ['Setup Assist', 'Codex'],
+    status: 'done',
+  },
+  {
+    title: 'Secret Envelope item card photos',
+    detail:
+      'A photo of each Final Girl\u2019s Secret Envelope item card (e.g. Laurie\u2019s Bow), shown in the Codex and Setup Assist once her envelope is marked opened. Each Final Girl in the Final Girls section below now has an \u201cEnvelope item\u201d line with the file name to use. Photograph them the same way as the Final Girl cards (several at once, face up on a dark surface) and send them in the chat; Claude cuts them out and names them.',
+    affects: ['Codex', 'Setup Assist', 'Asset Admin'],
+    status: ITEMS_DONE === 0 ? 'todo' : ITEMS_DONE === ITEMS_TOTAL ? 'done' : 'partial',
+    remaining: `${ITEMS_TOTAL - ITEMS_DONE} of ${ITEMS_TOTAL} item cards still to photograph (${ITEMS_DONE} done: ${ITEMS_HAVE.join(', ')}). Still needed: ${ITEMS_NEED.join(', ')}.`,
+  },
+  {
+    title: 'Unlocked items shown in the Setup Final Girl list',
+    detail:
+      'Done. When you pick a Final Girl in Setup Assist, the list shows a green \u201c\uD83D\uDD13 Unlocked\u201d badge beside every girl whose Secret Envelope is opened (her item can come into the game), and a gold \u201c\u2709\uFE0F To open\u201d badge where you\u2019ve won with her but not opened it yet. Uses the same rules as the Codex marker.',
+    affects: ['Setup Assist'],
     status: 'done',
   },
   {
