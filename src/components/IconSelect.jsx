@@ -12,7 +12,9 @@ import './IconSelect.css';
    Props:
      value      selected option id (or '' for none)
      onChange   (id) => void
-     options    [{ id, name, icon?, note?, group? }]
+     options    [{ id, name, icon?, note?, group?, badge? }]
+                badge: { text, kind, title } — a small pill after the name
+                (kind 'opened' = green, 'toopen' = gold)
      placeholder  text shown when nothing is selected
      ariaLabel  accessible label
    ========================================================================== */
@@ -22,6 +24,14 @@ const DOT_TITLES = {
   none: 'No card images added',
   missing: 'Missing components (from her Codex \u201cStored in\u201d)',
 };
+
+function Badge({ badge }) {
+  return (
+    <span className={'iconselect__badge iconselect__badge--' + (badge.kind || 'opened')} title={badge.title}>
+      {badge.text}
+    </span>
+  );
+}
 
 export default function IconSelect({
   value,
@@ -87,6 +97,7 @@ export default function IconSelect({
         <span className="iconselect__icon iconselect__icon--empty" aria-hidden="true" />
       )}
       <span className="iconselect__name">{o.name}</span>
+      {o.badge && <Badge badge={o.badge} />}
       {(o.dot === 'one' || o.dot === 'none' || o.dot === 'missing') && (
         <span
           className={'iconselect__dot iconselect__dot--' + o.dot}
@@ -112,6 +123,7 @@ export default function IconSelect({
           <>
             {selected.icon && <img className="iconselect__icon" src={selected.icon} alt="" aria-hidden="true" />}
             <span className="iconselect__name">{selected.name}</span>
+            {selected.badge && <Badge badge={selected.badge} />}
             {selected.dot === 'missing' && (
               <span className="iconselect__dot iconselect__dot--missing" title={DOT_TITLES.missing} aria-hidden="true" />
             )}

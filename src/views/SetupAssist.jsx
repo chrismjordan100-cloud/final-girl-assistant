@@ -14,7 +14,8 @@ import {
   getFinalGirlEnvelopeImage,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useFgCollection, storageFor, envelopeStatus, hasMissingComponents } from '../hooks/useFgCollection.js';
+import { useFgCollection, storageFor, envelopeStatus, hasMissingComponents, winsByFinalGirl } from '../hooks/useFgCollection.js';
+import { useGameLog } from '../hooks/useGameLog.js';
 import { finalGirlUnlockableName } from '../data/cardData.js';
 import IconSelect from '../components/IconSelect.jsx';
 import BestFits from '../components/BestFits.jsx';
@@ -119,6 +120,24 @@ export default function SetupAssist({ onNavigate }) {
   const collection = useFgCollection();
   const pickedGirl = finalGirlGroups.flatMap(([, girls]) => girls).find((g) => g.id === finalGirlId) || null;
   const pickedStorage = pickedGirl ? storageFor(pickedGirl, collection.storage).text : null;
+
+  // Her Secret Envelope item, shown as a badge on each girl in the picker:
+  //   opened   -> "🔓 Unlocked" (her item card can come into the game)
+  //   unlocked -> "✉️ To open" (won with her, envelope still sealed)
+  //   sealed   -> no badge
+  // Same rules as the Codex: a logged real win unlocks it, your override wins.
+  const { log } = useGameLog();
+  const wins = useMemo(() => winsByFinalGirl(log), [log]);
+  const envelopeBadge = (g) => {
+    const { status } = envelopeStatus(g.id, wins[g.id] || 0, collection.envelopes);
+    if (status === 'opened') {
+      return { text: '🔓 Unlocked', kind: 'opened', title: 'Her Secret Envelope is open: her item card can come into the game' };
+    }
+    if (status === 'unlocked') {
+      return { text: '✉️ To open', kind: 'toopen', title: 'You have won with her: open her Secret Envelope to unlock her item' };
+    }
+    return undefined;
+  };
   const killerExtras = getSetupExtras(killer);
   const locationExtras = getSetupExtras(location);
   const hasExtras = killerExtras.length > 0 || locationExtras.length > 0;
@@ -324,6 +343,7 @@ export default function SetupAssist({ onNavigate }) {
                                     group,
                                     dot: missing ? 'missing' : finalGirlCardStatus(g),
                                     note: missing ? 'missing components' : undefined,
+                                    badge: envelopeBadge(g),
                                   };
                                 })
                               )}
