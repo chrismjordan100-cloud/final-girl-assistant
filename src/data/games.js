@@ -2936,10 +2936,15 @@ export function getFinalGirlCards(entry) {
   };
 }
 
-/** Photo of her Secret Envelope item card, e.g. S1-finalgirl-laurie-envelope.png,
- *  or null. Callers must only SHOW it once her envelope is marked opened. */
+/** Photo of her Secret Envelope item card, or null. Named
+ *  S{season}-item-{shortName}-{item}.png (e.g. S1-item-laurie-bow.png); the
+ *  item part can be anything. Callers must only SHOW it once her envelope is
+ *  marked opened. */
 export function getFinalGirlEnvelopeImage(entry) {
-  return getImage('finalgirl', entry, 'envelope');
+  if (!entry) return null;
+  const prefix = `s${entry.season}-item-${entry.shortName}-`.toLowerCase();
+  const key = Object.keys(imagesByBaseName).find((k) => k.startsWith(prefix));
+  return key ? imagesByBaseName[key] : null;
 }
 
 /* Card-image completeness for a Final Girl, for the Setup picker dot:
