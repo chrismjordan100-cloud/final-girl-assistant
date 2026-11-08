@@ -134,7 +134,7 @@ export const KILLER_NEEDS = {
   organism: { confidence: 'tips', attack: need(3, 'Every Mutated Organism must die'), horror: need(3, 'Horror above 6 can be an instant loss'), items: need(2, 'Flamethrower does huge damage'), cards: need(2, 'Guard rated essential') },
   intruders: { confidence: 'tips', attack: need(3, 'Kill them one at a time; burst damage matters'), dice: need(2, 'Big "super turns" need successes'), horror: need(2, 'Green Horror predicts wins'), items: need(1, 'Shotguns are excellent') },
   'big-bad-wolf': { confidence: 'tips', attack: need(3, 'Kill him fast before he snowballs'), search: need(2, 'Search early: his Roar strips Items'), rescue: need(2, 'Save Victims before he flips to Slay') },
-  'ratchet-lady': { confidence: 'tips', rescue: need(3, 'Save Victims before they become Maniacs'), attack: need(2, 'Engage early while she’s on 6 health'), tank: need(2, 'Budget for a long fight') },
+  'ratchet-lady': { confidence: 'tips', rescue: need(3, 'Save Victims before they become Maniacs'), attack: need(2, 'Engage early while she’s on 6 health'), tank: need(2, 'Budget for a long fight'), time: need(1, 'Leaving a space with two or more Maniacs costs Time') },
   hunter: { confidence: 'tips', attack: need(3, '2 damage in one phase knocks off parts'), items: need(2, 'Boomsticks and ramming items'), move: need(2, 'Race to the Savior and use balconies') },
   razorface: { confidence: 'tips', time: need(2, 'Purging Afflictions costs Time'), cards: need(2, 'Purges need the right cards'), attack: need(2, 'He still has to be killed'), tank: need(1, 'Some Afflictions hurt') },
   slayer: { confidence: 'tips', tank: need(3, 'The Mirror Dimension drains health each Upkeep'), move: need(2, 'Keep trips between dimensions short'), attack: need(2, 'Hit hard while you’re in its dimension') },
@@ -147,7 +147,7 @@ export const KILLER_NEEDS = {
   volkar: { confidence: 'estimate', attack: need(2, 'A big brute to bring down'), tank: need(2, 'Hits hard') },
   berith: { confidence: 'estimate', horror: need(3, 'A demon that feeds on fear'), tank: need(2, 'Possession hurts') },
   grimlash: { confidence: 'estimate', attack: need(2, 'Must be cut down'), rescue: need(2, 'Victims in the fields die quickly') },
-  billy: { confidence: 'estimate', attack: need(2, 'Must be destroyed'), move: need(2, 'A big park to cover'), horror: need(1, 'Jump scares raise Horror') },
+  billy: { confidence: 'estimate', attack: need(2, 'Must be destroyed'), move: need(2, 'A big park to cover'), horror: need(1, 'Jump scares raise Horror'), time: need(1, 'Switching off Power Sources costs Time') },
   pods: { confidence: 'estimate', rescue: need(2, 'Victims get taken over'), attack: need(2, 'Pods must be destroyed') },
   mort: { confidence: 'estimate', attack: need(2, 'Must be stopped'), rescue: need(2, 'Victims at the con') },
   krampus: { confidence: 'estimate', tank: need(2, 'Punishing attacks'), attack: need(2, 'Must be beaten'), rescue: need(1, 'Victims in the village') },
@@ -159,24 +159,24 @@ export const LOCATION_NEEDS = {
   'creech-manor': { confidence: 'tips', search: need(2, 'Lots of searchable rooms'), move: need(2, 'Two floors and stairs to cross') },
   'sacred-groves': { confidence: 'tips', horror: need(2, 'Wrath and Horror stack up'), control: need(2, 'Its own Wrath track to manage'), tank: need(1, 'Wrath events hurt') },
   'carnival-of-blood': { confidence: 'tips', items: need(2, 'Item traps make searching risky'), move: need(2, 'A big park to cover') },
-  'maple-lane': { confidence: 'estimate', move: need(2, 'Houses spread along the street'), rescue: need(2, 'Victims in every house') },
+  'maple-lane': { confidence: 'estimate', move: need(2, 'Houses spread along the street'), rescue: need(2, 'Victims in every house'), dice: need(2, 'Convince rolls are needed to enter occupied houses, every time') },
   'uss-konrad': { confidence: 'estimate', move: need(2, 'Long corridors'), items: need(2, 'Ship Items like the Flamethrower') },
   'station-2891': { confidence: 'estimate', tank: need(2, 'Frostbite outside hurts'), search: need(1, 'Supplies to find') },
-  'wingard-cottage': { confidence: 'estimate', search: need(2, 'A small house full of things to find'), rescue: need(1, 'Victims close together') },
-  'storybook-woods': { confidence: 'estimate', move: need(2, 'Spread-out woods'), search: need(2, 'Items hidden around the woods') },
-  'wolfe-asylum': { confidence: 'estimate', horror: need(3, 'An asylum that piles on Horror'), tank: need(1, 'Dangerous wards') },
-  'sunnydaze-mall': { confidence: 'tips', move: need(2, 'Two floors and balconies'), search: need(2, 'Shops full of Items') },
-  hellscape: { confidence: 'estimate', tank: need(2, 'Hell hurts'), horror: need(2, 'Horror climbs quickly') },
+  'wingard-cottage': { confidence: 'estimate', search: need(2, 'A small house full of things to find'), rescue: need(1, 'Victims close together'), time: need(1, 'Supply Items cost Time to pick up') },
+  'storybook-woods': { confidence: 'estimate', move: need(2, 'Spread-out woods'), search: need(2, 'Items hidden around the woods'), time: need(1, 'Each Raft token you pass through costs Time') },
+  'wolfe-asylum': { confidence: 'estimate', horror: need(3, 'An asylum that piles on Horror'), tank: need(1, 'Dangerous wards'), time: need(1, 'Picking up a Pill costs Time') },
+  'sunnydaze-mall': { confidence: 'tips', move: need(2, 'Two floors and balconies'), search: need(2, 'Shops full of Items'), dice: need(1, 'Rescuing the Savior is very dice-dependent') },
+  hellscape: { confidence: 'estimate', tank: need(2, 'Hell hurts'), horror: need(2, 'Horror climbs quickly'), dice: need(1, 'Hellshift rolls: fewer successes cost Time'), time: need(1, 'Failed Hellshifts cost Time') },
   falconwood: { confidence: 'estimate', search: need(2, 'Missions need Items'), items: need(2, 'Mission Items to use') },
   'marrek-warehouse': { confidence: 'estimate', move: need(2, 'A big warehouse floor'), tank: need(1, 'Traps around the floor') },
   utopia: { confidence: 'estimate', move: need(2, 'Spread out'), horror: need(1, 'Noise and panic') },
   'isla-lagarto': { confidence: 'estimate', move: need(2, 'Jungle island to cross'), tank: need(1, 'Hazards') },
   'pesadilla-verde': { confidence: 'estimate', move: need(2, 'Dense jungle'), tank: need(2, 'Hazards') },
-  'larmes-abbey': { confidence: 'estimate', horror: need(2, 'An abbey full of dread'), search: need(1, 'Relics to find') },
+  'larmes-abbey': { confidence: 'estimate', horror: need(2, 'An abbey full of dread'), search: need(1, 'Relics to find'), dice: need(1, 'Malice rooms swap a die for the cursed die') },
   'shady-acres': { confidence: 'estimate', rescue: need(2, 'Farmhands to save'), attack: need(1, 'Things in the fields') },
   buddyland: { confidence: 'estimate', move: need(1, 'Big park'), horror: need(1, 'Animatronic scares') },
   megabgcon: { confidence: 'estimate', rescue: need(2, 'Crowds of Victims'), move: need(1, 'A busy hall') },
-  'santas-village': { confidence: 'estimate', tank: need(1, 'Cold and danger'), rescue: need(1, 'Elves to save'), move: need(1, 'Village to cross') },
+  'santas-village': { confidence: 'estimate', tank: need(1, 'Cold and danger'), rescue: need(1, 'Elves to save'), move: need(1, 'Village to cross'), time: need(2, 'Entering a space costs 1 Time per Elf in it') },
 };
 
 /* One-off pairings worth more than the trait maths shows. */
@@ -190,6 +190,17 @@ export const SPECIALS = [
 /* ---- Scoring -------------------------------------------------------------- */
 
 const LOCATION_WEIGHT = 0.7; // the Killer usually matters more than the map
+
+/* Needs that apply to EVERY scenario, on top of the Killer and Location.
+   Without these, Time and dice specialists (Sheila, Veronica, Ronda, Ava,
+   Alois…) scored near 1 almost everywhere, because hardly any profile asked
+   for them, even though both drive every turn.
+   Bonus only (see scoreGirl): a girl strong in these gains points, a girl
+   without them loses nothing. */
+export const BASE_NEEDS = {
+  time: need(1, 'Time buys every action; the Handbook calls discarding for Time one of the strongest moves'),
+  dice: need(1, 'Every Action card rolls Horror dice, so rerolls and extra dice always help'),
+};
 
 /* Combined needs for a Killer and/or Location: { trait: { v, reasons[] } }. */
 export function comboNeeds(killerId, locationId) {
@@ -206,6 +217,7 @@ export function comboNeeds(killerId, locationId) {
   };
   add(KILLER_NEEDS[killerId], 1, 'Killer');
   add(LOCATION_NEEDS[locationId], LOCATION_WEIGHT, 'Location');
+  // BASE_NEEDS are NOT added here: they're a bonus-only extra in scoreGirl.
   return out;
 }
 
@@ -236,6 +248,16 @@ export function scoreGirl(girlId, killerId, locationId) {
     got += n.v * gv;
     if (gv >= 2) strengths.push({ trait: tr, label: TRAIT_LABEL[tr], weight: n.v * gv, girlWhy: g[tr].why, needWhy: n.reasons });
     else if (n.v >= 2 && gv === 0) gaps.push({ trait: tr, label: TRAIT_LABEL[tr], needWhy: n.reasons, girlWhy: g[tr] ? g[tr].why : null });
+  }
+  // Every-game Time/dice: bonus only. It adds to what she brings but NOT to
+  // what the scenario asks for, so girls without Time or dice lose nothing.
+  for (const [tr, n] of Object.entries(BASE_NEEDS)) {
+    const gv = g[tr] ? g[tr].v : 0;
+    if (!gv) continue;
+    got += n.v * gv;
+    const already = strengths.find((s) => s.trait === tr);
+    if (already) { already.weight += n.v * gv; already.needWhy = [...already.needWhy, `Every game: ${n.why}`]; }
+    else if (gv >= 2) strengths.push({ trait: tr, label: TRAIT_LABEL[tr], weight: n.v * gv, girlWhy: g[tr].why, needWhy: [`Every game: ${n.why}`] });
   }
   // A girl rated 2 in everything the combo wants scores 10.
   let ratio = got / (totalNeed * 2);
