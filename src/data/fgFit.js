@@ -240,11 +240,32 @@ export function isRated(girlId) {
      killers / locations   optional: only applies against these ids. Leave
               both out for an item that helps everywhere.
      bonus    optional flat points for one-off strengths the traits miss
+              (used where she is already rated 3 in what the item does)
+     extras   optional [{ killers?, locations?, bonus, why }]: extra points in
+              particular scenarios only, on top of the general effect
      why      one line shown in "Why?" (only ever shown when opened)
-   Example shape (not a real item):
-     someone: { traits: { attack: 1 }, why: 'Her item hits harder at range' },
+   Assessed from Chris's photos of the opened item cards.
    -------------------------------------------------------------------------- */
-export const ENVELOPE_ITEMS = {};
+export const ENVELOPE_ITEMS = {
+  // Laurie's Bow: range 1-3, 1 damage, 3 arrows, 1 Time per shot, no Action card
+  // needed. Her Damage is already 3, so it counts as a small flat bonus.
+  laurie: { bonus: 0.5, why: 'Her Bow lets her hit from 1-3 spaces away for 1 Time, without an Action card (3 arrows)' },
+  // Jenette's Scanner: on a Search space, see the whole Item deck and pick.
+  jenette: { traits: { search: 2 }, why: 'Her Scanner lets her look through a Search space\u2019s whole Item deck and choose' },
+  // Uki's Gus: 1 damage to any Enemy entering her space; soaks her next 3 hits.
+  // Her Toughness is already 3, so the soak counts as a small flat bonus.
+  uki: { traits: { attack: 1 }, bonus: 0.5, why: 'Gus bites any Enemy that enters her space and soaks her next 3 hits' },
+  // Tali's Grenades: 2 Time for 2 damage to an adjacent Enemy (2 uses); can
+  // instead blow a hole in a store wall, which only exists at Sunnydaze Mall.
+  tali: {
+    traits: { attack: 1 },
+    why: 'Her Grenades deal 2 damage to an Enemy in an adjacent space (2 uses)',
+    extras: [{ locations: ['sunnydaze-mall'], bonus: 0.5, why: 'Her Grenades can blow a Destroyed Wall into a store to open a shortcut' }],
+  },
+  // Ginny's Sawed-off Shotgun: 1 Time for 3 damage to the target and 2 to every
+  // other Enemy in the space (2 uses), no Action card needed.
+  ginny: { traits: { attack: 2 }, why: 'Her Sawed-off Shotgun deals 3 damage, plus 2 to every other Enemy in the space, for 1 Time (2 uses)' },
+};
 
 /* The envelope item that counts for this girl and combo, or null. */
 export function envelopeItemFor(girlId, killerId, locationId, envelopes) {
@@ -309,6 +330,10 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
   );
   if (item && (item.bonus || !item.traits)) {
     specials.push({ girl: girlId, bonus: item.bonus || 0, why: `Envelope item: ${item.why}` });
+  }
+  for (const x of (item && item.extras) || []) {
+    const hit = (x.killers && x.killers.includes(killerId)) || (x.locations && x.locations.includes(locationId));
+    if (hit) specials.push({ girl: girlId, bonus: x.bonus || 0, why: `Envelope item: ${x.why}` });
   }
   const bonus = specials.reduce((a, s) => a + s.bonus, 0);
 
