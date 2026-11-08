@@ -271,8 +271,12 @@
   color: var(--text-dim);
   margin-top: 0.3rem;
 }
+/* Missing card face: a short strip, not a card-sized blank, so it doesn't eat
+   scroll space. A missing face next to a real one sits at the top of the row. */
+.cx-fg__face.is-missing { align-self: flex-start; }
+.cx-fg__missing--both { margin-top: 0.8rem; }
 .cx-fg__missing {
-  aspect-ratio: 2 / 3;
+  min-height: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -279,8 +279,11 @@ function FinalGirlCard({ entry, selected, onPick, collection, wins }) {
       <EnvelopeMarker entry={entry} wins={wins} collection={collection} />
       <StoredIn entry={entry} collection={collection} />
       {blurb && <p className="cx-card__flavour">{blurb}</p>}
+      {!front && !back ? (
+        <p className="cx-fg__missing cx-fg__missing--both fg-type">Card images not added yet (front and Ultimate Ability)</p>
+      ) : (
       <div className="cx-fg__faces">
-        <figure className="cx-fg__face">
+        <figure className={'cx-fg__face' + (front ? '' : ' is-missing')}>
           {front ? (
             <img src={front} alt={`${entry.name} card front`} loading="lazy" />
           ) : (
@@ -288,7 +291,7 @@ function FinalGirlCard({ entry, selected, onPick, collection, wins }) {
           )}
           <figcaption className="fg-type">Front</figcaption>
         </figure>
-        <figure className="cx-fg__face">
+        <figure className={'cx-fg__face' + (back ? '' : ' is-missing')}>
           {back ? (
             <img src={back} alt={`${entry.name} Ultimate Ability (back)`} loading="lazy" />
           ) : (
@@ -297,6 +300,7 @@ function FinalGirlCard({ entry, selected, onPick, collection, wins }) {
           <figcaption className="fg-type">Ultimate Ability</figcaption>
         </figure>
       </div>
+      )}
     </article>
   );
 }
