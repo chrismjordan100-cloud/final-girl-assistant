@@ -1,6 +1,17 @@
 import { useMemo, useState } from 'react';
 import { getCatalogue, STATUS_META, SERIES_ORDER, SERIES_LABEL, CARD_IMAGE_FOLDER } from '../lib/cardCatalogue.js';
+import { finalGirls as appFinalGirls } from '../data/games.js';
+import { finalGirlCardId } from '../data/cardData.js';
+import { useFgCollection } from '../hooks/useFgCollection.js';
 import './CardList.css';
+
+// Card-file Final Girl id -> the app ids that share that card (e.g. Paula and
+// Holiday Paula), so an envelope opened in the Codex can be matched here.
+const APP_IDS_BY_CARD = {};
+for (const fg of appFinalGirls) {
+  const cid = finalGirlCardId(fg);
+  if (cid) (APP_IDS_BY_CARD[cid] = APP_IDS_BY_CARD[cid] || []).push(fg.id);
+}
 
 /* ==========================================================================
    Codex → "All cards": a text-only list of every known card per Killer,
@@ -116,6 +127,8 @@ function OwnerSummaryBadges({ o }) {
 
 export default function CardList() {
   const cat = useMemo(() => getCatalogue(), []);
+  const { envelopes } = useFgCollection();
+  const isOpened = (cardId) => (APP_IDS_BY_CARD[cardId] || []).some((id) => envelopes[id] === 'opened');
   const [kind, setKind] = useState('all');
   const [query, setQuery] = useState('');
   const [gapsOnly, setGapsOnly] = useState(false);
@@ -295,12 +308,18 @@ export default function CardList() {
                           {g.box && <p className="cl-card__stats">{g.box}{g.health != null ? ` · Health ${g.health}` : ''}{g.victimsForUltimate != null ? ` · Ultimate after ${g.victimsForUltimate} saved` : ''}</p>}
                           {g.ultimate && <p className="cl-card__effect"><strong>Ultimate:</strong> {g.ultimate}</p>}
                           {g.saveRewards && <p className="cl-card__effect"><strong>Save rewards:</strong> {g.saveRewards}</p>}
-                          {g.unlockable && (
+                          {/* Secret Envelope: never name or describe the item until
+                              her envelope is marked opened in the Codex. */}
+                          {g.unlockable && (isOpened(g.id) ? (
                             <p className="cl-card__effect">
                               <strong>Unlockable item &mdash; {typeof g.unlockable === 'string' ? g.unlockable : g.unlockable.name}:</strong>{' '}
                               {typeof g.unlockable === 'object' && g.unlockable.effect ? g.unlockable.effect : ''}
                             </p>
-                          )}
+                          ) : (
+                            <p className="cl-card__effect fg-type">
+                              <strong>Unlockable item:</strong> sealed in her Secret Envelope until you open it.
+                            </p>
+                          ))}
                           {g.sourceUrl && <a className="cl-card__src" href={g.sourceUrl} target="_blank" rel="noreferrer">wiki page &#8599;</a>}
                         </div>
                         <ImageSlot image={g.image} file={g.imageFile} show={showSlots} />

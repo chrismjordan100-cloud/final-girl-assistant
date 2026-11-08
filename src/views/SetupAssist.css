@@ -232,6 +232,9 @@
   color: var(--fg-sick-green);
   border: 1px solid var(--fg-sick-green);
 }
+.game-picker__envitem { margin: 0.5rem 0; max-width: 200px; }
+.game-picker__envitem img { width: 100%; display: block; border-radius: var(--radius); border: 1px solid var(--fg-gold); }
+.game-picker__envitem figcaption { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.25rem; }
 .setup-extra__badge--finalgirl {
   background: rgba(217, 164, 65, 0.16);
   color: var(--fg-gold);

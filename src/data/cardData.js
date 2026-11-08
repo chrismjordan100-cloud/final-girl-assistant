@@ -130,8 +130,14 @@ function finalGirlRecord(entry) {
   return finalGirlsById[entry.id] || finalGirlsByName[String(entry.name || '').toLowerCase()] || null;
 }
 
-/* Name of the item in a Final Girl's Secret Envelope (e.g. "Laurie's Bow"),
-   or null if the card data doesn't name one. Name only: no effect text. */
+/* The card-file id for an app Final Girl ({ id, name }), or null. */
+export function finalGirlCardId(entry) {
+  const g = finalGirlRecord(entry);
+  return g ? g.id : null;
+}
+
+/* Name of her Secret Envelope item, or null if the card data doesn't name one.
+   Name only: no effect text. Only call this for an OPENED envelope. */
 export function finalGirlUnlockableName(entry) {
   const g = finalGirlRecord(entry);
   const name = g && g.unlockable_item && g.unlockable_item.name;

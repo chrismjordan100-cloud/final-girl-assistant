@@ -2936,6 +2936,12 @@ export function getFinalGirlCards(entry) {
   };
 }
 
+/** Photo of her Secret Envelope item card, e.g. S1-finalgirl-laurie-envelope.png,
+ *  or null. Callers must only SHOW it once her envelope is marked opened. */
+export function getFinalGirlEnvelopeImage(entry) {
+  return getImage('finalgirl', entry, 'envelope');
+}
+
 /* Card-image completeness for a Final Girl, for the Setup picker dot:
      'both' = front AND back present (no dot)
      'one'  = exactly one present (amber dot)

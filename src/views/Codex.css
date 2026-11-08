@@ -378,6 +378,10 @@
   gap: 0.25rem 0.6rem;
   color: var(--text-dim);
 }
+/* Opened envelope: her item card, kept small so it doesn't dominate the card. */
+.cx-env__item { margin: 0.4rem 0 0.6rem; max-width: 220px; }
+.cx-env__item img { width: 100%; display: block; border-radius: var(--radius); border: 1px solid var(--fg-gold); }
+.cx-env__item figcaption { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.25rem; }
 .cx-env--unlocked {
   padding: 0.55rem 0.7rem;
   border: 2px solid var(--fg-gold);

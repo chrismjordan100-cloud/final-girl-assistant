@@ -5,6 +5,7 @@ import {
   comboNeeds, rankGirls, comboConfidence,
 } from '../data/fgFit.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
+import { useFgCollection } from '../hooks/useFgCollection.js';
 import './FitGrid.css';
 
 /* ==========================================================================
@@ -64,7 +65,8 @@ export default function FitGrid() {
   const [l, setL] = useState(sel.locationId || '');
   const [open, setOpen] = useState(null);
 
-  const ranked = useMemo(() => rankGirls(finalGirls, k, l), [k, l]);
+  const { envelopes } = useFgCollection();
+  const ranked = useMemo(() => rankGirls(finalGirls, k, l, envelopes), [k, l, envelopes]);
   const needs = useMemo(() => comboNeeds(k, l), [k, l]);
   const hot = Object.fromEntries(Object.entries(needs).map(([id, n]) => [id, n.v >= 2]));
   const conf = comboConfidence(k, l);

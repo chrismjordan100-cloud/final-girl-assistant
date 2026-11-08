@@ -231,11 +231,53 @@ export function isRated(girlId) {
   return Boolean(GIRL_TRAITS[girlId]);
 }
 
+/* ---- Secret Envelope items ------------------------------------------------
+   What each girl's envelope item adds, ONLY counted once her envelope is
+   marked opened in the Codex (see scoreGirl's `envelopes` argument). A profile
+   is only added here once Chris has opened that envelope, so nothing in here
+   is a spoiler for a sealed one.
+     traits   { trait: +n } added to her own ratings (capped at 3)
+     killers / locations   optional: only applies against these ids. Leave
+              both out for an item that helps everywhere.
+     bonus    optional flat points for one-off strengths the traits miss
+     why      one line shown in "Why?" (only ever shown when opened)
+   Example shape (not a real item):
+     someone: { traits: { attack: 1 }, why: 'Her item hits harder at range' },
+   -------------------------------------------------------------------------- */
+export const ENVELOPE_ITEMS = {};
+
+/* The envelope item that counts for this girl and combo, or null. */
+export function envelopeItemFor(girlId, killerId, locationId, envelopes) {
+  if (!envelopes || envelopes[girlId] !== 'opened') return null;
+  const it = ENVELOPE_ITEMS[girlId];
+  if (!it) return null;
+  const scoped = (it.killers && it.killers.length) || (it.locations && it.locations.length);
+  if (scoped) {
+    const k = it.killers && it.killers.includes(killerId);
+    const l = it.locations && it.locations.includes(locationId);
+    if (!k && !l) return null; // specific to other scenarios: no change here
+  }
+  return it;
+}
+
 /* Score one girl for a combo.
-   Returns { score (0-10, halves), strengths[], gaps[], specials[] } or null
-   if she isn't rated yet or nothing is selected. */
-export function scoreGirl(girlId, killerId, locationId) {
-  const g = GIRL_TRAITS[girlId];
+   `envelopes` is the Codex envelope map ({ id: 'opened' | 'unlocked' }); pass
+   it so opened envelope items count. Without it, scores are item-free.
+   Returns { score (0-10, halves), strengths[], gaps[], specials[], item } or
+   null if she isn't rated yet or nothing is selected. */
+export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
+  const base = GIRL_TRAITS[girlId];
+  const item = base ? envelopeItemFor(girlId, killerId, locationId, envelopes) : null;
+  // Her ratings with the item folded in (each trait capped at 3).
+  let g = base;
+  if (item && item.traits) {
+    g = { ...base };
+    for (const [tr, add] of Object.entries(item.traits)) {
+      const cur = g[tr] ? g[tr].v : 0;
+      const why = g[tr] ? `${g[tr].why}; plus her envelope item` : `Her envelope item: ${item.why}`;
+      g[tr] = { v: Math.min(3, cur + add), why };
+    }
+  }
   const needs = comboNeeds(killerId, locationId);
   const totalNeed = Object.values(needs).reduce((a, n) => a + n.v, 0);
   if (!g || !totalNeed) return null;
@@ -265,19 +307,22 @@ export function scoreGirl(girlId, killerId, locationId) {
   const specials = SPECIALS.filter(
     (s) => s.girl === girlId && ((s.killer && s.killer === killerId) || (s.location && s.location === locationId)),
   );
+  if (item && (item.bonus || !item.traits)) {
+    specials.push({ girl: girlId, bonus: item.bonus || 0, why: `Envelope item: ${item.why}` });
+  }
   const bonus = specials.reduce((a, s) => a + s.bonus, 0);
 
   let score = Math.min(10, ratio * 10 + bonus);
   score = Math.max(1, Math.round(score * 2) / 2);
   strengths.sort((a, b) => b.weight - a.weight);
   gaps.sort((a, b) => (needs[b.trait].v - needs[a.trait].v));
-  return { score, strengths, gaps, specials };
+  return { score, strengths, gaps, specials, item };
 }
 
 /* Every rated girl for a combo, best first. `girls` is the app's finalGirls list. */
-export function rankGirls(girls, killerId, locationId) {
+export function rankGirls(girls, killerId, locationId, envelopes = null) {
   return girls
-    .map((fg) => ({ fg, fit: scoreGirl(fg.id, killerId, locationId) }))
+    .map((fg) => ({ fg, fit: scoreGirl(fg.id, killerId, locationId, envelopes) }))
     .filter((r) => r.fit)
     .sort((a, b) => b.fit.score - a.fit.score || a.fg.name.localeCompare(b.fg.name));
 }

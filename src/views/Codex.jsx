@@ -8,6 +8,7 @@ import {
   getFlavourImage,
   getPlayRules,
   getFinalGirlCards,
+  getFinalGirlEnvelopeImage,
   getIcon,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
@@ -220,13 +221,23 @@ function EnvelopeMarker({ entry, wins, collection }) {
   }
 
   if (status === 'opened') {
+    // Only an opened envelope ever shows its item card.
+    const itemImg = getFinalGirlEnvelopeImage(entry);
     return (
-      <p className="cx-env cx-env--opened">
-        <span>&#9993; Envelope opened</span>
-        <button type="button" className="cx-env__link" onClick={() => set(wins > 0 ? 'unlocked' : null)}>
-          Not opened yet?
-        </button>
-      </p>
+      <>
+        <p className="cx-env cx-env--opened">
+          <span>&#9993; Envelope opened</span>
+          <button type="button" className="cx-env__link" onClick={() => set(wins > 0 ? 'unlocked' : null)}>
+            Not opened yet?
+          </button>
+        </p>
+        {itemImg && (
+          <figure className="cx-env__item">
+            <img src={itemImg} alt={`${entry.name}'s Secret Envelope item card`} loading="lazy" />
+            <figcaption className="fg-type">Her Secret Envelope item</figcaption>
+          </figure>
+        )}
+      </>
     );
   }
 

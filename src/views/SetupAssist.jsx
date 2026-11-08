@@ -11,6 +11,7 @@ import {
   getIcon,
   getOfficialFinalGirls,
   finalGirlCardStatus,
+  getFinalGirlEnvelopeImage,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useFgCollection, storageFor, envelopeStatus, hasMissingComponents } from '../hooks/useFgCollection.js';
@@ -128,6 +129,7 @@ export default function SetupAssist({ onNavigate }) {
   const envelopeOpened = Boolean(pickedGirl)
     && envelopeStatus(pickedGirl.id, 0, collection.envelopes).status === 'opened';
   const girlItem = envelopeOpened ? finalGirlUnlockableName(pickedGirl) : null;
+  const girlItemImg = envelopeOpened ? getFinalGirlEnvelopeImage(pickedGirl) : null;
   const girlExtras = envelopeOpened
     ? [{
         title: `Bring in ${girlItem || 'her Secret Envelope item'}`,
@@ -335,6 +337,12 @@ export default function SetupAssist({ onNavigate }) {
                                 <span className="fg-type"> &mdash; set it on her card in the Codex.</span>
                               )}
                             </p>
+                          )}
+                          {girlItemImg && (
+                            <figure className="game-picker__envitem">
+                              <img src={girlItemImg} alt={`${pickedGirl.name}'s Secret Envelope item card`} />
+                              <figcaption className="fg-type">&#9993; Her Secret Envelope item (opened)</figcaption>
+                            </figure>
                           )}
                           {(killer || location) && (
                             <div className="game-picker__official">

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { finalGirls } from '../data/games.js';
 import { rankGirls, comboConfidence } from '../data/fgFit.js';
+import { useFgCollection } from '../hooks/useFgCollection.js';
 import './BestFits.css';
 
 /* ==========================================================================
@@ -81,7 +82,9 @@ function Row({ r, official, selected, fav, onPick }) {
 }
 
 export default function BestFits({ killerId, locationId, officialNames = [], selectedId, onPick, isFavourite, onOpenGrid }) {
-  const ranked = useMemo(() => rankGirls(finalGirls, killerId, locationId), [killerId, locationId]);
+  // Opened Secret Envelope items count towards the score (sealed ones never do).
+  const { envelopes } = useFgCollection();
+  const ranked = useMemo(() => rankGirls(finalGirls, killerId, locationId, envelopes), [killerId, locationId, envelopes]);
   const [showAll, setShowAll] = useState(false);
   if (!ranked.length) return null;
 

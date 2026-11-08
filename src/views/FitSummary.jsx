@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { finalGirls, killers, locations, OFFICIAL_SCENARIOS } from '../data/games.js';
 import { scoreGirl, isRated } from '../data/fgFit.js';
 import { usePersistentState } from '../hooks/usePersistentState.js';
+import { useFgCollection } from '../hooks/useFgCollection.js';
 import './FitSummary.css';
 
 /* ==========================================================================
@@ -30,11 +31,11 @@ const seriesLabel = (v) => (Number(v) === 0 ? 'Specials & promos' : `Series ${v}
 const inSeries = (x, s) => s === 'all' || x.season === Number(s);
 
 /* Average score for a girl over a set of combos (null if none scored). */
-function avgOver(girlId, ks, ls) {
+function avgOver(girlId, ks, ls, envelopes) {
   let sum = 0;
   let n = 0;
   for (const k of ks) for (const l of ls) {
-    const f = scoreGirl(girlId, k.id, l.id);
+    const f = scoreGirl(girlId, k.id, l.id, envelopes);
     if (f) { sum += f.score; n += 1; }
   }
   return n ? sum / n : null;
@@ -109,9 +110,11 @@ export default function FitSummary() {
   const ls = useMemo(() => pick(locations, lSeries, lOne), [lSeries, lOne]);
   const unrated = finalGirls.filter((g) => !isRated(g.id));
   // Each girl's average over ALL combos: fixed, so work it out once.
+  // Opened Secret Envelope items count towards scores (sealed ones never do).
+  const { envelopes } = useFgCollection();
   const overall = useMemo(() => Object.fromEntries(
-    finalGirls.filter((g) => isRated(g.id)).map((g) => [g.id, avgOver(g.id, killers, locations)]),
-  ), []);
+    finalGirls.filter((g) => isRated(g.id)).map((g) => [g.id, avgOver(g.id, killers, locations, envelopes)]),
+  ), [envelopes]);
 
   // Score every (girl, killer, location) once for the current filters.
   const rows = useMemo(() => {
@@ -120,7 +123,7 @@ export default function FitSummary() {
       let sum = 0;
       let n = 0;
       const cells = ks.map((k) => ls.map((l) => {
-        const fit = scoreGirl(g.id, k.id, l.id);
+        const fit = scoreGirl(g.id, k.id, l.id, envelopes);
         if (fit) { sum += fit.score; n += 1; }
         const offK = Boolean(g.film && k.film && g.film === k.film);
         const offL = Boolean(g.film && l.film && g.film === l.film);
@@ -133,7 +136,7 @@ export default function FitSummary() {
       out.sort((a, b) => (b[by] ?? 0) - (a[by] ?? 0) || (b.avg ?? 0) - (a.avg ?? 0) || a.g.name.localeCompare(b.g.name));
     }
     return out;
-  }, [ks, ls, gSeries, sort, overall]);
+  }, [ks, ls, gSeries, sort, overall, envelopes]);
 
   // Column averages (across the girls shown) for spotting combos anyone can do.
   const colAvg = useMemo(() => ks.map((_, ki) => ls.map((_l, li) => {
