@@ -232,6 +232,11 @@
   color: var(--fg-sick-green);
   border: 1px solid var(--fg-sick-green);
 }
+.setup-extra__badge--finalgirl {
+  background: rgba(217, 164, 65, 0.16);
+  color: var(--fg-gold);
+  border: 1px solid var(--fg-gold);
+}
 .setup-extra__none { margin: 0; color: var(--text-dim); font-size: 0.9rem; }
 
 .setup-step__itemwarn { margin: 0.4rem 0 0.2rem 2.1rem; font-size: 0.85rem; }

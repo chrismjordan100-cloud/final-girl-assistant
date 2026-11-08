@@ -83,6 +83,61 @@ const finalGirlsByName = Object.fromEntries(
   (cards.final_girls || []).map((g) => [String(g.name).toLowerCase(), g])
 );
 
+// App Final Girl id -> card-file id, for girls whose card name differs from the
+// app name (the card file mostly uses full names, e.g. "Laurie Carpenter").
+// Girls not listed here are matched by name.
+const FINAL_GIRL_ID_MAP = {
+  laurie: 'laurie_carpenter',
+  reiko: 'reiko_rivers',
+  selena: 'selena_villanueva',
+  alice: 'alice_cranston',
+  adelaide: 'adelaide_jordan',
+  barbara: 'barbara_romero',
+  asami: 'eihi_asami',
+  charlie: 'charlie_aja',
+  nancy: 'nancy_lang',
+  sheila: 'sheila_smalley',
+  melanie: 'melanie_brown',
+  kate: 'kate_carpenter',
+  uki: 'uki_fox',
+  ginny: 'ginny_sandin',
+  ava: 'ava_tyler',
+  red: 'chantelle_red_gilliam',
+  cassie: 'cassie_smith',
+  mandy: 'mandy_williams',
+  meghan: 'meghan_gummot',
+  ronda: 'ronda_carter',
+  claus: 'mrs_claus',
+  cindy: 'cindy_too',
+  'holiday-paula': 'paula', // alt-art Paula: same girl, same item
+  agnes: 'agnes_crane',
+  layla: 'layla_khaira',
+  julia: 'julia_paris',
+  constance: 'constance_moreau',
+  carolyn: 'carolyn_johnson',
+  grandma: 'grandma',
+  julie: 'julie',
+  meg: 'meg',
+  'jen-promo': 'jen',
+};
+const finalGirlsById = Object.fromEntries((cards.final_girls || []).map((g) => [g.id, g]));
+
+/* A Final Girl's card record, from her app entry ({ id, name }). */
+function finalGirlRecord(entry) {
+  if (!entry) return null;
+  const mapped = FINAL_GIRL_ID_MAP[entry.id];
+  if (mapped && finalGirlsById[mapped]) return finalGirlsById[mapped];
+  return finalGirlsById[entry.id] || finalGirlsByName[String(entry.name || '').toLowerCase()] || null;
+}
+
+/* Name of the item in a Final Girl's Secret Envelope (e.g. "Laurie's Bow"),
+   or null if the card data doesn't name one. Name only: no effect text. */
+export function finalGirlUnlockableName(entry) {
+  const g = finalGirlRecord(entry);
+  const name = g && g.unlockable_item && g.unlockable_item.name;
+  return name ? String(name) : null;
+}
+
 function killerRecord(appKillerId) {
   const cardId = KILLER_ID_MAP[appKillerId];
   return cardId ? killersById[cardId] : null;

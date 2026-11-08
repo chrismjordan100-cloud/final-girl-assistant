@@ -13,7 +13,8 @@ import {
   finalGirlCardStatus,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useFgCollection, storageFor } from '../hooks/useFgCollection.js';
+import { useFgCollection, storageFor, envelopeStatus } from '../hooks/useFgCollection.js';
+import { finalGirlUnlockableName } from '../data/cardData.js';
 import IconSelect from '../components/IconSelect.jsx';
 import BestFits from '../components/BestFits.jsx';
 import { writePersistent } from '../hooks/usePersistentState.js';
@@ -121,6 +122,19 @@ export default function SetupAssist({ onNavigate }) {
   const locationExtras = getSetupExtras(location);
   const hasExtras = killerExtras.length > 0 || locationExtras.length > 0;
 
+  // Her Secret Envelope is open (you only open it after a win), so her own item
+  // is now available: remind the player to bring it in. "Opened" is only ever
+  // set by the player in the Codex, so demo-mode wins can't trigger this.
+  const envelopeOpened = Boolean(pickedGirl)
+    && envelopeStatus(pickedGirl.id, 0, collection.envelopes).status === 'opened';
+  const girlItem = envelopeOpened ? finalGirlUnlockableName(pickedGirl) : null;
+  const girlExtras = envelopeOpened
+    ? [{
+        title: `Bring in ${girlItem || 'her Secret Envelope item'}`,
+        body: `${pickedGirl.name} has won before and her Secret Envelope is open, so her own item is available. Take ${girlItem ? 'it' : 'the item card'} out of the envelope and bring it into this game. Her item card shows how she uses it.`,
+      }]
+    : [];
+
   // Which selections alter the core Item-deck step (s11). Used to warn there.
   const itemChangers = [killer, location].filter((e) => changesItemDecks(e));
   const itemDeckChanged = itemChangers.length > 0;
@@ -149,27 +163,39 @@ export default function SetupAssist({ onNavigate }) {
     persist({});
   }
 
-  const specialSetupBlock = (killer || location) ? (
+  const specialSetupBlock = (killer || location || girlExtras.length > 0) ? (
     <section className="setup-group setup-group--special fg-panel">
       <header className="setup-group__head">
         <span className="setup-group__num setup-group__num--special" aria-hidden="true">!</span>
         <div>
           <h2 className="setup-group__title">Special Setup for This Game</h2>
           <p className="setup-group__blurb">
-            Your chosen Killer and Location change how some core steps work (especially
-            how the Item decks are built). Read these BEFORE the Item &amp; component
-            steps below.
+            {killer || location
+              ? <>Your chosen Killer and Location change how some core steps work (especially
+                how the Item decks are built). Read these BEFORE the Item &amp; component
+                steps below.</>
+              : <>Extra steps for your chosen Final Girl. Do these alongside the Item &amp;
+                component steps below.</>}
           </p>
         </div>
       </header>
 
-      {!hasExtras && (
+      {girlExtras.length > 0 && (
+        <SpecialSetupList
+          kind="finalgirl"
+          label="Final Girl"
+          entryName={pickedGirl.name}
+          steps={girlExtras}
+          done={done}
+          onToggle={toggle}
+        />
+      )}
+
+      {(killer || location) && !hasExtras && (
         <p className="setup-extra__none fg-type">
           {killer && location
-            ? `Neither ${killer.name} nor ${location.name} adds any special setup — just follow the core steps below.`
-            : (killer
-                ? `${killer.name} adds no special setup — just follow the core steps below.`
-                : `${location.name} adds no special setup — just follow the core steps below.`)}
+            ? `Neither ${killer.name} nor ${location.name} adds any ${girlExtras.length ? 'other ' : ''}special setup — just follow the core steps below.`
+            : `${(killer || location).name} adds no ${girlExtras.length ? 'other ' : ''}special setup — just follow the core steps below.`}
         </p>
       )}
 

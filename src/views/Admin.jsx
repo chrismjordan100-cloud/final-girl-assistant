@@ -249,6 +249,13 @@ const BACKLOG = [
     status: 'done',
   },
   {
+    title: 'Setup reminder to bring in an opened envelope item',
+    detail:
+      'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game (e.g. \u201cBring in Laurie\u2019s Bow\u201d). It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
+    affects: ['Setup Assist', 'Codex'],
+    status: 'done',
+  },
+  {
     title: 'Chris to do: scan the Lore & Scenario books',
     detail:
       'Your job before Claude can wire the lore in. Photograph or scan every page of each printed Lore & Scenario book (a phone scanning app like Microsoft Lens or Adobe Scan is fine, one page per image, flat and well lit), then drop them into the chat or a folder on the PC. Example: all 64 pages of the Series 1 book in one go, then Series 2, and so on. Progress: Series 1 \u2014 to scan \u00b7 Series 2 \u2014 to scan \u00b7 Series 3 \u2014 to scan \u00b7 Series 4 \u2014 check whether a book has come out yet.',
