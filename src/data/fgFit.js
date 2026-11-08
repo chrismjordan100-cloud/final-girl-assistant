@@ -249,23 +249,104 @@ export function isRated(girlId) {
 export const ENVELOPE_ITEMS = {
   // Laurie's Bow: range 1-3, 1 damage, 3 arrows, 1 Time per shot, no Action card
   // needed. Her Damage is already 3, so it counts as a small flat bonus.
-  laurie: { bonus: 0.5, why: 'Her Bow lets her hit from 1-3 spaces away for 1 Time, without an Action card (3 arrows)' },
+  laurie: {
+    bonus: 0.5,
+    why: 'Her Bow lets her hit from 1-3 spaces away for 1 Time, without an Action card (3 arrows)',
+    notes: [
+      'Range 1-3, 1 damage per arrow, 1 Time a shot. It can\u2019t be powered up by an Action card.',
+      'Only 3 arrows, so save them for when chip damage from a distance really matters.',
+      'Her own ability adds damage to Enemies in HER space, so it doesn\u2019t stack with shots from range: shoot as they close in, then finish them up close.',
+    ],
+  },
   // Jenette's Scanner: on a Search space, see the whole Item deck and pick.
-  jenette: { traits: { search: 2 }, why: 'Her Scanner lets her look through a Search space\u2019s whole Item deck and choose' },
+  jenette: {
+    traits: { search: 2 },
+    why: 'Her Scanner lets her look through a Search space\u2019s whole Item deck and choose',
+    notes: [
+      'Works on any Search space at any Location, not just the Konrad.',
+      'It doesn\u2019t give extra searches or dice: it turns every search you do into a pick of the deck.',
+      'Strongest where one particular Item wins the game or a deck is full of traps; weakest where you barely search.',
+      'Pairs with her extra Item hand: find exactly what you need and carry more of it.',
+    ],
+  },
   // Uki's Gus: 1 damage to any Enemy entering her space; soaks her next 3 hits.
   // Her Toughness is already 3, so the soak counts as a small flat bonus.
-  uki: { traits: { attack: 1 }, bonus: 0.5, why: 'Gus bites any Enemy that enters her space and soaks her next 3 hits' },
+  uki: {
+    traits: { attack: 1 },
+    bonus: 0.5,
+    why: 'Gus bites any Enemy that enters her space and soaks her next 3 hits',
+    notes: [
+      '1 damage to every Enemy that enters her space, with no Time or card needed.',
+      'Soaks her next 3 hits (one marker each). Once the markers are gone, he can\u2019t soak any more.',
+      'He\u2019s an ally, not a Backpack item, so he doesn\u2019t use up a slot.',
+      'Best against Killers that keep coming to you or bring lots of minions. Pairs with her free Guard.',
+    ],
+  },
   // Tali's Grenades: 2 Time for 2 damage to an adjacent Enemy (2 uses); can
   // instead blow a hole in a store wall, which only exists at Sunnydaze Mall.
   tali: {
     traits: { attack: 1 },
     why: 'Her Grenades deal 2 damage to an Enemy in an adjacent space (2 uses)',
+    notes: [
+      '2 Time for 2 damage, and only against an Enemy in an ADJACENT space, not her own. Keep a one-space gap.',
+      'Only 2 grenades: worth holding for the Killer or a finale.',
+      'The Destroyed Wall option needs a store wall, which only Sunnydaze Mall has. Everywhere else it\u2019s damage only.',
+    ],
     extras: [{ locations: ['sunnydaze-mall'], bonus: 0.5, why: 'Her Grenades can blow a Destroyed Wall into a store to open a shortcut' }],
   },
   // Ginny's Sawed-off Shotgun: 1 Time for 3 damage to the target and 2 to every
   // other Enemy in the space (2 uses), no Action card needed.
-  ginny: { traits: { attack: 2 }, why: 'Her Sawed-off Shotgun deals 3 damage, plus 2 to every other Enemy in the space, for 1 Time (2 uses)' },
+  ginny: {
+    traits: { attack: 2 },
+    why: 'Her Sawed-off Shotgun deals 3 damage, plus 2 to every other Enemy in the space, for 1 Time (2 uses)',
+    notes: [
+      'Range 0: the target has to be in her space.',
+      '1 Time for 3 damage to the target and 2 to every other Enemy there. It doesn\u2019t need an Action card.',
+      'Only 2 shots. Best saved for a crowded space or the Killer itself.',
+      'No Action card is used, so her Ultimate\u2019s Weak Attack boost doesn\u2019t apply to it.',
+    ],
+  },
 };
+
+/* Where her (opened) envelope item lifts her fit score, from the same engine.
+   Returns null if she has no profile, else:
+     { avgLift, raised, total, killers: [{ name, lift }], locations: [...] }
+   killers/locations: the biggest average lifts (top 3, lift > 0), so the
+   Codex can say where the item really earns its place. */
+export function envelopeItemImpact(girlId, killers, locations) {
+  if (!ENVELOPE_ITEMS[girlId] || !GIRL_TRAITS[girlId]) return null;
+  const opened = { [girlId]: 'opened' };
+  const byK = {};
+  const byL = {};
+  let sum = 0;
+  let total = 0;
+  let raised = 0;
+  for (const k of killers) for (const l of locations) {
+    const a = scoreGirl(girlId, k.id, l.id);
+    const b = scoreGirl(girlId, k.id, l.id, opened);
+    if (!a || !b) continue;
+    const d = b.score - a.score;
+    total += 1;
+    sum += d;
+    if (d > 0) raised += 1;
+    (byK[k.name] = byK[k.name] || []).push(d);
+    (byL[l.name] = byL[l.name] || []).push(d);
+  }
+  const avgs = (m) => Object.entries(m)
+    .map(([name, ds]) => ({ name, lift: ds.reduce((x, y) => x + y, 0) / ds.length }));
+  const top = (list) => list
+    .filter((x) => x.lift > 0)
+    .sort((x, y) => y.lift - x.lift || x.name.localeCompare(y.name))
+    .slice(0, 3);
+  const kAvg = avgs(byK);
+  const lAvg = avgs(byL);
+  // "Even": every Killer and Location gets about the same lift, so a "helps
+  // most" list would just be alphabetical ties.
+  const avgLift = total ? sum / total : 0;
+  const best = (list) => (list.length ? Math.max(...list.map((x) => x.lift)) : 0);
+  const even = best(kAvg) - avgLift < 0.15 && best(lAvg) - avgLift < 0.15;
+  return { avgLift, raised, total, even, killers: top(kAvg), locations: top(lAvg) };
+}
 
 /* The envelope item that counts for this girl and combo, or null. */
 export function envelopeItemFor(girlId, killerId, locationId, envelopes) {

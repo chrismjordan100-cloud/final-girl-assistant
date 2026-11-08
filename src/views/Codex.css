@@ -378,8 +378,19 @@
   gap: 0.25rem 0.6rem;
   color: var(--text-dim);
 }
-/* Opened envelope: her item card, kept small so it doesn't dominate the card. */
-.cx-env__item { margin: 0.4rem 0 0.6rem; max-width: 220px; }
+/* Opened envelope: her item card (kept small) with notes beside it. Stacks on
+   narrow screens. */
+.cx-env__itemrow { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: flex-start; margin: 0.4rem 0 0.6rem; }
+.cx-env__item { margin: 0; max-width: 220px; flex: 0 0 220px; }
+.cx-env__notes { flex: 1 1 260px; font-size: 0.86rem; color: var(--text); }
+.cx-env__notes-title {
+  margin: 0 0 0.3rem; font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: 0.08em; font-size: 0.78rem; color: var(--fg-gold);
+}
+.cx-env__notes ul { margin: 0 0 0.5rem; padding-left: 1.1rem; }
+.cx-env__notes li { margin-bottom: 0.3rem; }
+.cx-env__notes-reach { margin: 0 0 0.3rem; font-weight: 600; }
+.cx-env__notes-top { margin: 0 0 0.2rem; color: var(--text-dim); font-size: 0.82rem; }
 .cx-env__item img { width: 100%; display: block; border-radius: var(--radius); border: 1px solid var(--fg-gold); }
 .cx-env__item figcaption { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.25rem; }
 .cx-env--unlocked {

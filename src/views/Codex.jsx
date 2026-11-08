@@ -14,6 +14,7 @@ import {
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useFgCollection, storageFor, defaultStorage, storageSuggestions, envelopeStatus, winsByFinalGirl } from '../hooks/useFgCollection.js';
 import { useGameLog } from '../hooks/useGameLog.js';
+import { ENVELOPE_ITEMS, envelopeItemImpact } from '../data/fgFit.js';
 import CardList from './CardList.jsx';
 import FitGrid from './FitGrid.jsx';
 import FitSummary from './FitSummary.jsx';
@@ -231,11 +232,16 @@ function EnvelopeMarker({ entry, wins, collection }) {
             Not opened yet?
           </button>
         </p>
-        {itemImg && (
-          <figure className="cx-env__item">
-            <img src={itemImg} alt={`${entry.name}'s Secret Envelope item card`} loading="lazy" />
-            <figcaption className="fg-type">Her Secret Envelope item</figcaption>
-          </figure>
+        {(itemImg || ENVELOPE_ITEMS[entry.id]) && (
+          <div className="cx-env__itemrow">
+            {itemImg && (
+              <figure className="cx-env__item">
+                <img src={itemImg} alt={`${entry.name}'s Secret Envelope item card`} loading="lazy" />
+                <figcaption className="fg-type">Her Secret Envelope item</figcaption>
+              </figure>
+            )}
+            <EnvelopeItemNotes entry={entry} />
+          </div>
         )}
       </>
     );
@@ -251,6 +257,48 @@ function EnvelopeMarker({ entry, wins, collection }) {
         Already opened?
       </button>
     </p>
+  );
+}
+
+/* Notes beside an OPENED envelope item: hand-written tips from the item card,
+   plus where the fit engine says it lifts her score most. Only rendered from
+   the opened branch of EnvelopeMarker, so sealed items never show. */
+function EnvelopeItemNotes({ entry }) {
+  const item = ENVELOPE_ITEMS[entry.id];
+  const impact = useMemo(() => envelopeItemImpact(entry.id, killers, locations), [entry.id]);
+  if (!item) {
+    return (
+      <div className="cx-env__notes fg-type">
+        <p>Not assessed yet, so it doesn&rsquo;t count in her fit scores.</p>
+      </div>
+    );
+  }
+  const fmt = (x) => `${x.name} (+${x.lift.toFixed(1)})`;
+  const share = impact && impact.total ? impact.raised / impact.total : 0;
+  const reach = !impact || impact.raised === 0
+    ? 'It doesn\u2019t change her fit scores anywhere.'
+    : share >= 0.75
+      ? `Useful almost everywhere: it raises her score in ${impact.raised} of ${impact.total} Killer \u00d7 Location combos (+${impact.avgLift.toFixed(1)} on average).`
+      : share >= 0.25
+        ? `Useful in some games, big in a few: it raises her score in ${impact.raised} of ${impact.total} combos and does nothing in the rest.`
+        : `Only useful in a few games: it raises her score in ${impact.raised} of ${impact.total} combos and does nothing in the rest.`;
+  return (
+    <div className="cx-env__notes">
+      <p className="cx-env__notes-title">About her item</p>
+      <ul>
+        {(item.notes || [item.why]).map((n) => <li key={n}>{n}</li>)}
+      </ul>
+      <p className="cx-env__notes-reach">{reach}</p>
+      {impact && impact.even && impact.raised > 0 && (
+        <p className="cx-env__notes-top">About the same small lift against every Killer and at every Location.</p>
+      )}
+      {impact && !impact.even && impact.killers.length > 0 && (
+        <p className="cx-env__notes-top"><strong>Helps most against:</strong> {impact.killers.map(fmt).join(', ')}</p>
+      )}
+      {impact && !impact.even && impact.locations.length > 0 && (
+        <p className="cx-env__notes-top"><strong>Helps most at:</strong> {impact.locations.map(fmt).join(', ')}</p>
+      )}
+    </div>
   );
 }
 
