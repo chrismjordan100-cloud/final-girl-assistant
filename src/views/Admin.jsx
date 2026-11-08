@@ -15,12 +15,13 @@ import {
   getFinalGirlEnvelopeImage,
 } from '../data/games.js';
 import { finalGirlUnlockableName } from '../data/cardData.js';
+import { useFgCollection } from '../hooks/useFgCollection.js';
 import { VIDEO_PROMPT } from '../data/videoPrompt.js';
 import BACKLOG_AUTO from '../data/backlogAuto.json';
 import './Admin.css';
 
 /* One marker per asset TYPE for an entry (not per page). */
-function assetTypesFor(type, entry) {
+function assetTypesFor(type, entry, opened) {
   const prefix = `S${entry.season}-${type}-${entry.shortName}`;
 
   if (type === 'finalgirl') {
@@ -28,11 +29,13 @@ function assetTypesFor(type, entry) {
       { key: 'front', label: 'Card front', example: `${prefix}-front.png`, present: hasImageBaseName(`${prefix}-front`) },
       { key: 'back', label: 'Card back', example: `${prefix}-back.png`, present: hasImageBaseName(`${prefix}-back`) },
     ];
-    // Her Secret Envelope item card (e.g. S1-item-laurie-bow.png). Only listed
-    // for girls whose card data names an item, or who already have the photo.
-    const itemName = finalGirlUnlockableName(entry);
-    const itemImg = getFinalGirlEnvelopeImage(entry);
-    if (itemName || itemImg) {
+    // Her Secret Envelope item card. SPOILER RULE: the item is never named or
+    // requested until you've marked her envelope OPENED in the Codex. Sealed
+    // (or won-but-unopened) girls get no item line at all.
+    const isOpened = Boolean(opened && opened.has(entry.id));
+    const itemName = isOpened ? finalGirlUnlockableName(entry) : null;
+    const itemImg = isOpened ? getFinalGirlEnvelopeImage(entry) : null;
+    if (isOpened) {
       const itemSlug = String(itemName || 'item')
         .toLowerCase()
         .replace(new RegExp(`^${entry.shortName}\\W*s?\\s+`, 'i'), '')
@@ -57,14 +60,14 @@ function assetTypesFor(type, entry) {
   ];
 }
 
-function entryStatus(type, entry) {
-  const types = assetTypesFor(type, entry);
+function entryStatus(type, entry, opened) {
+  const types = assetTypesFor(type, entry, opened);
   const present = types.filter((t) => t.present).length;
   return { types, present, total: types.length, complete: present === types.length };
 }
 
-function EntryCard({ type, entry }) {
-  const { types, present, total, complete } = entryStatus(type, entry);
+function EntryCard({ type, entry, opened }) {
+  const { types, present, total, complete } = entryStatus(type, entry, opened);
 
   // Rule-sheet images present but the WRITTEN rules haven't been transcribed by
   // Kiro yet (Killers/Locations only — Final Girls have no written rules).
@@ -120,13 +123,6 @@ const VIDEOS_TOTAL = VIDEO_LIST.length;
 
 /* Running backlog of material still to scan / transcribe with Kiro. Add to
    this list as new ideas come up so nothing gets forgotten. */
-/* Secret Envelope item card photos: worked out from the files present. */
-const ITEM_GIRLS = finalGirls.filter((g) => finalGirlUnlockableName(g) || getFinalGirlEnvelopeImage(g));
-const ITEMS_HAVE = ITEM_GIRLS.filter((g) => getFinalGirlEnvelopeImage(g)).map((g) => g.name);
-const ITEMS_NEED = ITEM_GIRLS.filter((g) => !getFinalGirlEnvelopeImage(g)).map((g) => g.name);
-const ITEMS_DONE = ITEMS_HAVE.length;
-const ITEMS_TOTAL = ITEM_GIRLS.length;
-
 const BACKLOG = [
   {
     title: 'How-to videos for add-on and optional rules (not tied to a Killer or Location)',
@@ -278,17 +274,9 @@ const BACKLOG = [
   {
     title: 'Setup reminder to bring in an opened envelope item',
     detail:
-      'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game (e.g. \u201cBring in Laurie\u2019s Bow\u201d). It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
+      'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game. It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
     affects: ['Setup Assist', 'Codex'],
     status: 'done',
-  },
-  {
-    title: 'Secret Envelope item card photos',
-    detail:
-      'A photo of each Final Girl\u2019s Secret Envelope item card (e.g. Laurie\u2019s Bow), shown in the Codex and Setup Assist once her envelope is marked opened. Each Final Girl in the Final Girls section below now has an \u201cEnvelope item\u201d line with the file name to use. Photograph them the same way as the Final Girl cards (several at once, face up on a dark surface) and send them in the chat; Claude cuts them out and names them.',
-    affects: ['Codex', 'Setup Assist', 'Asset Admin'],
-    status: ITEMS_DONE === 0 ? 'todo' : ITEMS_DONE === ITEMS_TOTAL ? 'done' : 'partial',
-    remaining: `${ITEMS_TOTAL - ITEMS_DONE} of ${ITEMS_TOTAL} item cards still to photograph (${ITEMS_DONE} done: ${ITEMS_HAVE.join(', ')}). Still needed: ${ITEMS_NEED.join(', ')}.`,
   },
   {
     title: 'Unlocked items shown in the Setup Final Girl list',
@@ -387,11 +375,30 @@ const BACKLOG = [
 // Sorted red (not started) → amber (in progress) → green (done); original
 // order is kept within each group (Array.sort is stable).
 const STATUS_ORDER = { todo: 0, partial: 1, done: 2 };
-const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO].sort(
-  (a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0)
-);
-const OPEN_BACKLOG = ALL_BACKLOG.filter((i) => i.status !== 'done');
-const DONE_BACKLOG = ALL_BACKLOG.filter((i) => i.status === 'done');
+function sortBacklog(items) {
+  return [...items].sort((a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0));
+}
+
+/* Item card photos to take. SPOILER RULE: only girls whose envelope you've
+   marked OPENED in the Codex are counted or named, and the item itself is
+   never named here (it shows on her line in the Final Girls section). */
+function itemPhotosBacklog(opened) {
+  const girls = finalGirls.filter((g) => opened.has(g.id));
+  const have = girls.filter((g) => getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+  const need = girls.filter((g) => !getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+  const detail =
+    'A photo of each opened Secret Envelope item card, shown in the Codex and Setup Assist. Nothing is named or asked for until you mark a Final Girl\u2019s envelope \u201cI\u2019ve opened it\u201d in the Codex; then her line in the Final Girls section below shows the item and the file name to use. Photograph it with other cards on a dark surface and send it in the chat; Claude cuts it out and names it.';
+  if (need.length === 0) {
+    return { title: 'Secret Envelope item card photos', detail, affects: ['Codex', 'Setup Assist', 'Asset Admin'], status: 'done' };
+  }
+  return {
+    title: 'Secret Envelope item card photos',
+    detail,
+    affects: ['Codex', 'Setup Assist', 'Asset Admin'],
+    status: have.length ? 'partial' : 'todo',
+    remaining: `Opened envelopes still needing an item card photo: ${need.join(', ')}.`,
+  };
+}
 
 const STATUS_META = {
   done: { label: 'Done', cls: 'done' },
@@ -418,6 +425,17 @@ const startCollapsed = () =>
 
 export default function Admin() {
   const [query, setQuery] = useState('');
+  const collection = useFgCollection();
+  const opened = useMemo(
+    () => new Set(Object.keys(collection.envelopes).filter((id) => collection.envelopes[id] === 'opened')),
+    [collection.envelopes]
+  );
+  const ALL_BACKLOG = useMemo(
+    () => sortBacklog([...BACKLOG, itemPhotosBacklog(opened), ...BACKLOG_AUTO]),
+    [opened]
+  );
+  const OPEN_BACKLOG = ALL_BACKLOG.filter((i) => i.status !== 'done');
+  const DONE_BACKLOG = ALL_BACKLOG.filter((i) => i.status === 'done');
   const [copied, setCopied] = useState(false);
   function copyPrompt() {
     navigator.clipboard?.writeText(VIDEO_PROMPT).then(
@@ -440,10 +458,10 @@ export default function Admin() {
         );
       }
       if (onlyMissing) {
-        entries = entries.filter((e) => !entryStatus(section.type, e).complete);
+        entries = entries.filter((e) => !entryStatus(section.type, e, opened).complete);
       }
       // Section-level completeness (over the FULL set, not the filtered view).
-      const done = section.entries.filter((e) => entryStatus(section.type, e).complete).length;
+      const done = section.entries.filter((e) => entryStatus(section.type, e, opened).complete).length;
 
       // Group the (filtered) entries by season, ascending.
       const bySeason = {};
@@ -455,13 +473,13 @@ export default function Admin() {
         .sort((a, b) => a - b)
         .map((season) => {
           const seasonEntries = bySeason[season];
-          const seasonDone = seasonEntries.filter((e) => entryStatus(section.type, e).complete).length;
+          const seasonDone = seasonEntries.filter((e) => entryStatus(section.type, e, opened).complete).length;
           return { season, entries: seasonEntries, done: seasonDone };
         });
 
       return { ...section, entries, seasons, done, totalEntries: section.entries.length };
     });
-  }, [q, onlyMissing]);
+  }, [q, onlyMissing, opened]);
 
   // Open every entry panel. Used when a filter starts, so the matches are
   // visible instead of sitting behind closed headers.
@@ -519,7 +537,7 @@ export default function Admin() {
     const c = { done: 0, partial: 0, todo: 0 };
     for (const item of ALL_BACKLOG) c[item.status || 'todo'] += 1;
     return c;
-  }, []);
+  }, [ALL_BACKLOG]);
 
   // Scenario title graphics (official pairings + vignettes), filtered like
   // the rest of the admin view.
@@ -542,7 +560,7 @@ export default function Admin() {
       let present = 0;
       let total = 0;
       for (const entry of section.entries) {
-        const s = entryStatus(section.type, entry);
+        const s = entryStatus(section.type, entry, opened);
         present += s.present;
         total += s.total;
       }
@@ -551,7 +569,7 @@ export default function Admin() {
     const present = perSection.reduce((n, s) => n + s.present, 0);
     const total = perSection.reduce((n, s) => n + s.total, 0);
     return { perSection, present, total, pct: total ? Math.round((present / total) * 100) : 0 };
-  }, []);
+  }, [opened]);
 
   return (
     <div>
@@ -874,7 +892,7 @@ export default function Admin() {
                       {!seasonCollapsed && (
                         <div className="admin-grid">
                           {grp.entries.map((entry) => (
-                            <EntryCard key={entry.id} type={section.type} entry={entry} />
+                            <EntryCard key={entry.id} type={section.type} entry={entry} opened={opened} />
                           ))}
                         </div>
                       )}
