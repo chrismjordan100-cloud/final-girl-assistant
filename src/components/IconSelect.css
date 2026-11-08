@@ -31,7 +31,8 @@
 }
 .iconselect__caret { flex: none; font-size: 0.6rem; color: var(--text-dim); }
 
-/* Card-image status dot (Final Girl picker): amber = one face, red = none. */
+/* Status dot (Final Girl picker): amber = one card face, red = no card images
+   or missing components (the latter also shows a red "missing components" note). */
 .iconselect__dot {
   flex: none;
   width: 0.55rem;
@@ -40,7 +41,9 @@
   margin-left: 0.4rem;
 }
 .iconselect__dot--one { background: var(--fg-gold); }
-.iconselect__dot--none { background: var(--fg-blood-bright); }
+.iconselect__dot--none,
+.iconselect__dot--missing { background: var(--fg-blood-bright); }
+.iconselect__note--missing { color: var(--fg-blood-bright); font-style: normal; font-weight: 600; }
 
 .iconselect__icon {
   flex: none;

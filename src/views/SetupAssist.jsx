@@ -13,7 +13,7 @@ import {
   finalGirlCardStatus,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useFgCollection, storageFor, envelopeStatus } from '../hooks/useFgCollection.js';
+import { useFgCollection, storageFor, envelopeStatus, hasMissingComponents } from '../hooks/useFgCollection.js';
 import { finalGirlUnlockableName } from '../data/cardData.js';
 import IconSelect from '../components/IconSelect.jsx';
 import BestFits from '../components/BestFits.jsx';
@@ -312,12 +312,18 @@ export default function SetupAssist({ onNavigate }) {
                               value={finalGirlId || ''}
                               onChange={setFinalGirl}
                               options={finalGirlGroups.flatMap(([group, girls]) =>
-                                girls.map((g) => ({
-                                  id: g.id,
-                                  name: (collection.isFavourite(g.id) ? '\u2605 ' : '') + g.name,
-                                  group,
-                                  dot: finalGirlCardStatus(g),
-                                }))
+                                girls.map((g) => {
+                                  // Missing components (from her Codex "Stored in") beats
+                                  // the card-image status: always red, with a note.
+                                  const missing = hasMissingComponents(g, collection.storage);
+                                  return {
+                                    id: g.id,
+                                    name: (collection.isFavourite(g.id) ? '\u2605 ' : '') + g.name,
+                                    group,
+                                    dot: missing ? 'missing' : finalGirlCardStatus(g),
+                                    note: missing ? 'missing components' : undefined,
+                                  };
+                                })
                               )}
                             />
                           </div>

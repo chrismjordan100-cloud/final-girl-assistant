@@ -62,6 +62,13 @@ export function storageFor(fg, storage) {
   return { text: defaultStorage(fg), isDefault: true };
 }
 
+/* True while her Codex "Stored in" says she has missing components (any text
+   containing "missing", e.g. "Missing components" or "Missing - lent out").
+   Clears itself as soon as the Stored in text no longer says missing. */
+export function hasMissingComponents(fg, storage) {
+  const custom = fg && storage && storage[fg.id];
+  return Boolean(custom) && /missing/i.test(custom);
+}
 /* Suggestions for the "Stored in" box: every Feature Film box, plus any
    places you've already typed (so "Promo binder" only needs typing once). */
 export function storageSuggestions(storage) {

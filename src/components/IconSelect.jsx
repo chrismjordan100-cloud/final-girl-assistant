@@ -16,6 +16,13 @@ import './IconSelect.css';
      placeholder  text shown when nothing is selected
      ariaLabel  accessible label
    ========================================================================== */
+// Hover text for the status dots. 'missing' (missing components) is always red.
+const DOT_TITLES = {
+  one: 'Only one card face added (front or back)',
+  none: 'No card images added',
+  missing: 'Missing components (from her Codex \u201cStored in\u201d)',
+};
+
 export default function IconSelect({
   value,
   onChange,
@@ -80,14 +87,14 @@ export default function IconSelect({
         <span className="iconselect__icon iconselect__icon--empty" aria-hidden="true" />
       )}
       <span className="iconselect__name">{o.name}</span>
-      {(o.dot === 'one' || o.dot === 'none') && (
+      {(o.dot === 'one' || o.dot === 'none' || o.dot === 'missing') && (
         <span
           className={'iconselect__dot iconselect__dot--' + o.dot}
-          title={o.dot === 'one' ? 'Only one card face added (front or back)' : 'No card images added'}
+          title={DOT_TITLES[o.dot]}
           aria-hidden="true"
         />
       )}
-      {o.note && <span className="iconselect__note">{o.note}</span>}
+      {o.note && <span className={'iconselect__note' + (o.dot === 'missing' ? ' iconselect__note--missing' : '')}>{o.note}</span>}
     </li>
   );
 
@@ -105,7 +112,10 @@ export default function IconSelect({
           <>
             {selected.icon && <img className="iconselect__icon" src={selected.icon} alt="" aria-hidden="true" />}
             <span className="iconselect__name">{selected.name}</span>
-            {selected.note && <span className="iconselect__note">{selected.note}</span>}
+            {selected.dot === 'missing' && (
+              <span className="iconselect__dot iconselect__dot--missing" title={DOT_TITLES.missing} aria-hidden="true" />
+            )}
+            {selected.note && <span className={'iconselect__note' + (selected.dot === 'missing' ? ' iconselect__note--missing' : '')}>{selected.note}</span>}
           </>
         ) : (
           <span className="iconselect__placeholder">{placeholder}</span>
