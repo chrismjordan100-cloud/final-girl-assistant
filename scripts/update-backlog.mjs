@@ -212,9 +212,20 @@ ITEMS.push(
     check() {
       const data = read('src/data/locationSpaces.js');
       const wired = /case 'location'/.test(read('src/data/cardData.js'));
-      if (data && wired) return 'green';
-      if (data) return 'amber';
-      return 'red';
+      if (!data) return 'red';
+      // Green only when EVERY location has its spaces listed.
+      const games = read('src/data/games.js');
+      const start = games.indexOf('export const locations');
+      const block = start >= 0 ? games.slice(start, games.indexOf('];', start)) : '';
+      const locs = [...block.matchAll(/id: '([^']+)'[^}]*?name: (['"])(.*?)\2/g)].map((m) => ({ id: m[1], name: m[3] }));
+      const missing = locs.filter((l) => !new RegExp(`^  '${l.id}': \\[`, 'm').test(data));
+      if (wired && missing.length === 0) return 'green';
+      const done = locs.length - missing.length;
+      this.remaining =
+        `${done} of ${locs.length} boards have their spaces listed. Still to do: ` +
+        `${missing.map((l) => l.name).join(', ') || 'wire the "location" case in cardOptionsFor()'} ` +
+        `(their boards need photographing first; see Asset Admin).`;
+      return 'amber';
     },
   },
   {

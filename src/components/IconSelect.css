@@ -45,6 +45,21 @@
 .iconselect__dot--missing { background: var(--fg-blood-bright); }
 .iconselect__note--missing { color: var(--fg-blood-bright); font-style: normal; font-weight: 600; }
 
+/* Small pill after the name (Final Girl picker: her Secret Envelope item).
+   opened = item unlocked and in play (green); toopen = won, envelope still
+   sealed (gold). Sealed girls show no badge. */
+.iconselect__badge {
+  flex: none;
+  font-size: 0.68rem;
+  line-height: 1;
+  padding: 0.22rem 0.45rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  border: 1px solid currentColor;
+}
+.iconselect__badge--opened { color: #5fd38a; background: rgba(95, 211, 138, 0.12); }
+.iconselect__badge--toopen { color: var(--fg-gold); background: rgba(212, 175, 55, 0.12); }
+
 .iconselect__icon {
   flex: none;
   width: 1.6rem;

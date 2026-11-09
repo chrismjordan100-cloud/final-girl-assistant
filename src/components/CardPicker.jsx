@@ -29,6 +29,7 @@ export default function CardPicker({
   const effect = matched ? matched.effect : null;
   const flavour = matched ? matched.flavour : null;
   const known = options.length > 0;
+  const isSpace = type === 'location';
 
   return (
     <span className="card-picker">
@@ -38,7 +39,7 @@ export default function CardPicker({
         list={known ? listId : undefined}
         autoFocus={autoFocus}
         value={value}
-        placeholder={placeholder || (known ? 'Pick or type a card name' : 'Type the card name')}
+        placeholder={isSpace ? (known ? 'Pick the space she\u2019s in (or type one)' : 'Type where she is') : placeholder || (known ? 'Pick or type a card name' : 'Type the card name')}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={onKeyDown}
       />
@@ -53,9 +54,13 @@ export default function CardPicker({
       )}
       {!matched && (
         <span className="card-picker__count">
-          {known
-            ? `${options.length} known card${options.length === 1 ? '' : 's'} to pick from — or type any name (e.g. a new expansion)`
-            : 'No card list for this combo yet — just type the name'}
+          {isSpace
+            ? known
+              ? `${options.length} spaces on this board to pick from (start typing to filter)`
+              : 'No space list for this location yet (pick a Location in Setup, or just type it)'
+            : known
+              ? `${options.length} known card${options.length === 1 ? '' : 's'} to pick from — or type any name (e.g. a new expansion)`
+              : 'No card list for this combo yet — just type the name'}
         </span>
       )}
       {effect && <span className="card-picker__effect">{effect}</span>}

@@ -17,7 +17,7 @@ FILM = dict(
     name="Santa's Village",
     heading="SANTA'S VILLAGE",
     film='North Pole Nightmare',
-    background=G+'S0-location-santas-village-art.png', flavour=G+'S0-location-santas-village-flavour.png',
+    background=G+'S0-location-santas-village-art.png', flavour=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'titlecards', 'santas-village-titlecard.png'),
     scenes=[
         dict(title="Santa's Village",
              kind='intro',

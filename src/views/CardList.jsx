@@ -36,9 +36,9 @@ function StatusBadge({ status }) {
 function ImageSlot({ image, file, show }) {
   if (image) {
     return (
-      <a className="cl-thumb" href={image} target="_blank" rel="noreferrer" title="Open the card image">
-        <img src={image} alt="" loading="lazy" />
-      </a>
+      <span className="cl-thumb" title="Click to see it full screen">
+        <img src={image} alt="Card image" loading="lazy" />
+      </span>
     );
   }
   if (!show || !file) return null;

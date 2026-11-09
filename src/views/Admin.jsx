@@ -12,10 +12,11 @@ import {
   noWrittenRulesExpected,
   getVideoChecklist,
   VIDEOS_FOLDER,
+  getFinalGirlEnvelopeImage,
 } from '../data/games.js';
+import { finalGirlUnlockableName } from '../data/cardData.js';
 import { VIDEO_PROMPT } from '../data/videoPrompt.js';
 import BACKLOG_AUTO from '../data/backlogAuto.json';
-import { getFinalGirlEnvelopeImage } from '../data/games.js';
 import { ENVELOPE_ITEMS } from '../data/fgFit.js';
 import { useFgCollection, envelopeStatus, winsByFinalGirl } from '../hooks/useFgCollection.js';
 import { useGameLog } from '../hooks/useGameLog.js';
@@ -132,33 +133,58 @@ function EnvelopeSection({ collapsed, onToggle, onlyMissing, q }) {
 }
 
 /* One marker per asset TYPE for an entry (not per page). */
-function assetTypesFor(type, entry) {
+function assetTypesFor(type, entry, opened) {
   const prefix = `S${entry.season}-${type}-${entry.shortName}`;
 
   if (type === 'finalgirl') {
-    return [
+    const list = [
       { key: 'front', label: 'Card front', example: `${prefix}-front.png`, present: hasImageBaseName(`${prefix}-front`) },
       { key: 'back', label: 'Card back', example: `${prefix}-back.png`, present: hasImageBaseName(`${prefix}-back`) },
     ];
+    // Her Secret Envelope item card. SPOILER RULE: the item is never named or
+    // requested until you've marked her envelope OPENED in the Codex. Sealed
+    // (or won-but-unopened) girls get no item line at all.
+    const isOpened = Boolean(opened && opened.has(entry.id));
+    const itemName = isOpened ? finalGirlUnlockableName(entry) : null;
+    const itemImg = isOpened ? getFinalGirlEnvelopeImage(entry) : null;
+    if (isOpened) {
+      const itemSlug = String(itemName || 'item')
+        .toLowerCase()
+        .replace(new RegExp(`^${entry.shortName}\\W*s?\\s+`, 'i'), '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      list.push({
+        key: 'item',
+        label: itemName ? `Envelope item: ${itemName}` : 'Envelope item card',
+        example: `S${entry.season}-item-${entry.shortName}-${itemSlug || 'item'}.png`,
+        present: Boolean(itemImg),
+      });
+    }
+    return list;
   }
 
   // killer / location
-  return [
+  const list = [
     { key: 'icon', label: 'Icon', example: `${prefix}-icon.png`, present: Boolean(getIcon(type, entry)) },
     { key: 'art', label: 'Key art', example: `${prefix}-art.png`, present: hasImageBaseName(`${prefix}-art`) },
     { key: 'flavour', label: 'Flavour text', example: `${prefix}-flavour.png`, present: hasImageBaseName(`${prefix}-flavour`) },
     { key: 'rules', label: 'Rules pages', example: `${prefix}-1.png (+ -2, -3, …)`, present: getPageImages(type, entry).length > 0 },
   ];
+  // Locations: a sharp, straight-on photo of the board / map, shown in the Codex.
+  if (type === 'location') {
+    list.push({ key: 'board', label: 'Board / map (high res)', example: `${prefix}-board.jpg`, present: hasImageBaseName(`${prefix}-board`) });
+  }
+  return list;
 }
 
-function entryStatus(type, entry) {
-  const types = assetTypesFor(type, entry);
+function entryStatus(type, entry, opened) {
+  const types = assetTypesFor(type, entry, opened);
   const present = types.filter((t) => t.present).length;
   return { types, present, total: types.length, complete: present === types.length };
 }
 
-function EntryCard({ type, entry }) {
-  const { types, present, total, complete } = entryStatus(type, entry);
+function EntryCard({ type, entry, opened }) {
+  const { types, present, total, complete } = entryStatus(type, entry, opened);
 
   // Rule-sheet images present but the WRITTEN rules haven't been transcribed by
   // Kiro yet (Killers/Locations only — Final Girls have no written rules).
@@ -214,7 +240,32 @@ const VIDEOS_TOTAL = VIDEO_LIST.length;
 
 /* Running backlog of material still to scan / transcribe with Kiro. Add to
    this list as new ideas come up so nothing gets forgotten. */
+/* Location board photos still to take, worked out from the files present. */
+const BOARDS_NEEDED = locations.filter((l) => !hasImageBaseName(`S${l.season}-location-${l.shortName}-board`));
+
 const BACKLOG = [
+  {
+    title: 'Chris to do: photograph the North Pole Nightmare flavour',
+    detail:
+      'Krampus and Santa\u2019s Village have no official flavour image yet: the title cards that stood in for them have been taken out of the Codex. The flavour (the story text and credits, like the other boxes\u2019 flavour images) isn\u2019t published anywhere online. Photograph it from the box (or the Killer board / rule sheet if that\u2019s where it is), flat and straight-on, and send it in the chat; Claude will crop it into S0-killer-krampus-flavour.png and S0-location-santas-village-flavour.png. Until then the Codex shows a written flavour line based on Krampus\u2019s official backstory.',
+    affects: ['Codex', 'This Game', 'You (Chris)'],
+    status: 'todo',
+  },
+  {
+    title: 'Chris to do: sort the Mausoleum Box into the Feature Film boxes',
+    detail:
+      'A physical job, not a digital one. The Mausoleum Box holds extras for every series in one place, so move each piece into the Feature Film box it belongs to, so a game\u2019s whole set comes out of one box. Example: the Special Victim meeples for The Happy Trails Horror go into The Happy Trails Horror box. Contents to sort: Special Victim meeples (Series 1 to 4 and the Special Features), the Vehicle Action cards and Proxy Event cards (each into its film\u2019s box), the Signature Action cards, Julia and Constance, the Elizabeth and Ursula character packs and miniatures, and the Evan and AJ meeples. Anything with no single film (e.g. the Signature Action cards or the character packs) needs a home of your choosing. Tell Claude when it\u2019s done and she\u2019ll mark it green.',
+    affects: ['You (Chris)', 'Storage'],
+    status: 'todo',
+  },
+  {
+    title: 'Chris to do: photograph the missing location boards',
+    detail:
+      'Each Location in the Codex shows its board / map under the key art; click it to see it full screen. Most boards came from the publisher\u2019s shop images, but some aren\u2019t published anywhere usable. For those, lay the board flat in good light and take one photo from straight above, filling the frame (no angle, no glare), then send it in the chat saying which board it is. Claude straightens it and saves it as S{season}-location-{shortName}-board.jpg. The Locations section below shows a tick or cross for each. Once a board is in, Claude also reads its spaces into the Turn Tracker\u2019s \u201cWhere she is\u201d list (those two locations use free text until then).',
+    affects: ['Codex', 'You (Chris)'],
+    status: BOARDS_NEEDED.length === 0 ? 'done' : 'partial',
+    remaining: `Boards still needed: ${BOARDS_NEEDED.map((l) => l.name).join(', ')}.`,
+  },
   {
     title: 'How-to videos for add-on and optional rules (not tied to a Killer or Location)',
     detail:
@@ -250,7 +301,9 @@ const BACKLOG = [
     detail:
       'The Pods vignette has no rule sheet anywhere yet: it isn\u2019t in the tracker, on RulesPal or on the publisher\u2019s site, and its official name is unconfirmed. When you have the box, scan or photograph the rule sheet and the key cards (Finales, Dark Powers, any special cards), put them in s4-rules-pdf (e.g. FV04_Pods.pdf) and src/assets/games (S4-killer-pods-1.png, -2.png\u2026), add its -flavour.png, and fix the name and setup text in games.js. Then give Claude the Training videos prompt for Season 4: it will only make the missing Pods video (S4-killer-pods-video.mp4).',
     affects: ['This Game', 'Asset Admin', 'Rules Reference'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'The key art is in (S4-killer-pods-art.png). Still to do: the rule sheet and key cards scanned, its -flavour.png, its official name and setup text in games.js, then its how-to-play video.',
   },
   // status: 'done' (green) | 'partial' (amber) | 'todo' (red).
   // `remaining` is shown ONLY for 'partial' items — what's left to finish.
@@ -336,7 +389,7 @@ const BACKLOG = [
   {
     title: 'Best-fit Final Girls for a scenario (with reasons)',
     detail:
-      'Setup Assist shows \u201cBest fits by ability\u201d under the official girls once a Killer or Location is picked: the top 5 Final Girls scored out of 10 for that scenario, each with a one-line summary and a \u201cWhy?\u201d listing her matching strengths, weak spots and any special pairing (e.g. Adelaide lowering Wrath against Inkanyamba). Official girls always show their score. The logic is on Codex \u2192 Fit grid: 11 traits, every girl rated 0\u20133, what every Killer and Location rewards, and scores for any combo. Codex \u2192 Fit summary shows every girl against every Killer + Location combo in one colour-coded table (red = poor, green = great), with a gold ring where she is official for that combo (e.g. Laurie under Hans), so highs, lows and official pairings stand out at a glance. Filter by series, then narrow to one Killer or Location (e.g. Series 4 \u2192 The Raptors), and sort by \u201cBest for this selection\u201d to rank the girls for just that, or \u201cBest overall\u201d for every combo. Ratings live in src/data/fgFit.js.',
+      'Setup Assist shows \u201cBest fits by ability\u201d under the official girls once a Killer or Location is picked: the top 5 Final Girls scored out of 10 for that scenario, each with a one-line summary and a \u201cWhy?\u201d listing her matching strengths, weak spots and any special pairing (e.g. Adelaide lowering Wrath against Inkanyamba). Official girls always show their score. The logic is on Codex \u2192 Fit grid. Each score is 55% scenario fit (10 traits, every girl rated 0\u20133, against what each Killer and Location rewards), 20% survival (her health, worth more against hard-hitting Killers and where Victim deaths feed Bloodlust) and 25% Ultimate (how many saves she needs times how strong the Ultimate is, worth more where Victims die fast, with 5\u20136-save girls marked down there). Every Killer and Location is also rated 0\u20133 for how fast Victims die and how much those deaths feed Bloodlust (KILLER_PRESSURE / LOCATION_PRESSURE), plus special pairings (e.g. Melanie against The Birds). Health, save slots and Ultimate strength for every girl are in FG_STATS in src/data/fgFit.js. Codex \u2192 Fit summary shows every girl against every Killer + Location combo in one colour-coded table (red = poor, green = great), with a gold ring where she is official for that combo (e.g. Laurie under Hans), so highs, lows and official pairings stand out at a glance. Filter by series, then narrow to one Killer or Location (e.g. Series 4 \u2192 The Raptors), and sort by \u201cBest for this selection\u201d to rank the girls for just that, or \u201cBest overall\u201d for every combo. Ratings live in src/data/fgFit.js.',
     affects: ['Setup Assist', 'Codex'],
     status: 'partial',
     remaining: 'Grandma is still unrated (her card shows 1 health, so she needs her Ultimate side first). Gabrielle is now rated from both card sides. Julie, Meg and Carolyn are rated from the action side only, so photograph their Ultimate sides to firm them up. Every Killer, Location and Final Girl profile was audited against the rules and card data in Nov 2026 (invented needs removed, one Toughness rule for health). Still estimates: Razorface (only one Affliction known), Krampus and Santa\u2019s Village (no rule sheet), and the Pods (no rules at all, so unrated). Cassie, Mandy, Maud and Christina need their saves-needed numbers confirmed.',
@@ -365,8 +418,15 @@ const BACKLOG = [
   {
     title: 'Setup reminder to bring in an opened envelope item',
     detail:
-      'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game (e.g. \u201cBring in Laurie\u2019s Bow\u201d). It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
+      'Done. Once a Final Girl\u2019s Secret Envelope is marked \u201cI\u2019ve opened it\u201d in the Codex, picking her in Setup Assist adds a \u201cBring in <her item>\u201d step under Special Setup for This Game. It shows even before a Killer or Location is picked. Item names come from the card data; the few girls with no item named yet get \u201cher Secret Envelope item\u201d instead. A won-but-still-sealed envelope does not add the step.',
     affects: ['Setup Assist', 'Codex'],
+    status: 'done',
+  },
+  {
+    title: 'Unlocked items shown in the Setup Final Girl list',
+    detail:
+      'Done. When you pick a Final Girl in Setup Assist, the list shows a green \u201c\uD83D\uDD13 Unlocked\u201d badge beside every girl whose Secret Envelope is opened (her item can come into the game), and a gold \u201c\u2709\uFE0F To open\u201d badge where you\u2019ve won with her but not opened it yet. Uses the same rules as the Codex marker.',
+    affects: ['Setup Assist'],
     status: 'done',
   },
   {
@@ -432,23 +492,27 @@ const BACKLOG = [
   {
     title: 'Periodically harvest new online tips (especially Series 4)',
     detail:
-      'Community strategy tips keep surfacing over time as more people play, so revisit the web periodically and fold new ones into the Tips data (generalTips / killerTips / locationTips in src/data/games.js), each with its source and a confirmed/reported confidence tag like the existing ones. Series 4 is the priority: it is newest and under-covered, and tips will grow as it gets played around the world \u2014 watch for per-Killer and per-Location advice for Billy/Buddyland, Grimlash/Shady Acres, Berith/L\u2019Armes Abbey, The Volk\u2019ar/Pesadilla Verde, The Raptors/Isla Lagarto, and the Shriek Special Feature (Mort). Also backfill the S1\u2013S3 combos as new guides appear. Good sources to sweep: BoardGameGeek forums/strategy threads, the Final Girl wiki, YouTube playthrough/strategy channels (e.g. Dude Take Your Turn), Reddit, and Van Ryder\u2019s own posts. Rough cadence: every few months, and whenever a new S4 box hits the table. Note: S4 tips are currently EMPTY (no S4 entries in the tips data yet), so the first pass is a from-scratch build, not just a top-up.',
+      'Community strategy tips keep surfacing over time as more people play, so revisit the web periodically and fold new ones into the Tips data (generalTips / killerTips / locationTips in src/data/games.js), each with its source and a confirmed/reported confidence tag like the existing ones. Series 4 is the priority: it is newest and under-covered, and tips will grow as it gets played around the world \u2014 watch for per-Killer and per-Location advice for Billy/Buddyland, Grimlash/Shady Acres, Berith/L\u2019Armes Abbey, The Volk\u2019ar/Pesadilla Verde, The Raptors/Isla Lagarto, and the Shriek Special Feature (Mort). Also backfill the S1\u2013S3 combos as new guides appear. Good sources to sweep: BoardGameGeek forums/strategy threads, the Final Girl wiki, YouTube playthrough/strategy channels (e.g. Dude Take Your Turn), Reddit, and Van Ryder\u2019s own posts. Rough cadence: every few months, and whenever a new S4 box hits the table.',
     affects: ['Tips', 'Ask', 'This Game'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'Ongoing by design. Series 4 has 33 tips so far (most Killers and Locations covered, from reviews and the Strategy Tips Handbook). Next sweep: fill gaps for The Raptors / Isla Lagarto and Shriek, then top up S1\u2013S3 every few months.',
   },
   {
     title: 'Final Girl Series 4 \u2013 card reference sheet',
     detail:
       'A searchable, sortable reference of every card in each Series 4 Feature Film, built from photos of the physical cards. One section per film: Bad Times at Buddyland (Billy the Bear / Buddyland), A Rotten Harvest (Grimlash / Shady Acres), A Demon in the Shadows (Berith / L\u2019Armes Abbey), The Green Terror (The Volk\u2019ar / Pesadilla Verde), The Raptor Games (The Raptors / Isla Lagarto), and Shriek \u2013 Special Feature (Mort / Mega Board Game Con). Capture per Location and Killer: Terror cards (Location and Killer decks kept separate), Setup cards, Item cards (noting the Search space / Item deck where shown), Event cards, and killer-specific extras where present (Buddy cards, Harvest Madness, Raptor Spawn, Volk\u2019ar Movement, Clue/Suspect cards) plus Dark Power, Epic Dark Power, Finale and Epic Finale cards. Fields per card: Feature Film, Source (Location or Killer), Card type, Card name, Flavour text, full Effect text, key stats where relevant (range, damage, hands, one-time/limited use, weapon/reaction/passive), and Notes (e.g. clarifications from the rules PDF \u201CCard Notes\u201D section). Input: uploaded photos of each deck spread on a table, cross-checked against the official rules PDFs on the Van Ryder Games product pages; flag any card whose text isn\u2019t legible rather than guessing. Output: a single filterable view (filter by Feature Film, Location/Killer and card type, free-text search across names and effect text), also exportable as a spreadsheet. Waiting on card photos.',
     affects: ['Codex', 'Card data', 'Export'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'The card data for all five Series 4 films and Shriek is in (about 160 Series 4 cards: Finales, Dark Powers, Terror, Setup, Event and Item cards, plus special cards), and Codex \u2192 All cards already gives the searchable, filterable view. Still to do: The Raptors and Isla Lagarto are thin (only 1 Finale, 4 Raptor Terror cards; no Isla Lagarto Setup cards, 4 Events, 1 Terror card), and the text hasn\u2019t been checked against photos of the real cards.',
   },
   {
-    title: 'Series 4 icons — add with the S4 import',
+    title: 'Series 4 icons \u2014 add with the S4 import',
     detail:
-      'When Series 4 is added, remember the icon assets too: (a) the main Killer/Location emblems in src/assets/icons/ named S4-killer-{id}-icon.png / S4-location-{id}-icon.png; and (b) any S4 scenario rule icons in src/assets/icons/rules/ with rule-icons.json entries. Without these the S4 entries show no icons in Codex, This Game, Scenarios, Tips and the pickers.',
+      'Done. All 10 Series 4 Killer and Location emblems are in src/assets/icons/ (e.g. S4-killer-grimlash-icon.png), and 62 Series 4 scenario rule icons are in src/assets/icons/rules/ with their rule-icons.json entries, so the S4 entries show their icons in the Codex, This Game, Scenarios, Tips and the pickers. Any S4 box added later (e.g. the Pods vignette) needs its icons adding the same way.',
     affects: ['Codex', 'This Game', 'Scenarios', 'Icon Reference', 'Asset Admin'],
-    status: 'todo',
+    status: 'done',
   },
 ];
 
@@ -459,11 +523,30 @@ const BACKLOG = [
 // Sorted red (not started) → amber (in progress) → green (done); original
 // order is kept within each group (Array.sort is stable).
 const STATUS_ORDER = { todo: 0, partial: 1, done: 2 };
-const ALL_BACKLOG = [...BACKLOG, ...BACKLOG_AUTO].sort(
-  (a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0)
-);
-const OPEN_BACKLOG = ALL_BACKLOG.filter((i) => i.status !== 'done');
-const DONE_BACKLOG = ALL_BACKLOG.filter((i) => i.status === 'done');
+function sortBacklog(items) {
+  return [...items].sort((a, b) => (STATUS_ORDER[a.status] ?? 0) - (STATUS_ORDER[b.status] ?? 0));
+}
+
+/* Item card photos to take. SPOILER RULE: only girls whose envelope you've
+   marked OPENED in the Codex are counted or named, and the item itself is
+   never named here (it shows on her line in the Final Girls section). */
+function itemPhotosBacklog(opened) {
+  const girls = finalGirls.filter((g) => opened.has(g.id));
+  const have = girls.filter((g) => getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+  const need = girls.filter((g) => !getFinalGirlEnvelopeImage(g)).map((g) => g.name);
+  const detail =
+    'A photo of each opened Secret Envelope item card, shown in the Codex and Setup Assist. Nothing is named or asked for until you mark a Final Girl\u2019s envelope \u201cI\u2019ve opened it\u201d in the Codex; then her line in the Final Girls section below shows the item and the file name to use. Photograph it with other cards on a dark surface and send it in the chat; Claude cuts it out and names it.';
+  if (need.length === 0) {
+    return { title: 'Secret Envelope item card photos', detail, affects: ['Codex', 'Setup Assist', 'Asset Admin'], status: 'done' };
+  }
+  return {
+    title: 'Secret Envelope item card photos',
+    detail,
+    affects: ['Codex', 'Setup Assist', 'Asset Admin'],
+    status: have.length ? 'partial' : 'todo',
+    remaining: `Opened envelopes still needing an item card photo: ${need.join(', ')}.`,
+  };
+}
 
 const STATUS_META = {
   done: { label: 'Done', cls: 'done' },
@@ -490,6 +573,17 @@ const startCollapsed = () =>
 
 export default function Admin() {
   const [query, setQuery] = useState('');
+  const collection = useFgCollection();
+  const opened = useMemo(
+    () => new Set(Object.keys(collection.envelopes).filter((id) => collection.envelopes[id] === 'opened')),
+    [collection.envelopes]
+  );
+  const ALL_BACKLOG = useMemo(
+    () => sortBacklog([...BACKLOG, itemPhotosBacklog(opened), ...BACKLOG_AUTO]),
+    [opened]
+  );
+  const OPEN_BACKLOG = ALL_BACKLOG.filter((i) => i.status !== 'done');
+  const DONE_BACKLOG = ALL_BACKLOG.filter((i) => i.status === 'done');
   const [copied, setCopied] = useState(false);
   function copyPrompt() {
     navigator.clipboard?.writeText(VIDEO_PROMPT).then(
@@ -512,10 +606,10 @@ export default function Admin() {
         );
       }
       if (onlyMissing) {
-        entries = entries.filter((e) => !entryStatus(section.type, e).complete);
+        entries = entries.filter((e) => !entryStatus(section.type, e, opened).complete);
       }
       // Section-level completeness (over the FULL set, not the filtered view).
-      const done = section.entries.filter((e) => entryStatus(section.type, e).complete).length;
+      const done = section.entries.filter((e) => entryStatus(section.type, e, opened).complete).length;
 
       // Group the (filtered) entries by season, ascending.
       const bySeason = {};
@@ -527,13 +621,13 @@ export default function Admin() {
         .sort((a, b) => a - b)
         .map((season) => {
           const seasonEntries = bySeason[season];
-          const seasonDone = seasonEntries.filter((e) => entryStatus(section.type, e).complete).length;
+          const seasonDone = seasonEntries.filter((e) => entryStatus(section.type, e, opened).complete).length;
           return { season, entries: seasonEntries, done: seasonDone };
         });
 
       return { ...section, entries, seasons, done, totalEntries: section.entries.length };
     });
-  }, [q, onlyMissing]);
+  }, [q, onlyMissing, opened]);
 
   // Open every entry panel. Used when a filter starts, so the matches are
   // visible instead of sitting behind closed headers.
@@ -591,7 +685,7 @@ export default function Admin() {
     const c = { done: 0, partial: 0, todo: 0 };
     for (const item of ALL_BACKLOG) c[item.status || 'todo'] += 1;
     return c;
-  }, []);
+  }, [ALL_BACKLOG]);
 
   // Scenario title graphics (official pairings + vignettes), filtered like
   // the rest of the admin view.
@@ -614,7 +708,7 @@ export default function Admin() {
       let present = 0;
       let total = 0;
       for (const entry of section.entries) {
-        const s = entryStatus(section.type, entry);
+        const s = entryStatus(section.type, entry, opened);
         present += s.present;
         total += s.total;
       }
@@ -623,7 +717,7 @@ export default function Admin() {
     const present = perSection.reduce((n, s) => n + s.present, 0);
     const total = perSection.reduce((n, s) => n + s.total, 0);
     return { perSection, present, total, pct: total ? Math.round((present / total) * 100) : 0 };
-  }, []);
+  }, [opened]);
 
   return (
     <div>
@@ -946,7 +1040,7 @@ export default function Admin() {
                       {!seasonCollapsed && (
                         <div className="admin-grid">
                           {grp.entries.map((entry) => (
-                            <EntryCard key={entry.id} type={section.type} entry={entry} />
+                            <EntryCard key={entry.id} type={section.type} entry={entry} opened={opened} />
                           ))}
                         </div>
                       )}

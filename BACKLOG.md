@@ -103,7 +103,7 @@ mode too. Relevant code: diceForHorror() in src/views/TurnTracker.jsx.
 
 **Status:** 🟡 partially built / in progress.
 
-### 🔴 Named spaces on every location board
+### 🟡 Named spaces on every location board
 
 Record every named space on every location board (e.g. each cabin, the
 boathouse, exits, search spaces) so that when you log "Where she is" in the
@@ -113,7 +113,7 @@ space { name, kind: exit | search | special | plain }, then a "location" case
 in cardOptionsFor() in src/data/cardData.js. You will add the names over time,
 board by board; the story generator can then use the real space names too.
 
-**Status:** 🔴 not started.
+**Status:** 🟡 partially built / in progress.
 
 ### 🟡 Secret Envelope items: photos and fit assessments
 

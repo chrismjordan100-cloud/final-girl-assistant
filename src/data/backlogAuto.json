@@ -99,7 +99,8 @@
       "Card data",
       "The Story"
     ],
-    "status": "todo",
+    "status": "partial",
+    "remaining": "20 of 22 boards have their spaces listed. Still to do: Isla Lagarto, Santa's Village (their boards need photographing first; see Asset Admin).",
     "auto": true
   },
   {

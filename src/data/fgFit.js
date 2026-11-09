@@ -11,8 +11,17 @@
         'estimate' a reasoned guess from the rules; refine as you play
    4. SPECIALS: one-off pairings worth extra (e.g. Adelaide lowering Wrath
       against Inkanyamba).
-   5. scoreGirl / rankGirls: combine the lot into a score out of 10 with the
-      reasons, for any Killer + Location.
+   5. FG_STATS: every girl's health, the number of Victims she must save
+      before her Ultimate (the save slots on her card), and how strong that
+      Ultimate is. These count in EVERY scenario (see scoreGirl).
+   6. scoreGirl / rankGirls: combine the lot into a score out of 10 with the
+      reasons, for any Killer + Location:
+        55%  scenario fit   her traits x what the Killer/Location rewards
+        20%  survival       her health (counts for more vs hard-hitting Killers,
+                            and where Victim deaths feed Bloodlust)
+        25%  Ultimate       how fast she gets it x how good it is (counts for
+                            more where Victims die quickly; 5-6 saves are
+                            marked down there, as she may never get there)
 
    All ratings are judgement calls, so edit freely: the score updates itself.
    ========================================================================== */
@@ -28,114 +37,114 @@ export const TRAITS = [
   { id: 'cards', label: 'Card access', short: 'Cards', desc: 'Cheaper or free Action cards (Guard, Reactions…).' },
   { id: 'items', label: 'Item use', short: 'Items', desc: 'Holding and using Items/weapons better.' },
   { id: 'control', label: 'Killer control', short: 'Control', desc: 'Choosing or blunting what the Killer does.' },
-  { id: 'rescue', label: 'Fast Ultimate', short: 'Fast Ult', desc: 'Needs few Victims saved to unlock her Ultimate.' },
+  { id: 'rescue', label: 'Fast Ultimate', short: 'Fast Ult', desc: 'How much the scenario rewards saving Victims early and unlocking the Ultimate quickly.' },
 ];
+
+/* Traits each girl is rated in. Health and Ultimate speed are NOT here: they
+   come from FG_STATS and count in every scenario. 'rescue' stays a scenario
+   need (it boosts how much her Ultimate speed counts). */
+export const GIRL_TRAIT_IDS = TRAITS.filter((t) => t.id !== 'rescue').map((t) => t.id);
 
 export const TRAIT_LABEL = Object.fromEntries(TRAITS.map((t) => [t.id, t.label]));
 
 /* t(rating, reason) */
 const t = (v, why) => ({ v, why });
 
-/* Fast Ultimate is from how many Victims she needs: 4 = 2, 5 = 1, 6 = 0.
-   Kept modest so it tips close calls rather than dominating. */
-const ult = (n) => t(n <= 4 ? 2 : n === 5 ? 1 : 0, `Ultimate after only ${n} saves`);
+/* Old helper kept so the lines below read as before; Ultimate speed now comes
+   from FG_STATS, and scoreGirl ignores any 'rescue' rating here. */
+const ult = (n) => t(0, `Ultimate after ${n} saves`);
 
 /* Each Final Girl's strengths. Girls not listed have no card data yet, so
    they can't be rated (shown as "not rated" rather than scoring 0).
 
-   Toughness from health (applied to every girl; audited Nov 2026):
-     4 health = 0 (said in the reason, even if she heals)
-     5 health = 0, or 1 if extra saves heal her or two save rewards heal
-     6 health = 1      7 health = 2
-   Abilities that heal or prevent damage are rated on top of that.
+   Toughness rates ABILITIES only (audited Nov 2026). Her health itself is in
+   FG_STATS and counts in every scenario, so it is NOT added here too:
+     1  extra saves heal her, or two or more save rewards heal
+     2-3 an Ultimate or ongoing ability that heals or prevents damage
    A single save reward (one heal, one Guard card…) isn't rated on its own.
    Health checked against cards.json and the rulebook component lists. */
 export const GIRL_TRAITS = {
   // ---- Series 1
-  laurie: { attack: t(3, 'Extra damage whenever she hits an Enemy in her space'), rescue: ult(6) },
-  reiko: { move: t(2, 'Free move to a nearby Enemy each Action phase'), attack: t(1, 'Gets into fights quickly'), tank: t(1, '6 health'), rescue: ult(5) },
-  selena: { search: t(3, 'Rolls 2 extra dice on Search, and can take a Search card as a save reward'), tank: t(1, '6 health'), rescue: ult(4) },
-  alice: { dice: t(2, 'Ultimate: one Action card she names always rolls exactly 5 dice (that card only)'), move: t(1, 'Save rewards include two moves'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(6) },
-  adelaide: { tank: t(2, '6 health, and her Ultimate can be a full heal (she picks one of three effects)'), cards: t(1, 'Ultimate can instead take up to 6 Time of Action cards'), control: t(1, 'Ultimate can instead drop one Wrath track to 1'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
-  barbara: { attack: t(2, 'Extra damage for each Victim in the Killer’s space'), tank: t(2, '7 health'), rescue: ult(5) },
-  asami: { items: t(3, 'Draws an extra Item to choose from and ignores Item traps'), search: t(2, 'Better Item finds when searching'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(4) },
-  charlie: { attack: t(2, 'Can lose 3 health to take Critical Blow straight into her hand'), tank: t(2, '7 health'), rescue: ult(6) },
-  nancy: { tank: t(1, 'Can swap for a better Final Health token, and extra saves heal, but only 4 health'), rescue: ult(5) },
-  sheila: { time: t(3, '2 Time (not 1) for each card discarded for Time'), tank: t(1, '6 health'), rescue: ult(6) },
-  melanie: { attack: t(2, 'Can trade 1 health for 2 damage each Action phase'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(6) },
+  laurie: { attack: t(3, 'Extra damage whenever she hits an Enemy in her space') },
+  reiko: { move: t(2, 'Free move to a nearby Enemy each Action phase'), attack: t(1, 'Gets into fights quickly') },
+  selena: { search: t(3, 'Rolls 2 extra dice on Search, and can take a Search card as a save reward') },
+  alice: { dice: t(2, 'Ultimate: one Action card she names always rolls exactly 5 dice (that card only)'), move: t(1, 'Save rewards include two moves'), tank: t(1, 'Extra saves heal her') },
+  adelaide: { cards: t(1, 'Ultimate can instead take up to 6 Time of Action cards'), control: t(1, 'Ultimate can instead drop one Wrath track to 1'), horror: t(1, 'Extra saves lower Horror'), tank: t(1, 'Her Ultimate can be a full heal (she picks one of three effects)') },
+  barbara: { attack: t(2, 'Extra damage for each Victim in the Killer’s space') },
+  asami: { items: t(3, 'Draws an extra Item to choose from and ignores Item traps'), search: t(2, 'Better Item finds when searching'), tank: t(1, 'Extra saves heal her') },
+  charlie: { attack: t(2, 'Can lose 3 health to take Critical Blow straight into her hand') },
+  nancy: { tank: t(1, 'Can swap for a better Final Health token, and extra saves heal') },
+  sheila: { time: t(3, '2 Time (not 1) for each card discarded for Time') },
+  melanie: { attack: t(2, 'Can trade 1 health for 2 damage each Action phase'), tank: t(1, 'Extra saves heal her') },
   // ---- Series 2
-  ellen: { search: t(2, 'Can pick from all the Location’s unused Items after a Search'), items: t(2, 'Picks exactly the Item she needs'), tank: t(0, 'Only 4 health'), rescue: ult(6) },
-  jenette: { items: t(3, 'An extra hand for Items, plus spare uses on limited Items'), attack: t(1, 'More weapons in play'), tank: t(2, '7 health'), rescue: ult(4) },
-  kate: { tank: t(2, 'Ultimate: max health becomes 7 and she heals fully (only 4 before that); extra saves heal 2'), dice: t(1, 'Extra die on Horror rolls at full health'), rescue: ult(6) },
-  uki: { tank: t(2, '6 health, plus a Guard every turn'), cards: t(2, 'Plays a copy of Guard once a turn as if it were in her hand (she still pays for it)'), rescue: ult(4) },
-  ginny: { move: t(1, 'Ultimate option: Walk moves further (she picks 2 of 4)'), tank: t(1, '6 health; Ultimate option: Short Rest heals more'), attack: t(1, 'Ultimate option: Weak Attack hits harder'), horror: t(1, 'Ultimate option: Focus lowers more Horror'), rescue: ult(6) },
-  ava: { dice: t(2, 'Rerolls every 1 on Horror rolls'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
-  red: { move: t(2, 'Once per Action phase, a free 1-space move when an Enemy is within 2 spaces'), time: t(1, 'Save rewards include +1 and +2 Time'), tank: t(1, 'Extra saves heal 2 (5 health)'), rescue: ult(6) },
-  gretel: { dice: t(1, 'Can turn a 2 into a success by discarding cards'), time: t(1, 'Save rewards include Time'), horror: t(1, 'Save rewards include Horror drops'), tank: t(1, '6 health'), rescue: ult(5) },
-  heather: { attack: t(3, 'Rerolls and +1 damage per success when attacking'), dice: t(1, 'Rerolls on attack rolls'), tank: t(1, 'Two save rewards heal (5 health)'), rescue: ult(6) },
-  veronica: { time: t(3, 'Time resets to 7 (6 in Extreme), and her save rewards are all Time'), rescue: ult(5) },
+  ellen: { search: t(2, 'Can pick from all the Location’s unused Items after a Search'), items: t(2, 'Picks exactly the Item she needs') },
+  jenette: { items: t(3, 'An extra hand for Items, plus spare uses on limited Items'), attack: t(1, 'More weapons in play'), tank: t(1, 'Extra saves heal her') },
+  kate: { dice: t(1, 'Extra die on Horror rolls at full health'), tank: t(2, 'Ultimate: max health becomes 7 and she heals fully; extra saves heal 2') },
+  uki: { cards: t(2, 'Plays a copy of Guard once a turn as if it were in her hand (she still pays for it)'), tank: t(1, 'A Guard every turn (counted under Card access too)') },
+  ginny: { move: t(1, 'Ultimate option: Walk moves further (she picks 2 of 4)'), attack: t(1, 'Ultimate option: Weak Attack hits harder'), horror: t(1, 'Ultimate option: Focus lowers more Horror'), tank: t(1, 'Ultimate option: Short Rest heals more') },
+  ava: { dice: t(2, 'Rerolls every 1 on Horror rolls'), horror: t(1, 'Extra saves lower Horror') },
+  red: { move: t(2, 'Once per Action phase, a free 1-space move when an Enemy is within 2 spaces'), time: t(1, 'Save rewards include +1 and +2 Time'), tank: t(1, 'A save reward heals, and extra saves heal 2') },
+  gretel: { dice: t(1, 'Can turn a 2 into a success by discarding cards'), time: t(1, 'Save rewards include Time'), horror: t(1, 'Save rewards include Horror drops') },
+  heather: { attack: t(3, 'Rerolls and +1 damage per success when attacking'), dice: t(1, 'Rerolls on attack rolls'), tank: t(1, 'Two save rewards heal') },
+  veronica: { time: t(3, 'Time resets to 7 (6 in Extreme), and her save rewards are all Time') },
   // ---- Series 3
-  tali: { cards: t(2, 'Takes a Reaction card, and Reactions cost 1 Time less'), tank: t(1, '6 health'), rescue: ult(4) },
-  kat: { attack: t(2, '+2 damage with guns (needs a gun)'), items: t(1, 'Wants a gun'), tank: t(0, 'Only 4 health'), rescue: ult(6) },
-  christie: { control: t(3, 'Draws two Terror cards and chooses which happens'), move: t(1, 'Extra saves give moves'), rescue: ult(4) },
-  kenzie: { cards: t(3, 'Once each Planning phase, buys every copy of an Action card for the price of one'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
-  octavia: { tank: t(2, 'Builds up a marker to soak incoming damage'), rescue: ult(4) },
-  janelle: { attack: t(2, 'Builds up a marker that adds damage to one attack'), rescue: ult(4) },
-  // Cassie and Mandy: saves needed aren't in cards.json (health is, from the
-  // rulebook component list), so their Fast Ultimate rating is unconfirmed.
-  cassie: { attack: t(2, 'Ultimate doubles one attack (needs her in the Killer’s space or 6 Time left); how often isn’t in the card data'), rescue: ult(5) },
-  mandy: { attack: t(3, 'Ultimate: attacks without a weapon automatically deal 3 damage'), tank: t(1, '6 health'), rescue: ult(6) },
-  meghan: { tank: t(2, 'Heals when the Killer enters her space or she enters its (or lowers Horror at full health)'), horror: t(1, 'Lowers Horror at full health'), rescue: ult(5) },
-  ronda: { time: t(3, 'Time equal to Bloodlust, then more Time whenever Bloodlust rises'), tank: t(1, '6 health'), rescue: ult(6) },
+  tali: { cards: t(2, 'Takes a Reaction card, and Reactions cost 1 Time less'), tank: t(1, 'Extra saves heal her') },
+  kat: { attack: t(2, '+2 damage with guns (needs a gun)'), items: t(1, 'Wants a gun') },
+  christie: { control: t(3, 'Draws two Terror cards and chooses which happens'), move: t(1, 'Extra saves give moves') },
+  kenzie: { cards: t(3, 'Once each Planning phase, buys every copy of an Action card for the price of one'), horror: t(1, 'Extra saves lower Horror') },
+  octavia: { tank: t(2, 'Builds up a marker to soak incoming damage') },
+  janelle: { attack: t(2, 'Builds up a marker that adds damage to one attack') },
+  cassie: { attack: t(2, 'Ultimate doubles one attack (needs her in the Killer’s space or 6 Time left); how often isn’t in the card data') },
+  mandy: { attack: t(3, 'Ultimate: attacks without a weapon automatically deal 3 damage') },
+  meghan: { tank: t(2, 'Heals when the Killer enters her space or she enters its (or lowers Horror at full health)'), horror: t(1, 'Lowers Horror at full health') },
+  ronda: { time: t(3, 'Time equal to Bloodlust, then more Time whenever Bloodlust rises') },
   // ---- Series 4
-  // Maud and Christina: health and saves needed aren't in the card data yet.
-  maud: { attack: t(2, 'Damage Action cards cost 1 less Time'), time: t(1, 'Cheaper damage cards save Time'), tank: t(1, 'Ultimate: ignores health loss from failed Horror rolls'), rescue: ult(5) },
-  christina: { attack: t(2, 'Ultimate: any Item becomes a one-shot range-1 weapon (it’s discarded), and ranged weapons hit more often'), items: t(2, 'Every Item doubles as a weapon'), rescue: ult(5) },
-  dakota: { dice: t(3, 'Rerolls all 1s and 2s on Horror rolls'), horror: t(0, 'Her save rewards RAISE Horror'), tank: t(1, '6 health'), rescue: ult(5) },
-  alois: { dice: t(3, 'Always rolls 6 dice for Horror rolls'), tank: t(0, 'Her save rewards cost her health (5 health)'), rescue: ult(5) },
-  rita: { horror: t(3, 'Each Upkeep rolls a die: 3-5 lowers Horror by 1, 6 lowers it by 3 (1-2 nothing); extra saves lower it too'), rescue: ult(6) },
-  lindi: { tank: t(3, 'Each Upkeep rolls a die to heal (3-5 heals 1, 6 heals 3); extra saves heal'), rescue: ult(4) },
-  vicky: { move: t(3, 'Extra spaces on Walk/Sprint for Time'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(5) },
-  joy: { tank: t(3, 'Ignores one damage or health loss every turn; 6 health'), horror: t(2, 'Three save rewards lower Horror, and extra saves lower it again'), time: t(1, 'Two save rewards give Time'), rescue: ult(6) },
-  rena: { cards: t(2, 'Takes back a free (0 Time) card each Action phase'), tank: t(1, '6 health'), rescue: ult(5) },
-  gwynn: { horror: t(3, 'All four save rewards and every extra save lower Horror; her Ultimate lowers it on one-die rolls'), rescue: ult(4) },
+  maud: { attack: t(2, 'Damage Action cards cost 1 less Time'), time: t(1, 'Cheaper damage cards save Time'), tank: t(1, 'Ultimate: ignores health loss from failed Horror rolls') },
+  christina: { attack: t(2, 'Ultimate: any Item becomes a one-shot range-1 weapon (it’s discarded), and ranged weapons hit more often'), items: t(2, 'Every Item doubles as a weapon') },
+  dakota: { dice: t(3, 'Rerolls all 1s and 2s on Horror rolls'), horror: t(0, 'Her save rewards RAISE Horror') },
+  alois: { dice: t(3, 'Always rolls 6 dice for Horror rolls') },
+  rita: { horror: t(3, 'Each Upkeep rolls a die: 3-5 lowers Horror by 1, 6 lowers it by 3 (1-2 nothing); extra saves lower it too') },
+  lindi: { tank: t(3, 'Each Upkeep rolls a die to heal (3-5 heals 1, 6 heals 3); extra saves heal') },
+  vicky: { move: t(3, 'Extra spaces on Walk/Sprint for Time'), tank: t(1, 'Two save rewards heal, and extra saves heal') },
+  joy: { horror: t(2, 'Three save rewards lower Horror, and extra saves lower it again'), time: t(1, 'Two save rewards give Time'), tank: t(3, 'Ignores one damage or health loss every turn') },
+  rena: { cards: t(2, 'Takes back a free (0 Time) card each Action phase') },
+  gwynn: { horror: t(3, 'All four save rewards and every extra save lower Horror; her Ultimate lowers it on one-die rolls') },
   // ---- Vignettes, specials, promos with card data
-  patsy: { attack: t(1, 'Spends Time for chip damage'), move: t(1, 'Save rewards include moves'), tank: t(1, '6 health'), rescue: ult(5) },
-  claus: { tank: t(3, 'Full heal and no health limit'), rescue: ult(4) },
-  cindy: { move: t(3, 'Failed Walk/Sprint results count as successes'), time: t(1, 'Extra saves give Time'), rescue: ult(4) },
-  adrianne: { time: t(1, 'Flexible boosts'), tank: t(1, 'Flexible boosts; 6 health'), move: t(1, 'Flexible boosts'), horror: t(1, 'Flexible boosts') },
+  patsy: { attack: t(1, 'Spends Time for chip damage'), move: t(1, 'Save rewards include moves') },
+  claus: { tank: t(3, 'Full heal and no health limit') },
+  cindy: { move: t(3, 'Failed Walk/Sprint results count as successes'), time: t(1, 'Extra saves give Time') },
+  adrianne: { time: t(1, 'Flexible boosts'), move: t(1, 'Flexible boosts'), horror: t(1, 'Flexible boosts'), tank: t(1, 'Flexible boosts') },
   maureen: { cards: t(2, 'Discards Victims to play Action cards straight from the tableau (her card flips on a die roll, so it’s not guaranteed)'), time: t(1, 'Every save gives Time') },
-  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'A save reward lowers Horror'), time: t(1, 'A save reward and extra saves give Time'), rescue: ult(5) },
-  jamie: { attack: t(2, 'Every Horror roll that ends on exactly 2 successes deals 1 damage to any Enemy on the board'), horror: t(1, 'Two save rewards lower Horror'), rescue: ult(5) },
+  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'A save reward lowers Horror'), time: t(1, 'A save reward and extra saves give Time') },
+  jamie: { attack: t(2, 'Every Horror roll that ends on exactly 2 successes deals 1 damage to any Enemy on the board'), horror: t(1, 'Two save rewards lower Horror') },
 
   // ---- Rated from Chris's card photos (src/assets/games), not cards.json.
   // Card reading: top-left number = health; number of meeples = saves needed
   // for the Ultimate; slashed-mask meeple = -1 Horror (checked against Paula's
   // card, whose wiki text lists the same rewards).
   // Both sides photographed:
-  agnes: { dice: t(2, 'Ultimate: gains 2 Ultimate Dice of her choice'), tank: t(0, 'Only 4 health (two save rewards heal, one by 2)'), time: t(1, 'Save rewards and extra saves give Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(6) },
-  layla: { cards: t(2, 'Ultimate: takes any Signature Action card from out of play'), tank: t(1, '5 health, and extra saves heal'), time: t(1, 'A save reward gives 2 Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(5) },
-  julia: { tank: t(2, '6 health, and can recover all health by sacrificing a Victim'), attack: t(1, 'Can deal damage by sacrificing a Victim'), move: t(1, 'Can move 2 spaces ignoring penalties by sacrificing a Victim'), rescue: t(1, 'Ultimate after just 1 save, but it flips back after each use and each use costs a Victim') },
-  constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time'), rescue: ult(5) },
-  'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again'), rescue: ult(5) },
-  iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(5) },
+  agnes: { dice: t(2, 'Ultimate: gains 2 Ultimate Dice of her choice'), time: t(1, 'Save rewards and extra saves give Time'), horror: t(1, 'A save reward lowers Horror'), tank: t(1, 'Two save rewards heal (one heals 2)') },
+  layla: { cards: t(2, 'Ultimate: takes any Signature Action card from out of play'), time: t(1, 'A save reward gives 2 Time'), horror: t(1, 'A save reward lowers Horror'), tank: t(1, 'A save reward heals, and extra saves heal') },
+  julia: { attack: t(1, 'Can deal damage by sacrificing a Victim'), move: t(1, 'Can move 2 spaces ignoring penalties by sacrificing a Victim'), tank: t(1, 'Can recover all health by sacrificing a Victim') },
+  constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time') },
+  'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again') },
+  iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(1, 'Extra saves heal her') },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.
-  julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror'), rescue: t(1, 'Ultimate after 5 saves (Ultimate side not photographed yet)') },
-  meg: { time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes any top Item'), horror: t(1, 'A save reward lowers Horror'), rescue: t(2, 'Ultimate after only 4 saves (Ultimate side not photographed yet)') },
-  carolyn: { move: t(1, 'Save rewards include 2 Psychic Travel cards'), attack: t(1, 'Save rewards include 2 Psychic Attack cards'), horror: t(1, 'Save rewards include 2 Psychic Focus cards'), cards: t(1, 'Every save reward is a Psychic card'), rescue: t(0, 'Ultimate after 6 saves (Ultimate side not photographed yet; Psychic card effects not known)') },
+  julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror') },
+  meg: { time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes any top Item'), horror: t(1, 'A save reward lowers Horror') },
+  carolyn: { move: t(1, 'Save rewards include 2 Psychic Travel cards'), attack: t(1, 'Save rewards include 2 Psychic Attack cards'), horror: t(1, 'Save rewards include 2 Psychic Focus cards'), cards: t(1, 'Every save reward is a Psychic card') },
   // Gabrielle (Terror From Destiny), both sides photographed: 5 health, 4
   // saves; rewards Move 1 / +1 Health / Take a Search card / -1 Horror; extra
   // saves +1 Time. Ultimate: once per Action phase, look at the top card of
   // any deck or the Dark Power / Finale card. It's information only (she
   // can't change what comes), so Killer control stays at 1, below Christie.
-  // No Toughness: 5 health and a single heal reward (see the rule above).
+  // No Toughness: a single heal reward (see the rule above).
   gabrielle: {
     control: t(1, 'Ultimate: sees the next Terror card, the Dark Power or the Finale every Action phase, so you can plan for it (but not change it)'),
     search: t(1, 'Ultimate can check the top Item card before you search; a save reward takes a Search card'),
     horror: t(1, 'A save reward lowers Horror'),
     time: t(1, 'Extra saves give Time'),
-    rescue: ult(4),
   },
   // Not rated:
   //   grandma: action side shows 1 health and five card rewards (Retaliate,
@@ -144,6 +153,109 @@ export const GIRL_TRAITS = {
 };
 // Holiday Paula is an alt-art Paula (cards.json: "alt-art Holiday Paula exists").
 GIRL_TRAITS['holiday-paula'] = GIRL_TRAITS.paula;
+
+/* ---- Health, save slots and Ultimate strength --------------------------
+   h      starting health (top-left of her card)
+   saves  Victims she must save before her Ultimate (the meeple slots on her
+          card). Fewer = she gets it sooner.
+   ult    how much her Ultimate swings a game once she has it:
+            3 strong every turn (e.g. 6 dice always, a Guard every turn)
+            2 solid but situational or one-off
+            1 minor
+          null = Ultimate side not known yet (counted as middling, 1.5)
+   note   one line on the Ultimate, shown in "Why?"
+   From cards.json, or read off Chris's card photos where cards.json has no
+   number (asami, red, octavia, janelle, cassie, mandy, meghan, ronda, maud,
+   christina). Edit freely: every score updates itself. */
+const stat = (h, saves, ult, note) => ({ h, saves, ult, note });
+export const FG_STATS = {
+  // Series 1
+  laurie: stat(5, 6, 3, 'Extra damage every time she hits an Enemy in her space'),
+  reiko: stat(6, 5, 2, 'Free move to an Enemy within 2 spaces each Action phase'),
+  selena: stat(6, 4, 2, '2 extra dice on every Search'),
+  alice: stat(4, 6, 2, 'One chosen Action card always rolls 5 dice'),
+  adelaide: stat(6, 5, 2, 'One-off: drop a Wrath track to 1, full heal, or 6 Time of cards'),
+  barbara: stat(7, 5, 2, 'Extra damage per Victim in the Killer’s space (but each kills a Victim)'),
+  asami: stat(5, 4, 2, 'Draws an extra Item to choose from; immune to Item traps'),
+  charlie: stat(7, 6, 2, 'Can pay 3 health to take Critical Blow into her hand'),
+  nancy: stat(4, 5, 1, 'Can swap her Final Health token for a better one'),
+  sheila: stat(6, 6, 3, '2 Time (not 1) for every card discarded for Time'),
+  melanie: stat(5, 6, 2, 'Trade 1 health for 2 damage split among Enemies in her space'),
+  // Series 2
+  ellen: stat(4, 6, 2, 'Picks any unused Item after a successful Search'),
+  jenette: stat(7, 4, 2, 'An extra hand for Items, plus spare uses on limited Items'),
+  kate: stat(4, 6, 2, 'Max health rises to 7, heals fully, extra die at full health'),
+  uki: stat(6, 4, 3, 'Plays Guard once a turn as if it were in her hand (she still pays for it)'),
+  ginny: stat(6, 6, 1, 'Two small permanent boosts to basic cards'),
+  ava: stat(5, 5, 2, 'Rerolls all 1s on Horror rolls'),
+  red: stat(5, 6, 2, 'Free move when an Enemy is within 2 spaces'),
+  gretel: stat(6, 5, 1, 'Turn a 2 into a success by discarding 3 cards'),
+  heather: stat(5, 6, 3, 'Rerolls and +1 damage per success when attacking'),
+  veronica: stat(5, 5, 3, 'Time resets to 7 every turn'),
+  // Series 3
+  tali: stat(6, 4, 2, 'Takes a Reaction card; Reactions cost 1 Time less'),
+  kat: stat(4, 6, 2, '+2 damage with guns (needs a gun)'),
+  christie: stat(5, 4, 3, 'Draws two Terror cards and picks which happens'),
+  kenzie: stat(5, 5, 2, 'All copies of an Action card for the price of one'),
+  octavia: stat(5, 4, 2, 'Builds a marker that soaks incoming damage'),
+  janelle: stat(5, 4, 2, 'Builds a marker that adds damage to one attack'),
+  cassie: stat(5, 6, 2, 'Doubles one attack (in the Killer’s space or with 6 Time)'),
+  mandy: stat(6, 5, 3, 'Unarmed attacks automatically deal 3 damage'),
+  meghan: stat(5, 5, 1, 'Heals 1 when she and the Killer share a space'),
+  ronda: stat(6, 4, 2, 'A big Time boost, then Time whenever Bloodlust rises'),
+  // Series 4
+  maud: stat(6, 6, 2, 'Damage cards cost 1 less; ignores health loss from failed rolls'),
+  christina: stat(5, 5, 2, 'Throws any Item as a ranged attack'),
+  dakota: stat(6, 5, 3, 'Rerolls all 1s and 2s on Horror rolls'),
+  alois: stat(5, 5, 3, 'Always rolls 6 dice for Horror rolls'),
+  rita: stat(5, 6, 2, 'Lowers Horror on a die roll every Upkeep'),
+  lindi: stat(5, 4, 2, 'Heals on a die roll every Upkeep'),
+  vicky: stat(5, 5, 2, 'Extra spaces on Walk/Sprint for Time'),
+  joy: stat(6, 6, 3, 'Ignores one damage or health loss every turn'),
+  rena: stat(6, 5, 2, 'Takes back a 0-Time card each Action phase'),
+  gwynn: stat(5, 4, 1, '-1 Horror when rolling a single die (and may choose to)'),
+  // Vignettes, specials, promos
+  patsy: stat(6, 5, 1, 'Spend 2 Time for 1 chip damage'),
+  claus: stat(6, 4, 3, 'Full heal and no maximum health'),
+  cindy: stat(5, 4, 2, 'Failed Walk/Sprint results count as successes'),
+  gabrielle: stat(5, 4, 2, 'Each Action phase, looks at the top card of any deck, or the Dark Power or Finale (information only)'),
+  adrianne: stat(6, null, 1, 'Small boosts paid for with Victims; flips on a die roll'),
+  maureen: stat(5, null, 2, 'Plays Action cards straight from the tableau, paid with Victims'),
+  paula: stat(5, 5, 1, 'Rolls 2 dice whenever she’d roll 1'),
+  agnes: stat(4, 6, 2, 'Gains 2 Ultimate Dice of her choice'),
+  layla: stat(5, 5, 1, 'Takes one Signature Action card'),
+  julia: stat(6, 1, 1, 'After 1 save: kill a Victim to heal fully, hit, or move 2 (then flips back)'),
+  constance: stat(5, 5, 2, 'Uses any weapon at range 0-2'),
+  'jen-promo': stat(5, 5, 2, 'Furious Strike costs 0 Time'),
+  iris: stat(4, 5, 2, 'Three times, takes any Item from the space she’s on'),
+  jamie: stat(5, 5, 2, 'Two-success rolls deal 1 damage anywhere'),
+  julie: stat(5, 5, null, 'Ultimate side not photographed yet'),
+  meg: stat(5, 4, null, 'Ultimate side not photographed yet'),
+  carolyn: stat(5, 6, null, 'Ultimate side not photographed yet'),
+};
+FG_STATS['holiday-paula'] = FG_STATS.paula;
+
+/* 0-1: how well her health keeps her alive. 4 = 0.25 ... 7 = 1. */
+export function survivalOf(girlId) {
+  const st = FG_STATS[girlId];
+  if (!st || st.h == null) return null;
+  return Math.max(0, Math.min(1, (st.h - 3) / 4));
+}
+/* 0-1: how soon her Ultimate arrives. 1 save = 1, 4 = 0.8, 5 = 0.55, 6 = 0.3.
+   No fixed number (flip conditions) counts as middling. */
+export function ultSpeedOf(girlId) {
+  const st = FG_STATS[girlId];
+  if (!st) return null;
+  if (st.saves == null) return 0.5;
+  return { 1: 1, 2: 0.95, 3: 0.9, 4: 0.8, 5: 0.55, 6: 0.3 }[st.saves] ?? 0.2;
+}
+/* 0-1: Ultimate value = speed x power (an early but weak Ultimate stays modest). */
+export function ultValueOf(girlId) {
+  const st = FG_STATS[girlId];
+  if (!st) return null;
+  const power = st.ult == null ? 1.5 : st.ult;
+  return ultSpeedOf(girlId) * (power / 3);
+}
 
 /* What each Killer rewards.
    Audited Nov 2026 against the rulebook text, the app's rule summaries
@@ -227,18 +339,98 @@ export const LOCATION_NEEDS = {
   'santas-village': { confidence: 'estimate', time: need(2, 'Entering a space costs 1 Time per Elf in it'), move: need(1, 'Cheap movement helps when crowded spaces cost Time') },
 };
 
+const LOCATION_WEIGHT = 0.7; // the Killer usually matters more than the map
+
+/* ---- Victim deaths and Bloodlust ----------------------------------------
+   For each Killer and Location:
+     deaths     how quickly Victims die (0 = rarely, 3 = very fast)
+     bloodlust  how much those deaths feed the Killer (0 = Bloodlust doesn't
+                rise on deaths, 3 = every death makes it much more dangerous)
+   Used in scoreGirl: fast deaths make a quick Ultimate worth more and punish
+   girls who need 5-6 saves (she may never get there); fast deaths that also
+   feed Bloodlust make the Killer hit harder over time, so health counts more.
+   Ratings from the rules in the app (playRules) and the strategy tips; edit
+   freely. */
+const vp = (deaths, bloodlust, why) => ({ deaths, bloodlust, why });
+export const KILLER_PRESSURE = {
+  hans: vp(2, 2, 'Hunts Victims steadily; each death feeds a strong Bloodlust track'),
+  poltergeist: vp(2, 2, 'Can’t be killed, so Victims keep dying until you get them out'),
+  inkanyamba: vp(2, 2, 'Deaths raise Bloodlust, and his Wrath Unleashes add more danger'),
+  geppetto: vp(3, 2, 'Puppets swarm and keep respawning, picking off Victims'),
+  'dr-fright': vp(2, 3, 'Low Bloodlust keeps him nearly still; each death wakes him up'),
+  evomorph: vp(2, 3, 'Bloodlust makes it EVOLVE (Hatchling → Youngling → Adult)'),
+  organism: vp(2, 2, 'Exposed Victims can’t be saved until tested; others die as normal'),
+  intruders: vp(3, 2, 'Three Killers on the board means more Victims caught'),
+  'big-bad-wolf': vp(3, 2, 'In Slay mode its attacks are spread across every Victim in its space'),
+  'ratchet-lady': vp(3, 1, 'Victims turn into Maniacs (lost to you), but that doesn’t raise Bloodlust'),
+  hunter: vp(2, 0, 'Its Bloodlust doesn’t rise when Victims die, only when damage is dealt'),
+  razorface: vp(2, 2, 'Afflictions need Victims to purge, so losing them can make him unbeatable'),
+  slayer: vp(2, 2, 'Pulls Victims into the Mirror Dimension and kills them there'),
+  tormentor: vp(2, 2, 'Death Traps catch Victims, though she’s off the board until the Finale'),
+  eyeless: vp(2, 2, 'Noise draws him to Victims (estimate)'),
+  'the-birds': vp(3, 2, 'Swarms of Birds kill Victims fast'),
+  'patsy-zombies': vp(2, 3, 'Bloodlust sets how many Zombies spawn; dead Victims swell the Hordes'),
+  destiny: vp(2, 2, 'Fated deaths come in order; Bloodlust rises when their Death tokens are revealed'),
+  raptors: vp(2, 2, 'A pack that stops on Victims (estimate)'),
+  volkar: vp(2, 2, 'Concealed most of the game, then strikes (estimate)'),
+  berith: vp(2, 2, 'Possessed nun hunting Victims (estimate)'),
+  grimlash: vp(3, 2, 'Victims in the fields die quickly'),
+  billy: vp(2, 2, 'Buddies and Billy both attack Victims (estimate)'),
+  pods: vp(3, 2, 'Victims get taken over (estimate)'),
+  mort: vp(1, 2, 'Disguised among Suspects for much of the game, so fewer direct kills'),
+  krampus: vp(2, 2, 'Attacks, then Krampus Presents hurt Victims who open them'),
+};
+export const LOCATION_PRESSURE = {
+  'camp-happy-trails': vp(1, 0, 'Victims spread out, no extra hazards'),
+  'creech-manor': vp(1, 0, 'One-way spaces slow everyone, Victims included'),
+  'sacred-groves': vp(1, 2, 'Victims on Sacred spaces raise Wrath, which climbs the Groves’ own Bloodlust track'),
+  'carnival-of-blood': vp(2, 0, 'Terror Traps always kill the Victims in your space'),
+  'maple-lane': vp(1, 0, 'Victims holed up in houses are slow to reach'),
+  'uss-konrad': vp(1, 0, 'Closed shafts slow rescues'),
+  'station-2891': vp(2, 0, 'Frostbite hurts Victims outdoors, and saving needs the helicopter'),
+  'wingard-cottage': vp(1, 0, 'Victims close together'),
+  'storybook-woods': vp(1, 0, 'Bridges let only 1 Victim across at a time'),
+  'wolfe-asylum': vp(1, 0, 'No extra Victim hazards'),
+  'sunnydaze-mall': vp(1, 0, 'The Savior is the target, not the Victims'),
+  hellscape: vp(1, 0, 'Shifting tiles can strand Victims'),
+  falconwood: vp(1, 0, 'The Mission comes first; Friends help'),
+  'marrek-warehouse': vp(1, 0, 'Locked Exits keep Victims on the floor longer'),
+  utopia: vp(3, 0, 'Sand Snakes hit Victims first every turn, and sinkholes kill everyone in them'),
+  'isla-lagarto': vp(3, 0, 'The T-Rex instantly kills a Victim first'),
+  'pesadilla-verde': vp(2, 0, 'Soldiers follow you into the Killer’s space; friendly fire kills them'),
+  'larmes-abbey': vp(1, 0, 'Malice builds up in the rooms (estimate)'),
+  'shady-acres': vp(2, 0, 'The Children keep spawning while Victims remain'),
+  buddyland: vp(1, 0, 'No extra Victim hazards (estimate)'),
+  megabgcon: vp(0, 0, 'Booths keep spawning new Victims, so saves are plentiful'),
+  'santas-village': vp(1, 0, 'Elves slow movement, not Victims'),
+};
+
+/* Combined pressure for a combo: deaths and bloodlust (Location at 70%). */
+export function comboPressure(killerId, locationId) {
+  const k = KILLER_PRESSURE[killerId];
+  const l = LOCATION_PRESSURE[locationId];
+  const deaths = (k ? k.deaths : 0) + LOCATION_WEIGHT * (l ? l.deaths : 0);
+  const bloodlust = (k ? k.bloodlust : 0) + LOCATION_WEIGHT * (l ? l.bloodlust : 0);
+  const reasons = [k && `Killer: ${k.why}`, l && `Location: ${l.why}`].filter(Boolean);
+  return { deaths, bloodlust, reasons, known: Boolean(k || l) };
+}
+
 /* One-off pairings worth more than the trait maths shows. */
 export const SPECIALS = [
   { girl: 'adelaide', killer: 'inkanyamba', bonus: 2, why: 'Her Ultimate can drop a Wrath track straight to 1' },
   { girl: 'adelaide', location: 'sacred-groves', bonus: 1, why: 'Her Ultimate can drop the Groves’ Wrath to 1' },
   { girl: 'asami', location: 'carnival-of-blood', bonus: 1, why: 'Immune to the Carnival’s Item traps' },
   { girl: 'gabrielle', killer: 'destiny', bonus: 1, why: 'Her Ultimate shows the next Terror card every turn, so you see a Fated Death coming and can get the right Fated Victim out in order' },
+  { girl: 'melanie', killer: 'the-birds', bonus: 3, why: 'Her Ultimate wipes out every Bird in her space (Birds have 1 health); she was made for this Killer' },
   { girl: 'selena', killer: 'poltergeist', bonus: 1, why: 'Reviewers’ top pick: fast Ultimate plus Search dice to find Carolyn' },
 ];
 
 /* ---- Scoring -------------------------------------------------------------- */
 
-const LOCATION_WEIGHT = 0.7; // the Killer usually matters more than the map
+/* The three parts are divided by this before x10, so a strong all-rounder
+   lands around 8-9 and only an exceptional pairing reaches 10. */
+export const SCORE_SCALE = 0.95;
+
 
 /* Needs that apply to EVERY scenario, on top of the Killer and Location.
    Without these, Time and dice specialists (Sheila, Veronica, Ronda, Ava,
@@ -421,25 +613,31 @@ export function envelopeItemFor(girlId, killerId, locationId, envelopes) {
    null if she isn't rated yet or nothing is selected. */
 export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
   const base = GIRL_TRAITS[girlId];
-  const item = base ? envelopeItemFor(girlId, killerId, locationId, envelopes) : null;
+  const st = FG_STATS[girlId];
+  if (!base || !st) return null;
+  const item = envelopeItemFor(girlId, killerId, locationId, envelopes);
   // Her ratings with the item folded in (each trait capped at 3).
   let g = base;
   if (item && item.traits) {
     g = { ...base };
     for (const [tr, add] of Object.entries(item.traits)) {
+      if (tr === 'rescue') continue;
       const cur = g[tr] ? g[tr].v : 0;
       const why = g[tr] ? `${g[tr].why}; plus her envelope item` : `Her envelope item: ${item.why}`;
       g[tr] = { v: Math.min(3, cur + add), why };
     }
   }
   const needs = comboNeeds(killerId, locationId);
-  const totalNeed = Object.values(needs).reduce((a, n) => a + n.v, 0);
-  if (!g || !totalNeed) return null;
+  // 'rescue' is not a girl trait: it sets how much Ultimate speed matters.
+  const fitNeeds = Object.entries(needs).filter(([tr]) => tr !== 'rescue');
+  const totalNeed = fitNeeds.reduce((a, [, n]) => a + n.v, 0);
+  if (!totalNeed && !needs.rescue) return null;
 
+  // ---- 1. Scenario fit (her traits x what the scenario rewards)
   let got = 0;
   const strengths = [];
   const gaps = [];
-  for (const [tr, n] of Object.entries(needs)) {
+  for (const [tr, n] of fitNeeds) {
     const gv = g[tr] ? g[tr].v : 0;
     got += n.v * gv;
     if (gv >= 2) strengths.push({ trait: tr, label: TRAIT_LABEL[tr], weight: n.v * gv, girlWhy: g[tr].why, needWhy: n.reasons });
@@ -459,11 +657,56 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
     if (already) { already.weight += n.v * gv; already.needWhy = [...already.needWhy, `Every game: ${n.why}`]; }
     else if (gv >= 2) strengths.push({ trait: tr, label: TRAIT_LABEL[tr], weight: n.v * gv, girlWhy: g[tr].why, needWhy: [`Every game: ${n.why}`] });
   }
-  // A girl rated 2 in everything the combo wants scores 10.
-  let ratio = got / (totalNeed * 2);
+  // Rated 2 in everything the scenario wants = 0.8; rated 3s can reach 1.
+  const fit = totalNeed ? Math.min(1, (got / (totalNeed * 2)) * 0.8) : 0.5;
+
+  // ---- 2. Survival: health, weighted up against hard-hitting scenarios
+  const tankNeed = needs.tank ? needs.tank.v : 0;
+  // How fast Victims die (0-1) and how much that feeds Bloodlust (0-1).
+  const press = comboPressure(killerId, locationId);
+  const deathsN = Math.min(press.deaths, 4) / 4;
+  const bloodN = Math.min(press.bloodlust, 3) / 3;
+  // Deaths that feed Bloodlust make the Killer hit harder over time.
+  const survWeight = 1 + 0.5 * Math.min(tankNeed, 3) / 3 + 0.3 * deathsN * bloodN; // 1 - 1.8
+  const surv = survivalOf(girlId) ?? 0.5;
+  // ---- 3. Ultimate: speed x power, weighted up where Victims are precious
+  const rescueNeed = needs.rescue ? needs.rescue.v : 0;
+  // Fast-dying Victims make an early Ultimate worth more...
+  const ultWeight = 1 + 0.5 * Math.min(rescueNeed, 3) / 3 + 0.4 * deathsN; // 1 - 1.9
+  // ...and a girl needing 5-6 saves may never get there.
+  const late = st.saves != null && st.saves > 4 ? st.saves - 4 : 0;
+  const speed = ultSpeedOf(girlId) * (1 - 0.15 * deathsN * late);
+  const ultV = speed * ((st.ult == null ? 1.5 : st.ult) / 3);
+  const power = st.ult == null ? null : st.ult;
+
+  const parts = {
+    fit: 0.55 * fit,
+    survival: 0.2 * surv * survWeight,
+    ultimate: 0.25 * ultV * ultWeight,
+  };
+  // A girl with fit 0.8 (rated 2 in everything), 6 health and a strong
+  // Ultimate after 4 saves lands around 8.
+  let raw = (parts.fit + parts.survival + parts.ultimate) / SCORE_SCALE;
+
+  // Reasons for health and the Ultimate, so "Why?" explains them.
+  const savesTxt = st.saves == null ? 'her own flip condition' : st.saves === 1 ? 'just 1 save' : `${st.saves} saves`;
+  const powerTxt = power == null ? 'Ultimate not known yet' : power === 3 ? 'a strong Ultimate' : power === 2 ? 'a solid Ultimate' : 'a minor Ultimate';
+  const health = { h: st.h, value: surv, weight: survWeight, why: `${st.h} health` };
+  const pressure = { deaths: press.deaths, bloodlust: press.bloodlust, reasons: press.reasons };
+  const ultimate = { saves: st.saves, power, speed, value: ultV, weight: ultWeight, why: `${powerTxt} after ${savesTxt}: ${st.note}` };
+  if (st.h >= 7 || (st.h >= 6 && tankNeed >= 2)) {
+    strengths.push({ trait: 'health', label: 'Health', weight: 3 * surv * survWeight, girlWhy: `${st.h} health`, needWhy: [...(tankNeed ? needs.tank.reasons : ['Every game: health is how long she survives']), ...(deathsN * bloodN >= 0.4 ? press.reasons : [])] });
+  } else if (st.h <= 4) {
+    gaps.push({ trait: 'health', label: 'Health', needWhy: tankNeed ? needs.tank.reasons : ['Every game: health is how long she survives'], girlWhy: `Only ${st.h} health` });
+  }
+  if (ultV >= 0.5) {
+    strengths.push({ trait: 'ultimate', label: 'Ultimate', weight: 3 * ultV * ultWeight, girlWhy: ultimate.why, needWhy: [...(rescueNeed ? needs.rescue.reasons : ['Every game: a strong Ultimate, unlocked early']), ...(deathsN >= 0.5 ? press.reasons : [])] });
+  } else if (ultV < 0.2 && (rescueNeed >= 2 || deathsN >= 0.6)) {
+    gaps.push({ trait: 'ultimate', label: 'Ultimate', needWhy: [...(rescueNeed ? needs.rescue.reasons : []), ...press.reasons], girlWhy: late && deathsN >= 0.5 ? `${ultimate.why}; Victims die fast here, so ${st.saves} saves may never come` : ultimate.why });
+  }
 
   const specials = SPECIALS.filter(
-    (s) => s.girl === girlId && ((s.killer && s.killer === killerId) || (s.location && s.location === locationId)),
+    (x) => x.girl === girlId && ((x.killer && x.killer === killerId) || (x.location && x.location === locationId)),
   );
   if (item && (item.bonus || !item.traits)) {
     specials.push({ girl: girlId, bonus: item.bonus || 0, why: `Envelope item: ${item.why}` });
@@ -472,13 +715,13 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
     const hit = (x.killers && x.killers.includes(killerId)) || (x.locations && x.locations.includes(locationId));
     if (hit) specials.push({ girl: girlId, bonus: x.bonus || 0, why: `Envelope item: ${x.why}` });
   }
-  const bonus = specials.reduce((a, s) => a + s.bonus, 0);
+  const bonus = specials.reduce((a, x) => a + x.bonus, 0);
 
-  let score = Math.min(10, ratio * 10 + bonus);
+  let score = Math.min(10, raw * 10 + bonus);
   score = Math.max(1, Math.round(score * 2) / 2);
   strengths.sort((a, b) => b.weight - a.weight);
-  gaps.sort((a, b) => (needs[b.trait].v - needs[a.trait].v));
-  return { score, strengths, gaps, specials, item };
+  gaps.sort((a, b) => ((needs[b.trait] ? needs[b.trait].v : 1) - (needs[a.trait] ? needs[a.trait].v : 1)));
+  return { score, strengths, gaps, specials, item, health, ultimate, parts, pressure };
 }
 
 /* Every rated girl for a combo, best first. `girls` is the app's finalGirls list. */
