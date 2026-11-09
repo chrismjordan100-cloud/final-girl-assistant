@@ -103,6 +103,20 @@
     "auto": true
   },
   {
+    "id": "envelope-items",
+    "title": "Secret Envelope items: photos and fit assessments",
+    "detail": "Each time you open a Final Girl's Secret Envelope: (1) tap \"I've opened it\" on her Codex card; (2) save a photo of the item card in src/assets/games/ named S{series}-item-{girl}-{item}.png (e.g. S1-item-laurie-bow.png); (3) ask Kiro to assess it (Asset Admin → Secret Envelopes has a ready-made prompt). Kiro adds her profile to ENVELOPE_ITEMS in src/data/fgFit.js plus Codex notes. Scores then update by themselves. Sealed envelopes are never named or counted.",
+    "affects": [
+      "Codex",
+      "Setup Assist",
+      "Best fits",
+      "Fit summary"
+    ],
+    "status": "partial",
+    "remaining": "5 envelope items assessed and 5 photos added so far. Keep going as you open more (see Asset Admin → Secret Envelopes).",
+    "auto": true
+  },
+  {
     "id": "card-images",
     "title": "Card images in the Codex card list",
     "detail": "Over time, add a picture of each card to src/assets/cards/ (file named after the card's id — tick \"Show image slots\" in Codex → All cards to see each name). The card list shows the image beside the card automatically. Setup cards are the priority: they are placement diagrams with no rules text, so an image is the only way to capture them.",

@@ -218,6 +218,30 @@ ITEMS.push(
     },
   },
   {
+    id: 'envelope-items',
+    title: 'Secret Envelope items: photos and fit assessments',
+    affects: ['Codex', 'Setup Assist', 'Best fits', 'Fit summary'],
+    body:
+      'Each time you open a Final Girl\'s Secret Envelope: (1) tap "I\'ve opened it" on\n' +
+      'her Codex card; (2) save a photo of the item card in src/assets/games/ named\n' +
+      'S{series}-item-{girl}-{item}.png (e.g. S1-item-laurie-bow.png); (3) ask Kiro to\n' +
+      'assess it (Asset Admin \u2192 Secret Envelopes has a ready-made prompt). Kiro adds\n' +
+      'her profile to ENVELOPE_ITEMS in src/data/fgFit.js plus Codex notes. Scores then\n' +
+      'update by themselves. Sealed envelopes are never named or counted.',
+    remaining: '',
+    check() {
+      const fit = read('src/data/fgFit.js');
+      const block = (fit.split('export const ENVELOPE_ITEMS = {')[1] || '').split('\n};')[0];
+      const profiles = (block.match(/^ {2}[a-z][\w-]*: \{/gm) || []).length;
+      const dir = join(root, 'src/assets/games');
+      const photos = existsSync(dir) ? readdirSync(dir).filter((f) => /^S\d+-item-.+\.(png|jpe?g|webp)$/i.test(f)).length : 0;
+      // Count only: never list which girls (or items) are done.
+      this.remaining = `${profiles} envelope item${profiles === 1 ? '' : 's'} assessed and ${photos} photo${photos === 1 ? '' : 's'} added so far. Keep going as you open more (see Asset Admin \u2192 Secret Envelopes).`;
+      if (profiles >= 52 && photos >= 52) return 'green';
+      return profiles > 0 || photos > 0 ? 'amber' : 'red';
+    },
+  },
+  {
     id: 'card-images',
     title: 'Card images in the Codex card list',
     affects: ['Codex'],

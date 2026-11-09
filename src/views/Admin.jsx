@@ -15,7 +15,121 @@ import {
 } from '../data/games.js';
 import { VIDEO_PROMPT } from '../data/videoPrompt.js';
 import BACKLOG_AUTO from '../data/backlogAuto.json';
+import { getFinalGirlEnvelopeImage } from '../data/games.js';
+import { ENVELOPE_ITEMS } from '../data/fgFit.js';
+import { useFgCollection, envelopeStatus, winsByFinalGirl } from '../hooks/useFgCollection.js';
+import { useGameLog } from '../hooks/useGameLog.js';
 import './Admin.css';
+
+/* --------------------------------------------------------------------------
+   Secret Envelopes tracker. Per Final Girl: sealed / won (open it!) / opened,
+   and for opened ones whether the item photo is added and Kiro has assessed
+   it. NEVER shows an item's name or effect: only the girl and the file-name
+   pattern to use.
+   -------------------------------------------------------------------------- */
+function envelopeRow(fg, wins, envelopes) {
+  const { status } = envelopeStatus(fg.id, wins[fg.id] || 0, envelopes);
+  const photo = Boolean(getFinalGirlEnvelopeImage(fg));
+  const assessed = Boolean(ENVELOPE_ITEMS[fg.id]);
+  const done = status === 'opened' && photo && assessed;
+  return { fg, status, photo, assessed, done };
+}
+
+function kiroPrompt(fg) {
+  return `I've opened ${fg.name}'s Secret Envelope. The item photo is in src/assets/games/ as S${fg.season}-item-${fg.shortName}-<item>.png. Please assess it against the rules for the fit engine (ENVELOPE_ITEMS in src/data/fgFit.js), add Codex notes, then build and push.`;
+}
+
+function EnvelopeCard({ row }) {
+  const { fg, status, photo, assessed, done } = row;
+  const [copied, setCopied] = useState(false);
+  const copy = () => navigator.clipboard?.writeText(kiroPrompt(fg)).then(
+    () => { setCopied(true); setTimeout(() => setCopied(false), 2000); },
+    () => setCopied(false),
+  );
+  const label = done ? 'Done'
+    : status === 'opened' ? 'To finish'
+      : status === 'unlocked' ? 'Open it!'
+        : 'Sealed';
+  return (
+    <article className={'admin-entry fg-panel' + (done ? ' is-complete' : '')}>
+      <header className="admin-entry__head">
+        <h3 className="admin-entry__name">{fg.name}</h3>
+        <span className="admin-entry__meta">{fg.film} &middot; S{fg.season}</span>
+        <span className={'admin-entry__count' + (done ? ' is-complete' : '')}>{label}</span>
+      </header>
+      {status === 'sealed' && (
+        <p className="admin-empty fg-type">Still sealed. Win a game with her to unlock it.</p>
+      )}
+      {status === 'unlocked' && (
+        <p className="admin-empty fg-type">
+          You&rsquo;ve won with her: open her envelope, then tap &ldquo;I&rsquo;ve opened it&rdquo; on her Codex card.
+        </p>
+      )}
+      {status === 'opened' && (
+        <>
+          <ul className="admin-asset-list">
+            <li className={'admin-asset' + (photo ? ' is-present' : '')}>
+              <span className={'admin-asset__status ' + (photo ? 'is-ok' : 'is-missing')}>{photo ? '\u2713' : '\u2715'}</span>
+              <span className="admin-asset__label">Item photo</span>
+              <code className="admin-asset__file">{`S${fg.season}-item-${fg.shortName}-<item>.png`}</code>
+            </li>
+            <li className={'admin-asset' + (assessed ? ' is-present' : '')}>
+              <span className={'admin-asset__status ' + (assessed ? 'is-ok' : 'is-missing')}>{assessed ? '\u2713' : '\u2715'}</span>
+              <span className="admin-asset__label">Assessed by Kiro (fit scores + Codex notes)</span>
+            </li>
+          </ul>
+          {!assessed && (
+            <button type="button" className="fg-btn admin-env__copy" onClick={copy}>
+              {copied ? 'Copied \u2713' : 'Copy the prompt for Kiro'}
+            </button>
+          )}
+        </>
+      )}
+    </article>
+  );
+}
+
+function EnvelopeSection({ collapsed, onToggle, onlyMissing, q }) {
+  const { envelopes } = useFgCollection();
+  const { log } = useGameLog();
+  const wins = useMemo(() => winsByFinalGirl((log || []).filter((g) => !g.demo)), [log]);
+  const rows = useMemo(() => finalGirls.map((fg) => envelopeRow(fg, wins, envelopes)), [wins, envelopes]);
+  const opened = rows.filter((r) => r.status === 'opened');
+  const done = opened.filter((r) => r.done).length;
+  const toOpen = rows.filter((r) => r.status === 'unlocked').length;
+  // Actionable first: open it, then to finish, then done, then sealed.
+  const rank = (r) => (r.status === 'unlocked' ? 0 : r.status === 'opened' && !r.done ? 1 : r.done ? 2 : 3);
+  let shown = [...rows].sort((a, b) => rank(a) - rank(b) || a.fg.season - b.fg.season || a.fg.name.localeCompare(b.fg.name));
+  if (q) shown = shown.filter((r) => (r.fg.name + ' ' + r.fg.film).toLowerCase().includes(q));
+  if (onlyMissing) shown = shown.filter((r) => r.status !== 'sealed' && !r.done);
+  return (
+    <section className="admin-section">
+      <button className="admin-section__title" onClick={onToggle} aria-expanded={!collapsed}>
+        <span className="admin-section__caret" aria-hidden="true">{collapsed ? '\u25B6' : '\u25BC'}</span>
+        Secret Envelopes
+        <span className={'admin-section__count' + (opened.length && done === opened.length && !toOpen ? ' is-complete' : '')}>
+          {done}/{opened.length} opened done{toOpen ? ` \u00b7 ${toOpen} to open` : ''}
+        </span>
+      </button>
+      {!collapsed && (
+        <>
+          <p className="admin-empty fg-type" style={{ marginBottom: '0.8rem' }}>
+            For each envelope you open: tap &ldquo;I&rsquo;ve opened it&rdquo; on her Codex card, drop a photo of the
+            item card in <code>{ASSETS_FOLDER}</code> named as shown, then copy the prompt and send it to Kiro. Her fit
+            scores update by themselves once she&rsquo;s assessed. Items are never named here, so sealed ones stay secret.
+          </p>
+          {shown.length === 0 ? (
+            <p className="admin-empty fg-type">Nothing to do right now.</p>
+          ) : (
+            <div className="admin-grid">
+              {shown.map((r) => <EnvelopeCard key={r.fg.id} row={r} />)}
+            </div>
+          )}
+        </>
+      )}
+    </section>
+  );
+}
 
 /* One marker per asset TYPE for an entry (not per page). */
 function assetTypesFor(type, entry) {
@@ -225,7 +339,7 @@ const BACKLOG = [
       'Setup Assist shows \u201cBest fits by ability\u201d under the official girls once a Killer or Location is picked: the top 5 Final Girls scored out of 10 for that scenario, each with a one-line summary and a \u201cWhy?\u201d listing her matching strengths, weak spots and any special pairing (e.g. Adelaide lowering Wrath against Inkanyamba). Official girls always show their score. The logic is on Codex \u2192 Fit grid: 11 traits, every girl rated 0\u20133, what every Killer and Location rewards, and scores for any combo. Codex \u2192 Fit summary shows every girl against every Killer + Location combo in one colour-coded table (red = poor, green = great), with a gold ring where she is official for that combo (e.g. Laurie under Hans), so highs, lows and official pairings stand out at a glance. Filter by series, then narrow to one Killer or Location (e.g. Series 4 \u2192 The Raptors), and sort by \u201cBest for this selection\u201d to rank the girls for just that, or \u201cBest overall\u201d for every combo. Ratings live in src/data/fgFit.js.',
     affects: ['Setup Assist', 'Codex'],
     status: 'partial',
-    remaining: 'Grandma and Gabrielle are still unrated (Grandma\u2019s card shows 1 health, so she needs her Ultimate side first; Gabrielle has no card photos). Julie, Meg and Carolyn are rated from the action side only, so photograph their Ultimate sides to firm them up. Firm up the estimated Killer/Location profiles (mostly Series 4 and specials) from play.',
+    remaining: 'Grandma is still unrated (her card shows 1 health, so she needs her Ultimate side first). Gabrielle is now rated from both card sides. Julie, Meg and Carolyn are rated from the action side only, so photograph their Ultimate sides to firm them up. Every Killer, Location and Final Girl profile was audited against the rules and card data in Nov 2026 (invented needs removed, one Toughness rule for health). Still estimates: Razorface (only one Affliction known), Krampus and Santa\u2019s Village (no rule sheet), and the Pods (no rules at all, so unrated). Cassie, Mandy, Maud and Christina need their saves-needed numbers confirmed.',
   },
   {
     title: 'Favourite Final Girls + where each is stored',
@@ -372,7 +486,7 @@ const ENTRY_KEYS = [
    want. (backlogDone is deliberately left out: for that one key, true means
    "shown", and the done list is meant to start hidden.) */
 const startCollapsed = () =>
-  Object.fromEntries(['howto', 'backlog', 'videos', ...ENTRY_KEYS].map((k) => [k, true]));
+  Object.fromEntries(['howto', 'backlog', 'videos', 'envelopes', ...ENTRY_KEYS].map((k) => [k, true]));
 
 export default function Admin() {
   const [query, setQuery] = useState('');
@@ -844,6 +958,13 @@ export default function Admin() {
           </section>
         );
       })}
+
+      <EnvelopeSection
+        collapsed={!!collapsed.envelopes}
+        onToggle={() => toggleSection('envelopes')}
+        onlyMissing={onlyMissing}
+        q={q}
+      />
 
       <section className="admin-section">
         <button

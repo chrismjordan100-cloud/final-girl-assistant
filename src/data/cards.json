@@ -20300,11 +20300,11 @@
     {
       "id": "gabrielle",
       "name": "Gabrielle",
-      "box_id": null,
+      "box_id": "terror_from_destiny",
       "other_source": null,
-      "health": null,
-      "victims_for_ultimate": null,
-      "ultimate_ability": null,
+      "health": 5,
+      "victims_for_ultimate": 4,
+      "ultimate_ability": "Once per Action phase, you may look at the top card of any deck or the Dark Power or Finale card.",
       "unlockable_item": {
         "name": "Gabrielle's Crystal Ball of Blood",
         "effect": "Hands: 1 When revealing a Terror card, you may immediately discard it for -2 Health. Only Gabrielle may use this Item.",
@@ -20312,10 +20312,12 @@
         "source_url": "https://finalgirl.fandom.com/wiki/Gabrielle's_Crystal_Ball_of_Blood",
         "flavour_unofficial": "A crystal ball that shows her fate in blood."
       },
-      "data_status": "partial",
-      "save_rewards_text": null,
+      "data_status": "complete",
+      "save_rewards_text": "Gabrielle has 5 Health, and requires 4 Victims to be saved to unlock her Ultimate Ability. Saving a Victim gives one of the following benefits: * Move 1 Space * +1 Health * Take a Search Card * -1 Horror. Saving any additional Victims gives +1 Time",
       "source_url": "https://finalgirl.fandom.com/wiki/Gabrielle",
-      "flavour_unofficial": "A girl who sees death coming before it arrives."
+      "flavour_unofficial": "A girl who sees death coming before it arrives.",
+      "ultimate_source": "user_photo",
+      "notes": "Health, Ultimate and save rewards transcribed from Chris’s card photos"
     },
     {
       "id": "christie",
@@ -20622,7 +20624,7 @@
     "Destiny (Terror from Destiny) and Terror from Beyond: no card data published",
     "Razorface, Krampus, H.U.N.T.E.R.: some effects still missing; Razorface Afflictions mostly unnamed",
     "Locations with incomplete terror decks: Slayer/Tormentor/Eyeless killer decks; Isla Lagarto",
-    "Ultimate abilities still missing for Julie, Meg, Carolyn and Grandma (action side only photographed); Gabrielle has no card data",
+    "Ultimate abilities still missing for Julie, Meg, Carolyn and Grandma (action side only photographed)",
     "Flavour text intentionally excluded; source_url provided per card"
   ],
   "counts": {

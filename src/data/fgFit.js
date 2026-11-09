@@ -41,142 +41,190 @@ const t = (v, why) => ({ v, why });
 const ult = (n) => t(n <= 4 ? 2 : n === 5 ? 1 : 0, `Ultimate after only ${n} saves`);
 
 /* Each Final Girl's strengths. Girls not listed have no card data yet, so
-   they can't be rated (shown as "not rated" rather than scoring 0). */
+   they can't be rated (shown as "not rated" rather than scoring 0).
+
+   Toughness from health (applied to every girl; audited Nov 2026):
+     4 health = 0 (said in the reason, even if she heals)
+     5 health = 0, or 1 if extra saves heal her or two save rewards heal
+     6 health = 1      7 health = 2
+   Abilities that heal or prevent damage are rated on top of that.
+   A single save reward (one heal, one Guard card…) isn't rated on its own.
+   Health checked against cards.json and the rulebook component lists. */
 export const GIRL_TRAITS = {
   // ---- Series 1
-  laurie: { attack: t(3, 'Extra damage whenever she hits an Enemy in her space'), tank: t(1, '5 health'), rescue: ult(6) },
+  laurie: { attack: t(3, 'Extra damage whenever she hits an Enemy in her space'), rescue: ult(6) },
   reiko: { move: t(2, 'Free move to a nearby Enemy each Action phase'), attack: t(1, 'Gets into fights quickly'), tank: t(1, '6 health'), rescue: ult(5) },
   selena: { search: t(3, 'Rolls 2 extra dice on Search, and can take a Search card as a save reward'), tank: t(1, '6 health'), rescue: ult(4) },
-  alice: { dice: t(3, 'Her chosen Action card always rolls 5 dice'), move: t(1, 'Save rewards include moves'), tank: t(0, 'Only 4 health'), rescue: ult(6) },
-  adelaide: { tank: t(2, 'Can recover all health; 6 health'), cards: t(2, 'Can grab 6 Time of Action cards at once'), control: t(1, 'Can drop one Wrath track to 1'), rescue: ult(5) },
+  alice: { dice: t(2, 'Ultimate: one Action card she names always rolls exactly 5 dice (that card only)'), move: t(1, 'Save rewards include two moves'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(6) },
+  adelaide: { tank: t(2, '6 health, and her Ultimate can be a full heal (she picks one of three effects)'), cards: t(1, 'Ultimate can instead take up to 6 Time of Action cards'), control: t(1, 'Ultimate can instead drop one Wrath track to 1'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
   barbara: { attack: t(2, 'Extra damage for each Victim in the Killer’s space'), tank: t(2, '7 health'), rescue: ult(5) },
-  asami: { items: t(3, 'Draws an extra Item to choose from and ignores Item traps'), search: t(2, 'Better Item finds when searching'), rescue: ult(4) },
-  charlie: { attack: t(2, 'Can take Critical Blow straight into her hand'), tank: t(2, '7 health'), rescue: ult(6) },
-  nancy: { tank: t(1, 'Can swap for a better Final Health token, but only 4 health'), rescue: ult(5) },
+  asami: { items: t(3, 'Draws an extra Item to choose from and ignores Item traps'), search: t(2, 'Better Item finds when searching'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(4) },
+  charlie: { attack: t(2, 'Can lose 3 health to take Critical Blow straight into her hand'), tank: t(2, '7 health'), rescue: ult(6) },
+  nancy: { tank: t(1, 'Can swap for a better Final Health token, and extra saves heal, but only 4 health'), rescue: ult(5) },
   sheila: { time: t(3, '2 Time (not 1) for each card discarded for Time'), tank: t(1, '6 health'), rescue: ult(6) },
-  melanie: { attack: t(2, 'Can trade 1 health for 2 damage each Action phase'), rescue: ult(6) },
+  melanie: { attack: t(2, 'Can trade 1 health for 2 damage each Action phase'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(6) },
   // ---- Series 2
   ellen: { search: t(2, 'Can pick from all the Location’s unused Items after a Search'), items: t(2, 'Picks exactly the Item she needs'), tank: t(0, 'Only 4 health'), rescue: ult(6) },
   jenette: { items: t(3, 'An extra hand for Items, plus spare uses on limited Items'), attack: t(1, 'More weapons in play'), tank: t(2, '7 health'), rescue: ult(4) },
-  kate: { tank: t(3, 'Max health rises to 7 and heals fully'), dice: t(1, 'Extra die on Horror rolls at full health'), rescue: ult(6) },
-  uki: { tank: t(3, 'A free Guard every turn'), cards: t(2, 'Guard without buying it'), rescue: ult(4) },
-  ginny: { move: t(1, 'Walk moves further'), tank: t(1, 'Short Rest heals more'), attack: t(1, 'Weak Attack hits harder'), horror: t(1, 'Focus lowers more Horror'), rescue: ult(6) },
-  ava: { dice: t(2, 'Rerolls every 1 on Horror rolls'), rescue: ult(5) },
-  red: { move: t(3, 'Free move when an Enemy is within 2 spaces: great at dodging'), time: t(1, 'Save rewards include Time'), rescue: ult(6) },
+  kate: { tank: t(2, 'Ultimate: max health becomes 7 and she heals fully (only 4 before that); extra saves heal 2'), dice: t(1, 'Extra die on Horror rolls at full health'), rescue: ult(6) },
+  uki: { tank: t(2, '6 health, plus a Guard every turn'), cards: t(2, 'Plays a copy of Guard once a turn as if it were in her hand (she still pays for it)'), rescue: ult(4) },
+  ginny: { move: t(1, 'Ultimate option: Walk moves further (she picks 2 of 4)'), tank: t(1, '6 health; Ultimate option: Short Rest heals more'), attack: t(1, 'Ultimate option: Weak Attack hits harder'), horror: t(1, 'Ultimate option: Focus lowers more Horror'), rescue: ult(6) },
+  ava: { dice: t(2, 'Rerolls every 1 on Horror rolls'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
+  red: { move: t(2, 'Once per Action phase, a free 1-space move when an Enemy is within 2 spaces'), time: t(1, 'Save rewards include +1 and +2 Time'), tank: t(1, 'Extra saves heal 2 (5 health)'), rescue: ult(6) },
   gretel: { dice: t(1, 'Can turn a 2 into a success by discarding cards'), time: t(1, 'Save rewards include Time'), horror: t(1, 'Save rewards include Horror drops'), tank: t(1, '6 health'), rescue: ult(5) },
-  heather: { attack: t(3, 'Rerolls and +1 damage per success when attacking'), dice: t(1, 'Rerolls on attack rolls'), rescue: ult(6) },
+  heather: { attack: t(3, 'Rerolls and +1 damage per success when attacking'), dice: t(1, 'Rerolls on attack rolls'), tank: t(1, 'Two save rewards heal (5 health)'), rescue: ult(6) },
   veronica: { time: t(3, 'Time resets to 7 (6 in Extreme), and her save rewards are all Time'), rescue: ult(5) },
   // ---- Series 3
-  tali: { cards: t(2, 'Takes a Reaction card, and Reactions cost 1 Time less'), tank: t(1, 'Cheaper Guard/Retaliate-style defence; 6 health'), rescue: ult(4) },
+  tali: { cards: t(2, 'Takes a Reaction card, and Reactions cost 1 Time less'), tank: t(1, '6 health'), rescue: ult(4) },
   kat: { attack: t(2, '+2 damage with guns (needs a gun)'), items: t(1, 'Wants a gun'), tank: t(0, 'Only 4 health'), rescue: ult(6) },
   christie: { control: t(3, 'Draws two Terror cards and chooses which happens'), move: t(1, 'Extra saves give moves'), rescue: ult(4) },
-  kenzie: { cards: t(3, 'Buys every copy of an Action card for the price of one'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
+  kenzie: { cards: t(3, 'Once each Planning phase, buys every copy of an Action card for the price of one'), horror: t(1, 'Extra saves lower Horror'), rescue: ult(5) },
   octavia: { tank: t(2, 'Builds up a marker to soak incoming damage'), rescue: ult(4) },
   janelle: { attack: t(2, 'Builds up a marker that adds damage to one attack'), rescue: ult(4) },
-  cassie: { attack: t(3, 'Can double the damage of her next attack for Time'), time: t(0, 'Her power eats Time'), rescue: ult(5) },
-  mandy: { attack: t(2, 'Extra damage on unarmed attacks, so she needs no weapon'), rescue: ult(6) },
-  meghan: { tank: t(2, 'Heals when the Killer reaches her (or lowers Horror at full health)'), horror: t(1, 'Lowers Horror at full health'), rescue: ult(5) },
+  // Cassie and Mandy: saves needed aren't in cards.json (health is, from the
+  // rulebook component list), so their Fast Ultimate rating is unconfirmed.
+  cassie: { attack: t(2, 'Ultimate doubles one attack (needs her in the Killer’s space or 6 Time left); how often isn’t in the card data'), rescue: ult(5) },
+  mandy: { attack: t(3, 'Ultimate: attacks without a weapon automatically deal 3 damage'), tank: t(1, '6 health'), rescue: ult(6) },
+  meghan: { tank: t(2, 'Heals when the Killer enters her space or she enters its (or lowers Horror at full health)'), horror: t(1, 'Lowers Horror at full health'), rescue: ult(5) },
   ronda: { time: t(3, 'Time equal to Bloodlust, then more Time whenever Bloodlust rises'), tank: t(1, '6 health'), rescue: ult(6) },
   // ---- Series 4
-  maud: { attack: t(2, 'Damage cards cost less and ignore their health cost'), time: t(1, 'Cheaper damage cards'), tank: t(1, '6 health'), rescue: ult(5) },
-  christina: { attack: t(2, 'Throws any Item as a ranged weapon; better ranged hits'), items: t(2, 'Every Item doubles as a weapon'), rescue: ult(5) },
+  // Maud and Christina: health and saves needed aren't in the card data yet.
+  maud: { attack: t(2, 'Damage Action cards cost 1 less Time'), time: t(1, 'Cheaper damage cards save Time'), tank: t(1, 'Ultimate: ignores health loss from failed Horror rolls'), rescue: ult(5) },
+  christina: { attack: t(2, 'Ultimate: any Item becomes a one-shot range-1 weapon (it’s discarded), and ranged weapons hit more often'), items: t(2, 'Every Item doubles as a weapon'), rescue: ult(5) },
   dakota: { dice: t(3, 'Rerolls all 1s and 2s on Horror rolls'), horror: t(0, 'Her save rewards RAISE Horror'), tank: t(1, '6 health'), rescue: ult(5) },
-  alois: { dice: t(3, 'Always rolls 6 dice for Horror rolls'), tank: t(0, 'Saving Victims costs her health'), rescue: ult(5) },
-  rita: { horror: t(3, 'Lowers Horror every Upkeep (and on extra saves)'), rescue: ult(6) },
-  lindi: { tank: t(3, 'Heals every Upkeep'), rescue: ult(4) },
-  vicky: { move: t(3, 'Extra spaces on Walk/Sprint for Time'), tank: t(1, 'Save rewards include health'), rescue: ult(5) },
-  joy: { tank: t(3, 'Ignores one damage or health loss every turn; 6 health'), horror: t(1, 'Save rewards include Horror drops'), rescue: ult(6) },
+  alois: { dice: t(3, 'Always rolls 6 dice for Horror rolls'), tank: t(0, 'Her save rewards cost her health (5 health)'), rescue: ult(5) },
+  rita: { horror: t(3, 'Each Upkeep rolls a die: 3-5 lowers Horror by 1, 6 lowers it by 3 (1-2 nothing); extra saves lower it too'), rescue: ult(6) },
+  lindi: { tank: t(3, 'Each Upkeep rolls a die to heal (3-5 heals 1, 6 heals 3); extra saves heal'), rescue: ult(4) },
+  vicky: { move: t(3, 'Extra spaces on Walk/Sprint for Time'), tank: t(1, 'Extra saves heal (5 health)'), rescue: ult(5) },
+  joy: { tank: t(3, 'Ignores one damage or health loss every turn; 6 health'), horror: t(2, 'Three save rewards lower Horror, and extra saves lower it again'), time: t(1, 'Two save rewards give Time'), rescue: ult(6) },
   rena: { cards: t(2, 'Takes back a free (0 Time) card each Action phase'), tank: t(1, '6 health'), rescue: ult(5) },
-  gwynn: { horror: t(3, 'Every save and her Ultimate lower Horror'), rescue: ult(4) },
+  gwynn: { horror: t(3, 'All four save rewards and every extra save lower Horror; her Ultimate lowers it on one-die rolls'), rescue: ult(4) },
   // ---- Vignettes, specials, promos with card data
   patsy: { attack: t(1, 'Spends Time for chip damage'), move: t(1, 'Save rewards include moves'), tank: t(1, '6 health'), rescue: ult(5) },
   claus: { tank: t(3, 'Full heal and no health limit'), rescue: ult(4) },
   cindy: { move: t(3, 'Failed Walk/Sprint results count as successes'), time: t(1, 'Extra saves give Time'), rescue: ult(4) },
   adrianne: { time: t(1, 'Flexible boosts'), tank: t(1, 'Flexible boosts; 6 health'), move: t(1, 'Flexible boosts'), horror: t(1, 'Flexible boosts') },
-  maureen: { cards: t(2, 'Uses Victims to play cards straight from the tableau') },
-  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'Save rewards include Horror drops'), rescue: ult(5) },
-  jamie: { attack: t(2, 'Two-success rolls deal damage anywhere on the board'), horror: t(1, 'Save rewards lower Horror'), rescue: ult(5) },
+  maureen: { cards: t(2, 'Discards Victims to play Action cards straight from the tableau (her card flips on a die roll, so it’s not guaranteed)'), time: t(1, 'Every save gives Time') },
+  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'A save reward lowers Horror'), time: t(1, 'A save reward and extra saves give Time'), rescue: ult(5) },
+  jamie: { attack: t(2, 'Every Horror roll that ends on exactly 2 successes deals 1 damage to any Enemy on the board'), horror: t(1, 'Two save rewards lower Horror'), rescue: ult(5) },
 
   // ---- Rated from Chris's card photos (src/assets/games), not cards.json.
   // Card reading: top-left number = health; number of meeples = saves needed
   // for the Ultimate; slashed-mask meeple = -1 Horror (checked against Paula's
   // card, whose wiki text lists the same rewards).
   // Both sides photographed:
-  agnes: { dice: t(2, 'Ultimate: gains 2 Ultimate Dice of her choice'), tank: t(1, 'Only 4 health, but two save rewards heal (one heals 2)'), time: t(1, 'Save rewards and extra saves give Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(6) },
+  agnes: { dice: t(2, 'Ultimate: gains 2 Ultimate Dice of her choice'), tank: t(0, 'Only 4 health (two save rewards heal, one by 2)'), time: t(1, 'Save rewards and extra saves give Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(6) },
   layla: { cards: t(2, 'Ultimate: takes any Signature Action card from out of play'), tank: t(1, '5 health, and extra saves heal'), time: t(1, 'A save reward gives 2 Time'), horror: t(1, 'A save reward lowers Horror'), rescue: ult(5) },
   julia: { tank: t(2, '6 health, and can recover all health by sacrificing a Victim'), attack: t(1, 'Can deal damage by sacrificing a Victim'), move: t(1, 'Can move 2 spaces ignoring penalties by sacrificing a Victim'), rescue: t(1, 'Ultimate after just 1 save, but it flips back after each use and each use costs a Victim') },
-  constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time'), tank: t(1, '5 health'), rescue: ult(5) },
-  'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again'), tank: t(1, '5 health'), rescue: ult(5) },
-  iris: { items: t(3, 'Ultimate: 3 times, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(2, 'Picks the exact Item she wants'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(5) },
+  constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time'), rescue: ult(5) },
+  'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again'), rescue: ult(5) },
+  iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(0, 'Only 4 health (extra saves heal)'), rescue: ult(5) },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.
-  julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror'), tank: t(1, '5 health'), rescue: t(1, 'Ultimate after 5 saves (Ultimate side not photographed yet)') },
-  meg: { time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes any top Item'), tank: t(1, '5 health; a save reward takes a Guard card'), horror: t(1, 'A save reward lowers Horror'), rescue: t(2, 'Ultimate after only 4 saves (Ultimate side not photographed yet)') },
-  carolyn: { move: t(1, 'Save rewards include 2 Psychic Travel cards'), attack: t(1, 'Save rewards include 2 Psychic Attack cards'), horror: t(1, 'Save rewards include 2 Psychic Focus cards'), cards: t(1, 'Every save reward is a Psychic card'), tank: t(1, '5 health'), rescue: t(0, 'Ultimate after 6 saves (Ultimate side not photographed yet; Psychic card effects not known)') },
+  julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror'), rescue: t(1, 'Ultimate after 5 saves (Ultimate side not photographed yet)') },
+  meg: { time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes any top Item'), horror: t(1, 'A save reward lowers Horror'), rescue: t(2, 'Ultimate after only 4 saves (Ultimate side not photographed yet)') },
+  carolyn: { move: t(1, 'Save rewards include 2 Psychic Travel cards'), attack: t(1, 'Save rewards include 2 Psychic Attack cards'), horror: t(1, 'Save rewards include 2 Psychic Focus cards'), cards: t(1, 'Every save reward is a Psychic card'), rescue: t(0, 'Ultimate after 6 saves (Ultimate side not photographed yet; Psychic card effects not known)') },
+  // Gabrielle (Terror From Destiny), both sides photographed: 5 health, 4
+  // saves; rewards Move 1 / +1 Health / Take a Search card / -1 Horror; extra
+  // saves +1 Time. Ultimate: once per Action phase, look at the top card of
+  // any deck or the Dark Power / Finale card. It's information only (she
+  // can't change what comes), so Killer control stays at 1, below Christie.
+  // No Toughness: 5 health and a single heal reward (see the rule above).
+  gabrielle: {
+    control: t(1, 'Ultimate: sees the next Terror card, the Dark Power or the Finale every Action phase, so you can plan for it (but not change it)'),
+    search: t(1, 'Ultimate can check the top Item card before you search; a save reward takes a Search card'),
+    horror: t(1, 'A save reward lowers Horror'),
+    time: t(1, 'Extra saves give Time'),
+    rescue: ult(4),
+  },
   // Not rated:
   //   grandma: action side shows 1 health and five card rewards (Retaliate,
   //     Gather the Flock, Guard, Slow Walk, Rally). Rating her on 1 health
   //     alone would mislead; needs the Ultimate side / pack rules.
-  //   gabrielle: no card photos or card data yet.
 };
 // Holiday Paula is an alt-art Paula (cards.json: "alt-art Holiday Paula exists").
 GIRL_TRAITS['holiday-paula'] = GIRL_TRAITS.paula;
 
-/* What each Killer rewards. */
+/* What each Killer rewards.
+   Audited Nov 2026 against the rulebook text, the app's rule summaries
+   (games.js playRules / phaseExtras) and the strategy tips. 'rescue' means a
+   Fast Ultimate, so it's only asked for where saving Victims early really
+   pays off; walking Victims to Exits is Movement. Time and dice already get a
+   small every-game bonus (BASE_NEEDS), so they're only listed where a Killer
+   asks for more than usual. 'estimate' = the rules aren't transcribed. */
 const need = (v, why) => ({ v, why });
 export const KILLER_NEEDS = {
-  hans: { confidence: 'tips', rescue: need(3, 'Rescue fast while he’s slow, to keep Bloodlust low'), attack: need(2, 'A low-Bloodlust Hans can be out-traded in the finale'), horror: need(2, 'He raises Horror a lot'), tank: need(1, 'Guard/Retaliate grind works') },
-  poltergeist: { confidence: 'tips', search: need(3, 'You win by finding Carolyn in the Item decks'), move: need(3, 'Then you must get her to an exit'), tank: need(1, 'Guard is the answer to Unstoppable Evil'), attack: need(0, 'She can’t be damaged') },
-  inkanyamba: { confidence: 'tips', horror: need(3, 'Atonement only works well with 3 dice'), dice: need(2, 'Atonement rolls need successes'), attack: need(2, 'Dual-purpose weapons hurt him and lower Wrath'), control: need(2, 'Anything that lowers Wrath is gold') },
-  geppetto: { confidence: 'tips', attack: need(3, 'Killing Puppets cuts his output'), rescue: need(2, 'Rescuing beat searching in reviews'), move: need(1, 'Distance keeps Puppets off you') },
-  'dr-fright': { confidence: 'tips', rescue: need(2, 'Low Bloodlust keeps him nearly still'), tank: need(2, 'Guard/Retaliate in the Boiler Room'), attack: need(2, 'Fight only when armed and asleep'), cards: need(1, 'Guard and Retaliate decide fights') },
-  evomorph: { confidence: 'tips', attack: need(3, 'Hit the Hatchling hard before it grows'), items: need(2, 'Flamethrower and Super Loader win games'), cards: need(1, 'Retaliate combos') },
-  organism: { confidence: 'tips', attack: need(3, 'Every Mutated Organism must die'), horror: need(3, 'Horror above 6 can be an instant loss'), items: need(2, 'Flamethrower does huge damage'), cards: need(2, 'Guard rated essential') },
-  intruders: { confidence: 'tips', attack: need(3, 'Kill them one at a time; burst damage matters'), dice: need(2, 'Big "super turns" need successes'), horror: need(2, 'Green Horror predicts wins'), items: need(1, 'Shotguns are excellent') },
-  'big-bad-wolf': { confidence: 'tips', attack: need(3, 'Kill him fast before he snowballs'), search: need(2, 'Search early: his Roar strips Items'), rescue: need(2, 'Save Victims before he flips to Slay') },
-  'ratchet-lady': { confidence: 'tips', rescue: need(3, 'Save Victims before they become Maniacs'), attack: need(2, 'Engage early while she’s on 6 health'), tank: need(2, 'Budget for a long fight'), time: need(1, 'Leaving a space with two or more Maniacs costs Time') },
-  hunter: { confidence: 'tips', attack: need(3, '2 damage in one phase knocks off parts'), items: need(2, 'Boomsticks and ramming items'), move: need(2, 'Race to the Savior and use balconies') },
-  razorface: { confidence: 'tips', time: need(2, 'Purging Afflictions costs Time'), cards: need(2, 'Purges need the right cards'), attack: need(2, 'He still has to be killed'), tank: need(1, 'Some Afflictions hurt') },
-  slayer: { confidence: 'tips', tank: need(3, 'The Mirror Dimension drains health each Upkeep'), move: need(2, 'Keep trips between dimensions short'), attack: need(2, 'Hit hard while you’re in its dimension') },
-  tormentor: { confidence: 'estimate', move: need(2, 'Avoiding Death Traps'), tank: need(2, 'Traps punish slow girls'), attack: need(2, 'He still has to be killed') },
-  eyeless: { confidence: 'estimate', move: need(2, 'Moving quietly and getting away'), horror: need(2, 'Panic is dangerous'), time: need(1, 'Careful turns cost Time') },
-  'the-birds': { confidence: 'estimate', tank: need(2, 'Swarms chip away at health'), rescue: need(2, 'Victims die fast'), horror: need(2, 'Constant attacks raise Horror') },
-  'patsy-zombies': { confidence: 'estimate', attack: need(3, 'Lots of bodies to put down'), rescue: need(2, 'Victims turn into Zombies'), tank: need(2, 'Being surrounded hurts') },
-  destiny: { confidence: 'estimate', dice: need(2, 'Fate rolls reward successes'), tank: need(2, 'Fated deaths come for you too'), attack: need(2, 'You still have to win the fight') },
-  raptors: { confidence: 'estimate', move: need(3, 'A pack that hunts: stay mobile'), attack: need(2, 'Thin the pack'), tank: need(2, 'Several attackers at once') },
-  volkar: { confidence: 'estimate', attack: need(2, 'A big brute to bring down'), tank: need(2, 'Hits hard') },
-  berith: { confidence: 'estimate', horror: need(3, 'A demon that feeds on fear'), tank: need(2, 'Possession hurts') },
-  grimlash: { confidence: 'estimate', attack: need(2, 'Must be cut down'), rescue: need(2, 'Victims in the fields die quickly') },
-  billy: { confidence: 'estimate', attack: need(2, 'Must be destroyed'), move: need(2, 'A big park to cover'), horror: need(1, 'Jump scares raise Horror'), time: need(1, 'Switching off Power Sources costs Time') },
-  pods: { confidence: 'estimate', rescue: need(2, 'Victims get taken over'), attack: need(2, 'Pods must be destroyed') },
-  mort: { confidence: 'estimate', attack: need(2, 'Must be stopped'), rescue: need(2, 'Victims at the con') },
-  krampus: { confidence: 'estimate', tank: need(2, 'Punishing attacks'), attack: need(2, 'Must be beaten'), rescue: need(1, 'Victims in the village') },
+  hans: { confidence: 'tips', rescue: need(2, 'Saving Victims early keeps his Bloodlust low, so an early Ultimate pays off'), move: need(2, 'He starts slow: outrun him and loot or rescue before he arrives'), attack: need(2, 'A low-Bloodlust Hans can be out-traded in the Finale'), horror: need(2, 'He raises Horror a lot'), cards: need(1, 'Guard and Retaliate grinds beat a predictable Hans') },
+  poltergeist: { confidence: 'tips', search: need(3, 'You win by finding Carolyn in the Item decks'), move: need(2, 'Then you must get her to an Exit without looping back'), cards: need(1, 'Guard is the best answer to her Unstoppable Evil'), tank: need(1, 'Invisible Barrier needs full health to reach an Exit with Carolyn'), attack: need(0, 'She can’t be damaged') },
+  inkanyamba: { confidence: 'tips', horror: need(3, 'Atonement works best with 3 dice, so keep Horror low'), dice: need(2, 'Atonement is a Horror roll that needs successes'), control: need(2, 'Lowering his Wrath is the core of the fight'), cards: need(1, 'Atonement cards are your main Wrath lever and need buying early'), attack: need(1, 'Some weapons hurt him and lower Wrath at once') },
+  geppetto: { confidence: 'tips', attack: need(3, 'Killing Puppets cuts his output, and Immortal Master needs at least one dead'), move: need(1, 'Keeping away from Geppetto keeps his leashed Puppets off you'), rescue: need(1, 'Puppets gather round groups of Victims and can kill several at once') },
+  'dr-fright': { confidence: 'tips', rescue: need(2, 'Keeping Victims alive keeps his Bloodlust low and him nearly still'), attack: need(2, 'You can only hurt him while Asleep, so go in armed'), tank: need(1, 'Most Boiler Room trips cost one or two attacks'), cards: need(1, 'Guard, Retaliate and the Rest cards decide the Boiler Room fights') },
+  evomorph: { confidence: 'tips', attack: need(2, 'Only 4 health as a Hatchling, 10 once it’s an Adult'), cards: need(1, 'Scan, Guard and Retaliate combos'), horror: need(1, 'Scan’s best line needs 3 successes'), items: need(1, 'Flamethrower and Super Loader worked well in reviews') },
+  organism: { confidence: 'tips', attack: need(3, 'Every Mutated Organism must die'), horror: need(2, 'Horror above 6 loses the game once Regenerative Assimilation is out'), items: need(2, 'Flamethrower and Axe do big damage to low-health Organisms'), cards: need(1, 'A reviewer rated Guard essential'), search: need(1, 'Test Kits come with Search finds'), move: need(1, 'You must reach Exposed Victims, or walk them to the Lab, to test them') },
+  intruders: { confidence: 'tips', attack: need(3, 'Kill them one at a time; burst damage matters'), horror: need(2, 'Keeping Horror in the green predicts wins'), items: need(1, 'Shotguns are excellent'), control: need(1, 'Attacking a Killer makes it the Active one, so you choose who acts'), rescue: need(1, 'Save the Outsider early: every Intruder hunts him') },
+  'big-bad-wolf': { confidence: 'tips', attack: need(3, 'Kill him fast before he snowballs'), search: need(2, 'Search early: his Roar strips Items'), rescue: need(2, 'Save Victims before he flips to Slay'), horror: need(1, 'A reviewer notes he starts at Horror 5'), items: need(1, 'Items are the best way to slow him once he speeds up') },
+  'ratchet-lady': { confidence: 'tips', rescue: need(3, 'Saving Victims early stops them becoming Maniacs, so an early Ultimate pays off'), attack: need(2, 'Engage early while she’s on 6 health, and clear Maniacs'), tank: need(2, 'Maniac damage can’t be blocked, and her healing drags the fight out'), move: need(1, 'Reviewers advise staying mobile'), cards: need(1, 'Calm cards turn Maniacs back into Victims') },
+  hunter: { confidence: 'tips', attack: need(3, 'Each Cybernetic Part needs 2 damage in one phase; leftover damage is lost'), time: need(1, 'Picking up dropped parts and repairing the Mark V cost Time'), tank: need(1, 'Its Bloodlust rises whenever it hurts you'), items: need(1, 'Burst weapons help land 2 damage in one phase') },
+  razorface: { confidence: 'estimate', attack: need(2, 'He can only be finished once every Affliction is purged, and a known Purge needs 3 damage in one Action phase'), horror: need(1, 'His Dark Powers add Horror and penalise Focus') },
+  slayer: { confidence: 'tips', tank: need(2, 'Upkeep in the Mirror Dimension costs 1 health, and Slayer can attack you in either dimension'), cards: need(2, 'Reaction cards like Retaliate are the only way to hit it from the other dimension'), attack: need(2, 'You must share its dimension to attack it'), move: need(1, 'Victims only follow you within your dimension, and saves happen in Our Dimension'), horror: need(1, 'If it can’t pull a Victim across, Horror goes up instead') },
+  tormentor: { confidence: 'tips', time: need(2, 'Escape Tasks spend Time, and trap steps can cost Time'), move: need(2, 'You have to reach trapped Victims, and some Escape Tasks are moves'), attack: need(1, 'Some Escape Tasks need damage; she only appears at the Finale'), tank: need(1, 'Some Escape Tasks cost health'), horror: need(1, 'Progressing traps can raise Horror') },
+  eyeless: { confidence: 'tips', attack: need(2, 'Hard Skin ignores the first damage each turn, so you need big or several hits'), items: need(1, 'Item Noise matters: guns +3, melee +1, quiet Items 0'), cards: need(1, 'Reactions make no Noise, and its Finales attack twice'), move: need(1, 'Every Walk or Sprint is an Action card and adds 1 Noise') },
+  'the-birds': { confidence: 'tips', rescue: need(3, 'The Special Victims stay hidden until your Ultimate unlocks (or no normal Victims remain), and you must save them all'), move: need(2, 'Special Victims appear on the farthest Search spaces; route round full spaces'), tank: need(2, 'A Bird attack hits for as many Birds as are in the space, and Birdnado costs health'), attack: need(1, 'Each damage removes 1 Bird, but clearing them is optional'), cards: need(1, 'Reactions can protect a Victim, but only if they stop all the damage') },
+  'patsy-zombies': { confidence: 'tips', attack: need(3, 'You win only by killing every Zombie and Horde, and Hordes have no health cap'), move: need(2, 'Zombies move once a turn so you can kite them, and the Vehicle is found at an Exit'), tank: need(1, 'A Zombie group hits for as many Zombies as are in its space'), rescue: need(1, 'A Victim killed by Zombies becomes another Zombie') },
+  // From the Terror From Destiny rules + Handbook tips: there is no Killer to
+  // fight (no board, no meeple, no Finale), so Damage isn't asked for at all.
+  destiny: {
+    confidence: 'tips',
+    move: need(3, 'The 5 Fated Victims start scattered by dice roll and must be walked to Exits before their Fated Death card comes up'),
+    tank: need(2, 'The end-of-game Destiny phase takes health for every Consequence you can\u2019t meet'),
+    control: need(2, 'Killer Actions become Destiny symbols; seeing or blunting what\u2019s coming (Premonition, Thwart Destiny) pays off'),
+    rescue: need(2, 'Saved Fated Victims go on your Final Girl card like normal saves, so a fast Ultimate comes online'),
+    horror: need(1, 'Some Consequences need Horror at 1 or lower'),
+    items: need(1, 'Some Consequences make you discard Items (e.g. at least 3)'),
+  },
+  raptors: { confidence: 'tips', attack: need(3, 'The Pack gains 1 health for every loose Raptor that joins, so thin them early, then hit the Pack'), tank: need(1, 'In most Finales the Pack attacks twice'), cards: need(1, 'Reactions help, but Scaly Hide stops Reaction damage to the Pack'), items: need(1, 'Weak weapons for loose Raptors, strong ones for the Pack; a Net helps') },
+  volkar: { confidence: 'tips', dice: need(2, 'The Track card reveals more of her hidden Path on bigger rolls'), attack: need(2, 'Damage only lands if you guess her final space; a wrong guess means an ambush'), items: need(1, 'A Booby Trap on her likely Path works well') },
+  berith: { confidence: 'tips', tank: need(2, 'Expel Demon only works in Ursula’s space, and Satanic Influence and Rejecting God cost health'), rescue: need(2, 'Save Victims early: later cards kill them, and she is fast if Bloodlust rises'), cards: need(1, 'Expel Demon is your main source of Blessings; keep Reactions in hand'), attack: need(1, 'Possessed Ursula must still be killed, but not too early') },
+  grimlash: { confidence: 'tips', tank: need(2, 'Hearts must be split between healing and lowering Harvest Madness, and dropping a level can cost max health'), horror: need(2, 'His Terror cards add Horror directly, and his Epic Dark Power ties Horror rolls to Madness'), rescue: need(1, 'God of Blood and Grain kills every Victim when revealed'), move: need(1, 'Get out of Flaming Eyes spaces quickly'), attack: need(1, 'He still has to be killed') },
+  billy: { confidence: 'tips', attack: need(2, 'Buddies must die before Billy can be hit, and he heals while any Power Source is Active'), time: need(1, 'Switching off each Power Source costs Time'), move: need(1, 'You can switch off a Power Source just by passing through its space'), tank: need(1, 'Buddies hit anything in their space') },
+  // No rules or card data for Terror From Beyond yet, so nothing to rate:
+  // with the Pods, only the Location's needs count. Fill in once transcribed.
+  pods: { confidence: 'estimate' },
+  mort: { confidence: 'tips', move: need(2, 'Interrogate and Coerce only work in a Suspect’s or Informant’s space, and they’re spread out'), dice: need(2, 'Interrogate and Coerce reveal more, or come back to hand, on better rolls'), horror: need(1, 'Dead Informants and his Dark Powers raise Horror'), cards: need(1, 'Interrogate and Coerce are your only way to reveal Clues'), attack: need(1, 'He can only be hurt once unmasked, with +2 Attack per unrevealed Clue') },
+  // No rule sheet for North Pole Nightmare yet; from card data only.
+  krampus: { confidence: 'estimate', attack: need(2, 'A normal Killer to beat; Unholy Gifts lets him heal 2, so burst damage helps'), tank: need(1, 'Coal Balls can deal 3 damage and Demonic Will can kill outright'), rescue: need(1, 'Coal Balls can kill up to 3 Victims') },
 };
 
-/* What each Location rewards. */
+/* What each Location rewards (weighted 0.7 against the Killer).
+   Audited Nov 2026 against the rule sheets, the app's rule summaries and the
+   card data. A Location with no special rules gets an empty profile rather
+   than invented needs: it then simply doesn't shift the scores. */
 export const LOCATION_NEEDS = {
-  'camp-happy-trails': { confidence: 'tips', rescue: need(2, 'Victims spread across camp'), move: need(1, 'A wide map') },
-  'creech-manor': { confidence: 'tips', search: need(2, 'Lots of searchable rooms'), move: need(2, 'Two floors and stairs to cross') },
-  'sacred-groves': { confidence: 'tips', horror: need(2, 'Wrath and Horror stack up'), control: need(2, 'Its own Wrath track to manage'), tank: need(1, 'Wrath events hurt') },
-  'carnival-of-blood': { confidence: 'tips', items: need(2, 'Item traps make searching risky'), move: need(2, 'A big park to cover') },
-  'maple-lane': { confidence: 'estimate', move: need(2, 'Houses spread along the street'), rescue: need(2, 'Victims in every house'), dice: need(2, 'Convince rolls are needed to enter occupied houses, every time') },
-  'uss-konrad': { confidence: 'estimate', move: need(2, 'Long corridors'), items: need(2, 'Ship Items like the Flamethrower') },
-  'station-2891': { confidence: 'estimate', tank: need(2, 'Frostbite outside hurts'), search: need(1, 'Supplies to find') },
-  'wingard-cottage': { confidence: 'estimate', search: need(2, 'A small house full of things to find'), rescue: need(1, 'Victims close together'), time: need(1, 'Supply Items cost Time to pick up') },
-  'storybook-woods': { confidence: 'estimate', move: need(2, 'Spread-out woods'), search: need(2, 'Items hidden around the woods'), time: need(1, 'Each Raft token you pass through costs Time') },
-  'wolfe-asylum': { confidence: 'estimate', horror: need(3, 'An asylum that piles on Horror'), tank: need(1, 'Dangerous wards'), time: need(1, 'Picking up a Pill costs Time') },
-  'sunnydaze-mall': { confidence: 'tips', move: need(2, 'Two floors and balconies'), search: need(2, 'Shops full of Items'), dice: need(1, 'Rescuing the Savior is very dice-dependent') },
-  hellscape: { confidence: 'estimate', tank: need(2, 'Hell hurts'), horror: need(2, 'Horror climbs quickly'), dice: need(1, 'Hellshift rolls: fewer successes cost Time'), time: need(1, 'Failed Hellshifts cost Time') },
-  falconwood: { confidence: 'estimate', search: need(2, 'Missions need Items'), items: need(2, 'Mission Items to use') },
-  'marrek-warehouse': { confidence: 'estimate', move: need(2, 'A big warehouse floor'), tank: need(1, 'Traps around the floor') },
-  utopia: { confidence: 'estimate', move: need(2, 'Spread out'), horror: need(1, 'Noise and panic') },
-  'isla-lagarto': { confidence: 'estimate', move: need(2, 'Jungle island to cross'), tank: need(1, 'Hazards') },
-  'pesadilla-verde': { confidence: 'estimate', move: need(2, 'Dense jungle'), tank: need(2, 'Hazards') },
-  'larmes-abbey': { confidence: 'estimate', horror: need(2, 'An abbey full of dread'), search: need(1, 'Relics to find'), dice: need(1, 'Malice rooms swap a die for the cursed die') },
-  'shady-acres': { confidence: 'estimate', rescue: need(2, 'Farmhands to save'), attack: need(1, 'Things in the fields') },
-  buddyland: { confidence: 'estimate', move: need(1, 'Big park'), horror: need(1, 'Animatronic scares') },
-  megabgcon: { confidence: 'estimate', rescue: need(2, 'Crowds of Victims'), move: need(1, 'A busy hall') },
-  'santas-village': { confidence: 'estimate', tank: need(1, 'Cold and danger'), rescue: need(1, 'Elves to save'), move: need(1, 'Village to cross'), time: need(2, 'Entering a space costs 1 Time per Elf in it') },
+  // The rule sheet says there are no special rules (the Motorboat is just an Item).
+  'camp-happy-trails': { confidence: 'tips' },
+  'creech-manor': { confidence: 'tips', move: need(2, 'Three one-way spaces can trap you, and Lights Out takes a die off movement rolls') },
+  'sacred-groves': { confidence: 'tips', control: need(2, 'Atonement cards and anything else that lowers Divine Wrath are the main goal'), dice: need(1, 'Atonement and Fickleness of the Gods are Horror rolls, and a full failure raises Wrath'), horror: need(1, 'More Horror dice make Atonement cards work') },
+  'carnival-of-blood': { confidence: 'tips', items: need(1, 'An Item Trap hides in every Item deck (Asami’s immunity is her special)'), tank: need(1, 'Trap cards and tokens cost health (Cobra, Bear Trap, Acid, Blades)'), move: need(1, 'Terror Trap tokens stay all game and kill any Victim who enters') },
+  'maple-lane': { confidence: 'tips', dice: need(2, 'Convince is a dice roll needed every time you enter an occupied House'), horror: need(1, 'More Horror dice make Convince work'), move: need(1, 'Each House can only be searched once, so you have to cross Quadrants') },
+  'uss-konrad': { confidence: 'tips', move: need(1, 'Keycards are only picked up by ending a move on them, and shafts stay shut without one'), items: need(1, 'Six of the 15 Items are Keycards that run the shafts and ship systems') },
+  'station-2891': { confidence: 'tips', tank: need(1, 'Frostbite outdoors costs health once you already have a token'), cards: need(1, 'Victims are only saved by the Helicopter, and Fly Faster! is the card that moves it') },
+  'wingard-cottage': { confidence: 'tips', time: need(2, 'Each Supply costs 1 Time to pick up and each craft costs 1 to 4 Time'), items: need(1, 'Crafting builds weapons from Items, and limited uses carry over') },
+  'storybook-woods': { confidence: 'tips', move: need(1, 'Only one Victim can follow you over each bridge, so escorts take extra trips') },
+  'wolfe-asylum': { confidence: 'tips', time: need(1, 'Each Pill costs 1 Time to pick up'), move: need(1, 'Pills are only collected by ending a move in their space'), tank: need(1, 'Several Terror and Event cards cost health directly') },
+  'sunnydaze-mall': { confidence: 'tips', dice: need(1, 'Build Trust is a dice roll, and the Savior is hard to win over on a bad roll'), move: need(1, 'Railing jumps and escalators change your routes') },
+  hellscape: { confidence: 'tips', dice: need(1, 'Hellshift is a roll: two successes rearrange the tiles, none costs 2 Time') },
+  falconwood: { confidence: 'tips', move: need(1, 'Missions send you to token spaces, and River Crossings split the map') },
+  'marrek-warehouse': { confidence: 'tips', move: need(2, 'Climb and Leap are the only way onto the Racks'), tank: need(1, 'A failed Climb costs 1 health and a failed Leap costs 2') },
+  utopia: { confidence: 'tips', tank: need(2, 'Sand Snakes strike every turn and can’t be attacked; Rattlesnake and Sinkholes hurt too'), cards: need(1, 'Reaction cards are the only way to stop Sand Snake damage'), move: need(1, 'Sinkholes close spaces for good, and Boulders are the safe spots') },
+  'isla-lagarto': { confidence: 'tips', move: need(2, 'Fences, Lava and the T-Rex keep changing the safe routes, and the T-Rex kills outright') },
+  'pesadilla-verde': { confidence: 'tips', tank: need(2, 'Flash Flood, Piranhas, the Cursed Temple and Cave Collapse all cost health'), time: need(2, 'Saving a Soldier costs 2 Time until that upgrade is Unlocked'), move: need(1, 'The river only flows one way, and Heavy Rains makes River spaces cost 2 Time'), cards: need(1, 'Train cards unlock the Soldier upgrades') },
+  'larmes-abbey': { confidence: 'tips', horror: need(2, 'Standing in Malice swaps a die for the Cursed die, so more Horror dice help'), dice: need(1, 'Blessed and Cursed dice replace normal dice on Horror rolls'), tank: need(1, 'Malice spaces deal 2 damage on most Terror cards, and a Cursed icon costs health'), cards: need(1, 'Benediction clears Malice, and 14 tokens on the board is an instant loss') },
+  'shady-acres': { confidence: 'tips', rescue: need(1, 'Children abduct Victims for sacrifice, and a reviewer says to rescue early'), attack: need(1, 'Children can be killed, with damage split between those in a space') },
+  // Only special rule: the four Arcade spaces, which have no rules of their own.
+  buddyland: { confidence: 'tips' },
+  megabgcon: { confidence: 'tips', move: need(1, 'Hallway and dock moves get +1 die, and Victims won’t follow you out of Exhibit Areas'), dice: need(1, 'Create a Panic is a dice roll needed to get Victims out of booths') },
+  // No rule sheet for North Pole Nightmare yet; from card data and a tip only.
+  'santas-village': { confidence: 'estimate', time: need(2, 'Entering a space costs 1 Time per Elf in it'), move: need(1, 'Cheap movement helps when crowded spaces cost Time') },
 };
 
 /* One-off pairings worth more than the trait maths shows. */
@@ -184,6 +232,7 @@ export const SPECIALS = [
   { girl: 'adelaide', killer: 'inkanyamba', bonus: 2, why: 'Her Ultimate can drop a Wrath track straight to 1' },
   { girl: 'adelaide', location: 'sacred-groves', bonus: 1, why: 'Her Ultimate can drop the Groves’ Wrath to 1' },
   { girl: 'asami', location: 'carnival-of-blood', bonus: 1, why: 'Immune to the Carnival’s Item traps' },
+  { girl: 'gabrielle', killer: 'destiny', bonus: 1, why: 'Her Ultimate shows the next Terror card every turn, so you see a Fated Death coming and can get the right Fated Victim out in order' },
   { girl: 'selena', killer: 'poltergeist', bonus: 1, why: 'Reviewers’ top pick: fast Ultimate plus Search dice to find Carolyn' },
 ];
 
@@ -201,6 +250,9 @@ export const BASE_NEEDS = {
   time: need(1, 'Time buys every action; the Handbook calls discarding for Time one of the strongest moves'),
   dice: need(1, 'Every Action card rolls Horror dice, so rerolls and extra dice always help'),
 };
+/* Combos whose needs total at least this get the full BASE_NEEDS bonus
+   (about the bottom quarter of combos fall below it; the median is ~8.4). */
+const BASE_REF = 7;
 
 /* Combined needs for a Killer and/or Location: { trait: { v, reasons[] } }. */
 export function comboNeeds(killerId, locationId) {
@@ -395,10 +447,14 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
   }
   // Every-game Time/dice: bonus only. It adds to what she brings but NOT to
   // what the scenario asks for, so girls without Time or dice lose nothing.
+  // Scaled down for sparse combos (needs under BASE_REF): otherwise a combo
+  // that asks for very little (e.g. the unrated Pods) would be decided by the
+  // every-game bonus alone and Time/dice girls would score 9-10 there.
+  const baseScale = Math.min(1, totalNeed / BASE_REF);
   for (const [tr, n] of Object.entries(BASE_NEEDS)) {
     const gv = g[tr] ? g[tr].v : 0;
     if (!gv) continue;
-    got += n.v * gv;
+    got += n.v * gv * baseScale;
     const already = strengths.find((s) => s.trait === tr);
     if (already) { already.weight += n.v * gv; already.needWhy = [...already.needWhy, `Every game: ${n.why}`]; }
     else if (gv >= 2) strengths.push({ trait: tr, label: TRAIT_LABEL[tr], weight: n.v * gv, girlWhy: g[tr].why, needWhy: [`Every game: ${n.why}`] });

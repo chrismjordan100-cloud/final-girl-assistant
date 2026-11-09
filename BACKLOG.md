@@ -4,7 +4,7 @@ _Auto-generated from the codebase by `scripts/update-backlog.mjs` — do not edi
 
 **RAG key:** 🟢 built & shipped · 🟡 partially built / in progress · 🔴 not started
 
-_RAG last synced to code: 2026-11-08._
+_RAG last synced to code: 2026-11-09._
 
 ## Backlog
 
@@ -114,6 +114,17 @@ in cardOptionsFor() in src/data/cardData.js. You will add the names over time,
 board by board; the story generator can then use the real space names too.
 
 **Status:** 🔴 not started.
+
+### 🟡 Secret Envelope items: photos and fit assessments
+
+Each time you open a Final Girl's Secret Envelope: (1) tap "I've opened it" on
+her Codex card; (2) save a photo of the item card in src/assets/games/ named
+S{series}-item-{girl}-{item}.png (e.g. S1-item-laurie-bow.png); (3) ask Kiro to
+assess it (Asset Admin → Secret Envelopes has a ready-made prompt). Kiro adds
+her profile to ENVELOPE_ITEMS in src/data/fgFit.js plus Codex notes. Scores then
+update by themselves. Sealed envelopes are never named or counted.
+
+**Status:** 🟡 partially built / in progress.
 
 ### 🟡 Card images in the Codex card list
 
