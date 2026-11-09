@@ -182,7 +182,9 @@ const BACKLOG = [
     detail:
       'The Pods vignette has no rule sheet anywhere yet: it isn\u2019t in the tracker, on RulesPal or on the publisher\u2019s site, and its official name is unconfirmed. When you have the box, scan or photograph the rule sheet and the key cards (Finales, Dark Powers, any special cards), put them in s4-rules-pdf (e.g. FV04_Pods.pdf) and src/assets/games (S4-killer-pods-1.png, -2.png\u2026), add its -flavour.png, and fix the name and setup text in games.js. Then give Claude the Training videos prompt for Season 4: it will only make the missing Pods video (S4-killer-pods-video.mp4).',
     affects: ['This Game', 'Asset Admin', 'Rules Reference'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'The key art is in (S4-killer-pods-art.png). Still to do: the rule sheet and key cards scanned, its -flavour.png, its official name and setup text in games.js, then its how-to-play video.',
   },
   // status: 'done' (green) | 'partial' (amber) | 'todo' (red).
   // `remaining` is shown ONLY for 'partial' items — what's left to finish.
@@ -371,23 +373,27 @@ const BACKLOG = [
   {
     title: 'Periodically harvest new online tips (especially Series 4)',
     detail:
-      'Community strategy tips keep surfacing over time as more people play, so revisit the web periodically and fold new ones into the Tips data (generalTips / killerTips / locationTips in src/data/games.js), each with its source and a confirmed/reported confidence tag like the existing ones. Series 4 is the priority: it is newest and under-covered, and tips will grow as it gets played around the world \u2014 watch for per-Killer and per-Location advice for Billy/Buddyland, Grimlash/Shady Acres, Berith/L\u2019Armes Abbey, The Volk\u2019ar/Pesadilla Verde, The Raptors/Isla Lagarto, and the Shriek Special Feature (Mort). Also backfill the S1\u2013S3 combos as new guides appear. Good sources to sweep: BoardGameGeek forums/strategy threads, the Final Girl wiki, YouTube playthrough/strategy channels (e.g. Dude Take Your Turn), Reddit, and Van Ryder\u2019s own posts. Rough cadence: every few months, and whenever a new S4 box hits the table. Note: S4 tips are currently EMPTY (no S4 entries in the tips data yet), so the first pass is a from-scratch build, not just a top-up.',
+      'Community strategy tips keep surfacing over time as more people play, so revisit the web periodically and fold new ones into the Tips data (generalTips / killerTips / locationTips in src/data/games.js), each with its source and a confirmed/reported confidence tag like the existing ones. Series 4 is the priority: it is newest and under-covered, and tips will grow as it gets played around the world \u2014 watch for per-Killer and per-Location advice for Billy/Buddyland, Grimlash/Shady Acres, Berith/L\u2019Armes Abbey, The Volk\u2019ar/Pesadilla Verde, The Raptors/Isla Lagarto, and the Shriek Special Feature (Mort). Also backfill the S1\u2013S3 combos as new guides appear. Good sources to sweep: BoardGameGeek forums/strategy threads, the Final Girl wiki, YouTube playthrough/strategy channels (e.g. Dude Take Your Turn), Reddit, and Van Ryder\u2019s own posts. Rough cadence: every few months, and whenever a new S4 box hits the table.',
     affects: ['Tips', 'Ask', 'This Game'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'Ongoing by design. Series 4 has 33 tips so far (most Killers and Locations covered, from reviews and the Strategy Tips Handbook). Next sweep: fill gaps for The Raptors / Isla Lagarto and Shriek, then top up S1\u2013S3 every few months.',
   },
   {
     title: 'Final Girl Series 4 \u2013 card reference sheet',
     detail:
       'A searchable, sortable reference of every card in each Series 4 Feature Film, built from photos of the physical cards. One section per film: Bad Times at Buddyland (Billy the Bear / Buddyland), A Rotten Harvest (Grimlash / Shady Acres), A Demon in the Shadows (Berith / L\u2019Armes Abbey), The Green Terror (The Volk\u2019ar / Pesadilla Verde), The Raptor Games (The Raptors / Isla Lagarto), and Shriek \u2013 Special Feature (Mort / Mega Board Game Con). Capture per Location and Killer: Terror cards (Location and Killer decks kept separate), Setup cards, Item cards (noting the Search space / Item deck where shown), Event cards, and killer-specific extras where present (Buddy cards, Harvest Madness, Raptor Spawn, Volk\u2019ar Movement, Clue/Suspect cards) plus Dark Power, Epic Dark Power, Finale and Epic Finale cards. Fields per card: Feature Film, Source (Location or Killer), Card type, Card name, Flavour text, full Effect text, key stats where relevant (range, damage, hands, one-time/limited use, weapon/reaction/passive), and Notes (e.g. clarifications from the rules PDF \u201CCard Notes\u201D section). Input: uploaded photos of each deck spread on a table, cross-checked against the official rules PDFs on the Van Ryder Games product pages; flag any card whose text isn\u2019t legible rather than guessing. Output: a single filterable view (filter by Feature Film, Location/Killer and card type, free-text search across names and effect text), also exportable as a spreadsheet. Waiting on card photos.',
     affects: ['Codex', 'Card data', 'Export'],
-    status: 'todo',
+    status: 'partial',
+    remaining:
+      'The card data for all five Series 4 films and Shriek is in (about 160 Series 4 cards: Finales, Dark Powers, Terror, Setup, Event and Item cards, plus special cards), and Codex \u2192 All cards already gives the searchable, filterable view. Still to do: The Raptors and Isla Lagarto are thin (only 1 Finale, 4 Raptor Terror cards; no Isla Lagarto Setup cards, 4 Events, 1 Terror card), and the text hasn\u2019t been checked against photos of the real cards.',
   },
   {
-    title: 'Series 4 icons — add with the S4 import',
+    title: 'Series 4 icons \u2014 add with the S4 import',
     detail:
-      'When Series 4 is added, remember the icon assets too: (a) the main Killer/Location emblems in src/assets/icons/ named S4-killer-{id}-icon.png / S4-location-{id}-icon.png; and (b) any S4 scenario rule icons in src/assets/icons/rules/ with rule-icons.json entries. Without these the S4 entries show no icons in Codex, This Game, Scenarios, Tips and the pickers.',
+      'Done. All 10 Series 4 Killer and Location emblems are in src/assets/icons/ (e.g. S4-killer-grimlash-icon.png), and 62 Series 4 scenario rule icons are in src/assets/icons/rules/ with their rule-icons.json entries, so the S4 entries show their icons in the Codex, This Game, Scenarios, Tips and the pickers. Any S4 box added later (e.g. the Pods vignette) needs its icons adding the same way.',
     affects: ['Codex', 'This Game', 'Scenarios', 'Icon Reference', 'Asset Admin'],
-    status: 'todo',
+    status: 'done',
   },
 ];
 
