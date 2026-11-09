@@ -183,6 +183,28 @@
   display: block;
 }
 
+.cx-card__board { margin: 0; }
+.cx-card__board img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.cx-card__board figcaption { font-size: 0.72rem; margin-top: 0.25rem; }
+.cx-card__board--missing {
+  aspect-ratio: 9 / 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-dim);
+  background: var(--fg-black-2);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}
+
 .cx-card__flavour {
   font-style: italic;
   color: var(--text-dim);

@@ -52,12 +52,17 @@ function assetTypesFor(type, entry, opened) {
   }
 
   // killer / location
-  return [
+  const list = [
     { key: 'icon', label: 'Icon', example: `${prefix}-icon.png`, present: Boolean(getIcon(type, entry)) },
     { key: 'art', label: 'Key art', example: `${prefix}-art.png`, present: hasImageBaseName(`${prefix}-art`) },
     { key: 'flavour', label: 'Flavour text', example: `${prefix}-flavour.png`, present: hasImageBaseName(`${prefix}-flavour`) },
     { key: 'rules', label: 'Rules pages', example: `${prefix}-1.png (+ -2, -3, …)`, present: getPageImages(type, entry).length > 0 },
   ];
+  // Locations: a sharp, straight-on photo of the board / map, shown in the Codex.
+  if (type === 'location') {
+    list.push({ key: 'board', label: 'Board / map (high res)', example: `${prefix}-board.jpg`, present: hasImageBaseName(`${prefix}-board`) });
+  }
+  return list;
 }
 
 function entryStatus(type, entry, opened) {
@@ -123,7 +128,18 @@ const VIDEOS_TOTAL = VIDEO_LIST.length;
 
 /* Running backlog of material still to scan / transcribe with Kiro. Add to
    this list as new ideas come up so nothing gets forgotten. */
+/* Location board photos still to take, worked out from the files present. */
+const BOARDS_NEEDED = locations.filter((l) => !hasImageBaseName(`S${l.season}-location-${l.shortName}-board`));
+
 const BACKLOG = [
+  {
+    title: 'Chris to do: photograph the missing location boards',
+    detail:
+      'Each Location in the Codex shows its board / map under the key art; click it to see it full screen. Most boards came from the publisher\u2019s shop images, but some aren\u2019t published anywhere usable. For those, lay the board flat in good light and take one photo from straight above, filling the frame (no angle, no glare), then send it in the chat saying which board it is. Claude straightens it and saves it as S{season}-location-{shortName}-board.jpg. The Locations section below shows a tick or cross for each.',
+    affects: ['Codex', 'You (Chris)'],
+    status: BOARDS_NEEDED.length === 0 ? 'done' : 'partial',
+    remaining: `Boards still needed: ${BOARDS_NEEDED.map((l) => l.name).join(', ')}.`,
+  },
   {
     title: 'How-to videos for add-on and optional rules (not tied to a Killer or Location)',
     detail:

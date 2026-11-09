@@ -6,6 +6,7 @@ import {
   narration,
   getArtImage,
   getFlavourImage,
+  getImage,
   getPlayRules,
   getFinalGirlCards,
   getFinalGirlEnvelopeImage,
@@ -19,6 +20,7 @@ import CardList from './CardList.jsx';
 import FitGrid from './FitGrid.jsx';
 import FitSummary from './FitSummary.jsx';
 import { usePersistentState } from '../hooks/usePersistentState.js';
+import ImageZoom from '../components/ImageZoom.jsx';
 import './Codex.css';
 
 const TABS = [
@@ -55,6 +57,8 @@ function CollapsibleSection({ title, count, collapsed, onToggle, children }) {
 function EntryCard({ type, entry, selected, onPick }) {
   const art = getArtImage(type, entry);
   const flavourImg = getFlavourImage(type, entry);
+  // Locations also show their board / map (Codex only, not This Game).
+  const board = type === 'location' ? getImage('location', entry, 'board') : null;
   const flavourText =
     (type === 'killer' ? narration.killers[entry.id] : narration.locations[entry.id]) || null;
   const rules = getPlayRules(entry);
@@ -93,6 +97,18 @@ function EntryCard({ type, entry, selected, onPick }) {
         )}
         {flavourImg && (
           <img className="cx-card__flavimg" src={flavourImg} alt={`${entry.name} flavour`} loading="lazy" />
+        )}
+        {type === 'location' && (
+          board ? (
+            <figure className="cx-card__board">
+              <img src={board} alt={`${entry.name} board`} loading="lazy" />
+              <figcaption className="fg-type">The board</figcaption>
+            </figure>
+          ) : (
+            <div className="cx-card__board cx-card__board--missing fg-type">
+              Board / map not yet provided
+            </div>
+          )
         )}
       </div>
 
@@ -434,7 +450,7 @@ export default function Codex({ onNavigate }) {
   }, [q, favsOnly, envOnly, collection.favourites, collection.envelopes, wins]);
 
   return (
-    <div>
+    <ImageZoom>
       <div className="view-head">
         <p className="section-eyebrow">Know your night</p>
         <h1>Codex</h1>
@@ -593,6 +609,6 @@ export default function Codex({ onNavigate }) {
               : 'Nothing matches that filter.'}
         </p>
       )}
-    </div>
+    </ImageZoom>
   );
 }
