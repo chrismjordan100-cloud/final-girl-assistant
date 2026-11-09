@@ -17,9 +17,11 @@
    6. scoreGirl / rankGirls: combine the lot into a score out of 10 with the
       reasons, for any Killer + Location:
         55%  scenario fit   her traits x what the Killer/Location rewards
-        20%  survival       her health (counts for more vs hard-hitting Killers)
+        20%  survival       her health (counts for more vs hard-hitting Killers,
+                            and where Victim deaths feed Bloodlust)
         25%  Ultimate       how fast she gets it x how good it is (counts for
-                            more where Victims are scarce or die quickly)
+                            more where Victims die quickly; 5-6 saves are
+                            marked down there, as she may never get there)
 
    All ratings are judgement calls, so edit freely: the score updates itself.
    ========================================================================== */
@@ -293,6 +295,82 @@ export const LOCATION_NEEDS = {
   'santas-village': { confidence: 'estimate', tank: need(1, 'Cold and danger'), rescue: need(1, 'Elves to save'), move: need(1, 'Village to cross'), time: need(2, 'Entering a space costs 1 Time per Elf in it') },
 };
 
+const LOCATION_WEIGHT = 0.7; // the Killer usually matters more than the map
+
+/* ---- Victim deaths and Bloodlust ----------------------------------------
+   For each Killer and Location:
+     deaths     how quickly Victims die (0 = rarely, 3 = very fast)
+     bloodlust  how much those deaths feed the Killer (0 = Bloodlust doesn't
+                rise on deaths, 3 = every death makes it much more dangerous)
+   Used in scoreGirl: fast deaths make a quick Ultimate worth more and punish
+   girls who need 5-6 saves (she may never get there); fast deaths that also
+   feed Bloodlust make the Killer hit harder over time, so health counts more.
+   Ratings from the rules in the app (playRules) and the strategy tips; edit
+   freely. */
+const vp = (deaths, bloodlust, why) => ({ deaths, bloodlust, why });
+export const KILLER_PRESSURE = {
+  hans: vp(2, 2, 'Hunts Victims steadily; each death feeds a strong Bloodlust track'),
+  poltergeist: vp(2, 2, 'Can’t be killed, so Victims keep dying until you get them out'),
+  inkanyamba: vp(2, 2, 'Deaths raise Bloodlust, and his Wrath Unleashes add more danger'),
+  geppetto: vp(3, 2, 'Puppets swarm and keep respawning, picking off Victims'),
+  'dr-fright': vp(2, 3, 'Low Bloodlust keeps him nearly still; each death wakes him up'),
+  evomorph: vp(2, 3, 'Bloodlust makes it EVOLVE (Hatchling → Youngling → Adult)'),
+  organism: vp(2, 2, 'Exposed Victims can’t be saved until tested; others die as normal'),
+  intruders: vp(3, 2, 'Three Killers on the board means more Victims caught'),
+  'big-bad-wolf': vp(3, 2, 'In Slay mode its attacks are spread across every Victim in its space'),
+  'ratchet-lady': vp(3, 1, 'Victims turn into Maniacs (lost to you), but that doesn’t raise Bloodlust'),
+  hunter: vp(2, 0, 'Its Bloodlust doesn’t rise when Victims die, only when damage is dealt'),
+  razorface: vp(2, 2, 'Afflictions need Victims to purge, so losing them can make him unbeatable'),
+  slayer: vp(2, 2, 'Pulls Victims into the Mirror Dimension and kills them there'),
+  tormentor: vp(2, 2, 'Death Traps catch Victims, though she’s off the board until the Finale'),
+  eyeless: vp(2, 2, 'Noise draws him to Victims (estimate)'),
+  'the-birds': vp(3, 2, 'Swarms of Birds kill Victims fast'),
+  'patsy-zombies': vp(2, 3, 'Bloodlust sets how many Zombies spawn; dead Victims swell the Hordes'),
+  destiny: vp(2, 2, 'Fated deaths come in order; Bloodlust rises when their Death tokens are revealed'),
+  raptors: vp(2, 2, 'A pack that stops on Victims (estimate)'),
+  volkar: vp(2, 2, 'Concealed most of the game, then strikes (estimate)'),
+  berith: vp(2, 2, 'Possessed nun hunting Victims (estimate)'),
+  grimlash: vp(3, 2, 'Victims in the fields die quickly'),
+  billy: vp(2, 2, 'Buddies and Billy both attack Victims (estimate)'),
+  pods: vp(3, 2, 'Victims get taken over (estimate)'),
+  mort: vp(1, 2, 'Disguised among Suspects for much of the game, so fewer direct kills'),
+  krampus: vp(2, 2, 'Attacks, then Krampus Presents hurt Victims who open them'),
+};
+export const LOCATION_PRESSURE = {
+  'camp-happy-trails': vp(1, 0, 'Victims spread out, no extra hazards'),
+  'creech-manor': vp(1, 0, 'One-way spaces slow everyone, Victims included'),
+  'sacred-groves': vp(1, 2, 'Victims on Sacred spaces raise Wrath, which climbs the Groves’ own Bloodlust track'),
+  'carnival-of-blood': vp(2, 0, 'Terror Traps always kill the Victims in your space'),
+  'maple-lane': vp(1, 0, 'Victims holed up in houses are slow to reach'),
+  'uss-konrad': vp(1, 0, 'Closed shafts slow rescues'),
+  'station-2891': vp(2, 0, 'Frostbite hurts Victims outdoors, and saving needs the helicopter'),
+  'wingard-cottage': vp(1, 0, 'Victims close together'),
+  'storybook-woods': vp(1, 0, 'Bridges let only 1 Victim across at a time'),
+  'wolfe-asylum': vp(1, 0, 'No extra Victim hazards'),
+  'sunnydaze-mall': vp(1, 0, 'The Savior is the target, not the Victims'),
+  hellscape: vp(1, 0, 'Shifting tiles can strand Victims'),
+  falconwood: vp(1, 0, 'The Mission comes first; Friends help'),
+  'marrek-warehouse': vp(1, 0, 'Locked Exits keep Victims on the floor longer'),
+  utopia: vp(3, 0, 'Sand Snakes hit Victims first every turn, and sinkholes kill everyone in them'),
+  'isla-lagarto': vp(3, 0, 'The T-Rex instantly kills a Victim first'),
+  'pesadilla-verde': vp(2, 0, 'Soldiers follow you into the Killer’s space; friendly fire kills them'),
+  'larmes-abbey': vp(1, 0, 'Malice builds up in the rooms (estimate)'),
+  'shady-acres': vp(2, 0, 'The Children keep spawning while Victims remain'),
+  buddyland: vp(1, 0, 'No extra Victim hazards (estimate)'),
+  megabgcon: vp(0, 0, 'Booths keep spawning new Victims, so saves are plentiful'),
+  'santas-village': vp(1, 0, 'Elves slow movement, not Victims'),
+};
+
+/* Combined pressure for a combo: deaths and bloodlust (Location at 70%). */
+export function comboPressure(killerId, locationId) {
+  const k = KILLER_PRESSURE[killerId];
+  const l = LOCATION_PRESSURE[locationId];
+  const deaths = (k ? k.deaths : 0) + LOCATION_WEIGHT * (l ? l.deaths : 0);
+  const bloodlust = (k ? k.bloodlust : 0) + LOCATION_WEIGHT * (l ? l.bloodlust : 0);
+  const reasons = [k && `Killer: ${k.why}`, l && `Location: ${l.why}`].filter(Boolean);
+  return { deaths, bloodlust, reasons, known: Boolean(k || l) };
+}
+
 /* One-off pairings worth more than the trait maths shows. */
 export const SPECIALS = [
   { girl: 'adelaide', killer: 'inkanyamba', bonus: 2, why: 'Her Ultimate can drop a Wrath track straight to 1' },
@@ -304,7 +382,10 @@ export const SPECIALS = [
 
 /* ---- Scoring -------------------------------------------------------------- */
 
-const LOCATION_WEIGHT = 0.7; // the Killer usually matters more than the map
+/* The three parts are divided by this before x10, so a strong all-rounder
+   lands around 8-9 and only an exceptional pairing reaches 10. */
+export const SCORE_SCALE = 0.95;
+
 
 /* Needs that apply to EVERY scenario, on top of the Killer and Location.
    Without these, Time and dice specialists (Sheila, Veronica, Ronda, Ava,
@@ -528,13 +609,21 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
 
   // ---- 2. Survival: health, weighted up against hard-hitting scenarios
   const tankNeed = needs.tank ? needs.tank.v : 0;
-  const survWeight = 1 + 0.5 * Math.min(tankNeed, 3) / 3; // 1 - 1.5
+  // How fast Victims die (0-1) and how much that feeds Bloodlust (0-1).
+  const press = comboPressure(killerId, locationId);
+  const deathsN = Math.min(press.deaths, 4) / 4;
+  const bloodN = Math.min(press.bloodlust, 3) / 3;
+  // Deaths that feed Bloodlust make the Killer hit harder over time.
+  const survWeight = 1 + 0.5 * Math.min(tankNeed, 3) / 3 + 0.3 * deathsN * bloodN; // 1 - 1.8
   const surv = survivalOf(girlId) ?? 0.5;
   // ---- 3. Ultimate: speed x power, weighted up where Victims are precious
   const rescueNeed = needs.rescue ? needs.rescue.v : 0;
-  const ultWeight = 1 + 0.5 * Math.min(rescueNeed, 3) / 3; // 1 - 1.5
-  const speed = ultSpeedOf(girlId);
-  const ultV = ultValueOf(girlId);
+  // Fast-dying Victims make an early Ultimate worth more...
+  const ultWeight = 1 + 0.5 * Math.min(rescueNeed, 3) / 3 + 0.4 * deathsN; // 1 - 1.9
+  // ...and a girl needing 5-6 saves may never get there.
+  const late = st.saves != null && st.saves > 4 ? st.saves - 4 : 0;
+  const speed = ultSpeedOf(girlId) * (1 - 0.15 * deathsN * late);
+  const ultV = speed * ((st.ult == null ? 1.5 : st.ult) / 3);
   const power = st.ult == null ? null : st.ult;
 
   const parts = {
@@ -544,22 +633,23 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
   };
   // A girl with fit 0.8 (rated 2 in everything), 6 health and a strong
   // Ultimate after 4 saves lands around 8.
-  let raw = (parts.fit + parts.survival + parts.ultimate) / 0.85;
+  let raw = (parts.fit + parts.survival + parts.ultimate) / SCORE_SCALE;
 
   // Reasons for health and the Ultimate, so "Why?" explains them.
   const savesTxt = st.saves == null ? 'her own flip condition' : st.saves === 1 ? 'just 1 save' : `${st.saves} saves`;
   const powerTxt = power == null ? 'Ultimate not known yet' : power === 3 ? 'a strong Ultimate' : power === 2 ? 'a solid Ultimate' : 'a minor Ultimate';
   const health = { h: st.h, value: surv, weight: survWeight, why: `${st.h} health` };
+  const pressure = { deaths: press.deaths, bloodlust: press.bloodlust, reasons: press.reasons };
   const ultimate = { saves: st.saves, power, speed, value: ultV, weight: ultWeight, why: `${powerTxt} after ${savesTxt}: ${st.note}` };
   if (st.h >= 7 || (st.h >= 6 && tankNeed >= 2)) {
-    strengths.push({ trait: 'health', label: 'Health', weight: 3 * surv * survWeight, girlWhy: `${st.h} health`, needWhy: tankNeed ? (needs.tank.reasons) : ['Every game: health is how long she survives'] });
+    strengths.push({ trait: 'health', label: 'Health', weight: 3 * surv * survWeight, girlWhy: `${st.h} health`, needWhy: [...(tankNeed ? needs.tank.reasons : ['Every game: health is how long she survives']), ...(deathsN * bloodN >= 0.4 ? press.reasons : [])] });
   } else if (st.h <= 4) {
     gaps.push({ trait: 'health', label: 'Health', needWhy: tankNeed ? needs.tank.reasons : ['Every game: health is how long she survives'], girlWhy: `Only ${st.h} health` });
   }
   if (ultV >= 0.5) {
-    strengths.push({ trait: 'ultimate', label: 'Ultimate', weight: 3 * ultV * ultWeight, girlWhy: ultimate.why, needWhy: rescueNeed ? needs.rescue.reasons : ['Every game: a strong Ultimate, unlocked early'] });
-  } else if (ultV < 0.2 && rescueNeed >= 2) {
-    gaps.push({ trait: 'ultimate', label: 'Ultimate', needWhy: needs.rescue.reasons, girlWhy: ultimate.why });
+    strengths.push({ trait: 'ultimate', label: 'Ultimate', weight: 3 * ultV * ultWeight, girlWhy: ultimate.why, needWhy: [...(rescueNeed ? needs.rescue.reasons : ['Every game: a strong Ultimate, unlocked early']), ...(deathsN >= 0.5 ? press.reasons : [])] });
+  } else if (ultV < 0.2 && (rescueNeed >= 2 || deathsN >= 0.6)) {
+    gaps.push({ trait: 'ultimate', label: 'Ultimate', needWhy: [...(rescueNeed ? needs.rescue.reasons : []), ...press.reasons], girlWhy: late && deathsN >= 0.5 ? `${ultimate.why}; Victims die fast here, so ${st.saves} saves may never come` : ultimate.why });
   }
 
   const specials = SPECIALS.filter(
@@ -578,7 +668,7 @@ export function scoreGirl(girlId, killerId, locationId, envelopes = null) {
   score = Math.max(1, Math.round(score * 2) / 2);
   strengths.sort((a, b) => b.weight - a.weight);
   gaps.sort((a, b) => ((needs[b.trait] ? needs[b.trait].v : 1) - (needs[a.trait] ? needs[a.trait].v : 1)));
-  return { score, strengths, gaps, specials, item, health, ultimate, parts };
+  return { score, strengths, gaps, specials, item, health, ultimate, parts, pressure };
 }
 
 /* Every rated girl for a combo, best first. `girls` is the app's finalGirls list. */

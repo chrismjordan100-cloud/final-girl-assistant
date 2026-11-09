@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { finalGirls, killers, locations } from '../data/games.js';
 import {
   TRAITS, GIRL_TRAITS, KILLER_NEEDS, LOCATION_NEEDS, SPECIALS, GIRL_TRAIT_IDS, FG_STATS,
-  comboNeeds, rankGirls, comboConfidence,
+  comboNeeds, rankGirls, comboConfidence, SCORE_SCALE, KILLER_PRESSURE, LOCATION_PRESSURE, comboPressure,
 } from '../data/fgFit.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useFgCollection } from '../hooks/useFgCollection.js';
@@ -25,7 +25,7 @@ function Pips({ v, title }) {
   );
 }
 
-function NeedsTable({ rows, needs, highlight }) {
+function NeedsTable({ rows, needs, highlight, pressure }) {
   return (
     <div className="fgx-scroll">
       <table className="fgx-table">
@@ -35,6 +35,8 @@ function NeedsTable({ rows, needs, highlight }) {
             {TRAITS.map((t) => (
               <th key={t.id} title={t.desc} className={highlight[t.id] ? 'is-hot' : ''}>{t.short}</th>
             ))}
+            <th title="How fast Victims die (0-3)">Deaths</th>
+            <th title="How much Victim deaths feed Bloodlust (0-3)">Blood&shy;lust</th>
             <th>Basis</th>
           </tr>
         </thead>
@@ -49,6 +51,8 @@ function NeedsTable({ rows, needs, highlight }) {
                     <Pips v={n && n[t.id] ? n[t.id].v : 0} title={n && n[t.id] ? n[t.id].why : ''} />
                   </td>
                 ))}
+                <td><Pips v={pressure[r.id] ? pressure[r.id].deaths : 0} title={pressure[r.id] ? pressure[r.id].why : ''} /></td>
+                <td><Pips v={pressure[r.id] ? pressure[r.id].bloodlust : 0} title={pressure[r.id] ? pressure[r.id].why : ''} /></td>
                 <td className="fgx-basis">{n ? (n.confidence === 'tips' ? 'Tips' : 'Estimate') : '—'}</td>
               </tr>
             );
@@ -75,6 +79,8 @@ export default function FitGrid() {
   const scoreOf = Object.fromEntries(ranked.map((r) => [r.fg.id, r.fit.score]));
   const needOrder = TRAITS.filter((t) => needs[t.id]).sort((a, b) => needs[b.id].v - needs[a.id].v);
   const girlTraits = TRAITS.filter((t) => GIRL_TRAIT_IDS.includes(t.id));
+  const press = comboPressure(k, l);
+  const pressLabel = (v, max) => (v >= max * 0.75 ? 'very high' : v >= max * 0.5 ? 'high' : v >= max * 0.25 ? 'moderate' : 'low');
 
   return (
     <div className="fgx">
@@ -82,8 +88,8 @@ export default function FitGrid() {
         <p>How &ldquo;Best fits by ability&rdquo; works. Each score out of 10 has three parts:</p>
         <ul>
           <li><strong>Scenario fit (55%)</strong>: each Final Girl is rated 0&ndash;3 in {GIRL_TRAIT_IDS.length} traits, and each Killer and Location says how much it rewards each trait (the Location counts at 70%).</li>
-          <li><strong>Survival (20%)</strong>: her starting health, counted in every game. It counts up to half as much again against Killers and Locations that hit hard.</li>
-          <li><strong>Ultimate (25%)</strong>: how many Victims she must save before her Ultimate (her card&rsquo;s save slots) <em>times</em> how good that Ultimate is, so a weak Ultimate unlocked after 4 saves still scores low. It counts up to half as much again where Victims are scarce or die quickly.</li>
+          <li><strong>Survival (20%)</strong>: her starting health, counted in every game. It counts for more against Killers and Locations that hit hard, and where Victim deaths feed the Killer&rsquo;s Bloodlust.</li>
+          <li><strong>Ultimate (25%)</strong>: how many Victims she must save before her Ultimate (her card&rsquo;s save slots) <em>times</em> how good that Ultimate is, so a weak Ultimate unlocked after 4 saves still scores low. It counts for more where Victims die quickly, and girls needing 5&ndash;6 saves are marked down there, because she may never get that far.</li>
         </ul>
         <p>A few special pairings add a bonus on top. Hover or tap a dot for the reason.</p>
       </div>
@@ -121,6 +127,21 @@ export default function FitGrid() {
           ))}
         </ul>
 
+        {press.known && (
+          <ul className="fgx-needs">
+            <li>
+              <span className="fgx-needs__w">{press.deaths.toFixed(1).replace('.0', '')}</span>
+              <strong>Victim deaths</strong>
+              <span className="fgx-dim"> &mdash; {pressLabel(press.deaths, 4)}. Fast deaths make an early Ultimate worth more and mark down girls needing 5&ndash;6 saves.</span>
+            </li>
+            <li>
+              <span className="fgx-needs__w">{press.bloodlust.toFixed(1).replace('.0', '')}</span>
+              <strong>Bloodlust from deaths</strong>
+              <span className="fgx-dim"> &mdash; {pressLabel(press.bloodlust, 3)}. Deaths that feed Bloodlust make the Killer hit harder, so health counts for more. {press.reasons.join(' · ')}</span>
+            </li>
+          </ul>
+        )}
+
         <h3 className="fgx-h3">Every rated girl</h3>
         <ol className="fgx-rank">
           {ranked.map((r, i) => (
@@ -136,7 +157,7 @@ export default function FitGrid() {
               {open === r.fg.id && (
                 <div className="fgx-why">
                   <p className="fgx-dim fgx-small">
-                    Scenario fit {(r.fit.parts.fit / 0.85 * 10).toFixed(1)} + survival {(r.fit.parts.survival / 0.85 * 10).toFixed(1)} ({r.fit.health.why}) + Ultimate {(r.fit.parts.ultimate / 0.85 * 10).toFixed(1)} ({r.fit.ultimate.saves == null ? 'own flip condition' : `${r.fit.ultimate.saves} save${r.fit.ultimate.saves === 1 ? '' : 's'}`}, power {r.fit.ultimate.power ?? '?'}/3){r.fit.specials.length ? ' + special bonus' : ''}
+                    Scenario fit {(r.fit.parts.fit / SCORE_SCALE * 10).toFixed(1)} + survival {(r.fit.parts.survival / SCORE_SCALE * 10).toFixed(1)} ({r.fit.health.why}) + Ultimate {(r.fit.parts.ultimate / SCORE_SCALE * 10).toFixed(1)} ({r.fit.ultimate.saves == null ? 'own flip condition' : `${r.fit.ultimate.saves} save${r.fit.ultimate.saves === 1 ? '' : 's'}`}, power {r.fit.ultimate.power ?? '?'}/3){r.fit.specials.length ? ' + special bonus' : ''}
                   </p>
                   {r.fit.specials.map((s, j) => <p key={j} className="fgx-special">&#10024; {s.why}</p>)}
                   {r.fit.strengths.map((s) => <p key={s.trait}><b className="fgx-plus">+ {s.label}:</b> {s.girlWhy}</p>)}
@@ -197,11 +218,11 @@ export default function FitGrid() {
       {/* 3. Needs grids */}
       <section className="fgx-section fg-panel">
         <h2 className="fgx-h">What each Killer rewards</h2>
-        <NeedsTable rows={killers} needs={KILLER_NEEDS} highlight={{}} />
+        <NeedsTable rows={killers} needs={KILLER_NEEDS} highlight={{}} pressure={KILLER_PRESSURE} />
       </section>
       <section className="fgx-section fg-panel">
         <h2 className="fgx-h">What each Location rewards</h2>
-        <NeedsTable rows={locations} needs={LOCATION_NEEDS} highlight={{}} />
+        <NeedsTable rows={locations} needs={LOCATION_NEEDS} highlight={{}} pressure={LOCATION_PRESSURE} />
       </section>
 
       <section className="fgx-section fg-panel">
