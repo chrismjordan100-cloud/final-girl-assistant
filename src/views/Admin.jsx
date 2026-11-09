@@ -133,6 +133,13 @@ const BOARDS_NEEDED = locations.filter((l) => !hasImageBaseName(`S${l.season}-lo
 
 const BACKLOG = [
   {
+    title: 'Chris to do: sort the Mausoleum Box into the Feature Film boxes',
+    detail:
+      'A physical job, not a digital one. The Mausoleum Box holds extras for every series in one place, so move each piece into the Feature Film box it belongs to, so a game\u2019s whole set comes out of one box. Example: the Special Victim meeples for The Happy Trails Horror go into The Happy Trails Horror box. Contents to sort: Special Victim meeples (Series 1 to 4 and the Special Features), the Vehicle Action cards and Proxy Event cards (each into its film\u2019s box), the Signature Action cards, Julia and Constance, the Elizabeth and Ursula character packs and miniatures, and the Evan and AJ meeples. Anything with no single film (e.g. the Signature Action cards or the character packs) needs a home of your choosing. Tell Claude when it\u2019s done and she\u2019ll mark it green.',
+    affects: ['You (Chris)', 'Storage'],
+    status: 'todo',
+  },
+  {
     title: 'Chris to do: photograph the missing location boards',
     detail:
       'Each Location in the Codex shows its board / map under the key art; click it to see it full screen. Most boards came from the publisher\u2019s shop images, but some aren\u2019t published anywhere usable. For those, lay the board flat in good light and take one photo from straight above, filling the frame (no angle, no glare), then send it in the chat saying which board it is. Claude straightens it and saves it as S{season}-location-{shortName}-board.jpg. The Locations section below shows a tick or cross for each.',
