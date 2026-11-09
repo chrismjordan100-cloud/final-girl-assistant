@@ -142,7 +142,7 @@ const BACKLOG = [
   {
     title: 'Chris to do: photograph the missing location boards',
     detail:
-      'Each Location in the Codex shows its board / map under the key art; click it to see it full screen. Most boards came from the publisher\u2019s shop images, but some aren\u2019t published anywhere usable. For those, lay the board flat in good light and take one photo from straight above, filling the frame (no angle, no glare), then send it in the chat saying which board it is. Claude straightens it and saves it as S{season}-location-{shortName}-board.jpg. The Locations section below shows a tick or cross for each.',
+      'Each Location in the Codex shows its board / map under the key art; click it to see it full screen. Most boards came from the publisher\u2019s shop images, but some aren\u2019t published anywhere usable. For those, lay the board flat in good light and take one photo from straight above, filling the frame (no angle, no glare), then send it in the chat saying which board it is. Claude straightens it and saves it as S{season}-location-{shortName}-board.jpg. The Locations section below shows a tick or cross for each. Once a board is in, Claude also reads its spaces into the Turn Tracker\u2019s \u201cWhere she is\u201d list (those two locations use free text until then).',
     affects: ['Codex', 'You (Chris)'],
     status: BOARDS_NEEDED.length === 0 ? 'done' : 'partial',
     remaining: `Boards still needed: ${BOARDS_NEEDED.map((l) => l.name).join(', ')}.`,

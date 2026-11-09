@@ -12,6 +12,7 @@
    ========================================================================== */
 
 import cards from './cards.json';
+import { spacesFor } from './locationSpaces.js';
 
 // App killer id -> card-file killer id. Only the killers the app ships.
 const KILLER_ID_MAP = {
@@ -244,6 +245,9 @@ export function cardOptionsFor(type, { killerId, locationId } = {}) {
       return getSetupCards(locationId);
     case 'terror':
       return getTerror(killerId, locationId);
+    case 'location':
+      // Every space on that location's board (see src/data/locationSpaces.js).
+      return spacesFor(locationId);
     case 'weapon':
       // Weapons are a subset of items tagged as weapons; fall back to all items.
       return getItems(locationId);
