@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { finalGirls, killers, locations } from '../data/games.js';
 import {
-  TRAITS, GIRL_TRAITS, KILLER_NEEDS, LOCATION_NEEDS, SPECIALS,
+  TRAITS, GIRL_TRAITS, KILLER_NEEDS, LOCATION_NEEDS, SPECIALS, GIRL_TRAIT_IDS, FG_STATS,
   comboNeeds, rankGirls, comboConfidence,
 } from '../data/fgFit.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
@@ -74,15 +74,19 @@ export default function FitGrid() {
   const unrated = finalGirls.filter((g) => !GIRL_TRAITS[g.id]);
   const scoreOf = Object.fromEntries(ranked.map((r) => [r.fg.id, r.fit.score]));
   const needOrder = TRAITS.filter((t) => needs[t.id]).sort((a, b) => needs[b.id].v - needs[a.id].v);
+  const girlTraits = TRAITS.filter((t) => GIRL_TRAIT_IDS.includes(t.id));
 
   return (
     <div className="fgx">
-      <p className="fgx-intro">
-        How &ldquo;Best fits by ability&rdquo; works. Each Final Girl is rated 0&ndash;3 in {TRAITS.length} traits.
-        Each Killer and Location says how much it rewards each trait. A girl&rsquo;s score is how well her
-        strengths line up with what the scenario wants (the Location counts at 70%), plus a bonus for a few
-        special pairings. Hover or tap a dot for the reason.
-      </p>
+      <div className="fgx-intro">
+        <p>How &ldquo;Best fits by ability&rdquo; works. Each score out of 10 has three parts:</p>
+        <ul>
+          <li><strong>Scenario fit (55%)</strong>: each Final Girl is rated 0&ndash;3 in {GIRL_TRAIT_IDS.length} traits, and each Killer and Location says how much it rewards each trait (the Location counts at 70%).</li>
+          <li><strong>Survival (20%)</strong>: her starting health, counted in every game. It counts up to half as much again against Killers and Locations that hit hard.</li>
+          <li><strong>Ultimate (25%)</strong>: how many Victims she must save before her Ultimate (her card&rsquo;s save slots) <em>times</em> how good that Ultimate is, so a weak Ultimate unlocked after 4 saves still scores low. It counts up to half as much again where Victims are scarce or die quickly.</li>
+        </ul>
+        <p>A few special pairings add a bonus on top. Hover or tap a dot for the reason.</p>
+      </div>
 
       {/* 1. Scores for a chosen combo */}
       <section className="fgx-section fg-panel">
@@ -131,6 +135,9 @@ export default function FitGrid() {
               </button>
               {open === r.fg.id && (
                 <div className="fgx-why">
+                  <p className="fgx-dim fgx-small">
+                    Scenario fit {(r.fit.parts.fit / 0.85 * 10).toFixed(1)} + survival {(r.fit.parts.survival / 0.85 * 10).toFixed(1)} ({r.fit.health.why}) + Ultimate {(r.fit.parts.ultimate / 0.85 * 10).toFixed(1)} ({r.fit.ultimate.saves == null ? 'own flip condition' : `${r.fit.ultimate.saves} save${r.fit.ultimate.saves === 1 ? '' : 's'}`}, power {r.fit.ultimate.power ?? '?'}/3){r.fit.specials.length ? ' + special bonus' : ''}
+                  </p>
                   {r.fit.specials.map((s, j) => <p key={j} className="fgx-special">&#10024; {s.why}</p>)}
                   {r.fit.strengths.map((s) => <p key={s.trait}><b className="fgx-plus">+ {s.label}:</b> {s.girlWhy}</p>)}
                   {r.fit.gaps.map((g) => <p key={g.trait}><b className="fgx-minus">&minus; {g.label}:</b> {g.girlWhy || 'nothing to help'}</p>)}
@@ -144,13 +151,16 @@ export default function FitGrid() {
       {/* 2. Girl × trait grid */}
       <section className="fgx-section fg-panel">
         <h2 className="fgx-h">Final Girl traits</h2>
-        <p className="fgx-dim fgx-small">Gold columns are what the scenario above wants most. Last column: score for that scenario.</p>
+        <p className="fgx-dim fgx-small">Gold columns are what the scenario above wants most. Health, Saves and Ult count in every scenario. Last column: score for that scenario.</p>
         <div className="fgx-scroll">
           <table className="fgx-table">
             <thead>
               <tr>
                 <th className="fgx-rowhead">Final Girl</th>
-                {TRAITS.map((t) => <th key={t.id} title={t.desc} className={hot[t.id] ? 'is-hot' : ''}>{t.short}</th>)}
+                {girlTraits.map((t) => <th key={t.id} title={t.desc} className={hot[t.id] ? 'is-hot' : ''}>{t.short}</th>)}
+                <th title="Starting health" className={hot.tank ? 'is-hot' : ''}>Health</th>
+                <th title="Victims to save before her Ultimate (fewer = sooner)" className={hot.rescue ? 'is-hot' : ''}>Saves</th>
+                <th title="How strong her Ultimate is once unlocked (0-3)" className={hot.rescue ? 'is-hot' : ''}>Ult</th>
                 <th>Score</th>
               </tr>
             </thead>
@@ -158,10 +168,21 @@ export default function FitGrid() {
               {rated.map((g) => (
                 <tr key={g.id}>
                   <th className="fgx-rowhead" title={g.film}>{g.name}</th>
-                  {TRAITS.map((t) => {
+                  {girlTraits.map((t) => {
                     const c = GIRL_TRAITS[g.id][t.id];
                     return <td key={t.id} className={hot[t.id] ? 'is-hot' : ''}><Pips v={c ? c.v : 0} title={c ? c.why : ''} /></td>;
                   })}
+                  {(() => {
+                    const st = FG_STATS[g.id];
+                    if (!st) return <><td>—</td><td>—</td><td>—</td></>;
+                    return (
+                      <>
+                        <td className={'fgx-num' + (hot.tank ? ' is-hot' : '')} title={`${st.h} health`}>{st.h}</td>
+                        <td className={'fgx-num' + (hot.rescue ? ' is-hot' : '')} title={st.saves == null ? 'Flips on her own condition' : `Ultimate after ${st.saves} save${st.saves === 1 ? '' : 's'}`}>{st.saves ?? '*'}</td>
+                        <td className={hot.rescue ? 'is-hot' : ''}><Pips v={st.ult ?? 0} title={st.ult == null ? 'Ultimate not known yet' : st.note} /></td>
+                      </>
+                    );
+                  })()}
                   <td className="fgx-scorecell">{scoreOf[g.id] ?? '—'}</td>
                 </tr>
               ))}

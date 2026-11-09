@@ -50,3 +50,7 @@
 .fgx-pips--3 { color: #8fd36a; }
 .fgx-scorecell { font-weight: 700; color: var(--fg-gold); }
 .fgx-basis { font-size: 0.72rem; color: var(--text-dim); }
+
+.fgx-num { text-align: center; font-variant-numeric: tabular-nums; }
+.fgx-intro ul { margin: 0.3rem 0 0.5rem 1.1rem; }
+.fgx-intro li { margin-bottom: 0.25rem; }

@@ -17,7 +17,7 @@ FILM = dict(
     name='Krampus',
     heading='KRAMPUS',
     film='North Pole Nightmare',
-    background=G+'S0-location-santas-village-art.png', flavour=G+'S0-killer-krampus-flavour.png',
+    background=G+'S0-location-santas-village-art.png', flavour=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'titlecards', 'krampus-titlecard.png'),
     scenes=[
         dict(title='Krampus',
              kind='intro',
