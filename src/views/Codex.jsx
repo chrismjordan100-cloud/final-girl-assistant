@@ -13,7 +13,7 @@ import {
   getIcon,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
-import { useFgCollection, storageFor, defaultStorage, storageSuggestions, envelopeStatus, winsByFinalGirl } from '../hooks/useFgCollection.js';
+import { useFgCollection, storageFor, defaultStorage, storageSuggestions, envelopeStatus, winsByFinalGirl, resultsByKillerLocation } from '../hooks/useFgCollection.js';
 import { useGameLog } from '../hooks/useGameLog.js';
 import { ENVELOPE_ITEMS, envelopeItemImpact } from '../data/fgFit.js';
 import CardList from './CardList.jsx';
@@ -54,7 +54,7 @@ function CollapsibleSection({ title, count, collapsed, onToggle, children }) {
 
 /* A browsable card for a Killer or Location: art, flavour image, flavour
    text (where written), and the at-a-glance play-rules summary. */
-function EntryCard({ type, entry, selected, onPick }) {
+function EntryCard({ type, entry, selected, onPick, result }) {
   const art = getArtImage(type, entry);
   const flavourImg = getFlavourImage(type, entry);
   // Locations also show their board / map (Codex only, not This Game).
@@ -72,7 +72,15 @@ function EntryCard({ type, entry, selected, onPick }) {
       <header className="cx-card__head">
         {icon && <img className="cx-card__icon" src={icon} alt="" aria-hidden="true" loading="lazy" />}
         <div className="cx-card__headmain">
-          <h3 className="cx-card__name">{entry.name}</h3>
+          <h3 className="cx-card__name">
+            {entry.name}
+            {result === 'beaten' && (
+              <span className="cx-result cx-result--beaten" title="Beaten" aria-label="Beaten">{'\u2714'}</span>
+            )}
+            {result === 'lost' && (
+              <span className="cx-result cx-result--lost" title="Played, not beaten yet" aria-label="Played, not beaten yet">{'\u2716'}</span>
+            )}
+          </h3>
           <span className="cx-card__meta fg-type">
             {entry.film}
             {entry.isVignette ? ' \u00b7 Vignette' : ''} &middot; S{entry.season}
@@ -398,6 +406,7 @@ export default function Codex({ onNavigate }) {
   const [envOnly, setEnvOnly] = useState(false);
   const { log } = useGameLog();
   const wins = useMemo(() => winsByFinalGirl(log), [log]);
+  const results = useMemo(() => resultsByKillerLocation(log), [log]);
   const isUnlocked = (id) => envelopeStatus(id, wins[id] || 0, collection.envelopes).status === 'unlocked';
   const unlockedCount = finalGirls.filter((fg) => isUnlocked(fg.id)).length;
 
@@ -538,6 +547,7 @@ export default function Codex({ onNavigate }) {
                     entry={e}
                     selected={e.id === killerId}
                     onPick={pickKiller}
+                    result={results.killer[e.id]}
                   />
                 ))}
               </div>
@@ -564,6 +574,7 @@ export default function Codex({ onNavigate }) {
                     entry={e}
                     selected={e.id === locationId}
                     onPick={pickLocation}
+                    result={results.location[e.id]}
                   />
                 ))}
               </div>

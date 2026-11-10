@@ -458,3 +458,14 @@
   cursor: pointer;
 }
 .cx-favbar__toggle--env.has-some:not(.is-on) { border-color: var(--fg-gold); color: var(--fg-gold); }
+
+/* Beaten / played-and-lost marker beside a Killer or Location name. */
+.cx-result {
+  display: inline-block;
+  margin-left: 0.4em;
+  font-size: 0.8em;
+  line-height: 1;
+  vertical-align: middle;
+}
+.cx-result--beaten { color: #2ea043; }
+.cx-result--lost { color: #d93a3a; }

@@ -105,6 +105,25 @@ export function winsByFinalGirl(log) {
   return out;
 }
 
+/* Per Killer and per Location: 'beaten' if any real (non-test) game against
+   it was won, 'lost' if it has only been played and lost, absent if never
+   played. Abandoned games don't count either way. */
+export function resultsByKillerLocation(log) {
+  const killer = {};
+  const location = {};
+  const mark = (map, id, outcome) => {
+    if (!id) return;
+    if (outcome === 'won') map[id] = 'beaten';
+    else if (outcome === 'lost' && map[id] !== 'beaten') map[id] = 'lost';
+  };
+  (log || []).forEach((g) => {
+    if (!g || g.isTest) return;
+    mark(killer, g.killerId, g.outcome);
+    mark(location, g.locationId, g.outcome);
+  });
+  return { killer, location };
+}
+
 export function useFgCollection() {
   const [state, setState] = useState(read);
 
