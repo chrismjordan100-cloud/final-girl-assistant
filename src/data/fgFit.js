@@ -115,8 +115,8 @@ export const GIRL_TRAITS = {
   cindy: { move: t(3, 'Failed Walk/Sprint results count as successes'), time: t(1, 'Extra saves give Time') },
   adrianne: { time: t(1, 'Flexible boosts'), move: t(1, 'Flexible boosts'), horror: t(1, 'Flexible boosts'), tank: t(1, 'Flexible boosts') },
   maureen: { cards: t(2, 'Discards Victims to play Action cards straight from the tableau (her card flips on a die roll, so it’s not guaranteed)'), time: t(1, 'Every save gives Time') },
-  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'A save reward lowers Horror'), time: t(1, 'A save reward and extra saves give Time') },
-  jamie: { attack: t(2, 'Every Horror roll that ends on exactly 2 successes deals 1 damage to any Enemy on the board'), horror: t(1, 'Two save rewards lower Horror') },
+  paula: { dice: t(2, 'Rolls 2 dice whenever she’d roll 1'), horror: t(1, 'A save reward lowers Horror'), time: t(1, 'A save reward and extra saves give 2 Time'), items: t(1, 'A save reward takes any top Item'), move: t(1, 'A save reward moves her up to 2 spaces') },
+  jamie: { attack: t(2, 'Every Horror roll that ends on exactly 2 successes deals 1 damage to any Enemy on the board'), horror: t(1, 'Two save rewards lower Horror'), move: t(1, 'A save reward and every extra save move her 1 space') },
 
   // ---- Rated from Chris's card photos (src/assets/games), not cards.json.
   // Card reading: top-left number = health; number of meeples = saves needed
