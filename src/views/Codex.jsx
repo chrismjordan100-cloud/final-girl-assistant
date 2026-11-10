@@ -19,6 +19,7 @@ import { ENVELOPE_ITEMS, envelopeItemImpact } from '../data/fgFit.js';
 import CardList from './CardList.jsx';
 import FitGrid from './FitGrid.jsx';
 import FitSummary from './FitSummary.jsx';
+import Collection from './Collection.jsx';
 import { usePersistentState } from '../hooks/usePersistentState.js';
 import ImageZoom from '../components/ImageZoom.jsx';
 import './Codex.css';
@@ -30,6 +31,7 @@ const TABS = [
   { id: 'fit', label: 'Fit grid' },
   { id: 'fitsum', label: 'Fit summary' },
   { id: 'cards', label: 'All cards (text)' },
+  { id: 'collection', label: 'Collection' },
 ];
 
 /* A collapsible section with a clickable header showing a count. */
@@ -496,7 +498,7 @@ export default function Codex({ onNavigate }) {
             </button>
           ))}
         </div>
-        {tab !== 'cards' && tab !== 'fit' && tab !== 'fitsum' && <div className="cx-search">
+        {tab !== 'cards' && tab !== 'fit' && tab !== 'fitsum' && tab !== 'collection' && <div className="cx-search">
           <span className="cx-search__icon" aria-hidden="true">&#128269;</span>
           <input
             type="search"
@@ -540,6 +542,7 @@ export default function Codex({ onNavigate }) {
       {tab === 'cards' && <CardList />}
       {tab === 'fit' && <FitGrid />}
         {tab === 'fitsum' && <FitSummary />}
+      {tab === 'collection' && <Collection />}
 
       {tab === 'killer' &&
         grouped(killers).map((grp) => {

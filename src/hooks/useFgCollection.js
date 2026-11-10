@@ -9,6 +9,8 @@ import { markLocalChange, pushState } from '../lib/sync.js';
      favourites  ids you've starred (e.g. for their abilities)
      storage     id -> where she's kept, only when it isn't her own box
                  (e.g. a special edition kept in a promo binder)
+     owned       collection checklist id -> true/false, only where it
+                 differs from the default in src/data/collection.js
      envelopes   id -> your override for her Secret Envelope:
                    'unlocked'  won with her before the tracker existed,
                                envelope still sealed (shows the marker)
@@ -30,9 +32,10 @@ function read() {
       favourites: Array.isArray(v.favourites) ? v.favourites : [],
       storage: v.storage && typeof v.storage === 'object' ? v.storage : {},
       envelopes: v.envelopes && typeof v.envelopes === 'object' ? v.envelopes : {},
+      owned: v.owned && typeof v.owned === 'object' ? v.owned : {},
     };
   } catch {
-    return { favourites: [], storage: {}, envelopes: {} };
+    return { favourites: [], storage: {}, envelopes: {}, owned: {} };
   }
 }
 
@@ -182,8 +185,20 @@ export function useFgCollection() {
     write({ ...cur, envelopes });
   }, []);
 
+  /* Collection checklist: true = have it, false = don't. Stored only where
+     it differs from the catalogue default, so defaults can be corrected. */
+  const setOwned = useCallback((id, value, defaultValue) => {
+    const cur = read();
+    const owned = { ...cur.owned };
+    if (Boolean(value) === Boolean(defaultValue)) delete owned[id];
+    else owned[id] = Boolean(value);
+    write({ ...cur, owned });
+  }, []);
+
   return {
     favourites: state.favourites,
+    owned: state.owned,
+    setOwned,
     storage: state.storage,
     envelopes: state.envelopes,
     setEnvelope,
