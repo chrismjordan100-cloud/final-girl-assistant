@@ -85,7 +85,7 @@ export function narrateGame(entry, { variant = 0 } = {}) {
   const rnd = seededRandom(`${entry.id || 'game'}:${variant}`);
   const pick = (arr) => arr[Math.floor(rnd() * arr.length)];
   const chance = (p) => rnd() < p;
-  const combo = { killerId: entry.killerId, locationId: entry.locationId };
+  const combo = { killerId: entry.killerId, locationId: entry.locationId, finalGirlId: entry.finalGirlId };
 
   const kFlav = killerFlavour(entry.killerId);
   const lFlav = locationFlavour(entry.locationId);

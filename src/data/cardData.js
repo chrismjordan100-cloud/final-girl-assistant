@@ -11,6 +11,7 @@
    falling back to free text for anything not in the data.
    ========================================================================== */
 
+import { getFinalGirlPackItems, getFinalGirlPackEvents } from './fgPacks.js';
 import cards from './cards.json';
 import { spacesFor } from './locationSpaces.js';
 
@@ -228,11 +229,13 @@ export function getTerror(appKillerId, appLocationId) {
 /* A combined options list for a given capture type, given the current combo.
    Returns [{ id, name, effect }]. Empty array = we have no known cards, so
    the UI should just show the free-text field. */
-export function cardOptionsFor(type, { killerId, locationId } = {}) {
+export function cardOptionsFor(type, { killerId, locationId, finalGirlId } = {}) {
   switch (type) {
     case 'item-found':
     case 'item-used':
-      return getItems(locationId);
+      // Her Character Pack Items (e.g. Elisabeth's Cheerleader Items) join
+      // the list only while she is the Final Girl.
+      return [...getItems(locationId), ...getFinalGirlPackItems(finalGirlId)];
     case 'dark-power':
       // Offer Epic/standard Dark Powers plus Minor Dark Powers together.
       return [...getDarkPowers(killerId), ...getMinorDarkPowers(killerId, locationId)];
@@ -240,7 +243,7 @@ export function cardOptionsFor(type, { killerId, locationId } = {}) {
       return getFinales(killerId);
     case 'event':
     case 'event-start':
-      return getEvents(locationId);
+      return [...getEvents(locationId), ...getFinalGirlPackEvents(finalGirlId, locationId)];
     case 'setup':
       return getSetupCards(locationId);
     case 'terror':

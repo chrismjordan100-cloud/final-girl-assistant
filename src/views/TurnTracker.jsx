@@ -84,7 +84,7 @@ export default function TurnTracker({ onNavigate }) {
   const killer = getKiller(killerId);
   const location = getLocation(locationId);
   const finalGirl = getFinalGirl(finalGirlId);
-  const phaseExtrasByPhase = getPhaseExtras(killer, location);
+  const phaseExtrasByPhase = getPhaseExtras(killer, location, finalGirl);
 
   const { active, canStart, start, narration } = useGameFlow();
   const { draft, addMistake } = useEndDraft();
@@ -475,7 +475,7 @@ export default function TurnTracker({ onNavigate }) {
               )}
               <CardPicker
                 type={picking.type}
-                combo={{ killerId, locationId }}
+                combo={{ killerId, locationId, finalGirlId }}
                 value={eventText}
                 onChange={setEventText}
                 placeholder={picking.placeholder}

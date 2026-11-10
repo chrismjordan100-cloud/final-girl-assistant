@@ -134,7 +134,7 @@ export const GIRL_TRAITS = {
   // pack rules (prayers, Divine Action cards) aren't transcribed yet, so only
   // what her card says is rated. Movement left unrated for Elisabeth: her
   // pack swaps Sprint for Swagger and says she "isn't very fast".
-  elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), control: t(2, 'Saves and her own Action cards build Moxie, spent to move Victims, Allies and Enemies around the board'), items: t(1, 'Starts with a Cheerleader Item and grabs the faceup ones just by walking onto their Search space'), horror: t(1, 'Extra saves lower Horror') },
+  elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), control: t(2, 'Moxie moves Enemies (2 to pull one towards her, 4 to move one anywhere 1 space) and Victims/Allies'), items: t(2, 'Starts with a Cheerleader Item, grabs faceup ones by walking onto their Search space, and Moxie can take the top Item (4)'), horror: t(1, 'Extra saves lower Horror'), move: t(1, 'Moxie brings Victims to her; Spunky Kicks adds a space when moving') },
   ursula: { cards: t(2, 'Ultimate: every Upkeep, returns a removed Divine Action card to the Action Tableau and gains 3 prayers') },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.

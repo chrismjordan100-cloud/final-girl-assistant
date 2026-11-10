@@ -22,7 +22,7 @@ const LABELS = Object.fromEntries(SETUP_TYPES.map((d) => [d.type, d.label]));
    The inline form is always open (no extra tap) and shows what's recorded. */
 export default function SetupCapture({ heading = 'Record setup & starting event', only = null }) {
   const { state, addEvent, removeEvent } = useTurnState();
-  const { killerId, locationId } = useGameSelection();
+  const { killerId, locationId, finalGirlId } = useGameSelection();
   const setupEvents = (state.events || []).filter((e) => e.turn === 0);
 
   const [picking, setPicking] = useState(null);
@@ -63,7 +63,7 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
         <div className="turn-events__entry">
           <CardPicker
             type={only}
-            combo={{ killerId, locationId }}
+            combo={{ killerId, locationId, finalGirlId }}
             value={inlineText}
             onChange={setInlineText}
             placeholder={def.placeholder}
@@ -115,7 +115,7 @@ export default function SetupCapture({ heading = 'Record setup & starting event'
           <span className="turn-events__entry-label">{picking.glyph} {picking.label}</span>
           <CardPicker
             type={picking.type}
-            combo={{ killerId, locationId }}
+            combo={{ killerId, locationId, finalGirlId }}
             value={text}
             onChange={setText}
             placeholder={picking.placeholder}

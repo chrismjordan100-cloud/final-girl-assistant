@@ -753,75 +753,8 @@ export const setupExtras = {
   ],
 };
 
-/* --------------------------------------------------------------------------
-   Final Girls who come with their own Character Pack (extra cards + rules).
-   Setup steps are paraphrased from the pack's printed rule sheet (Chris's
-   photos, Nov 2026). `onlyAt` limits a step to one Location; `itemDeck`
-   marks a step that changes how the Item decks are built.
-   NEVER name a Secret Envelope item here.
-   -------------------------------------------------------------------------- */
-export const FG_PACKS = {
-  elisabeth: {
-    name: "Elisabeth's Rebellion",
-    box: 'Corpses Box (inside the Mausoleum)',
-    rulesKnown: true,
-    setup: [
-      {
-        title: "Get out Elisabeth's Rebellion",
-        body: 'From the Corpses Box (inside the Mausoleum): her Final Girl card, the Moxie card, 6 Cheerleader Item cards, 11 Elisabeth Action cards and \u201cThe Savior\u2019s Ex\u201d Event card. Keep her rule sheet handy.',
-      },
-      {
-        title: 'Swap in her zero-cost Action cards',
-        body: 'Replace all six Zero Cost Action cards with hers: Strut \u00d72, Pep Talk \u00d72, Self-Care and Gnarly Burn.',
-      },
-      {
-        title: 'Change the Action Tableau',
-        body: 'Replace both Search cards with the two Window Shop cards, replace both Sprint cards with the two Swagger cards, and add the Pump it Up! card.',
-      },
-      {
-        title: 'Moxie track',
-        body: 'Put the Moxie card beside your play area with a Tracking marker on the \u20182\u2019 space.',
-      },
-      {
-        title: 'Start with a Cheerleader Item',
-        body: 'Put one Cheerleader Item card, chosen at random, into your Backpack. Easier game: choose which one, or start with two.',
-      },
-      {
-        title: 'Cheerleader Items on the Item decks',
-        itemDeck: true,
-        body: 'Build the Item decks as normal. Then shuffle the remaining Cheerleader Items and put one faceup on top of each Item deck, so every deck has one extra card and its top two cards are faceup.',
-      },
-      {
-        title: 'Sunnydaze Mall: The Savior\u2019s Ex',
-        onlyAt: 'sunnydaze-mall',
-        body: 'Replace \u201cThe Savior\u2019s Girl\u201d Event card with \u201cThe Savior\u2019s Ex\u201d, and start the Savior\u2019s Trust at \u201cI Guess You\u2019re Ok\u201d.',
-      },
-    ],
-  },
-  ursula: {
-    name: "Ursula's Faith",
-    box: 'Corpses Box (inside the Mausoleum)',
-    rulesKnown: false,
-    setup: [
-      {
-        title: "Get out Ursula's Faith",
-        body: 'From the Corpses Box (inside the Mausoleum): her Final Girl card, her Divine Action cards and the rest of her pack, plus its rule sheet. Her pack\u2019s setup isn\u2019t in the app yet, so follow the Special Setup on the printed sheet.',
-      },
-    ],
-  },
-};
-
-/** Her Character Pack (or null). */
-export function getFinalGirlPack(girl) {
-  return (girl && FG_PACKS[girl.id]) || null;
-}
-
-/** Setup steps from her Character Pack, filtered to this Location. */
-export function getFinalGirlPackSetup(girl, location) {
-  const pack = getFinalGirlPack(girl);
-  if (!pack) return [];
-  return pack.setup.filter((st) => !st.onlyAt || (location && st.onlyAt === location.id));
-}
+import { FG_PACKS } from './fgPacks.js';
+export { FG_PACKS, getFinalGirlPack, getFinalGirlPackSetup } from './fgPacks.js';
 
 /** Return the special setup steps for a Killer/Location entry (or []). */
 export function getSetupExtras(entry) {
@@ -866,13 +799,15 @@ export const playRules = {
   elisabeth: {
     points: [
       'Moxie: whenever you resolve the pink hand-sign icon on a card (her saves and her new Action cards), move the Tracking marker up one value on the Moxie card. It can\u2019t go above 10; anything beyond is lost.',
-      'Spend Moxie in the Action phase to move or manipulate Victims, Allies and Enemies. The Moxie card lists each option and its cost.',
+      'Spend Moxie in the Action phase (target in your space or adjacent): 2 = move a normal Victim 1 space; 2 = move an Enemy 1 space towards you; 3 = move any Victim or an Ally 1 space; 4 = move an Enemy 1 space; 4 = take the top Item in your space.',
+      'Her 6 Cheerleader Items: Dummy\u2019s Guide to Cheering (save Victims at any Exit, even without her), Spunky Kicks (+1 space when moving), Pom Poms (+1/+2 Moxie each Upkeep), Homecoming Queen Tiara (Moxie costs \u22121), Cheer Bag (rearrange Items any time), Megaphone (Moxie moves from anywhere on the board).',
       'Cheerleader Items: whenever you move into a Search space with a Cheerleader Item showing faceup, put that Item straight into your Backpack.',
       'Her Action cards stand in for the ones she removed. If a rule mentions a removed card, apply it to her replacement: Strut for Walk, Pep Talk for Focus, Gnarly Burn for Weak Attack, Self-Care for Short Rest, Swagger for Sprint, Window Shop for Search.',
       'Ultimate (after 4 saves, or keep saving and choose again each time): every Victim you\u2019ve saved goes back on the board at named or Exit spaces, 1 per space. They can follow you into an Enemy\u2019s space, and each normal Victim that does is removed and deals 1 damage, without raising Bloodlust.',
     ],
     watchOuts: [
       'She isn\u2019t fast: Swagger replaces Sprint, so plan routes and use Moxie to bring Victims to you.',
+      'At Sunnydaze Mall, The Savior\u2019s Ex can\u2019t be moved with Moxie and drifts towards the Savior each Upkeep, costing Trust when she reaches him. Saving or losing her early discards the card.',
     ],
   },
   // --- Killers ---
@@ -1657,8 +1592,19 @@ export const phaseExtras = {
 };
 
 /** Phase-specific reminders for the current game, grouped by phase id. */
-export function getPhaseExtras(killer, location) {
+export function getPhaseExtras(killer, location, finalGirl) {
   const out = {};
+  // Her Character Pack reminders (only while she's the Final Girl).
+  const pack = finalGirl && FG_PACKS[finalGirl.id];
+  if (pack && pack.phases) {
+    for (const [phaseId, items] of Object.entries(pack.phases)) {
+      for (const item of items) {
+        if (item.onlyAt && (!location || item.onlyAt !== location.id)) continue;
+        const x = typeof item === 'string' ? { text: item } : { text: item.title || item.text, options: item.options };
+        (out[phaseId] ||= []).push({ owner: finalGirl.name, ...x });
+      }
+    }
+  }
   for (const entry of [killer, location]) {
     if (!entry) continue;
     const map = phaseExtras[entry.id];
