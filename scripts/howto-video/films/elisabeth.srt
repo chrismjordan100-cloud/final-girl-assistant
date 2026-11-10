@@ -1,0 +1,296 @@
+1
+00:00:00,300 --> 00:00:04,476
+Elisabeth's Rebellion: a Character Pack for the Final Girl Elisabeth, captain of her
+
+2
+00:00:04,476 --> 00:00:05,420
+cheerleading squad.
+
+3
+00:00:05,640 --> 00:00:08,047
+She plays against any Killer at any Location.
+
+4
+00:00:08,047 --> 00:00:09,437
+Here's how her pack works.
+
+5
+00:00:10,267 --> 00:00:14,057
+Setup in brief. Replace all six Zero Cost Action cards with hers:
+
+6
+00:00:14,057 --> 00:00:17,264
+Strut twice, Pep Talk twice, Self-Care and Gnarly Burn.
+
+7
+00:00:17,484 --> 00:00:21,539
+In the Tableau, swap both Search cards for her two Window Shop cards, swap both
+
+8
+00:00:21,539 --> 00:00:24,567
+Sprint cards for her two Swagger cards, and add Pump It Up!
+
+9
+00:00:24,787 --> 00:00:28,806
+Put the Moxie card by your play area with a Tracking marker on two, and put one
+
+10
+00:00:28,806 --> 00:00:30,891
+random Cheerleader Item in your Backpack.
+
+11
+00:00:30,891 --> 00:00:33,384
+For an easier game, choose it, or start with two.
+
+12
+00:00:34,200 --> 00:00:38,665
+Build the Item decks as normal. Then shuffle the remaining Cheerleader Items and put
+
+13
+00:00:38,665 --> 00:00:40,579
+one faceup on top of each Item deck.
+
+14
+00:00:40,799 --> 00:00:44,371
+So each deck has one extra card, and its top two cards are faceup:
+
+15
+00:00:44,371 --> 00:00:47,348
+the Cheerleader Item, and the normal top card under it.
+
+16
+00:00:48,167 --> 00:00:52,402
+Elisabeth has four health. Her first three saves each give two Moxie, the pink
+
+17
+00:00:52,402 --> 00:00:52,945
+hand-sign.
+
+18
+00:00:53,165 --> 00:00:57,449
+Her fourth save gives Time. Then you may flip her card to reveal her Ultimate, or
+
+19
+00:00:57,449 --> 00:01:01,733
+keep saving Victims. Each extra save gives the small reward printed by that text,
+
+20
+00:01:01,733 --> 00:01:03,320
+and you make the choice again.
+
+21
+00:01:03,540 --> 00:01:07,039
+Once she's flipped, every additional Victim saved lowers Horror by one.
+
+22
+00:01:07,867 --> 00:01:12,005
+Elisabeth isn't very fast, but she makes up for it with charm, leadership and moxie.
+
+23
+00:01:12,225 --> 00:01:14,619
+All her new Action cards can generate Moxie.
+
+24
+00:01:14,619 --> 00:01:19,135
+Whenever you resolve the pink hand-sign icon on a card, move the Tracking marker up
+
+25
+00:01:19,135 --> 00:01:20,332
+one on the Moxie card.
+
+26
+00:01:20,552 --> 00:01:23,987
+Moxie can't go above ten. Any more you'd gain beyond ten is lost.
+
+27
+00:01:24,800 --> 00:01:28,666
+In the Action phase you can spend Moxie to move Victims, Allies and Enemies.
+
+28
+00:01:28,666 --> 00:01:31,413
+Whatever you move must be in your space or next to it.
+
+29
+00:01:31,633 --> 00:01:36,124
+Two Moxie moves a normal Victim one space, or pulls an Enemy one space towards you.
+
+30
+00:01:36,124 --> 00:01:39,911
+Three moves any Victim, including special ones, or an Ally, one space.
+
+31
+00:01:40,131 --> 00:01:44,739
+Four moves an Enemy one space in any direction, or takes the top Item in your space.
+
+32
+00:01:45,567 --> 00:01:48,823
+Say a normal Victim is next to your space but heading the wrong way.
+
+33
+00:01:48,823 --> 00:01:52,607
+Spend two Moxie to move them into your space, and they follow you from then on.
+
+34
+00:01:52,827 --> 00:01:57,204
+If the Killer is next door, two Moxie pulls it one space towards you, maybe into a
+
+35
+00:01:57,204 --> 00:02:01,635
+trap or onto a Location hazard. Four Moxie moves it one space anywhere, for example
+
+36
+00:02:01,635 --> 00:02:03,557
+away from a Victim you're escorting.
+
+37
+00:02:04,367 --> 00:02:06,579
+Elisabeth needs her cheerleading kit, fast.
+
+38
+00:02:06,579 --> 00:02:10,542
+Whenever you move into a Search space with a Cheerleader Item showing faceup,
+
+39
+00:02:10,542 --> 00:02:12,857
+immediately put that Item into your Backpack.
+
+40
+00:02:13,077 --> 00:02:16,832
+You get it just by moving there. The rule sheet doesn't mention a Search card.
+
+41
+00:02:17,667 --> 00:02:21,764
+Dummy's Guide to Cheering: Victims can be saved whenever they're on an Exit space,
+
+42
+00:02:21,764 --> 00:02:23,213
+even if you're not with them.
+
+43
+00:02:23,433 --> 00:02:26,424
+Spunky Kicks: when moving, you may move an extra space.
+
+44
+00:02:26,424 --> 00:02:30,938
+Pom Poms can be held in one hand or two; each Upkeep, one hand gives one Moxie, two
+
+45
+00:02:30,938 --> 00:02:31,753
+hands give two.
+
+46
+00:02:31,973 --> 00:02:35,405
+The Homecoming Queen Tiara reduces every Moxie cost by one.
+
+47
+00:02:35,405 --> 00:02:38,371
+The Cheer Bag lets you rearrange Items at any time.
+
+48
+00:02:38,371 --> 00:02:42,965
+And with the Megaphone, a one-handed Item, your Moxie moves can target Victims,
+
+49
+00:02:42,965 --> 00:02:45,349
+Allies and Enemies anywhere on the board.
+
+50
+00:02:46,167 --> 00:02:49,586
+Some rules and effects mention Action cards you removed at setup.
+
+51
+00:02:49,586 --> 00:02:53,164
+When that happens, apply the effect to her replacement card instead.
+
+52
+00:02:53,384 --> 00:02:57,590
+Strut stands in for Walk, Pep Talk for Focus, Gnarly Burn for Weak Attack, Self-Care
+
+53
+00:02:57,590 --> 00:03:00,744
+for Short Rest, Swagger for Sprint, and Window Shop for Search.
+
+54
+00:03:00,964 --> 00:03:04,740
+Each one's exact effects are printed on the card, and most add Moxie.
+
+55
+00:03:05,567 --> 00:03:09,944
+Her Ultimate is called Cheer Squad, assemble! Immediately place every Victim you
+
+56
+00:03:09,944 --> 00:03:14,540
+have saved back on the board, at named spaces or Exit spaces of your choice, one per
+
+57
+00:03:14,540 --> 00:03:14,868
+space.
+
+58
+00:03:15,088 --> 00:03:18,112
+From now on, Victims may follow you into an Enemy's space.
+
+59
+00:03:18,112 --> 00:03:22,439
+When a normal Victim enters an Enemy's space, remove that Victim from the board and
+
+60
+00:03:22,439 --> 00:03:25,307
+deal one damage to the Enemy. Don't increase Bloodlust.
+
+61
+00:03:25,527 --> 00:03:28,705
+So gather a crowd, then walk them into the Killer, one damage each.
+
+62
+00:03:29,533 --> 00:03:33,724
+At Sunnydaze Mall, replace The Savior's Girl Event card with The Savior's Ex, and
+
+63
+00:03:33,724 --> 00:03:36,104
+start the Savior's Trust at I Guess You're Ok.
+
+64
+00:03:36,324 --> 00:03:39,570
+When it's drawn, the Victim closest to you becomes the Savior's Ex.
+
+65
+00:03:39,570 --> 00:03:42,041
+She won't follow you and can't be moved with Moxie.
+
+66
+00:03:42,261 --> 00:03:46,720
+In the Upkeep phase, before resolving a Trust card, move her one space closer to the
+
+67
+00:03:46,720 --> 00:03:49,428
+Savior. If she's in his space, reduce Trust by one.
+
+68
+00:03:49,428 --> 00:03:51,392
+If she leaves play, discard the card.
+
+69
+00:03:52,200 --> 00:03:54,837
+A few tips. She's slow, so let Moxie do the walking:
+
+70
+00:03:54,837 --> 00:03:57,171
+bring Victims to you rather than chasing them.
+
+71
+00:03:57,391 --> 00:04:00,296
+Grab faceup Cheerleader Items as you pass Search spaces.
+
+72
+00:04:00,296 --> 00:04:03,876
+The Megaphone and Tiara together give you control of the whole board.
+
+73
+00:04:04,096 --> 00:04:07,958
+And the more Victims you've saved, the bigger your cheer squad when the Ultimate
+
+74
+00:04:07,958 --> 00:04:08,683
+lands. Go team.
+

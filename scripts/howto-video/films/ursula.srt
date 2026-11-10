@@ -1,0 +1,320 @@
+1
+00:00:00,300 --> 00:00:04,675
+Ursula's Faith: a Character Pack for Ursula, the nun once possessed by the demon
+
+2
+00:00:04,675 --> 00:00:05,057
+Berith.
+
+3
+00:00:05,277 --> 00:00:09,470
+She fights with prayer, not weapons. She plays against any Killer at any Location,
+
+4
+00:00:09,470 --> 00:00:11,208
+with special rules against Berith.
+
+5
+00:00:12,033 --> 00:00:16,581
+Setup in brief. Remove Weak Attack, Furious Strike, Critical Blow and Retaliate from
+
+6
+00:00:16,581 --> 00:00:17,068
+the game.
+
+7
+00:00:17,288 --> 00:00:21,643
+Add the zero cost Quick Prayer card to your hand, and put Solemn Prayer and all six
+
+8
+00:00:21,643 --> 00:00:25,999
+Divine Action cards in the Tableau. Put the Prayer Points Tracker out with a marker
+
+9
+00:00:25,999 --> 00:00:26,419
+on zero.
+
+10
+00:00:26,639 --> 00:00:31,019
+Start with one Holy Item, the Book, Cross or Rosary, chosen or drawn at random.
+
+11
+00:00:31,019 --> 00:00:35,565
+You may shuffle the unused ones into the Location's Items before building the Item
+
+12
+00:00:35,565 --> 00:00:35,897
+decks.
+
+13
+00:00:36,117 --> 00:00:39,702
+Against Berith, don't place a Final Girl meeple or miniature at all.
+
+14
+00:00:39,702 --> 00:00:40,704
+More on that later.
+
+15
+00:00:41,533 --> 00:00:45,442
+Prayer Points come from Prayer Action cards, Quick Prayer and Solemn Prayer, and
+
+16
+00:00:45,442 --> 00:00:46,419
+from saving Victims.
+
+17
+00:00:46,639 --> 00:00:50,652
+When saving Victims you must take the rewards in order, starting at the space that
+
+18
+00:00:50,652 --> 00:00:53,002
+gives one Prayer Point and following the arrows:
+
+19
+00:00:53,002 --> 00:00:54,617
+one, then two, two, three, three.
+
+20
+00:00:54,837 --> 00:00:57,291
+Move the Tracking marker as you gain or spend them.
+
+21
+00:00:57,291 --> 00:00:59,744
+You may hold more than the tracker's maximum value.
+
+22
+00:01:00,567 --> 00:01:04,816
+Ursula's six Divine Action cards act like normal Action cards, except you spend
+
+23
+00:01:04,816 --> 00:01:08,204
+Prayer Points, not Time, to acquire them in the Planning phase.
+
+24
+00:01:08,424 --> 00:01:12,043
+Prayer Points you don't spend aren't lost at the end of the Planning phase, so you
+
+25
+00:01:12,043 --> 00:01:13,544
+can save up for an expensive card.
+
+26
+00:01:13,764 --> 00:01:16,111
+Each card's cost and effect is printed on it.
+
+27
+00:01:16,933 --> 00:01:20,719
+Ursula can't use regular or Signature Action cards that deal damage.
+
+28
+00:01:20,719 --> 00:01:25,061
+The Holy Smite Divine Action card is the only card she can use to deal damage.
+
+29
+00:01:25,281 --> 00:01:29,266
+She also can't take or use weapons. If you draw a weapon when searching, remove it
+
+30
+00:01:29,266 --> 00:01:31,404
+from the game and draw another in its place.
+
+31
+00:01:31,624 --> 00:01:35,748
+If you keep drawing weapons and empty the Item deck, take Prayer Points equal to the
+
+32
+00:01:35,748 --> 00:01:38,301
+number of Item cards you removed during that search.
+
+33
+00:01:39,133 --> 00:01:43,561
+If another game effect, not damaging an Enemy, needs you to deal damage, you may pay
+
+34
+00:01:43,561 --> 00:01:46,566
+Prayer Points instead: two Prayer Points for each damage.
+
+35
+00:01:46,566 --> 00:01:49,096
+You may also use Holy Smite in these situations.
+
+36
+00:01:49,900 --> 00:01:52,185
+Jessica plays Ursula against the Tormentor.
+
+37
+00:01:52,185 --> 00:01:56,648
+A Victim is caught in the Swinging Blades trap, and the next step to free them is to
+
+38
+00:01:56,648 --> 00:01:58,561
+cut the ropes by dealing two damage.
+
+39
+00:01:58,781 --> 00:02:03,189
+Ursula has no damage cards and hasn't bought Holy Smite yet, so Jessica spends four
+
+40
+00:02:03,189 --> 00:02:06,376
+Prayer Points instead of the two damage, and cuts the ropes.
+
+41
+00:02:07,200 --> 00:02:11,567
+Her three Holy Items each take one hand. The Holy Book, with three uses, rolls one
+
+42
+00:02:11,567 --> 00:02:14,496
+extra die when resolving Quick Prayer or Solemn Prayer.
+
+43
+00:02:14,716 --> 00:02:19,260
+The Holy Rosary reduces the cost of every Divine Action card by one Prayer Point.
+
+44
+00:02:19,480 --> 00:02:23,535
+The Holy Cross: when resolving an effect with two or more Increase Horror icons,
+
+45
+00:02:23,535 --> 00:02:24,600
+treat it as only one.
+
+46
+00:02:25,433 --> 00:02:28,911
+Ursula has four health and unlocks her Ultimate after her fifth save.
+
+47
+00:02:29,131 --> 00:02:33,593
+During each Upkeep phase, return a Divine Action card that was removed from the game
+
+48
+00:02:33,593 --> 00:02:37,152
+to the Action Tableau. If you return one, gain three Prayer Points.
+
+49
+00:02:37,372 --> 00:02:40,679
+After that, each additional Victim saved gives two Prayer Points.
+
+50
+00:02:41,500 --> 00:02:45,690
+Against Berith, you use the Killer meeple as both Ursula, the Final Girl, and
+
+51
+00:02:45,690 --> 00:02:47,922
+Berith, the possessed Ursula, the Killer.
+
+52
+00:02:47,922 --> 00:02:49,500
+No Final Girl meeple is used.
+
+53
+00:02:49,720 --> 00:02:52,937
+It simulates the struggle for control of Ursula's own body.
+
+54
+00:02:52,937 --> 00:02:56,262
+Sometimes Ursula is in control and can move and save Victims;
+
+55
+00:02:56,262 --> 00:02:59,043
+at other times the demon takes over and kills them.
+
+56
+00:02:59,867 --> 00:03:03,809
+In the Action phase you move and act as normal, except you are moving the Killer
+
+57
+00:03:03,809 --> 00:03:07,948
+meeple. Victims still follow you, even though you're always in the same space as the
+
+58
+00:03:07,948 --> 00:03:08,293
+Killer.
+
+59
+00:03:08,513 --> 00:03:12,537
+And since you're always in Berith's space, once you have Holy Smite you can attack
+
+60
+00:03:12,537 --> 00:03:13,420
+Berith every turn.
+
+61
+00:03:14,233 --> 00:03:18,220
+In the Killer phase, apply the Killer Action and Terror card as normal, moving the
+
+62
+00:03:18,220 --> 00:03:21,380
+Killer meeple. You are always considered to be in Berith's space.
+
+63
+00:03:21,600 --> 00:03:25,926
+When an effect targets the closest Victim or Final Girl, Berith treats it as the
+
+64
+00:03:25,926 --> 00:03:30,415
+closest Victim, until there are no Victims left on the board or the Finale has been
+
+65
+00:03:30,415 --> 00:03:30,901
+revealed.
+
+66
+00:03:31,121 --> 00:03:34,972
+Berith only attacks you if the attack targets the Final Girl, if there are no
+
+67
+00:03:34,972 --> 00:03:39,173
+Victims on the board when she attacks, or if the Finale is revealed and there are no
+
+68
+00:03:39,173 --> 00:03:40,273
+Victims in your space.
+
+69
+00:03:41,100 --> 00:03:45,700
+The word Ursula on Terror, Dark Power and Finale cards means Berith, the possessed
+
+70
+00:03:45,700 --> 00:03:47,607
+Ursula, not you as the Final Girl.
+
+71
+00:03:48,433 --> 00:03:52,519
+Damage to Berith comes off the Killer board as usual, and damage to you comes off
+
+72
+00:03:52,519 --> 00:03:56,049
+your player board. Effects that hit everyone in a space hurt you both.
+
+73
+00:03:56,269 --> 00:03:59,981
+In the Panic phase, treat the space you and Berith share as the Killer's space.
+
+74
+00:04:00,201 --> 00:04:04,188
+To win, Ursula must still come back from the dead and have a Final Health token on
+
+75
+00:04:04,188 --> 00:04:06,473
+the Divine Blessings sheet that reveals health.
+
+76
+00:04:07,300 --> 00:04:11,304
+A few tips. With four health and no weapons you can't fight back at first, so bank
+
+77
+00:04:11,304 --> 00:04:14,233
+Prayer Points early and make Holy Smite your first purchase.
+
+78
+00:04:14,453 --> 00:04:18,549
+The Holy Rosary makes every Divine Action card cheaper, which adds up fast.
+
+79
+00:04:18,769 --> 00:04:23,274
+Against Berith, you're always in her space, so Berith's own Expel Demon card, which
+
+80
+00:04:23,274 --> 00:04:26,151
+deals no damage, is always playable. God be with you.
+
