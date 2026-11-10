@@ -153,7 +153,7 @@ export default function SetupAssist({ onNavigate }) {
   const girlItemImg = envelopeOpened ? getFinalGirlEnvelopeImage(pickedGirl) : null;
   // Her Character Pack (e.g. Elisabeth's Rebellion): extra cards and setup.
   const girlPack = getFinalGirlPack(pickedGirl);
-  const packSteps = getFinalGirlPackSetup(pickedGirl, location);
+  const packSteps = getFinalGirlPackSetup(pickedGirl, location, killer);
   const envelopeSteps = envelopeOpened
     ? [{
         title: `Bring in ${girlItem || 'her Secret Envelope item'}`,

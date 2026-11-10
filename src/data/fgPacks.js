@@ -7,6 +7,8 @@
              only while she is the Final Girl
      events  pack Event cards (same, `onlyAt` a Location if set)
      phases  Turn Tracker reminders per phase id, shown while she's in play
+             (`onlyAt` a Location / `onlyKiller` a Killer if set)
+     noWeapons  true = weapon Items are left out of her Item lists
    Kept in its own file so both games.js and cardData.js can use it.
    NEVER name a Secret Envelope item here.
    -------------------------------------------------------------------------- */
@@ -83,13 +85,64 @@ export const FG_PACKS = {
   ursula: {
     name: "Ursula's Faith",
     box: 'Corpses Box (inside the Mausoleum)',
-    rulesKnown: false,
+    rulesKnown: true,
+    // She can't take or use weapons, so weapon Items drop out of her Item lists.
+    noWeapons: true,
     setup: [
       {
         title: "Get out Ursula's Faith",
-        body: 'From the Corpses Box (inside the Mausoleum): her Final Girl card, her Divine Action cards and the rest of her pack, plus its rule sheet. Her pack\u2019s setup isn\u2019t in the app yet, so follow the Special Setup on the printed sheet.',
+        body: 'From the Corpses Box (inside the Mausoleum): her Final Girl card, 3 Ursula Item cards (Holy Book, Holy Cross, Holy Rosary), 2 Prayer Action cards (Quick Prayer, Solemn Prayer), the Prayer Points Tracker card and 6 Divine Action cards. Keep her rule sheet handy.',
+      },
+      {
+        title: 'Remove the damage Action cards',
+        body: 'Take Weak Attack, Furious Strike, Critical Blow and Retaliate out of the game. She can\u2019t use Action cards that deal damage.',
+      },
+      {
+        title: 'Add her Prayer and Divine Action cards',
+        body: 'Put the zero-cost Quick Prayer card in your hand. Add Solemn Prayer and all 6 Divine Action cards to the Action Tableau.',
+      },
+      {
+        title: 'Prayer Points Tracker',
+        body: 'Put the Prayer Points Tracker card near the play area with a Tracking marker on 0.',
+      },
+      {
+        title: 'Start with a Holy Item',
+        itemDeck: true,
+        body: 'Take one of Holy Book, Holy Cross or Holy Rosary (choose, or draw at random). Optional: shuffle the two unused ones into the Location\u2019s Items before building the Item decks.',
+      },
+      {
+        title: 'Against Berith: no Final Girl meeple',
+        onlyKiller: 'berith',
+        body: 'Don\u2019t place a Final Girl meeple or miniature. The Killer meeple is BOTH Ursula (you) and Berith (possessed Ursula) for this match-up.',
       },
     ],
+    items: [
+      { id: 'ursula-holy-book', name: 'Holy Book', effect: '1 hand, 3 uses. Roll +1 die when resolving Quick Prayer or Solemn Prayer.', flavour: 'The word of God.' },
+      { id: 'ursula-holy-rosary', name: 'Holy Rosary', effect: '1 hand. All Divine Action card costs are reduced by 1.', flavour: 'A prayer for each bead.' },
+      { id: 'ursula-holy-cross', name: 'Holy Cross', effect: '1 hand. When resolving an effect with two or more Increase Horror icons, treat it as only one.', flavour: 'He died for all of our sins.' },
+    ],
+    phases: {
+      planning: [
+        'Divine Action cards are bought with Prayer Points here (Holy Rosary: each costs 1 less). Unspent Prayer Points carry over.',
+      ],
+      action: [
+        'No damage Action cards and no weapons: Holy Smite (a Divine Action card) is your only way to damage Enemies.',
+        'Search drew a weapon? Remove it from the game and draw again. If the deck runs out, take 1 Prayer Point per card removed.',
+        'Something that isn\u2019t an Enemy needs damage (a trap, a door)? Pay 2 Prayer Points per damage, or use Holy Smite.',
+        'Saving Victims gives Prayer Points in order: 1, 2, 2, 3, 3 (Ultimate after the fifth). Extra saves: +2 each.',
+        { text: 'Against Berith: you move the Killer meeple (you share Berith\u2019s body). Victims still follow you, and with Holy Smite you can hit Berith every turn.', onlyKiller: 'berith' },
+      ],
+      killer: [
+        { text: 'Against Berith: \u201cVictim or Final Girl\u201d targets count as Victim until no Victims are left or the Finale is out. Berith only attacks you if the attack targets the Final Girl, there are no Victims on the board, or the Finale is out and no Victim is in your space.', onlyKiller: 'berith' },
+        { text: 'Against Berith: \u201cUrsula\u201d on Terror, Dark Power and Finale cards means Berith, not you. Effects that hit everyone in the space hurt you both.', onlyKiller: 'berith' },
+      ],
+      panic: [
+        { text: 'Against Berith: your space counts as the Killer\u2019s space for panic.', onlyKiller: 'berith' },
+      ],
+      upkeep: [
+        'Ultimate (once unlocked): return a removed Divine Action card to the Action Tableau; if you do, gain 3 Prayer Points.',
+      ],
+    },
   },
 };
 
@@ -98,11 +151,23 @@ export function getFinalGirlPack(girl) {
   return (girl && FG_PACKS[girl.id]) || null;
 }
 
-/** Setup steps from her Character Pack, filtered to this Location. */
-export function getFinalGirlPackSetup(girl, location) {
+/** Does a pack step/reminder apply to this Killer + Location? */
+export function packApplies(x, killer, location) {
+  if (x.onlyAt && (!location || x.onlyAt !== location.id)) return false;
+  if (x.onlyKiller && (!killer || x.onlyKiller !== killer.id)) return false;
+  return true;
+}
+
+/** Setup steps from her Character Pack, filtered to this Killer and Location. */
+export function getFinalGirlPackSetup(girl, location, killer) {
   const pack = getFinalGirlPack(girl);
   if (!pack) return [];
-  return pack.setup.filter((st) => !st.onlyAt || (location && st.onlyAt === location.id));
+  return pack.setup.filter((st) => packApplies(st, killer, location));
+}
+
+/** True if she can't take or use weapons (weapon Items hidden). */
+export function packForbidsWeapons(girlId) {
+  return Boolean(FG_PACKS[girlId] && FG_PACKS[girlId].noWeapons);
 }
 
 /** Her pack's Item cards (or []). */

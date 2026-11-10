@@ -11,7 +11,7 @@
    falling back to free text for anything not in the data.
    ========================================================================== */
 
-import { getFinalGirlPackItems, getFinalGirlPackEvents } from './fgPacks.js';
+import { getFinalGirlPackItems, getFinalGirlPackEvents, packForbidsWeapons } from './fgPacks.js';
 import cards from './cards.json';
 import { spacesFor } from './locationSpaces.js';
 
@@ -235,7 +235,13 @@ export function cardOptionsFor(type, { killerId, locationId, finalGirlId } = {})
     case 'item-used':
       // Her Character Pack Items (e.g. Elisabeth's Cheerleader Items) join
       // the list only while she is the Final Girl.
-      return [...getItems(locationId), ...getFinalGirlPackItems(finalGirlId)];
+      {
+        // Ursula can't take weapons: weapon Items are removed when drawn.
+        const base = packForbidsWeapons(finalGirlId)
+          ? getItems(locationId).filter((it) => !(it.tags || []).some((t) => /weapon/i.test(t)))
+          : getItems(locationId);
+        return [...base, ...getFinalGirlPackItems(finalGirlId)];
+      }
     case 'dark-power':
       // Offer Epic/standard Dark Powers plus Minor Dark Powers together.
       return [...getDarkPowers(killerId), ...getMinorDarkPowers(killerId, locationId)];

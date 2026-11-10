@@ -129,13 +129,13 @@ export const GIRL_TRAITS = {
   constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time') },
   'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again') },
   iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(1, 'Extra saves heal her') },
-  // Mausoleum Box character packs (S4), both sides photographed Nov 2026.
-  // Elisabeth rated with her pack rules (Moxie, Cheerleader Items). Ursula's
-  // pack rules (prayers, Divine Action cards) aren't transcribed yet, so only
-  // what her card says is rated. Movement left unrated for Elisabeth: her
+  // Mausoleum Box character packs (S4), both sides photographed Nov 2026,
+  // rated with their pack rule sheets. Ursula has NO weapons or damage
+  // Action cards (Items left unrated); Holy Smite's text read from the
+  // components picture, so check it against a close-up. Movement left unrated for Elisabeth: her
   // pack swaps Sprint for Swagger and says she "isn't very fast".
   elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), control: t(2, 'Moxie moves Enemies (2 to pull one towards her, 4 to move one anywhere 1 space) and Victims/Allies'), items: t(2, 'Starts with a Cheerleader Item, grabs faceup ones by walking onto their Search space, and Moxie can take the top Item (4)'), horror: t(1, 'Extra saves lower Horror'), move: t(1, 'Moxie brings Victims to her; Spunky Kicks adds a space when moving') },
-  ursula: { cards: t(2, 'Ultimate: every Upkeep, returns a removed Divine Action card to the Action Tableau and gains 3 prayers') },
+  ursula: { attack: t(2, 'Holy Smite hits every Enemy in her space for her current health and returns to her hand; it\u2019s her ONLY damage, bought with Prayer Points'), cards: t(3, 'Six Divine Action cards bought with Prayer Points, and her Ultimate brings removed ones back with 3 more Prayer Points'), horror: t(1, 'Holy Cross (if it\u2019s her starting Item) caps big Horror jumps at 1'), dice: t(1, 'Holy Book (if it\u2019s her starting Item) adds a die to her Prayer cards') },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.
   julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror') },
@@ -237,7 +237,7 @@ export const FG_STATS = {
   iris: stat(4, 5, 2, 'Three times, takes any Item from the space she’s on'),
   jamie: stat(5, 5, 2, 'Two-success rolls deal 1 damage anywhere'),
   elisabeth: stat(4, 4, 2, 'Saved Victims return and deal 1 damage each when they follow her into an Enemy\u2019s space'),
-  ursula: stat(4, 5, 2, 'Each Upkeep: brings back a removed Divine Action card and gains 3 prayers'),
+  ursula: stat(4, 5, 2, 'Each Upkeep: brings back a removed Divine Action card and gains 3 Prayer Points'),
   julie: stat(5, 5, null, 'Ultimate side not photographed yet'),
   meg: stat(5, 4, null, 'Ultimate side not photographed yet'),
   carolyn: stat(5, 6, null, 'Ultimate side not photographed yet'),
@@ -431,6 +431,7 @@ export const SPECIALS = [
   { girl: 'asami', location: 'carnival-of-blood', bonus: 1, why: 'Immune to the Carnival’s Item traps' },
   { girl: 'gabrielle', killer: 'destiny', bonus: 1, why: 'Her Ultimate shows the next Terror card every turn, so you see a Fated Death coming and can get the right Fated Victim out in order' },
   { girl: 'melanie', killer: 'the-birds', bonus: 3, why: 'Her Ultimate wipes out every Bird in her space (Birds have 1 health); she was made for this Killer' },
+  { girl: 'ursula', killer: 'berith', bonus: 2, why: 'Her pack has a full Berith mode: she shares Berith\u2019s space all game, so Holy Smite can hit every turn, Expel Demon is always playable, and Berith only attacks her in limited cases' },
   { girl: 'elisabeth', location: 'sunnydaze-mall', bonus: 1, why: 'Her pack has its own Sunnydaze Mall version of the Savior Event (The Savior\u2019s Ex), which starts the Savior\u2019s Trust higher' },
   { girl: 'selena', killer: 'poltergeist', bonus: 1, why: 'Reviewers’ top pick: fast Ultimate plus Search dice to find Carolyn' },
 ];

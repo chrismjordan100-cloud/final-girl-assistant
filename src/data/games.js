@@ -166,7 +166,7 @@ export const finalGirls = [
   { id: 'jen-promo', season: 4, name: 'Jen', shortName: 'jen-promo', group: 'Promos & Packs', film: 'S4 Premium Promo Pack', note: 'Not regularly listed yet — verify.' },
   { id: 'iris', season: 4, name: 'Iris', shortName: 'iris', group: 'Promos & Packs', film: 'S4 Premium Promo Pack', note: 'Not regularly listed yet — verify.' },
   { id: 'elisabeth', season: 4, name: 'Elisabeth', shortName: 'elisabeth', group: 'Promos & Packs', film: "Mausoleum Box (Elisabeth's Rebellion pack)", pack: { name: "Elisabeth's Rebellion", box: 'Corpses Box (inside the Mausoleum)' }, note: 'Needs her Elisabeth\u2019s Rebellion pack (Corpses Box) to play: Moxie card, Cheerleader Items and her own Action cards.' },
-  { id: 'ursula', season: 4, name: 'Ursula', shortName: 'ursula', group: 'Promos & Packs', film: "Mausoleum Box (Ursula's Faith pack)", pack: { name: "Ursula's Faith", box: 'Corpses Box (inside the Mausoleum)' }, note: 'Needs her Ursula\u2019s Faith pack (Corpses Box) to play. Her pack rules aren\u2019t in the app yet, so follow the printed rule sheet.' },
+  { id: 'ursula', season: 4, name: 'Ursula', shortName: 'ursula', group: 'Promos & Packs', film: "Mausoleum Box (Ursula's Faith pack)", pack: { name: "Ursula's Faith", box: 'Corpses Box (inside the Mausoleum)' }, note: 'Needs her Ursula\u2019s Faith pack (Corpses Box) to play: Prayer Points Tracker, Holy Items, Prayer and Divine Action cards.' },
 ];
 
 export function getKiller(id) {
@@ -753,7 +753,7 @@ export const setupExtras = {
   ],
 };
 
-import { FG_PACKS } from './fgPacks.js';
+import { FG_PACKS, packApplies } from './fgPacks.js';
 export { FG_PACKS, getFinalGirlPack, getFinalGirlPackSetup } from './fgPacks.js';
 
 /** Return the special setup steps for a Killer/Location entry (or []). */
@@ -796,6 +796,25 @@ export const noWrittenRulesExpected = new Set([
    -------------------------------------------------------------------------- */
 export const playRules = {
   // --- Final Girls with Character Packs ---
+  ursula: {
+    points: [
+      'Prayer Points: earned from her Prayer Action cards (Quick Prayer, Solemn Prayer) and from saving Victims, tracked on the Prayer Points Tracker. They can go above the tracker\u2019s maximum.',
+      'Victim rewards MUST be taken in order: 1, 2, 2, 3, 3 Prayer Points (her Ultimate comes after the fifth save). Each extra save after that: +2 Prayer Points.',
+      'Divine Action cards work like normal Action cards, but you buy them with Prayer Points in the Planning phase. Unspent Prayer Points are kept.',
+      'She can\u2019t use regular or Signature Action cards that deal damage, and can\u2019t take or use weapons. Holy Smite (a Divine Action card) is her only way to damage Enemies.',
+      'If Search draws a weapon, remove it from the game and draw another. If you empty the Item deck doing this, take Prayer Points equal to the number of Items removed.',
+      'When a non-Enemy effect needs damage (e.g. a trap), pay 2 Prayer Points per damage, or use Holy Smite.',
+      'Her Holy Items: Holy Book (+1 die on Quick/Solemn Prayer, 3 uses), Holy Rosary (Divine Action cards cost 1 less), Holy Cross (two or more Horror increases count as one).',
+      'Ultimate: each Upkeep, return a removed Divine Action card to the Action Tableau; if you do, gain 3 Prayer Points.',
+      'Against Berith only: there is no Final Girl meeple. The Killer meeple is both you and Berith, so you are always in Berith\u2019s space. You move it in the Action phase and Victims still follow you; with Holy Smite you can hit Berith every turn.',
+      'Against Berith only: \u201cVictim or Final Girl\u201d targets count as Victim until no Victims are left or the Finale is out. Berith attacks you only if the attack targets the Final Girl, there are no Victims on the board, or the Finale is out and no Victim is in your space. \u201cUrsula\u201d on Terror, Dark Power and Finale cards means Berith.',
+      'Against Berith only: damage to Berith comes off the Killer board, damage to you off your player board; \u201ceveryone in the space\u201d hits both. For panic, your space is the Killer\u2019s space. You still win the usual way: Ursula comes back from the dead with a Final Health token on the Divine Blessings sheet that shows health.',
+    ],
+    watchOuts: [
+      'Only 4 Health and no weapons: until you can afford Holy Smite you have no way to fight back, so bank Prayer Points early.',
+      'Against Berith you are always in her space, so Expel Demon (no damage, so she can use it) is always playable: stack Divine Blessings before the kill.',
+    ],
+  },
   elisabeth: {
     points: [
       'Moxie: whenever you resolve the pink hand-sign icon on a card (her saves and her new Action cards), move the Tracking marker up one value on the Moxie card. It can\u2019t go above 10; anything beyond is lost.',
@@ -1599,7 +1618,7 @@ export function getPhaseExtras(killer, location, finalGirl) {
   if (pack && pack.phases) {
     for (const [phaseId, items] of Object.entries(pack.phases)) {
       for (const item of items) {
-        if (item.onlyAt && (!location || item.onlyAt !== location.id)) continue;
+        if (!packApplies(item, killer, location)) continue;
         const x = typeof item === 'string' ? { text: item } : { text: item.title || item.text, options: item.options };
         (out[phaseId] ||= []).push({ owner: finalGirl.name, ...x });
       }

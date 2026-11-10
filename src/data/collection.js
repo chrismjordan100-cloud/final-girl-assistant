@@ -480,13 +480,13 @@ export const COLLECTION_ITEMS = [
   },
   {
     id: 'pack-elizabeth', group: 'promo', kind: 'Character pack', name: "Elisabeth's Rebellion (Elisabeth)",
-    what: 'Final Girl Elisabeth (4 Health, Ultimate after 4 saves) with her miniature. Her Ultimate brings saved Victims back to fight for her.',
+    what: 'Final Girl Elisabeth (4 Health, Ultimate after 4 saves), her miniature, the Moxie card, 6 Cheerleader Items, 11 Elisabeth Action cards and The Savior\u2019s Ex Event (Sunnydaze Mall).',
     where: 'Only in the Mausoleum Box (stored in its Corpses Box).',
     owned: true,
   },
   {
     id: 'pack-ursula', group: 'promo', kind: 'Character pack', name: "Ursula's Faith (Ursula)",
-    what: 'Final Girl Ursula, the nun from L\u2019Armes Abbey (4 Health, Ultimate after 5 saves), with her miniature and Divine Action cards.',
+    what: 'Final Girl Ursula, the nun from L\u2019Armes Abbey (4 Health, Ultimate after 5 saves), her miniature, 3 Holy Items, 2 Prayer Action cards, the Prayer Points Tracker and 6 Divine Action cards, plus special rules for playing her against Berith.',
     where: 'Only in the Mausoleum Box (stored in its Corpses Box).',
     owned: true,
   },
