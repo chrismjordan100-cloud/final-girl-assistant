@@ -849,6 +849,7 @@ export const playRules = {
     ],
     watchOuts: [
       'Only 4 Health and no weapons: until you can afford Holy Smite you have no way to fight back, so bank Prayer Points early.',
+      'Signature Actions that deal damage are off limits for her: Ambush, Throw, Dual Wield and Ritual Sacrifice. Pick a non-damage one (Meditate, Crack a Joke, Veto, Intimidate\u2026).',
       'Against Berith you are always in her space, so Expel Demon (no damage, so she can use it) is always playable: stack Divine Blessings before the kill.',
     ],
   },

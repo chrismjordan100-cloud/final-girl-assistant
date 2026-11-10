@@ -322,10 +322,10 @@ export default function SetupAssist({ onNavigate }) {
                       )}
                       {step.id === 's6' && (
                         <p className="callout setup-step__tip setup-step__signature">
-                          <strong>Optional (Box of Props):</strong> add ONE Signature Action card to
-                          the Tableau as an extra card you can buy &mdash; choose one or pick at
-                          random. It behaves like any Action card. See &ldquo;Signature Action
-                          cards&rdquo; in Rules Reference &rarr; Add-ons.
+                          <strong>Optional (Box of Props, Mausoleum):</strong> add ONE Signature Action
+                          card to the Tableau as an extra card you can buy &mdash; choose one or pick at
+                          random. It behaves like any Action card. Each card&rsquo;s text is in
+                          Rules Reference &rarr; Add-ons, or just Ask for it by name.
                         </p>
                       )}
                       {step.id === 's12' && <SetupCapture only="setup" />}
