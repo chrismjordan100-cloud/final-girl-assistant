@@ -342,7 +342,7 @@ export const COLLECTION_ITEMS = [
   {
     id: 's4-vignette-beyond', group: 's4', kind: 'Vignette', name: 'Terror From Beyond',
     what: 'Small-box Killer (the Podarchs: Plants, Pods and Assimilated people) you can play at any Location, plus Final Girl Joan. Stored in the Series 4 Cast and Crew Box.',
-    where: 'Series 4 Ultimate Box (and the Series 4 campaign). Joan\u2019s miniature and the 5 pod minis are sold separately.',
+    where: 'Series 4 Ultimate Box (and the Series 4 campaign). Joan\u2019s miniature and the 5 pod minis are included in the Ultimate Box (also sold separately at retail).',
     owned: true,
   },
   {
