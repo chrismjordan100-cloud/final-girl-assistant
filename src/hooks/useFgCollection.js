@@ -105,21 +105,34 @@ export function winsByFinalGirl(log) {
   return out;
 }
 
-/* Per Killer and per Location: 'beaten' if any real (non-test) game against
-   it was won, 'lost' if it has only been played and lost, absent if never
-   played. Abandoned games don't count either way. */
+/* Per Killer and per Location, from real (non-test) games in date order:
+   - path: the results up to and including the first win, e.g.
+     ['lost','lost','won'] — losses it took before the first victory;
+     once won, later games don't add to it.
+   - won / played: totals across all games, for the win %.
+   Abandoned games don't count. Never-played ids are absent. */
 export function resultsByKillerLocation(log) {
   const killer = {};
   const location = {};
-  const mark = (map, id, outcome) => {
+  const when = (g) => g.endedAt || g.startedAt || String(g.id || '').replace(/^g-/, '');
+  const games = (log || [])
+    .filter((g) => g && !g.isTest && (g.outcome === 'won' || g.outcome === 'lost'))
+    .slice()
+    .sort((a, b) => {
+      const ta = Date.parse(when(a)) || Number(when(a)) || 0;
+      const tb = Date.parse(when(b)) || Number(when(b)) || 0;
+      return ta - tb;
+    });
+  const add = (map, id, outcome) => {
     if (!id) return;
-    if (outcome === 'won') map[id] = 'beaten';
-    else if (outcome === 'lost' && map[id] !== 'beaten') map[id] = 'lost';
+    const r = (map[id] ||= { path: [], won: 0, played: 0 });
+    if (!r.path.includes('won')) r.path.push(outcome);
+    r.played += 1;
+    if (outcome === 'won') r.won += 1;
   };
-  (log || []).forEach((g) => {
-    if (!g || g.isTest) return;
-    mark(killer, g.killerId, g.outcome);
-    mark(location, g.locationId, g.outcome);
+  games.forEach((g) => {
+    add(killer, g.killerId, g.outcome);
+    add(location, g.locationId, g.outcome);
   });
   return { killer, location };
 }

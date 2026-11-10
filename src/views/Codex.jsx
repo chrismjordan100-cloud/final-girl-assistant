@@ -74,11 +74,24 @@ function EntryCard({ type, entry, selected, onPick, result }) {
         <div className="cx-card__headmain">
           <h3 className="cx-card__name">
             {entry.name}
-            {result === 'beaten' && (
-              <span className="cx-result cx-result--beaten" title="Beaten" aria-label="Beaten">{'\u2714'}</span>
-            )}
-            {result === 'lost' && (
-              <span className="cx-result cx-result--lost" title="Played, not beaten yet" aria-label="Played, not beaten yet">{'\u2716'}</span>
+            {result && result.path.length > 0 && (
+              <span
+                className="cx-result"
+                title={result.won
+                  ? `Beaten after ${result.path.length - 1} defeat${result.path.length === 2 ? '' : 's'}`
+                  : `Played ${result.path.length}, not beaten yet`}
+              >
+                {result.path.map((o, i) => (
+                  <span key={i} className={'cx-result__mark cx-result__mark--' + o} aria-hidden="true">
+                    {o === 'won' ? '\u2714' : '\u2716'}
+                  </span>
+                ))}
+                {result.won > 0 && (
+                  <span className="cx-result__pct" title={`Won ${result.won} of ${result.played}`}>
+                    {Math.round((result.won / result.played) * 100)}%
+                  </span>
+                )}
+              </span>
             )}
           </h3>
           <span className="cx-card__meta fg-type">

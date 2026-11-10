@@ -459,13 +459,22 @@
 }
 .cx-favbar__toggle--env.has-some:not(.is-on) { border-color: var(--fg-gold); color: var(--fg-gold); }
 
-/* Beaten / played-and-lost marker beside a Killer or Location name. */
+/* Losses-before-first-win row beside a Killer or Location name,
+   then the overall win % once beaten. */
 .cx-result {
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15em;
   margin-left: 0.4em;
-  font-size: 0.8em;
+  font-size: 0.75em;
   line-height: 1;
   vertical-align: middle;
 }
-.cx-result--beaten { color: #2ea043; }
-.cx-result--lost { color: #d93a3a; }
+.cx-result__mark--won { color: #2ea043; }
+.cx-result__mark--lost { color: #d93a3a; }
+.cx-result__pct {
+  margin-left: 0.35em;
+  color: #2ea043;
+  font-weight: 700;
+}
