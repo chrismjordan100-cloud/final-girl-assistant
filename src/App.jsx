@@ -70,6 +70,27 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
+  // Local folder backup of the browser-stored data (survives a browser wipe).
+  // The Gemini key and sync bookkeeping are deliberately left out.
+  useEffect(() => {
+    window.BackupKit?.init({
+      appId: 'final-girl',
+      appName: 'Final Girl',
+      prefixes: ['fg-'],
+      exclude: ['fg-ai-gemini-key', 'fg-sync-pending', 'fg-sync-local-at', 'fg-sync-baseline'],
+      button: 'fg-backup-btn',
+      afterRestore: () => {
+        // Make the restored data push to the cloud on reload, merged with the
+        // cloud copy first (no baseline = merge), so nothing is lost either way.
+        try {
+          localStorage.removeItem('fg-sync-baseline');
+          localStorage.setItem('fg-sync-pending', '1');
+          localStorage.setItem('fg-sync-local-at', new Date().toISOString());
+        } catch { /* ignore */ }
+      },
+    });
+  }, []);
+
   useEffect(() => {
     const onPop = () => {
       setView(viewFromHash());
@@ -199,6 +220,16 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
+        <p>
+          <button
+            type="button"
+            id="fg-backup-btn"
+            className="backup-footer-btn"
+            onClick={() => window.BackupKit?.open()}
+          >
+            &#128190; Backup
+          </button>
+        </p>
         <p className="fg-type">
           A fan-made assistant for <em>Final Girl</em> by Van Ryder Games. Personal,
           non-commercial use only. Not affiliated with or endorsed by Van Ryder Games.

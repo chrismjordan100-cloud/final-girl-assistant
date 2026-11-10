@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
+import './lib/backupKit.js'; // defines window.BackupKit (local folder backup)
 import './styles/theme.css';
 import './styles/app.css';
 

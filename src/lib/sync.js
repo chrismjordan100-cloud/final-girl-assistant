@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { mergeCloudIntoLocal } from './syncMerge.js';
 
 /* ==========================================================================
    Cloud sync (Supabase)
@@ -48,6 +49,16 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
    -------------------------------------------------------------------------- */
 const PENDING_KEY = 'fg-sync-pending';
 const LOCAL_AT_KEY = 'fg-sync-local-at';
+/* fg-sync-baseline: set once this device has completed a sync with the cloud.
+   A device WITHOUT it is new, or its browser storage was wiped — so before it
+   pushes, the cloud copy is merged in first (see syncMerge.js). Otherwise a
+   wiped device could push a near-empty log over the good cloud copy. */
+const BASELINE_KEY = 'fg-sync-baseline';
+const LOG_EVENT = 'fg-game-log-change';
+
+function markSynced() {
+  safeSet(BASELINE_KEY, new Date().toISOString());
+}
 
 function safeGet(key) {
   try { return localStorage.getItem(key); } catch { return null; }
@@ -133,6 +144,16 @@ export async function pullState() {
 /* Push the current local state up to the cloud row. Returns true on success.
    Clears the pending flag only if nothing else changed while it was in flight. */
 export async function pushState() {
+  // Fresh or wiped device: merge the cloud copy in BEFORE overwriting it.
+  // If the cloud can't be read, don't push — the change stays pending and is
+  // retried on the next sync, rather than risking the cloud copy.
+  if (!safeGet(BASELINE_KEY)) {
+    const cloud = await pullState();
+    if (!cloud) return false;
+    if (cloud.data && mergeCloudIntoLocal(cloud.data, safeGet, safeSet)) {
+      try { window.dispatchEvent(new CustomEvent(LOG_EVENT)); } catch { /* ignore */ }
+    }
+  }
   const startedAt = safeGet(LOCAL_AT_KEY);
   try {
     const payload = collectLocalState();
@@ -147,6 +168,7 @@ export async function pushState() {
       return false;
     }
     if (safeGet(LOCAL_AT_KEY) === startedAt) safeRemove(PENDING_KEY);
+    markSynced();
     return true;
   } catch (err) {
     console.warn('[sync] push threw:', err);
@@ -176,7 +198,9 @@ export function syncNow() {
           await pushState();
           return false;
         }
-        return applyStateToLocal(cloud);
+        const changed = applyStateToLocal(cloud);
+        markSynced();
+        return changed;
       }
       // Cloud empty (first run) but this device has history — seed the cloud.
       if (safeGet('fg-game-log')) await pushState();

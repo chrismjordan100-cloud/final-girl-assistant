@@ -745,3 +745,19 @@
 @media (max-width: 420px) {
   .game-shortcuts__btn > span[aria-hidden] { display: none; }
 }
+
+/* Backup button (footer) — label/state set by BackupKit */
+.backup-footer-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.backup-footer-btn:hover { border-color: var(--accent); }
+.backup-footer-btn:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.backup-footer-btn[data-backup-state='warn'] { border-color: var(--fg-gold); color: var(--fg-gold); }
