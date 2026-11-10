@@ -32,7 +32,7 @@ OSW = os.path.join(FONTS, 'Oswald.ttf')
 SRC = os.path.join(FONTS, 'SourceSans3.ttf')
 G = os.path.join(ROOT, 'src/assets/games') + '/'
 W, H, FPS = 1920, 1080, 30
-ACCENT = {'killer': (214, 40, 40), 'location': (60, 170, 80)}
+ACCENT = {'killer': (214, 40, 40), 'location': (60, 170, 80), 'finalgirl': (214, 90, 150)}  # finalgirl: Character Pack videos
 
 
 def font(path, size, weight=700):

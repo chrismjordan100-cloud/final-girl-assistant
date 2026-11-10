@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useMemo, useState } from 'react';
+import HowToVideo from '../components/HowToVideo.jsx';
 import { setupGroups } from '../data/rules.js';
 import {
   killers,
@@ -374,6 +375,11 @@ export default function SetupAssist({ onNavigate }) {
                                 ? ' Its setup steps are added to Special Setup below.'
                                 : ' Its rules aren\u2019t in the app yet, so follow the printed sheet.'}
                             </p>
+                          )}
+                          {girlPack && (
+                            <div className="game-picker__pack tg-video--pack">
+                              <HowToVideo type="finalgirl" entry={pickedGirl} title={girlPack.name} hideMissing />
+                            </div>
                           )}
                           {girlItemImg && (
                             <figure className="game-picker__envitem">

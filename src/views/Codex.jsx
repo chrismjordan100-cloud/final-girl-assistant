@@ -22,6 +22,8 @@ import FitSummary from './FitSummary.jsx';
 import Collection from './Collection.jsx';
 import { usePersistentState } from '../hooks/usePersistentState.js';
 import ImageZoom from '../components/ImageZoom.jsx';
+import HowToVideo from '../components/HowToVideo.jsx';
+import { getFinalGirlPack } from '../data/fgPacks.js';
 import './Codex.css';
 
 const TABS = [
@@ -377,6 +379,11 @@ function FinalGirlCard({ entry, selected, onPick, collection, wins }) {
       <EnvelopeMarker entry={entry} wins={wins} collection={collection} />
       <StoredIn entry={entry} collection={collection} />
       {blurb && <p className="cx-card__flavour">{blurb}</p>}
+      {getFinalGirlPack(entry) && (
+        <div className="tg-video--pack cx-fg__video">
+          <HowToVideo type="finalgirl" entry={entry} title={getFinalGirlPack(entry).name} hideMissing />
+        </div>
+      )}
       {!front && !back ? (
         <p className="cx-fg__missing cx-fg__missing--both fg-type">Card images not added yet (front and Ultimate Ability)</p>
       ) : (

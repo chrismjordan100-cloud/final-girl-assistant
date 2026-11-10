@@ -1,0 +1,548 @@
+1
+00:00:00,300 --> 00:00:04,413
+Terror From Beyond: there's no Killer. Alien Podarchs start as plants, grow into
+
+2
+00:00:04,413 --> 00:00:06,572
+pods, and take over the people they catch.
+
+3
+00:00:06,792 --> 00:00:09,096
+Here's how the vignette plays, at any Location.
+
+4
+00:00:09,900 --> 00:00:14,393
+Setup in brief. There's no Killer board: line up the two Bloodlust cards beside the
+
+5
+00:00:14,393 --> 00:00:16,666
+Location board, marker on the start space.
+
+6
+00:00:16,666 --> 00:00:17,857
+Horror starts at four.
+
+7
+00:00:18,077 --> 00:00:22,038
+Take every Event card showing Special Victim meeples out of the Event deck.
+
+8
+00:00:22,038 --> 00:00:26,315
+Put an Assimilated token on a Victim meeple and place it in the Killer's starting
+
+9
+00:00:26,315 --> 00:00:26,632
+space.
+
+10
+00:00:26,852 --> 00:00:31,158
+Put the Reference card out Docile side up and the two Persuade cards in the Tableau.
+
+11
+00:00:31,158 --> 00:00:35,464
+Put the Podarchs card above the Finale with the Podarch tokens, and place one, Plant
+
+12
+00:00:35,464 --> 00:00:37,668
+side up, with the Victim furthest from you.
+
+13
+00:00:38,500 --> 00:00:42,705
+Podarchs exist in three states. A Plant, which grows into a Pod, which turns a
+
+14
+00:00:42,705 --> 00:00:44,537
+Victim into an Assimilated person.
+
+15
+00:00:44,757 --> 00:00:48,533
+There's no Killer meeple in this game. Your enemy is the whole infestation.
+
+16
+00:00:49,367 --> 00:00:52,247
+Each Podarch token has a Plant side and a Pod side.
+
+17
+00:00:52,247 --> 00:00:55,127
+A space can never hold more than one Podarch token.
+
+18
+00:00:55,347 --> 00:00:58,246
+Plants and Pods count as Enemies, not Minions or a Killer.
+
+19
+00:00:58,246 --> 00:01:00,595
+They have one health, and never move or attack.
+
+20
+00:01:00,815 --> 00:01:04,982
+You can attack and destroy them: take the token off the board and back to the pool.
+
+21
+00:01:04,982 --> 00:01:07,492
+Location effects that damage Enemies hit them too.
+
+22
+00:01:07,712 --> 00:01:12,131
+When you attack a Plant or Pod, any leftover damage can go to an Assimilated in the
+
+23
+00:01:12,131 --> 00:01:14,048
+same space, and the other way round.
+
+24
+00:01:14,867 --> 00:01:19,043
+After the Planning phase and before the Killer phase there's a new Podarch Evolution
+
+25
+00:01:19,043 --> 00:01:20,584
+phase. Do four steps, in order.
+
+26
+00:01:20,804 --> 00:01:24,924
+One. If you're in a space with a Pod and there are no Victims in that space, you're
+
+27
+00:01:24,924 --> 00:01:28,399
+assimilated and lose immediately. Don't check your Final Health token.
+
+28
+00:01:28,619 --> 00:01:32,407
+Two. Remove every Plant and Pod in a space with neither you nor any Victims.
+
+29
+00:01:32,407 --> 00:01:33,653
+They go back to the pool.
+
+30
+00:01:33,873 --> 00:01:36,924
+Three. Each remaining Pod assimilates one Victim in its space.
+
+31
+00:01:37,144 --> 00:01:39,619
+Four. Flip every remaining Plant to its Pod side.
+
+32
+00:01:40,433 --> 00:01:44,409
+A Plant sits with a lone Victim. At step four of Evolution it flips to a Pod.
+
+33
+00:01:44,409 --> 00:01:48,540
+If the Victim is still there at the next Evolution, step three assimilates them.
+
+34
+00:01:48,760 --> 00:01:52,471
+So you have a full turn to act. Lead the Victim away, or destroy the Pod.
+
+35
+00:01:52,471 --> 00:01:56,589
+If the Victim leaves and you're not there either, step two clears the token away.
+
+36
+00:01:56,809 --> 00:01:59,707
+But never finish your turn alone in a space with a Pod.
+
+37
+00:01:59,707 --> 00:02:01,183
+Step one is an instant loss.
+
+38
+00:02:02,000 --> 00:02:06,176
+When a Victim is assimilated, put an Assimilated token over the meeple's head.
+
+39
+00:02:06,176 --> 00:02:10,512
+It's now an Assimilated person. Return the Pod token from that space to the pool.
+
+40
+00:02:10,732 --> 00:02:13,089
+Once assimilated, they aren't Victims any more.
+
+41
+00:02:13,089 --> 00:02:15,596
+Bloodlust doesn't rise, because no one was killed.
+
+42
+00:02:15,816 --> 00:02:20,145
+If you ever need to assimilate a Victim but all twelve tokens are in use, you lose
+
+43
+00:02:20,145 --> 00:02:24,157
+immediately. When an Assimilated is killed, its token goes back to the pool.
+
+44
+00:02:24,377 --> 00:02:26,861
+Some effects say spawn an Assimilated in a space.
+
+45
+00:02:26,861 --> 00:02:29,903
+Place a Victim meeple there with an Assimilated token on it.
+
+46
+00:02:30,733 --> 00:02:33,586
+The Podarchs take no joy in seeing Victims killed.
+
+47
+00:02:33,586 --> 00:02:35,811
+Bloodlust only goes up for two reasons:
+
+48
+00:02:36,031 --> 00:02:40,041
+when an Assimilated is killed, and when you see the green Podarch Bloodlust icon.
+
+49
+00:02:40,261 --> 00:02:44,635
+Ignore every red Bloodlust icon, and don't raise Bloodlust when a Victim dies.
+
+50
+00:02:45,467 --> 00:02:49,722
+The Assimilated are Minions, using the Minion rules on page thirty two of the core
+
+51
+00:02:49,722 --> 00:02:53,874
+rulebook. Each has one health. Their Movement and Attack values are shown on the
+
+52
+00:02:53,874 --> 00:02:54,704
+Bloodlust track.
+
+53
+00:02:54,924 --> 00:02:59,076
+Every Killer phase, all Assimilated perform the Minion Action on the back of the
+
+54
+00:02:59,076 --> 00:03:02,241
+Finale card, one at a time, starting with the closest to you.
+
+55
+00:03:02,461 --> 00:03:06,827
+Ones created in this turn's Evolution phase don't act in that first Minion Action.
+
+56
+00:03:06,827 --> 00:03:08,477
+The Finale card has a reminder.
+
+57
+00:03:08,697 --> 00:03:12,797
+When a Terror card or any other card gives a Killer Action, only the Assimilated
+
+58
+00:03:12,797 --> 00:03:14,180
+closest to you performs it.
+
+59
+00:03:15,000 --> 00:03:18,846
+The Assimilated start the game Docile. Your meddling will eventually turn them
+
+60
+00:03:18,846 --> 00:03:19,437
+against you.
+
+61
+00:03:19,657 --> 00:03:23,659
+When the Bloodlust marker reaches the start of the Hostile section of the track,
+
+62
+00:03:23,659 --> 00:03:27,060
+they become Hostile. Flip the Reference card from Docile to Hostile.
+
+63
+00:03:27,280 --> 00:03:29,947
+How they move and attack depends on which side is showing.
+
+64
+00:03:30,767 --> 00:03:34,863
+While Docile, you can't attack or kill the Assimilated, though Location effects that
+
+65
+00:03:34,863 --> 00:03:36,569
+damage Enemies can still kill them.
+
+66
+00:03:36,789 --> 00:03:41,166
+They follow normal targeting, except they ignore every target that already has a
+
+67
+00:03:41,166 --> 00:03:45,708
+Podarch token in its space. If every possible target has one, they neither move nor
+
+68
+00:03:45,708 --> 00:03:46,091
+attack.
+
+69
+00:03:46,311 --> 00:03:50,435
+When they resolve an attack, if they're in the same space as you or a Victim, and
+
+70
+00:03:50,435 --> 00:03:53,541
+there's no Podarch token there yet, they place a Plant token.
+
+71
+00:03:53,541 --> 00:03:54,865
+Otherwise they do nothing.
+
+72
+00:03:55,700 --> 00:03:58,353
+Ginny looks at the Minion Action on the Finale's back:
+
+73
+00:03:58,353 --> 00:04:00,564
+choose the closest target, move, then attack.
+
+74
+00:04:00,784 --> 00:04:04,449
+The Assimilated at the Hidden Lab goes first, as it's closest to her.
+
+75
+00:04:04,449 --> 00:04:08,646
+The two nearest spaces with Ginny or Victims already have Podarch tokens, so it
+
+76
+00:04:08,646 --> 00:04:11,408
+ignores them and moves towards a Victim without one.
+
+77
+00:04:11,628 --> 00:04:15,873
+It only moves one space, ending with two Victims, but there's already a Podarch
+
+78
+00:04:15,873 --> 00:04:20,334
+token there, so no Plant. The other Assimilated finds its nearest target taken too,
+
+79
+00:04:20,334 --> 00:04:22,913
+so it heads south and plants with a lone Victim.
+
+80
+00:04:23,733 --> 00:04:27,881
+Hostile Assimilated still treat Victims as before, placing Plants and trying to
+
+81
+00:04:27,881 --> 00:04:30,453
+assimilate them. But now they just want you dead.
+
+82
+00:04:30,673 --> 00:04:34,663
+When a Hostile one targets the closest Victim or Final Girl, or targets you
+
+83
+00:04:34,663 --> 00:04:38,866
+directly, you're always a valid target, even if there's a Podarch token in your
+
+84
+00:04:38,866 --> 00:04:39,185
+space.
+
+85
+00:04:39,405 --> 00:04:43,649
+When an Assimilated in your space resolves an attack, it attacks you, dealing damage
+
+86
+00:04:43,649 --> 00:04:47,639
+equal to the Attack value on the Bloodlust track, whatever it was targeting and
+
+87
+00:04:47,639 --> 00:04:49,155
+whatever else is in the space.
+
+88
+00:04:49,375 --> 00:04:52,148
+The good news: once they're Hostile, you can attack them too.
+
+89
+00:04:52,967 --> 00:04:55,390
+Later, Bloodlust has reached the Hostile section.
+
+90
+00:04:55,390 --> 00:04:59,495
+The Assimilated at the Airstrip would normally go for the Victim in the Hidden Lab.
+
+91
+00:04:59,715 --> 00:05:04,107
+But Ginny is closer, and now she's always a valid target, even with a Podarch token
+
+92
+00:05:04,107 --> 00:05:07,864
+in her space. It moves in and attacks her for its current Attack value.
+
+93
+00:05:08,084 --> 00:05:12,291
+The other Assimilated targets the Victim at the Hidden Lab, moves, and places a
+
+94
+00:05:12,291 --> 00:05:15,700
+Plant. Even Hostile, they convert Victims rather than kill them.
+
+95
+00:05:16,533 --> 00:05:20,183
+Victims think your theories are crazy. They won't follow you, and can't be saved,
+
+96
+00:05:20,183 --> 00:05:22,571
+until they've been persuaded that something is wrong.
+
+97
+00:05:22,791 --> 00:05:26,857
+When you successfully resolve a Persuade Action card and a Victim is Persuaded,
+
+98
+00:05:26,857 --> 00:05:30,511
+replace their yellow meeple with a Special Victim meeple of any colour.
+
+99
+00:05:30,511 --> 00:05:33,393
+Persuaded Victims follow you and can be saved as normal.
+
+100
+00:05:33,613 --> 00:05:37,829
+When a Persuaded Victim is killed, saved or assimilated, swap the Special Victim
+
+101
+00:05:37,829 --> 00:05:40,675
+meeple back for a normal one, so it can be used again.
+
+102
+00:05:40,895 --> 00:05:44,824
+If all the Special Victim meeples are in use, the rule sheet says you cannot play
+
+103
+00:05:44,824 --> 00:05:47,104
+the... and the sentence is cut off on our copy.
+
+104
+00:05:47,104 --> 00:05:49,577
+Presumably the Persuade card, but check your sheet.
+
+105
+00:05:50,400 --> 00:05:53,905
+Victims in a space with Assimilated don't panic in the Panic phase.
+
+106
+00:05:53,905 --> 00:05:55,840
+Most don't believe anything is wrong.
+
+107
+00:05:56,060 --> 00:06:00,361
+If an effect moves or places the Killer, or places something relative to the Killer,
+
+108
+00:06:00,361 --> 00:06:02,204
+apply it to the closest Assimilated.
+
+109
+00:06:02,424 --> 00:06:06,933
+Minor Dark Powers apply to all Assimilated, and can only be removed when you save a
+
+110
+00:06:06,933 --> 00:06:11,441
+Victim. If a Location's Minor Dark Power has spaces for Health markers, don't place
+
+111
+00:06:11,441 --> 00:06:15,352
+them; discard it when you save a Victim, or when the Finale is revealed.
+
+112
+00:06:15,572 --> 00:06:19,382
+If an Event or Item card makes no sense here, ignore it or draw another.
+
+113
+00:06:19,382 --> 00:06:23,405
+And if you need to place a Podarch token but they're all on the board, place
+
+114
+00:06:23,405 --> 00:06:23,828
+nothing.
+
+115
+00:06:24,633 --> 00:06:28,561
+The vignette has three Dark Power cards. Their effects are printed on the cards, not
+
+116
+00:06:28,561 --> 00:06:30,479
+the rule sheet, so read the one you draw.
+
+117
+00:06:30,699 --> 00:06:34,540
+The Finale reveals as normal, in the Upkeep after the Terror deck runs out.
+
+118
+00:06:34,540 --> 00:06:38,740
+But if there are no Victims on the board at the end of a Killer phase, discard the
+
+119
+00:06:38,740 --> 00:06:41,301
+rest of the Terror deck, so the Finale comes next.
+
+120
+00:06:41,521 --> 00:06:45,839
+When it's revealed, put its two matching Finale Rules cards side by side, coloured
+
+121
+00:06:45,839 --> 00:06:50,051
+diamonds lined up, and follow them. For example, Luxuriant Growth pairs with The
+
+122
+00:06:50,051 --> 00:06:52,209
+Greenhouse and uses the Greenhouse token.
+
+123
+00:06:52,209 --> 00:06:54,684
+The Finale card's back shows the Minion Action.
+
+124
+00:06:55,500 --> 00:06:59,538
+Before the Finale, you win if there are no Plants, Pods or Assimilated on the board
+
+125
+00:06:59,538 --> 00:07:01,047
+at the end of the Killer phase.
+
+126
+00:07:01,267 --> 00:07:05,211
+After the Finale is revealed, its Finale Rules cards give you different win
+
+127
+00:07:05,211 --> 00:07:05,789
+conditions.
+
+128
+00:07:06,009 --> 00:07:10,417
+You lose the usual way, or instantly if Evolution finds you in a space with a Pod
+
+129
+00:07:10,417 --> 00:07:14,607
+and no Victims, or if a Victim must be assimilated and every token is in use.
+
+130
+00:07:15,433 --> 00:07:18,237
+A few tips. Destroy Plants before they turn into Pods;
+
+131
+00:07:18,237 --> 00:07:20,105
+one health each, so any hit will do.
+
+132
+00:07:20,325 --> 00:07:24,798
+Keep Victims out of spaces with Podarch tokens, and never end a turn alone with a
+
+133
+00:07:24,798 --> 00:07:25,019
+Pod.
+
+134
+00:07:25,239 --> 00:07:29,524
+Killing Assimilated raises Bloodlust and turns them Hostile sooner, so choose those
+
+135
+00:07:29,524 --> 00:07:30,401
+fights carefully.
+
+136
+00:07:30,621 --> 00:07:34,260
+Players win about fifty eight per cent of logged games against the Podarchs.
+
+137
+00:07:34,260 --> 00:07:34,739
+Good luck.
+

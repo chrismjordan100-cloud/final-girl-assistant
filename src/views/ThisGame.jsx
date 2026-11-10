@@ -5,8 +5,6 @@ import {
   getPageImages,
   getArtImage,
   getFlavourImage,
-  getVideo,
-  getVideoFileName,
   getFinalGirlCards,
   getPlayRules,
   getFinalGirlPack,
@@ -30,6 +28,7 @@ import { deriveSummary } from '../lib/gameSummary.js';
 import { useEffect, useState } from 'react';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import './ThisGame.css';
+import HowToVideo from '../components/HowToVideo.jsx';
 
 /* A labelled image tile, or a "not added yet" placeholder. */
 function ImageTile({ src, alt, caption }) {
@@ -42,40 +41,8 @@ function ImageTile({ src, alt, caption }) {
   );
 }
 
-/* How-to-play video for a Killer or Location. Collapsed to a play button so it
-   costs nothing until tapped; a placeholder shows the file name to add. */
 function VideoTile({ type, entry }) {
-  const [open, setOpen] = useState(false);
-  const src = getVideo(type, entry);
-  const label = `How to play ${type === 'killer' ? 'the Killer' : 'the Location'}: ${entry.name}`;
-  if (!src) {
-    return (
-      <div className="tg-video tg-video--missing fg-panel">
-        <span className="tg-video__icon" aria-hidden="true">&#9654;</span>
-        <div>
-          <p className="tg-video__title">{entry.name} &mdash; how-to video coming soon</p>
-          <p className="tg-video__file fg-type">Add <code>{getVideoFileName(type, entry)}</code> to <code>src/assets/videos/</code></p>
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className="tg-video fg-panel">
-      {open ? (
-        <video className="tg-video__player" src={src} controls autoPlay playsInline preload="metadata">
-          Your browser can&rsquo;t play this video.
-        </video>
-      ) : (
-        <button className="tg-video__play" onClick={() => setOpen(true)} aria-label={label}>
-          <span className="tg-video__icon" aria-hidden="true">&#9654;</span>
-          <span>
-            <span className="tg-video__title">How to play {entry.name}</span>
-            <span className="tg-video__sub fg-type">{type === 'killer' ? 'Killer' : 'Location'} video &middot; narrated &middot; subtitled</span>
-          </span>
-        </button>
-      )}
-    </div>
-  );
+  return <HowToVideo type={type} entry={entry} />;
 }
 
 function MissingNote({ children }) {
@@ -701,6 +668,11 @@ export default function ThisGame({ onNavigate }) {
             <div className="tg-pair tg-pair--plain tg-videos">
               {killer && <VideoTile type="killer" entry={killer} />}
               {location && <VideoTile type="location" entry={location} />}
+            </div>
+          )}
+          {girlPack && (
+            <div className="tg-pair tg-pair--plain tg-videos tg-video--pack">
+              <HowToVideo type="finalgirl" entry={finalGirl} title={girlPack.name} hideMissing />
             </div>
           )}
 
