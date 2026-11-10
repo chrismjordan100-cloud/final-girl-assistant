@@ -110,7 +110,7 @@ export const COLLECTION_ITEMS = [
   {
     id: 's1-alt-killers', group: 's1', kind: 'Miniatures', name: 'S1 Alt Killer Minis',
     what: 'Alternative sculpts of the Series 1 Killers.',
-    where: 'Sold separately.',
+    where: 'Campaign add-on (offered again in the Series 4 campaign).',
     worth: 'Cosmetic only.',
   },
   {
@@ -209,6 +209,12 @@ export const COLLECTION_ITEMS = [
     worth: 'Storage only.',
   },
   {
+    id: 's2-alt-killers', group: 's2', kind: 'Miniatures', name: 'S2 Alternate Killer Minis',
+    what: 'An alternate sculpt of each Series 2 Killer.',
+    where: 'Campaign add-on (offered again in the Series 4 campaign).',
+    worth: 'Cosmetic only.',
+  },
+  {
     id: 's2-mystery', group: 's2', kind: 'Exclusive', name: 'Series 2 Mystery Box',
     what: 'Reported to contain the Otherworldly Mirror, two six-sided dice and a metal coin for randomly picking Killers and Locations.',
     where: 'Crowdfunding only (Series 2 campaign); now out of print, second-hand only. Not in the Ultimate Box.',
@@ -305,6 +311,17 @@ export const COLLECTION_ITEMS = [
     owned: true,
   },
   {
+    id: 's3-storage', group: 's3', kind: 'Storage', name: 'Storage Box \u2013 Series 3',
+    what: 'Large art-covered storage box for the Series 3 films and boxes.',
+    where: 'Campaign add-on. Retail Series 3 Ultimate Box listings don\u2019t include it, so tick it if yours came in one.',
+  },
+  {
+    id: 's3-alt-killers', group: 's3', kind: 'Miniatures', name: 'S3 Alternate Killer Minis',
+    what: 'An alternate sculpt of each Series 3 Killer.',
+    where: 'Campaign add-on (offered again in the Series 4 campaign). Not in the Ultimate Box.',
+    worth: 'Cosmetic only.',
+  },
+  {
     id: 's3-mystery', group: 's3', kind: 'Exclusive', name: 'Series 3 Mystery Box',
     what: 'A mystery accessory. Contents not listed by retailers.',
     where: 'Kickstarter only (Series 3 campaign). Not in the Ultimate Box.',
@@ -313,8 +330,8 @@ export const COLLECTION_ITEMS = [
   /* ---------------- Series 4 ---------------- */
   {
     id: 's4-ultimate', group: 's4', kind: 'Bundle', name: 'Series 4 Ultimate Box',
-    what: 'All 5 Series 4 films, Mausoleum Box, Cast and Crew Box, Bonus Features Box, miniatures, Lore Book, Gruesome Death Books, Terror From Beyond vignette.',
-    where: 'Retail bundle. Does not include the Jen or Iris promo packs or the Mystery Accessory Box.',
+    what: 'All 5 Series 4 films with miniatures, the Mausoleum Box (with the Corpses and Crypt boxes inside), Cast and Crew Box (holds the Terror From Beyond vignette), Bonus Features Box, Lore Book, Gruesome Death Books, all packed in the Series 4 Storage Box.',
+    where: 'Retail bundle and Kickstarter pledge. Does not include the Jen or Iris promo packs, the Mystery Box, the alternate Killer minis or Shriek.',
     owned: true,
   },
   ff('s4', 's4-buddyland', 'Bad Times at Buddyland', 'Billy', 'Buddyland', 'Rena and Gwynn', true),
@@ -336,13 +353,31 @@ export const COLLECTION_ITEMS = [
   },
   {
     id: 's4-mausoleum', group: 's4', kind: 'Expansion', name: 'Mausoleum Box',
-    what: '71 special Victim meeples (every series plus Special Features); Final Girls Julia and Constance; 5 Signature Action and 7 Vehicle Action cards; Elizabeth’s Rebellion and Ursula’s Faith character packs with minis; 7 proxy Event cards; Evan and AJ meeples.',
+    what: 'Holds two inner boxes, the Corpses Box and the Crypt Box. Contents: 71 special Victim meeples (every series plus Special Features); Final Girls Julia and Constance; 5 Signature Action and 7 Vehicle Action cards; Elisabeth\u2019s Rebellion and Ursula\u2019s Faith character packs with minis; 7 proxy Event cards; Evan and AJ meeples.',
     where: 'Retail. Also in the Series 4 Ultimate Box.',
     owned: true,
   },
   {
+    id: 's4-corpses', group: 's4', kind: 'Inner box', name: 'Corpses Box (inside the Mausoleum)',
+    what: 'Holds the Signature Action, Vehicle Action and proxy Event cards, the Elisabeth and Ursula character packs and their minis, the promo character minis, mystery dice and the special Victim meeples.',
+    where: 'Only inside the Mausoleum Box (so also in the Series 4 Ultimate Box).',
+    owned: true,
+  },
+  {
+    id: 's4-crypt', group: 's4', kind: 'Inner box', name: 'Crypt Box (inside the Mausoleum)',
+    what: 'The Mausoleum\u2019s second inner box. Its components belong in the Series 4 Feature Film boxes; retailers don\u2019t itemise them.',
+    where: 'Only inside the Mausoleum Box (so also in the Series 4 Ultimate Box).',
+    owned: true,
+  },
+  {
+    id: 's4-storage', group: 's4', kind: 'Storage', name: 'Storage Box \u2013 Series 4',
+    what: 'Large art-covered box holding the Series 4 films, Bonus Features Box and Cast and Crew Box.',
+    where: 'Only in the Series 4 Ultimate Box / Ultimate pledge.',
+    owned: true,
+  },
+  {
     id: 's4-bonus-features', group: 's4', kind: 'Accessory', name: 'S4 Bonus Features Box',
-    what: 'The Series 4 Feature Film Rulebook and Achievement lists.',
+    what: 'The Series 4 Feature Film Rulebook, Achievement lists and an Epic Finale card for each film, with slots for the Lore and Gruesome Death books.',
     where: 'Series 4 Ultimate Box.',
     owned: true,
   },
@@ -371,9 +406,21 @@ export const COLLECTION_ITEMS = [
     owned: true,
   },
   {
-    id: 's4-mystery', group: 's4', kind: 'Exclusive', name: 'Series 4 Mystery Accessory Box',
-    what: 'A mystery accessory. Contents not published.',
-    where: 'Kickstarter exclusive (Series 4 campaign); some Kickstarter resellers. Not in the Ultimate Box.',
+    id: 's4-mystery', group: 's4', kind: 'Exclusive', name: 'Series 4 Mystery Box',
+    what: 'Collectable extras with no gameplay effect. One retailer lists it as alternate miniatures of the five Series 4 Killers, but the campaign sold alternate Killers separately, so treat that as unconfirmed.',
+    where: 'Kickstarter/Gamefound add-on (Series 4 campaign); some Kickstarter resellers. Not in the Ultimate Box.',
+  },
+
+  {
+    id: 's4-alt-killers', group: 's4', kind: 'Miniatures', name: 'S4 Alternate Killer Minis',
+    what: 'An alternate sculpt of each Series 4 Killer, for painting or variety.',
+    where: 'Series 4 campaign add-on. Not in the Ultimate Box.',
+    worth: 'Cosmetic only.',
+  },
+  {
+    id: 's4-deluxe', group: 's4', kind: 'Accessory', name: 'Series 4 Deluxe Pack',
+    what: 'Announced during the Series 4 campaign; contents not published yet.',
+    where: 'Not released yet.',
   },
 
   /* ---------------- Promo Final Girls & character packs ---------------- */
@@ -432,15 +479,15 @@ export const COLLECTION_ITEMS = [
     owned: true,
   },
   {
-    id: 'pack-elizabeth', group: 'promo', kind: 'Character pack', name: "Elizabeth's Rebellion",
-    what: 'Character pack with an Elizabeth miniature.',
-    where: 'Only in the Mausoleum Box.',
+    id: 'pack-elizabeth', group: 'promo', kind: 'Character pack', name: "Elisabeth's Rebellion (Elisabeth)",
+    what: 'Final Girl Elisabeth (4 Health, Ultimate after 4 saves) with her miniature. Her Ultimate brings saved Victims back to fight for her.',
+    where: 'Only in the Mausoleum Box (stored in its Corpses Box).',
     owned: true,
   },
   {
-    id: 'pack-ursula', group: 'promo', kind: 'Character pack', name: "Ursula's Faith",
-    what: 'Character pack with an Ursula miniature.',
-    where: 'Only in the Mausoleum Box.',
+    id: 'pack-ursula', group: 'promo', kind: 'Character pack', name: "Ursula's Faith (Ursula)",
+    what: 'Final Girl Ursula, the nun from L\u2019Armes Abbey (4 Health, Ultimate after 5 saves), with her miniature and Divine Action cards.',
+    where: 'Only in the Mausoleum Box (stored in its Corpses Box).',
     owned: true,
   },
   {

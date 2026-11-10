@@ -165,6 +165,8 @@ export const finalGirls = [
   { id: 'meg', season: 4, name: 'Meg (with dog Mipha)', shortName: 'meg', group: 'Promos & Packs', film: 'S4 Premium Promo Pack' },
   { id: 'jen-promo', season: 4, name: 'Jen', shortName: 'jen-promo', group: 'Promos & Packs', film: 'S4 Premium Promo Pack', note: 'Not regularly listed yet — verify.' },
   { id: 'iris', season: 4, name: 'Iris', shortName: 'iris', group: 'Promos & Packs', film: 'S4 Premium Promo Pack', note: 'Not regularly listed yet — verify.' },
+  { id: 'elisabeth', season: 4, name: 'Elisabeth', shortName: 'elisabeth', group: 'Promos & Packs', film: "Mausoleum Box (Elisabeth's Rebellion pack)", note: 'Her pack\u2019s own rules (the pink hand-sign save rewards) aren\u2019t transcribed yet.' },
+  { id: 'ursula', season: 4, name: 'Ursula', shortName: 'ursula', group: 'Promos & Packs', film: "Mausoleum Box (Ursula's Faith pack)", note: 'Her pack\u2019s own rules (prayer save rewards and Divine Action cards) aren\u2019t transcribed yet.' },
 ];
 
 export function getKiller(id) {
@@ -2679,6 +2681,8 @@ export const narration = {
     destiny: 'There is no face in the dark tonight, no blade, no mask. Something is trying to kill them all, and in a very specific order. You cannot fight Destiny. You cannot outrun it. You can only reach them in time, one by one, in the sequence fate has already written. Save them in the wrong order, and the price comes due at the end. It always comes due.',
   },
   finalGirls: {
+    elisabeth: 'You are Elisabeth. Cheer captain, kind to a fault, and tonight every friend you pull out of the dark comes back fighting beside you.',
+    ursula: 'You are Ursula. Sister of the Abbey, eyes closed, lips moving. Whatever walks these halls tonight, your faith walks further.',
     // Optional per-girl angle; falls back to a generic line below.
     laurie: 'You are Laurie. You have outlived everyone who told you to stay calm and stay put. You will not break tonight. You never do.',
     reiko: 'You are Reiko. Cornered, cold-eyed, and finished with running. If it wants you, it will have to come and take you.',

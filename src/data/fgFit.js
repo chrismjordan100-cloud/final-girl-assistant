@@ -129,6 +129,12 @@ export const GIRL_TRAITS = {
   constance: { attack: t(2, 'Ultimate: uses any weapon from range 0-2'), items: t(2, 'Ultimate makes every weapon ranged; a save reward takes a top Item'), time: t(1, 'A save reward gives 2 Time, and extra saves give Time') },
   'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again') },
   iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(1, 'Extra saves heal her') },
+  // Mausoleum Box character packs (S4), both sides photographed Nov 2026.
+  // Their save rewards are pack resources (pink hand-signs / prayers) whose
+  // rules aren't transcribed yet, so only what the cards themselves say is
+  // rated here.
+  elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), horror: t(1, 'Extra saves lower Horror') },
+  ursula: { cards: t(2, 'Ultimate: every Upkeep, returns a removed Divine Action card to the Action Tableau and gains 3 prayers') },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.
   julie: { items: t(2, 'Two save rewards are Items, one of them any unused Item'), horror: t(2, 'Three save rewards lower Horror') },
@@ -229,6 +235,8 @@ export const FG_STATS = {
   'jen-promo': stat(5, 5, 2, 'Furious Strike costs 0 Time'),
   iris: stat(4, 5, 2, 'Three times, takes any Item from the space she’s on'),
   jamie: stat(5, 5, 2, 'Two-success rolls deal 1 damage anywhere'),
+  elisabeth: stat(4, 4, 2, 'Saved Victims return and deal 1 damage each when they follow her into an Enemy\u2019s space'),
+  ursula: stat(4, 5, 2, 'Each Upkeep: brings back a removed Divine Action card and gains 3 prayers'),
   julie: stat(5, 5, null, 'Ultimate side not photographed yet'),
   meg: stat(5, 4, null, 'Ultimate side not photographed yet'),
   carolyn: stat(5, 6, null, 'Ultimate side not photographed yet'),
