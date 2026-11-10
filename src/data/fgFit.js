@@ -147,6 +147,7 @@ export const GIRL_TRAITS = {
   // any deck or the Dark Power / Finale card. It's information only (she
   // can't change what comes), so Killer control stays at 1, below Christie.
   // No Toughness: a single heal reward (see the rule above).
+  joan: { attack: t(3, 'Ultimate: once every Action phase she resolves Weak Attack from the Tableau as if from her hand, and its partials count as successes'), horror: t(2, 'A save reward and every extra save lower Horror'), time: t(1, 'A save reward gives 2 Time'), items: t(1, 'A save reward takes a top Item') },
   gabrielle: {
     control: t(1, 'Ultimate: sees the next Terror card, the Dark Power or the Finale every Action phase, so you can plan for it (but not change it)'),
     search: t(1, 'Ultimate can check the top Item card before you search; a save reward takes a Search card'),
@@ -225,6 +226,7 @@ export const FG_STATS = {
   patsy: stat(6, 5, 1, 'Spend 2 Time for 1 chip damage'),
   claus: stat(6, 4, 3, 'Full heal and no maximum health'),
   cindy: stat(5, 4, 2, 'Failed Walk/Sprint results count as successes'),
+  joan: stat(5, 4, 2, 'A free Weak Attack every Action phase, with partial results counting as successes'),
   gabrielle: stat(5, 4, 2, 'Each Action phase, looks at the top card of any deck, or the Dark Power or Finale (information only)'),
   adrianne: stat(6, null, 1, 'Small boosts paid for with Victims; flips on a die roll'),
   maureen: stat(5, null, 2, 'Plays Action cards straight from the tableau, paid with Victims'),
@@ -310,7 +312,7 @@ export const KILLER_NEEDS = {
   billy: { confidence: 'tips', attack: need(2, 'Buddies must die before Billy can be hit, and he heals while any Power Source is Active'), time: need(1, 'Switching off each Power Source costs Time'), move: need(1, 'You can switch off a Power Source just by passing through its space'), tank: need(1, 'Buddies hit anything in their space') },
   // No rules or card data for Terror From Beyond yet, so nothing to rate:
   // with the Pods, only the Location's needs count. Fill in once transcribed.
-  pods: { confidence: 'estimate' },
+  pods: { confidence: 'tips', attack: need(3, 'You win by clearing every Plant, Pod and Assimilated (all 1 health) by the end of a Killer phase'), move: need(2, 'Reach Plants and Pods before Evolution, and get Persuaded Victims to Exits'), cards: need(1, 'Victims can\u2019t follow you or be saved until a Persuade Action card succeeds'), tank: need(1, 'Hostile Assimilated can always target you and hit for the Bloodlust Attack value') },
   mort: { confidence: 'tips', move: need(2, 'Interrogate and Coerce only work in a Suspect’s or Informant’s space, and they’re spread out'), dice: need(2, 'Interrogate and Coerce reveal more, or come back to hand, on better rolls'), horror: need(1, 'Dead Informants and his Dark Powers raise Horror'), cards: need(1, 'Interrogate and Coerce are your only way to reveal Clues'), attack: need(1, 'He can only be hurt once unmasked, with +2 Attack per unrevealed Clue') },
   // No rule sheet for North Pole Nightmare yet; from card data only.
   krampus: { confidence: 'estimate', attack: need(2, 'A normal Killer to beat; Unholy Gifts lets him heal 2, so burst damage helps'), tank: need(1, 'Coal Balls can deal 3 damage and Demonic Will can kill outright'), rescue: need(1, 'Coal Balls can kill up to 3 Victims') },
@@ -385,7 +387,7 @@ export const KILLER_PRESSURE = {
   berith: vp(2, 2, 'Possessed nun hunting Victims (estimate)'),
   grimlash: vp(3, 2, 'Victims in the fields die quickly'),
   billy: vp(2, 2, 'Buddies and Billy both attack Victims (estimate)'),
-  pods: vp(3, 2, 'Victims get taken over (estimate)'),
+  pods: vp(1, 2, 'Victims are assimilated rather than killed; Bloodlust rises only for a killed Assimilated or the green Podarch icon'),
   mort: vp(1, 2, 'Disguised among Suspects for much of the game, so fewer direct kills'),
   krampus: vp(2, 2, 'Attacks, then Krampus Presents hurt Victims who open them'),
 };
@@ -430,6 +432,7 @@ export const SPECIALS = [
   { girl: 'adelaide', location: 'sacred-groves', bonus: 1, why: 'Her Ultimate can drop the Groves’ Wrath to 1' },
   { girl: 'asami', location: 'carnival-of-blood', bonus: 1, why: 'Immune to the Carnival’s Item traps' },
   { girl: 'gabrielle', killer: 'destiny', bonus: 1, why: 'Her Ultimate shows the next Terror card every turn, so you see a Fated Death coming and can get the right Fated Victim out in order' },
+  { girl: 'joan', killer: 'pods', bonus: 2, why: 'Her free Weak Attack every turn kills a 1-health Plant, Pod or Assimilated, and clearing them all is how you win' },
   { girl: 'melanie', killer: 'the-birds', bonus: 3, why: 'Her Ultimate wipes out every Bird in her space (Birds have 1 health); she was made for this Killer' },
   { girl: 'ursula', killer: 'berith', bonus: 2, why: 'Her pack has a full Berith mode: she shares Berith\u2019s space all game, so Holy Smite can hit every turn, Expel Demon is always playable, and Berith only attacks her in limited cases' },
   { girl: 'elisabeth', location: 'sunnydaze-mall', bonus: 1, why: 'Her pack has its own Sunnydaze Mall version of the Savior Event (The Savior\u2019s Ex), which starts the Savior\u2019s Trust higher' },

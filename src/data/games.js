@@ -44,7 +44,7 @@ export const killers = [
   { id: 'the-birds', season: 1, name: 'The Birds', shortName: 'the-birds', film: 'Terror From Above', isVignette: true },
   { id: 'patsy-zombies', season: 2, name: 'The Zombies', shortName: 'patsy-zombies', film: 'Terror From the Grave', isVignette: true },
   { id: 'destiny', season: 3, name: 'Destiny', shortName: 'destiny', film: 'Terror From Destiny', isVignette: true },
-  { id: 'pods', season: 4, name: 'The Pods', shortName: 'pods', film: 'Terror From Beyond', isVignette: true, note: 'S4 vignette (plant pods that take over humans). Official killer name not yet published — placeholder id/name, verify against the box.' },
+  { id: 'pods', season: 4, name: 'The Podarchs', shortName: 'pods', film: 'Terror From Beyond', isVignette: true },
   // Special Features (season 0 = not a numbered series; a full Killer + Location each).
   { id: 'mort', season: 0, name: 'Mort the Teenage Dirtbag', shortName: 'mort', film: 'Shriek' },
   { id: 'krampus', season: 0, name: 'Krampus', shortName: 'krampus', film: 'North Pole Nightmare', note: 'Rules not yet transcribed — no rule sheet imported. Card data is present.' },
@@ -144,6 +144,7 @@ export const finalGirls = [
   { id: 'melanie', season: 1, name: 'Melanie', shortName: 'melanie', group: 'Vignettes', film: 'Terror From Above' },
   { id: 'patsy', season: 2, name: 'Patsy', shortName: 'patsy', group: 'Vignettes', film: 'Terror From the Grave' },
   { id: 'gabrielle', season: 3, name: 'Gabrielle', shortName: 'gabrielle', group: 'Vignettes', film: 'Terror From Destiny' },
+  { id: 'joan', season: 4, name: 'Joan', shortName: 'joan', group: 'Vignettes', film: 'Terror From Beyond' },
 
   // Special Features
   { id: 'claus', season: 0, name: 'Claus', shortName: 'claus', group: 'Special Features', film: 'North Pole Nightmare (Krampus)' },
@@ -653,8 +654,24 @@ export const setupExtras = {
   ],
   pods: [
     {
-      title: 'S4 vignette \u2014 rules not yet transcribed',
-      body: 'Terror From Beyond (invading plant pods that take over human subjects). Its rule sheet wasn\u2019t among the imported PDFs \u2014 add the setup here once you have it. Playable at any Location.',
+      title: 'No Killer board: lay out the Bloodlust cards',
+      body: 'There is no Killer board. Line up the two Podarch Bloodlust cards next to the Location board and put the Bloodlust marker on the start space. Horror starts at 4.',
+    },
+    {
+      title: 'Remove Special Victim Events',
+      body: 'Before building the Event deck, take out every Event card that features Special Victim meeples. They aren\u2019t used (the Special Victim meeples mark Persuaded Victims instead).',
+    },
+    {
+      title: 'First Assimilated in the Killer\u2019s start space',
+      body: 'Put an Assimilated token over a Victim meeple and place it in the Location\u2019s Killer starting space.',
+    },
+    {
+      title: 'Reference card and Persuade cards',
+      body: 'Put the Reference card by the play area, Docile side up, and the 2 Persuade Action cards in the Action Tableau.',
+    },
+    {
+      title: 'Podarchs card and the first Plant',
+      body: 'Put the Podarchs card above the Finale card with the Podarch tokens. Find the Victim furthest from you and place a Podarch token with them, Plant side up.',
     },
   ],
 
@@ -795,6 +812,26 @@ export const noWrittenRulesExpected = new Set([
    Feature Film rulebook. Keyed by killer/location id.
    -------------------------------------------------------------------------- */
 export const playRules = {
+  // --- Terror From Beyond (S4 vignette) ---
+  pods: {
+    points: [
+      'There is no Killer. Podarchs are Plants, then Pods, then Assimilated people. Plants and Pods are Enemies (not Minions or a Killer) with 1 health; they never move or attack. Destroy them by attacking (leftover damage carries over to Assimilated in the same space, and vice versa).',
+      'Podarch Evolution phase, after Planning and before the Killer phase, in order: (1) if you\u2019re in a space with a Pod and no Victims, you\u2019re assimilated and lose at once (no Final Health token); (2) remove every Plant and Pod in a space with neither you nor a Victim; (3) each remaining Pod assimilates one Victim in its space; (4) flip all remaining Plants to Pods.',
+      'Assimilating a Victim: put an Assimilated token on the meeple and return that space\u2019s Pod to the pool. They\u2019re no longer Victims, and Bloodlust doesn\u2019t rise. You lose at once if you must assimilate but every token is in use.',
+      'Assimilated are Minions with 1 health; Movement and Attack values come from the Bloodlust track. All of them (except those made this turn) perform the Finale\u2019s Minion Action, closest to you first. Killer Actions on Terror and other cards are done by the closest Assimilated only. Anything that moves or places \u201cthe Killer\u201d uses the closest Assimilated.',
+      'Docile (Reference card on Docile): you can\u2019t attack or kill them (Location damage to Enemies still can). They ignore targets that already have a Podarch token in their space; with no valid target they do nothing. Their \u201cattack\u201d places a Plant in a space with you or a Victim that has no Podarch token yet.',
+      'Hostile (Bloodlust reaches the Hostile section: flip the Reference card): they still plant on Victims, but they can always target you, even with a Podarch in your space. Their attack on you deals damage equal to the Attack value on the Bloodlust track. You can now attack them.',
+      'Podarch Bloodlust only rises when an Assimilated is killed or you see the green Podarch Bloodlust icon. Ignore red Bloodlust icons and Victim deaths.',
+      'Persuading: Victims won\u2019t follow you or be saved until a Persuade Action card succeeds. Swap the yellow meeple for a Special Victim meeple; Persuaded Victims follow and can be saved as normal. When one is killed, saved or assimilated, swap back. If all Special Victim meeples are in use, you can\u2019t play Persuade.',
+      'Victims in a space with Assimilated don\u2019t panic. Minor Dark Powers apply to all Assimilated and are only removed when you save a Victim (Location Minor Dark Powers with Health spaces: no Health markers; discard on a save or when the Finale is revealed). If an Event or Item makes no sense here, ignore it or draw another. No Podarch token left to place: place none.',
+      'Winning: before the Finale, you win if there are no Plants, Pods or Assimilated on the board at the end of the Killer phase. The Finale reveals as normal when the Terror deck runs out (or, if no Victims are left at the end of the Killer phase, discard the rest of the Terror deck). Then use the matching Finale Rules cards, which give new win conditions.',
+    ],
+    watchOuts: [
+      'Never end the Evolution phase alone in a space with a Pod: that\u2019s an instant loss.',
+      'Plants and Pods only survive next to you or Victims, so keep Victims away from them, or clear them before Evolution.',
+      'Killing Assimilated raises Bloodlust, which turns them Hostile sooner. Pick your fights.',
+    ],
+  },
   // --- Final Girls with Character Packs ---
   ursula: {
     points: [
@@ -1448,6 +1485,35 @@ export function getPlayRules(entry) {
    Paraphrased mechanics only; the rule sheets remain the authority.
    -------------------------------------------------------------------------- */
 export const phaseExtras = {
+  // ----- Terror From Beyond (S4 vignette) -----
+  pods: {
+    planning: [
+      {
+        title: 'Then the Podarch Evolution phase, in order:',
+        options: [
+          '1. In a space with a Pod and no Victims? You\u2019re assimilated and lose (no Final Health token)',
+          '2. Remove every Plant and Pod in a space with neither you nor a Victim',
+          '3. Each remaining Pod assimilates one Victim in its space (Assimilated token on, Pod back to the pool)',
+          '4. Flip all remaining Plants to Pods',
+        ],
+      },
+    ],
+    action: [
+      'Victims only follow you or can be saved once Persuaded (Persuade card success: swap in a Special Victim meeple).',
+      'Plants and Pods have 1 health. Docile Assimilated can\u2019t be attacked; Hostile ones can.',
+    ],
+    killer: [
+      'Assimilated made in this Evolution phase don\u2019t act in the first Minion Action. The others act closest to you first. Killer Actions are done by the closest Assimilated only.',
+      'Docile: their attack places a Plant with you or a Victim (if no Podarch token there). Hostile: they can always target you and hit for the Bloodlust track\u2019s Attack value.',
+      'Win check: no Plants, Pods or Assimilated on the board at the end of this phase (before the Finale) = you win.',
+    ],
+    panic: [
+      'Victims in a space with Assimilated don\u2019t panic.',
+    ],
+    upkeep: [
+      'Bloodlust only rises for a killed Assimilated or the green Podarch Bloodlust icon (ignore red icons and Victim deaths). Reached the Hostile section? Flip the Reference card.',
+    ],
+  },
   // ----- Season 1 -----
   poltergeist: {
     action: ['Win check: you only win by saving Carolyn at an Exit while she\u2019s with you \u2014 the Poltergeist can\u2019t be attacked.'],
@@ -2729,6 +2795,7 @@ export const narration = {
     destiny: 'There is no face in the dark tonight, no blade, no mask. Something is trying to kill them all, and in a very specific order. You cannot fight Destiny. You cannot outrun it. You can only reach them in time, one by one, in the sequence fate has already written. Save them in the wrong order, and the price comes due at the end. It always comes due.',
   },
   finalGirls: {
+    joan: 'You are Joan. You wrote to your sister that something was wrong with this town. Nobody listened. Tonight you stop asking them to.',
     elisabeth: 'You are Elisabeth. Cheer captain, kind to a fault, and tonight every friend you pull out of the dark comes back fighting beside you.',
     ursula: 'You are Ursula. Sister of the Abbey, eyes closed, lips moving. Whatever walks these halls tonight, your faith walks further.',
     // Optional per-girl angle; falls back to a generic line below.
