@@ -130,10 +130,11 @@ export const GIRL_TRAITS = {
   'jen-promo': { attack: t(2, 'Ultimate: Furious Strike costs 0 Time'), cards: t(1, 'Furious Strike becomes free to play'), horror: t(2, 'Two save rewards lower Horror, and extra saves lower it again') },
   iris: { items: t(2, 'Ultimate: 3 times only, goes through all Items at her space and takes 1; a save reward takes any top Item'), search: t(1, 'Her three Ultimate uses let her pick the exact Item'), horror: t(2, 'Two save rewards lower Horror'), move: t(1, 'A save reward takes a Sprint card'), tank: t(1, 'Extra saves heal her') },
   // Mausoleum Box character packs (S4), both sides photographed Nov 2026.
-  // Their save rewards are pack resources (pink hand-signs / prayers) whose
-  // rules aren't transcribed yet, so only what the cards themselves say is
-  // rated here.
-  elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), horror: t(1, 'Extra saves lower Horror') },
+  // Elisabeth rated with her pack rules (Moxie, Cheerleader Items). Ursula's
+  // pack rules (prayers, Divine Action cards) aren't transcribed yet, so only
+  // what her card says is rated. Movement left unrated for Elisabeth: her
+  // pack swaps Sprint for Swagger and says she "isn't very fast".
+  elisabeth: { attack: t(2, 'Ultimate: every saved Victim goes back on the board and can follow her into an Enemy\u2019s space for 1 damage each, without raising Bloodlust'), control: t(2, 'Saves and her own Action cards build Moxie, spent to move Victims, Allies and Enemies around the board'), items: t(1, 'Starts with a Cheerleader Item and grabs the faceup ones just by walking onto their Search space'), horror: t(1, 'Extra saves lower Horror') },
   ursula: { cards: t(2, 'Ultimate: every Upkeep, returns a removed Divine Action card to the Action Tableau and gains 3 prayers') },
   // Action side only (Ultimate side not photographed yet), so these are
   // provisional: the Ultimate could move them a lot.
@@ -430,6 +431,7 @@ export const SPECIALS = [
   { girl: 'asami', location: 'carnival-of-blood', bonus: 1, why: 'Immune to the Carnival’s Item traps' },
   { girl: 'gabrielle', killer: 'destiny', bonus: 1, why: 'Her Ultimate shows the next Terror card every turn, so you see a Fated Death coming and can get the right Fated Victim out in order' },
   { girl: 'melanie', killer: 'the-birds', bonus: 3, why: 'Her Ultimate wipes out every Bird in her space (Birds have 1 health); she was made for this Killer' },
+  { girl: 'elisabeth', location: 'sunnydaze-mall', bonus: 1, why: 'Her pack has its own Sunnydaze Mall version of the Savior Event (The Savior\u2019s Ex), which starts the Savior\u2019s Trust higher' },
   { girl: 'selena', killer: 'poltergeist', bonus: 1, why: 'Reviewers’ top pick: fast Ultimate plus Search dice to find Carolyn' },
 ];
 

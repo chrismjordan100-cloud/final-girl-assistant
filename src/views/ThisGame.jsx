@@ -9,6 +9,7 @@ import {
   getVideoFileName,
   getFinalGirlCards,
   getPlayRules,
+  getFinalGirlPack,
   getAchievements,
   getOfficialScenario,
   isAutoAchievement,
@@ -91,7 +92,7 @@ function PlayRulesBlock({ kind, entry, rules }) {
     <div className="tg-playrules__block">
       <h3 className="tg-playrules__head">
         <span className={'tg-playrules__badge tg-playrules__badge--' + kind}>
-          {kind === 'killer' ? 'Killer' : 'Location'}
+          {kind === 'killer' ? 'Killer' : kind === 'finalgirl' ? 'Final Girl' : 'Location'}
         </span>
         {entry.name}
       </h3>
@@ -135,7 +136,10 @@ export default function ThisGame({ onNavigate }) {
   const locationPages = location ? getPageImages('location', location) : [];
   const killerPlay = killer ? getPlayRules(killer) : null;
   const locationPlay = location ? getPlayRules(location) : null;
-  const hasPlayRules = Boolean(killerPlay || locationPlay);
+  const girlPlay = finalGirl ? getPlayRules(finalGirl) : null;
+  const girlPack = finalGirl ? getFinalGirlPack(finalGirl) : null;
+  const girlPages = finalGirl ? getPageImages('finalgirl', finalGirl) : [];
+  const hasPlayRules = Boolean(killerPlay || locationPlay || girlPlay);
   const comboRuleIcons = [
     ...(killer ? getRuleIcons(killer) : []),
     ...(location ? getRuleIcons(location) : []),
@@ -293,7 +297,7 @@ export default function ThisGame({ onNavigate }) {
   const hasFlavour = killerFlavour || locationFlavour;
   const hasArt = killerArt || locationArt;
   const hasFinalGirlCards = fgCards.front || fgCards.back;
-  const hasRules = killerPages.length > 0 || locationPages.length > 0;
+  const hasRules = killerPages.length > 0 || locationPages.length > 0 || girlPages.length > 0;
   const scenarioImage = getScenarioImage(killer, location);
 
   return (
@@ -703,7 +707,15 @@ export default function ThisGame({ onNavigate }) {
           {/* 3. Final Girl card(s) */}
           {finalGirl && (
             <CollapsibleSection title={`Final Girl \u2014 ${finalGirl.name}`}>
-              {finalGirl.note && <p className="tg-verify fg-type">&#9888; {finalGirl.note}</p>}
+              {girlPack ? (
+                <p className="tg-verify fg-type">
+                  &#128230; Needs her <strong>{girlPack.name}</strong> Character Pack from the{' '}
+                  {girlPack.box}: her extra cards and rule sheet.
+                  {!girlPack.rulesKnown && ' Its rules aren\u2019t in the app yet, so follow the printed sheet.'}
+                </p>
+              ) : (
+                finalGirl.note && <p className="tg-verify fg-type">&#9888; {finalGirl.note}</p>
+              )}
               {hasFinalGirlCards ? (
                 <div className="tg-pair">
                   <ImageTile src={fgCards.front} alt={`${finalGirl.name} card, front`} caption="Front" />
@@ -727,6 +739,7 @@ export default function ThisGame({ onNavigate }) {
               </p>
               {killerPlay && <PlayRulesBlock kind="killer" entry={killer} rules={killerPlay} />}
               {locationPlay && <PlayRulesBlock kind="location" entry={location} rules={locationPlay} />}
+              {girlPlay && <PlayRulesBlock kind="finalgirl" entry={finalGirl} rules={girlPlay} />}
             </CollapsibleSection>
           )}
 
@@ -818,6 +831,20 @@ export default function ThisGame({ onNavigate }) {
                 <div className="tg-pages">
                   {locationPages.map((src, i) => (
                     <ImageTile key={src} src={src} alt={`${location.name} rules, page ${i + 1}`} caption={`Page ${i + 1}`} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {finalGirl && girlPages.length > 0 && (
+              <div className="tg-rules-block">
+                <h3 className="tg-rules-block__head">
+                  <span className="tg-rules-block__badge tg-rules-block__badge--finalgirl">Final Girl</span>
+                  {girlPack ? girlPack.name : finalGirl.name}
+                </h3>
+                <div className="tg-pages">
+                  {girlPages.map((src, i) => (
+                    <ImageTile key={src} src={src} alt={`${finalGirl.name} pack rules, page ${i + 1}`} caption={`Page ${i + 1}`} />
                   ))}
                 </div>
               </div>

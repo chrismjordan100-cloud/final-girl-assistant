@@ -289,3 +289,10 @@
   border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.92rem;
 }
+
+/* Character Pack reminder under the chosen Final Girl */
+.game-picker__pack {
+  flex: 1 1 100%;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.92rem;
+}

@@ -53,6 +53,7 @@ function write(next) {
 /* Where she'd normally be: her own Feature Film box, if she has one. */
 export function defaultStorage(fg) {
   if (!fg) return null;
+  if (fg.pack && fg.pack.box) return fg.pack.box;
   if (fg.group === 'Promos & Packs') return null;
   const film = String(fg.film || '').replace(/\s*\(.*\)\s*$/, '');
   return film ? `${film} box` : null;

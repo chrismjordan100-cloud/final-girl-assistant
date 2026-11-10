@@ -818,3 +818,11 @@
   color: var(--fg-gold);
   font-size: 0.88rem;
 }
+
+/* Final Girl badge (Character Pack rules) */
+.tg-playrules__badge--finalgirl,
+.tg-rules-block__badge--finalgirl {
+  background: rgba(214, 112, 160, 0.18);
+  color: #e58ab7;
+  border: 1px solid #c9578f;
+}

@@ -12,6 +12,8 @@ import {
   getOfficialFinalGirls,
   finalGirlCardStatus,
   getFinalGirlEnvelopeImage,
+  getFinalGirlPack,
+  getFinalGirlPackSetup,
 } from '../data/games.js';
 import { useGameSelection } from '../hooks/useGameSelection.js';
 import { useFgCollection, storageFor, envelopeStatus, hasMissingComponents, winsByFinalGirl } from '../hooks/useFgCollection.js';
@@ -149,15 +151,20 @@ export default function SetupAssist({ onNavigate }) {
     && envelopeStatus(pickedGirl.id, 0, collection.envelopes).status === 'opened';
   const girlItem = envelopeOpened ? finalGirlUnlockableName(pickedGirl) : null;
   const girlItemImg = envelopeOpened ? getFinalGirlEnvelopeImage(pickedGirl) : null;
-  const girlExtras = envelopeOpened
+  // Her Character Pack (e.g. Elisabeth's Rebellion): extra cards and setup.
+  const girlPack = getFinalGirlPack(pickedGirl);
+  const packSteps = getFinalGirlPackSetup(pickedGirl, location);
+  const envelopeSteps = envelopeOpened
     ? [{
         title: `Bring in ${girlItem || 'her Secret Envelope item'}`,
         body: `${pickedGirl.name} has won before and her Secret Envelope is open, so her own item is available. Take ${girlItem ? 'it' : 'the item card'} out of the envelope and bring it into this game. Her item card shows how she uses it.`,
       }]
     : [];
+  const girlExtras = [...packSteps, ...envelopeSteps];
 
   // Which selections alter the core Item-deck step (s11). Used to warn there.
   const itemChangers = [killer, location].filter((e) => changesItemDecks(e));
+  if (pickedGirl && packSteps.some((st) => st.itemDeck)) itemChangers.push(pickedGirl);
   const itemDeckChanged = itemChangers.length > 0;
   const itemDeckChangedBy = itemChangers.map((e) => e.name).join(' and ');
 
@@ -356,6 +363,16 @@ export default function SetupAssist({ onNavigate }) {
                               {!pickedStorage && (
                                 <span className="fg-type"> &mdash; set it on her card in the Codex.</span>
                               )}
+                            </p>
+                          )}
+                          {girlPack && (
+                            <p className="callout callout--note game-picker__pack">
+                              &#128230; <strong>{pickedGirl.name}</strong> needs her{' '}
+                              <strong>{girlPack.name}</strong> Character Pack from the{' '}
+                              <strong>{girlPack.box}</strong>: her extra cards and rule sheet.
+                              {girlPack.rulesKnown
+                                ? ' Its setup steps are added to Special Setup below.'
+                                : ' Its rules aren\u2019t in the app yet, so follow the printed sheet.'}
                             </p>
                           )}
                           {girlItemImg && (
