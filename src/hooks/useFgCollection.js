@@ -51,9 +51,27 @@ function write(next) {
 }
 
 /* Where she'd normally be: her own Feature Film box, if she has one. */
+/* Promo Final Girls with a purpose-built home in Chris's boxes: the Series 3
+   Ultimate's Special FX Crate holds the minis and Secret Envelopes for Paula,
+   Agnes and Layla, and the card, mini and envelope for Carolyn, Jamie and
+   Grandma; the Mausoleum's Corpses Box holds the promo character minis
+   (Julia, Constance). Promos he doesn't own stay unset. */
+const PROMO_HOME = {
+  paula: 'Special FX Crate (Series 3 Ultimate)',
+  'holiday-paula': 'Special FX Crate (Series 3 Ultimate)',
+  agnes: 'Special FX Crate (Series 3 Ultimate)',
+  layla: 'Special FX Crate (Series 3 Ultimate)',
+  carolyn: 'Special FX Crate (Series 3 Ultimate)',
+  grandma: 'Special FX Crate (Series 3 Ultimate)',
+  jamie: 'Special FX Crate (Series 3 Ultimate)',
+  julia: 'Corpses Box (inside the Mausoleum)',
+  constance: 'Corpses Box (inside the Mausoleum)',
+};
+
 export function defaultStorage(fg) {
   if (!fg) return null;
   if (fg.pack && fg.pack.box) return fg.pack.box;
+  if (PROMO_HOME[fg.id]) return PROMO_HOME[fg.id];
   if (fg.group === 'Promos & Packs') return null;
   const film = String(fg.film || '').replace(/\s*\(.*\)\s*$/, '');
   return film ? `${film} box` : null;
