@@ -21,5 +21,45 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- App Centre back button. Shows only when the app was opened from App Centre (?appcentre=1). -->
+<script id="appcentre-back">
+(function () {
+  try {
+    var KEY = 'appcentre-from';
+    if (new URLSearchParams(location.search).get('appcentre') === '1') sessionStorage.setItem(KEY, '1');
+    if (sessionStorage.getItem(KEY) !== '1') return;
+  } catch (e) { return; }
+  if (window.top !== window.self) return;
+  var LAUNCHER = 'file:///C:/Users/chris/Projects/App%20Launcher/index.html';
+  function goBack() {
+    if (location.protocol === 'file:') location.href = LAUNCHER;
+    else history.back();
+  }
+  function mount() {
+    if (document.getElementById('appcentre-back-host')) return;
+    var host = document.createElement('div');
+    host.id = 'appcentre-back-host';
+    host.style.cssText = 'position:fixed;left:14px;bottom:14px;z-index:2147483647;';
+    var root = host.attachShadow({ mode: 'open' });
+    root.innerHTML =
+      '<style>' +
+      'button{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:7px;cursor:pointer;' +
+      'font:500 13px/1 "Segoe UI",system-ui,sans-serif;letter-spacing:.02em;color:#ecebe6;' +
+      'padding:10px 16px 10px 12px;border-radius:999px;background:rgba(18,19,26,.82);' +
+      'border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 24px rgba(0,0,0,.35);' +
+      '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:.85;transition:opacity .2s,transform .2s}' +
+      'button:hover{opacity:1;transform:translateX(-2px)}' +
+      'button:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:2px}' +
+      'svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}' +
+      '@media print{:host{display:none}}' +
+      '</style>' +
+      '<button type="button" aria-label="Back to App Centre"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>App Centre</button>';
+    root.querySelector('button').addEventListener('click', goBack);
+    document.documentElement.appendChild(host);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
+})();
+</script>
+
+</body>
 </html>
