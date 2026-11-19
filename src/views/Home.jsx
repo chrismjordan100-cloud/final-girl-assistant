@@ -1,9 +1,9 @@
 import { useGameLog } from '../hooks/useGameLog.js';
 import logo from '../assets/final-girl-logo.png';
 import { useGameSelection } from '../hooks/useGameSelection.js';
+import { useGameFlow } from '../hooks/useGameFlow.js';
 import { getFinalGirl, getKiller, getLocation } from '../data/games.js';
 
-const SETUP_PROGRESS_KEY = 'fg-setup-progress';
 
 const FEATURES = [
   {
@@ -93,24 +93,27 @@ const FEATURES = [
 ];
 
 export default function Home({ onNavigate }) {
-  const { finalGirlId, killerId, locationId, clear } = useGameSelection();
+  const { finalGirlId, killerId, locationId } = useGameSelection();
   const { active } = useGameLog();
+  const { clearGame } = useGameFlow();
 
   const finalGirl = getFinalGirl(finalGirlId);
   const killer = getKiller(killerId);
   const location = getLocation(locationId);
   const picks = [finalGirl, killer, location].filter(Boolean);
-  const hasGame = picks.length > 0;
+  // Show the panel for an in-progress game even if the picks were cleared,
+  // otherwise there'd be no way to stop it from here.
+  const hasGame = picks.length > 0 || Boolean(active);
+  const pickNames = picks.length > 0
+    ? picks.map((p) => p.name)
+    : [active?.finalGirlName, active?.killerName, active?.locationName].filter(Boolean);
 
   function clearEverything() {
-    clear();
-    try {
-      localStorage.removeItem(SETUP_PROGRESS_KEY);
-    } catch {
-      /* ignore storage failures */
-    }
-    // Nudge Setup Assist (which reads progress on mount) to refresh if open.
-    window.dispatchEvent(new CustomEvent('fg-setup-progress-change'));
+    const msg = active
+      ? 'Clear this game?\n\nThe game in progress will be stopped and NOT recorded, the Turn Tracker will be wiped, and your Final Girl / Killer / Location picks will be cleared.'
+      : 'Clear this game?\n\nYour Final Girl / Killer / Location picks, the Setup checklist and the Turn Tracker will be reset.';
+    if (!window.confirm(msg)) return;
+    clearGame();
   }
 
   return (
@@ -154,7 +157,7 @@ export default function Home({ onNavigate }) {
               {active ? (active.isTest ? 'Test game in progress' : 'Game in progress') : 'Current game'}
             </p>
             <p className="home-game__picks">
-              {picks.map((p) => p.name).join('  \u00B7  ')}
+              {pickNames.join('  \u00B7  ')}
             </p>
           </div>
           <button className="fg-btn home-game__clear" onClick={clearEverything}>

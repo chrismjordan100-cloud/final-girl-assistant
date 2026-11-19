@@ -25,7 +25,7 @@ import { useGameFlow, useEndDraft } from '../hooks/useGameFlow.js';
 import { usePersistentState } from '../hooks/usePersistentState.js';
 import { useTurnState } from '../hooks/useTurnState.js';
 import { deriveSummary } from '../lib/gameSummary.js';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CollapsibleSection from '../components/CollapsibleSection.jsx';
 import './ThisGame.css';
 import HowToVideo from '../components/HowToVideo.jsx';
@@ -82,9 +82,9 @@ function PlayRulesBlock({ kind, entry, rules }) {
 }
 
 export default function ThisGame({ onNavigate }) {
-  const { finalGirlId, killerId, locationId, clear } = useGameSelection();
+  const { finalGirlId, killerId, locationId } = useGameSelection();
   const { log } = useGameLog();
-  const { active, start, end, discard, narration } = useGameFlow();
+  const { active, start, end, discard, clearGame, narration } = useGameFlow();
   const { speaking, stop } = narration;
   const { state: turnState } = useTurnState();
 
@@ -162,13 +162,6 @@ export default function ThisGame({ onNavigate }) {
   const [savedMsg, setSavedMsg] = useState(false);
   const [mistakeType, setMistakeType] = useState('rules');
   const [mistakeText, setMistakeText] = useState('');
-  // Two-tap confirm for Discard, so one stray tap can't throw a game away.
-  const [confirmDiscard, setConfirmDiscard] = useState(false);
-  useEffect(() => {
-    if (!confirmDiscard) return undefined;
-    const t = setTimeout(() => setConfirmDiscard(false), 4000);
-    return () => clearTimeout(t);
-  }, [confirmDiscard]);
   // The record form is tucked away while you play (so the rules aren't pushed
   // down the page) and opens when you're ready — or if you've started filling it.
   const draftStarted = Boolean(outcome || notes || mistakes.length || Object.keys(answers).length);
@@ -224,17 +217,26 @@ export default function ThisGame({ onNavigate }) {
   }
 
   function handleDiscard() {
-    if (!confirmDiscard) {
-      setConfirmDiscard(true);
-      return;
-    }
-    setConfirmDiscard(false);
+    if (!window.confirm('Discard this game?\n\nIt will NOT be recorded in the Game Log, and the Turn Tracker will be wiped. This can\u2019t be undone.')) return;
     discard();
+    setMistakeText('');
+    setRecordOpen(false);
+  }
+
+  function handleClearGame() {
+    const msg = active
+      ? 'Clear this game?\n\nThe game in progress will be stopped and NOT recorded, the Turn Tracker will be wiped, and your Final Girl / Killer / Location picks will be cleared.'
+      : 'Clear this game?\n\nYour Final Girl / Killer / Location picks, the Setup checklist and the Turn Tracker will be reset.';
+    if (!window.confirm(msg)) return;
+    clearGame();
+    setMistakeText('');
     setRecordOpen(false);
   }
 
   function handleEndGame() {
     if (!outcome) return;
+    const outcomeLabel = { won: 'Survived (Won)', lost: 'Died (Lost)', abandoned: 'Abandoned' }[outcome] || outcome;
+    if (!window.confirm('End this game and record it as ' + outcomeLabel + '?\n\nThe game in progress will be closed and saved to the Game Log.')) return;
     // Earned = the MANUAL achievements you answered "yes". Auto-detected ones
     // are intentionally NOT recorded per-game — the MI derives them from your
     // win history, so there's no way for a save to hide a genuine earn.
@@ -278,7 +280,7 @@ export default function ThisGame({ onNavigate }) {
         </p>
       </div>
 
-      {nothingPicked ? (
+      {nothingPicked && !active ? (
         <div className="tg-empty fg-panel">
           <span className="tg-empty__glyph" aria-hidden="true">&#x1F52A;</span>
           <h2 className="tg-empty__title">No game chosen yet</h2>
@@ -352,7 +354,7 @@ export default function ThisGame({ onNavigate }) {
                   </button>
                 </>
               )}
-              <button className="fg-btn tg-clear" onClick={clear}>Clear</button>
+              <button className="fg-btn tg-clear" onClick={handleClearGame}>Clear</button>
             </div>
           </div>
 
@@ -617,10 +619,10 @@ export default function ThisGame({ onNavigate }) {
                   Save result
                 </button>
                 <button
-                  className={'fg-btn' + (confirmDiscard ? ' fg-btn--danger' : '')}
+                  className="fg-btn"
                   onClick={handleDiscard}
                 >
-                  {confirmDiscard ? 'Tap again to discard' : 'Discard (don\u2019t record)'}
+                  Discard (don&rsquo;t record)
                 </button>
                 {!draftStarted && (
                   <button className="fg-btn fg-btn--ghost" onClick={() => setRecordOpen(false)}>

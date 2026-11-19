@@ -52,14 +52,20 @@ export function useEndDraft() {
   return { draft: d, update, addMistake };
 }
 
+const SETUP_PROGRESS_KEY = 'fg-setup-progress';
+const SETUP_PROGRESS_EVENT = 'fg-setup-progress-change';
+
 function clearDraft() {
   writePersistent(END_DRAFT_KEY, undefined);
+  // Also close the end-of-game form, so it can't reopen on the next game
+  // (the Turn Tracker's "End game" button sets this flag).
+  writePersistent('fg-endgame-open', undefined);
 }
 
 export function useGameFlow() {
   const { active, startGame: logStart, endGame: logEnd, discardActive } = useGameLog();
   const { reset: resetTurns } = useTurnState();
-  const { finalGirlId, killerId, locationId } = useGameSelection();
+  const { finalGirlId, killerId, locationId, clear: clearSelection } = useGameSelection();
   const narration = useNarration();
 
   const finalGirl = getFinalGirl(finalGirlId);
@@ -100,5 +106,21 @@ export function useGameFlow() {
     clearDraft();
   }, [discardActive, resetTurns]);
 
-  return { active, canStart, start, end, discard, narration };
+  // Full wipe: drops any in-progress game (NOT recorded), the Turn Tracker,
+  // the end-of-game draft, the picked Final Girl / Killer / Location and the
+  // Setup Assist checklist, so a new game can be started from scratch.
+  const clearGame = useCallback(() => {
+    discardActive();
+    resetTurns();
+    clearDraft();
+    clearSelection();
+    try {
+      localStorage.removeItem(SETUP_PROGRESS_KEY);
+    } catch {
+      /* ignore storage failures */
+    }
+    window.dispatchEvent(new CustomEvent(SETUP_PROGRESS_EVENT));
+  }, [discardActive, resetTurns, clearSelection]);
+
+  return { active, canStart, start, end, discard, clearGame, narration };
 }
