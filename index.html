@@ -60,6 +60,44 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
 })();
 </script>
+<!-- Kiro "find me" link: faded footer text you can copy so Kiro can find this app. -->
+<script id="kiro-findme">
+(function () {
+  var TEXT = "Final Girl. Project folder: C:\\Users\\chris\\Projects\\Final Girl Rule Assistant. Opens: https://chrismjordan100-cloud.github.io/final-girl-assistant/";
+  function copy(btn) {
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy link'; }, 1500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(TEXT).then(done, fallback);
+    else fallback();
+    function fallback() {
+      var t = document.createElement('textarea'); t.value = TEXT; document.body.appendChild(t);
+      t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove(); done();
+    }
+  }
+  function mount() {
+    if (document.getElementById('kiro-findme-host')) return;
+    var host = document.createElement('div');
+    host.id = 'kiro-findme-host';
+    host.style.cssText = 'display:block;clear:both;padding:18px 16px 72px;';
+    var root = host.attachShadow({ mode: 'open' });
+    root.innerHTML =
+      '<style>' +
+      'div{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;' +
+      'font:11px/1.4 "Segoe UI",system-ui,sans-serif;color:#8a8a8a;opacity:.5;transition:opacity .3s}' +
+      'div:hover,div:focus-within{opacity:1}' +
+      'code{font-family:"Cascadia Code",Consolas,monospace;word-break:break-all;user-select:all;text-align:center}' +
+      'button{all:unset;cursor:pointer;padding:2px 8px;border:1px solid rgba(138,138,138,.45);border-radius:6px}' +
+      'button:focus-visible{outline:2px solid #8a8a8a;outline-offset:2px}' +
+      '@media print{:host{display:none}}' +
+      '</style><div><code></code><button type="button" title="Copy where this app lives, for Kiro">Copy link</button></div>';
+    root.querySelector('code').textContent = TEXT;
+    var btn = root.querySelector('button');
+    btn.addEventListener('click', function () { copy(btn); });
+    document.body.appendChild(host);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
+})();
+</script>
+
 
 </body>
 </html>
